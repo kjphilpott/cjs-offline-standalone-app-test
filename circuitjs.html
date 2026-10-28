@@ -2,7 +2,6 @@
 <html>
 
 <head>
-  <link rel="manifest" href="/circuit/manifest.json">
 
   <!-- Properties can be specified to influence deferred binding -->
   <meta name='gwt:property' content='locale=en_UK'>
@@ -43,7 +42,7 @@
     }
 
     .gwt-Frame {
-      scrolling="no";
+      overflow: hidden;
       border: 0px !important;
     }
 
@@ -167,18 +166,20 @@
   <!-- 'nocache.js' file (also called a "selection script") is     -->
   <!-- produced by the GWT compiler in the module output directory -->
   <!-- or generated automatically in development mode.             -->
-  <script language="javascript" src="circuitjs1/circuitjs1.nocache.js"></script>
+  <script type="module" language="javascript" src="circuitjs1/circuitjs1.nocache.js"></script>
 
   <!-- Include a history iframe to enable full GWT history support -->
   <!-- (the id must be exactly as shown)                           -->
   <iframe src="javascript:''" id="__gwt_historyFrame" style="width:0;height:0;border:0"></iframe>
 
-  <script>
+  <script type="module">
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('service-worker.js').then(registration => {
+        const swUrl = new URL('service-worker.js', import.meta.url).href;
+        navigator.serviceWorker.register(swUrl).then(registration => {
           console.log('Service Worker registered with scope:', registration.scope);
-        }).catch(error => {
+        }).catch
+        (error => {
           console.error('Service Worker registration failed:', error);
         });
       });
