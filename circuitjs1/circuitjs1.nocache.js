@@ -326,21 +326,6 @@ function circuitjs1(){
       ())
         return 'safari';
       if (function(){
-        return ua.indexOf('msie') != -1 && (docMode >= 10 && docMode < 11);
-      }
-      ())
-        return 'ie10';
-      if (function(){
-        return ua.indexOf('msie') != -1 && (docMode >= 9 && docMode < 11);
-      }
-      ())
-        return 'ie9';
-      if (function(){
-        return ua.indexOf('msie') != -1 && (docMode >= 8 && docMode < 11);
-      }
-      ())
-        return 'ie8';
-      if (function(){
         return ua.indexOf('gecko') != -1 || docMode >= 11;
       }
       ())
@@ -348,7 +333,7 @@ function circuitjs1(){
       return '';
     }
     ;
-    values['user.agent'] = {'gecko1_8':0, 'ie10':1, 'ie8':2, 'ie9':3, 'safari':4};
+    values['user.agent'] = {'gecko1_8':0, 'safari':4};
     __gwt_isKnownPropertyValue = function(propName, propValue){
       return propValue in values[propName];
     }
@@ -372,10 +357,7 @@ function circuitjs1(){
     var strongName;
     try {
       unflattenKeylistIntoAnswers(['safari'], '36F1448B76FC86511C0BBCAC982CC49F');
-      unflattenKeylistIntoAnswers(['ie10'], '4A324BCBA35B59267855CFD03175A059');
-      unflattenKeylistIntoAnswers(['ie8'], 'A84B98CDB743F647DB2BC152EE2313B0');
       unflattenKeylistIntoAnswers(['gecko1_8'], 'BF7FE971A936A4BA42E907B8A9853BD0');
-      unflattenKeylistIntoAnswers(['ie9'], 'E4FFF366B417914DB5B911B69626EC9D');
       strongName = answers[computePropValue('user.agent')];
       var idx = strongName.indexOf(':');
       if (idx != -1) {
