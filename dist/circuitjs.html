@@ -1,0 +1,217 @@
+<!DOCTYPE html><html><head>
+
+  <!-- Properties can be specified to influence deferred binding -->
+  <meta name="gwt:property" content="locale=en_UK">
+
+
+  <!-- Titles are optional, but useful -->
+  <title></title>
+
+  <style>.disabled {
+  color: #d3d3d3;
+}
+
+.topSpace {
+  margin-top: 12px;
+}
+
+.cursorPointer {
+  cursor: default;
+}
+
+.cursorCross {
+  cursor: crosshair;
+}
+
+.cursorSplitter {
+  cursor: row-resize;
+}
+
+.gwt-MenuItem-disabled {
+  color: #d3d3d3;
+}
+
+.offScreen {
+  position: absolute;
+  right: 101%;
+  overflow: hidden;
+}
+
+.gwt-Frame {
+  overflow: hidden;
+  border: 0 !important;
+}
+
+.gwt-MenuItem, .gwt-MenuBar-horizontal {
+  font-size: 12px !important;
+}
+
+.gwt-Label-selected {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+.gwt-Label-1off {
+  color: #a9a9a9;
+}
+
+.gwt-Label-2off {
+  color: #d3d3d3;
+  font-size: .8em;
+}
+
+.gwt-Button.chbut {
+  margin: 3px;
+  padding: 3px;
+}
+
+.gwt-Button.chbut.chsel {
+  font-weight: bold;
+}
+
+.gwt-Button.chbut-black {
+  color: #fff;
+  background: #000;
+}
+
+.gwt-Button.chbut-white {
+  color: #000;
+  background: #fff;
+}
+
+.gwt-TextBox.scalebox {
+  width: 100px;
+}
+
+.gwt-Button.expand-but {
+  text-align: center;
+  color: #fff;
+  background: gray;
+  border-radius: 0;
+  width: 15px;
+  height: 15px;
+  margin-bottom: 1px;
+  margin-right: 5px;
+  padding: 0 0 1px;
+  font-size: 13px;
+  line-height: 0;
+  display: inline-block;
+}
+
+.topButton-red {
+  color: #fff;
+  cursor: pointer;
+  cursor: hand;
+  background-color: red;
+  border: 1px solid #bbb;
+  border-bottom-color: #a0a0a0;
+  border-radius: 3px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  padding: 5px 7px;
+  font-size: small;
+  text-decoration: none;
+}
+
+.topButton {
+  cursor: pointer;
+  cursor: hand;
+  background-color: #e7e7e7;
+  border: 1px solid #bbb;
+  border-bottom-color: #a0a0a0;
+  border-radius: 3px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  padding: 5px 7px;
+  font-size: small;
+  text-decoration: none;
+}
+
+.radioPanel label {
+  margin-right: 15px;
+}
+</style>
+
+  <link rel="stylesheet" href="/circuitjs.d1a11a3a.css">
+
+</head>
+
+<body>
+  <!-- Include the next line to allow support for dropbox import/export. You will need your own app key. -->
+  <!--<script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="YOUR_KEY"></script>-->
+
+  <script language="javascript" src="/circuitjs.ff88c46a.js"></script>
+
+  <!-- This script tag is what actually loads the GWT module.  The -->
+  <!-- 'nocache.js' file (also called a "selection script") is     -->
+  <!-- produced by the GWT compiler in the module output directory -->
+  <!-- or generated automatically in development mode.             -->
+  <script type="module" language="javascript" src="/circuitjs.d7196e2c.js"></script>
+
+  <!-- Include a history iframe to enable full GWT history support -->
+  <!-- (the id must be exactly as shown)                           -->
+  <iframe src="javascript:''" id="__gwt_historyFrame" style="border: 0; width: 0; height: 0"></iframe>
+
+  <script type="module">
+function $parcel$resolve(url) {
+  url = parcelRequire.i?.[url] || url;
+  return import.meta.resolve($parcel$distDir + url);
+}
+
+      var $parcel$global = globalThis;
+    var $parcel$distDir = "./";
+
+var $parcel$modules = {};
+var $parcel$inits = {};
+
+var parcelRequire = $parcel$global["parcelRequire089e"];
+
+if (parcelRequire == null) {
+  parcelRequire = function(id) {
+    if (id in $parcel$modules) {
+      return $parcel$modules[id].exports;
+    }
+    if (id in $parcel$inits) {
+      var init = $parcel$inits[id];
+      delete $parcel$inits[id];
+      var module = {id: id, exports: {}};
+      $parcel$modules[id] = module;
+      init.call(module.exports, module, module.exports);
+      return module.exports;
+    }
+    var err = new Error("Cannot find module '" + id + "'");
+    err.code = 'MODULE_NOT_FOUND';
+    throw err;
+  };
+
+  parcelRequire.register = function register(id, init) {
+    $parcel$inits[id] = init;
+  };
+
+  $parcel$global["parcelRequire089e"] = parcelRequire;
+}
+
+var parcelRegister = parcelRequire.register;
+var $d9b8a19e31c0a4dd$exports = {};
+$d9b8a19e31c0a4dd$exports = $parcel$resolve("service-worker.3685efeb.js");
+
+
+if ('serviceWorker' in navigator) window.addEventListener('load', ()=>{
+    const swUrl = new URL($d9b8a19e31c0a4dd$exports).href;
+    navigator.serviceWorker.register(swUrl).then((registration)=>{
+        console.log('Service Worker registered with scope:', registration.scope);
+    }).catch((error)=>{
+        console.error('Service Worker registration failed:', error);
+    });
+});
+
+
+</script>
+
+
+
+</body></html>
