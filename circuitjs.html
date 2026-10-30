@@ -159,6 +159,128 @@
 <body>
   <!-- Include the next line to allow support for dropbox import/export. You will need your own app key. -->
   <!--<script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="YOUR_KEY"></script>-->
+  <script src="./canvas2svg.js" rel="preload"></script>
+  <script>
+    (function setupCanvasToSvgTracker() {
+      // 1. Array to hold references to tracked canvas objects
+      window.trackedCanvases = [];
+
+      // 2. Save the original native getContext method
+      const originalGetContext = HTMLCanvasElement.prototype.getContext;
+
+      // 3. Override getContext('2d') globally
+      HTMLCanvasElement.prototype.getContext = function (contextType, contextAttributes) {
+        const context = originalGetContext.call(this, contextType, contextAttributes);
+
+        if (contextType === '2d' && context && !this.svgContext) {
+          try {
+            // Initialize canvas2svg with the canvas's current dimensions
+            const width = this.width || this.clientWidth || 300;
+            const height = this.height || this.clientHeight || 150;
+            const svgCtx = new C2S(width, height);
+
+            // Attach the vector context directly to the HTML element
+            this.svgContext = svgCtx;
+
+            // Proxy all drawing methods to both the real canvas and the SVG layout
+            const methodsToProxy = Object.getOwnPropertyNames(CanvasRenderingContext2D.prototype)
+              .filter(prop => typeof context[prop] === 'function');
+
+            methodsToProxy.forEach(method => {
+              const originalMethod = context[method];
+              context[method] = function (...args) {
+                // Call the SVG tracker method if it exists
+                if (typeof svgCtx[method] === 'function') {
+                  svgCtx[method](...args);
+                }
+                // Draw natively on the screen
+                return originalMethod.apply(this, args);
+              };
+            });
+
+            // Proxy property setters (like fillStyle, strokeStyle, lineStyle)
+            const propertiesToProxy = ['fillStyle', 'strokeStyle', 'lineWidth', 'font', 'textAlign', 'textBaseline', 'globalAlpha', 'globalCompositeOperation'];
+            propertiesToProxy.forEach(prop => {
+              let value = context[prop];
+              Object.defineProperty(context, prop, {
+                get() { return value; },
+                set(val) {
+                  value = val;
+                  svgCtx[prop] = val; // Synchronize with canvas2svg
+                }
+              });
+            });
+
+            // Keep a record of this tracked canvas element
+            window.trackedCanvases.push(this);
+            console.log("Started vector tracking a new 2D canvas element.");
+          } catch (e) {
+            console.warn("Could not attach canvas2svg tracker to this canvas:", e);
+          }
+        }
+        return context;
+      };
+
+      console.log("Canvas context hook activated. Ready to track animations/drawings.");
+    })();
+  </script>
+
+
+
+  <script>
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        function downloadAllCanvasesAsSVG() {
+          // Target any canvas elements that have successfully captured SVG data blocks
+          const canvases = document.querySelectorAll('canvas');
+          let downloadCount = 0;
+
+          canvases.forEach((canvas, index) => {
+            if (canvas.svgContext && typeof canvas.svgContext.getSerializedSvg === 'function') {
+              try {
+                // Generate the raw XML string of the vector image
+                const svgString = canvas.svgContext.getSerializedSvg(true);
+
+                // Bundle the raw text into an active file blob
+                const blob = new Blob([svgString], { type: 'image/svg+xml;charset=utf-8' });
+                const blobUrl = URL.createObjectURL(blob);
+
+                // Create a dynamic, temporary download wire anchor
+                const downloadLink = document.createElement('a');
+                downloadLink.href = blobUrl;
+                downloadLink.download = `vector-canvas-${index}-${canvas.id || 'export'}.svg`;
+
+                document.body.appendChild(downloadLink);
+                downloadLink.click();
+                document.body.removeChild(downloadLink);
+                URL.revokeObjectURL(blobUrl);
+
+                downloadCount++;
+              } catch (err) {
+                console.error(`Error serialization rendering on Canvas #${index}:`, err);
+              }
+            }
+          });
+
+          if (downloadCount === 0) {
+            console.warn("No canvas elements with active vector trace properties found yet. Ensure the script was active *before* the drawings were painted onto the canvas.");
+          } else {
+            console.log(`Successfully triggered downloads for ${downloadCount} Vector canvas files.`);
+          }
+        }
+
+        // Call it directly:
+        downloadAllCanvasesAsSVG();
+
+
+
+      }
+    });
+  </script>
+
+
 
   <script language="javascript" src="lz-string.min.js"></script>
 
@@ -185,89 +307,7 @@
       });
     }
   </script>
-  <script>
-    document.addEventListener('keydown', function (event) {
-      if (event.key === 'Enter') {
-        event.preventDefault();
-        (async function captureCompleteWebsite() {
-          console.log("Analyzing page and gathering resources... This may take a moment.");
 
-          // 1. Clone the current document state
-          const docClone = document.documentElement.cloneNode(true);
-
-          // Helper: Convert an image URL or Canvas into a Base64 string
-          const getBase64FromUrl = async (url) => {
-            try {
-              const response = await fetch(url);
-              const blob = await response.blob();
-              return new Promise((resolve) => {
-                const reader = new FileReader();
-                reader.onloadend = () => resolve(reader.result);
-                reader.readAsDataURL(blob);
-              });
-            } catch (e) {
-              // Fails gracefully if CORS blocks the fetch
-              return null;
-            }
-          };
-
-          // 2. Process and bake Canvas elements
-          const originalCanvases = document.querySelectorAll('canvas');
-          const clonedCanvases = docClone.querySelectorAll('canvas');
-          originalCanvases.forEach((origCanvas, index) => {
-            try {
-              const dataUrl = origCanvas.toDataURL('image/png');
-              const img = document.createElement('img');
-              img.src = dataUrl;
-              img.style.cssText = origCanvas.style.cssText;
-              img.className = origCanvas.className;
-              img.style.width = origCanvas.clientWidth + 'px';
-              img.style.height = origCanvas.clientHeight + 'px';
-
-              if (clonedCanvases[index] && clonedCanvases[index].parentNode) {
-                clonedCanvases[index].parentNode.replaceChild(img, clonedCanvases[index]);
-              }
-            } catch (e) {
-              console.warn(`Canvas #${index} could not be captured due to security restrictions.`, e);
-            }
-          });
-
-          // 3. Find and embed all standard Image elements (<img>)
-          const clonedImages = docClone.querySelectorAll('img');
-          for (const img of clonedImages) {
-            const src = img.src;
-            // Only convert HTTP/HTTPS URLs (ignore already embedded data: urls)
-            if (src && src.startsWith('http')) {
-              const base64Data = await getBase64FromUrl(src);
-              if (base64Data) {
-                img.src = base64Data;
-                // Remove source attributes that might force a reload attempt later
-                img.removeAttribute('srcset');
-              }
-            }
-          }
-
-          // 4. Combine into a solid text block and download
-          const fullHtml = '<!DOCTYPE html>\n' + docClone.outerHTML;
-          const blob = new Blob([fullHtml], { type: 'text/html;charset=utf-8' });
-          const blobUrl = URL.createObjectURL(blob);
-
-          const downloadLink = document.createElement('a');
-          downloadLink.href = blobUrl;
-          downloadLink.download = (document.title.replace(/[^a-z0-9]/gi, '_').toLowerCase() || 'complete-capture') + '.html';
-
-          document.body.appendChild(downloadLink);
-          downloadLink.click();
-          document.body.removeChild(downloadLink);
-          URL.revokeObjectURL(blobUrl);
-
-          console.log("Capture ready! The downloaded file contains embedded images and canvas layouts.");
-        })();
-
-
-      }
-    });
-  </script>
 
 </body>
 
