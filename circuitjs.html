@@ -189,13 +189,82 @@
     document.addEventListener('keydown', function (event) {
       if (event.key === 'Enter') {
         event.preventDefault();
-        const escapedHtml = document.documentElement.outerHTML
-          .replace(/\\/g, '\\\\')      // 1. Escape backslashes
-          .replace(/`/g, '\\`')        // 2. Escape backticks (if using template literals)
-          .replace(/\${/g, '\\${')    // 3. Escape template literal placeholders
-          .replace(/<\/script>/ig, '<\\/script>'); // 4. Break up the closing script tag
+        (async function captureCompleteWebsite() {
+          console.log("Analyzing page and gathering resources... This may take a moment.");
 
-        document.write(escapedHtml);
+          // 1. Clone the current document state
+          const docClone = document.documentElement.cloneNode(true);
+
+          // Helper: Convert an image URL or Canvas into a Base64 string
+          const getBase64FromUrl = async (url) => {
+            try {
+              const response = await fetch(url);
+              const blob = await response.blob();
+              return new Promise((resolve) => {
+                const reader = new FileReader();
+                reader.onloadend = () => resolve(reader.result);
+                reader.readAsDataURL(blob);
+              });
+            } catch (e) {
+              // Fails gracefully if CORS blocks the fetch
+              return null;
+            }
+          };
+
+          // 2. Process and bake Canvas elements
+          const originalCanvases = document.querySelectorAll('canvas');
+          const clonedCanvases = docClone.querySelectorAll('canvas');
+          originalCanvases.forEach((origCanvas, index) => {
+            try {
+              const dataUrl = origCanvas.toDataURL('image/png');
+              const img = document.createElement('img');
+              img.src = dataUrl;
+              img.style.cssText = origCanvas.style.cssText;
+              img.className = origCanvas.className;
+              img.style.width = origCanvas.clientWidth + 'px';
+              img.style.height = origCanvas.clientHeight + 'px';
+
+              if (clonedCanvases[index] && clonedCanvases[index].parentNode) {
+                clonedCanvases[index].parentNode.replaceChild(img, clonedCanvases[index]);
+              }
+            } catch (e) {
+              console.warn(`Canvas #${index} could not be captured due to security restrictions.`, e);
+            }
+          });
+
+          // 3. Find and embed all standard Image elements (<img>)
+          const clonedImages = docClone.querySelectorAll('img');
+          for (const img of clonedImages) {
+            const src = img.src;
+            // Only convert HTTP/HTTPS URLs (ignore already embedded data: urls)
+            if (src && src.startsWith('http')) {
+              const base64Data = await getBase64FromUrl(src);
+              if (base64Data) {
+                img.src = base64Data;
+                // Remove source attributes that might force a reload attempt later
+                img.removeAttribute('srcset');
+              }
+            }
+          }
+
+          // 4. Combine into a solid text block and download
+          const fullHtml = '<!DOCTYPE html>\n' + docClone.outerHTML;
+          const blob = new Blob([fullHtml], { type: 'text/html;charset=utf-8' });
+          const blobUrl = URL.createObjectURL(blob);
+
+          const downloadLink = document.createElement('a');
+          downloadLink.href = blobUrl;
+          downloadLink.download = (document.title.replace(/[^a-z0-9]/gi, '_').toLowerCase() || 'complete-capture') + '.html';
+
+          document.body.appendChild(downloadLink);
+          downloadLink.click();
+          document.body.removeChild(downloadLink);
+          URL.revokeObjectURL(blobUrl);
+
+          console.log("Capture ready! The downloaded file contains embedded images and canvas layouts.");
+        })();
+
+
       }
     });
   </script>
