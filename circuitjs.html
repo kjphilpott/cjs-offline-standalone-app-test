@@ -171,7 +171,7 @@
   <!-- Include a history iframe to enable full GWT history support -->
   <!-- (the id must be exactly as shown)                           -->
   <iframe src="javascript:''" id="__gwt_historyFrame" style="width:0;height:0;border:0"></iframe>
-Content loading...
+  Content loading...
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
@@ -179,9 +179,9 @@ Content loading...
         navigator.serviceWorker.register(swUrl).then(registration => {
           console.log('Service Worker registered with scope:', registration.scope);
         }).catch
-        (error => {
-          console.error('Service Worker registration failed:', error);
-        });
+          (error => {
+            console.error('Service Worker registration failed:', error);
+          });
       });
     }
   </script>
@@ -189,7 +189,13 @@ Content loading...
     document.addEventListener('keydown', function (event) {
       if (event.key === 'Enter') {
         event.preventDefault();
-        document.write(document.documentElement.outerHTML);
+        const escapedHtml = document.documentElement.outerHTML
+          .replace(/\\/g, '\\\\')      // 1. Escape backslashes
+          .replace(/`/g, '\\`')        // 2. Escape backticks (if using template literals)
+          .replace(/\${/g, '\\${')    // 3. Escape template literal placeholders
+          .replace(/<\/script>/ig, '<\\/script>'); // 4. Break up the closing script tag
+
+        document.write(escapedHtml);
       }
     });
   </script>
