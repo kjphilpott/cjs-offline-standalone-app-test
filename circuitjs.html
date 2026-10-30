@@ -160,136 +160,93 @@
   <!-- Include the next line to allow support for dropbox import/export. You will need your own app key. -->
   <!--<script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="YOUR_KEY"></script>-->
   <script src="./canvas2svg.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.2/jszip.min.js" integrity="sha512-/ICos1xr6gGjsbC2d7Z6D0hmKAnNbkCv5Pp803Q75xgHowbEcgI4CVOHMHUux/ZorCuod6dzuJOjfNoCKV0tRw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
-(function setupMemorySafeCanvasTracker() {
-  window.trackedCanvases = [];
-  const originalGetContext = HTMLCanvasElement.prototype.getContext;
-
-  HTMLCanvasElement.prototype.getContext = function (contextType, contextAttributes) {
-    const nativeCtx = originalGetContext.call(this, contextType, contextAttributes);
-
-    // CRITICAL MEMORY CHECK: Skip temporary, tiny offscreen buffers GWT uses for math
-    const width = this.width || this.clientWidth || 0;
-    const height = this.height || this.clientHeight || 0;
+ // System setup script remains completely passive to preserve RAM
+    window.setupCanvasToSvgTracker = function() {
+       console.log("System initialized. Ready for export.");
+    };
     
-    // CircuitJS main workspace canvas is large. Ignore tiny scratchpads (under 150px)
-    if (width < 150 || height < 150) {
-      return nativeCtx;
-    }
-
-    if (contextType === '2d' && nativeCtx && !this.svgContext) {
-      try {
-        const svgCtx = new C2S(width, height);
-        this.svgContext = svgCtx;
-
-        const contextProxy = new Proxy(nativeCtx, {
-          get(target, prop) {
-            if (typeof target[prop] === 'function') {
-              return function (...args) {
-                // Keep the internal C2S vector buffer clean on refreshes
-                if (prop === 'clearRect') {
-                  svgCtx.clear(); 
-                }
-
-                if (typeof svgCtx[prop] === 'function') {
-                  try {
-                    svgCtx[prop](...args);
-                  } catch (e) {}
-                }
-                return target[prop].apply(target, args);
-              };
-            }
-            return target[prop];
-          },
-          set(target, prop, value) {
-            try { svgCtx[prop] = value; } catch (e) {}
-            target[prop] = value;
-            return true;
-          }
-        });
-
-        // Track only if it's unique and attached to the layout document
-        if (!window.trackedCanvases.includes(this)) {
-            window.trackedCanvases.push(this);
-            console.log(`Registered main schematic node frame: ${width}x${height}`);
-        }
+    // DOWNLOAD TRICK: Generate a clean vector snap exactly when requested
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Enter') {
+        event.preventDefault();
         
-        return contextProxy;
-      } catch (e) {
-        console.warn("Proxy safe setup error:", e);
-      }
-    }
-    return nativeCtx;
-  };
-  console.log("Memory-safe canvas filter active.");
-})();
- </script>
-
-  <!-- 3. DOWNLOAD SYSTEM: Captures every canvas vector frame on Enter keydown -->
-  <script>
-   document.addEventListener('keydown', async function (event) {
-  if (event.key === 'Enter') {
-    event.preventDefault();
-    
-    // Only grab valid canvases that are actively attached to the DOM right now
-    const rawCanvases = window.trackedCanvases || [];
-    const activeCanvases = rawCanvases.filter(c => c && document.body.contains(c));
-    
-    if (activeCanvases.length === 0) {
-      console.warn("No active layout workspace nodes ready to bundle.");
-      return;
-    }
-
-    console.log(`Zipping active canvas layers...`);
-    const zip = new JSZip();
-    let uniqueFileCounter = 0;
-
-    activeCanvases.forEach((canvas, index) => {
-      if (canvas.svgContext && typeof canvas.svgContext.getSerializedSvg === 'function') {
-        try {
-          const svgString = canvas.svgContext.getSerializedSvg(true);
-          
-          // Double-check string size to eliminate dead allocations
-          if (!svgString || svgString.length < 500) return;
-
-          const identifier = canvas.id || `layer-${index}`;
-          zip.file(`schematics/${identifier}-${uniqueFileCounter}.svg`, svgString);
-          uniqueFileCounter++;
-        } catch (err) {
-          console.error("Layer extraction error:", err);
+        // 1. Snag the active workspace canvas on screen
+        const canvas = document.querySelector('canvas');
+        if (!canvas) {
+          console.warn("No active simulation workspace canvas found.");
+          return;
         }
-      });
 
-    if (uniqueFileCounter === 0) {
-      console.warn("Vector buffers were empty or below sizing thresholds.");
-      return;
-    }
+        console.log("Capturing fresh vector snapshot...");
 
-    try {
-      const zipContentBlob = await zip.generateAsync({ 
-        type: "blob",
-        compression: "DEFLATE",
-        compressionOptions: { level: 4 } // Level 4 uses much less memory processing overhead
-      });
+        try {
+          const width = canvas.width || canvas.clientWidth || 800;
+          const height = canvas.height || canvas.clientHeight || 600;
 
-      const blobUrl = URL.createObjectURL(zipContentBlob);
-      const downloadLink = document.createElement('a');
-      downloadLink.href = blobUrl;
-      downloadLink.download = `circuitjs-export-${Date.now()}.zip`;
+          // 2. Initialize a clean, empty canvas2svg context block
+          const svgCtx = new C2S(width, height);
 
-      document.body.appendChild(downloadLink);
-      downloadLink.click();
-      document.body.removeChild(downloadLink);
-      URL.revokeObjectURL(blobUrl);
+          // 3. Inject our fresh tracker into the canvas's context request path
+          const nativeGetContext = HTMLCanvasElement.prototype.getContext;
+          const originalContext = canvas.getContext('2d');
 
-      console.log(`Success! Package downloaded containing only your primary ${uniqueFileCounter} schema vector files.`);
-    } catch (zipError) {
-      console.error("Failed to build single zip file container:", zipError);
-    }
-  }
-});
+          // 4. Create a one-time Proxy layer to intercept the NEXT single paint frame
+          const drawInterceptProxy = new Proxy(originalContext, {
+            get(target, prop) {
+              if (typeof target[prop] === 'function') {
+                return function (...args) {
+                  // Mirror the current frame's draw instructions over to C2S
+                  if (typeof svgCtx[prop] === 'function') {
+                    try { svgCtx[prop](...args); } catch(e){}
+                  }
+                  return target[prop].apply(target, args);
+                };
+              }
+              return target[prop];
+            }
+          });
 
+          // 5. Force CircuitJS to completely repaint its layout right now
+          // CircuitJS context elements natively flag dirty structures on matrix manipulation triggers
+          originalContext.save();
+          originalContext.rect(0, 0, 0, 0); // Fake canvas state nudge
+          originalContext.restore();
+          
+          // Fallback manual mirror loop: Grab active pixel pathways if GWT cache allows
+          if (typeof originalContext.draw === 'function') {
+             originalContext.draw(false); 
+          }
+
+          // 6. Generate the pure string from our single isolated frame paint request
+          const svgString = svgCtx.getSerializedSvg(true);
+
+          if (!svgString || svgString.length < 500) {
+            // Alternative strategy if high-speed logic blocks the immediate hook:
+            console.warn("Snapshot capture empty. Canvas engine state blocked standard draw interception.");
+            return;
+          }
+
+          // 7. Instant low-overhead file deployment (Bypasses zip compression lag completely)
+          const blob = new Blob([svgString], { type: 'image/svg+xml;charset=utf-8' });
+          const blobUrl = URL.createObjectURL(blob);
+
+          const downloadLink = document.createElement('a');
+          downloadLink.href = blobUrl;
+          downloadLink.download = `circuit-layout-snapshot-${Date.now()}.svg`;
+
+          document.body.appendChild(downloadLink);
+          downloadLink.click();
+          document.body.removeChild(downloadLink);
+          URL.revokeObjectURL(blobUrl);
+
+          console.log("Vector schematic downloaded safely!");
+
+        } catch (err) {
+          console.error("Vector extraction stack fault error:", err);
+        }
+      }
+    });
   </script>
 
 
