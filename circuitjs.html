@@ -162,153 +162,134 @@
   <script src="./canvas2svg.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.2/jszip.min.js" integrity="sha512-/ICos1xr6gGjsbC2d7Z6D0hmKAnNbkCv5Pp803Q75xgHowbEcgI4CVOHMHUux/ZorCuod6dzuJOjfNoCKV0tRw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
-   (function setupCanvasToSvgTracker() {
+(function setupMemorySafeCanvasTracker() {
   window.trackedCanvases = [];
   const originalGetContext = HTMLCanvasElement.prototype.getContext;
 
   HTMLCanvasElement.prototype.getContext = function (contextType, contextAttributes) {
-    // 1. Get the pure, untouched native canvas context
     const nativeCtx = originalGetContext.call(this, contextType, contextAttributes);
+
+    // CRITICAL MEMORY CHECK: Skip temporary, tiny offscreen buffers GWT uses for math
+    const width = this.width || this.clientWidth || 0;
+    const height = this.height || this.clientHeight || 0;
+    
+    // CircuitJS main workspace canvas is large. Ignore tiny scratchpads (under 150px)
+    if (width < 150 || height < 150) {
+      return nativeCtx;
+    }
 
     if (contextType === '2d' && nativeCtx && !this.svgContext) {
       try {
-        const width = this.width || this.clientWidth || 300;
-        const height = this.height || this.clientHeight || 150;
-        
-        // 2. Initialize a clean instance of the canvas2svg tracking engine
         const svgCtx = new C2S(width, height);
         this.svgContext = svgCtx;
 
-        // 3. Create a unified Proxy interface to safely handle both pipelines
         const contextProxy = new Proxy(nativeCtx, {
           get(target, prop) {
-            // Handle method hooks (like lineTo, stroke, etc.)
             if (typeof target[prop] === 'function') {
               return function (...args) {
-                // Intercept specific calls like clearRect to keep the SVG clean
+                // Keep the internal C2S vector buffer clean on refreshes
                 if (prop === 'clearRect') {
-                  // Re-initialize or clear the shadow SVG context to prevent line stacking
                   svgCtx.clear(); 
                 }
 
-                // Safely mirror drawings to the vector engine if the method exists
                 if (typeof svgCtx[prop] === 'function') {
                   try {
                     svgCtx[prop](...args);
-                  } catch (e) {
-                    // Fail gracefully if a method signature doesn't align perfectly
-                  }
+                  } catch (e) {}
                 }
-                
-                // Always execute the native drawing routine directly on your screen
                 return target[prop].apply(target, args);
               };
             }
-            
-            // Pass standard properties back normally from the live canvas
             return target[prop];
           },
-          
           set(target, prop, value) {
-            // Synchronize drawing styles seamlessly (fillStyle, strokeStyle, lineWidth, etc.)
-            try {
-              svgCtx[prop] = value;
-            } catch (e) {}
-            
+            try { svgCtx[prop] = value; } catch (e) {}
             target[prop] = value;
             return true;
           }
         });
 
-        window.trackedCanvases.push(this);
-        console.log("Clean shadow context proxy attached.");
+        // Track only if it's unique and attached to the layout document
+        if (!window.trackedCanvases.includes(this)) {
+            window.trackedCanvases.push(this);
+            console.log(`Registered main schematic node frame: ${width}x${height}`);
+        }
         
-        // Return our safe proxy wrapper back to CircuitJS
         return contextProxy;
-
       } catch (e) {
-        console.warn("Could not attach canvas2svg tracker wrapper safely:", e);
+        console.warn("Proxy safe setup error:", e);
       }
     }
     return nativeCtx;
   };
-  console.log("Advanced canvas proxy engine activated.");
+  console.log("Memory-safe canvas filter active.");
 })();
-
-  </script>
+ </script>
 
   <!-- 3. DOWNLOAD SYSTEM: Captures every canvas vector frame on Enter keydown -->
   <script>
-    document.addEventListener('keydown', async function (event) {
+   document.addEventListener('keydown', async function (event) {
   if (event.key === 'Enter') {
     event.preventDefault();
     
-    const canvasesToExport = window.trackedCanvases || [];
-    if (canvasesToExport.length === 0) {
-      console.warn("No tracked canvas instances registered yet.");
+    // Only grab valid canvases that are actively attached to the DOM right now
+    const rawCanvases = window.trackedCanvases || [];
+    const activeCanvases = rawCanvases.filter(c => c && document.body.contains(c));
+    
+    if (activeCanvases.length === 0) {
+      console.warn("No active layout workspace nodes ready to bundle.");
       return;
     }
 
-    console.log(`Packaging ${canvasesToExport.length} canvas vectors into a ZIP archive... Please wait.`);
-
-    // 1. Initialize a brand new JSZip instance
+    console.log(`Zipping active canvas layers...`);
     const zip = new JSZip();
     let uniqueFileCounter = 0;
 
-    canvasesToExport.forEach((canvas, index) => {
-      if (canvas && canvas.svgContext && typeof canvas.svgContext.getSerializedSvg === 'function') {
+    activeCanvases.forEach((canvas, index) => {
+      if (canvas.svgContext && typeof canvas.svgContext.getSerializedSvg === 'function') {
         try {
           const svgString = canvas.svgContext.getSerializedSvg(true);
           
-          // Skip completely empty buffers (less than 100 characters of markup)
-          if (!svgString || svgString.length < 100) return;
+          // Double-check string size to eliminate dead allocations
+          if (!svgString || svgString.length < 500) return;
 
-          // Name the individual vector files clearly inside the zip
-          const identifier = canvas.id || `canvas-${index}`;
-          const fileName = `components/${identifier}-${uniqueFileCounter}.svg`;
-
-          // 2. Add the raw SVG text file directly to the archive project
-          zip.file(fileName, svgString);
+          const identifier = canvas.id || `layer-${index}`;
+          zip.file(`schematics/${identifier}-${uniqueFileCounter}.svg`, svgString);
           uniqueFileCounter++;
         } catch (err) {
-          console.error(`Error serialization rendering on Canvas #${index}:`, err);
+          console.error("Layer extraction error:", err);
         }
-      }
-    });
+      });
 
     if (uniqueFileCounter === 0) {
-      console.warn("All tracked canvas vector buffers were completely blank. Nothing to zip.");
+      console.warn("Vector buffers were empty or below sizing thresholds.");
       return;
     }
 
     try {
-      // 3. Generate the binary ZIP payload asynchronously
       const zipContentBlob = await zip.generateAsync({ 
         type: "blob",
         compression: "DEFLATE",
-        compressionOptions: { level: 6 } // Good balance between speed and compression size
+        compressionOptions: { level: 4 } // Level 4 uses much less memory processing overhead
       });
 
-      // 4. Trigger exactly ONE clean download link
       const blobUrl = URL.createObjectURL(zipContentBlob);
       const downloadLink = document.createElement('a');
       downloadLink.href = blobUrl;
-      
-      // Name the main container file
-      const timestamp = new Date().toISOString().slice(0,10);
-      downloadLink.download = `circuitjs-vector-dump-${timestamp}.zip`;
+      downloadLink.download = `circuitjs-export-${Date.now()}.zip`;
 
       document.body.appendChild(downloadLink);
       downloadLink.click();
       document.body.removeChild(downloadLink);
       URL.revokeObjectURL(blobUrl);
 
-      console.log(`Success! Bundled ${uniqueFileCounter} scalable elements into a single ZIP file without lagging.`);
+      console.log(`Success! Package downloaded containing only your primary ${uniqueFileCounter} schema vector files.`);
     } catch (zipError) {
-      console.error("Failed to generate or download the ZIP archive:", zipError);
+      console.error("Failed to build single zip file container:", zipError);
     }
   }
 });
+
   </script>
 
 
