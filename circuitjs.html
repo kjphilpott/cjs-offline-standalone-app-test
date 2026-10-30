@@ -161,67 +161,79 @@
   <!--<script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="YOUR_KEY"></script>-->
   <script src="./canvas2svg.js"></script>
   <script>
-    (function setupCanvasToSvgTracker() {
-      window.trackedCanvases = [];
-      const originalGetContext = HTMLCanvasElement.prototype.getContext;
+   (function setupCanvasToSvgTracker() {
+  window.trackedCanvases = [];
+  const originalGetContext = HTMLCanvasElement.prototype.getContext;
 
-      HTMLCanvasElement.prototype.getContext = function (contextType, contextAttributes) {
-        const context = originalGetContext.call(this, contextType, contextAttributes);
+  HTMLCanvasElement.prototype.getContext = function (contextType, contextAttributes) {
+    // 1. Get the pure, untouched native canvas context
+    const nativeCtx = originalGetContext.call(this, contextType, contextAttributes);
 
-        if (contextType === '2d' && context && !this.svgContext) {
-          try {
-            const width = this.width || this.clientWidth || 300;
-            const height = this.height || this.clientHeight || 150;
-            const svgCtx = new C2S(width, height);
-            this.svgContext = svgCtx;
+    if (contextType === '2d' && nativeCtx && !this.svgContext) {
+      try {
+        const width = this.width || this.clientWidth || 300;
+        const height = this.height || this.clientHeight || 150;
+        
+        // 2. Initialize a clean instance of the canvas2svg tracking engine
+        const svgCtx = new C2S(width, height);
+        this.svgContext = svgCtx;
 
-            // Proxy all 2D functions
-            const methodsToProxy = Object.getOwnPropertyNames(CanvasRenderingContext2D.prototype)
-              .filter(prop => typeof context[prop] === 'function');
-
-            methodsToProxy.forEach(method => {
-              const originalMethod = context[method];
-              context[method] = function (...args) {
-                if (typeof svgCtx[method] === 'function') {
-                  svgCtx[method](...args);
+        // 3. Create a unified Proxy interface to safely handle both pipelines
+        const contextProxy = new Proxy(nativeCtx, {
+          get(target, prop) {
+            // Handle method hooks (like lineTo, stroke, etc.)
+            if (typeof target[prop] === 'function') {
+              return function (...args) {
+                // Intercept specific calls like clearRect to keep the SVG clean
+                if (prop === 'clearRect') {
+                  // Re-initialize or clear the shadow SVG context to prevent line stacking
+                  svgCtx.clear(); 
                 }
-                return originalMethod.apply(this, args);
-              };
-            });
 
-            // FIXED: Dynamically map styles and properties to match native canvas states
-            const propertiesToProxy = ['fillStyle', 'strokeStyle', 'lineWidth', 'font', 'textAlign', 'textBaseline', 'globalAlpha', 'globalCompositeOperation'];
-            propertiesToProxy.forEach(prop => {
-              Object.defineProperty(context, prop, {
-                get() {
-                  // Pass back the real live internal string/value from canvas state
-                  return svgCtx[prop];
-                },
-                set(val) {
-                  // Keep both engines uniformly aligned
-                  svgCtx[prop] = val;
-                  // Use native style descriptors to avoid infinite recursion loops
-                  const descriptor = Object.getOwnPropertyDescriptor(CanvasRenderingContext2D.prototype, prop);
-                  if (descriptor && descriptor.set) {
-                    descriptor.set.call(this, val);
-                  } else {
-                    this[prop] = val;
+                // Safely mirror drawings to the vector engine if the method exists
+                if (typeof svgCtx[prop] === 'function') {
+                  try {
+                    svgCtx[prop](...args);
+                  } catch (e) {
+                    // Fail gracefully if a method signature doesn't align perfectly
                   }
-                },
-                configurable: true
-              });
-            });
-
-            window.trackedCanvases.push(this);
-            console.log("Vector tracking active on CircuitJS node rendering frame.");
-          } catch (e) {
-            console.warn("Could not attach canvas2svg tracker:", e);
+                }
+                
+                // Always execute the native drawing routine directly on your screen
+                return target[prop].apply(target, args);
+              };
+            }
+            
+            // Pass standard properties back normally from the live canvas
+            return target[prop];
+          },
+          
+          set(target, prop, value) {
+            // Synchronize drawing styles seamlessly (fillStyle, strokeStyle, lineWidth, etc.)
+            try {
+              svgCtx[prop] = value;
+            } catch (e) {}
+            
+            target[prop] = value;
+            return true;
           }
-        }
-        return context;
-      };
-      console.log("Canvas context hook activated successfully.");
-    })();
+        });
+
+        window.trackedCanvases.push(this);
+        console.log("Clean shadow context proxy attached.");
+        
+        // Return our safe proxy wrapper back to CircuitJS
+        return contextProxy;
+
+      } catch (e) {
+        console.warn("Could not attach canvas2svg tracker wrapper safely:", e);
+      }
+    }
+    return nativeCtx;
+  };
+  console.log("Advanced canvas proxy engine activated.");
+})();
+
   </script>
 
   <!-- 3. DOWNLOAD SYSTEM: Captures every canvas vector frame on Enter keydown -->
