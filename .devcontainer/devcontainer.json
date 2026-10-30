@@ -1,0 +1,10 @@
+{
+  "name": "CJS Test (standalone app)",
+  "customizations": {
+    "codespaces": {
+      "repositories": {
+        "shallow": true
+      }
+    }
+  }
+}
