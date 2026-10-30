@@ -386,7 +386,7 @@ function circuitjs1(){
     }
 
     sendStats('loadExternalRefs', 'begin');
-    installOneStylesheet('gwt/clean/clean.css');
+    installOneStylesheet('assets/clean.css');
     installOneStylesheet('style.css');
     sendStats('loadExternalRefs', 'end');
   }
