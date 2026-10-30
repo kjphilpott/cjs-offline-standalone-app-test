@@ -161,94 +161,134 @@
   <!--<script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="YOUR_KEY"></script>-->
   <script src="./canvas2svg.js"></script>
   <script>
- // System setup script remains completely passive to preserve RAM
-    window.setupCanvasToSvgTracker = function() {
-       console.log("System initialized. Ready for export.");
-    };
-    
-    // DOWNLOAD TRICK: Generate a clean vector snap exactly when requested
-    document.addEventListener('keydown', function (event) {
-      if (event.key === 'Enter') {
-        event.preventDefault();
+ (function setupCanvasToSvgTracker() {
+  window.trackedCanvases = [];
+  const originalGetContext = HTMLCanvasElement.prototype.getContext;
+
+  HTMLCanvasElement.prototype.getContext = function (contextType, contextAttributes) {
+    // 1. Get the pure, untouched native canvas context
+    const nativeCtx = originalGetContext.call(this, contextType, contextAttributes);
+
+    if (contextType === '2d' && nativeCtx && !this.svgContext) {
+      try {
+        const width = this.width || this.clientWidth || 300;
+        const height = this.height || this.clientHeight || 150;
         
-        // 1. Snag the active workspace canvas on screen
-        const canvas = document.querySelector('canvas');
-        if (!canvas) {
-          console.warn("No active simulation workspace canvas found.");
-          return;
-        }
+        // 2. Initialize a clean instance of the canvas2svg tracking engine
+        const svgCtx = new C2S(width, height);
+        this.svgContext = svgCtx;
 
-        console.log("Capturing fresh vector snapshot...");
+        // 3. Create a unified Proxy interface to safely handle both pipelines
+        const contextProxy = new Proxy(nativeCtx, {
+          get(target, prop) {
+            // Handle method hooks (like lineTo, stroke, etc.)
+            if (typeof target[prop] === 'function') {
+              return function (...args) {
+                // Intercept specific calls like clearRect to keep the SVG clean
+                if (prop === 'clearRect') {
+                  // Re-initialize or clear the shadow SVG context to prevent line stacking
+                  svgCtx.clear(); 
+                }
 
-        try {
-          const width = canvas.width || canvas.clientWidth || 800;
-          const height = canvas.height || canvas.clientHeight || 600;
-
-          // 2. Initialize a clean, empty canvas2svg context block
-          const svgCtx = new C2S(width, height);
-
-          // 3. Inject our fresh tracker into the canvas's context request path
-          const nativeGetContext = HTMLCanvasElement.prototype.getContext;
-          const originalContext = canvas.getContext('2d');
-
-          // 4. Create a one-time Proxy layer to intercept the NEXT single paint frame
-          const drawInterceptProxy = new Proxy(originalContext, {
-            get(target, prop) {
-              if (typeof target[prop] === 'function') {
-                return function (...args) {
-                  // Mirror the current frame's draw instructions over to C2S
-                  if (typeof svgCtx[prop] === 'function') {
-                    try { svgCtx[prop](...args); } catch(e){}
+                // Safely mirror drawings to the vector engine if the method exists
+                if (typeof svgCtx[prop] === 'function') {
+                  try {
+                    svgCtx[prop](...args);
+                  } catch (e) {
+                    // Fail gracefully if a method signature doesn't align perfectly
                   }
-                  return target[prop].apply(target, args);
-                };
-              }
-              return target[prop];
+                }
+                
+                // Always execute the native drawing routine directly on your screen
+                return target[prop].apply(target, args);
+              };
             }
-          });
-
-          // 5. Force CircuitJS to completely repaint its layout right now
-          // CircuitJS context elements natively flag dirty structures on matrix manipulation triggers
-          originalContext.save();
-          originalContext.rect(0, 0, 0, 0); // Fake canvas state nudge
-          originalContext.restore();
+            
+            // Pass standard properties back normally from the live canvas
+            return target[prop];
+          },
           
-          // Fallback manual mirror loop: Grab active pixel pathways if GWT cache allows
-          if (typeof originalContext.draw === 'function') {
-             originalContext.draw(false); 
+          set(target, prop, value) {
+            // Synchronize drawing styles seamlessly (fillStyle, strokeStyle, lineWidth, etc.)
+            try {
+              svgCtx[prop] = value;
+            } catch (e) {}
+            
+            target[prop] = value;
+            return true;
+          }
+        });
+
+        window.trackedCanvases.push(this);
+        console.log("Clean shadow context proxy attached.");
+        
+        // Return our safe proxy wrapper back to CircuitJS
+        return contextProxy;
+
+      } catch (e) {
+        console.warn("Could not attach canvas2svg tracker wrapper safely:", e);
+      }
+    }
+    return nativeCtx;
+  };
+  console.log("Advanced canvas proxy engine activated.");
+})();
+
+  </script>
+<script>
+  document.addEventListener('keydown', function (event) {
+  if (event.key === 'Enter') {
+    event.preventDefault();
+    
+    // 1. CRITICAL CHANGE: Pull directly from our internal script registry, not the DOM
+    const canvasesToExport = window.trackedCanvases || [];
+    let downloadCount = 0;
+
+    if (canvasesToExport.length === 0) {
+      console.warn("No tracked canvas instances have been registered by the script yet.");
+      return;
+    }
+
+    canvasesToExport.forEach((canvas, index) => {
+      // 2. Double check that canvas2svg context exists and has data inside it
+      if (canvas && canvas.svgContext && typeof canvas.svgContext.getSerializedSvg === 'function') {
+        try {
+          // Generate the vector code
+          const svgString = canvas.svgContext.getSerializedSvg(true);
+          
+          // Verify we aren't downloading a completely blank file
+          if (!svgString || svgString.length < 100) {
+             console.log(`Skipped Canvas #${index} because its vector buffer was empty.`);
+             return; 
           }
 
-          // 6. Generate the pure string from our single isolated frame paint request
-          const svgString = svgCtx.getSerializedSvg(true);
-
-          if (!svgString || svgString.length < 500) {
-            // Alternative strategy if high-speed logic blocks the immediate hook:
-            console.warn("Snapshot capture empty. Canvas engine state blocked standard draw interception.");
-            return;
-          }
-
-          // 7. Instant low-overhead file deployment (Bypasses zip compression lag completely)
+          // Build the automatic download asset
           const blob = new Blob([svgString], { type: 'image/svg+xml;charset=utf-8' });
           const blobUrl = URL.createObjectURL(blob);
 
           const downloadLink = document.createElement('a');
           downloadLink.href = blobUrl;
-          downloadLink.download = `circuit-layout-snapshot-${Date.now()}.svg`;
+          
+          // Name it logically using its ID or index location
+          const identifier = canvas.id || `index-${index}`;
+          downloadLink.download = `circuit-complete-${identifier}.svg`;
 
           document.body.appendChild(downloadLink);
           downloadLink.click();
           document.body.removeChild(downloadLink);
           URL.revokeObjectURL(blobUrl);
 
-          console.log("Vector schematic downloaded safely!");
-
+          downloadCount++;
         } catch (err) {
-          console.error("Vector extraction stack fault error:", err);
+          console.error(`Error processing SVG extraction on Canvas #${index}:`, err);
         }
       }
     });
-  </script>
 
+    console.log(`Export processing finished. Triggered downloads for ${downloadCount} total canvas traces.`);
+  }
+});
+</script>
 
 
 
