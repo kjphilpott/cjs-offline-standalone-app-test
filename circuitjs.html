@@ -159,126 +159,112 @@
 <body>
   <!-- Include the next line to allow support for dropbox import/export. You will need your own app key. -->
   <!--<script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="YOUR_KEY"></script>-->
-  <script src="./canvas2svg.js" rel="preload"></script>
+  <script src="./canvas2svg.js"></script>
   <script>
     (function setupCanvasToSvgTracker() {
-      // 1. Array to hold references to tracked canvas objects
       window.trackedCanvases = [];
-
-      // 2. Save the original native getContext method
       const originalGetContext = HTMLCanvasElement.prototype.getContext;
 
-      // 3. Override getContext('2d') globally
       HTMLCanvasElement.prototype.getContext = function (contextType, contextAttributes) {
         const context = originalGetContext.call(this, contextType, contextAttributes);
 
         if (contextType === '2d' && context && !this.svgContext) {
           try {
-            // Initialize canvas2svg with the canvas's current dimensions
             const width = this.width || this.clientWidth || 300;
             const height = this.height || this.clientHeight || 150;
             const svgCtx = new C2S(width, height);
-
-            // Attach the vector context directly to the HTML element
             this.svgContext = svgCtx;
 
-            // Proxy all drawing methods to both the real canvas and the SVG layout
+            // Proxy all 2D functions
             const methodsToProxy = Object.getOwnPropertyNames(CanvasRenderingContext2D.prototype)
               .filter(prop => typeof context[prop] === 'function');
 
             methodsToProxy.forEach(method => {
               const originalMethod = context[method];
               context[method] = function (...args) {
-                // Call the SVG tracker method if it exists
                 if (typeof svgCtx[method] === 'function') {
                   svgCtx[method](...args);
                 }
-                // Draw natively on the screen
                 return originalMethod.apply(this, args);
               };
             });
 
-            // Proxy property setters (like fillStyle, strokeStyle, lineStyle)
+            // FIXED: Dynamically map styles and properties to match native canvas states
             const propertiesToProxy = ['fillStyle', 'strokeStyle', 'lineWidth', 'font', 'textAlign', 'textBaseline', 'globalAlpha', 'globalCompositeOperation'];
             propertiesToProxy.forEach(prop => {
-              let value = context[prop];
               Object.defineProperty(context, prop, {
-                get() { return value; },
+                get() {
+                  // Pass back the real live internal string/value from canvas state
+                  return svgCtx[prop];
+                },
                 set(val) {
-                  value = val;
-                  svgCtx[prop] = val; // Synchronize with canvas2svg
-                }
+                  // Keep both engines uniformly aligned
+                  svgCtx[prop] = val;
+                  // Use native style descriptors to avoid infinite recursion loops
+                  const descriptor = Object.getOwnPropertyDescriptor(CanvasRenderingContext2D.prototype, prop);
+                  if (descriptor && descriptor.set) {
+                    descriptor.set.call(this, val);
+                  } else {
+                    this[prop] = val;
+                  }
+                },
+                configurable: true
               });
             });
 
-            // Keep a record of this tracked canvas element
             window.trackedCanvases.push(this);
-            console.log("Started vector tracking a new 2D canvas element.");
+            console.log("Vector tracking active on CircuitJS node rendering frame.");
           } catch (e) {
-            console.warn("Could not attach canvas2svg tracker to this canvas:", e);
+            console.warn("Could not attach canvas2svg tracker:", e);
           }
         }
         return context;
       };
-
-      console.log("Canvas context hook activated. Ready to track animations/drawings.");
+      console.log("Canvas context hook activated successfully.");
     })();
   </script>
 
-
-
+  <!-- 3. DOWNLOAD SYSTEM: Captures every canvas vector frame on Enter keydown -->
   <script>
-
     document.addEventListener('keydown', function (event) {
       if (event.key === 'Enter') {
         event.preventDefault();
-        function downloadAllCanvasesAsSVG() {
-          // Target any canvas elements that have successfully captured SVG data blocks
-          const canvases = document.querySelectorAll('canvas');
-          let downloadCount = 0;
 
-          canvases.forEach((canvas, index) => {
-            if (canvas.svgContext && typeof canvas.svgContext.getSerializedSvg === 'function') {
-              try {
-                // Generate the raw XML string of the vector image
-                const svgString = canvas.svgContext.getSerializedSvg(true);
+        const canvases = document.querySelectorAll('canvas');
+        let downloadCount = 0;
 
-                // Bundle the raw text into an active file blob
-                const blob = new Blob([svgString], { type: 'image/svg+xml;charset=utf-8' });
-                const blobUrl = URL.createObjectURL(blob);
+        canvases.forEach((canvas, index) => {
+          if (canvas.svgContext && typeof canvas.svgContext.getSerializedSvg === 'function') {
+            try {
+              const svgString = canvas.svgContext.getSerializedSvg(true);
+              const blob = new Blob([svgString], { type: 'image/svg+xml;charset=utf-8' });
+              const blobUrl = URL.createObjectURL(blob);
 
-                // Create a dynamic, temporary download wire anchor
-                const downloadLink = document.createElement('a');
-                downloadLink.href = blobUrl;
-                downloadLink.download = `vector-canvas-${index}-${canvas.id || 'export'}.svg`;
+              const downloadLink = document.createElement('a');
+              downloadLink.href = blobUrl;
+              downloadLink.download = `circuit-layout-${index}-${canvas.id || 'export'}.svg`;
 
-                document.body.appendChild(downloadLink);
-                downloadLink.click();
-                document.body.removeChild(downloadLink);
-                URL.revokeObjectURL(blobUrl);
+              document.body.appendChild(downloadLink);
+              downloadLink.click();
+              document.body.removeChild(downloadLink);
+              URL.revokeObjectURL(blobUrl);
 
-                downloadCount++;
-              } catch (err) {
-                console.error(`Error serialization rendering on Canvas #${index}:`, err);
-              }
+              downloadCount++;
+            } catch (err) {
+              console.error(`Error processing SVG on Canvas #${index}:`, err);
             }
-          });
-
-          if (downloadCount === 0) {
-            console.warn("No canvas elements with active vector trace properties found yet. Ensure the script was active *before* the drawings were painted onto the canvas.");
-          } else {
-            console.log(`Successfully triggered downloads for ${downloadCount} Vector canvas files.`);
           }
+        });
+
+        if (downloadCount === 0) {
+          console.warn("No vectors generated yet. Make sure the simulation has rendered components on screen.");
+        } else {
+          console.log(`Successfully exported ${downloadCount} circuit vector files!`);
         }
-
-        // Call it directly:
-        downloadAllCanvasesAsSVG();
-
-
-
       }
     });
   </script>
+
 
 
 
