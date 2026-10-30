@@ -28591,7 +28591,7 @@ function $drawCircuitInContext(this$static, context, type_0, bounds, w, h){
     $setColor_0(g, black);
   }
   $fillRect(g.context, 0, 0, w, h);
-  $setState_1(this$static.sim.menus.dotsCheckItem, true);
+  $setState_1(this$static.sim.menus.dotsCheckItem, false);
   !!bounds && (scale = $wnd.Math.min(w / (bounds.width_0 + 140), h / (bounds.height_0 + 100)));
   this$static.sim.transform_0[0] = this$static.sim.transform_0[3] = scale;
   this$static.sim.transform_0[4] = -(bounds.x_0 - 70);
