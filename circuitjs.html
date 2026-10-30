@@ -160,6 +160,7 @@
   <!-- Include the next line to allow support for dropbox import/export. You will need your own app key. -->
   <!--<script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="YOUR_KEY"></script>-->
   <script src="./canvas2svg.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.2/jszip.min.js" integrity="sha512-/ICos1xr6gGjsbC2d7Z6D0hmKAnNbkCv5Pp803Q75xgHowbEcgI4CVOHMHUux/ZorCuod6dzuJOjfNoCKV0tRw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
    (function setupCanvasToSvgTracker() {
   window.trackedCanvases = [];
@@ -238,59 +239,76 @@
 
   <!-- 3. DOWNLOAD SYSTEM: Captures every canvas vector frame on Enter keydown -->
   <script>
-    document.addEventListener('keydown', function (event) {
+    document.addEventListener('keydown', async function (event) {
   if (event.key === 'Enter') {
     event.preventDefault();
     
-    // 1. CRITICAL CHANGE: Pull directly from our internal script registry, not the DOM
     const canvasesToExport = window.trackedCanvases || [];
-    let downloadCount = 0;
-
     if (canvasesToExport.length === 0) {
-      console.warn("No tracked canvas instances have been registered by the script yet.");
+      console.warn("No tracked canvas instances registered yet.");
       return;
     }
 
+    console.log(`Packaging ${canvasesToExport.length} canvas vectors into a ZIP archive... Please wait.`);
+
+    // 1. Initialize a brand new JSZip instance
+    const zip = new JSZip();
+    let uniqueFileCounter = 0;
+
     canvasesToExport.forEach((canvas, index) => {
-      // 2. Double check that canvas2svg context exists and has data inside it
       if (canvas && canvas.svgContext && typeof canvas.svgContext.getSerializedSvg === 'function') {
         try {
-          // Generate the vector code
           const svgString = canvas.svgContext.getSerializedSvg(true);
           
-          // Verify we aren't downloading a completely blank file
-          if (!svgString || svgString.length < 100) {
-             console.log(`Skipped Canvas #${index} because its vector buffer was empty.`);
-             return; 
-          }
+          // Skip completely empty buffers (less than 100 characters of markup)
+          if (!svgString || svgString.length < 100) return;
 
-          // Build the automatic download asset
-          const blob = new Blob([svgString], { type: 'image/svg+xml;charset=utf-8' });
-          const blobUrl = URL.createObjectURL(blob);
+          // Name the individual vector files clearly inside the zip
+          const identifier = canvas.id || `canvas-${index}`;
+          const fileName = `components/${identifier}-${uniqueFileCounter}.svg`;
 
-          const downloadLink = document.createElement('a');
-          downloadLink.href = blobUrl;
-          
-          // Name it logically using its ID or index location
-          const identifier = canvas.id || `index-${index}`;
-          downloadLink.download = `circuit-complete-${identifier}.svg`;
-
-          document.body.appendChild(downloadLink);
-          downloadLink.click();
-          document.body.removeChild(downloadLink);
-          URL.revokeObjectURL(blobUrl);
-
-          downloadCount++;
+          // 2. Add the raw SVG text file directly to the archive project
+          zip.file(fileName, svgString);
+          uniqueFileCounter++;
         } catch (err) {
-          console.error(`Error processing SVG extraction on Canvas #${index}:`, err);
+          console.error(`Error serialization rendering on Canvas #${index}:`, err);
         }
       }
     });
 
-    console.log(`Export processing finished. Triggered downloads for ${downloadCount} total canvas traces.`);
+    if (uniqueFileCounter === 0) {
+      console.warn("All tracked canvas vector buffers were completely blank. Nothing to zip.");
+      return;
+    }
+
+    try {
+      // 3. Generate the binary ZIP payload asynchronously
+      const zipContentBlob = await zip.generateAsync({ 
+        type: "blob",
+        compression: "DEFLATE",
+        compressionOptions: { level: 6 } // Good balance between speed and compression size
+      });
+
+      // 4. Trigger exactly ONE clean download link
+      const blobUrl = URL.createObjectURL(zipContentBlob);
+      const downloadLink = document.createElement('a');
+      downloadLink.href = blobUrl;
+      
+      // Name the main container file
+      const timestamp = new Date().toISOString().slice(0,10);
+      downloadLink.download = `circuitjs-vector-dump-${timestamp}.zip`;
+
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+      URL.revokeObjectURL(blobUrl);
+
+      console.log(`Success! Bundled ${uniqueFileCounter} scalable elements into a single ZIP file without lagging.`);
+    } catch (zipError) {
+      console.error("Failed to generate or download the ZIP archive:", zipError);
+    }
   }
 });
-
   </script>
 
 
