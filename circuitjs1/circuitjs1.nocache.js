@@ -70,7 +70,9 @@ function circuitjs1(){
     frameDoc = scriptFrame.contentWindow.document;
     frameDoc.open();
     var doctype = document.compatMode == 'CSS1Compat'?'<!doctype html>':'';
-    frameDoc.write(doctype + '<html><head><\/head><body><\/body><\/html>');
+    frameDoc.write(doctype + '<html>
+  <head>
+        <link rel="icon" href="./icon.svg" type="image/svg+xml"><\/head><body><\/body><\/html>');
     frameDoc.close();
   }
 
