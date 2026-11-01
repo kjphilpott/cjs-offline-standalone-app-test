@@ -14674,7 +14674,7 @@ function $stamp(this$static){
       ++vsc;
     }
   }
-  vsc != this$static.getVoltageSourceCount() && (console.log('voltage source count does not match number of outputs') , undefined);
+  vsc != this$static.getVoltageSourceCount() && (document.body.append('voltage source count does not match number of outputs') , undefined);
 }
 
 function $undumpXml_0(this$static, xml){
@@ -14692,7 +14692,7 @@ function $undumpXml_0(this$static, xml){
 }
 
 function $writeOutput(this$static, n, value_0){
-  this$static.pins[n].output || (console.log('pin ' + n + ' is not an output!') , undefined);
+  this$static.pins[n].output || (document.body.append('pin ' + n + ' is not an output!') , undefined);
   this$static.pins[n].value_0 = value_0;
 }
 
@@ -16559,7 +16559,7 @@ function fetchLoadFileData(elm, uploadElement){
         elm.gotAudioData(data_0);
       }
       , function(e){
-        console.log('Error with decoding audio data' + e.err);
+        document.body.append('Error with decoding audio data' + e.err);
       }
       );
     }
@@ -18610,10 +18610,10 @@ function $register(elm){
   cs = elm.getDumpClass();
   className = ($ensureNamesAreInitialized(cs) , cs.typeName);
   className = $substring(className, $lastIndexOf(className, fromCodePoint(46)) + 1);
-  s != null?$equals_1(s, className) || (console.log('dump type conflict for ' + className + ' ' + t) , undefined):$put_0(dumpTypeMap, valueOf(t), className);
+  s != null?$equals_1(s, className) || (document.body.append('dump type conflict for ' + className + ' ' + t) , undefined):$put_0(dumpTypeMap, valueOf(t), className);
   xt = elm.getXmlDumpType();
   s = $getStringValue(xmlDumpTypeMap, xt);
-  s != null?$equals_1(s, className) || (console.log('xml dump type conflict for ' + className + ' ' + xt) , undefined):$putStringValue(xmlDumpTypeMap, xt, className);
+  s != null?$equals_1(s, className) || (document.body.append('xml dump type conflict for ' + className + ' ' + xt) , undefined):$putStringValue(xmlDumpTypeMap, xt, className);
 }
 
 function $removeWidgetFromVerticalPanel(this$static, w){
@@ -18664,7 +18664,8 @@ function CirSim(){
 }
 
 function console_0(text_0){
-  console.log(text_0);
+  document.body.append(text_0);
+  document.body.append(text_0);
 }
 
 function constructElement(n, x1, y1){
@@ -18903,7 +18904,7 @@ function $readCircuit_1(this$static, b, flags){
         f = __parseAndValidateInt($nextToken(st), 10);
         newce = createCe(tint, x1, y1, x2, y2, f, st);
         if (!newce) {
-          console.log('unrecognized dump type: ' + type_0);
+          document.body.append('unrecognized dump type: ' + type_0);
           break;
         }
         newce.setPoints();
@@ -18914,7 +18915,7 @@ function $readCircuit_1(this$static, b, flags){
         if (instanceOf($e0, 15)) {
           ee = $e0;
           $printStackTraceImpl(ee, ($clinit_System() , err_0), '');
-          console.log('exception while undumping ' + ee);
+          document.body.append('exception while undumping ' + ee);
           break;
         }
          else 
@@ -19698,7 +19699,7 @@ function $loadComposite(this$static, stIn, model, externalNodes){
       newce = createCe(tint, 0, 0, 0, 0, flags, stCe);
     }
     if (!newce) {
-      console.log('failed to create ' + ceType + ' in CompositeElm');
+      document.body.append('failed to create ' + ceType + ' in CompositeElm');
       continue;
     }
     instanceOf(newce, 165) && (newce.flags |= 1);
@@ -19760,10 +19761,10 @@ function $undumpXml_2(this$static, xml){
     xml.currentXmlElement = elem;
     ix = $parseIntAttr(xml, 'ix', -1);
     if (ix >= this$static.compElmList.arrayList.array.length) {
-      console.log('ix ' + ix);
+      document.body.append('ix ' + ix);
       for (ce$iterator = new ArrayList$1(this$static.compElmList.arrayList); ce$iterator.i < ce$iterator.this$01.array.length;) {
         ce0 = $next_4(ce$iterator);
-        console.log('cel ' + ce0);
+        document.body.append('cel ' + ce0);
       }
     }
     ce = $get_4(this$static.compElmList, ix);
@@ -20109,7 +20110,7 @@ _.execute_3 = function execute_14(){
       realmod = this.modulus == 0?1 << this.bits:this.modulus;
       value_0 %= realmod;
       for (i = 0; i != this.bits; i++) {
-        this.pins[lastBit - i].output || (console.log('pin ' + (lastBit - i) + ' is not an output!') , undefined);
+        this.pins[lastBit - i].output || (document.body.append('pin ' + (lastBit - i) + ' is not an output!') , undefined);
         this.pins[lastBit - i].value_0 = (value_0 & 1 << i) != 0;
       }
       this.carry = value_0 == realmod - 1;
@@ -20127,7 +20128,7 @@ _.execute_3 = function execute_14(){
   }
   if (!this.pins[this.clr].value_0) {
     for (i = 0; i != this.bits; i++) {
-      this.pins[i].output || (console.log('pin ' + i + ' is not an output!') , undefined);
+      this.pins[i].output || (document.body.append('pin ' + i + ' is not an output!') , undefined);
       this.pins[i].value_0 = false;
     }
     this.carry = false;
@@ -23013,12 +23014,12 @@ _.execute_3 = function execute_17(){
   (this.flags & 4) != 0 && this.pins[5].value_0 != ((this.flags & 8) != 0) && (isSet = true);
   ((this.flags & 2) != 0 || (this.flags & 4) != 0) && this.pins[4].value_0 != ((this.flags & 8) != 0) && (isReset = true);
   if (isSet || isReset) {
-    this.pins[1].output || (console.log('pin 1 is not an output!') , undefined);
+    this.pins[1].output || (document.body.append('pin 1 is not an output!') , undefined);
     this.pins[1].value_0 = false;
-    this.pins[2].output || (console.log('pin 2 is not an output!') , undefined);
+    this.pins[2].output || (document.body.append('pin 2 is not an output!') , undefined);
     this.pins[2].value_0 = false;
-    isSet && (this.pins[1].output || (console.log('pin 1 is not an output!') , undefined) , this.pins[1].value_0 = true);
-    isReset && (this.pins[2].output || (console.log('pin 2 is not an output!') , undefined) , this.pins[2].value_0 = true);
+    isSet && (this.pins[1].output || (document.body.append('pin 1 is not an output!') , undefined) , this.pins[1].value_0 = true);
+    isReset && (this.pins[2].output || (document.body.append('pin 2 is not an output!') , undefined) , this.pins[2].value_0 = true);
   }
    else {
     this.pins[3].value_0 && !this.lastClock && $writeOutput(this, 1, this.pins[0].value_0);
@@ -23524,7 +23525,7 @@ _.doLoadCallback = function doLoadCallback(s, t){
      catch ($e0) {
       $e0 = toJava($e0);
       if (instanceOf($e0, 15)) {
-        console.log('parse error on line ' + i);
+        document.body.append('parse error on line ' + i);
       }
        else 
         throw toJs($e0);
@@ -24888,7 +24889,7 @@ function getModelWithNameOrCopy_0(name_0, oldmodel){
   if (lm)
     return lm;
   if (!oldmodel) {
-    console.log('model not found: ' + name_0);
+    document.body.append('model not found: ' + name_0);
     return getModelWithName_1('default');
   }
   lm = new DiodeModel_1(oldmodel);
@@ -25759,7 +25760,7 @@ _.closeDialog = function closeDialog_1(){
   var edlg;
   $closeDialog_0(this);
   edlg = editDialog_0;
-  console.log('resetting dialog ' + edlg);
+  document.body.append('resetting dialog ' + edlg);
   !!edlg && ($clearDialog(edlg) , $buildDialog(edlg));
   diodeModelEditDialog = null;
 }
@@ -26044,7 +26045,7 @@ _.closeDialog = function closeDialog_2(){
   var edlg;
   $closeDialog_0(this);
   edlg = editDialog_0;
-  console.log('resetting dialog ' + edlg);
+  document.body.append('resetting dialog ' + edlg);
   !!edlg && ($clearDialog(edlg) , $buildDialog(edlg));
   diodeModelEditDialog = null;
 }
@@ -27280,7 +27281,7 @@ function $eval(this$static, es){
         return (es.values[this$static.type_0 - 60] - es.lastValues[this$static.type_0 - 60]) / theSim.timeStep;
       if (this$static.type_0 >= 50)
         return es.values[this$static.type_0 - 50];
-      console.log('unknown\n');
+      document.body.append('unknown\n');
   }
   return 0;
 }
@@ -28663,7 +28664,7 @@ function clipboardWriteImage(cv){
   cv.toBlob(function(blob){
     var promise = parent.navigator.clipboard.write([new ClipboardItem({'image/png':blob})]);
     promise.then(function(x_0){
-      console.log(x_0);
+      document.body.append(x_0);
     }
     );
   }
@@ -29492,11 +29493,11 @@ _.execute_3 = function execute_21(){
   if (transition) {
     q = this.pins[3].value_0;
     this.pins[0].value_0?this.pins[2].value_0?(q = !q):(q = true):this.pins[2].value_0 && (q = false);
-    this.pins[3].output || (console.log('pin 3 is not an output!') , undefined);
+    this.pins[3].output || (document.body.append('pin 3 is not an output!') , undefined);
     this.pins[3].value_0 = q;
   }
   this.lastClock = this.pins[1].value_0;
-  (this.flags & 2) != 0 && this.pins[5].value_0 != ((this.flags & 8) != 0) && (this.pins[3].output || (console.log('pin 3 is not an output!') , undefined) , this.pins[3].value_0 = false);
+  (this.flags & 2) != 0 && this.pins[5].value_0 != ((this.flags & 8) != 0) && (this.pins[3].output || (document.body.append('pin 3 is not an output!') , undefined) , this.pins[3].value_0 = false);
   $writeOutput(this, 4, !this.pins[3].value_0);
 }
 ;
@@ -38348,14 +38349,14 @@ function $setPoints_23(this$static, routing){
   $initGrid(router, this$static);
   this$static.routePoints = $routeWire(router, this$static.x_0, this$static.y_0, this$static.x2, this$static.y2);
   if (this$static.routePoints.array.length < 2) {
-    console.log('routing failed');
+    document.body.append('routing failed');
     this$static.routePoints = new ArrayList;
     $add_8(this$static.routePoints, this$static.point1);
     $add_8(this$static.routePoints, new Point_2(this$static.x2, this$static.y_0));
     $add_8(this$static.routePoints, this$static.point2);
     return;
   }
-  console.log('route success');
+  document.body.append('route success');
 }
 
 function $split(this$static, mx, my){
@@ -40577,7 +40578,7 @@ function $saveAsDefault(this$static){
   s = '1 ' + flags + ' ' + vPlot.scopePlotSpeed;
   (flags & $intern_46) != 0 && (s += ' ' + this$static.triggerLevel);
   $setItem_0(stor.storage, 'scopeDefaults', s);
-  console.log('saved defaults ' + flags);
+  document.body.append('saved defaults ' + flags);
 }
 
 function $selectScope(this$static, mouseX, mouseY){
@@ -43287,7 +43288,7 @@ _.execute_3 = function execute_39(){
   (this.flags & 2) != 0 && !this.pins[segCount + 4].value_0 && (en = false);
   if (!en || input_0 == 15 && (this.flags & 4) != 0) {
     for (i = 0; i != segCount; i++) {
-      this.pins[i].output || (console.log('pin ' + i + ' is not an output!') , undefined);
+      this.pins[i].output || (document.body.append('pin ' + i + ' is not an output!') , undefined);
       this.pins[i].value_0 = false;
     }
   }
@@ -43902,7 +43903,7 @@ function $assignUiWireNodes(this$static){
         $addElement($getCircuitNode(this$static, nme.node).links_0, cnl);
       }
        else {
-        console.log('missing node for ' + pt);
+        document.body.append('missing node for ' + pt);
       }
     }
   }
@@ -44095,7 +44096,7 @@ function $findUnconnectedNodes(this$static){
     for (i = 0; i != this$static.nodeList.arrayList.array.length; i++)
       if (!closure[i] && !$getCircuitNode(this$static, i).internal) {
         $add_11(this$static.unconnectedNodes, valueOf(i));
-        console.log('node ' + i + ' unconnected');
+        document.body.append('node ' + i + ' unconnected');
         closure[i] = true;
         changed = true;
         break;
@@ -44451,7 +44452,7 @@ function $runCircuit(this$static, didAnalyze){
             x_0 = this$static.circuitMatrix[i][j];
             if (isNaN(x_0) || !isNaN(x_0) && !isFinite(x_0)) {
               $stop(this$static, 'nan/infinite matrix!', null);
-              console.log('circuitMatrix ' + i + ' ' + j + ' is ' + x_0);
+              document.body.append('circuitMatrix ' + i + ' ' + j + ' is ' + x_0);
               return;
             }
           }
@@ -44463,9 +44464,9 @@ function $runCircuit(this$static, didAnalyze){
           for (i = 0; i != this$static.circuitMatrixSize; i++)
             x_0 += this$static.circuitMatrix[j][i] + ',';
           x_0 += '\n';
-          console.log(x_0);
+          document.body.append(x_0);
         }
-        console.log('done');
+        document.body.append('done');
       }
       if (this$static.circuitNonLinear) {
         if (this$static.converged && subiter > 0)
@@ -44487,7 +44488,7 @@ function $runCircuit(this$static, didAnalyze){
         console_1('timestep down to ' + this$static.timeStep + ' at ' + this$static.t);
       }
       if (this$static.timeStep < this$static.minTimeStep || !this$static.adjustTimeStep) {
-        console.log('convergence failed after ' + subiter + ' iterations');
+        document.body.append('convergence failed after ' + subiter + ' iterations');
         $stop(this$static, 'Convergence failed!', null);
         break;
       }
@@ -44843,7 +44844,7 @@ function $validateCircuit(this$static){
     if (ce.isIdealCapacitor()) {
       fpi = new SimulationManager$FindPathInfo(this$static, 3, ce, ce.nodes[1]);
       if ($findPath(fpi, ce.nodes[0])) {
-        console.log(ce + ' shorted');
+        document.body.append(ce + ' shorted');
         $reset(ce);
         ce.voltdiff = ce.current_0 = ce.curcount_0 = ce.curSourceValue = 0;
       }
@@ -44865,7 +44866,7 @@ function SimulationManager(app_){
 }
 
 function console_1(text_0){
-  console.log(text_0);
+  document.body.append(text_0);
 }
 
 function debugger_1(){
@@ -44926,7 +44927,7 @@ function lu_factor(a, n, ipvt){
     }
     if (j != largestRow) {
       if (largestRow == -1) {
-        console.log('largestRow == -1');
+        document.body.append('largestRow == -1');
         return false;
       }
       for (k = 0; k != n; k++) {
@@ -44937,7 +44938,7 @@ function lu_factor(a, n, ipvt){
     }
     ipvt[j] = largestRow;
     if (a[j][j] == 0) {
-      console.log("didn't avoid zero");
+      document.body.append("didn't avoid zero");
       return false;
     }
     if (j != n - 1) {
@@ -49235,7 +49236,7 @@ function getModelWithNameOrCopy_1(name_0, oldmodel){
   if (lm)
     return lm;
   if (!oldmodel) {
-    console.log('model not found: ' + name_0);
+    document.body.append('model not found: ' + name_0);
     return getModelWithName_2('default');
   }
   lm = new TransistorModel_0(oldmodel);
@@ -50438,13 +50439,13 @@ function $getClassCheckItem_0(this$static, s, t){
     $e0 = toJava($e0);
     if (instanceOf($e0, 15)) {
       e = $e0;
-      console.log('exception: ' + e);
+      document.body.append('exception: ' + e);
     }
      else 
       throw toJs($e0);
   }
   $register(elm);
-  !elm && t.indexOf('Elm') >= 0 && (console.log("can't create class: " + t) , undefined);
+  !elm && t.indexOf('Elm') >= 0 && (document.body.append("can't create class: " + t) , undefined);
   if (elm) {
     if (elm.getShortcut() > 0) {
       shortcut += charToString(elm.getShortcut() & $intern_22);
@@ -50512,7 +50513,7 @@ function $init_3(this$static){
     $e0 = toJava($e0);
     if (instanceOf($e0, 15)) {
       e = $e0;
-      console.log('Exception: ' + e);
+      document.body.append('Exception: ' + e);
     }
      else 
       throw toJs($e0);
@@ -51148,7 +51149,7 @@ function $updateCircuit(this$static){
   }
   $fillRect_0(g, 0, 0, this$static.canvasWidth, this$static.canvasHeight);
   if (this$static.app.simRunning) {
-    this$static.app.sim.needsStamp && (console.log('needsStamp while simRunning?') , undefined);
+    this$static.app.sim.needsStamp && (document.body.append('needsStamp while simRunning?') , undefined);
     $startContext(perfmon, 'runCircuit()');
     try {
       $runCircuit(this$static.app.sim, didAnalyze);
@@ -51158,7 +51159,7 @@ function $updateCircuit(this$static){
       if (instanceOf($e1, 15)) {
         e = $e1;
         debugger_0();
-        console.log('exception in runCircuit ' + e);
+        document.body.append('exception in runCircuit ' + e);
         $printStackTraceImpl(e, ($clinit_System() , err_0), '');
       }
        else 
@@ -51516,7 +51517,7 @@ function $readRecovery(this$static){
 
 function $writeRecoveryToStorage(this$static){
   var s, stor;
-  console.log('write recovery');
+  document.body.append('write recovery');
   stor = (!localStorage_0 && ($clinit_Storage$StorageSupportDetector() , localStorageSupported) && (localStorage_0 = new Storage_0('localStorage')) , localStorage_0);
   if (!stor)
     return;
@@ -52812,10 +52813,10 @@ function $routeWire(this$static, px1, py1, px2, py2){
   }
   patternPath = $tryPatternRouting(this$static, startR, startC, goalR, goalC);
   if (patternPath.array.length != 0) {
-    console.log('pattern');
+    document.body.append('pattern');
     return patternPath;
   }
-  console.log('A*');
+  document.body.append('A*');
   openSet = new PriorityQueue((checkCriticalNotNull(new WireRouter$lambda$0$Type) , new Comparator$lambda$2$Type));
   gScore = new HashMap;
   cameFrom = new HashMap;
@@ -53228,7 +53229,7 @@ function $readElements(this$static, root){
       continue;
     className = $getStringValue(xmlDumpTypeMap, tagName);
     if (className == null) {
-      console.log('unrecognized xml element: ' + tagName);
+      document.body.append('unrecognized xml element: ' + tagName);
       continue;
     }
     elm = constructElement(className, 0, 0);
@@ -53553,13 +53554,13 @@ function $processLocale(data_0){
       continue;
     checkCriticalStringElementIndex(0, line.length);
     if (line.charCodeAt(0) != 34) {
-      console.log('ignoring line in string catalog: ' + line);
+      document.body.append('ignoring line in string catalog: ' + line);
       continue;
     }
     line = convertUnicodeEscapes(line);
     q2 = $indexOf_1(line, fromCodePoint(34), 1);
     if (q2 < 0 || (checkCriticalStringElementIndex(q2 + 1, line.length) , line.charCodeAt(q2 + 1) != 61) || (checkCriticalStringElementIndex(q2 + 2, line.length) , line.charCodeAt(q2 + 2) != 34) || $charAt_0(line, line.length - 1) != 34) {
-      console.log('ignoring line in string catalog: ' + line);
+      document.body.append('ignoring line in string catalog: ' + line);
       continue;
     }
     str1 = line.substr(1, q2 - 1);
