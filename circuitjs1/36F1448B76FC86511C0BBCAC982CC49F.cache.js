@@ -32130,4 +32130,24579 @@ function $composeMainMenu(this$static, mainMenuBar, num) {
   $makeClassCheckItems(this$static, gateMenuBar, stampJavaTypeInfo(getClassLiteralForArray(Ljava_lang_String_2_classLit, 1), $intern_23, 2, 6, ['Add Logic Input', 'LogicInputElm', 'Add Logic Output', 'LogicOutputElm', 'Add Inverter', 'InverterElm', 'Add NAND Gate', 'NandGateElm', 'Add NOR Gate', 'NorGateElm', 'Add AND Gate', 'AndGateElm', 'Add OR Gate', 'OrGateElm', 'Add XOR Gate', 'XorGateElm', 'Add XNOR Gate', 'XnorGateElm']));
   $addItem_0(mainMenuBar, new MenuItem_0(new SafeHtmlString(checkBoxHtml + LS('&nbsp;<\/div>Logic Gates, Input and Output')), gateMenuBar));
   chipMenuBar = new MenuBar_0(true);
-  $makeClassCheckItems(this$static, chipMenuBar, stampJavaTypeInfo(getClassLiteralForArray(Ljava_lang_String_2_classLit, 1), $intern_23, 2, 6, ['Add D Flip-Flop', 'DFlipFlopElm', 'Add JK Flip-Flop', 'JKFlipFlopElm', 'Add T Flip-Flop', 'TFlipFlopElm', 'Add 7 Segment LED', 'SevenSegElm', 'Add 7 Segment Decoder', 'SevenSegDecoderElm', 'Add Multiplexer', 'MultiplexerElm', 'Add Demultiplexer', 'DeMultiplexerElm', 'Add SIPO shift register', 'SipoShiftElm', 'Add PISO shift register', 'PisoShiftElm', 'Add Counter', 'CounterElm', 'Add Counter w/ Load', 'Counter2Elm', 
+  $makeClassCheckItems(this$static, chipMenuBar, stampJavaTypeInfo(getClassLiteralForArray(Ljava_lang_String_2_classLit, 1), $intern_23, 2, 6, ['Add D Flip-Flop', 'DFlipFlopElm', 'Add JK Flip-Flop', 'JKFlipFlopElm', 'Add T Flip-Flop', 'TFlipFlopElm', 'Add 7 Segment LED', 'SevenSegElm', 'Add 7 Segment Decoder', 'SevenSegDecoderElm', 'Add Multiplexer', 'MultiplexerElm', 'Add Demultiplexer', 'DeMultiplexerElm', 'Add SIPO shift register', 'SipoShiftElm', 'Add PISO shift register', 'PisoShiftElm', 'Add Counter', 'CounterElm', 'Add Counter w/ Load', 'Counter2Elm', 'Add Ring Counter', 'DecadeElm', 'Add Latch', 'LatchElm', 'Add Sequence generator', 'SeqGenElm', 'Add Adder', 'FullAdderElm', 'Add Half Adder', 'HalfAdderElm', 'Add Custom Logic', 'UserDefinedLogicElm', 'Add Static RAM', 'SRAMElm']));
+  $addItem_0(mainMenuBar, new MenuItem_0(new SafeHtmlString(checkBoxHtml + LS('&nbsp;<\/div>Digital Chips')), chipMenuBar));
+  achipMenuBar = new MenuBar_0(true);
+  $makeClassCheckItems(this$static, achipMenuBar, stampJavaTypeInfo(getClassLiteralForArray(Ljava_lang_String_2_classLit, 1), $intern_23, 2, 6, ['Add 555 Timer', 'TimerElm', 'Add Phase Comparator', 'PhaseCompElm', 'Add DAC', 'DACElm', 'Add ADC', 'ADCElm', 'Add VCO', 'VCOElm', 'Add Monostable', 'MonostableElm']));
+  $addItem_0(mainMenuBar, new MenuItem_0(new SafeHtmlString(checkBoxHtml + LS('&nbsp;<\/div>Analog and Hybrid Chips')), achipMenuBar));
+  $makeClassCheckItems(this$static, activeBlocMenuBar, stampJavaTypeInfo(getClassLiteralForArray(Ljava_lang_String_2_classLit, 1), $intern_23, 2, 6, ['Add Op Amp (ideal, - on top)', 'OpAmpElm', 'Add Op Amp (ideal, + on top)', 'OpAmpSwapElm', 'Add Op Amp (real)', 'OpAmpRealElm', 'Add Analog Switch (SPST)', 'AnalogSwitchElm', 'Add Analog Switch (SPDT)', 'AnalogSwitch2Elm', 'Add Analog Multiplexer', 'AnalogMuxElm', 'Add Tristate Buffer', 'TriStateElm', 'Add Schmitt Trigger', 'SchmittElm', 'Add Schmitt Trigger (Inverting)', 'InvertingSchmittElm', 'Add Delay Buffer', 'DelayBufferElm', 'Add CCII+', 'CC2Elm', 'Add CCII-', 'CC2NegElm', 'Add Comparator (Hi-Z/GND output)', 'ComparatorElm', 'Add OTA (LM13700 style)', 'OTAElm', 'Add Voltage-Controlled Voltage Source (VCVS)', 'VCVSElm', 'Add Voltage-Controlled Current Source (VCCS)', 'VCCSElm', 'Add Current-Controlled Voltage Source (CCVS)', 'CCVSElm', 'Add Current-Controlled Current Source (CCCS)', 'CCCSElm', 'Add Optocoupler', 'OptocouplerElm', 'Add Time Delay Relay', 'TimeDelayRelayElm', 'Add LM317', 'CustomCompositeElm:~LM317-v2', 'Add TL431', 'CustomCompositeElm:~TL431', 'Add Motor Protection Switch', 'MotorProtectionSwitchElm', 'Add Subcircuit Instance', 'CustomCompositeElm']));
+  this$static.subcircuitMenuBar == null && (this$static.subcircuitMenuBar = initUnidimensionalArray(Lcom_google_gwt_user_client_ui_MenuBar_2_classLit, $intern_3, 53, 2, 0, 1));
+  this$static.subcircuitMenuBar[num] = new MenuBar_0(true);
+  $addItem_0(mainMenuBar, new MenuItem_0(new SafeHtmlString(checkBoxHtml + LS('&nbsp;<\/div>Subcircuits')), this$static.subcircuitMenuBar[num]));
+  otherMenuBar = new MenuBar_0(true);
+  $addItem_0(otherMenuBar, mi = $getClassCheckItem(this$static, LS('Drag All'), 'DragAll'));
+  $setShortcut(mi, LS('(Alt-drag)'));
+  $addItem_0(otherMenuBar, mi = $getClassCheckItem(this$static, LS('Drag Row'), 'DragRow'));
+  $setShortcut(mi, LS('(A-S-drag)'));
+  $addItem_0(otherMenuBar, mi = $getClassCheckItem(this$static, LS('Drag Column'), 'DragColumn'));
+  $setShortcut(mi, this$static.isMac ? LS('(A-Cmd-drag)') : LS('(A-M-drag)'));
+  $addItem_0(otherMenuBar, $getClassCheckItem(this$static, LS('Drag Selected'), 'DragSelected'));
+  $addItem_0(otherMenuBar, mi = $getClassCheckItem(this$static, LS('Drag Post'), 'DragPost'));
+  $setShortcut(mi, '(' + this$static.ctrlMetaKey + 'drag)');
+  $addItem_0(mainMenuBar, new MenuItem_0(new SafeHtmlString(checkBoxHtml + LS('&nbsp;<\/div>Drag')), otherMenuBar));
+  $addItem_0(mainMenuBar, mi = $getClassCheckItem(this$static, LS('Select/Drag Sel'), 'Select'));
+  $setShortcut(mi, LS('(space or Shift-drag)'));
+}
+
+function $getClassCheckItem(this$static, s, t) {
+  return $getClassCheckItem_0(this$static.sim.ui, s, t);
+}
+
+function $getSetupList(this$static, openDefault) {
+  var requestBuilder, url_0;
+  url_0 = getModuleBaseURL() + 'setuplist.txt';
+  requestBuilder = new RequestBuilder(($clinit_RequestBuilder(), GET), url_0);
+  try {
+    $sendRequest(requestBuilder, new Menus$7(this$static, openDefault));
+  }
+  catch ($e0) {
+    $e0 = toJava($e0);
+    if (!instanceOf($e0, 153))
+      throw toJs($e0);
+  }
+}
+
+function $iconMenuItem(icon, text_0, cmd) {
+  var icoStr;
+  icoStr = '<i class="cirjsicon-' + icon + '"><\/i>&nbsp;' + LS(text_0);
+  return new MenuItem(($clinit_SafeHtmlUtils(), new SafeHtmlString(icoStr)), cmd);
+}
+
+function $init_2(this$static) {
+  var drawMenuBar, icoStr, m, os;
+  os = $wnd.navigator.platform;
+  this$static.isMac = os.toLowerCase().indexOf('mac') != -1;
+  this$static.ctrlMetaKey = this$static.isMac ? LS('Cmd-') : LS('Ctrl-');
+  this$static.fileMenuBar = new MenuBar_0(true);
+  $wnd.openFile != undefined && $addItem_0(this$static.fileMenuBar, $menuItemWithShortcut('window', 'New Window...', LS(this$static.ctrlMetaKey + 'N'), new MyCommand('file', 'newwindow')));
+  $addItem_0(this$static.fileMenuBar, $iconMenuItem('doc-new', 'New Blank Circuit', new MyCommand('file', 'newblankcircuit')));
+  this$static.importFromLocalFileItem = $menuItemWithShortcut('folder', 'Open File...', LS(this$static.ctrlMetaKey + 'O'), new MyCommand('file', 'importfromlocalfile'));
+  $setEnabled_1(this$static.importFromLocalFileItem, isSupported_1());
+  $addItem_0(this$static.fileMenuBar, this$static.importFromLocalFileItem);
+  this$static.importFromTextItem = $iconMenuItem('doc-text', 'Import From Text...', new MyCommand('file', 'importfromtext'));
+  $addItem_0(this$static.fileMenuBar, this$static.importFromTextItem);
+  this$static.importFromDropboxItem = $iconMenuItem('dropbox', 'Import From Dropbox...', new MyCommand('file', 'importfromdropbox'));
+  $addItem_0(this$static.fileMenuBar, this$static.importFromDropboxItem);
+  if ($wnd.openFile != undefined) {
+    this$static.saveFileItem = $addItem_0(this$static.fileMenuBar, $menuItemWithShortcut('floppy', 'Save', LS(this$static.ctrlMetaKey + 'S'), new MyCommand('file', 'save')));
+    $addItem_0(this$static.fileMenuBar, $iconMenuItem('floppy', 'Save As...', new MyCommand('file', 'saveas')));
+  }
+  else {
+    this$static.exportAsLocalFileItem = $menuItemWithShortcut('floppy', 'Save As...', LS(this$static.ctrlMetaKey + 'S'), new MyCommand('file', 'exportaslocalfile'));
+    $setEnabled_1(this$static.exportAsLocalFileItem, !!('download' in $doc.createElement('a')));
+    $addItem_0(this$static.fileMenuBar, this$static.exportAsLocalFileItem);
+  }
+  this$static.exportAsUrlItem = $iconMenuItem('export', 'Export As Link...', new MyCommand('file', 'exportasurl'));
+  $addItem_0(this$static.fileMenuBar, this$static.exportAsUrlItem);
+  this$static.exportAsTextItem = $iconMenuItem('export', 'Export As Text...', new MyCommand('file', 'exportastext'));
+  $addItem_0(this$static.fileMenuBar, this$static.exportAsTextItem);
+  $addItem_0(this$static.fileMenuBar, $iconMenuItem('image', 'Export As Image...', new MyCommand('file', 'exportasimage')));
+  $addItem_0(this$static.fileMenuBar, $iconMenuItem('image', 'Copy Circuit Image to Clipboard', new MyCommand('file', 'copypng')));
+  $addItem_0(this$static.fileMenuBar, $iconMenuItem('image', 'Export As SVG...', new MyCommand('file', 'exportassvg')));
+  $addItem_0(this$static.fileMenuBar, $iconMenuItem('microchip', 'Create Subcircuit...', new MyCommand('file', 'createsubcircuit')));
+  $addItem_0(this$static.fileMenuBar, $iconMenuItem('magic', 'Find DC Operating Point', new MyCommand('file', 'dcanalysis')));
+  this$static.recoverItem = $iconMenuItem('back-in-time', 'Recover Auto-Save', new MyCommand('file', 'recover'));
+  $addItem_0(this$static.fileMenuBar, this$static.recoverItem);
+  this$static.printItem = $menuItemWithShortcut('print', 'Print...', LS(this$static.ctrlMetaKey + 'P'), new MyCommand('file', 'print'));
+  $addItem_0(this$static.fileMenuBar, this$static.printItem);
+  $addSeparator(this$static.fileMenuBar, new MenuItemSeparator);
+  $addItem_0(this$static.fileMenuBar, $iconMenuItem('resize-full-alt', 'Toggle Full Screen', new MyCommand('view', 'fullscreen')));
+  $addSeparator(this$static.fileMenuBar, new MenuItemSeparator);
+  this$static.aboutItem = (icoStr = '<i class="cirjsicon-info-circled"><\/i>&nbsp;' + LS('About...'), new MenuItem(($clinit_SafeHtmlUtils(), new SafeHtmlString(icoStr)), null));
+  $addItem_0(this$static.fileMenuBar, this$static.aboutItem);
+  $setScheduledCommand(this$static.aboutItem, new MyCommand('file', 'about'));
+  this$static.menuBar = new MenuBar;
+  $addItem_0(this$static.menuBar, new MenuItem_2(LS('File'), this$static.fileMenuBar));
+  m = new MenuBar_0(true);
+  $addItem_0(m, this$static.undoItem = $menuItemWithShortcut('ccw', 'Undo', LS(this$static.ctrlMetaKey + 'Z'), new MyCommand('edit', 'undo')));
+  $addItem_0(m, this$static.redoItem = $menuItemWithShortcut('cw', 'Redo', LS(this$static.ctrlMetaKey + 'Y'), new MyCommand('edit', 'redo')));
+  $addSeparator(m, new MenuItemSeparator);
+  $addItem_0(m, this$static.cutItem = $menuItemWithShortcut('scissors', 'Cut', LS(this$static.ctrlMetaKey + 'X'), new MyCommand('edit', 'cut')));
+  $addItem_0(m, this$static.copyItem = $menuItemWithShortcut('copy', 'Copy', LS(this$static.ctrlMetaKey + 'C'), new MyCommand('edit', 'copy')));
+  $addItem_0(m, this$static.pasteItem = $menuItemWithShortcut('paste', 'Paste', LS(this$static.ctrlMetaKey + 'V'), new MyCommand('edit', 'paste')));
+  $setEnabled_1(this$static.pasteItem, false);
+  $addItem_0(m, $menuItemWithShortcut('clone', 'Duplicate', LS(this$static.ctrlMetaKey + 'D'), new MyCommand('edit', 'duplicate')));
+  $addSeparator(m, new MenuItemSeparator);
+  $addItem_0(m, $menuItemWithShortcut('select-all', 'Select All', LS(this$static.ctrlMetaKey + 'A'), new MyCommand('edit', 'selectAll')));
+  $addSeparator(m, new MenuItemSeparator);
+  $addItem_0(m, $menuItemWithShortcut('search', 'Find Component...', '/', new MyCommand('edit', 'search')));
+  $addItem_0(m, $iconMenuItem('target', weAreInUS(false) ? 'Center Circuit' : 'Centre Circuit', new MyCommand('edit', 'centercircuit')));
+  $addItem_0(m, $menuItemWithShortcut('zoom-11', 'Zoom 100%', '0', new MyCommand('zoom', 'zoom100')));
+  $addItem_0(m, $menuItemWithShortcut('zoom-in', 'Zoom In', '+', new MyCommand('zoom', 'zoomin')));
+  $addItem_0(m, $menuItemWithShortcut('zoom-out', 'Zoom Out', '-', new MyCommand('zoom', 'zoomout')));
+  $addItem_0(m, this$static.flipXItem = $iconMenuItem('flip-x', 'Flip X', new MyCommand('edit', 'flipx')));
+  $addItem_0(m, this$static.flipYItem = $iconMenuItem('flip-y', 'Flip Y', new MyCommand('edit', 'flipy')));
+  $addItem_0(m, this$static.flipXYItem = $iconMenuItem('flip-x-y', 'Flip XY', new MyCommand('edit', 'flipxy')));
+  $addItem_0(this$static.menuBar, new MenuItem_2(LS('Edit'), m));
+  drawMenuBar = new MenuBar_0(true);
+  drawMenuBar.autoOpen = true;
+  $addItem_0(this$static.menuBar, new MenuItem_2(LS('Draw'), drawMenuBar));
+  m = new MenuBar_0(true);
+  $addItem_0(m, this$static.stackAllItem = $iconMenuItem('lines', 'Stack All', new MyCommand('scopes', 'stackAll')));
+  $addItem_0(m, this$static.unstackAllItem = $iconMenuItem('columns', 'Unstack All', new MyCommand('scopes', 'unstackAll')));
+  $addItem_0(m, this$static.combineAllItem = $iconMenuItem('object-group', 'Combine All', new MyCommand('scopes', 'combineAll')));
+  $addItem_0(m, this$static.separateAllItem = $iconMenuItem('object-ungroup', 'Separate All', new MyCommand('scopes', 'separateAll')));
+  $addItem_0(this$static.menuBar, new MenuItem_2(LS('Scopes'), m));
+  this$static.optionsMenuBar = m = new MenuBar_0(true);
+  $addItem_0(this$static.menuBar, new MenuItem_2(LS('Options'), this$static.optionsMenuBar));
+  $addItem_0(m, this$static.dotsCheckItem = new CheckboxMenuItem(LS('Show Current')));
+  $setState_1(this$static.dotsCheckItem, true);
+  $addItem_0(m, this$static.voltsCheckItem = new CheckboxMenuItem_0(LS('Show Voltage'), new Menus$1(this$static)));
+  $setState_1(this$static.voltsCheckItem, true);
+  $addItem_0(m, this$static.powerCheckItem = new CheckboxMenuItem_0(LS('Show Power'), new Menus$2(this$static)));
+  $addItem_0(m, this$static.showValuesCheckItem = new CheckboxMenuItem(LS('Show Values')));
+  $setState_1(this$static.showValuesCheckItem, true);
+  $addItem_0(m, this$static.smallGridCheckItem = new CheckboxMenuItem_0(LS('Small Grid'), new Menus$3(this$static)));
+  $addItem_0(m, this$static.toolbarCheckItem = new CheckboxMenuItem_0(LS('Toolbar'), new Menus$4(this$static)));
+  $addItem_0(m, this$static.crossHairCheckItem = new CheckboxMenuItem_0(LS('Show Cursor Cross Hairs'), new Menus$5(this$static)));
+  $addItem_0(m, this$static.euroResistorCheckItem = new CheckboxMenuItem(LS('European Resistors')));
+  $addItem_0(m, this$static.euroGatesCheckItem = new CheckboxMenuItem(LS('IEC Gates')));
+  $addItem_0(m, this$static.printableCheckItem = new CheckboxMenuItem(LS('White Background')));
+  $addItem_0(m, this$static.conventionCheckItem = new CheckboxMenuItem(LS('Conventional Current Motion')));
+  $addItem_0(m, this$static.noEditCheckItem = new CheckboxMenuItem(LS('Disable Editing')));
+  $addItem_0(m, this$static.mouseWheelEditCheckItem = new CheckboxMenuItem_0(LS('Edit Values With Mouse Wheel'), new Menus$6(this$static)));
+  $addItem_0(m, new CheckboxAlignedMenuItem(LS('Shortcuts...'), new MyCommand('options', 'shortcuts')));
+  $addItem_0(m, new CheckboxAlignedMenuItem(LS('Other Options...'), new MyCommand('options', 'other')));
+  $wnd.openFile != undefined && $addItem_0(m, new CheckboxAlignedMenuItem(LS('Toggle Dev Tools'), new MyCommand('options', 'devtools')));
+  m = new MenuBar_0(true);
+  $addItem_0(m, new MenuItem_1(LS('Convert Wires to Routed Wires'), new MyCommand('tools', 'convertWires')));
+  $addItem_0(m, new MenuItem_1(LS('Subcircuit Manager'), new MyCommand('tools', 'subcircuits')));
+  $addItem_0(this$static.menuBar, new MenuItem_2(LS('Tools'), m));
+  this$static.mainMenuBar = new MenuBar_0(true);
+  this$static.mainMenuBar.autoOpen = true;
+  $composeMainMenu(this$static, this$static.mainMenuBar, 0);
+  $composeMainMenu(this$static, drawMenuBar, 1);
+  this$static.elmMenuBar = new MenuBar_0(true);
+  this$static.elmMenuBar.autoOpen = true;
+  $addItem_0(this$static.elmMenuBar, this$static.elmEditMenuItem = new MenuItem_1(LS('Edit...'), new MyCommand('elm', 'edit')));
+  $addItem_0(this$static.elmMenuBar, this$static.elmScopeMenuItem = new MenuItem_1(LS('View in New Scope'), new MyCommand('elm', 'viewInScope')));
+  $addItem_0(this$static.elmMenuBar, this$static.elmFloatScopeMenuItem = new MenuItem_1(LS('View in New Undocked Scope'), new MyCommand('elm', 'viewInFloatScope')));
+  $addItem_0(this$static.elmMenuBar, this$static.elmAddScopeMenuItem = new MenuItem_1(LS('Add to Existing Scope'), new MyCommand('elm', 'addToScope0')));
+  $addItem_0(this$static.elmMenuBar, new MenuItem_1(LS('Cut'), new MyCommand('elm', 'cut')));
+  $addItem_0(this$static.elmMenuBar, new MenuItem_1(LS('Copy'), new MyCommand('elm', 'copy')));
+  $addItem_0(this$static.elmMenuBar, new MenuItem_1(LS('Delete'), new MyCommand('elm', 'delete')));
+  $addItem_0(this$static.elmMenuBar, new MenuItem_1(LS('Duplicate'), new MyCommand('elm', 'duplicate')));
+  $addItem_0(this$static.elmMenuBar, new MenuItem_1(LS('Swap Terminals'), new MyCommand('elm', 'flip')));
+  $addItem_0(this$static.elmMenuBar, this$static.elmFlipXMenuItem = new MenuItem_1(LS('Flip X'), new MyCommand('elm', 'flipx')));
+  $addItem_0(this$static.elmMenuBar, this$static.elmFlipYMenuItem = new MenuItem_1(LS('Flip Y'), new MyCommand('elm', 'flipy')));
+  $addItem_0(this$static.elmMenuBar, this$static.elmFlipXYMenuItem = new MenuItem_1(LS('Flip XY'), new MyCommand('elm', 'flipxy')));
+  $addItem_0(this$static.elmMenuBar, this$static.elmSplitMenuItem = $menuItemWithShortcut('', 'Split Wire', LS(this$static.ctrlMetaKey + 'click'), new MyCommand('elm', 'split')));
+  $addItem_0(this$static.elmMenuBar, this$static.elmSliderMenuItem = new MenuItem_1(LS('Sliders...'), new MyCommand('elm', 'sliders')));
+}
+
+function $makeClassCheckItems(this$static, mb, items) {
+  var i;
+  for (i = 0; i < items.length; i += 2)
+    $addItem_0(mb, $getClassCheckItem(this$static, LS(items[i]), items[i + 1]));
+}
+
+function $menuItemWithShortcut(icon, text_0, shortcut, cmd) {
+  var nbsp, sn;
+  nbsp = '&nbsp;';
+  icon == '' && (nbsp = '');
+  sn = '<div style="white-space:nowrap"><div style="display:inline-block;width:100%;"><i class="cirjsicon-' + icon + '"><\/i>' + nbsp + LS(text_0) + '<\/div>' + shortcut + '<\/div>';
+  return new MenuItem(($clinit_SafeHtmlUtils(), new SafeHtmlString(sn)), cmd);
+}
+
+function $processSetupList(this$static, b, openDefault) {
+  var currentMenuBar, file, first, i, l_0, lastArg, len, line, n, p, stack_0, stackptr, startCircuit, startLabel, title_0;
+  len = b.length;
+  stack_0 = initUnidimensionalArray(Lcom_google_gwt_user_client_ui_MenuBar_2_classLit, $intern_3, 53, 6, 0, 1);
+  stackptr = 0;
+  currentMenuBar = new MenuBar_0(true);
+  currentMenuBar.autoOpen = true;
+  $addItem_0(this$static.menuBar, new MenuItem_2(LS('Circuits'), currentMenuBar));
+  stack_0[stackptr++] = currentMenuBar;
+  for (p = 0; p < len;) {
+    for (l_0 = 0; l_0 != len - p; l_0++)
+      if (b[l_0 + p] == 10 || b[l_0 + p] == 13) {
+        ++l_0;
+        break;
+      }
+    line = valueOf_1($decodeString(b, p, (lastArg = l_0 - 1, $clinit_EmulatedCharset(), lastArg)));
+    if (line.length == 0 || (checkCriticalStringElementIndex(0, line.length), line.charCodeAt(0) == 35))
+      ;
+    else {
+      checkCriticalStringElementIndex(0, line.length);
+      if (line.charCodeAt(0) == 43) {
+        n = new MenuBar_0(true);
+        n.autoOpen = true;
+        $addItem_0(currentMenuBar, new MenuItem_2(LS(line.substr(1)), n));
+        currentMenuBar = stack_0[stackptr++] = n;
+      }
+      else {
+        checkCriticalStringElementIndex(0, line.length);
+        if (line.charCodeAt(0) == 45) {
+          currentMenuBar = stack_0[--stackptr - 1];
+        }
+        else {
+          i = $indexOf_0(line, fromCodePoint(32));
+          if (i > 0) {
+            title_0 = LS(line.substr(i + 1));
+            first = false;
+            checkCriticalStringElementIndex(0, line.length);
+            line.charCodeAt(0) == 62 && (first = true);
+            file = line.substr(first ? 1 : 0, i - (first ? 1 : 0));
+            $addItem_0(currentMenuBar, new MenuItem_1(title_0, new MyCommand('circuits', 'setup ' + file + ' ' + title_0)));
+            startCircuit = this$static.sim.startCircuit;
+            startLabel = this$static.sim.startLabel;
+            $equals_1(file, startCircuit) && startLabel == null && $setCircuitTitle(this$static.sim, title_0);
+            first && startCircuit == null && openDefault && this$static.sim.stopMessage == null && $readSetupFile(this$static, file, title_0);
+          }
+        }
+      }
+    }
+    p += l_0;
+  }
+}
+
+function $readSetupFile(this$static, str, title_0) {
+  var url_0;
+  $clinit_System();
+  $resetEditingContext(this$static.sim);
+  url_0 = getModuleBaseURL() + 'circuits/' + str;
+  $loadFileFromURL(this$static.sim.loader, url_0);
+  title_0 != null && $setCircuitTitle(this$static.sim, title_0);
+  this$static.sim.unsavedChanges = false;
+  str == null || $equals_1(str.substr(0, 10), 'circuitjs-') ? (lastFileName = null) : (lastFileName = str);
+}
+
+function Menus(sim_) {
+  this.sim = sim_;
+}
+
+defineClass(529, 1, {}, Menus);
+_.isMac = false;
+var Lcom_lushprojects_circuitjs1_client_Menus_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'Menus', 529);
+function Menus$1(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(530, 1, {}, Menus$1);
+_.execute_1 = function execute_24() {
+  this.this$01.voltsCheckItem.on && $setState_1(this.this$01.powerCheckItem, false);
+  $setPowerBarEnable(this.this$01.sim.ui);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_Menus$1_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'Menus/1', 530);
+function Menus$2(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(531, 1, {}, Menus$2);
+_.execute_1 = function execute_25() {
+  this.this$01.powerCheckItem.on && $setState_1(this.this$01.voltsCheckItem, false);
+  $setPowerBarEnable(this.this$01.sim.ui);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_Menus$2_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'Menus/2', 531);
+function Menus$3(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(532, 1, {}, Menus$3);
+_.execute_1 = function execute_26() {
+  $setGrid(this.this$01.sim.ui);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_Menus$3_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'Menus/3', 532);
+function Menus$4(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(533, 1, {}, Menus$4);
+_.execute_1 = function execute_27() {
+  $setToolbar(this.this$01.sim.ui);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_Menus$4_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'Menus/4', 533);
+function Menus$5(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(534, 1, {}, Menus$5);
+_.execute_1 = function execute_28() {
+  $setOptionInStorage('crossHair', this.this$01.crossHairCheckItem.on);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_Menus$5_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'Menus/5', 534);
+function Menus$6(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(535, 1, {}, Menus$6);
+_.execute_1 = function execute_29() {
+  $setOptionInStorage('mouseWheelEdit', this.this$01.mouseWheelEditCheckItem.on);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_Menus$6_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'Menus/6', 535);
+function Menus$7(this$0, val$openDefault) {
+  this.this$01 = this$0;
+  this.val$openDefault2 = val$openDefault;
+}
+
+defineClass(536, 1, {}, Menus$7);
+_.onError = function onError_1(request, exception) {
+  alert_0(LS("Can't load circuit list!"));
+}
+  ;
+_.onResponseReceived = function onResponseReceived_1(request, response) {
+  var lastArg, text_0;
+  if (response.xmlHttpRequest.status == 200) {
+    text_0 = response.xmlHttpRequest.responseText;
+    $processSetupList(this.this$01, $getBytes((lastArg = text_0, $clinit_EmulatedCharset(), lastArg)), this.val$openDefault2);
+  }
+  else {
+    alert_0(LS("Can't load circuit list!"));
+  }
+}
+  ;
+_.val$openDefault2 = false;
+var Lcom_lushprojects_circuitjs1_client_Menus$7_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'Menus/7', 536);
+function $$init_10(this$static) {
+  this$static.prevInputValue = false;
+  this$static.retriggerable = false;
+  this$static.triggered = false;
+  this$static.lastRisingEdge = 0;
+  this$static.delay = $intern_34;
+}
+
+function $reset_6(this$static) {
+  $reset_0(this$static);
+  this$static.pins[2].value_0 = true;
+  this$static.triggered = this$static.prevInputValue = false;
+}
+
+function MonostableElm(xx, yy) {
+  $clinit_ChipElm();
+  ChipElm.call(this, xx, yy);
+  $$init_10(this);
+  $reset_6(this);
+}
+
+function MonostableElm_0(xa, ya, xb, yb, f, st) {
+  $clinit_ChipElm();
+  ChipElm_0.call(this, xa, ya, xb, yb, f, st);
+  $$init_10(this);
+  this.retriggerable = $booleanValue(($clinit_Boolean(), $equalsIgnoreCase('true', $nextToken(st))));
+  this.delay = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  $reset_6(this);
+}
+
+defineClass(421, 32, $intern_79, MonostableElm, MonostableElm_0);
+_.dumpXml = function dumpXml_46(doc, elem) {
+  $dumpXml_0(this, elem);
+  dumpAttr_2(elem, 'rt', this.retriggerable);
+  dumpAttr(elem, 'dl', this.delay);
+}
+  ;
+_.execute_3 = function execute_30() {
+  if (this.pins[0].value_0 && this.prevInputValue != this.pins[0].value_0 && (this.retriggerable || !this.triggered)) {
+    this.lastRisingEdge = sim_0.t;
+    this.pins[1].value_0 = true;
+    this.pins[2].value_0 = false;
+    this.triggered = true;
+  }
+  if (this.triggered && sim_0.t > this.lastRisingEdge + this.delay) {
+    this.pins[1].value_0 = false;
+    this.pins[2].value_0 = true;
+    this.triggered = false;
+  }
+  this.prevInputValue = this.pins[0].value_0;
+}
+  ;
+_.getChipEditInfo = function getChipEditInfo_14(n) {
+  var ei;
+  if (n == 0) {
+    ei = new EditInfo_0('', 0, -1, -1);
+    ei.checkbox = new Checkbox_0('Retriggerable', this.retriggerable);
+    return ei;
+  }
+  if (n == 1) {
+    ei = new EditInfo_0('Period (s)', this.delay, $intern_77, 0.1);
+    return ei;
+  }
+  return null;
+}
+  ;
+_.getChipName = function getChipName_17() {
+  return 'Monostable';
+}
+  ;
+_.getDumpType = function getDumpType_63() {
+  return 194;
+}
+  ;
+_.getPostCount_0 = function getPostCount_41() {
+  return 3;
+}
+  ;
+_.getVoltageSourceCount = function getVoltageSourceCount_33() {
+  return 2;
+}
+  ;
+_.reset_0 = function reset_24() {
+  $reset_6(this);
+}
+  ;
+_.setChipEditValue = function setChipEditValue_15(n, ei) {
+  n == 0 && (this.retriggerable = $getState(ei.checkbox));
+  n == 1 && (this.delay = ei.value_0);
+}
+  ;
+_.setupPins = function setupPins_18() {
+  this.sizeX = 2;
+  this.sizeY = 2;
+  this.pins = initUnidimensionalArray(Lcom_lushprojects_circuitjs1_client_ChipElm$Pin_2_classLit, $intern_3, 9, 3, 0, 1);
+  this.pins[0] = new ChipElm$Pin(this, 0, 2, '');
+  this.pins[0].clock = true;
+  this.pins[1] = new ChipElm$Pin(this, 0, 3, 'Q');
+  this.pins[1].output = true;
+  this.pins[2] = new ChipElm$Pin(this, 1, 3, 'Q');
+  this.pins[2].output = true;
+  this.pins[2].lineOver = true;
+}
+  ;
+_.undumpXml = function undumpXml_48(xml) {
+  $undumpXml_0(this, xml);
+  this.retriggerable = $parseBooleanAttr(xml, 'rt', this.retriggerable);
+  this.delay = $parseDoubleAttr(xml, 'dl', this.delay);
+  $reset_6(this);
+}
+  ;
+_.delay = 0;
+_.lastRisingEdge = 0;
+_.prevInputValue = false;
+_.retriggerable = false;
+_.triggered = false;
+var Lcom_lushprojects_circuitjs1_client_MonostableElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'MonostableElm', 421);
+function $getTempColor_1(this$static, num) {
+  var c, temp, val, x_0;
+  c = $getVoltageColor(this$static, this$static.volts[num * 2]);
+  temp = this$static.heats[num] / this$static.i2t;
+  if (temp < $intern_108) {
+    val = temp * 3;
+    x_0 = round_int(255 * val);
+    x_0 < 0 && (x_0 = 0);
+    return new Color(x_0 + ((255 - x_0) * c.r / 255 | 0), (255 - x_0) * c.g / 255 | 0, (255 - x_0) * c.b / 255 | 0);
+  }
+  if (temp < 0.6667) {
+    x_0 = round_int((temp - $intern_108) * 3 * 255);
+    x_0 < 0 && (x_0 = 0);
+    return new Color(255, x_0, 0);
+  }
+  if (temp < 1) {
+    x_0 = round_int((temp - $intern_109) * 3 * 255);
+    x_0 < 0 && (x_0 = 0);
+    return new Color(255, 255, x_0);
+  }
+  return $clinit_Color(), white;
+}
+
+function $setSwitchPositions(this$static) {
+  var i, o, s2, switchPosition;
+  switchPosition = this$static.blown ? 0 : 1;
+  for (i = 0; i != sim_0.elmList.arrayList.array.length; i++) {
+    o = $elementAt(sim_0.elmList, i);
+    if (instanceOf(o, 234)) {
+      s2 = o;
+      $equals_1(s2.label_0, this$static.label_0) && (s2.i_position = (s2.flags & 2) != 0 ? 1 - switchPosition : switchPosition, s2.type_0 = 0);
+    }
+  }
+}
+
+function MotorProtectionSwitchElm(xx, yy) {
+  CircuitElm.call(this, xx, yy);
+  this.i2t = 6.73;
+  this.resistance = 0.0613;
+  this.heats = initUnidimensionalArray(D_classLit, $intern_70, 8, 3, 15, 1);
+  this.currents = initUnidimensionalArray(D_classLit, $intern_70, 8, 3, 15, 1);
+  this.curcounts = initUnidimensionalArray(D_classLit, $intern_70, 8, 3, 15, 1);
+  this.label_0 = '';
+}
+
+function MotorProtectionSwitchElm_0(xa, ya, xb, yb, f, st) {
+  CircuitElm_0.call(this, xa, ya, xb, yb, f);
+  this.resistance = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.i2t = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.blown = $booleanValue(($clinit_Boolean(), $equalsIgnoreCase('true', $nextToken(st))));
+  this.label_0 = '';
+  try {
+    this.label_0 = unescape_0($nextToken(st));
+  }
+  catch ($e0) {
+    $e0 = toJava($e0);
+    if (!instanceOf($e0, 15))
+      throw toJs($e0);
+  }
+  this.heats = initUnidimensionalArray(D_classLit, $intern_70, 8, 3, 15, 1);
+  this.currents = initUnidimensionalArray(D_classLit, $intern_70, 8, 3, 15, 1);
+  this.curcounts = initUnidimensionalArray(D_classLit, $intern_70, 8, 3, 15, 1);
+}
+
+defineClass(374, 7, $intern_79, MotorProtectionSwitchElm, MotorProtectionSwitchElm_0);
+_.calculateCurrent = function calculateCurrent_21() {
+  var i;
+  for (i = 0; i != 3; i++)
+    this.currents[i] = (this.volts[i * 2] - this.volts[i * 2 + 1]) / (this.blown ? $intern_32 : this.resistance);
+}
+  ;
+_.canFlipX = function canFlipX_1() {
+  return false;
+}
+  ;
+_.canFlipY = function canFlipY_2() {
+  return false;
+}
+  ;
+_.doStep = function doStep_30() {
+  var i;
+  for (i = 0; i != 3; i++)
+    $stampResistor(sim_0, this.nodes[i * 2], this.nodes[i * 2 + 1], this.blown ? $intern_32 : this.resistance);
+}
+  ;
+_.draw = function draw_46(g) {
+  var i, sw;
+  $setBbox_0(this, this.posts[0], this.posts[5], 6);
+  g.context.save();
+  $translate(g.context, this.x_0, this.y_0);
+  setLineDash(g.context, 4, 4);
+  $setColor_0(g, ($clinit_Color(), lightGray));
+  $drawLine(g, -32, 48, 96 - (this.blown ? 8 : 0), 48);
+  $drawLine(g, -48, 64, -48, 152);
+  $drawLine(g, -48, 152, -24, 152);
+  $drawLine(g, -48, 104, -24, 104);
+  setLineDash(g.context, 0, 0);
+  for (i = 0; i != 3; i++) {
+    $setVoltageColor(this, g, this.volts[i * 2]);
+    drawThickLine(g, i * 48, 0, i * 48, 32);
+    this.blown && drawThickLine(g, i * 48 - 4, 32, i * 48 + 4, 32);
+    sw = this.blown ? 16 : 0;
+    drawThickLine(g, i * 48 - sw, 32, i * 48, 64);
+    $setLineCap(g.context, ($clinit_Context2d$LineCap(), BUTT).value_0);
+    drawThickLine(g, i * 48, 64, i * 48, 80);
+    $drawLine(g, i * 48 - 4, 12, i * 48 + 4, 20);
+    $drawLine(g, i * 48 + 4, 12, i * 48 - 4, 20);
+    $setVoltageColor(this, g, this.volts[i * 2 + 1]);
+    drawThickLine(g, i * 48, 176, i * 48, 192);
+    $setLineCap(g.context, ROUND.value_0);
+    $setColor_0(g, $getTempColor_1(this, i));
+    $drawLine(g, i * 48, 80, i * 48, 96);
+    $drawLine(g, i * 48 - 12, 96, i * 48, 96);
+    $drawLine(g, i * 48 - 12, 96, i * 48 - 12, 112);
+    $drawLine(g, i * 48 - 12, 112, i * 48, 112);
+    $drawLine(g, i * 48, 112, i * 48, 128);
+    $setColor_0(g, lightGray);
+    g.context.font = 'italic 30px serif';
+    g.context.textBaseline = 'middle';
+    g.context.textAlign = 'center';
+    $fillText(g.context, 'I >', i * 48, 152);
+  }
+  $setColor_0(g, lightGray);
+  for (i = 0; i != 3; i++)
+    $drawLine(g, -24, 80 + 48 * i, 120, 80 + 48 * i);
+  for (i = 0; i != 4; i++)
+    $drawLine(g, i * 48 - 24, 80, i * 48 - 24, 176);
+  for (i = 0; i != 3; i++)
+    $drawLine(g, -60 + 12 * i, 36, -60 + 12 * i, 60);
+  for (i = 0; i != 3; i++)
+    $drawLine(g, -60, 36 + 12 * i, -36, 36 + 12 * i);
+  $drawLine(g, -84, 48, -60, 48);
+  $drawLine(g, -84, 36, -84, 60);
+  g.context.font = 'normal 12px sans-serif';
+  $setColor_0(g, white);
+  $drawString(g, this.label_0, 120, 48);
+  g.context.restore();
+  if (!this.blown) {
+    for (i = 0; i != 3; i++) {
+      this.curcounts[i] = $updateDotCount(this.currents[i], this.curcounts[i]);
+      $drawDots(g, this.posts[i * 2], this.leads[i * 2], this.curcounts[i]);
+      $drawDots(g, this.posts[i * 2 + 1], this.leads[i * 2 + 1], -this.curcounts[i]);
+    }
+  }
+  $setSwitchPositions(this);
+  $drawPosts(this, g);
+}
+  ;
+_.dumpXml = function dumpXml_47(doc, elem) {
+  dumpAttr_1(elem, 'x', this.x_0 + ' ' + this.y_0 + ' ' + this.x2 + ' ' + this.y2);
+  dumpAttr_0(elem, 'f', this.flags);
+  dumpAttr(elem, 're', this.resistance);
+  dumpAttr(elem, 'i2', this.i2t);
+  dumpAttr_2(elem, 'bl', this.blown);
+  dumpAttr_1(elem, 'la', this.label_0);
+}
+  ;
+_.getConnection = function getConnection_20(n1, n2) {
+  return (n1 / 2 | 0) == (n2 / 2 | 0);
+}
+  ;
+_.getCurrentIntoNode = function getCurrentIntoNode_17(n) {
+  if (n % 2 == 1)
+    return this.currents[n / 2 | 0];
+  return -this.currents[n / 2 | 0];
+}
+  ;
+_.getDumpType = function getDumpType_64() {
+  return 428;
+}
+  ;
+_.getEditInfo = function getEditInfo_45(n) {
+  if (n == 0)
+    return new EditInfo_0('I2t', this.i2t, 0, 0);
+  if (n == 1)
+    return new EditInfo_0('On Resistance', this.resistance, 0, 0);
+  if (n == 2)
+    return new EditInfo_1('Label (for linking)', this.label_0);
+  return null;
+}
+  ;
+_.getInfo_0 = function getInfo_52(arr) {
+  arr[0] = 'motor protection switch';
+  $getBasicInfo(this, arr);
+  arr[3] = 'R = ' + getUnitText(this.resistance, ohmString, false);
+  arr[4] = 'I2t = ' + this.i2t;
+}
+  ;
+_.getPost = function getPost_10(n) {
+  return this.posts[n];
+}
+  ;
+_.getPostCount_0 = function getPostCount_42() {
+  return 6;
+}
+  ;
+_.nonLinear = function nonLinear_12() {
+  return true;
+}
+  ;
+_.reset_0 = function reset_25() {
+  $reset(this);
+  this.heats = initUnidimensionalArray(D_classLit, $intern_70, 8, 3, 15, 1);
+  this.currents = initUnidimensionalArray(D_classLit, $intern_70, 8, 3, 15, 1);
+  this.blown = false;
+  $setSwitchPositions(this);
+}
+  ;
+_.setEditValue = function setEditValue_44(n, ei) {
+  n == 0 && ei.value_0 > 0 && (this.i2t = ei.value_0);
+  n == 1 && ei.value_0 > 0 && (this.resistance = ei.value_0);
+  n == 2 && (this.label_0 = $getText(ei.textf));
+}
+  ;
+_.setPoints = function setPoints_40() {
+  var i;
+  $setPoints(this);
+  this.posts = initUnidimensionalArray(Lcom_lushprojects_circuitjs1_client_Point_2_classLit, $intern_72, 17, 6, 0, 1);
+  this.leads = initUnidimensionalArray(Lcom_lushprojects_circuitjs1_client_Point_2_classLit, $intern_72, 17, 6, 0, 1);
+  for (i = 0; i != 3; i++) {
+    this.posts[i * 2] = new Point_2(this.x_0 + i * 48, this.y_0);
+    this.posts[i * 2 + 1] = new Point_2(this.x_0 + i * 48, this.y_0 + 192);
+    this.leads[i * 2] = new Point_2(this.x_0 + i * 48, this.y_0 + 80);
+    this.leads[i * 2 + 1] = new Point_2(this.x_0 + i * 48, this.y_0 + 176);
+  }
+}
+  ;
+_.stamp = function stamp_39() {
+  var i;
+  for (i = 0; i != 6; i++)
+    $stampNonLinear(sim_0, this.nodes[i]);
+}
+  ;
+_.startIteration = function startIteration_9() {
+  var heat, i, j, wasBlown;
+  wasBlown = this.blown;
+  for (j = 0; j != 3; j++) {
+    i = this.currents[j];
+    heat = this.heats[j];
+    heat += i * i * sim_0.timeStep;
+    heat -= sim_0.timeStep * this.i2t / 3;
+    heat < 0 && (heat = 0);
+    heat > this.i2t && (this.blown = true);
+    this.heats[j] = heat;
+  }
+  this.blown != wasBlown && $setSwitchPositions(this);
+}
+  ;
+_.undumpXml = function undumpXml_49(xml) {
+  this.flags = $parseIntAttr(xml, 'f', this.flags);
+  this.resistance = $parseDoubleAttr(xml, 're', this.resistance);
+  this.i2t = $parseDoubleAttr(xml, 'i2', this.i2t);
+  this.blown = $parseBooleanAttr(xml, 'bl', this.blown);
+  this.label_0 = $parseStringAttr(xml, 'la', this.label_0);
+}
+  ;
+_.blown = false;
+_.i2t = 0;
+_.resistance = 0;
+var Lcom_lushprojects_circuitjs1_client_MotorProtectionSwitchElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'MotorProtectionSwitchElm', 374);
+function $anySelectedButMouse(this$static) {
+  var ce, ce$iterator;
+  for (ce$iterator = new ArrayList$1(this$static.ui.elmList.arrayList); ce$iterator.i < ce$iterator.this$01.array.length;) {
+    ce = $next_4(ce$iterator);
+    if (ce != this$static.mouseElm && ce.selected_0)
+      return true;
+  }
+  return false;
+}
+
+function $canSplit(ce) {
+  var we;
+  if (!instanceOf(ce, 125))
+    return false;
+  we = ce;
+  if (we.x_0 == we.x2 || we.y_0 == we.y2)
+    return true;
+  return false;
+}
+
+function $clearMouseElm(this$static) {
+  this$static.sim.scopeManager.scopeSelected = -1;
+  $setMouseElm_0(this$static, null);
+  this$static.plotXElm = this$static.plotYElm = null;
+}
+
+function $clearSelection(this$static) {
+  var ce, ce$iterator;
+  for (ce$iterator = new ArrayList$1(this$static.ui.elmList.arrayList); ce$iterator.i < ce$iterator.this$01.array.length;) {
+    ce = $next_4(ce$iterator);
+    ce.selected_0 = false;
+  }
+  $enableDisableMenuItems(this$static);
+}
+
+function $doFlip(this$static) {
+  $flipPosts(this$static.menuElm);
+  $needAnalyze(this$static.sim);
+}
+
+function $doMainMenuChecks(this$static) {
+  var c, i, s;
+  c = this$static.ui.mainMenuItems.arrayList.array.length;
+  for (i = 0; i < c; i++) {
+    s = $get_4(this$static.ui.mainMenuItemNames, i);
+    $setState_1($get_4(this$static.ui.mainMenuItems, i), s == this$static.ui.mouseModeStr);
+  }
+  $setEnabled_1(this$static.sim.menus.stackAllItem, this$static.sim.scopeManager.scopeCount > 1 && this$static.sim.scopeManager.scopes[this$static.sim.scopeManager.scopeCount - 1].position_0 > 0);
+  $setEnabled_1(this$static.sim.menus.unstackAllItem, this$static.sim.scopeManager.scopeCount > 1 && this$static.sim.scopeManager.scopes[this$static.sim.scopeManager.scopeCount - 1].position_0 != this$static.sim.scopeManager.scopeCount - 1);
+  $setEnabled_1(this$static.sim.menus.combineAllItem, this$static.sim.scopeManager.scopeCount > 1);
+  $setEnabled_1(this$static.sim.menus.separateAllItem, this$static.sim.scopeManager.scopeCount > 0);
+  lastSubcircuitMenuUpdate != sequenceNumber && $composeSubcircuitMenu(this$static.sim.ui);
+}
+
+function $doPopupMenu(this$static) {
+  var canFlipX, canFlipXY, canFlipY, elm, elm$iterator, s, x_0, y_0;
+  if ($isReadOnly(this$static.ui) || $dialogIsShowing(this$static.sim.ui))
+    return;
+  this$static.menuElm = this$static.mouseElm;
+  this$static.sim.scopeManager.menuScope = -1;
+  this$static.sim.scopeManager.menuPlot = -1;
+  if (this$static.sim.scopeManager.scopeSelected != -1) {
+    if ($get_4(this$static.sim.scopeManager.scopes[this$static.sim.scopeManager.scopeSelected].plots, 0).elm) {
+      this$static.sim.scopeManager.menuScope = this$static.sim.scopeManager.scopeSelected;
+      this$static.sim.scopeManager.menuPlot = this$static.sim.scopeManager.scopes[this$static.sim.scopeManager.scopeSelected].selectedPlot;
+      $doScopePopupChecks(this$static.sim.scopeManager.scopePopupMenu, false, $canStackScope(this$static.sim.scopeManager, this$static.sim.scopeManager.scopeSelected), this$static.sim.scopeManager.scopeCount >= 2, $canUnstackScope(this$static.sim.scopeManager, this$static.sim.scopeManager.scopeSelected), this$static.sim.scopeManager.scopes[this$static.sim.scopeManager.scopeSelected]);
+      this$static.ui.contextPanel = new PopupPanel_0(true);
+      $add_1(this$static.ui.contextPanel, this$static.sim.scopeManager.scopePopupMenu.m_0);
+      y_0 = $wnd.Math.max(0, $wnd.Math.min(this$static.menuClientY, this$static.ui.canvasHeight - 160));
+      $setPopupPosition(this$static.ui.contextPanel, this$static.menuClientX, y_0);
+      $show(this$static.ui.contextPanel);
+    }
+  }
+  else if (this$static.mouseElm) {
+    if (instanceOf(this$static.mouseElm, 20)) {
+      s = this$static.mouseElm;
+      if ($get_4(s.elmScope.plots, 0).elm) {
+        this$static.sim.scopeManager.menuPlot = s.elmScope.selectedPlot;
+        $doScopePopupChecks(this$static.sim.scopeManager.scopePopupMenu, true, false, false, false, s.elmScope);
+        this$static.ui.contextPanel = new PopupPanel_0(true);
+        $add_1(this$static.ui.contextPanel, this$static.sim.scopeManager.scopePopupMenu.m_0);
+        $setPopupPosition(this$static.ui.contextPanel, this$static.menuClientX, this$static.menuClientY);
+        $show(this$static.ui.contextPanel);
+      }
+    }
+    else {
+      $setEnabled_1(this$static.sim.menus.elmScopeMenuItem, this$static.mouseElm.canViewInScope());
+      $setEnabled_1(this$static.sim.menus.elmFloatScopeMenuItem, this$static.mouseElm.canViewInScope());
+      if (this$static.sim.scopeManager.scopeCount + $countScopeElms(this$static.sim.scopeManager) <= 1) {
+        $setCommand(this$static.sim.menus.elmAddScopeMenuItem, new MyCommand('elm', 'addToScope0'));
+        $setSubMenu(this$static.sim.menus.elmAddScopeMenuItem, null);
+        $setEnabled_1(this$static.sim.menus.elmAddScopeMenuItem, this$static.mouseElm.canViewInScope() && this$static.sim.scopeManager.scopeCount + $countScopeElms(this$static.sim.scopeManager) > 0);
+      }
+      else {
+        $composeSelectScopeMenu(this$static.sim.scopeManager, this$static.sim.scopeManager.selectScopeMenuBar);
+        this$static.sim.menus.elmAddScopeMenuItem.command = null;
+        $setSubMenu(this$static.sim.menus.elmAddScopeMenuItem, this$static.sim.scopeManager.selectScopeMenuBar);
+        $setEnabled_1(this$static.sim.menus.elmAddScopeMenuItem, this$static.mouseElm.canViewInScope());
+      }
+      $setEnabled_1(this$static.sim.menus.elmEditMenuItem, !!this$static.mouseElm.getEditInfo(0));
+      $setEnabled_1(this$static.sim.menus.elmSplitMenuItem, $canSplit(this$static.mouseElm));
+      $setEnabled_1(this$static.sim.menus.elmSliderMenuItem, $sliderItemEnabled(this$static.mouseElm));
+      $setEnabled_1(this$static.sim.menus.elmSplitMenuItem, $canSplit(this$static.mouseElm));
+      canFlipX = this$static.mouseElm.canFlipX();
+      canFlipY = this$static.mouseElm.canFlipY();
+      canFlipXY = this$static.mouseElm.canFlipXY();
+      for (elm$iterator = new ArrayList$1(this$static.ui.elmList.arrayList); elm$iterator.i < elm$iterator.this$01.array.length;) {
+        elm = $next_4(elm$iterator);
+        if (elm.selected_0) {
+          elm.canFlipX() || (canFlipX = false);
+          elm.canFlipY() || (canFlipY = false);
+          elm.canFlipXY() || (canFlipXY = false);
+        }
+      }
+      $setEnabled_1(this$static.sim.menus.elmFlipXMenuItem, canFlipX);
+      $setEnabled_1(this$static.sim.menus.elmFlipYMenuItem, canFlipY);
+      $setEnabled_1(this$static.sim.menus.elmFlipXYMenuItem, canFlipXY);
+      this$static.ui.contextPanel = new PopupPanel_0(true);
+      $add_1(this$static.ui.contextPanel, this$static.sim.menus.elmMenuBar);
+      $setPopupPosition(this$static.ui.contextPanel, this$static.menuClientX, this$static.menuClientY);
+      $show(this$static.ui.contextPanel);
+    }
+  }
+  else {
+    $doMainMenuChecks(this$static);
+    this$static.ui.contextPanel = new PopupPanel_0(true);
+    $add_1(this$static.ui.contextPanel, this$static.sim.menus.mainMenuBar);
+    x_0 = $wnd.Math.max(0, $wnd.Math.min(this$static.menuClientX, this$static.ui.canvasWidth - 400));
+    y_0 = $wnd.Math.max(0, $wnd.Math.min(this$static.menuClientY, this$static.ui.canvasHeight - 450));
+    $setPopupPosition(this$static.ui.contextPanel, x_0, y_0);
+    $show(this$static.ui.contextPanel);
+  }
+}
+
+function $doSelectAll(this$static) {
+  var ce, ce$iterator;
+  for (ce$iterator = new ArrayList$1(this$static.ui.elmList.arrayList); ce$iterator.i < ce$iterator.this$01.array.length;) {
+    ce = $next_4(ce$iterator);
+    ce.selected_0 = true;
+  }
+  $enableDisableMenuItems(this$static);
+}
+
+function $doSplit(this$static, ce) {
+  var newWire, rw2, x_0, y_0;
+  x_0 = $snapGrid_1(this$static, $inverseTransformX(this$static, this$static.menuX));
+  y_0 = $snapGrid_1(this$static, $inverseTransformY(this$static, this$static.menuY));
+  if (!ce || !instanceOf(ce, 125))
+    return;
+  if (instanceOf(ce, 132)) {
+    rw2 = $split(ce, x_0, y_0);
+    if (rw2) {
+      $addElement(this$static.ui.elmList, rw2);
+      $needAnalyze(this$static.sim);
+    }
+    return;
+  }
+  ce.x_0 == ce.x2 ? (x_0 = ce.x_0) : (y_0 = ce.y_0);
+  if (x_0 == ce.x_0 && y_0 == ce.y_0 || x_0 == ce.x2 && y_0 == ce.y2)
+    return;
+  newWire = new WireElm(x_0, y_0);
+  $drag(newWire, ce.x2, ce.y2);
+  ce.drag(x_0, y_0);
+  $addElement(this$static.ui.elmList, newWire);
+  $needAnalyze(this$static.sim);
+}
+
+function $doSwitch(this$static, x_0, y_0) {
+  var se;
+  if (!this$static.mouseElm || !instanceOf(this$static.mouseElm, 61))
+    return false;
+  se = this$static.mouseElm;
+  if (!$contains(se.getSwitchRect(), x_0, y_0))
+    return false;
+  se.toggle();
+  se.momentary && (this$static.heldSwitchElm = se);
+  instanceOf(se, 183) || $needAnalyze(this$static.sim);
+  return true;
+}
+
+function $dragAll(this$static, x_0, y_0) {
+  var dx, dy;
+  dx = x_0 - this$static.dragScreenX;
+  dy = y_0 - this$static.dragScreenY;
+  if (dx == 0 && dy == 0)
+    return;
+  this$static.sim.transform_0[4] += dx;
+  this$static.sim.transform_0[5] += dy;
+  this$static.dragScreenX = x_0;
+  this$static.dragScreenY = y_0;
+}
+
+function $dragColumn(this$static, x_0) {
+  var ce, ce$iterator, dx;
+  dx = x_0 - this$static.dragGridX;
+  if (dx == 0)
+    return;
+  for (ce$iterator = new ArrayList$1(this$static.ui.elmList.arrayList); ce$iterator.i < ce$iterator.this$01.array.length;) {
+    ce = $next_4(ce$iterator);
+    ce.x_0 == this$static.dragGridX && $movePoint(ce, 0, dx, 0);
+    ce.x2 == this$static.dragGridX && $movePoint(ce, 1, dx, 0);
+  }
+  $removeZeroLengthElements(this$static);
+}
+
+function $dragPost(this$static, x_0, y_0, all) {
+  var conn, conn$iterator, conns, dx, dy, e, i, p;
+  this$static.draggingPost == -1 && (this$static.draggingPost = distanceSq(this$static.mouseElm.x_0, this$static.mouseElm.y_0, x_0, y_0) > distanceSq(this$static.mouseElm.x2, this$static.mouseElm.y2, x_0, y_0) ? 1 : 0);
+  dx = x_0 - this$static.dragGridX;
+  dy = y_0 - this$static.dragGridY;
+  if (dx == 0 && dy == 0)
+    return;
+  if (all) {
+    for (i = 0; i != this$static.ui.elmList.arrayList.array.length; i++) {
+      e = $get_4(this$static.ui.elmList, i);
+      if (e.x_0 == this$static.dragGridX && e.y_0 == this$static.dragGridY)
+        p = 0;
+      else if (e.x2 == this$static.dragGridX && e.y2 == this$static.dragGridY)
+        p = 1;
+      else
+        continue;
+      $movePoint(e, p, dx, dy);
+    }
+  }
+  else {
+    $movePoint(this$static.mouseElm, this$static.draggingPost, dx, dy);
+    if (this$static.sim.sim.routedWireMap) {
+      conns = $get_1(this$static.sim.sim.routedWireMap, this$static.mouseElm);
+      if (conns) {
+        for (conn$iterator = new ArrayList$1(conns); conn$iterator.i < conn$iterator.this$01.array.length;) {
+          conn = $next_4(conn$iterator);
+          conn.elmPost == this$static.draggingPost && $movePoint(conn.wire, conn.wirePost, dx, dy);
+        }
+      }
+    }
+  }
+  $needAnalyze(this$static.sim);
+}
+
+function $dragRow(this$static, y_0) {
+  var ce, ce$iterator, dy;
+  dy = y_0 - this$static.dragGridY;
+  if (dy == 0)
+    return;
+  for (ce$iterator = new ArrayList$1(this$static.ui.elmList.arrayList); ce$iterator.i < ce$iterator.this$01.array.length;) {
+    ce = $next_4(ce$iterator);
+    ce.y_0 == this$static.dragGridY && $movePoint(ce, 0, 0, dy);
+    ce.y2 == this$static.dragGridY && $movePoint(ce, 1, 0, dy);
+  }
+  $removeZeroLengthElements(this$static);
+}
+
+function $dragSelected(this$static, x_0, y_0) {
+  var allowed, ce, ce$iterator, ce$iterator0, ce$iterator1, conn, conn$iterator, conns, dx, dy, me;
+  me = false;
+  !!this$static.mouseElm && !this$static.mouseElm.selected_0 && $setSelected(this$static.mouseElm, me = true);
+  if (!$onlyGraphicsElmsSelected(this$static)) {
+    x_0 = x_0 + this$static.sim.gridRound & this$static.sim.gridMask;
+    y_0 = y_0 + this$static.sim.gridRound & this$static.sim.gridMask;
+  }
+  dx = x_0 - this$static.dragGridX;
+  dy = y_0 - this$static.dragGridY;
+  if (dx == 0 && dy == 0) {
+    me && (this$static.mouseElm.selected_0 = false, undefined);
+    return false;
+  }
+  allowed = true;
+  for (ce$iterator0 = new ArrayList$1(this$static.ui.elmList.arrayList); ce$iterator0.i < ce$iterator0.this$01.array.length;) {
+    ce = $next_4(ce$iterator0);
+    ce.selected_0 && !$allowMove(ce, dx, dy) && (allowed = false);
+    if (!allowed)
+      break;
+  }
+  if (allowed) {
+    for (ce$iterator1 = new ArrayList$1(this$static.ui.elmList.arrayList); ce$iterator1.i < ce$iterator1.this$01.array.length;) {
+      ce = $next_4(ce$iterator1);
+      ce.selected_0 && $move(ce, dx, dy);
+    }
+    if (this$static.sim.sim.routedWireMap) {
+      for (ce$iterator = new ArrayList$1(this$static.ui.elmList.arrayList); ce$iterator.i < ce$iterator.this$01.array.length;) {
+        ce = $next_4(ce$iterator);
+        if (!ce.selected_0)
+          continue;
+        conns = $get_1(this$static.sim.sim.routedWireMap, ce);
+        if (!conns)
+          continue;
+        for (conn$iterator = new ArrayList$1(conns); conn$iterator.i < conn$iterator.this$01.array.length;) {
+          conn = $next_4(conn$iterator);
+          conn.wire.selected_0 || $movePoint(conn.wire, conn.wirePost, dx, dy);
+        }
+      }
+    }
+    $needAnalyze(this$static.sim);
+  }
+  me && (this$static.mouseElm.selected_0 = false, undefined);
+  return allowed;
+}
+
+function $dragSplitter(this$static, y_0) {
+  var h;
+  h = this$static.ui.canvasHeight;
+  h < 1 && (h = 1);
+  this$static.sim.scopeManager.scopeHeightFraction = 1 - y_0 / h;
+  this$static.sim.scopeManager.scopeHeightFraction < 0.1 && (this$static.sim.scopeManager.scopeHeightFraction = 0.1);
+  this$static.sim.scopeManager.scopeHeightFraction > 0.9 && (this$static.sim.scopeManager.scopeHeightFraction = 0.9);
+  $setCircuitArea(this$static.ui);
+  $repaint(this$static.sim.ui);
+}
+
+function $enableDisableMenuItems(this$static) {
+  var canFlipX, canFlipXY, canFlipY, elm, elm$iterator, selCount;
+  canFlipX = true;
+  canFlipY = true;
+  canFlipXY = true;
+  selCount = $countSelected(this$static.sim.commands);
+  for (elm$iterator = new ArrayList$1(this$static.ui.elmList.arrayList); elm$iterator.i < elm$iterator.this$01.array.length;) {
+    elm = $next_4(elm$iterator);
+    if (elm.selected_0 || selCount == 0) {
+      elm.canFlipX() || (canFlipX = false);
+      elm.canFlipY() || (canFlipY = false);
+      elm.canFlipXY() || (canFlipXY = false);
+    }
+  }
+  $setEnabled_1(this$static.sim.menus.cutItem, selCount > 0);
+  $setEnabled_1(this$static.sim.menus.copyItem, selCount > 0);
+  $setEnabled_1(this$static.sim.menus.flipXItem, canFlipX);
+  $setEnabled_1(this$static.sim.menus.flipYItem, canFlipY);
+  $setEnabled_1(this$static.sim.menus.flipXYItem, canFlipXY);
+}
+
+function $inverseTransformX(this$static, x_0) {
+  return round_int((x_0 - this$static.sim.transform_0[4]) / this$static.sim.transform_0[0]);
+}
+
+function $inverseTransformY(this$static, y_0) {
+  return round_int((y_0 - this$static.sim.transform_0[5]) / this$static.sim.transform_0[3]);
+}
+
+function $mouseDragged(this$static, e) {
+  var changed, gx, gy, success;
+  if ($getButton(e.nativeEvent) == 2) {
+    if (!($getMetaKey(e.nativeEvent) || $getShiftKey(e.nativeEvent) || $getCtrlKey(e.nativeEvent) || $getAltKey(e.nativeEvent)))
+      return;
+  }
+  if (this$static.tempMouseMode == 7) {
+    $dragSplitter(this$static, ($getX(e), $getY(e)));
+    return;
+  }
+  gx = $inverseTransformX(this$static, $getX(e));
+  gy = $inverseTransformY(this$static, $getY(e));
+  if (!$contains(this$static.sim.circuitArea, $getX(e), $getY(e)))
+    return;
+  changed = false;
+  !!this$static.dragElm && this$static.dragElm.drag(gx, gy);
+  success = true;
+  switch (this$static.tempMouseMode) {
+    case 1:
+      $dragAll(this$static, $getX(e), $getY(e));
+      break;
+    case 2:
+      $dragRow(this$static, gy + this$static.sim.gridRound & this$static.sim.gridMask);
+      changed = true;
+      break;
+    case 3:
+      $dragColumn(this$static, gx + this$static.sim.gridRound & this$static.sim.gridMask);
+      changed = true;
+      break;
+    case 5:
+      if (this$static.mouseElm) {
+        $dragPost(this$static, gx + this$static.sim.gridRound & this$static.sim.gridMask, gy + this$static.sim.gridRound & this$static.sim.gridMask, $getShiftKey(e.nativeEvent));
+        changed = true;
+      }
+
+      break;
+    case 6:
+      if (!this$static.mouseElm)
+        $selectArea(this$static, gx, gy, $getShiftKey(e.nativeEvent));
+      else if (!$isReadOnly(this$static.ui)) {
+        $clinit_System();
+        if (lt(sub_1(fromDouble_0(Date.now()), this$static.mouseDownTime), 150))
+          return;
+        if (instanceOf(this$static.mouseElm, 132)) {
+          this$static.tempMouseMode = 8;
+          $rerouteVia(this$static.mouseElm, gx + this$static.sim.gridRound & this$static.sim.gridMask, gy + this$static.sim.gridRound & this$static.sim.gridMask);
+          changed = true;
+        }
+        else {
+          this$static.tempMouseMode = 4;
+          changed = success = $dragSelected(this$static, gx, gy);
+        }
+      }
+
+      break;
+    case 4:
+      changed = success = $dragSelected(this$static, gx, gy);
+      break;
+    case 8:
+      if (instanceOf(this$static.mouseElm, 132)) {
+        $rerouteVia(this$static.mouseElm, gx + this$static.sim.gridRound & this$static.sim.gridMask, gy + this$static.sim.gridRound & this$static.sim.gridMask);
+        changed = true;
+      }
+
+  }
+  if (success) {
+    this$static.dragScreenX = $getX(e);
+    this$static.dragScreenY = $getY(e);
+    this$static.dragGridX = $inverseTransformX(this$static, this$static.dragScreenX);
+    this$static.dragGridY = $inverseTransformY(this$static, this$static.dragScreenY);
+    if (!(this$static.tempMouseMode == 4 && $onlyGraphicsElmsSelected(this$static))) {
+      this$static.dragGridX = $snapGrid_1(this$static, this$static.dragGridX);
+      this$static.dragGridY = $snapGrid_1(this$static, this$static.dragGridY);
+    }
+  }
+  changed && $writeRecoveryToStorage(this$static.sim.undoManager);
+  $repaint(this$static.sim.ui);
+}
+
+function $mouseIsOverSplitter(this$static, x_0, y_0) {
+  var isOverSplitter;
+  if (this$static.sim.scopeManager.scopeCount == 0)
+    return false;
+  isOverSplitter = x_0 >= 0 && x_0 < this$static.sim.circuitArea.width_0 && y_0 >= this$static.sim.circuitArea.height_0 - 5 && y_0 < this$static.sim.circuitArea.height_0;
+  isOverSplitter != this$static.mouseWasOverSplitter && (isOverSplitter ? $setCursorStyle(this$static.sim.ui, 'cursorSplitter') : $setMouseMode(this$static.sim, this$static.mouseMode));
+  this$static.mouseWasOverSplitter = isOverSplitter;
+  return isOverSplitter;
+}
+
+function $mouseSelect(this$static, e) {
+  var bestDist, ce, ce$iterator, dist, gx, gy, i, j, jn, newMouseElm, pt, s, sx, sy;
+  newMouseElm = null;
+  this$static.mouseCursorX = $getX(e);
+  this$static.mouseCursorY = $getY(e);
+  sx = $getX(e);
+  sy = $getY(e);
+  gx = round_int((sx - this$static.sim.transform_0[4]) / this$static.sim.transform_0[0]);
+  gy = round_int((sy - this$static.sim.transform_0[5]) / this$static.sim.transform_0[3]);
+  this$static.dragGridX = gx + this$static.sim.gridRound & this$static.sim.gridMask;
+  this$static.dragGridY = gy + this$static.sim.gridRound & this$static.sim.gridMask;
+  this$static.dragScreenX = sx;
+  this$static.dragScreenY = sy;
+  this$static.draggingPost = -1;
+  this$static.mousePost = -1;
+  this$static.plotXElm = this$static.plotYElm = null;
+  if ($mouseIsOverSplitter(this$static, sx, sy)) {
+    $setMouseElm_0(this$static, null);
+    return;
+  }
+  if ($contains(this$static.sim.circuitArea, sx, sy)) {
+    if (!!this$static.mouseElm && $getHandleGrabbedClose(this$static.mouseElm, gx, gy, 256) >= 0) {
+      newMouseElm = this$static.mouseElm;
+    }
+    else {
+      bestDist = $intern_90;
+      for (ce$iterator = new ArrayList$1(this$static.ui.elmList.arrayList); ce$iterator.i < ce$iterator.this$01.array.length;) {
+        ce = $next_4(ce$iterator);
+        if ($contains(ce.boundingBox, gx, gy)) {
+          dist = ce.getMouseDistance(gx, gy);
+          if (dist >= 0 && dist < bestDist) {
+            bestDist = dist;
+            newMouseElm = ce;
+          }
+        }
+      }
+    }
+  }
+  this$static.sim.scopeManager.scopeSelected = -1;
+  if (!newMouseElm) {
+    for (i = 0; i != this$static.sim.scopeManager.scopeCount; i++) {
+      s = this$static.sim.scopeManager.scopes[i];
+      if ($contains(s.rect_0, sx, sy)) {
+        newMouseElm = $getElm_0(s);
+        if (s.plotXY) {
+          this$static.plotXElm = $getElm_0(s);
+          this$static.plotYElm = $getYElm(s);
+        }
+        this$static.sim.scopeManager.scopeSelected = i;
+      }
+    }
+    for (ce$iterator = new ArrayList$1(this$static.ui.elmList.arrayList); ce$iterator.i < ce$iterator.this$01.array.length;) {
+      ce = $next_4(ce$iterator);
+      if (this$static.mouseMode == 5) {
+        if ($getHandleGrabbedClose(ce, gx, gy, 0) > 0) {
+          newMouseElm = ce;
+          break;
+        }
+      }
+      jn = ce.getPostCount_0();
+      for (j = 0; j != jn; j++) {
+        pt = ce.getPost(j);
+        if (distanceSq(pt.x_0, pt.y_0, gx, gy) < 26) {
+          newMouseElm = ce;
+          this$static.mousePost = j;
+          break;
+        }
+      }
+    }
+  }
+  else {
+    this$static.mousePost = -1;
+    for (i = 0; i != newMouseElm.getPostCount_0(); i++) {
+      pt = newMouseElm.getPost(i);
+      distanceSq(pt.x_0, pt.y_0, gx, gy) < 26 && (this$static.mousePost = i);
+    }
+  }
+  $repaint(this$static.sim.ui);
+  this$static.netHighlightKeyHeld = $getShiftKey(e.nativeEvent);
+  $setMouseElm_0(this$static, newMouseElm);
+}
+
+function $onContextMenu(this$static, e) {
+  !!e.nativeEvent && $preventDefault(e.nativeEvent);
+  if (!$dialogIsShowing(this$static.sim.ui)) {
+    this$static.menuClientX = $getClientX(e.nativeEvent);
+    this$static.menuClientY = $getClientY(e.nativeEvent);
+    $doPopupMenu(this$static);
+  }
+}
+
+function $onlyGraphicsElmsSelected(this$static) {
+  var ce, ce$iterator;
+  if (!!this$static.mouseElm && !instanceOf(this$static.mouseElm, 133))
+    return false;
+  for (ce$iterator = new ArrayList$1(this$static.ui.elmList.arrayList); ce$iterator.i < ce$iterator.this$01.array.length;) {
+    ce = $next_4(ce$iterator);
+    if (ce.selected_0 && !instanceOf(ce, 133))
+      return false;
+  }
+  return true;
+}
+
+function $register_0(this$static, cv) {
+  $addDomHandler(cv, this$static, ($clinit_MouseDownEvent(), $clinit_MouseDownEvent(), TYPE_5));
+  $addDomHandler(cv, this$static, ($clinit_MouseMoveEvent(), $clinit_MouseMoveEvent(), TYPE_6));
+  $addDomHandler(cv, this$static, ($clinit_MouseOutEvent(), $clinit_MouseOutEvent(), TYPE_7));
+  $addDomHandler(cv, this$static, ($clinit_MouseUpEvent(), $clinit_MouseUpEvent(), TYPE_9));
+  $addDomHandler(cv, this$static, ($clinit_ClickEvent(), $clinit_ClickEvent(), TYPE_1));
+  $addDomHandler(cv, this$static, ($clinit_DoubleClickEvent(), $clinit_DoubleClickEvent(), TYPE_3));
+  doTouchHandlers(this$static, ($clinit_DOM(), cv.element));
+  $addDomHandler(cv, this$static, ($clinit_ContextMenuEvent(), $clinit_ContextMenuEvent(), TYPE_2));
+  $addDomHandler(cv, this$static, ($clinit_MouseWheelEvent(), $clinit_MouseWheelEvent(), TYPE_10));
+}
+
+function $removeZeroLengthElements(this$static) {
+  var ce, i;
+  for (i = this$static.ui.elmList.arrayList.array.length - 1; i >= 0; i--) {
+    ce = $get_4(this$static.ui.elmList, i);
+    if (ce.x_0 == ce.x2 && ce.y_0 == ce.y2) {
+      $removeElementAt(this$static.ui.elmList, i);
+      ce.delete_0();
+    }
+  }
+  $needAnalyze(this$static.sim);
+}
+
+function $scrollValues(this$static, x_0, y_0, deltay) {
+  !!this$static.mouseElm && !$dialogIsShowing(this$static.sim.ui) && this$static.sim.scopeManager.scopeSelected == -1 && (instanceOf(this$static.mouseElm, 174) || instanceOf(this$static.mouseElm, 140) || instanceOf(this$static.mouseElm, 173)) && (scrollValuePopup = new ScrollValuePopup(x_0, y_0, deltay, this$static.mouseElm, this$static.sim));
+}
+
+function $selectArea(this$static, x_0, y_0, add_0) {
+  var ce, ce$iterator, x1, x2, y1, y2;
+  x1 = $wnd.Math.min(x_0, this$static.initDragGridX);
+  x2 = $wnd.Math.max(x_0, this$static.initDragGridX);
+  y1 = $wnd.Math.min(y_0, this$static.initDragGridY);
+  y2 = $wnd.Math.max(y_0, this$static.initDragGridY);
+  this$static.selectedArea = new Rectangle_0(x1, y1, x2 - x1, y2 - y1);
+  for (ce$iterator = new ArrayList$1(this$static.ui.elmList.arrayList); ce$iterator.i < ce$iterator.this$01.array.length;) {
+    ce = $next_4(ce$iterator);
+    ce.selectRect(this$static.selectedArea, add_0);
+  }
+  $enableDisableMenuItems(this$static);
+}
+
+function $setCircuitScale(this$static, newScale, menu) {
+  var constX, constY, cx, cy;
+  constX = menu ? this$static.sim.circuitArea.width_0 / 2 | 0 : this$static.mouseCursorX;
+  constY = menu ? this$static.sim.circuitArea.height_0 / 2 | 0 : this$static.mouseCursorY;
+  cx = round_int((constX - this$static.sim.transform_0[4]) / this$static.sim.transform_0[0]);
+  cy = round_int((constY - this$static.sim.transform_0[5]) / this$static.sim.transform_0[3]);
+  this$static.sim.transform_0[0] = this$static.sim.transform_0[3] = newScale;
+  this$static.sim.transform_0[4] = constX - cx * newScale;
+  this$static.sim.transform_0[5] = constY - cy * newScale;
+}
+
+function $setMouseElm_0(this$static, ce) {
+  var i, n;
+  if (ce != this$static.mouseElm) {
+    !!this$static.mouseElm && this$static.mouseElm.setMouseElm(false);
+    !!ce && ce.setMouseElm(true);
+    this$static.mouseElm = ce;
+    for (i = 0; i < this$static.sim.adjustables.arrayList.array.length; i++)
+      $setMouseElm($get_4(this$static.sim.adjustables, i));
+  }
+  if (!!ce && ce.isRemovableWire() && !!this$static.sim.sim.nodeList && this$static.netHighlightKeyHeld) {
+    n = ce.nodes[0];
+    this$static.highlightedNode = n >= 0 && n < this$static.sim.sim.nodeList.arrayList.array.length ? n : -1;
+  }
+  else {
+    this$static.highlightedNode = -1;
+  }
+}
+
+function $sliderItemEnabled(elm) {
+  var ei, i;
+  if (instanceOf(elm, 261) || instanceOf(elm, 262))
+    return false;
+  for (i = 0; ; i++) {
+    ei = elm.getEditInfo(i);
+    if (!ei)
+      return false;
+    if (!ei.choice && !ei.checkbox && !ei.button_0 && !ei.textArea && !ei.widget && !ei.noSliders)
+      return true;
+  }
+}
+
+function $snapGrid_1(this$static, x_0) {
+  return x_0 + this$static.sim.gridRound & this$static.sim.gridMask;
+}
+
+function $transformX(this$static, x_0) {
+  return round_int(x_0 * this$static.sim.transform_0[0] + this$static.sim.transform_0[4]);
+}
+
+function $transformY(this$static, y_0) {
+  return round_int(y_0 * this$static.sim.transform_0[3] + this$static.sim.transform_0[5]);
+}
+
+function $updateNetHighlight(this$static) {
+  var ce, n;
+  ce = this$static.mouseElm;
+  if (!!ce && ce.isRemovableWire() && !!this$static.sim.sim.nodeList && this$static.netHighlightKeyHeld) {
+    n = ce.nodes[0];
+    this$static.highlightedNode = n >= 0 && n < this$static.sim.sim.nodeList.arrayList.array.length ? n : -1;
+  }
+  else {
+    this$static.highlightedNode = -1;
+  }
+}
+
+function $zoomCircuit(this$static, dy, menu) {
+  var newScale, oldScale, val;
+  oldScale = this$static.sim.transform_0[0];
+  val = dy * $intern_34;
+  newScale = $wnd.Math.max(oldScale + val, 0.2);
+  newScale = $wnd.Math.min(newScale, 2.5);
+  if (newScale == oldScale)
+    return;
+  $setCircuitScale(this$static, newScale, menu);
+}
+
+function MouseManager(sim, ui) {
+  this.sim = sim;
+  this.ui = ui;
+}
+
+function doTouchHandlers(mm, cv) {
+  var lastTap;
+  var tmout;
+  var lastScale;
+  cv.addEventListener('touchstart', function (e) {
+    mousePos = getTouchPos(cv, e);
+    var touch = e.touches[0];
+    var etype = 'mousedown';
+    lastScale = 1;
+    clearTimeout(tmout);
+    e.preventDefault();
+    e.timeStamp - lastTap < 300 ? (etype = 'dblclick') : (tmout = setTimeout(function () {
+      mm.longPress();
+    }
+      , 500));
+    lastTap = e.timeStamp;
+    var touch1 = e.touches[0];
+    var touch2 = e.touches[e.touches.length - 1];
+    lastScale = Math.hypot(touch1.clientX - touch2.clientX, touch1.clientY - touch2.clientY);
+    var mouseEvent = new MouseEvent(etype, { clientX: 0.5 * (touch1.clientX + touch2.clientX), clientY: 0.5 * (touch1.clientY + touch2.clientY) });
+    cv.dispatchEvent(mouseEvent);
+    e.touches.length > 1 && mm.twoFingerTouch(mouseEvent.clientX, mouseEvent.clientY - cv.getBoundingClientRect().y);
+  }
+    , false);
+  cv.addEventListener('touchend', function (e) {
+    var mouseEvent = new MouseEvent('mouseup', {});
+    e.preventDefault();
+    clearTimeout(tmout);
+    cv.dispatchEvent(mouseEvent);
+  }
+    , false);
+  cv.addEventListener('touchmove', function (e) {
+    e.preventDefault();
+    clearTimeout(tmout);
+    var touch1 = e.touches[0];
+    var touch2 = e.touches[e.touches.length - 1];
+    if (e.touches.length > 1) {
+      var newScale = Math.hypot(touch1.clientX - touch2.clientX, touch1.clientY - touch2.clientY);
+      mm.zoomCircuit(40 * (Math.log(newScale) - Math.log(lastScale)));
+      lastScale = newScale;
+    }
+    var mouseEvent = new MouseEvent('mousemove', { clientX: 0.5 * (touch1.clientX + touch2.clientX), clientY: 0.5 * (touch1.clientY + touch2.clientY) });
+    cv.dispatchEvent(mouseEvent);
+  }
+    , false);
+  function getTouchPos(canvasDom, touchEvent) {
+    var rect = canvasDom.getBoundingClientRect();
+    return { x: touchEvent.touches[0].clientX - rect.left, y: touchEvent.touches[0].clientY - rect.top };
+  }
+
+}
+
+defineClass(647, 1, { 35: 1, 949: 1, 941: 1, 267: 1, 445: 1, 199: 1, 444: 1, 130: 1, 11: 1 }, MouseManager);
+_.longPress = function longPress() {
+  $doPopupMenu(this);
+}
+  ;
+_.onClick = function onClick_28(e) {
+  !!e.nativeEvent && $preventDefault(e.nativeEvent);
+  $getButton(e.nativeEvent) == 4 && $scrollValues(this, $getClientX(e.nativeEvent), $getClientY(e.nativeEvent), 0);
+}
+  ;
+_.onDoubleClick = function onDoubleClick(e) {
+  !!e.nativeEvent && $preventDefault(e.nativeEvent);
+  if (!this.mouseElm)
+    return;
+  if (instanceOf(this.mouseElm, 211)) {
+    $onDoubleClick(this.mouseElm);
+    return;
+  }
+  !instanceOf(this.mouseElm, 61) && !$isReadOnly(this.ui) && $doEdit(this.sim.commands, this.mouseElm);
+}
+  ;
+_.onMouseDown = function onMouseDown_1(e) {
+  var gx, gy, s, x0, y0;
+  !!e.nativeEvent && $preventDefault(e.nativeEvent);
+  $setFocus(this.ui.cv);
+  this.sim.stopElm = null;
+  this.menuX = this.menuClientX = $getX(e);
+  this.menuY = this.menuClientY = $getY(e);
+  this.mouseDownTime = ($clinit_System(), fromDouble_0(Date.now()));
+  $enablePaste(this.sim.commands);
+  if ($getButton(e.nativeEvent) != 1 && $getButton(e.nativeEvent) != 4)
+    return;
+  $mouseSelect(this, e);
+  this.mouseDragging = true;
+  if (this.mouseWasOverSplitter) {
+    this.tempMouseMode = 7;
+    return;
+  }
+  if ($getButton(e.nativeEvent) == 1) {
+    this.tempMouseMode = this.mouseMode;
+    $getAltKey(e.nativeEvent) && $getMetaKey(e.nativeEvent) ? (this.tempMouseMode = 3) : $getAltKey(e.nativeEvent) && $getShiftKey(e.nativeEvent) ? (this.tempMouseMode = 2) : $getShiftKey(e.nativeEvent) ? (this.tempMouseMode = 6) : $getAltKey(e.nativeEvent) ? (this.tempMouseMode = 1) : ($getCtrlKey(e.nativeEvent) || $getMetaKey(e.nativeEvent)) && (this.tempMouseMode = 5);
+  }
+  else
+    this.tempMouseMode = 1;
+  $isReadOnly(this.ui) && this.tempMouseMode != 1 && (this.tempMouseMode = 6);
+  if (!$dialogIsShowing(this.sim.ui) && (this.sim.scopeManager.scopeSelected != -1 && $cursorInSettingsWheel(this.sim.scopeManager.scopes[this.sim.scopeManager.scopeSelected]) || this.sim.scopeManager.scopeSelected == -1 && instanceOf(this.mouseElm, 20) && $cursorInSettingsWheel(this.mouseElm.elmScope))) {
+    if ($isReadOnly(this.ui))
+      return;
+    this.sim.scopeManager.scopeSelected != -1 ? (s = this.sim.scopeManager.scopes[this.sim.scopeManager.scopeSelected]) : (s = this.mouseElm.elmScope);
+    s.properties = new ScopePropertiesDialog(s);
+    dialogShowing = s.properties;
+    $clearSelection(this);
+    this.mouseDragging = false;
+    return;
+  }
+  gx = $inverseTransformX(this, $getX(e));
+  gy = $inverseTransformY(this, $getY(e));
+  if ($doSwitch(this, gx, gy)) {
+    return;
+  }
+  this.tempMouseMode == 6 && !!this.mouseElm && !$isReadOnly(this.ui) && $getHandleGrabbedClose(this.mouseElm, gx, gy, 256) >= 0 && !$anySelectedButMouse(this) && (this.tempMouseMode = 5);
+  this.tempMouseMode != 6 && this.tempMouseMode != 4 && $clearSelection(this);
+  $pushUndo(this.sim.undoManager);
+  this.initDragGridX = gx;
+  this.initDragGridY = gy;
+  if (this.tempMouseMode != 0)
+    return;
+  x0 = gx + this.sim.gridRound & this.sim.gridMask;
+  y0 = gy + this.sim.gridRound & this.sim.gridMask;
+  if (!$contains(this.sim.circuitArea, $getX(e), $getY(e)))
+    return;
+  try {
+    this.dragElm = constructElement(this.ui.mouseModeStr, x0, y0);
+  }
+  catch ($e0) {
+    $e0 = toJava($e0);
+    if (instanceOf($e0, 15)) {
+      debugger_0();
+    }
+    else
+      throw toJs($e0);
+  }
+  $updateToolbar(this.sim.ui);
+}
+  ;
+_.onMouseMove = function onMouseMove_1(e) {
+  !!e.nativeEvent && $preventDefault(e.nativeEvent);
+  this.mouseCursorX = $getX(e);
+  this.mouseCursorY = $getY(e);
+  if (this.mouseDragging) {
+    $mouseDragged(this, e);
+    return;
+  }
+  $mouseSelect(this, e);
+  this.sim.scopeManager.scopeMenuSelected = -1;
+}
+  ;
+_.onMouseOut = function onMouseOut_1(e) {
+  this.mouseCursorX = -1;
+}
+  ;
+_.onMouseUp = function onMouseUp_1(e) {
+  var circuitChanged;
+  !!e.nativeEvent && $preventDefault(e.nativeEvent);
+  this.mouseDragging = false;
+  this.tempMouseMode == 6 && !this.selectedArea && $clearSelection(this);
+  this.tempMouseMode == 5 && this.draggingPost == -1 && $doSplit(this, this.mouseElm);
+  this.tempMouseMode = this.mouseMode;
+  this.selectedArea = null;
+  circuitChanged = false;
+  if (this.heldSwitchElm) {
+    $mouseUp(this.heldSwitchElm);
+    this.heldSwitchElm = null;
+    circuitChanged = true;
+  }
+  if (this.dragElm) {
+    if (this.dragElm.creationFailed()) {
+      this.dragElm.delete_0();
+      (this.mouseMode == 6 || this.mouseMode == 4) && $clearSelection(this);
+      $setModeLabel(this.ui.toolbar_0, LS('Press and hold mouse to create circuit element'));
+      this.dragElm = null;
+    }
+    else {
+      $addElement(this.ui.elmList, this.dragElm);
+      this.dragElm.draggingDone();
+      circuitChanged = true;
+      $writeRecoveryToStorage(this.sim.undoManager);
+      this.sim.unsavedChanges = true;
+      this.dragElm = null;
+      $updateToolbar(this.sim.ui);
+    }
+  }
+  if (circuitChanged) {
+    $needAnalyze(this.sim);
+    $pushUndo(this.sim.undoManager);
+  }
+  !!this.dragElm && this.dragElm.delete_0();
+  this.dragElm = null;
+  $repaint(this.sim.ui);
+}
+  ;
+_.onMouseWheel = function onMouseWheel_1(e) {
+  var zoomOnly;
+  !!e.nativeEvent && $preventDefault(e.nativeEvent);
+  zoomOnly = ($clinit_System(), lt(fromDouble_0(Date.now()), add_2(this.zoomTime, $intern_21)));
+  ($isReadOnly(this.ui) || !this.sim.menus.mouseWheelEditCheckItem.on) && (zoomOnly = true);
+  zoomOnly || $scrollValues(this, $getClientX(e.nativeEvent), $getClientY(e.nativeEvent), $getMouseWheelVelocityY(e.nativeEvent));
+  if (instanceOf(this.mouseElm, 130) && !zoomOnly)
+    this.mouseElm.onMouseWheel(e);
+  else if (this.sim.scopeManager.scopeSelected != -1)
+    $onMouseWheel(this.sim.scopeManager.scopes[this.sim.scopeManager.scopeSelected], e);
+  else if (!$dialogIsShowing(this.sim.ui)) {
+    this.mouseCursorX = $getX(e);
+    this.mouseCursorY = $getY(e);
+    $zoomCircuit(this, -$getMouseWheelVelocityY(e.nativeEvent) * this.wheelSensitivity, false);
+    this.zoomTime = fromDouble_0(Date.now());
+  }
+  $repaint(this.sim.ui);
+}
+  ;
+_.twoFingerTouch = function twoFingerTouch(x_0, y_0) {
+  this.tempMouseMode = 1;
+  this.dragScreenX = x_0;
+  this.dragScreenY = y_0;
+}
+  ;
+_.zoomCircuit = function zoomCircuit(dy) {
+  $zoomCircuit(this, dy, false);
+}
+  ;
+_.dragGridX = 0;
+_.dragGridY = 0;
+_.dragScreenX = 0;
+_.dragScreenY = 0;
+_.draggingPost = 0;
+_.highlightedNode = -1;
+_.initDragGridX = 0;
+_.initDragGridY = 0;
+_.menuClientX = 0;
+_.menuClientY = 0;
+_.menuX = 0;
+_.menuY = 0;
+_.mouseCursorX = -1;
+_.mouseCursorY = -1;
+_.mouseDownTime = 0;
+_.mouseDragging = false;
+_.mouseElm = null;
+_.mouseMode = 6;
+_.mousePost = -1;
+_.mouseWasOverSplitter = false;
+_.netHighlightKeyHeld = false;
+_.tempMouseMode = 6;
+_.wheelSensitivity = 1;
+_.zoomTime = 0;
+var lastSubcircuitMenuUpdate = 0;
+var Lcom_lushprojects_circuitjs1_client_MouseManager_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'MouseManager', 647);
+function $setupPins_14(this$static) {
+  var i, n;
+  this$static.sizeX = this$static.selectBitCount + 1;
+  this$static.outputCount = 1;
+  for (i = 0; i != this$static.selectBitCount; i++)
+    this$static.outputCount <<= 1;
+  this$static.sizeY = this$static.outputCount + 1;
+  this$static.pins = initUnidimensionalArray(Lcom_lushprojects_circuitjs1_client_ChipElm$Pin_2_classLit, $intern_3, 9, this$static.outputCount + this$static.selectBitCount + 1 + ((this$static.flags & 2) != 0 ? 1 : 0) + ((this$static.flags & 4) != 0 ? 1 : 0), 0, 1);
+  for (i = 0; i != this$static.outputCount; i++)
+    this$static.pins[i] = new ChipElm$Pin(this$static, i, 2, 'I' + i);
+  n = this$static.outputCount;
+  for (i = 0; i != this$static.selectBitCount; ++i, n++)
+    this$static.pins[n] = new ChipElm$Pin(this$static, i + 1, 1, 'S' + i);
+  this$static.pins[n] = new ChipElm$Pin(this$static, 0, 3, 'Q');
+  this$static.pins[n].output = true;
+  this$static.outputPin = n;
+  if ((this$static.flags & 2) != 0) {
+    ++n;
+    this$static.pins[n] = new ChipElm$Pin(this$static, 1, 3, 'Q');
+    this$static.pins[n].lineOver = true;
+    this$static.pins[n].output = true;
+    this$static.pins[n].bubble = true;
+  }
+  if ((this$static.flags & 4) != 0) {
+    ++n;
+    this$static.pins[n] = new ChipElm$Pin(this$static, 0, 1, 'STR');
+    this$static.strobe = n;
+  }
+  else
+    this$static.strobe = -1;
+  $allocNodes(this$static);
+}
+
+function MultiplexerElm(xx, yy) {
+  $clinit_ChipElm();
+  ChipElm.call(this, xx, yy);
+  this.selectBitCount = 2;
+  $setupPins_14(this);
+}
+
+function MultiplexerElm_0(xa, ya, xb, yb, f, st) {
+  $clinit_ChipElm();
+  ChipElm_0.call(this, xa, ya, xb, yb, f, st);
+  this.selectBitCount = 2;
+  try {
+    this.selectBitCount = __parseAndValidateInt($nextToken(st), 10);
+  }
+  catch ($e0) {
+    $e0 = toJava($e0);
+    if (!instanceOf($e0, 15))
+      throw toJs($e0);
+  }
+  $setupPins_14(this);
+}
+
+defineClass(406, 32, $intern_79, MultiplexerElm, MultiplexerElm_0);
+_.dumpXml = function dumpXml_48(doc, elem) {
+  $dumpXml_0(this, elem);
+  dumpAttr_0(elem, 'se', this.selectBitCount);
+}
+  ;
+_.execute_3 = function execute_31() {
+  var i, selectedValue, val;
+  selectedValue = 0;
+  for (i = 0; i != this.selectBitCount; i++)
+    this.pins[this.outputCount + i].value_0 && (selectedValue |= 1 << i);
+  val = this.pins[selectedValue].value_0;
+  this.strobe != -1 && this.pins[this.strobe].value_0 && (val = false);
+  this.pins[this.outputPin].value_0 = val;
+  (this.flags & 2) != 0 && (this.pins[this.outputPin + 1].value_0 = !val);
+}
+  ;
+_.getChipEditInfo = function getChipEditInfo_15(n) {
+  if (n == 0)
+    return $setDimensionless(new EditInfo_0('# of Select Bits', this.selectBitCount, 1, 8));
+  if (n == 1)
+    return createCheckbox('Inverted Output', (this.flags & 2) != 0);
+  if (n == 2)
+    return createCheckbox('Strobe Pin', (this.flags & 4) != 0);
+  return null;
+}
+  ;
+_.getChipName = function getChipName_18() {
+  return 'Multiplexer';
+}
+  ;
+_.getDumpType = function getDumpType_65() {
+  return 184;
+}
+  ;
+_.getPostCount_0 = function getPostCount_43() {
+  return this.outputCount + this.selectBitCount + 1 + ((this.flags & 2) != 0 ? 1 : 0) + ((this.flags & 4) != 0 ? 1 : 0);
+}
+  ;
+_.getVoltageSourceCount = function getVoltageSourceCount_34() {
+  return (this.flags & 2) != 0 ? 2 : 1;
+}
+  ;
+_.getXmlDumpType = function getXmlDumpType_15() {
+  return 'mux';
+}
+  ;
+_.setChipEditValue = function setChipEditValue_16(n, ei) {
+  if (n == 0 && ei.value_0 >= 1 && ei.value_0 <= 6) {
+    this.selectBitCount = round_int(ei.value_0);
+    $setupPins_14(this);
+    $setPoints_0(this);
+    return;
+  }
+  if (n == 1) {
+    this.flags = $changeFlag(ei, this.flags, 2);
+    $setupPins_14(this);
+    $setPoints_0(this);
+    return;
+  }
+  if (n == 2) {
+    this.flags = $changeFlag(ei, this.flags, 4);
+    $setupPins_14(this);
+    $setPoints_0(this);
+    return;
+  }
+}
+  ;
+_.setupPins = function setupPins_19() {
+  $setupPins_14(this);
+}
+  ;
+_.undumpXml = function undumpXml_50(xml) {
+  $undumpXml_0(this, xml);
+  this.selectBitCount = $parseIntAttr(xml, 'se', this.selectBitCount);
+  $setupPins_14(this);
+}
+  ;
+_.outputCount = 0;
+_.outputPin = 0;
+_.selectBitCount = 0;
+_.strobe = 0;
+var Lcom_lushprojects_circuitjs1_client_MultiplexerElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'MultiplexerElm', 406);
+function $execute_1(this$static) {
+  $menuPerformed(theApp.commands, this$static.menuName, this$static.itemName);
+}
+
+function $setItemName(this$static, x_0) {
+  this$static.itemName = x_0;
+}
+
+function MyCommand(name_0, item_0) {
+  this.menuName = name_0;
+  this.itemName = item_0;
+}
+
+defineClass(16, 1, {}, MyCommand);
+_.execute_1 = function execute_32() {
+  $execute_1(this);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_MyCommand_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'MyCommand', 16);
+function NDarlingtonElm(xx, yy) {
+  $clinit_DarlingtonElm();
+  DarlingtonElm_0.call(this, xx, yy, false);
+}
+
+defineClass(354, 292, $intern_79, NDarlingtonElm);
+_.getDumpClass = function getDumpClass_5() {
+  return Lcom_lushprojects_circuitjs1_client_DarlingtonElm_2_classLit;
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_NDarlingtonElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'NDarlingtonElm', 354);
+function NJfetElm(xx, yy) {
+  JfetElm_0.call(this, xx, yy, false);
+}
+
+defineClass(353, 175, $intern_113, NJfetElm);
+_.getDumpClass = function getDumpClass_6() {
+  return Lcom_lushprojects_circuitjs1_client_JfetElm_2_classLit;
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_NJfetElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'NJfetElm', 353);
+function NMosfetElm(xx, yy) {
+  MosfetElm_0.call(this, xx, yy, false);
+}
+
+defineClass(352, 128, $intern_111, NMosfetElm);
+_.getDumpClass = function getDumpClass_7() {
+  return Lcom_lushprojects_circuitjs1_client_MosfetElm_2_classLit;
+}
+  ;
+_.getShortcut = function getShortcut_24() {
+  return 78;
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_NMosfetElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'NMosfetElm', 352);
+function $draw_1(this$static, g) {
+  var ds;
+  (this$static.flags & 2) != globalFlags_0 && $setPoints_15(this$static);
+  $setBbox_0(this$static, this$static.point1, this$static.point2, 16);
+  if ((globalFlags_0 & 2) != 0) {
+    $setColor_0(g, ($clinit_Color(), gray));
+    drawThickCircle(g, this$static.circleCenter.x_0, this$static.circleCenter.y_0, 20);
+  }
+  $setPowerColor_0(this$static, g);
+  $setVoltageColor(this$static, g, this$static.volts[1]);
+  drawThickLine_0(g, this$static.coll[0], this$static.coll[1]);
+  $setVoltageColor(this$static, g, this$static.volts[2]);
+  drawThickLine_0(g, this$static.emit[0], this$static.emit[1]);
+  $setColor_0(g, lightGrayColor);
+  $fillPolygon(g, this$static.arrowPoly);
+  $setVoltageColor(this$static, g, this$static.volts[0]);
+  app_0.menus.powerCheckItem.on && $setColor_0(g, ($clinit_Color(), gray));
+  drawThickLine_0(g, this$static.point1, this$static.base);
+  this$static.curcount_b = $updateDotCount(-this$static.ib, this$static.curcount_b);
+  $drawDots(g, this$static.base, this$static.point1, this$static.curcount_b);
+  this$static.curcount_c = $updateDotCount(-this$static.ic, this$static.curcount_c);
+  $drawDots(g, this$static.coll[1], this$static.coll[0], this$static.curcount_c);
+  this$static.curcount_e = $updateDotCount(-this$static.ie, this$static.curcount_e);
+  $drawDots(g, this$static.emit[1], this$static.emit[0], this$static.curcount_e);
+  $setVoltageColor(this$static, g, this$static.volts[0]);
+  $setPowerColor_0(this$static, g);
+  $fillPolygon(g, this$static.rectPoly);
+  if ((mouseElmRef == this$static || this$static.selected_0 || app_0.mouse.plotYElm == this$static || instanceOf(mouseElmRef, 20) && $getElm_0(mouseElmRef.elmScope) == this$static || $isOnHighlightedNet(this$static) || app_0.mouse.dragElm == this$static) && this$static.dy == 0) {
+    $setColor_0(g, whiteColor);
+    ds = sign_0(this$static.dx);
+    $drawString(g, 'B', this$static.base.x_0 - 10 * ds, this$static.base.y_0 - 5);
+    $drawString(g, 'C', this$static.coll[0].x_0 - 3 + 9 * ds, this$static.coll[0].y_0 + 4);
+    $drawString(g, 'E', this$static.emit[0].x_0 - 3 + 9 * ds, this$static.emit[0].y_0 + 4);
+  }
+  $drawPosts(this$static, g);
+}
+
+function $getPost_1(this$static, n) {
+  return n == 0 ? this$static.point1 : n == 1 ? this$static.coll[0] : this$static.emit[0];
+}
+
+function $limitStep_0(this$static, vnew, vold) {
+  var arg;
+  if (vnew > this$static.vcrit && $wnd.Math.abs(vnew - vold) > 0.05173) {
+    if (vold > 0) {
+      arg = 1 + (vnew - vold) / $intern_103;
+      arg > 0 ? (vnew = vold + $intern_103 * $wnd.Math.log(arg)) : (vnew = this$static.vcrit);
+    }
+    else {
+      vnew = $intern_103 * $wnd.Math.log(vnew / $intern_103);
+    }
+    sim_0.converged = false;
+  }
+  return vnew;
+}
+
+function $newModelCreated_0(this$static, tm) {
+  this$static.model = tm;
+  this$static.modelName = this$static.model.name_0;
+  $setup_4(this$static);
+}
+
+function $setBeta(this$static, b) {
+  this$static.beta_0 = b;
+  $setup_4(this$static);
+}
+
+function $setFlipped(this$static, flip) {
+  (this$static.flags & 1) != 0 != flip && (this$static.flags ^= 1);
+}
+
+function $setPoints_15(this$static) {
+  var hs2, pt;
+  this$static.flags &= -3;
+  this$static.flags |= globalFlags_0;
+  $setPoints(this$static);
+  (this$static.flags & 1) != 0 && (this$static.dsign = -this$static.dsign);
+  hs2 = 16 * this$static.dsign * this$static.pnp;
+  this$static.coll = $newPointArray(2);
+  this$static.emit = $newPointArray(2);
+  $interpPoint2(this$static.point1, this$static.point2, this$static.coll[0], this$static.emit[0], 1, hs2);
+  this$static.rect_0 = $newPointArray(4);
+  $interpPoint2(this$static.point1, this$static.point2, this$static.rect_0[0], this$static.rect_0[1], 1 - 16 / this$static.dn, 16);
+  $interpPoint2(this$static.point1, this$static.point2, this$static.rect_0[2], this$static.rect_0[3], 1 - 13 / this$static.dn, 16);
+  $interpPoint2(this$static.point1, this$static.point2, this$static.coll[1], this$static.emit[1], 1 - 13 / this$static.dn, 6 * this$static.dsign * this$static.pnp);
+  this$static.base = new Point_1;
+  $interpPoint_1(this$static.point1, this$static.point2, this$static.base, 1 - 16 / this$static.dn);
+  this$static.rectPoly = $createPolygon_0(this$static.rect_0[0], this$static.rect_0[2], this$static.rect_0[3], this$static.rect_0[1]);
+  if (this$static.pnp == 1)
+    this$static.arrowPoly = $calcArrow(this$static.emit[1], this$static.emit[0], 8, 4);
+  else {
+    pt = $interpPoint_0(this$static.point1, this$static.point2, 1 - 11 / this$static.dn, -5 * this$static.dsign * this$static.pnp);
+    this$static.arrowPoly = $calcArrow(this$static.emit[0], pt, 8, 4);
+  }
+  this$static.circleCenter = $interpPoint(this$static.base, this$static.point2, 0.5);
+}
+
+function $setup_4(this$static) {
+  this$static.model = getModelWithNameOrCopy_1(this$static.modelName, this$static.model);
+  this$static.modelName = this$static.model.name_0;
+  this$static.vcrit = $intern_103 * $wnd.Math.log($intern_103 / ($wnd.Math.sqrt(2) * this$static.model.satCur));
+  this$static.noDiagonal = true;
+}
+
+function TransistorElm(xa, ya, xb, yb, f, st) {
+  CircuitElm_0.call(this, xa, ya, xb, yb, f);
+  this.pnp = (new Integer_0($nextToken(st))).value_0;
+  this.beta_0 = 100;
+  try {
+    this.lastvbe = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+    this.lastvbc = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+    this.volts[0] = 0;
+    this.volts[1] = -this.lastvbe;
+    this.volts[2] = -this.lastvbc;
+    this.beta_0 = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+    this.modelName = unescape_0($nextToken(st));
+  }
+  catch ($e0) {
+    $e0 = toJava($e0);
+    if (instanceOf($e0, 15)) {
+      this.modelName = 'default';
+    }
+    else
+      throw toJs($e0);
+  }
+  globalFlags_0 = this.flags & 2;
+  $setup_4(this);
+}
+
+function TransistorElm_0(xx, yy, pnpflag) {
+  CircuitElm.call(this, xx, yy);
+  this.pnp = pnpflag ? -1 : 1;
+  this.beta_0 = 100;
+  this.modelName = lastModelName_2;
+  $setup_4(this);
+}
+
+defineClass(151, 7, $intern_116, TransistorElm);
+_.addRoutingObstacle = function addRoutingObstacle_13(router) {
+  $addObstacle_0(router, stampJavaTypeInfo(getClassLiteralForArray(Lcom_lushprojects_circuitjs1_client_Point_2_classLit, 1), $intern_72, 17, 0, [this.rect_0[0], this.rect_0[1], this.rect_0[2], this.rect_0[3], this.coll[0], this.emit[0]]));
+  $addWire(router, this.point1.x_0, this.point1.y_0, this.base.x_0, this.base.y_0);
+}
+  ;
+_.canViewInScope = function canViewInScope_3() {
+  return true;
+}
+  ;
+_.doStep = function doStep_31() {
+  var arg, c2, c4, cb, cbc, cbcn, cbe, cben, cc, ceqbc, ceqbe, csat, dqbdvc, dqbdve, evbc, evbcn, evbe, evben, gbc, gbcn, gbe, gben, gm, gmu, go, gpi, oik, oikr, q1, q2, qb, sqarg, vbc, vbe, vtc, vte, vtn;
+  vbc = this.pnp * (this.volts[0] - this.volts[1]);
+  vbe = this.pnp * (this.volts[0] - this.volts[2]);
+  ($wnd.Math.abs(vbc - this.lastvbc) > $intern_34 || $wnd.Math.abs(vbe - this.lastvbe) > $intern_34) && (sim_0.converged = false);
+  this.gmin = $intern_95;
+  if (sim_0.subIterations > 100 && this.badIters < 5) {
+    this.gmin = $wnd.Math.exp(-9 * $wnd.Math.log(10) * (1 - sim_0.subIterations / 300));
+    this.gmin > 0.1 && (this.gmin = 0.1);
+  }
+  vbc = $limitStep_0(this, vbc, this.lastvbc);
+  vbe = $limitStep_0(this, vbe, this.lastvbe);
+  this.lastvbc = vbc;
+  this.lastvbe = vbe;
+  csat = this.model.satCur;
+  oik = this.model.invRollOffF;
+  c2 = this.model.BEleakCur;
+  vte = this.model.leakBEemissionCoeff * $intern_103;
+  oikr = this.model.invRollOffR;
+  c4 = this.model.BCleakCur;
+  vtc = this.model.leakBCemissionCoeff * $intern_103;
+  vtn = $intern_103 * this.model.emissionCoeffF;
+  if (vbe > -5 * vtn) {
+    evbe = $wnd.Math.exp(vbe / vtn);
+    cbe = csat * (evbe - 1) + this.gmin * vbe;
+    gbe = csat * evbe / vtn + this.gmin;
+    if (c2 == 0) {
+      cben = 0;
+      gben = 0;
+    }
+    else {
+      evben = $wnd.Math.exp(vbe / vte);
+      cben = c2 * (evben - 1);
+      gben = c2 * evben / vte;
+    }
+  }
+  else {
+    gbe = -csat / vbe + this.gmin;
+    cbe = gbe * vbe;
+    gben = -c2 / vbe;
+    cben = gben * vbe;
+  }
+  vtn = $intern_103 * this.model.emissionCoeffR;
+  if (vbc > -5 * vtn) {
+    evbc = $wnd.Math.exp(vbc / vtn);
+    cbc = csat * (evbc - 1) + this.gmin * vbc;
+    gbc = csat * evbc / vtn + this.gmin;
+    if (c4 == 0) {
+      cbcn = 0;
+      gbcn = 0;
+    }
+    else {
+      evbcn = $wnd.Math.exp(vbc / vtc);
+      cbcn = c4 * (evbcn - 1);
+      gbcn = c4 * evbcn / vtc;
+    }
+  }
+  else {
+    gbc = -csat / vbc + this.gmin;
+    cbc = gbc * vbc;
+    gbcn = -c4 / vbc;
+    cbcn = gbcn * vbc;
+  }
+  q1 = 1 / (1 - this.model.invEarlyVoltF * vbc - this.model.invEarlyVoltR * vbe);
+  if (oik == 0 && oikr == 0) {
+    qb = q1;
+    dqbdve = q1 * q1 * this.model.invEarlyVoltR;
+    dqbdvc = q1 * q1 * this.model.invEarlyVoltF;
+  }
+  else {
+    q2 = oik * cbe + oikr * cbc;
+    arg = $wnd.Math.max(0, 1 + 4 * q2);
+    sqarg = 1;
+    arg != 0 && (sqarg = $wnd.Math.sqrt(arg));
+    qb = q1 * (1 + sqarg) / 2;
+    dqbdve = q1 * (qb * this.model.invEarlyVoltR + oik * gbe / sqarg);
+    dqbdvc = q1 * (qb * this.model.invEarlyVoltF + oikr * gbc / sqarg);
+  }
+  cc = 0;
+  cc = cc + (cbe - cbc) / qb - cbc / this.model.betaR - cbcn;
+  cb = cbe / this.beta_0 + cben + cbc / this.model.betaR + cbcn;
+  this.ic = this.pnp * cc;
+  this.ib = this.pnp * cb;
+  this.ie = this.pnp * (-cc - cb);
+  gpi = gbe / this.beta_0 + gben;
+  gmu = gbc / this.model.betaR + gbcn;
+  go = (gbc + (cbe - cbc) * dqbdvc / qb) / qb;
+  gm = (gbe - (cbe - cbc) * dqbdve / qb) / qb - go;
+  ceqbe = this.pnp * (cc + cb - vbe * (gm + go + gpi) + vbc * go);
+  ceqbc = this.pnp * (-cc + vbe * (gm + go) - vbc * (gmu + go));
+  (isInfinite(this.ib) || isNaN(this.ic)) && $stop(sim_0, 'infinite transistor current', this);
+  $stampMatrix(sim_0, this.nodes[1], this.nodes[1], gmu + go);
+  $stampMatrix(sim_0, this.nodes[1], this.nodes[0], -gmu + gm);
+  $stampMatrix(sim_0, this.nodes[1], this.nodes[2], -gm - go);
+  $stampMatrix(sim_0, this.nodes[0], this.nodes[0], gpi + gmu);
+  $stampMatrix(sim_0, this.nodes[0], this.nodes[2], -gpi);
+  $stampMatrix(sim_0, this.nodes[0], this.nodes[1], -gmu);
+  $stampMatrix(sim_0, this.nodes[2], this.nodes[0], -gpi - gm);
+  $stampMatrix(sim_0, this.nodes[2], this.nodes[1], -go);
+  $stampMatrix(sim_0, this.nodes[2], this.nodes[2], gpi + gm + go);
+  $stampRightSide_0(sim_0, this.nodes[0], -ceqbe - ceqbc);
+  $stampRightSide_0(sim_0, this.nodes[1], ceqbc);
+  $stampRightSide_0(sim_0, this.nodes[2], ceqbe);
+}
+  ;
+_.draw = function draw_47(g) {
+  $draw_1(this, g);
+}
+  ;
+_.dumpXml = function dumpXml_49(doc, elem) {
+  this.model.builtIn || this.model.dumped || $dumpXml_9(this.model, doc);
+  dumpAttr_1(elem, 'x', this.x_0 + ' ' + this.y_0 + ' ' + this.x2 + ' ' + this.y2);
+  dumpAttr_0(elem, 'f', this.flags);
+  dumpAttr_0(elem, 'pn', this.pnp);
+  dumpAttr(elem, 'be', this.beta_0);
+  dumpAttr_1(elem, 'mo', this.modelName);
+}
+  ;
+_.dumpXmlModel = function dumpXmlModel_2(doc) {
+  this.model.builtIn || this.model.dumped || $dumpXml_9(this.model, doc);
+}
+  ;
+_.dumpXmlState = function dumpXmlState_7(doc, elem) {
+  dumpAttr(elem, 'vbe', this.volts[0] - this.volts[1]);
+  dumpAttr(elem, 'vbc', this.volts[0] - this.volts[2]);
+}
+  ;
+_.flipX = function flipX_8(c2, count) {
+  this.x_0 == this.x2 && (this.flags ^= 1);
+  $flipX(this, c2);
+}
+  ;
+_.flipXY = function flipXY_6(xmy, count) {
+  this.flags ^= 1;
+  $flipXY(this, xmy);
+}
+  ;
+_.flipY = function flipY_8(c2, count) {
+  this.y_0 == this.y2 && (this.flags ^= 1);
+  $flipY(this, c2);
+}
+  ;
+_.getCurrentIntoNode = function getCurrentIntoNode_18(n) {
+  if (n == 0)
+    return -this.ib;
+  if (n == 1)
+    return -this.ic;
+  return -this.ie;
+}
+  ;
+_.getDumpType = function getDumpType_66() {
+  return 116;
+}
+  ;
+_.getEditInfo = function getEditInfo_46(n) {
+  var dm, ei, i;
+  if (n == 0)
+    return $setDimensionless(new EditInfo_0('Beta/hFE', this.beta_0, 10, $intern_21));
+  if (n == 1) {
+    ei = new EditInfo_0('', 0, -1, -1);
+    ei.checkbox = new Checkbox_0('Swap E/C', (this.flags & 1) != 0);
+    return ei;
+  }
+  if (n == 2) {
+    ei = createCheckbox('Draw Circle', (globalFlags_0 & 2) != 0);
+    return ei;
+  }
+  if (n == 3) {
+    ei = new EditInfo_0('Model', 0, -1, -1);
+    this.models = getModelList_1();
+    ei.choice = new Choice;
+    for (i = 0; i != this.models.arrayList.array.length; i++) {
+      dm = $get_4(this.models, i);
+      $addItem(ei.choice, LS($getDescription_0(dm)));
+      dm == this.model && $select(ei.choice, i);
+    }
+    return ei;
+  }
+  if (n == 4) {
+    ei = new EditInfo_0('', 0, -1, -1);
+    ei.button_0 = new Button_1(LS('Create New Model'));
+    return ei;
+  }
+  if (n == 5) {
+    if (this.model.readOnly)
+      return null;
+    ei = new EditInfo_0('', 0, -1, -1);
+    ei.button_0 = new Button_1(LS('Edit Model'));
+    return ei;
+  }
+  return null;
+}
+  ;
+_.getElmType = function getElmType_16() {
+  return 'transistor';
+}
+  ;
+_.getInfo_0 = function getInfo_53(arr) {
+  var vbc, vbe, vce;
+  arr[0] = LS('transistor') + ' (' + (this.pnp == -1 ? 'PNP' : 'NPN') + ', ' + this.model.name_0 + ', \u03B2=' + $format_0(showFormat, this.beta_0) + ')';
+  vbc = this.volts[0] - this.volts[1];
+  vbe = this.volts[0] - this.volts[2];
+  vce = this.volts[1] - this.volts[2];
+  vbc * this.pnp > 0.2 ? (arr[1] = vbe * this.pnp > 0.2 ? 'saturation' : 'reverse active') : (arr[1] = vbe * this.pnp > 0.2 ? 'fwd active' : 'cutoff');
+  arr[1] = LS(arr[1]);
+  arr[2] = 'Ic = ' + getUnitText(this.ic, 'A', false);
+  arr[3] = 'Ib = ' + getUnitText(this.ib, 'A', false);
+  arr[4] = 'Vbe = ' + getUnitText(vbe, 'V', false);
+  arr[5] = 'Vbc = ' + getUnitText(vbc, 'V', false);
+  arr[6] = 'Vce = ' + getUnitText(vce, 'V', false);
+  arr[7] = 'P = ' + getUnitText((this.volts[0] - this.volts[2]) * this.ib + (this.volts[1] - this.volts[2]) * this.ic, 'W', false);
+}
+  ;
+_.getPost = function getPost_11(n) {
+  return $getPost_1(this, n);
+}
+  ;
+_.getPostCount_0 = function getPostCount_44() {
+  return 3;
+}
+  ;
+_.getPower = function getPower_7() {
+  return (this.volts[0] - this.volts[2]) * this.ib + (this.volts[1] - this.volts[2]) * this.ic;
+}
+  ;
+_.getScopeText = function getScopeText_4(x_0) {
+  var t;
+  t = '';
+  switch (x_0) {
+    case 1:
+      t = 'Ib';
+      break;
+    case 2:
+      t = 'Ic';
+      break;
+    case 3:
+      t = 'Ie';
+      break;
+    case 4:
+      t = 'Vbe';
+      break;
+    case 5:
+      t = 'Vbc';
+      break;
+    case 6:
+      t = 'Vce';
+      break;
+    case 7:
+      t = 'P';
+  }
+  return LS('transistor') + ', ' + t;
+}
+  ;
+_.getScopeUnits = function getScopeUnits_3(x_0) {
+  switch (x_0) {
+    case 1:
+    case 2:
+    case 3:
+      return 1;
+    case 7:
+      return 2;
+    default: return 0;
+  }
+}
+  ;
+_.getScopeValue = function getScopeValue_3(x_0) {
+  switch (x_0) {
+    case 1:
+      return this.ib;
+    case 2:
+      return this.ic;
+    case 3:
+      return this.ie;
+    case 4:
+      return this.volts[0] - this.volts[2];
+    case 5:
+      return this.volts[0] - this.volts[1];
+    case 6:
+      return this.volts[1] - this.volts[2];
+    case 7:
+      return (this.volts[0] - this.volts[2]) * this.ib + (this.volts[1] - this.volts[2]) * this.ic;
+  }
+  return 0;
+}
+  ;
+_.nonLinear = function nonLinear_13() {
+  return true;
+}
+  ;
+_.onMouseWheel = function onMouseWheel_2(e) {
+  if (!!typeScrollPopup && typeScrollPopup.showing) {
+    $doDeltaY_0(typeScrollPopup, $getMouseWheelVelocityY(e.nativeEvent));
+    return;
+  }
+  typeScrollPopup = new TypeScrollPopup($getClientX(e.nativeEvent), $getClientY(e.nativeEvent), $getMouseWheelVelocityY(e.nativeEvent), this, app_0);
+}
+  ;
+_.reset_0 = function reset_26() {
+  this.volts[0] = this.volts[1] = this.volts[2] = 0;
+  this.lastvbc = this.lastvbe = this.curcount_c = this.curcount_e = this.curcount_b = 0;
+  this.badIters = 0;
+}
+  ;
+_.setEditValue = function setEditValue_45(n, ei) {
+  var editDialog, newModel;
+  if (n == 0) {
+    this.beta_0 = ei.value_0;
+    $setup_4(this);
+  }
+  if (n == 1) {
+    $getState(ei.checkbox) ? (this.flags |= 1) : (this.flags &= -2);
+    $setPoints_15(this);
+  }
+  if (n == 2) {
+    globalFlags_0 = $changeFlag(ei, globalFlags_0, 2);
+    return;
+  }
+  if (n == 3) {
+    this.model = $get_4(this.models, $getElement(ei.choice).selectedIndex);
+    this.modelName = this.model.name_0;
+    $setup_4(this);
+    ei.newDialog = true;
+    return;
+  }
+  if (n == 4) {
+    newModel = new TransistorModel_0(this.model);
+    editDialog = new EditTransistorModelDialog(newModel, app_0, this);
+    diodeModelEditDialog = editDialog;
+    !editDialog.resizeHandlerRegistration && (editDialog.resizeHandlerRegistration = addResizeHandler(new DialogBox$1(editDialog)));
+    $show(editDialog);
+    return;
+  }
+  if (n == 5) {
+    if (this.model.readOnly) {
+      alert_0(LS('This model cannot be modified.  Change the model name to allow customization.'));
+      return;
+    }
+    editDialog = new EditTransistorModelDialog(this.model, app_0, null);
+    diodeModelEditDialog = editDialog;
+    !editDialog.resizeHandlerRegistration && (editDialog.resizeHandlerRegistration = addResizeHandler(new DialogBox$1(editDialog)));
+    $show(editDialog);
+    return;
+  }
+}
+  ;
+_.setPoints = function setPoints_41() {
+  $setPoints_15(this);
+}
+  ;
+_.stamp = function stamp_40() {
+  $stampNonLinear(sim_0, this.nodes[0]);
+  $stampNonLinear(sim_0, this.nodes[1]);
+  $stampNonLinear(sim_0, this.nodes[2]);
+}
+  ;
+_.stepFinished = function stepFinished_15() {
+  ($wnd.Math.abs(this.ic) > $intern_75 || $wnd.Math.abs(this.ib) > $intern_75) && $stop(sim_0, 'max current exceeded', this);
+  sim_0.subIterations > 100 ? ++this.badIters : (this.badIters = 0);
+}
+  ;
+_.undumpXml = function undumpXml_51(xml) {
+  this.flags = $parseIntAttr(xml, 'f', this.flags);
+  this.pnp = $parseIntAttr(xml, 'pn', this.pnp);
+  this.beta_0 = $parseDoubleAttr(xml, 'be', this.beta_0);
+  this.modelName = $parseStringAttr(xml, 'mo', this.modelName);
+  this.lastvbe = $parseDoubleAttr(xml, 'vbe', 0);
+  this.lastvbc = $parseDoubleAttr(xml, 'vbc', 0);
+  this.volts[0] = 0;
+  this.volts[1] = -this.lastvbe;
+  this.volts[2] = -this.lastvbc;
+  globalFlags_0 = this.flags & 2;
+  $setup_4(this);
+}
+  ;
+_.updateModels_0 = function updateModels_3() {
+  $setup_4(this);
+}
+  ;
+_.updateModels = function () {
+  this.updateModels_0();
+}
+  ;
+_.badIters = 0;
+_.beta_0 = 0;
+_.curcount_b = 0;
+_.curcount_c = 0;
+_.curcount_e = 0;
+_.gmin = 0;
+_.ib = 0;
+_.ic = 0;
+_.ie = 0;
+_.lastvbc = 0;
+_.lastvbe = 0;
+_.pnp = 0;
+_.vcrit = 0;
+var globalFlags_0 = 0, lastModelName_2 = 'default';
+var Lcom_lushprojects_circuitjs1_client_TransistorElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'TransistorElm', 151);
+function NTransistorElm(xx, yy) {
+  TransistorElm_0.call(this, xx, yy, false);
+}
+
+defineClass(351, 151, $intern_116, NTransistorElm);
+_.getDumpClass = function getDumpClass_8() {
+  return Lcom_lushprojects_circuitjs1_client_TransistorElm_2_classLit;
+}
+  ;
+_.getShortcut = function getShortcut_25() {
+  return 110;
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_NTransistorElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'NTransistorElm', 351);
+function NandGateElm(xx, yy) {
+  AndGateElm.call(this, xx, yy);
+}
+
+function NandGateElm_0(xa, ya, xb, yb, f, st) {
+  AndGateElm_0.call(this, xa, ya, xb, yb, f, st);
+}
+
+defineClass(369, 257, $intern_79, NandGateElm, NandGateElm_0);
+_.getDumpType = function getDumpType_67() {
+  return 151;
+}
+  ;
+_.getGateName = function getGateName_0() {
+  return 'NAND gate';
+}
+  ;
+_.getShortcut = function getShortcut_26() {
+  return 64;
+}
+  ;
+_.isInverting = function isInverting_0() {
+  return true;
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_NandGateElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'NandGateElm', 369);
+function NoiseElm(xx, yy) {
+  RailElm_0.call(this, xx, yy, 6);
+}
+
+function NoiseElm_0(xa, ya, xb, yb, f, st) {
+  RailElm_1.call(this, xa, ya, xb, yb, f, st);
+  this.waveform = 6;
+}
+
+defineClass(289, 47, $intern_86, NoiseElm, NoiseElm_0);
+_.getDumpClass = function getDumpClass_9() {
+  return Lcom_lushprojects_circuitjs1_client_RailElm_2_classLit;
+}
+  ;
+_.getShortcut = function getShortcut_27() {
+  return 0;
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_NoiseElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'NoiseElm', 289);
+function OrGateElm(xx, yy) {
+  GateElm.call(this, xx, yy);
+}
+
+function OrGateElm_0(xa, ya, xb, yb, f, st) {
+  GateElm_0.call(this, xa, ya, xb, yb, f, st);
+}
+
+defineClass(212, 256, $intern_79, OrGateElm, OrGateElm_0);
+_.calcFunction = function calcFunction_0() {
+  var f, i;
+  f = false;
+  for (i = 0; i != this.inputCount; i++)
+    f = f | $getInput(this, i);
+  return f;
+}
+  ;
+_.drawGatePolygon = function drawGatePolygon_1(g) {
+  g.context.lineWidth = 3;
+  g.context.beginPath();
+  $moveTo(g.context, this.gatePoly.xpoints[0], this.gatePoly.ypoints[0]);
+  $lineTo(g.context, this.gatePoly.xpoints[1], this.gatePoly.ypoints[1]);
+  $bezierCurveTo(g.context, this.gatePoly.xpoints[2], this.gatePoly.ypoints[2], this.gatePoly.xpoints[2], this.gatePoly.ypoints[2], this.gatePoly.xpoints[3], this.gatePoly.ypoints[3]);
+  $bezierCurveTo(g.context, this.gatePoly.xpoints[4], this.gatePoly.ypoints[4], this.gatePoly.xpoints[4], this.gatePoly.ypoints[4], this.gatePoly.xpoints[5], this.gatePoly.ypoints[5]);
+  $lineTo(g.context, this.gatePoly.xpoints[6], this.gatePoly.ypoints[6]);
+  $bezierCurveTo(g.context, this.gatePoly.xpoints[7], this.gatePoly.ypoints[7], this.gatePoly.xpoints[7], this.gatePoly.ypoints[7], this.gatePoly.xpoints[0], this.gatePoly.ypoints[0]);
+  g.context.closePath();
+  if (instanceOf(this, 184)) {
+    $moveTo(g.context, this.gatePoly.xpoints[8], this.gatePoly.ypoints[8]);
+    $bezierCurveTo(g.context, this.gatePoly.xpoints[10], this.gatePoly.ypoints[10], this.gatePoly.xpoints[10], this.gatePoly.ypoints[10], this.gatePoly.xpoints[9], this.gatePoly.ypoints[9]);
+  }
+  g.context.stroke();
+  g.context.lineWidth = 1;
+}
+  ;
+_.getDumpType = function getDumpType_68() {
+  return 152;
+}
+  ;
+_.getGateName = function getGateName_1() {
+  return 'OR gate';
+}
+  ;
+_.getGateText = function getGateText_1() {
+  return '\u22651';
+}
+  ;
+_.getLeadAdjustment = function getLeadAdjustment_0(ix) {
+  if (app_0.menus.euroGatesCheckItem.on)
+    return 0;
+  if (this.inputCount > 3 && (ix == 0 || ix == this.inputCount - 1))
+    return -0.05;
+  if (this.inputCount > 7 && (ix == 1 || ix == this.inputCount - 2))
+    return -0.05;
+  if (this.inputCount >= 12 && (ix == 2 || ix == this.inputCount - 3))
+    return -0.05;
+  return 0;
+}
+  ;
+_.getShortcut = function getShortcut_28() {
+  return 51;
+}
+  ;
+_.setPoints = function setPoints_42() {
+  var triPoints, ww2;
+  $setPoints_2(this);
+  if (app_0.menus.euroGatesCheckItem.on) {
+    $createEuroGatePolygon(this);
+  }
+  else {
+    triPoints = $newPointArray(11);
+    $interpPoint2(this.lead1, this.lead2, triPoints[0], triPoints[6], -0.05, this.hs2);
+    $interpPoint2(this.lead1, this.lead2, triPoints[1], triPoints[5], 0.3, this.hs2);
+    triPoints[3] = this.lead2;
+    $interpPoint2(this.lead1, this.lead2, triPoints[2], triPoints[4], 0.7, this.hs2 * 0.81);
+    $interpPoint_1(this.lead1, this.lead2, triPoints[7], 0.08);
+    if (instanceOf(this, 184)) {
+      ww2 = this.ww == 0 ? this.dn * 2 : this.ww * 2;
+      $interpPoint2(this.lead1, this.lead2, triPoints[8], triPoints[9], -0.05 - 5 / ww2, this.hs2);
+      $interpPoint_1(this.lead1, this.lead2, triPoints[10], 0.08 - 5 / ww2);
+    }
+    this.gatePoly = $createPolygon_1(triPoints);
+  }
+  if (this.isInverting()) {
+    this.pcircle = $interpPoint(this.point1, this.point2, 0.5 + (this.ww + 4) / this.dn);
+    this.lead2 = $interpPoint(this.point1, this.point2, 0.5 + (this.ww + 8) / this.dn);
+  }
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_OrGateElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'OrGateElm', 212);
+function NorGateElm(xx, yy) {
+  OrGateElm.call(this, xx, yy);
+}
+
+function NorGateElm_0(xa, ya, xb, yb, f, st) {
+  OrGateElm_0.call(this, xa, ya, xb, yb, f, st);
+}
+
+defineClass(412, 212, $intern_79, NorGateElm, NorGateElm_0);
+_.getDumpType = function getDumpType_69() {
+  return 153;
+}
+  ;
+_.getGateName = function getGateName_2() {
+  return 'NOR gate';
+}
+  ;
+_.getShortcut = function getShortcut_29() {
+  return 35;
+}
+  ;
+_.isInverting = function isInverting_1() {
+  return true;
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_NorGateElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'NorGateElm', 412);
+function $clinit_OTAElm() {
+  $clinit_OTAElm = emptyMethod;
+  modelExternalNodes_2 = stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [7, 5, 15, 1, 13]);
+}
+
+function $$init_11(this$static) {
+  this$static.curCount0 = 0;
+  this$static.curCount1 = 0;
+  this$static.curCount2 = 0;
+  this$static.curCount3 = 0;
+  this$static.posVolt = 9;
+  this$static.negVolt = -9;
+}
+
+function OTAElm(xx, yy) {
+  $clinit_OTAElm();
+  CompositeElm_2.call(this, xx, yy, modelString_2, modelExternalNodes_2);
+  $$init_11(this);
+  this.noDiagonal = true;
+  $get_4(this.compElmList, 0).maxVoltage_0 = this.negVolt;
+  $get_4(this.compElmList, 1).maxVoltage_0 = this.posVolt;
+}
+
+function OTAElm_0(xa, ya, xb, yb, f, st) {
+  $clinit_OTAElm();
+  CompositeElm_1.call(this, xa, ya, xb, yb, f, st, modelString_2, modelExternalNodes_2);
+  $$init_11(this);
+  this.noDiagonal = true;
+  this.negVolt = $get_4(this.compElmList, 0).maxVoltage_0;
+  this.posVolt = $get_4(this.compElmList, 1).maxVoltage_0;
+}
+
+defineClass(419, 110, $intern_79, OTAElm, OTAElm_0);
+_.canFlipX = function canFlipX_2() {
+  return false;
+}
+  ;
+_.canFlipY = function canFlipY_3() {
+  return false;
+}
+  ;
+_.draw = function draw_48(g) {
+  $setBbox_0(this, this.point1, this.point2, 48);
+  $setVoltageColor(this, g, this.volts[0]);
+  drawThickLine_0(g, this.in1p[0], this.in1p[1]);
+  $setVoltageColor(this, g, this.volts[1]);
+  drawThickLine_0(g, this.in2p[0], this.in2p[1]);
+  $setVoltageColor(this, g, this.volts[2]);
+  drawThickLine_0(g, this.in3p[0], this.in3p[1]);
+  $setVoltageColor(this, g, this.volts[3]);
+  drawThickLine_0(g, this.in4p[0], this.in4p[1]);
+  $setColor_0(g, mouseElmRef == this || this.selected_0 || app_0.mouse.plotYElm == this || instanceOf(mouseElmRef, 20) && $getElm_0(mouseElmRef.elmScope) == this || $isOnHighlightedNet(this) ? selectColor_0 : lightGrayColor);
+  $setPowerColor_0(this, g);
+  drawThickPolygon(g, this.triangle);
+  $fillPolygon(g, this.arrowPoly1);
+  $fillPolygon(g, this.arrowPoly2);
+  drawThickLine_0(g, this.bar1[0], this.bar1[1]);
+  drawThickLine_0(g, this.bar2[0], this.bar2[1]);
+  drawThickCircle(g, this.circCent[0].x_0, this.circCent[0].y_0, 9);
+  drawThickCircle(g, this.circCent[1].x_0, this.circCent[1].y_0, 9);
+  $setFont_0(g, this.plusFont);
+  $drawCenteredText(this, g, '+', this.textp[0].x_0, this.textp[0].y_0 - 2, true);
+  $drawCenteredText(this, g, '-', this.textp[1].x_0, this.textp[1].y_0, true);
+  this.curCount0 = $updateDotCount(-$getCurrentIntoNode(this, 0), this.curCount0);
+  $drawDots(g, this.in1p[0], this.in1p[1], this.curCount0);
+  this.curCount1 = $updateDotCount(-$getCurrentIntoNode(this, 1), this.curCount1);
+  $drawDots(g, this.in2p[0], this.in2p[1], this.curCount0);
+  this.curCount2 = $updateDotCount(-$getCurrentIntoNode(this, 2), this.curCount2);
+  $drawDots(g, this.in3p[0], this.in3p[1], this.curCount2);
+  this.curCount3 = $updateDotCount(-$getCurrentIntoNode(this, 3), this.curCount3);
+  $drawDots(g, this.in4p[0], this.in4p[1], this.curCount3);
+  $drawPosts(this, g);
+}
+  ;
+_.getConnection_0 = function getConnection_21(n1, n2) {
+  return false;
+}
+  ;
+_.getDumpType_0 = function getDumpType_70() {
+  return 402;
+}
+  ;
+_.getDumpType = function () {
+  return this.getDumpType_0();
+}
+  ;
+_.getEditInfo = function getEditInfo_47(n) {
+  if (n == 0)
+    return new EditInfo_0('Positive Supply Voltage (5-20V)', this.posVolt, 5, 20);
+  if (n == 1)
+    return new EditInfo_0('Negative Supply Voltage (V)', this.negVolt, -20, -5);
+  return null;
+}
+  ;
+_.getInfo_0 = function getInfo_54(arr) {
+  arr[0] = 'OTA (LM13700 style)';
+  arr[1] = 'Iabc = ' + getUnitText(-$getCurrentIntoNode(this, 3), 'A', false);
+  arr[2] = 'V+ - V- = ' + getUnitText(this.volts[0] - this.volts[1], 'V', false);
+}
+  ;
+_.reset_1 = function reset_27() {
+  $reset_1(this);
+  this.curCount0 = this.curCount1 = this.curCount2 = this.curCount3 = 0;
+}
+  ;
+_.setEditValue = function setEditValue_46(n, ei) {
+  n == 0 && (this.posVolt = ei.value_0);
+  n == 1 && (this.negVolt = ei.value_0);
+  $get_4(this.compElmList, 0).maxVoltage_0 = this.negVolt;
+  $get_4(this.compElmList, 1).maxVoltage_0 = this.posVolt;
+}
+  ;
+_.setPoints = function setPoints_43() {
+  var d1, d2, hs, tris;
+  $setPoints(this);
+  if (this.dn > 94) {
+    this.lead1 = $interpPoint_0(this.point1, this.point2, 1 - 94 / this.dn, 0);
+    this.lead2 = this.point2;
+    this.point2bis = this.point2;
+  }
+  else {
+    this.lead1 = this.point1;
+    this.lead2 = $interpPoint_0(this.point1, this.point2, 94 / this.dn, 0);
+    this.point2bis = this.lead2;
+  }
+  hs = 32 * this.dsign;
+  this.in1p = $newPointArray(2);
+  this.in2p = $newPointArray(2);
+  this.in3p = $newPointArray(2);
+  this.in4p = $newPointArray(2);
+  this.textp = $newPointArray(2);
+  this.bar1 = $newPointArray(2);
+  this.bar2 = $newPointArray(2);
+  this.circCent = $newPointArray(2);
+  $interpPoint2(this.point1, this.point2bis, this.in1p[0], this.in2p[0], 0, hs);
+  $interpPoint2(this.lead1, this.lead2, this.in1p[1], this.in2p[1], 0, hs);
+  $interpPoint2(this.lead1, this.lead2, this.textp[0], this.textp[1], 0.1, hs);
+  this.in3p[0] = this.point1;
+  this.in3p[1] = this.lead1;
+  this.in4p[0] = $interpPoint_0(this.lead1, this.lead2, $intern_117, 32);
+  this.in4p[1] = $interpPoint_0(this.lead1, this.lead2, $intern_117, 8);
+  tris = $newPointArray(3);
+  $interpPoint2(this.lead1, this.lead2, tris[0], tris[1], 0, 3 * hs / 2 | 0);
+  tris[2] = $interpPoint(this.lead1, this.lead2, 0.6808510638297872);
+  this.triangle = $createPolygon(tris[0], tris[1], tris[2]);
+  this.circCent[0] = $interpPoint_0(this.lead1, this.lead2, 0.898936170212766, 0);
+  this.circCent[1] = $interpPoint_0(this.lead1, this.lead2, 0.7819148936170213, 0);
+  d1 = $interpPoint(this.in3p[1], this.in1p[1], $intern_108);
+  d2 = $interpPoint(this.in3p[1], this.in1p[1], $intern_109);
+  this.arrowPoly1 = $calcArrow(d1, d2, 8, 4);
+  $interpPoint2(d1, d2, this.bar1[0], this.bar1[1], 1, 4);
+  d1 = $interpPoint(this.in3p[1], this.in2p[1], $intern_108);
+  d2 = $interpPoint(this.in3p[1], this.in2p[1], $intern_109);
+  this.arrowPoly2 = $calcArrow(d1, d2, 8, 4);
+  $interpPoint2(d1, d2, this.bar2[0], this.bar2[1], 1, 4);
+  this.plusFont = new Font('SansSerif', 0, 14);
+  $setPost(this, 0, this.in1p[0]);
+  $setPost(this, 1, this.in2p[0]);
+  $setPost(this, 2, this.in3p[0]);
+  $setPost(this, 3, this.in4p[0]);
+  $setPost(this, 4, this.point2bis);
+}
+  ;
+_.curCount0 = 0;
+_.curCount1 = 0;
+_.curCount2 = 0;
+_.curCount3 = 0;
+_.negVolt = 0;
+_.posVolt = 0;
+var modelExternalNodes_2, modelString_2 = 'RailElm 4\rRailElm 10\rNTransistorElm 1 2 3\rNTransistorElm 3 1 4\rNTransistorElm 3 3 4\rNTransistorElm 5 6 2\rNTransistorElm 7 8 2\rPTransistorElm 9 6 10\rPTransistorElm 9 9 10\rPTransistorElm 6 12 9\rPTransistorElm 11 8 10\rPTransistorElm 11 11 10\rPTransistorElm 8 13 11\rNTransistorElm 14 14 4\rNTransistorElm 14 12 4\rNTransistorElm 12 13 14\rNTransistorElm 15 15 5\rNTransistorElm 15 15 7';
+var Lcom_lushprojects_circuitjs1_client_OTAElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'OTAElm', 419);
+function OhmMeterElm(xx, yy) {
+  CurrentElm.call(this, xx, yy);
+}
+
+function OhmMeterElm_0(xa, ya, xb, yb, f, st) {
+  CurrentElm_0.call(this, xa, ya, xb, yb, f, st);
+}
+
+defineClass(434, 182, $intern_99, OhmMeterElm, OhmMeterElm_0);
+_.canShowValueInScope = function canShowValueInScope_2(x_0) {
+  return x_0 == 2;
+}
+  ;
+_.draw = function draw_49(g) {
+  var s;
+  $draw2Leads(this, g);
+  $setVoltageColor(this, g, (this.volts[0] + this.volts[1]) / 2);
+  $setPowerColor_0(this, g);
+  drawThickCircle(g, this.center.x_0, this.center.y_0, 12);
+  $drawCenteredText(this, g, ohmString, this.center.x_0, this.center.y_0, true);
+  $setBbox_0(this, this.point1, this.point2, 12);
+  this.curcount_0 = $updateDotCount(this.current_0, this.curcount_0);
+  app_0.mouse.dragElm == this || $drawDots(g, this.point1, this.point2, this.curcount_0);
+  if (app_0.menus.showValuesCheckItem.on && this.current_0 != 0) {
+    s = getUnitText((this.volts[1] - this.volts[0]) / this.current_0, ohmString, true);
+    (this.dx == 0 || this.dy == 0) && $drawValues(this, g, s, 12);
+  }
+  $drawPosts(this, g);
+}
+  ;
+_.getDumpType = function getDumpType_71() {
+  return 216;
+}
+  ;
+_.getInfo_0 = function getInfo_55(arr) {
+  arr[0] = 'ohmmeter';
+  this.current_0 == 0 ? (arr[1] = 'R = \u221E') : (arr[1] = 'R = ' + getUnitText((this.volts[1] - this.volts[0]) / this.current_0, ohmString, false));
+}
+  ;
+_.getScopeUnits = function getScopeUnits_4(x_0) {
+  return x_0 == 2 ? 3 : x_0 == 3 ? 1 : x_0 == 7 ? 2 : 0;
+}
+  ;
+_.getScopeValue = function getScopeValue_4(x_0) {
+  return x_0 == 2 ? (this.volts[1] - this.volts[0]) / this.current_0 : x_0 == 3 ? this.current_0 : x_0 == 7 ? -(this.volts[1] - this.volts[0]) * this.current_0 : this.volts[1] - this.volts[0];
+}
+  ;
+_.setPoints = function setPoints_44() {
+  $setPoints_6(this);
+  $calcLeads(this, 26);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_OhmMeterElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'OhmMeterElm', 434);
+function $setGain(this$static) {
+  if ((this$static.flags & 8) != 0)
+    return;
+  this$static.gain = (this$static.flags & 4) != 0 ? $intern_21 : $intern_110;
+}
+
+function $setSize_3(this$static, s) {
+  this$static.opsize = s;
+  this$static.opheight = 8 * s;
+  this$static.opwidth = 13 * s;
+  this$static.flags = this$static.flags & -3 | (s == 1 ? 2 : 0);
+}
+
+function OpAmpElm(xx, yy) {
+  CircuitElm.call(this, xx, yy);
+  this.noDiagonal = true;
+  this.maxOut = 15;
+  this.minOut = -15;
+  this.flags = 8;
+  this.gain = $intern_110;
+  $setSize_3(this, app_0.menus.smallGridCheckItem.on ? 1 : 2);
+}
+
+function OpAmpElm_0(xa, ya, xb, yb, f, st) {
+  CircuitElm_0.call(this, xa, ya, xb, yb, f);
+  this.maxOut = 15;
+  this.minOut = -15;
+  try {
+    this.maxOut = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+    this.minOut = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+    $doubleValue(__parseAndValidateDouble($nextToken(st)));
+    this.volts[0] = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+    this.volts[1] = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+    this.gain = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  }
+  catch ($e0) {
+    $e0 = toJava($e0);
+    if (!instanceOf($e0, 15))
+      throw toJs($e0);
+  }
+  this.noDiagonal = true;
+  $setSize_3(this, (f & 2) != 0 ? 1 : 2);
+  $setGain(this);
+}
+
+defineClass(297, 7, $intern_79, OpAmpElm, OpAmpElm_0);
+_.addRoutingObstacle = function addRoutingObstacle_14(router) {
+  $addRoutingObstacleWithLeads(this, router, this.opwidth);
+}
+  ;
+_.doStep = function doStep_32() {
+  var dx, maxAdj, midpoint, minAdj, vd, vn, x_0;
+  vd = this.volts[1] - this.volts[0];
+  midpoint = (this.maxOut + this.minOut) * 0.5;
+  $wnd.Math.abs(this.lastvd - vd) > 0.1 ? (sim_0.converged = false) : (this.volts[2] > this.maxOut + 0.1 || this.volts[2] < this.minOut - 0.1) && (sim_0.converged = false);
+  vn = sim_0.nodeList.arrayList.array.length + this.voltSource;
+  maxAdj = this.maxOut - midpoint;
+  minAdj = this.minOut - midpoint;
+  if (vd >= maxAdj / this.gain && (this.lastvd >= 0 || $getrand(app_0, 4) == 1)) {
+    dx = $intern_81;
+    x_0 = this.maxOut - $intern_81 * maxAdj / this.gain;
+  }
+  else if (vd <= minAdj / this.gain && (this.lastvd <= 0 || $getrand(app_0, 4) == 1)) {
+    dx = $intern_81;
+    x_0 = this.minOut - $intern_81 * minAdj / this.gain;
+  }
+  else {
+    dx = this.gain;
+    x_0 = midpoint;
+  }
+  $stampMatrix(sim_0, vn, this.nodes[0], dx);
+  $stampMatrix(sim_0, vn, this.nodes[1], -dx);
+  $stampMatrix(sim_0, vn, this.nodes[2], 1);
+  $stampRightSide_0(sim_0, vn, x_0);
+  this.lastvd = vd;
+}
+  ;
+_.draw = function draw_50(g) {
+  $setBbox_0(this, this.point1, this.point2, this.opheight * 2);
+  $setVoltageColor(this, g, this.volts[0]);
+  drawThickLine_0(g, this.in1p[0], this.in1p[1]);
+  $setVoltageColor(this, g, this.volts[1]);
+  drawThickLine_0(g, this.in2p[0], this.in2p[1]);
+  $setVoltageColor(this, g, this.volts[2]);
+  drawThickLine_0(g, this.lead2, this.point2);
+  $setColor_0(g, mouseElmRef == this || this.selected_0 || app_0.mouse.plotYElm == this || instanceOf(mouseElmRef, 20) && $getElm_0(mouseElmRef.elmScope) == this || $isOnHighlightedNet(this) ? selectColor_0 : lightGrayColor);
+  $setPowerColor_0(this, g);
+  drawThickPolygon(g, this.triangle);
+  $setFont_0(g, this.plusFont);
+  $drawCenteredText(this, g, '-', this.textp[0].x_0, this.textp[0].y_0 - 2, true);
+  $drawCenteredText(this, g, '+', this.textp[1].x_0, this.textp[1].y_0, true);
+  this.curcount_0 = $updateDotCount(this.current_0, this.curcount_0);
+  $drawDots(g, this.point2, this.lead2, this.curcount_0);
+  $drawPosts(this, g);
+}
+  ;
+_.dumpXml = function dumpXml_50(doc, elem) {
+  dumpAttr_1(elem, 'x', this.x_0 + ' ' + this.y_0 + ' ' + this.x2 + ' ' + this.y2);
+  dumpAttr_0(elem, 'f', this.flags);
+  dumpAttr(elem, 'ma', this.maxOut);
+  dumpAttr(elem, 'mi', this.minOut);
+  dumpAttr(elem, 'ga', this.gain);
+}
+  ;
+_.flipX = function flipX_9(c2, count) {
+  this.dx == 0 && (this.flags ^= 1);
+  $flipX(this, c2);
+}
+  ;
+_.flipXY = function flipXY_7(xmy, count) {
+  this.flags ^= 1;
+  $flipXY(this, xmy);
+}
+  ;
+_.flipY = function flipY_9(c2, count) {
+  this.dy == 0 && (this.flags ^= 1);
+  $flipY(this, c2);
+}
+  ;
+_.getConnection = function getConnection_22(n1, n2) {
+  return false;
+}
+  ;
+_.getCurrentIntoNode = function getCurrentIntoNode_19(n) {
+  if (n == 2)
+    return -this.current_0;
+  return 0;
+}
+  ;
+_.getDumpType = function getDumpType_72() {
+  return 97;
+}
+  ;
+_.getEditInfo = function getEditInfo_48(n) {
+  if (n == 0)
+    return new EditInfo_0('Max Output (V)', this.maxOut, 1, 20);
+  if (n == 1)
+    return new EditInfo_0('Min Output (V)', this.minOut, -20, 0);
+  if (n == 2)
+    return new EditInfo_0('Gain', this.gain, 10, $intern_78);
+  return null;
+}
+  ;
+_.getInfo_0 = function getInfo_56(arr) {
+  var vo;
+  arr[0] = 'op-amp';
+  arr[1] = 'V+ = ' + getUnitText(this.volts[1], 'V', false);
+  arr[2] = 'V- = ' + getUnitText(this.volts[0], 'V', false);
+  vo = $wnd.Math.max($wnd.Math.min(this.volts[2], this.maxOut), this.minOut);
+  arr[3] = 'Vout = ' + getUnitText(vo, 'V', false);
+  arr[4] = 'Iout = ' + getUnitText(-this.current_0, 'A', false);
+  arr[5] = 'range = ' + getUnitText(this.minOut, 'V', false) + ' to ' + getUnitText(this.maxOut, 'V', false);
+}
+  ;
+_.getPost = function getPost_12(n) {
+  return n == 0 ? this.in1p[0] : n == 1 ? this.in2p[0] : this.point2;
+}
+  ;
+_.getPostCount_0 = function getPostCount_45() {
+  return 3;
+}
+  ;
+_.getPower = function getPower_8() {
+  return this.volts[2] * this.current_0;
+}
+  ;
+_.getShortcut = function getShortcut_30() {
+  return 97;
+}
+  ;
+_.getVoltageDiff_0 = function getVoltageDiff_16() {
+  return this.volts[2] - this.volts[1];
+}
+  ;
+_.getVoltageSourceCount = function getVoltageSourceCount_35() {
+  return 1;
+}
+  ;
+_.hasGroundConnection = function hasGroundConnection_14(n1) {
+  return n1 == 2;
+}
+  ;
+_.nonLinear = function nonLinear_14() {
+  return true;
+}
+  ;
+_.setEditValue = function setEditValue_47(n, ei) {
+  n == 0 && (this.maxOut = ei.value_0);
+  n == 1 && (this.minOut = ei.value_0);
+  n == 2 && ei.value_0 > 0 && (this.gain = ei.value_0);
+}
+  ;
+_.setPoints = function setPoints_45() {
+  var hs, tris, ww;
+  $setPoints(this);
+  this.dn > 150 && app_0.mouse.dragElm == this && $setSize_3(this, 2);
+  ww = this.opwidth;
+  ww > this.dn / 2 && (ww = round_int(this.dn / 2));
+  $calcLeads(this, ww * 2);
+  hs = this.opheight * this.dsign;
+  (this.flags & 1) != 0 && (hs = -hs);
+  this.in1p = $newPointArray(2);
+  this.in2p = $newPointArray(2);
+  this.textp = $newPointArray(2);
+  $interpPoint2(this.point1, this.point2, this.in1p[0], this.in2p[0], 0, hs);
+  $interpPoint2(this.lead1, this.lead2, this.in1p[1], this.in2p[1], 0, hs);
+  $interpPoint2(this.lead1, this.lead2, this.textp[0], this.textp[1], 0.2, hs);
+  tris = $newPointArray(2);
+  $interpPoint2(this.lead1, this.lead2, tris[0], tris[1], 0, hs * 2);
+  this.triangle = $createPolygon(tris[0], tris[1], this.lead2);
+  this.plusFont = new Font('SansSerif', 0, this.opsize == 2 ? 14 : 10);
+}
+  ;
+_.stamp = function stamp_41() {
+  var vn;
+  vn = sim_0.nodeList.arrayList.array.length + this.voltSource;
+  $stampNonLinear(sim_0, vn);
+  $stampMatrix(sim_0, this.nodes[2], vn, 1);
+}
+  ;
+_.undumpXml = function undumpXml_52(xml) {
+  this.flags = 0;
+  this.flags = $parseIntAttr(xml, 'f', this.flags);
+  this.maxOut = $parseDoubleAttr(xml, 'ma', this.maxOut);
+  this.minOut = $parseDoubleAttr(xml, 'mi', this.minOut);
+  this.gain = $parseDoubleAttr(xml, 'ga', this.gain);
+  $setSize_3(this, (this.flags & 2) != 0 ? 1 : 2);
+}
+  ;
+_.gain = 0;
+_.lastvd = 0;
+_.maxOut = 0;
+_.minOut = 0;
+_.opheight = 0;
+_.opsize = 0;
+_.opwidth = 0;
+var Lcom_lushprojects_circuitjs1_client_OpAmpElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'OpAmpElm', 297);
+function $clinit_OpAmpRealElm() {
+  $clinit_OpAmpRealElm = emptyMethod;
+  model741ExternalNodes = stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [2, 3, 6, 7, 4]);
+  lm324ExternalNodes = stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [1, 13, 12, 4, 5]);
+  lm324v2ExternalNodes = stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [2, 1, 5, 3, 4]);
+  model741resistances = stampJavaTypeInfo(getClassLiteralForArray(D_classLit, 1), $intern_70, 8, 15, [50, 25, $intern_21, 50000, $intern_21, 5000, 50000, 50, 39000, 7500, 4500]);
+}
+
+function $getCapacitor(this$static) {
+  if (this$static.modelType == 2)
+    return null;
+  return $get_4(this$static.compElmList, this$static.modelType == 0 ? 20 : 4);
+}
+
+function $init741(this$static) {
+  var currentMult, i;
+  $loadComposite(this$static, null, model741String, model741ExternalNodes);
+  $getCapacitor(this$static).capacitance = 3.0E-11 / (this$static.slewRate / 0.6);
+  $getCapacitor(this$static).voltdiff = this$static.capValue;
+  for (i = 0; i != 11; i++)
+    $get_4(this$static.compElmList, 21 + i).resistance = model741resistances[i];
+  currentMult = this$static.currentLimit / $intern_118;
+  $get_4(this$static.compElmList, 21).resistance /= currentMult;
+  $get_4(this$static.compElmList, 22).resistance /= currentMult;
+  $setBeta($get_4(this$static.compElmList, 13), currentMult * 100);
+  $setBeta($get_4(this$static.compElmList, 18), currentMult * 100);
+}
+
+function $initModel(this$static) {
+  var st, st_0, currentMult;
+  this$static.flags |= 1;
+  switch (this$static.modelType) {
+    case 0:
+      $init741(this$static);
+      break;
+    case 1:
+      st_0 = new StringTokenizer_0(lm324ModelDump, '/');
+      $loadComposite(this$static, st_0, lm324ModelString, lm324ExternalNodes);
+      $getCapacitor(this$static).capacitance = 1.0E-11 / (this$static.slewRate / 0.55);
+      $getCapacitor(this$static).voltdiff = this$static.capValue;
+      currentMult = this$static.currentLimit / $intern_118;
+      $get_4(this$static.compElmList, 11).resistance /= currentMult;
+      $setBeta($get_4(this$static.compElmList, 9), currentMult * 100);
+      $setBeta($get_4(this$static.compElmList, 10), currentMult * 100);
+      $setBeta($get_4(this$static.compElmList, 12), currentMult * 100);
+      $setBeta($get_4(this$static.compElmList, 16), currentMult * 100);
+      break;
+    case 2:
+      st = new StringTokenizer_0(lm324v2ModelDump, '/');
+      $loadComposite(this$static, st, lm324v2ModelString, lm324v2ExternalNodes);
+  }
+  this$static.curCounts = initUnidimensionalArray(D_classLit, $intern_70, 8, 5, 15, 1);
+  $setPoints_16(this$static);
+}
+
+function $setPoints_16(this$static) {
+  var hs, hsswap, railPos, tris, ww;
+  $setPoints(this$static);
+  ww = 32;
+  32 > this$static.dn / 2 && (ww = round_int(this$static.dn / 2));
+  $calcLeads(this$static, ww * 2);
+  hs = 16 * this$static.dsign;
+  hsswap = hs;
+  (this$static.flags & 2) != 0 && (hsswap = -hs);
+  this$static.in1p = $newPointArray(2);
+  this$static.in2p = $newPointArray(2);
+  this$static.textp = $newPointArray(2);
+  this$static.rail1p = $newPointArray(2);
+  this$static.rail2p = $newPointArray(2);
+  $interpPoint2(this$static.point1, this$static.point2, this$static.in1p[0], this$static.in2p[0], 0, hsswap);
+  $interpPoint2(this$static.lead1, this$static.lead2, this$static.in1p[1], this$static.in2p[1], 0, hsswap);
+  $interpPoint2(this$static.lead1, this$static.lead2, this$static.textp[0], this$static.textp[1], 0.2, hsswap);
+  railPos = 0.5 - this$static.dn / 2 % app_0.gridSize / (ww * 2);
+  $interpPoint2(this$static.lead1, this$static.lead2, this$static.rail1p[1], this$static.rail2p[1], railPos, hs * 2 * (1 - railPos));
+  $interpPoint2(this$static.lead1, this$static.lead2, this$static.rail1p[0], this$static.rail2p[0], railPos, hs * 2);
+  tris = $newPointArray(2);
+  $interpPoint2(this$static.lead1, this$static.lead2, tris[0], tris[1], 0, hs * 2);
+  this$static.triangle = $createPolygon(tris[0], tris[1], this$static.lead2);
+  this$static.plusFont = new Font('SansSerif', 0, 14);
+  $setPost(this$static, 0, this$static.in1p[0]);
+  $setPost(this$static, 1, this$static.in2p[0]);
+  $setPost(this$static, 2, this$static.point2);
+  $setPost(this$static, 3, this$static.rail1p[0]);
+  $setPost(this$static, 4, this$static.rail2p[0]);
+}
+
+function OpAmpRealElm(xx, yy) {
+  $clinit_OpAmpRealElm();
+  CompositeElm.call(this, xx, yy);
+  this.noDiagonal = true;
+  this.slewRate = 0.6;
+  this.currentLimit = $intern_118;
+  this.modelType = 0;
+  $initModel(this);
+}
+
+function OpAmpRealElm_0(xa, ya, xb, yb, f, st) {
+  $clinit_OpAmpRealElm();
+  CompositeElm_0.call(this, xa, ya, xb, yb, f);
+  this.noDiagonal = true;
+  this.slewRate = __parseAndValidateDouble($nextToken(st));
+  this.capValue = __parseAndValidateDouble($nextToken(st));
+  this.currentLimit = $intern_118;
+  this.modelType = 0;
+  try {
+    this.currentLimit = __parseAndValidateDouble($nextToken(st));
+    this.modelType = __parseAndValidateInt($nextToken(st), 10);
+  }
+  catch ($e0) {
+    $e0 = toJava($e0);
+    if (!instanceOf($e0, 15))
+      throw toJs($e0);
+  }
+  $initModel(this);
+}
+
+defineClass(403, 110, $intern_79, OpAmpRealElm, OpAmpRealElm_0);
+_.canFlipX = function canFlipX_3() {
+  return this.dy == 0;
+}
+  ;
+_.canFlipY = function canFlipY_4() {
+  return this.dx == 0;
+}
+  ;
+_.draw = function draw_51(g) {
+  var i;
+  $setBbox_0(this, this.point1, this.point2, 32);
+  $setVoltageColor(this, g, this.volts[0]);
+  drawThickLine_0(g, this.in1p[0], this.in1p[1]);
+  $setVoltageColor(this, g, this.volts[1]);
+  drawThickLine_0(g, this.in2p[0], this.in2p[1]);
+  $setVoltageColor(this, g, this.volts[2]);
+  drawThickLine_0(g, this.lead2, this.point2);
+  $setVoltageColor(this, g, this.volts[3]);
+  drawThickLine_0(g, this.rail1p[0], this.rail1p[1]);
+  $setVoltageColor(this, g, this.volts[4]);
+  drawThickLine_0(g, this.rail2p[0], this.rail2p[1]);
+  $setColor_0(g, mouseElmRef == this || this.selected_0 || app_0.mouse.plotYElm == this || instanceOf(mouseElmRef, 20) && $getElm_0(mouseElmRef.elmScope) == this || $isOnHighlightedNet(this) ? selectColor_0 : lightGrayColor);
+  $setPowerColor_0(this, g);
+  drawThickPolygon(g, this.triangle);
+  $setFont_0(g, this.plusFont);
+  $drawCenteredText(this, g, '-', this.textp[0].x_0, this.textp[0].y_0 - 2, true);
+  $drawCenteredText(this, g, '+', this.textp[1].x_0, this.textp[1].y_0, true);
+  for (i = 0; i != 5; i++)
+    this.curCounts[i] = $updateDotCount($getCurrentIntoNode(this, i), this.curCounts[i]);
+  $drawDots(g, this.in1p[1], this.in1p[0], this.curCounts[0]);
+  $drawDots(g, this.in2p[1], this.in2p[0], this.curCounts[1]);
+  $drawDots(g, this.lead2, this.point2, this.curCounts[2]);
+  $drawDots(g, this.rail1p[0], this.rail1p[1], -this.curCounts[3]);
+  $drawDots(g, this.rail2p[0], this.rail2p[1], -this.curCounts[4]);
+  $drawPosts(this, g);
+}
+  ;
+_.dumpXml = function dumpXml_51(doc, elem) {
+  dumpAttr_1(elem, 'x', this.x_0 + ' ' + this.y_0 + ' ' + this.x2 + ' ' + this.y2);
+  dumpAttr_0(elem, 'f', this.flags);
+  dumpAttr(elem, 'slr', this.slewRate);
+  dumpAttr(elem, 'cl', this.currentLimit);
+  dumpAttr_0(elem, 'mt', this.modelType);
+}
+  ;
+_.dumpXmlState = function dumpXmlState_8(doc, elem) {
+  var elm, voltdiff;
+  elm = $getCapacitor(this);
+  voltdiff = !elm ? 0 : elm.voltdiff;
+  checkAttr(elem, 'vd');
+  $setAttribute_0(elem, 'vd', '' + voltdiff);
+}
+  ;
+_.getConnection_0 = function getConnection_23(n1, n2) {
+  return true;
+}
+  ;
+_.getDumpType_0 = function getDumpType_73() {
+  return 409;
+}
+  ;
+_.getDumpType = function () {
+  return this.getDumpType_0();
+}
+  ;
+_.getEditInfo = function getEditInfo_49(n) {
+  var ei;
+  if (n == 0) {
+    ei = new EditInfo('<a href="opampreal.html" target="_blank">' + LS('Model') + '<\/a>', this.modelType);
+    ei.choice = new Choice;
+    $addItem(ei.choice, LS('LM741'));
+    if (this.modelType == 1) {
+      $addItem(ei.choice, LS('LM324, old'));
+      $addItem(ei.choice, LS('LM324, fixed'));
+      $select(ei.choice, this.modelType);
+    }
+    else {
+      $addItem(ei.choice, LS('LM324'));
+      $select(ei.choice, this.modelType == 0 ? 0 : 1);
+    }
+    return ei;
+  }
+  if (n == 1) {
+    ei = new EditInfo_0('', 0, -1, -1);
+    ei.checkbox = new Checkbox_0('Swap Inputs', (this.flags & 2) != 0);
+    return ei;
+  }
+  if (this.modelType == 2)
+    return null;
+  if (n == 2)
+    return new EditInfo('Slew Rate (V/usec)', this.slewRate);
+  if (n == 3)
+    return new EditInfo('Output Current Limit (A)', this.currentLimit);
+  return null;
+}
+  ;
+_.getElmType = function getElmType_17() {
+  return 'op-amp';
+}
+  ;
+_.getInfo_0 = function getInfo_57(arr) {
+  var type_0;
+  type_0 = this.modelType == 0 ? 'LM741' : 'LM324';
+  arr[0] = 'op-amp (' + type_0 + ')';
+  arr[1] = 'V+ = ' + getUnitText(this.volts[1], 'V', false);
+  arr[2] = 'V- = ' + getUnitText(this.volts[0], 'V', false);
+  arr[3] = 'Vout = ' + getUnitText(this.volts[2], 'V', false);
+  arr[4] = 'Iout = ' + getUnitText($getCurrentIntoNode(this, 2), 'A', false);
+}
+  ;
+_.reset_1 = function reset_28() {
+  $reset_1(this);
+  this.curCounts = initUnidimensionalArray(D_classLit, $intern_70, 8, 5, 15, 1);
+}
+  ;
+_.setEditValue = function setEditValue_48(n, ei) {
+  if (n == 0) {
+    this.modelType = $getElement(ei.choice).selectedIndex;
+    $getOptions($getElement(ei.choice)).length == 2 && this.modelType == 1 && (this.modelType = 2);
+    this.capValue = 0;
+    $initModel(this);
+    ei.newDialog = true;
+  }
+  if (n == 1) {
+    this.flags = $changeFlag(ei, this.flags, 2);
+    $setPoints_16(this);
+  }
+  if (n == 2) {
+    this.slewRate = ei.value_0;
+    $initModel(this);
+  }
+  if (n == 3) {
+    this.currentLimit = ei.value_0;
+    $initModel(this);
+  }
+}
+  ;
+_.setPoints = function setPoints_46() {
+  $setPoints_16(this);
+}
+  ;
+_.undumpXml = function undumpXml_53(xml) {
+  var cap, voltdiff;
+  $undumpXml_2(this, xml);
+  this.slewRate = $parseDoubleAttr(xml, 'slr', this.slewRate);
+  this.currentLimit = $parseDoubleAttr(xml, 'cl', this.currentLimit);
+  this.modelType = $parseIntAttr(xml, 'mt', this.modelType);
+  voltdiff = $parseDoubleAttr(xml, 'vd', 0);
+  $initModel(this);
+  cap = $getCapacitor(this);
+  !!cap && (cap.voltdiff = voltdiff);
+}
+  ;
+_.capValue = 0;
+_.currentLimit = 0;
+_.modelType = 0;
+_.slewRate = 0;
+var lm324ExternalNodes, lm324ModelDump = '0 -1 -0 0 10000/0 0.000006/0 1 0 0 100/0 1 0 0 100/0 1e-11 0/0 0.000004/0 0.0001/0 1 0 0 100/0 1 0 0 100/0 1 0 0 100/0 1 0 0 100/0 25/0 -1 0 0 100/0 0.00005/0 -1 0 0 100/0 10000/0 1 0 0 100/0 -1 0 0 10000', lm324ModelString = 'TransistorElm 1 2 3\rCurrentElm 4 3\rTransistorElm 2 2 5\rTransistorElm 2 6 5\rCapacitorElm 6 7\rCurrentElm 4 8\rCurrentElm 4 7\rTransistorElm 8 4 9\rTransistorElm 7 4 10\rTransistorElm 10 4 11\rTransistorElm 11 7 12\rResistorElm 11 12\rTransistorElm 7 5 12\rCurrentElm 12 5\rTransistorElm 6 5 8\rResistorElm 9 5\rTransistorElm 9 7 5\rTransistorElm 13 6 3', lm324v2ExternalNodes, lm324v2ModelDump = '0 40000/0 5e-7/0 380/0 1700/0 5/0 -1 0 0 306 xlm324v2-qpi/0 380/0 1700/0 5/0 -1 0 0 300 xlm324v2-qpa/0 380/0 1700/0 5/0 -1 0 0 306 xlm324v2-qpi/0 380/0 1700/0 5/0 -1 0 0 306 xlm324v2-qpi/0 25/0 1 0 0 100 xlm324v2-qnq/0 25/0 1 0 0 100 xlm324v2-qnq/0 300/0 -1 0 0 100 xlm324v2-qpq/0 25/0 1 0 0 100 xlm324v2-qnq/0 25/0 1 0 0 100 xlm324v2-qnq/0 25/0 1 0 0 100 xlm324v2-qnq/0 25/0 1 0 0 100 xlm324v2-qnq/0 40000/0 18/0 300/0 -1 0 0 100 xlm324v2-qpq/0 25/0 1 0 0 100 xlm324v2-qnq/0 1.2e-7/0 6e-8/0 0.000001/0 300/0 -1 0 0 100 xlm324v2-qpq/0 300/0 -1 0 0 100 xlm324v2-qpq/0 25/0 1 0 0 100 xlm324v2-qnq/0 300/0 -1 0 0 100 xlm324v2-qpq/2 4.8e-12 0 0/0 3/0 3000000000/0 2 -0.00001*(a-b)/0 0 0 -0.00156/0 0.000005/0 450000/0 300/0 -1 0 0 100 xlm324v2-qpq/0 300/0 -1 0 0 100 xlm324v2-qpq/2 8e-12 0 0/2 1e-12 0 0/2 1e-13 0 0/0 300000/2 2.3e-13 0 0/2 7.9e-13 0 0/2 7.9e-13 0 0/0 2 2*(a-b)/2 5e-14 0 0/0 25/0 1 0 0 100 xlm324v2-qnq/0 2 0.0003*(a-b)/0 0.001/0 0 0 -0.25/0 1000000/0 2 1*(a-b)/0 1000000/0 0 0 -0.55/0 1000000', lm324v2ModelString = 'ResistorElm 4 6\rCurrentElm 4 7\rResistorElm 4 29\rResistorElm 8 30\rResistorElm 9 31\rTransistorElm 30 29 31 \rResistorElm 4 32\rResistorElm 2 33\rResistorElm 10 34\rTransistorElm 33 32 34 \rResistorElm 9 35\rResistorElm 9 36\rResistorElm 11 37\rTransistorElm 36 35 37 \rResistorElm 10 38\rResistorElm 10 39\rResistorElm 11 40\rTransistorElm 39 38 40 \rResistorElm 12 41\rTransistorElm 13 41 4 \rResistorElm 13 42\rTransistorElm 13 42 4 \rResistorElm 4 43\rTransistorElm 12 43 14 \rResistorElm 3 44\rTransistorElm 14 44 6 \rResistorElm 15 45\rTransistorElm 6 45 4 \rResistorElm 3 46\rTransistorElm 15 46 16 \rResistorElm 3 47\rTransistorElm 16 47 17 \rResistorElm 17 16\rResistorElm 5 17\rResistorElm 4 48\rTransistorElm 15 48 5 \rResistorElm 15 49\rTransistorElm 17 49 5 \rCurrentElm 18 3\rCurrentElm 19 3\rCurrentElm 20 3\rResistorElm 11 50\rTransistorElm 18 50 3 \rResistorElm 14 51\rTransistorElm 19 51 3 \rResistorElm 5 52\rTransistorElm 7 52 4 \rResistorElm 15 53\rTransistorElm 20 53 3 \rCapacitorElm 21 22\rResistorElm 12 21\rResistorElm 12 15\rVCVSElm 3 0 23 8\rVoltageElm 23 1\rCurrentElm 3 4\rResistorElm 4 3\rResistorElm 12 54\rTransistorElm 9 54 11 \rResistorElm 13 55\rTransistorElm 10 55 11 \rCapacitorElm 12 13\rCapacitorElm 6 15\rCapacitorElm 3 24\rResistorElm 11 24\rCapacitorElm 1 2\rCapacitorElm 2 0\rCapacitorElm 1 0\rVCVSElm 15 0 22 0\rCapacitorElm 5 0\rResistorElm 25 56\rTransistorElm 25 56 0 \rVCCSElm 27 0 4 3\rCurrentElm 0 25\rVoltageElm 25 26\rResistorElm 0 26\rVCVSElm 28 26 27 0\rResistorElm 0 27\rVoltageElm 28 0\rResistorElm 0 28', model741ExternalNodes, model741String = 'NTransistorElm 3 8 9\rNTransistorElm 2 8 10\rPTransistorElm 11 12 9\rPTransistorElm 11 13 10\rNTransistorElm 14 12 1\rNTransistorElm 14 13 5\rNTransistorElm 12 7 14\rPTransistorElm 8 8 7\rPTransistorElm 8 11 7\rNTransistorElm 17 11 16\rNTransistorElm 17 17 4\rPTransistorElm 18 18 7\rPTransistorElm 18 20 7\rNTransistorElm 20 7 25\rNTransistorElm 13 22 24\rNTransistorElm 21 20 22\rNTransistorElm 25 20 6\rNTransistorElm 24 22 23\rPTransistorElm 22 4 15\rNTransistorElm 23 13 4\rCapacitorElm 13 20\rResistorElm 15 6\rResistorElm 6 25\rResistorElm 4 1\rResistorElm 4 14\rResistorElm 4 5\rResistorElm 4 16\rResistorElm 4 24\rResistorElm 4 23\rResistorElm 17 18\rResistorElm 22 21\rResistorElm 21 20\r', model741resistances;
+var Lcom_lushprojects_circuitjs1_client_OpAmpRealElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'OpAmpRealElm', 403);
+function OpAmpSwapElm(xx, yy) {
+  OpAmpElm.call(this, xx, yy);
+  this.flags |= 1;
+}
+
+defineClass(867, 297, $intern_79, OpAmpSwapElm);
+_.getDumpClass = function getDumpClass_10() {
+  return Lcom_lushprojects_circuitjs1_client_OpAmpElm_2_classLit;
+}
+  ;
+_.getShortcut = function getShortcut_31() {
+  return 65;
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_OpAmpSwapElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'OpAmpSwapElm', 867);
+function $clinit_OptocouplerElm() {
+  $clinit_OptocouplerElm = emptyMethod;
+  modelExternalNodes_3 = stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [6, 2, 4, 5]);
+}
+
+function $initOptocoupler(this$static) {
+  var cccs;
+  this$static.cspc = 16;
+  this$static.cspc2 = this$static.cspc * 2;
+  this$static.diode = $get_4(this$static.compElmList, 0);
+  cccs = $get_4(this$static.compElmList, 1);
+  cccs.exprString = 'max(0,min(.0001, select(i-.003, (-80000000000*(i)^5+800000000*(i)^4-3000000*(i)^3+5177.2*(i)^2+.2453*(i)-.00005)*1.04/700, (9000000*(i)^5-998113*(i)^4+42174*(i)^3-861.32*(i)^2+9.0836*(i)-.0078)*.945/700)))';
+  $parseExpr(cccs);
+  this$static.transistor = $get_4(this$static.compElmList, 2);
+  $setBeta(this$static.transistor, 700);
+  this$static.curCounts = initUnidimensionalArray(D_classLit, $intern_70, 8, 4, 15, 1);
+}
+
+function $setPin_0(this$static, n, px, py, dx, dy, dax, day, sx, sy) {
+  var pos, xa, ya;
+  pos = n % 2;
+  if ((this$static.flags & $intern_24) != 0) {
+    dx = -dx;
+    dax = -dax;
+    px += this$static.cspc2;
+    sx = -sx;
+  }
+  if ((this$static.flags & $intern_39) != 0) {
+    dy = -dy;
+    day = -day;
+    py += this$static.cspc2;
+    sy = -sy;
+  }
+  xa = px + this$static.cspc2 * dx * pos + sx;
+  ya = py + this$static.cspc2 * dy * pos + sy;
+  $setPost(this$static, n, new Point_2(xa + dax * this$static.cspc2, ya + day * this$static.cspc2));
+  this$static.stubs[n] = new Point_2(xa + dax * this$static.cspc, ya + day * this$static.cspc);
+}
+
+function $setPoints_17(this$static) {
+  var dx, midp, x0, xr, xs, y0, yr, ys;
+  $setPoints(this$static);
+  x0 = this$static.x_0 + this$static.cspc2;
+  y0 = this$static.y_0;
+  xr = x0 - this$static.cspc;
+  yr = y0 - (this$static.cspc / 2 | 0);
+  xs = 2 * this$static.cspc2;
+  ys = 2 * this$static.cspc2 - this$static.cspc;
+  this$static.rectPointsX = stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [xr, xr + xs, xr + xs, xr]);
+  this$static.rectPointsY = stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [yr, yr, yr + ys, yr + ys]);
+  $setBbox(this$static, xr, yr, this$static.rectPointsX[2], this$static.rectPointsY[2]);
+  this$static.stubs = initUnidimensionalArray(Lcom_lushprojects_circuitjs1_client_Point_2_classLit, $intern_72, 17, 4, 0, 1);
+  $setPin_0(this$static, 0, x0, y0, 0, 1, -1, 0, 0, 0);
+  $setPin_0(this$static, 1, x0, y0, 0, 1, -1, 0, 0, 0);
+  $setPin_0(this$static, 2, x0, y0, 0, 1, 1, 0, xs - this$static.cspc2, 0);
+  $setPin_0(this$static, 3, x0, y0, 0, 1, 1, 0, xs - this$static.cspc2, 0);
+  dx = (this$static.flags & $intern_24) != 0 ? -1 : 1;
+  $setPosition_0(this$static.diode, this$static.posts[0].x_0 + 32 * dx, this$static.posts[0].y_0, this$static.posts[1].x_0 + 32 * dx, this$static.posts[1].y_0);
+  this$static.stubs[0] = $getPost(this$static.diode, 0);
+  this$static.stubs[1] = $getPost(this$static.diode, 1);
+  midp = (this$static.posts[2].y_0 + this$static.posts[3].y_0) / 2 | 0;
+  $setFlipped(this$static.transistor, (this$static.flags & $intern_39) != 0);
+  $setPosition_0(this$static.transistor, this$static.posts[2].x_0 - 40 * dx, midp, this$static.posts[2].x_0 - 24 * dx, midp);
+  this$static.stubs[2] = $getPost_1(this$static.transistor, 1);
+  this$static.stubs[3] = $getPost_1(this$static.transistor, 2);
+}
+
+function OptocouplerElm(xx, yy) {
+  $clinit_OptocouplerElm();
+  CompositeElm_2.call(this, xx, yy, modelString_3, modelExternalNodes_3);
+  this.noDiagonal = true;
+  $initOptocoupler(this);
+}
+
+function OptocouplerElm_0(xa, ya, xb, yb, f) {
+  $clinit_OptocouplerElm();
+  CompositeElm_1.call(this, xa, ya, xb, yb, f, null, modelString_3, modelExternalNodes_3);
+  this.noDiagonal = true;
+  $initOptocoupler(this);
+}
+
+defineClass(375, 110, $intern_79, OptocouplerElm, OptocouplerElm_0);
+_.canFlipXY = function canFlipXY_2() {
+  return false;
+}
+  ;
+_.draw = function draw_52(g) {
+  var a, b, dx, i, p, p1, p2, sx, sy, y_0;
+  $setColor_0(g, mouseElmRef == this || this.selected_0 || app_0.mouse.plotYElm == this || instanceOf(mouseElmRef, 20) && $getElm_0(mouseElmRef.elmScope) == this || $isOnHighlightedNet(this) ? selectColor_0 : lightGrayColor);
+  drawThickPolygon_0(g, this.rectPointsX, this.rectPointsY, 4);
+  for (i = 0; i != 4; i++) {
+    $setVoltageColor(this, g, this.volts[i]);
+    a = this.posts[i];
+    b = this.stubs[i];
+    drawThickLine_0(g, a, b);
+    this.curCounts[i] = $updateDotCount(-$getCurrentIntoNode(this, i), this.curCounts[i]);
+    $drawDots(g, a, b, this.curCounts[i]);
+  }
+  this.diode.draw(g);
+  $draw_1(this.transistor, g);
+  $drawPosts(this, g);
+  $setColor_0(g, lightGrayColor);
+  dx = (this.flags & $intern_24) != 0 ? -1 : 1;
+  sx = this.stubs[0].x_0 + 2 * dx;
+  sy = (this.stubs[0].y_0 + this.stubs[1].y_0) / 2 | 0;
+  for (i = 0; i != 2; i++) {
+    y_0 = sy + i * 10 - 5;
+    p1 = new Point_2(sx, y_0);
+    p2 = new Point_2(sx + 20 * dx, y_0);
+    p = $calcArrow(p1, p2, 5, 2);
+    $fillPolygon(g, p);
+    $drawLine(g, sx + 10 * dx, y_0, sx + 15 * dx, y_0);
+  }
+}
+  ;
+_.flipX = function flipX_10(center2, count) {
+  var xs;
+  this.flags ^= $intern_24;
+  if (count != 1) {
+    xs = 3 * this.cspc2;
+    this.x_0 = center2 - this.x_0 - xs;
+    this.x2 = center2 - this.x2;
+  }
+  $setPoints_17(this);
+}
+  ;
+_.flipY = function flipY_10(center2, count) {
+  var ys;
+  this.flags ^= $intern_39;
+  if (count != 1) {
+    ys = this.cspc2;
+    this.y_0 = center2 - this.y_0 - ys;
+    this.y2 = center2 - this.y2;
+  }
+  $setPoints_17(this);
+}
+  ;
+_.getConnection_0 = function getConnection_24(n1, n2) {
+  return (n1 / 2 | 0) == (n2 / 2 | 0);
+}
+  ;
+_.getDumpType_0 = function getDumpType_74() {
+  return 407;
+}
+  ;
+_.getDumpType = function () {
+  return this.getDumpType_0();
+}
+  ;
+_.getEditInfo = function getEditInfo_50(n) {
+  return null;
+}
+  ;
+_.getInfo_0 = function getInfo_58(arr) {
+  arr[0] = 'optocoupler';
+  arr[1] = 'Iin = ' + getUnitText($getCurrentIntoNode(this, 0), 'A', false);
+  arr[2] = 'Iout = ' + getUnitText($getCurrentIntoNode(this, 2), 'A', false);
+}
+  ;
+_.reset_1 = function reset_29() {
+  $reset_1(this);
+  this.curCounts = initUnidimensionalArray(D_classLit, $intern_70, 8, 4, 15, 1);
+}
+  ;
+_.setPoints = function setPoints_47() {
+  $setPoints_17(this);
+}
+  ;
+_.cspc = 0;
+_.cspc2 = 0;
+var modelExternalNodes_3, modelString_3 = 'DiodeElm 6 1\rCCCSElm 1 2 3 4\rNTransistorElm 3 4 5';
+var Lcom_lushprojects_circuitjs1_client_OptocouplerElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'OptocouplerElm', 375);
+function OutputElm(xx, yy) {
+  CircuitElm.call(this, xx, yy);
+  this.scale_0 = 0;
+}
+
+function OutputElm_0(xa, ya, xb, yb, f, st) {
+  CircuitElm_0.call(this, xa, ya, xb, yb, f);
+  this.scale_0 = 0;
+  try {
+    this.scale_0 = __parseAndValidateInt($nextToken(st), 10);
+  }
+  catch ($e0) {
+    $e0 = toJava($e0);
+    if (!instanceOf($e0, 15))
+      throw toJs($e0);
+  }
+}
+
+defineClass(229, 7, { 7: 1, 10: 1, 229: 1 }, OutputElm, OutputElm_0);
+_.addRoutingObstacle = function addRoutingObstacle_15(router) {
+  $addWire(router, this.point1.x_0, this.point1.y_0, this.x2, this.y2);
+  $addObstacle(router, this.x2 - 10, this.y2 - 10, this.x2 + 10, this.y2 + 10);
+}
+  ;
+_.draw = function draw_53(g) {
+  var f, s, selected;
+  g.context.save();
+  g.savedFontSize = g.currentFontSize;
+  selected = mouseElmRef == this || this.selected_0 || app_0.mouse.plotYElm == this || instanceOf(mouseElmRef, 20) && $getElm_0(mouseElmRef.elmScope) == this || $isOnHighlightedNet(this);
+  f = new Font('SansSerif', selected ? 1 : 0, 14);
+  $setFont_0(g, f);
+  $setColor_0(g, selected ? selectColor_0 : lightGrayColor);
+  s = (this.flags & 1) != 0 ? getUnitTextWithScale(this.volts[0], 'V', this.scale_0, (this.flags & 2) != 0) : LS('out');
+  this == app_0.mouse.plotXElm && (s = 'X');
+  this == app_0.mouse.plotYElm && (s = 'Y');
+  $interpPoint_1(this.point1, this.point2, this.lead1, 1 - ((round_int($measureText(g.context, s).width) / 2 | 0) + 8) / this.dn);
+  $setBbox_0(this, this.point1, this.lead1, 0);
+  $drawCenteredText(this, g, s, this.x2, this.y2, true);
+  $setVoltageColor(this, g, this.volts[0]);
+  selected && $setColor_0(g, selectColor_0);
+  drawThickLine_0(g, this.point1, this.lead1);
+  $drawPosts(this, g);
+  g.context.restore();
+  g.currentFontSize = g.savedFontSize;
+}
+  ;
+_.dumpXml = function dumpXml_52(doc, elem) {
+  dumpAttr_1(elem, 'x', this.x_0 + ' ' + this.y_0 + ' ' + this.x2 + ' ' + this.y2);
+  dumpAttr_0(elem, 'f', this.flags);
+  dumpAttr_0(elem, 'sc', this.scale_0);
+}
+  ;
+_.getDumpType = function getDumpType_75() {
+  return 79;
+}
+  ;
+_.getEditInfo = function getEditInfo_51(n) {
+  var ei;
+  if (n == 0)
+    return createCheckbox('Show Voltage', (this.flags & 1) != 0);
+  if ((this.flags & 1) == 0)
+    return null;
+  if (n == 1) {
+    ei = new EditInfo('Scale', 0);
+    ei.choice = new Choice;
+    $addItem(ei.choice, LS('Auto'));
+    $addItem(ei.choice, LS('V'));
+    $addItem(ei.choice, LS('mV'));
+    $addItem(ei.choice, LS(muString + 'V'));
+    $select(ei.choice, this.scale_0);
+    return ei;
+  }
+  if (this.scale_0 == 0)
+    return null;
+  if (n == 2)
+    return createCheckbox('Fixed Precision', (this.flags & 2) != 0);
+  return null;
+}
+  ;
+_.getInfo_0 = function getInfo_59(arr) {
+  arr[0] = 'output';
+  arr[1] = 'V = ' + getUnitText(this.volts[0], 'V', false);
+}
+  ;
+_.getPostCount_0 = function getPostCount_46() {
+  return 1;
+}
+  ;
+_.getVoltageDiff_0 = function getVoltageDiff_17() {
+  return this.volts[0];
+}
+  ;
+_.setEditValue = function setEditValue_49(n, ei) {
+  if (n == 0) {
+    this.flags = $changeFlag(ei, this.flags, 1);
+    ei.newDialog = true;
+  }
+  if (n == 1) {
+    this.scale_0 = $getElement(ei.choice).selectedIndex;
+    ei.newDialog = true;
+  }
+  n == 2 && (this.flags = $changeFlag(ei, this.flags, 2));
+}
+  ;
+_.setPoints = function setPoints_48() {
+  $setPoints(this);
+  this.lead1 = new Point_1;
+}
+  ;
+_.undumpXml = function undumpXml_54(xml) {
+  this.flags = $parseIntAttr(xml, 'f', this.flags);
+  this.scale_0 = $parseIntAttr(xml, 'sc', this.scale_0);
+}
+  ;
+_.scale_0 = 0;
+var Lcom_lushprojects_circuitjs1_client_OutputElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'OutputElm', 229);
+function PDarlingtonElm(xx, yy) {
+  $clinit_DarlingtonElm();
+  DarlingtonElm_0.call(this, xx, yy, true);
+}
+
+defineClass(863, 292, $intern_79, PDarlingtonElm);
+_.getDumpClass = function getDumpClass_11() {
+  return Lcom_lushprojects_circuitjs1_client_DarlingtonElm_2_classLit;
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_PDarlingtonElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'PDarlingtonElm', 863);
+function PJfetElm(xx, yy) {
+  JfetElm_0.call(this, xx, yy, true);
+}
+
+defineClass(834, 175, $intern_113, PJfetElm);
+_.getDumpClass = function getDumpClass_12() {
+  return Lcom_lushprojects_circuitjs1_client_JfetElm_2_classLit;
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_PJfetElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'PJfetElm', 834);
+function PMosfetElm(xx, yy) {
+  MosfetElm_0.call(this, xx, yy, true);
+}
+
+defineClass(865, 128, $intern_111, PMosfetElm);
+_.getDumpClass = function getDumpClass_13() {
+  return Lcom_lushprojects_circuitjs1_client_MosfetElm_2_classLit;
+}
+  ;
+_.getShortcut = function getShortcut_32() {
+  return 80;
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_PMosfetElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'PMosfetElm', 865);
+function PTransistorElm(xx, yy) {
+  TransistorElm_0.call(this, xx, yy, true);
+}
+
+defineClass(866, 151, $intern_116, PTransistorElm);
+_.getDumpClass = function getDumpClass_14() {
+  return Lcom_lushprojects_circuitjs1_client_TransistorElm_2_classLit;
+}
+  ;
+_.getShortcut = function getShortcut_33() {
+  return 112;
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_PTransistorElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'PTransistorElm', 866);
+function PhaseCompElm(xx, yy) {
+  $clinit_ChipElm();
+  ChipElm.call(this, xx, yy);
+}
+
+function PhaseCompElm_0(xa, ya, xb, yb, f, st) {
+  $clinit_ChipElm();
+  ChipElm_0.call(this, xa, ya, xb, yb, f, st);
+}
+
+defineClass(370, 32, $intern_79, PhaseCompElm, PhaseCompElm_0);
+_.doStep = function doStep_33() {
+  var out, v1, v2, vn;
+  v1 = this.volts[0] > this.highVoltage / 2;
+  v2 = this.volts[1] > this.highVoltage / 2;
+  v1 && !this.pins[0].value_0 && (this.ff1 = true);
+  v2 && !this.pins[1].value_0 && (this.ff2 = true);
+  this.ff1 && this.ff2 && (this.ff1 = this.ff2 = false);
+  out = this.ff1 ? this.highVoltage : this.ff2 ? 0 : -1;
+  if (out != -1)
+    $stampVoltageSource_0(sim_0, 0, this.nodes[2], this.pins[2].voltSource, out);
+  else {
+    vn = sim_0.nodeList.arrayList.array.length + this.pins[2].voltSource;
+    $stampMatrix(sim_0, vn, vn, 1);
+  }
+  this.pins[0].value_0 = v1;
+  this.pins[1].value_0 = v2;
+}
+  ;
+_.getChipName = function getChipName_19() {
+  return 'phase comparator';
+}
+  ;
+_.getDumpType = function getDumpType_76() {
+  return 161;
+}
+  ;
+_.getPostCount_0 = function getPostCount_47() {
+  return 3;
+}
+  ;
+_.getVoltageSourceCount = function getVoltageSourceCount_36() {
+  return 1;
+}
+  ;
+_.nonLinear = function nonLinear_15() {
+  return true;
+}
+  ;
+_.setupPins = function setupPins_20() {
+  this.sizeX = 2;
+  this.sizeY = 2;
+  this.pins = initUnidimensionalArray(Lcom_lushprojects_circuitjs1_client_ChipElm$Pin_2_classLit, $intern_3, 9, 3, 0, 1);
+  this.pins[0] = new ChipElm$Pin(this, 0, 2, 'I1');
+  this.pins[1] = new ChipElm$Pin(this, 1, 2, 'I2');
+  this.pins[2] = new ChipElm$Pin(this, 0, 3, 'O');
+  this.pins[2].output = true;
+}
+  ;
+_.stamp = function stamp_42() {
+  var vn;
+  vn = sim_0.nodeList.arrayList.array.length + this.pins[2].voltSource;
+  $stampNonLinear(sim_0, vn);
+  $stampNonLinear(sim_0, 0);
+  $stampNonLinear(sim_0, this.nodes[2]);
+}
+  ;
+_.ff1 = false;
+_.ff2 = false;
+var Lcom_lushprojects_circuitjs1_client_PhaseCompElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'PhaseCompElm', 370);
+function $$init_12(this$static) {
+  this$static.data_0 = initUnidimensionalArray(Z_classLit, $intern_88, 8, 0, 16, 1);
+  this$static.dataIndex = 0;
+  this$static.clockState = false;
+  this$static.loadState = false;
+}
+
+function $setupPins_15(this$static) {
+  var i;
+  this$static.sizeX = this$static.bits + 2;
+  this$static.sizeY = 3;
+  this$static.pins = initUnidimensionalArray(Lcom_lushprojects_circuitjs1_client_ChipElm$Pin_2_classLit, $intern_3, 9, ((this$static.flags & 2) != 0 ? 4 : 3) + this$static.bits, 0, 1);
+  this$static.pins[0] = new ChipElm$Pin(this$static, 1, 2, 'LD');
+  this$static.pins[1] = new ChipElm$Pin(this$static, 2, 2, '');
+  this$static.pins[1].clock = true;
+  this$static.pins[2] = new ChipElm$Pin(this$static, 1, 3, 'Q' + ((this$static.flags & 2) != 0 ? this$static.bits - 1 : this$static.bits));
+  this$static.pins[2].output = true;
+  if ((this$static.flags & 2) != 0) {
+    this$static.pins[3] = new ChipElm$Pin(this$static, 0, 2, 'SER');
+    this$static.data_0 != null && this$static.data_0.length > 0 && (this$static.pins[2].value_0 = this$static.data_0[0]);
+    this$static.dataPinIndex = 4;
+  }
+  else {
+    this$static.dataPinIndex = 3;
+  }
+  for (i = 0; i < this$static.bits; i++)
+    this$static.pins[this$static.dataPinIndex + i] = new ChipElm$Pin(this$static, this$static.bits - i, 0, 'D' + (this$static.bits - (i + 1)));
+  $allocNodes(this$static);
+}
+
+function PisoShiftElm(xx, yy) {
+  $clinit_ChipElm();
+  ChipElm.call(this, xx, yy);
+  $$init_12(this);
+  this.data_0 = initUnidimensionalArray(Z_classLit, $intern_88, 8, this.bits, 16, 1);
+  this.flags |= 2;
+  $setupPins_15(this);
+}
+
+function PisoShiftElm_0(xa, ya, xb, yb, f, st) {
+  $clinit_ChipElm();
+  ChipElm_0.call(this, xa, ya, xb, yb, f, st);
+  $$init_12(this);
+  this.data_0 = initUnidimensionalArray(Z_classLit, $intern_88, 8, this.bits, 16, 1);
+  readBits(st, this.data_0);
+  $setupPins_15(this);
+}
+
+defineClass(390, 32, $intern_79, PisoShiftElm, PisoShiftElm_0);
+_.defaultBitCount = function defaultBitCount_0() {
+  return 8;
+}
+  ;
+_.dumpXml = function dumpXml_53(doc, elem) {
+  $dumpXml_0(this, elem);
+}
+  ;
+_.dumpXmlState = function dumpXmlState_9(doc, elem) {
+  var i, newData;
+  $dumpXmlState(this, elem);
+  newData = initUnidimensionalArray(Z_classLit, $intern_88, 8, this.data_0.length, 16, 1);
+  for (i = 0; i < this.data_0.length; i++)
+    newData[i] = this.data_0[(i + this.dataIndex) % this.data_0.length];
+  dumpAttr_1(elem, 'dt', writeBitsToString(newData));
+}
+  ;
+_.execute_3 = function execute_33() {
+  var i;
+  if (this.pins[0].value_0 != this.loadState) {
+    this.loadState = this.pins[0].value_0;
+    if (this.loadState && this.data_0.length > 0) {
+      if ((this.flags & 2) != 0) {
+        this.pins[2].value_0 = this.pins[this.dataPinIndex].value_0;
+        this.dataIndex = 0;
+      }
+      else {
+        this.dataIndex = -1;
+      }
+      for (i = 0; i < this.data_0.length; i++)
+        this.data_0[i] = this.pins[this.dataPinIndex + i].value_0;
+    }
+  }
+  if (this.pins[1].value_0 != this.clockState) {
+    this.clockState = this.pins[1].value_0;
+    if (this.clockState) {
+      this.dataIndex >= 0 && (this.data_0[this.dataIndex] = (this.flags & 2) != 0 && this.pins[3].value_0);
+      ++this.dataIndex;
+      this.dataIndex >= this.data_0.length && (this.dataIndex = 0);
+      this.pins[2].value_0 = this.data_0[this.dataIndex];
+    }
+  }
+}
+  ;
+_.getChipEditInfo = function getChipEditInfo_16(n) {
+  if (n == 0)
+    return $setDimensionless(new EditInfo_0('# of Bits', this.bits, 1, 1));
+  return null;
+}
+  ;
+_.getChipName = function getChipName_20() {
+  return 'PISO shift register';
+}
+  ;
+_.getDumpType = function getDumpType_77() {
+  return 186;
+}
+  ;
+_.getPostCount_0 = function getPostCount_48() {
+  return ((this.flags & 2) != 0 ? 4 : 3) + this.bits;
+}
+  ;
+_.getVoltageSourceCount = function getVoltageSourceCount_37() {
+  return 1;
+}
+  ;
+_.needsBits = function needsBits_7() {
+  return true;
+}
+  ;
+_.reset_0 = function reset_30() {
+  $reset_0(this);
+  this.data_0 = initUnidimensionalArray(Z_classLit, $intern_88, 8, this.bits, 16, 1);
+}
+  ;
+_.setChipEditValue = function setChipEditValue_17(n, ei) {
+  if (n == 0) {
+    if (ei.value_0 != this.bits && ei.value_0 >= 1) {
+      this.bits = round_int(ei.value_0);
+      this.data_0 = initUnidimensionalArray(Z_classLit, $intern_88, 8, this.bits, 16, 1);
+      $setupPins_15(this);
+      $setPoints_0(this);
+    }
+    return;
+  }
+}
+  ;
+_.setupPins = function setupPins_21() {
+  $setupPins_15(this);
+}
+  ;
+_.undumpXml = function undumpXml_55(xml) {
+  var dt;
+  $undumpXml_0(this, xml);
+  this.data_0 = initUnidimensionalArray(Z_classLit, $intern_88, 8, this.bits, 16, 1);
+  this.dataIndex = 0;
+  dt = $parseStringAttr(xml, 'dt', null);
+  dt != null && readBitsFromString(dt, this.data_0);
+}
+  ;
+_.clockState = false;
+_.dataIndex = 0;
+_.dataPinIndex = 0;
+_.loadState = false;
+var Lcom_lushprojects_circuitjs1_client_PisoShiftElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'PisoShiftElm', 390);
+function $equals(this$static, other) {
+  var result, that;
+  result = false;
+  if (instanceOf(other, 17)) {
+    that = other;
+    result = this$static.x_0 == that.x_0 && this$static.y_0 == that.y_0;
+  }
+  return result;
+}
+
+function $move_0(this$static, dx, dy) {
+  this$static.x_0 += dx;
+  this$static.y_0 += dy;
+}
+
+function Point_1() {
+  this.x_0 = 0;
+  this.y_0 = 0;
+}
+
+function Point_2(i, j) {
+  this.x_0 = i;
+  this.y_0 = j;
+}
+
+defineClass(17, 1, { 17: 1 }, Point_1, Point_2);
+_.equals_0 = function equals_8(other) {
+  return $equals(this, other);
+}
+  ;
+_.hashCode_0 = function hashCode_9() {
+  return 41 * (41 + this.x_0) + this.y_0;
+}
+  ;
+_.toString_0 = function toString_20() {
+  return 'Point(' + this.x_0 + ',' + this.y_0 + ')';
+}
+  ;
+_.x_0 = 0;
+_.y_0 = 0;
+var Lcom_lushprojects_circuitjs1_client_Point_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'Point', 17);
+function PolarCapacitorElm(xx, yy) {
+  CapacitorElm.call(this, xx, yy);
+  this.maxNegativeVoltage = 1;
+}
+
+function PolarCapacitorElm_0(xa, ya, xb, yb, f, st) {
+  CapacitorElm_0.call(this, xa, ya, xb, yb, f, st);
+  this.maxNegativeVoltage = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+}
+
+defineClass(428, 140, $intern_96, PolarCapacitorElm, PolarCapacitorElm_0);
+_.draw = function draw_54(g) {
+  var w;
+  $draw(this, g);
+  $setColor_0(g, whiteColor);
+  $setFont_0(g, unitsFont);
+  w = round_int(g.context.measureText('+').width);
+  $drawString(g, '+', this.plusPoint.x_0 - (w / 2 | 0), this.plusPoint.y_0);
+}
+  ;
+_.dumpXml = function dumpXml_54(doc, elem) {
+  $dumpXml_2(this, elem);
+  dumpAttr(elem, 'mv', this.maxNegativeVoltage);
+}
+  ;
+_.getDumpType = function getDumpType_78() {
+  return 209;
+}
+  ;
+_.getEditInfo = function getEditInfo_52(n) {
+  if (n == 4)
+    return new EditInfo_0('Max Reverse Voltage', this.maxNegativeVoltage, 0, 0);
+  return $getEditInfo_0(this, n);
+}
+  ;
+_.getInfo_0 = function getInfo_60(arr) {
+  $getInfo_2(this, arr);
+  arr[0] = 'capacitor (polarized)';
+}
+  ;
+_.getShortcut = function getShortcut_34() {
+  return 67;
+}
+  ;
+_.getXmlDumpType = function getXmlDumpType_16() {
+  return 'pc';
+}
+  ;
+_.setEditValue = function setEditValue_50(n, ei) {
+  n == 4 && ei.value_0 >= 0 && (this.maxNegativeVoltage = ei.value_0);
+  $setEditValue_0(this, n, ei);
+}
+  ;
+_.setPoints = function setPoints_49() {
+  var f, i, maxI, midI, q;
+  $setPoints_3(this);
+  f = (this.dn / 2 - 4) / this.dn;
+  this.platePoints = $newPointArray(14);
+  maxI = this.platePoints.length - 1;
+  midI = maxI / 2;
+  for (i = 0; i <= maxI; i++) {
+    q = (i - midI) * 0.9 / midI;
+    this.platePoints[i] = $interpPoint_0(this.plate2[0], this.plate2[1], i / maxI, 5 * (1 - $wnd.Math.sqrt(1 - q * q)));
+  }
+  this.plusPoint = $interpPoint_0(this.point1, this.point2, f - 8 / this.dn, -10 * this.dsign);
+  this.y2 > this.y_0 && (this.plusPoint.y_0 += 4);
+  this.y_0 > this.y2 && (this.plusPoint.y_0 += 3);
+}
+  ;
+_.stepFinished = function stepFinished_16() {
+  this.volts[0] - this.volts[1] < 0 && this.volts[0] - this.volts[1] < -this.maxNegativeVoltage && $stop(sim_0, 'capacitor exceeded max reverse voltage', this);
+  this.voltdiff = this.volts[0] - this.volts[this.capNode2];
+  $calculateCurrent(this);
+}
+  ;
+_.undumpXml = function undumpXml_56(xml) {
+  $undumpXml_1(this, xml);
+  this.maxNegativeVoltage = $parseDoubleAttr(xml, 'mv', this.maxNegativeVoltage);
+}
+  ;
+_.maxNegativeVoltage = 0;
+var Lcom_lushprojects_circuitjs1_client_PolarCapacitorElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'PolarCapacitorElm', 428);
+function $addPoint(this$static, x_0, y_0) {
+  var newLength;
+  if (this$static.npoints >= this$static.xpoints.length || this$static.npoints >= this$static.ypoints.length) {
+    newLength = this$static.npoints * 2;
+    newLength < 4 ? (newLength = 4) : (newLength & newLength - 1) != 0 && (newLength = highestOneBit(newLength));
+    this$static.xpoints = $expand(this$static.xpoints, newLength);
+    this$static.ypoints = $expand(this$static.ypoints, newLength);
+  }
+  this$static.xpoints[this$static.npoints] = x_0;
+  this$static.ypoints[this$static.npoints] = y_0;
+  ++this$static.npoints;
+}
+
+function $expand(in_0, newlen) {
+  var i, out;
+  out = initUnidimensionalArray(I_classLit, $intern_25, 8, newlen, 15, 1);
+  for (i = 0; i < in_0.length; i++)
+    out[i] = in_0[i];
+  return out;
+}
+
+function Polygon() {
+  this.xpoints = initUnidimensionalArray(I_classLit, $intern_25, 8, 4, 15, 1);
+  this.ypoints = initUnidimensionalArray(I_classLit, $intern_25, 8, 4, 15, 1);
+}
+
+defineClass(194, 1, { 194: 1 }, Polygon);
+_.npoints = 0;
+var Lcom_lushprojects_circuitjs1_client_Polygon_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'Polygon', 194);
+function $createSlider_2(this$static) {
+  var value_0, value0;
+  $addWidgetToVerticalPanel(app_0, this$static.label_0 = new Label_1(this$static.sliderText));
+  $addStyleName(this$static.label_0, 'topSpace');
+  value0 = (value_0 = toInt_0(fromDouble_0($wnd.Math.round((this$static.position_0 - $intern_119) / $intern_114))), value_0);
+  $addWidgetToVerticalPanel(app_0, this$static.slider = new Scrollbar_1(value0, this$static, this$static));
+}
+
+function $setPoints_18(this$static) {
+  var clen, myLen, offset, soff;
+  $setPoints(this$static);
+  offset = 0;
+  if (abs_0(this$static.dx) > abs_0(this$static.dy) != ((this$static.flags & 2) != 0)) {
+    myLen = 2 * app_0.gridSize * signum(this$static.dx) * (($wnd.Math.abs(this$static.dx) + 2 * app_0.gridSize - 1) / (2 * app_0.gridSize) | 0);
+    this$static.point2.x_0 = this$static.point1.x_0 + myLen;
+    offset = this$static.dx < 0 ? this$static.dy : -this$static.dy;
+    this$static.point2.y_0 = this$static.point1.y_0;
+  }
+  else {
+    myLen = 2 * app_0.gridSize * signum(this$static.dy) * (($wnd.Math.abs(this$static.dy) + 2 * app_0.gridSize - 1) / (2 * app_0.gridSize) | 0);
+    if (this$static.dy != 0) {
+      this$static.point2.y_0 = this$static.point1.y_0 + myLen;
+      offset = this$static.dy > 0 ? this$static.dx : -this$static.dx;
+      this$static.point2.x_0 = this$static.point1.x_0;
+    }
+  }
+  offset == 0 && (offset = (this$static.flags & 4) != 0 ? -app_0.gridSize : app_0.gridSize);
+  this$static.dn = distance(this$static.point1, this$static.point2);
+  $calcLeads(this$static, 32);
+  this$static.position_0 = this$static.slider.val_0 * $intern_114 + $intern_119;
+  soff = round_int((this$static.position_0 - 0.5) * 32);
+  this$static.post3 = $interpPoint_0(this$static.point1, this$static.point2, 0.5, offset);
+  this$static.corner2 = $interpPoint_0(this$static.point1, this$static.point2, soff / this$static.dn + 0.5, offset);
+  this$static.arrowPoint = $interpPoint_0(this$static.point1, this$static.point2, soff / this$static.dn + 0.5, 8 * (offset < 0 ? -1 : offset == 0 ? 0 : 1));
+  this$static.midpoint = $interpPoint(this$static.point1, this$static.point2, soff / this$static.dn + 0.5);
+  this$static.arrow1 = new Point_1;
+  this$static.arrow2 = new Point_1;
+  clen = (offset < 0 ? -offset : offset) - 8;
+  $interpPoint2(this$static.corner2, this$static.arrowPoint, this$static.arrow1, this$static.arrow2, (clen - 8) / clen, 8);
+  this$static.ps3 = new Point_1;
+  this$static.ps4 = new Point_1;
+}
+
+function PotElm(xx, yy) {
+  CircuitElm.call(this, xx, yy);
+  this.maxResistance = $intern_21;
+  this.position_0 = 0.5;
+  this.sliderText = 'Resistance';
+  this.flags = 1;
+  $createSlider_2(this);
+}
+
+function PotElm_0(xa, ya, xb, yb, f, st) {
+  CircuitElm_0.call(this, xa, ya, xb, yb, f);
+  this.maxResistance = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.position_0 = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.sliderText = $nextToken(st);
+  while ($hasMoreTokens(st))
+    this.sliderText += ' ' + $nextToken(st);
+  $createSlider_2(this);
+}
+
+defineClass(262, 7, { 130: 1, 11: 1, 7: 1, 10: 1, 262: 1 }, PotElm, PotElm_0);
+_.calculateCurrent = function calculateCurrent_22() {
+  if (this.resistance1 == 0)
+    return;
+  this.current1 = (this.volts[0] - this.volts[2]) / this.resistance1;
+  this.current2 = (this.volts[1] - this.volts[2]) / this.resistance2;
+  this.current3 = -this.current1 - this.current2;
+}
+  ;
+_.delete_0 = function delete_4() {
+  $removeWidgetFromVerticalPanel(app_0, this.label_0);
+  $removeWidgetFromVerticalPanel(app_0, this.slider);
+  mouseElmRef == this && (mouseElmRef = null);
+  $deleteSliders(app_0, this);
+}
+  ;
+_.draw = function draw_55(g) {
+  var divide, hs, i, nx, ox, rev_0, reverseX, reverseY, s1, s2, v, v1, v2, v3, w, ya;
+  ox = 0;
+  hs = app_0.menus.euroResistorCheckItem.on ? 6 : 8;
+  v1 = this.volts[0];
+  v2 = this.volts[1];
+  v3 = this.volts[2];
+  $setBbox_0(this, this.point1, this.point2, hs);
+  $adjustBbox_0(this, this.post3, this.post3);
+  $draw2Leads(this, g);
+  $setPowerColor_0(this, g);
+  divide = round_int(16 * this.position_0);
+  if (app_0.menus.euroResistorCheckItem.on) {
+    $setColor_0(g, $getVoltageColor(this, v1));
+    $interpPoint2(this.lead1, this.lead2, ps1, ps2, 0, hs);
+    drawThickLine_0(g, ps1, ps2);
+    for (i = 0; i != 16; i++) {
+      v = v1 + (v3 - v1) * i / divide;
+      i >= divide && (v = v3 + (v2 - v3) * (i - divide) / (16 - divide));
+      $setColor_0(g, $getVoltageColor(this, v));
+      $interpPoint2(this.lead1, this.lead2, ps1, ps2, i * $intern_120, hs);
+      $interpPoint2(this.lead1, this.lead2, this.ps3, this.ps4, (i + 1) * $intern_120, hs);
+      drawThickLine_0(g, ps1, this.ps3);
+      drawThickLine_0(g, ps2, this.ps4);
+    }
+    $interpPoint2(this.lead1, this.lead2, ps1, ps2, 1, hs);
+    drawThickLine_0(g, ps1, ps2);
+  }
+  else {
+    for (i = 0; i != 16; i++) {
+      switch (i & 3) {
+        case 0:
+          nx = 1;
+          break;
+        case 2:
+          nx = -1;
+          break;
+        default: nx = 0;
+      }
+      v = v1 + (v3 - v1) * i / divide;
+      i >= divide && (v = v3 + (v2 - v3) * (i - divide) / (16 - divide));
+      $setColor_0(g, $getVoltageColor(this, v));
+      $interpPoint_2(this.lead1, this.lead2, ps1, i * $intern_120, hs * ox);
+      $interpPoint_2(this.lead1, this.lead2, ps2, (i + 1) * $intern_120, hs * nx);
+      drawThickLine_0(g, ps1, ps2);
+      ox = nx;
+    }
+  }
+  $setColor_0(g, $getVoltageColor(this, v3));
+  drawThickLine_0(g, this.post3, this.corner2);
+  drawThickLine_0(g, this.corner2, this.arrowPoint);
+  drawThickLine_0(g, this.arrow1, this.arrowPoint);
+  drawThickLine_0(g, this.arrow2, this.arrowPoint);
+  this.curcount1 = $updateDotCount(this.current1, this.curcount1);
+  this.curcount2 = $updateDotCount(this.current2, this.curcount2);
+  this.curcount3 = $updateDotCount(this.current3, this.curcount3);
+  if (app_0.mouse.dragElm != this) {
+    $drawDots(g, this.point1, this.midpoint, this.curcount1);
+    $drawDots(g, this.point2, this.midpoint, this.curcount2);
+    $drawDots(g, this.post3, this.corner2, this.curcount3);
+    $drawDots(g, this.corner2, this.midpoint, $addCurCount(this.curcount3, distance(this.post3, this.corner2)));
+  }
+  $drawPosts(this, g);
+  if (app_0.menus.showValuesCheckItem.on && this.resistance1 > 0 && (this.flags & 1) != 0) {
+    reverseY = this.post3.x_0 < this.lead1.x_0 && this.lead1.x_0 == this.lead2.x_0;
+    reverseX = this.post3.y_0 < this.lead1.y_0 && this.lead1.x_0 != this.lead2.x_0;
+    rev_0 = this.lead1.x_0 == this.lead2.x_0 && this.lead1.y_0 < this.lead2.y_0 || this.lead1.y_0 == this.lead2.y_0 && this.lead1.x_0 > this.lead2.x_0;
+    s1 = getUnitText(rev_0 ? this.resistance2 : this.resistance1, '', true);
+    s2 = getUnitText(rev_0 ? this.resistance1 : this.resistance2, '', true);
+    $setFont_0(g, unitsFont);
+    $setColor_0(g, whiteColor);
+    ya = g.currentFontSize / 2 | 0;
+    w = round_int($measureText(g.context, s1).width);
+    this.lead1.x_0 == this.lead2.x_0 ? $drawString(g, s1, reverseY ? this.arrowPoint.x_0 - 2 - w : this.arrowPoint.x_0 + 2, $wnd.Math.max(this.arrow1.y_0, this.arrow2.y_0) + 5 + ya) : $drawString(g, s1, $wnd.Math.min(this.arrow1.x_0, this.arrow2.x_0) - 2 - w, reverseX ? this.arrowPoint.y_0 - 4 : this.arrowPoint.y_0 + 4 + ya);
+    w = round_int($measureText(g.context, s2).width);
+    this.lead1.x_0 == this.lead2.x_0 ? $drawString(g, s2, reverseY ? this.arrowPoint.x_0 - 2 - w : this.arrowPoint.x_0 + 2, $wnd.Math.min(this.arrow1.y_0, this.arrow2.y_0) - 3) : $drawString(g, s2, $wnd.Math.max(this.arrow1.x_0, this.arrow2.x_0) + 2, reverseX ? this.arrowPoint.y_0 - 4 : this.arrowPoint.y_0 + 4 + ya);
+  }
+}
+  ;
+_.dumpXml = function dumpXml_55(doc, elem) {
+  dumpAttr_1(elem, 'x', this.x_0 + ' ' + this.y_0 + ' ' + this.x2 + ' ' + this.y2);
+  dumpAttr_0(elem, 'f', this.flags);
+  dumpAttr(elem, 'ma', this.maxResistance);
+  dumpAttr(elem, 'po', this.position_0);
+  dumpAttr_1(elem, 'sl', this.sliderText);
+}
+  ;
+_.execute_1 = function execute_34() {
+  app_0.analyzeFlag = true;
+  $setPoints_18(this);
+}
+  ;
+_.flipX = function flipX_11(c2, count) {
+  this.flags ^= 4;
+  $flipX(this, c2);
+}
+  ;
+_.flipXY = function flipXY_8(xmy, count) {
+  abs_0(this.dx) == abs_0(this.dy) && (this.flags ^= 2);
+  this.flags ^= 4;
+  $flipXY(this, xmy);
+}
+  ;
+_.flipY = function flipY_11(c2, count) {
+  this.flags ^= 4;
+  $flipY(this, c2);
+}
+  ;
+_.getCurrentIntoNode = function getCurrentIntoNode_20(n) {
+  if (n == 0)
+    return -this.current1;
+  if (n == 1)
+    return -this.current2;
+  return -this.current3;
+}
+  ;
+_.getDumpType = function getDumpType_79() {
+  return 174;
+}
+  ;
+_.getEditInfo = function getEditInfo_53(n) {
+  var ei;
+  if (n == 0)
+    return new EditInfo_0('Resistance (ohms)', this.maxResistance, 0, 0);
+  if (n == 1) {
+    ei = new EditInfo_0('Slider Text', 0, -1, -1);
+    ei.text_0 = this.sliderText;
+    return ei;
+  }
+  if (n == 2) {
+    ei = new EditInfo_0('', 0, -1, -1);
+    ei.checkbox = new Checkbox_0('Show Values', (this.flags & 1) != 0);
+    return ei;
+  }
+  return null;
+}
+  ;
+_.getInfo_0 = function getInfo_61(arr) {
+  arr[0] = 'potentiometer';
+  arr[1] = 'Vd = ' + getUnitText($wnd.Math.abs(this.volts[0] - this.volts[1]), 'V', false);
+  arr[2] = 'R1 = ' + getUnitText(this.resistance1, ohmString, false);
+  arr[3] = 'R2 = ' + getUnitText(this.resistance2, ohmString, false);
+  arr[4] = 'I1 = ' + getUnitText($wnd.Math.abs(this.current1), 'A', false);
+  arr[5] = 'I2 = ' + getUnitText($wnd.Math.abs(this.current2), 'A', false);
+}
+  ;
+_.getPost = function getPost_13(n) {
+  return n == 0 ? this.point1 : n == 1 ? this.point2 : this.post3;
+}
+  ;
+_.getPostCount_0 = function getPostCount_49() {
+  return 3;
+}
+  ;
+_.getXmlDumpType = function getXmlDumpType_17() {
+  return 'pt';
+}
+  ;
+_.onMouseWheel = function onMouseWheel_3(e) {
+  !!this.slider && $onMouseWheel_0(this.slider, e);
+}
+  ;
+_.reset_0 = function reset_31() {
+  this.curcount1 = this.curcount2 = this.curcount3 = 0;
+  $reset(this);
+}
+  ;
+_.setEditValue = function setEditValue_51(n, ei) {
+  n == 0 && (this.maxResistance = ei.value_0);
+  if (n == 1) {
+    this.sliderText = $getText(ei.textf);
+    $setText_0(this.label_0, this.sliderText);
+    $setiFrameHeight(app_0.ui);
+  }
+  n == 2 && (this.flags = $changeFlag(ei, this.flags, 1));
+}
+  ;
+_.setMouseElm = function setMouseElm_1(v) {
+  v ? (mouseElmRef = this) : mouseElmRef == this && (mouseElmRef = null);
+  !!this.slider && $draw_3(this.slider);
+}
+  ;
+_.setPoints = function setPoints_50() {
+  $setPoints_18(this);
+}
+  ;
+_.stamp = function stamp_43() {
+  this.resistance1 = this.maxResistance * this.position_0;
+  this.resistance2 = this.maxResistance * (1 - this.position_0);
+  $stampResistor(sim_0, this.nodes[0], this.nodes[2], this.resistance1);
+  $stampResistor(sim_0, this.nodes[2], this.nodes[1], this.resistance2);
+}
+  ;
+_.undumpXml = function undumpXml_57(xml) {
+  var value_0, value0;
+  this.flags = $parseIntAttr(xml, 'f', this.flags);
+  this.maxResistance = $parseDoubleAttr(xml, 'ma', this.maxResistance);
+  this.position_0 = $parseDoubleAttr(xml, 'po', this.position_0);
+  this.sliderText = $parseStringAttr(xml, 'sl', this.sliderText);
+  value0 = (value_0 = toInt_0(fromDouble_0($wnd.Math.round((this.position_0 - $intern_119) / $intern_114))), value_0);
+  $setValue_2(this.slider, value0);
+  $setText_0(this.label_0, this.sliderText);
+}
+  ;
+_.curcount1 = 0;
+_.curcount2 = 0;
+_.curcount3 = 0;
+_.current1 = 0;
+_.current2 = 0;
+_.current3 = 0;
+_.maxResistance = 0;
+_.position_0 = 0;
+_.resistance1 = 0;
+_.resistance2 = 0;
+var Lcom_lushprojects_circuitjs1_client_PotElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'PotElm', 262);
+function $$init_13(this$static) {
+  this$static.rmsV = 0;
+  this$static.binaryLevel = 0;
+  this$static.zerocount = 0;
+  this$static.maxV = 0;
+  this$static.minV = 0;
+  this$static.frequency = 0;
+  this$static.pulseWidth = 0;
+  this$static.dutyCycle = 0;
+  this$static.selectedValue = 0;
+  this$static.increasingV = true;
+  this$static.decreasingV = true;
+}
+
+function ProbeElm(xx, yy) {
+  CircuitElm.call(this, xx, yy);
+  $$init_13(this);
+  this.meter = 0;
+  this.flags = 3;
+  this.scale_0 = 0;
+  this.resistance = 10000000;
+}
+
+function ProbeElm_0(xa, ya, xb, yb, f, st) {
+  CircuitElm_0.call(this, xa, ya, xb, yb, f);
+  $$init_13(this);
+  this.meter = 0;
+  this.scale_0 = 0;
+  this.resistance = 0;
+  try {
+    this.meter = __parseAndValidateInt($nextToken(st), 10);
+    this.scale_0 = __parseAndValidateInt($nextToken(st), 10);
+    this.resistance = __parseAndValidateDouble($nextToken(st));
+  }
+  catch ($e0) {
+    $e0 = toJava($e0);
+    if (!instanceOf($e0, 15))
+      throw toJs($e0);
+  }
+}
+
+defineClass(230, 7, { 7: 1, 10: 1, 230: 1 }, ProbeElm, ProbeElm_0);
+_.calculateCurrent = function calculateCurrent_23() {
+  this.current_0 = this.resistance == 0 ? 0 : (this.volts[0] - this.volts[1]) / this.resistance;
+}
+  ;
+_.draw = function draw_56(g) {
+  var f, hs, len, plusPoint, s, selected, w;
+  g.context.save();
+  g.savedFontSize = g.currentFontSize;
+  hs = (this.flags & 2) != 0 ? 12 : 8;
+  $setBbox_0(this, this.point1, this.point2, hs);
+  selected = mouseElmRef == this || this.selected_0 || app_0.mouse.plotYElm == this || instanceOf(mouseElmRef, 20) && $getElm_0(mouseElmRef.elmScope) == this || $isOnHighlightedNet(this);
+  len = selected || app_0.mouse.dragElm == this || (this.flags & 1) != 0 ? 16 : this.dn - 32;
+  (this.flags & 2) != 0 && (len = 24);
+  $calcLeads(this, round_int(len));
+  $setVoltageColor(this, g, this.volts[0]);
+  selected && $setColor_0(g, selectColor_0);
+  drawThickLine_0(g, this.point1, this.lead1);
+  $setVoltageColor(this, g, this.volts[1]);
+  selected && $setColor_0(g, selectColor_0);
+  drawThickLine_0(g, this.lead2, this.point2);
+  f = new Font('SansSerif', 1, 14);
+  $setFont_0(g, f);
+  this == app_0.mouse.plotXElm && $drawCenteredText(this, g, 'X', this.center.x_0, this.center.y_0, true);
+  this == app_0.mouse.plotYElm && $drawCenteredText(this, g, 'Y', this.center.x_0, this.center.y_0, true);
+  if ((this.flags & 1) != 0) {
+    s = '';
+    switch (this.meter) {
+      case 0:
+        s = getUnitTextWithScale(this.volts[0] - this.volts[1], 'V', this.scale_0, false);
+        break;
+      case 1:
+        s = getUnitTextWithScale(this.rmsV, 'V(rms)', this.scale_0, false);
+        break;
+      case 2:
+        s = getUnitTextWithScale(this.lastMaxV, 'Vpk', this.scale_0, false);
+        break;
+      case 3:
+        s = getUnitTextWithScale(this.lastMinV, 'Vmin', this.scale_0, false);
+        break;
+      case 4:
+        s = getUnitTextWithScale(this.lastMaxV - this.lastMinV, 'Vp2p', this.scale_0, false);
+        break;
+      case 5:
+        s = this.binaryLevel + '';
+        break;
+      case 6:
+        s = getUnitText(this.frequency, 'Hz', false);
+        break;
+      case 8:
+        s = getUnitText(this.pulseWidth, 'S', false);
+        break;
+      case 9:
+        s = $format_0(showFormat, this.dutyCycle);
+    }
+    $drawValues(this, g, s, (this.flags & 2) != 0 ? 15 : 4);
+  }
+  $setColor_0(g, whiteColor);
+  $setFont_0(g, unitsFont);
+  plusPoint = $interpPoint_0(this.point1, this.point2, (this.dn / 2 - len / 2 - 4) / this.dn, -10 * this.dsign);
+  this.y2 > this.y_0 && (plusPoint.y_0 += 4);
+  this.y_0 > this.y2 && (plusPoint.y_0 += 3);
+  w = round_int(g.context.measureText('+').width);
+  $drawString(g, '+', plusPoint.x_0 - (w / 2 | 0), plusPoint.y_0);
+  if ((this.flags & 2) != 0) {
+    $setColor_0(g, lightGrayColor);
+    drawThickCircle(g, this.center.x_0, this.center.y_0, 12);
+    $drawCenteredText(this, g, 'V', this.center.x_0, this.center.y_0, true);
+  }
+  $drawPosts(this, g);
+  g.context.restore();
+  g.currentFontSize = g.savedFontSize;
+}
+  ;
+_.dumpXml = function dumpXml_56(doc, elem) {
+  dumpAttr_1(elem, 'x', this.x_0 + ' ' + this.y_0 + ' ' + this.x2 + ' ' + this.y2);
+  dumpAttr_0(elem, 'f', this.flags);
+  dumpAttr_0(elem, 'me', this.meter);
+  dumpAttr_0(elem, 'sc', this.scale_0);
+  dumpAttr(elem, 're', this.resistance);
+}
+  ;
+_.getConnection = function getConnection_25(n1, n2) {
+  return this.resistance != 0;
+}
+  ;
+_.getDumpType = function getDumpType_80() {
+  return 112;
+}
+  ;
+_.getEditInfo = function getEditInfo_54(n) {
+  var ei;
+  if (n == 0) {
+    ei = new EditInfo_0('', 0, -1, -1);
+    ei.checkbox = new Checkbox_0('Show Value', (this.flags & 1) != 0);
+    return ei;
+  }
+  if (n == 1) {
+    ei = new EditInfo_0('Value', this.selectedValue, -1, -1);
+    ei.choice = new Choice;
+    $addItem(ei.choice, LS('Voltage'));
+    $addItem(ei.choice, LS('RMS Voltage'));
+    $addItem(ei.choice, LS('Max Voltage'));
+    $addItem(ei.choice, LS('Min Voltage'));
+    $addItem(ei.choice, LS('P2P Voltage'));
+    $addItem(ei.choice, LS('Binary Value'));
+    $select(ei.choice, this.meter);
+    return ei;
+  }
+  if (n == 2) {
+    ei = new EditInfo('Scale', 0);
+    ei.choice = new Choice;
+    $addItem(ei.choice, LS('Auto'));
+    $addItem(ei.choice, LS('V'));
+    $addItem(ei.choice, LS('mV'));
+    $addItem(ei.choice, LS(muString + 'V'));
+    $select(ei.choice, this.scale_0);
+    return ei;
+  }
+  if (n == 3) {
+    ei = createCheckbox('Use Circle Symbol', (this.flags & 2) != 0);
+    return ei;
+  }
+  if (n == 4)
+    return new EditInfo('Series Resistance (0 = infinite)', this.resistance);
+  return null;
+}
+  ;
+_.getInfo_0 = function getInfo_62(arr) {
+  arr[0] = 'voltmeter';
+  arr[1] = 'Vd = ' + getUnitText(this.volts[0] - this.volts[1], 'V', false);
+}
+  ;
+_.setEditValue = function setEditValue_52(n, ei) {
+  n == 0 && ($getState(ei.checkbox) ? (this.flags = 1) : (this.flags &= -2));
+  n == 1 && (this.meter = $getElement(ei.choice).selectedIndex);
+  n == 2 && (this.scale_0 = $getElement(ei.choice).selectedIndex);
+  n == 3 && (this.flags = $changeFlag(ei, this.flags, 2));
+  n == 4 && (this.resistance = ei.value_0);
+}
+  ;
+_.setPoints = function setPoints_51() {
+  $setPoints(this);
+  this.center = $interpPoint(this.point1, this.point2, 0.5);
+}
+  ;
+_.stamp = function stamp_44() {
+  this.resistance != 0 && $stampResistor(sim_0, this.nodes[0], this.nodes[1], this.resistance);
+}
+  ;
+_.stepFinished = function stepFinished_17() {
+  var v;
+  ++this.count;
+  v = this.volts[0] - this.volts[1];
+  this.total += v * v;
+  v < 2.5 ? (this.binaryLevel = 0) : (this.binaryLevel = 1);
+  if (v > this.maxV && this.increasingV) {
+    this.maxV = v;
+    this.increasingV = true;
+    this.decreasingV = false;
+  }
+  if (v < this.maxV && this.increasingV) {
+    this.lastMaxV = this.maxV;
+    this.periodLength = ($clinit_System(), sub_1(fromDouble_0(Date.now()), this.periodStart));
+    this.periodStart = fromDouble_0(Date.now());
+    this.pulseWidth = toDouble_0(sub_1(fromDouble_0(Date.now()), this.pulseStart));
+    this.dutyCycle = this.pulseWidth / toDouble_0(this.periodLength);
+    this.minV = v;
+    this.increasingV = false;
+    this.decreasingV = true;
+    this.total = this.total / this.count;
+    this.rmsV = $wnd.Math.sqrt(this.total);
+    isNaN(this.rmsV) && (this.rmsV = 0);
+    this.count = 0;
+    this.total = 0;
+  }
+  if (v < this.minV && this.decreasingV) {
+    this.minV = v;
+    this.increasingV = false;
+    this.decreasingV = true;
+  }
+  if (v > this.minV && this.decreasingV) {
+    this.lastMinV = this.minV;
+    this.pulseStart = ($clinit_System(), fromDouble_0(Date.now()));
+    this.maxV = v;
+    this.increasingV = true;
+    this.decreasingV = false;
+    this.total = this.total / this.count;
+    this.rmsV = $wnd.Math.sqrt(this.total);
+    isNaN(this.rmsV) && (this.rmsV = 0);
+    this.count = 0;
+    this.total = 0;
+  }
+  if (v == 0) {
+    ++this.zerocount;
+    if (this.zerocount > 5) {
+      this.total = 0;
+      this.rmsV = 0;
+      this.maxV = 0;
+      this.minV = 0;
+    }
+  }
+  else {
+    this.zerocount = 0;
+  }
+}
+  ;
+_.undumpXml = function undumpXml_58(xml) {
+  this.flags = 0;
+  this.flags = $parseIntAttr(xml, 'f', this.flags);
+  this.meter = $parseIntAttr(xml, 'me', this.meter);
+  this.scale_0 = $parseIntAttr(xml, 'sc', this.scale_0);
+  this.resistance = $parseDoubleAttr(xml, 're', 0);
+}
+  ;
+_.binaryLevel = 0;
+_.count = 0;
+_.decreasingV = false;
+_.dutyCycle = 0;
+_.frequency = 0;
+_.increasingV = false;
+_.lastMaxV = 0;
+_.lastMinV = 0;
+_.maxV = 0;
+_.meter = 0;
+_.minV = 0;
+_.periodLength = 0;
+_.periodStart = 0;
+_.pulseStart = 0;
+_.pulseWidth = 0;
+_.resistance = 0;
+_.rmsV = 0;
+_.scale_0 = 0;
+_.selectedValue = 0;
+_.total = 0;
+_.zerocount = 0;
+var Lcom_lushprojects_circuitjs1_client_ProbeElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ProbeElm', 230);
+function PushSwitchElm(xx, yy) {
+  SwitchElm_1.call(this, xx, yy, true);
+}
+
+defineClass(864, 61, $intern_98, PushSwitchElm);
+_.getDumpClass = function getDumpClass_15() {
+  return Lcom_lushprojects_circuitjs1_client_SwitchElm_2_classLit;
+}
+  ;
+_.getShortcut = function getShortcut_35() {
+  return 0;
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_PushSwitchElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'PushSwitchElm', 864);
+function $getBooleanValue(this$static, key, def) {
+  var val;
+  val = $getStringValue(this$static.map_0, key);
+  return val == null ? def : val == '1' || $equalsIgnoreCase(val, 'true');
+}
+
+function QueryParameters() {
+  var i, nameValues, pair, search;
+  this.map_0 = new HashMap;
+  search = $wnd.location.search;
+  if (search != null && search.length > 0) {
+    nameValues = $split_1(search.substr(1), '&', 0);
+    for (i = 0; i < nameValues.length; i++) {
+      pair = $split_1(nameValues[i], '=', 0);
+      $putStringValue(this.map_0, pair[0], (throwIfNull('encodedURL', pair[1]), decodeURI(pair[1])));
+    }
+  }
+}
+
+defineClass(270, 1, {}, QueryParameters);
+var Lcom_lushprojects_circuitjs1_client_QueryParameters_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'QueryParameters', 270);
+function $contains(this$static, X, Y) {
+  var h, w, x_0, y_0;
+  w = this$static.width_0;
+  h = this$static.height_0;
+  if ((w | h) < 0) {
+    return false;
+  }
+  x_0 = this$static.x_0;
+  y_0 = this$static.y_0;
+  if (X < x_0 || Y < y_0) {
+    return false;
+  }
+  w += x_0;
+  h += y_0;
+  return (w < x_0 || w > X) && (h < y_0 || h > Y);
+}
+
+function $contains_0(this$static, r) {
+  return $contains(this$static, r.x_0, r.y_0) && $contains(this$static, r.x_0 + r.width_0, r.y_0 + r.height_0);
+}
+
+function $equals_0(this$static, obj) {
+  var r;
+  if (instanceOf(obj, 48)) {
+    r = obj;
+    return this$static.x_0 == r.x_0 && this$static.y_0 == r.y_0 && this$static.width_0 == r.width_0 && this$static.height_0 == r.height_0;
+  }
+  return this$static === obj;
+}
+
+function $intersects(this$static, r) {
+  var rh, rw, rx, ry, th, tw, tx, ty;
+  tw = this$static.width_0;
+  th = this$static.height_0;
+  rw = r.width_0;
+  rh = r.height_0;
+  if (rw <= 0 || rh <= 0 || tw <= 0 || th <= 0) {
+    return false;
+  }
+  tx = this$static.x_0;
+  ty = this$static.y_0;
+  rx = r.x_0;
+  ry = r.y_0;
+  rw += rx;
+  rh += ry;
+  tw += tx;
+  th += ty;
+  return (rw < rx || rw > tx) && (rh < ry || rh > ty) && (tw < tx || tw > rx) && (th < ty || th > ry);
+}
+
+function $setBounds(this$static, x_0, y_0, width_0, height) {
+  this$static.x_0 = x_0;
+  this$static.y_0 = y_0;
+  this$static.width_0 = width_0;
+  this$static.height_0 = height;
+}
+
+function $translate_0(this$static, dx, dy) {
+  this$static.x_0 += dx;
+  this$static.y_0 += dy;
+}
+
+function $union(this$static, r) {
+  var rx1, rx2, ry1, ry2, tx1, tx2, ty1, ty2;
+  tx2 = this$static.width_0;
+  ty2 = this$static.height_0;
+  if (lt(or_0(tx2, ty2), 0)) {
+    return new Rectangle_2(r);
+  }
+  rx2 = r.width_0;
+  ry2 = r.height_0;
+  if (lt(or_0(rx2, ry2), 0)) {
+    return new Rectangle_2(this$static);
+  }
+  tx1 = this$static.x_0;
+  ty1 = this$static.y_0;
+  tx2 = add_2(tx2, tx1);
+  ty2 = add_2(ty2, ty1);
+  rx1 = r.x_0;
+  ry1 = r.y_0;
+  rx2 = add_2(rx2, rx1);
+  ry2 = add_2(ry2, ry1);
+  tx1 > rx1 && (tx1 = rx1);
+  ty1 > ry1 && (ty1 = ry1);
+  compare_0(tx2, rx2) < 0 && (tx2 = rx2);
+  compare_0(ty2, ry2) < 0 && (ty2 = ry2);
+  tx2 = sub_1(tx2, tx1);
+  ty2 = sub_1(ty2, ty1);
+  compare_0(tx2, $intern_0) > 0 && (tx2 = $intern_0);
+  compare_0(ty2, $intern_0) > 0 && (ty2 = $intern_0);
+  return new Rectangle_0(tx1, ty1, toInt_0(tx2), toInt_0(ty2));
+}
+
+function Rectangle() {
+  this.x_0 = 0;
+  this.y_0 = 0;
+  this.width_0 = 0;
+  this.height_0 = 0;
+}
+
+function Rectangle_0(x_0, y_0, width_0, height) {
+  this.x_0 = x_0;
+  this.y_0 = y_0;
+  this.width_0 = width_0;
+  this.height_0 = height;
+}
+
+function Rectangle_1(pt) {
+  this.x_0 = pt.x_0;
+  this.y_0 = pt.y_0;
+  this.width_0 = 0;
+  this.height_0 = 0;
+}
+
+function Rectangle_2(r) {
+  Rectangle_0.call(this, r.x_0, r.y_0, r.width_0, r.height_0);
+}
+
+defineClass(48, 1, { 48: 1 }, Rectangle, Rectangle_0, Rectangle_1, Rectangle_2);
+_.equals_0 = function equals_9(obj) {
+  return $equals_0(this, obj);
+}
+  ;
+_.toString_0 = function toString_21() {
+  return 'Rect(' + this.x_0 + ',' + this.y_0 + ',' + this.width_0 + ',' + this.height_0 + ')';
+}
+  ;
+_.height_0 = 0;
+_.width_0 = 0;
+_.x_0 = 0;
+_.y_0 = 0;
+var Lcom_lushprojects_circuitjs1_client_Rectangle_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'Rectangle', 48);
+function $$init_14(this$static) {
+  this$static.outline = $newPointArray(4);
+}
+
+function $setPoints_19(this$static) {
+  var boxWScale;
+  $setPoints(this$static);
+  $setupPoles(this$static);
+  $allocNodes(this$static);
+  this$static.coilPosts = $newPointArray(2);
+  this$static.coilLeads = $newPointArray(2);
+  this$static.coilPosts[0] = this$static.point1;
+  this$static.coilPosts[1] = this$static.point2;
+  boxWScale = $wnd.Math.min(0.4, 12 / this$static.dn);
+  $interpPoint_1(this$static.point1, this$static.point2, this$static.coilLeads[0], 0.5 - boxWScale);
+  $interpPoint_1(this$static.point1, this$static.point2, this$static.coilLeads[1], 0.5 + boxWScale);
+  $interpPoint_2(this$static.point1, this$static.point2, this$static.outline[0], 0.5 - boxWScale, -32 * this$static.dsign);
+  $interpPoint_2(this$static.point1, this$static.point2, this$static.outline[1], 0.5 + boxWScale, -32 * this$static.dsign);
+  $interpPoint_2(this$static.point1, this$static.point2, this$static.outline[3], 0.5 - boxWScale, 32 * this$static.dsign);
+  $interpPoint_2(this$static.point1, this$static.point2, this$static.outline[2], 0.5 + boxWScale, 32 * this$static.dsign);
+  this$static.currentOffset1 = distance(this$static.coilPosts[0], this$static.coilLeads[0]);
+  this$static.currentOffset2 = this$static.currentOffset1 + distance(this$static.coilLeads[0], this$static.coilLeads[1]);
+  this$static.extraPoints = $newPointArray(4);
+  if (this$static.type_0 == 3) {
+    $interpPoint_2(this$static.coilLeads[0], this$static.coilLeads[1], this$static.extraPoints[0], 0.3, 8);
+    $interpPoint_2(this$static.coilLeads[0], this$static.coilLeads[1], this$static.extraPoints[1], 0.3, 0);
+    $interpPoint_2(this$static.coilLeads[0], this$static.coilLeads[1], this$static.extraPoints[2], 0.7, 0);
+    $interpPoint_2(this$static.coilLeads[0], this$static.coilLeads[1], this$static.extraPoints[3], 0.7, -8);
+  }
+  else {
+    this$static.extraPoints[0] = this$static.outline[0];
+    this$static.extraPoints[3] = this$static.outline[1];
+    $interpPoint_2(this$static.coilLeads[0], this$static.coilLeads[1], this$static.extraPoints[1], 0, -20);
+    $interpPoint_2(this$static.coilLeads[0], this$static.coilLeads[1], this$static.extraPoints[2], 1, -20);
+  }
+}
+
+function $setSwitchPositions_0(this$static) {
+  var i, o, s2;
+  for (i = 0; i != this$static.elmList.arrayList.array.length; i++) {
+    o = $elementAt(this$static.elmList, i);
+    if (instanceOf(o, 234)) {
+      s2 = o;
+      $equals_1(s2.label_0, this$static.label_0) && $setPosition_1(s2, 1 - this$static.switchPosition, this$static.type_0);
+    }
+  }
+}
+
+function $setupPoles(this$static) {
+  this$static.nCoil1 = 0;
+  this$static.nCoil2 = this$static.nCoil1 + 1;
+  this$static.nCoil3 = this$static.nCoil1 + 2;
+}
+
+function RelayCoilElm(xx, yy) {
+  CircuitElm.call(this, xx, yy);
+  $$init_14(this);
+  this.ind = new Inductor(sim_0);
+  this.inductance = 0.2;
+  $setup_1(this.ind, this.inductance, 0, 2);
+  this.noDiagonal = true;
+  this.onCurrent = 0.02;
+  this.offCurrent = 0.015;
+  this.state = 0;
+  this.label_0 = 'label';
+  this.coilR = 20;
+  this.switchingTime = $intern_119;
+  this.coilCurrent = this.coilCurCount = 0;
+  $setupPoles(this);
+}
+
+function RelayCoilElm_0(xa, ya, xb, yb, f, st) {
+  CircuitElm_0.call(this, xa, ya, xb, yb, f);
+  $$init_14(this);
+  this.label_0 = unescape_0($nextToken(st));
+  this.inductance = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.coilCurrent = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.onCurrent = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.coilR = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.offCurrent = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.switchingTime = __parseAndValidateDouble($nextToken(st));
+  this.type_0 = __parseAndValidateInt($nextToken(st), 10);
+  this.state = __parseAndValidateInt($nextToken(st), 10);
+  this.switchPosition = __parseAndValidateInt($nextToken(st), 10);
+  this.noDiagonal = true;
+  this.ind = new Inductor(sim_0);
+  $setup_1(this.ind, this.inductance, this.coilCurrent, 2);
+  $setupPoles(this);
+  $allocNodes(this);
+}
+
+defineClass(392, 7, $intern_79, RelayCoilElm, RelayCoilElm_0);
+_.calculateCurrent = function calculateCurrent_24() {
+  var voltdiff;
+  voltdiff = this.volts[this.nCoil1] - this.volts[this.nCoil3];
+  this.coilCurrent = $calculateCurrent_1(this.ind, voltdiff);
+}
+  ;
+_.doStep = function doStep_34() {
+  $doStep_1(this.ind);
+}
+  ;
+_.draw = function draw_57(g) {
+  var i;
+  for (i = 0; i != 2; i++) {
+    $setVoltageColor(this, g, this.volts[this.nCoil1 + i]);
+    drawThickLine_0(g, this.coilLeads[i], this.coilPosts[i]);
+  }
+  $setPowerColor(this, g, this.coilCurrent * (this.volts[this.nCoil1] - this.volts[this.nCoil2]));
+  $setColor_0(g, mouseElmRef == this || this.selected_0 || app_0.mouse.plotYElm == this || instanceOf(mouseElmRef, 20) && $getElm_0(mouseElmRef.elmScope) == this || $isOnHighlightedNet(this) ? selectColor_0 : lightGrayColor);
+  drawThickLine_0(g, this.outline[0], this.outline[1]);
+  drawThickLine_0(g, this.outline[1], this.outline[2]);
+  drawThickLine_0(g, this.outline[2], this.outline[3]);
+  drawThickLine_0(g, this.outline[3], this.outline[0]);
+  if (this.type_0 == 3) {
+    for (i = 0; i != 3; i++)
+      drawThickLine_0(g, this.extraPoints[i], this.extraPoints[i + 1]);
+  }
+  else if (this.type_0 == 1) {
+    drawThickLine_0(g, this.extraPoints[1], this.extraPoints[2]);
+    drawThickLine_0(g, this.extraPoints[0], this.extraPoints[2]);
+    drawThickLine_0(g, this.extraPoints[1], this.extraPoints[3]);
+  }
+  else
+    this.type_0 == 2 && $fillRect_0(g, this.extraPoints[0].x_0, this.extraPoints[0].y_0, this.extraPoints[2].x_0 - this.extraPoints[0].x_0, this.extraPoints[2].y_0 - this.extraPoints[0].y_0);
+  $setColor_0(g, mouseElmRef == this || this.selected_0 || app_0.mouse.plotYElm == this || instanceOf(mouseElmRef, 20) && $getElm_0(mouseElmRef.elmScope) == this || $isOnHighlightedNet(this) ? selectColor_0 : whiteColor);
+  if (this.x_0 == this.x2)
+    $drawString(g, this.label_0, this.outline[2].x_0 + 10, ((this.y_0 + this.y2) / 2 | 0) + 4);
+  else {
+    g.context.save();
+    g.savedFontSize = g.currentFontSize;
+    g.context.textAlign = 'center';
+    $drawString(g, this.label_0, (this.x_0 + this.x2) / 2 | 0, this.outline[1].y_0 + 15);
+    g.context.restore();
+    g.currentFontSize = g.savedFontSize;
+  }
+  this.coilCurCount = $updateDotCount(this.coilCurrent, this.coilCurCount);
+  if (this.coilCurCount != 0) {
+    $drawDots(g, this.coilPosts[0], this.coilLeads[0], this.coilCurCount);
+    $drawDots(g, this.coilLeads[1], this.coilPosts[1], $addCurCount(this.coilCurCount, this.currentOffset2));
+  }
+  $drawPosts(this, g);
+  $setBbox_0(this, this.outline[0], this.outline[2], 0);
+  $adjustBbox_0(this, this.coilPosts[0], this.coilPosts[1]);
+}
+  ;
+_.dumpXml = function dumpXml_57(doc, elem) {
+  dumpAttr_1(elem, 'x', this.x_0 + ' ' + this.y_0 + ' ' + this.x2 + ' ' + this.y2);
+  dumpAttr_0(elem, 'f', this.flags);
+  dumpAttr_1(elem, 'lb', this.label_0);
+  dumpAttr(elem, 'in', this.inductance);
+  dumpAttr(elem, 'oc', this.onCurrent);
+  dumpAttr(elem, 'cr', this.coilR);
+  dumpAttr(elem, 'ofc', this.offCurrent);
+  dumpAttr(elem, 'swt', this.switchingTime);
+  dumpAttr_0(elem, 'tp', this.type_0);
+}
+  ;
+_.dumpXmlState = function dumpXmlState_10(doc, elem) {
+  dumpAttr(elem, 'ci', this.coilCurrent);
+  dumpAttr_0(elem, 'st', this.state);
+  dumpAttr_0(elem, 'sp', this.switchPosition);
+}
+  ;
+_.getConnection = function getConnection_26(n1, n2) {
+  return true;
+}
+  ;
+_.getCurrentIntoNode = function getCurrentIntoNode_21(n) {
+  if (n == 0)
+    return -this.coilCurrent;
+  return this.coilCurrent;
+}
+  ;
+_.getDumpType = function getDumpType_81() {
+  return 425;
+}
+  ;
+_.getEditInfo = function getEditInfo_55(n) {
+  var ei;
+  if (n == 0) {
+    ei = new EditInfo('Type', 0);
+    ei.choice = new Choice;
+    $addItem(ei.choice, LS('Normal'));
+    $addItem(ei.choice, LS('On Delay'));
+    $addItem(ei.choice, LS('Off Delay'));
+    $addItem(ei.choice, LS('Latching'));
+    $select(ei.choice, this.type_0);
+    return ei;
+  }
+  if (n == 1)
+    return new EditInfo_0('Inductance (H)', this.inductance, 0, 0);
+  if (n == 2)
+    return new EditInfo_0('On Current (A)', this.onCurrent, 0, 0);
+  if (n == 3)
+    return new EditInfo_0('Off Current (A)', this.offCurrent, 0, 0);
+  if (n == 4)
+    return new EditInfo_0('Coil Resistance (ohms)', this.coilR, 0, 0);
+  if (n == 5)
+    return new EditInfo_0('Switching Time (s)', this.switchingTime, 0, 0);
+  if (n == 6)
+    return new EditInfo_1('Label (for linking)', this.label_0);
+  return null;
+}
+  ;
+_.getElmType = function getElmType_18() {
+  return 'relay';
+}
+  ;
+_.getInfo_0 = function getInfo_63(arr) {
+  var ln;
+  arr[0] = LS('relay');
+  this.i_position == 0 ? (arr[0] += ' (' + LS('off') + ')') : this.i_position == 1 && (arr[0] += ' (' + LS('on') + ')');
+  ln = 1;
+  arr[ln++] = LS('coil I') + ' = ' + getUnitText($wnd.Math.abs(this.coilCurrent), 'A', false);
+  arr[ln++] = LS('coil Vd') + ' = ' + getUnitText($wnd.Math.abs(this.volts[this.nCoil1] - this.volts[this.nCoil2]), 'V', false);
+}
+  ;
+_.getInternalNodeCount = function getInternalNodeCount_6() {
+  return 1;
+}
+  ;
+_.getPost = function getPost_14(n) {
+  return this.coilPosts[n];
+}
+  ;
+_.getPostCount_0 = function getPostCount_50() {
+  return 2;
+}
+  ;
+_.reset_0 = function reset_32() {
+  $reset(this);
+  $reset_4(this.ind);
+  this.coilCurrent = this.coilCurCount = 0;
+  this.i_position = 0;
+  this.avgCurrent = 0;
+}
+  ;
+_.setEditValue = function setEditValue_53(n, ei) {
+  if (n == 0) {
+    this.type_0 = $getElement(ei.choice).selectedIndex;
+    $setPoints_19(this);
+  }
+  if (n == 1 && ei.value_0 > 0) {
+    this.inductance = ei.value_0;
+    $setup_1(this.ind, this.inductance, this.coilCurrent, 2);
+  }
+  n == 2 && ei.value_0 > 0 && (this.onCurrent = ei.value_0);
+  n == 3 && ei.value_0 > 0 && (this.offCurrent = ei.value_0);
+  n == 4 && ei.value_0 > 0 && (this.coilR = ei.value_0);
+  n == 5 && ei.value_0 > 0 && (this.switchingTime = ei.value_0);
+  n == 6 && (this.label_0 = $getText(ei.textf));
+}
+  ;
+_.setParentList = function setParentList_2(list) {
+  this.elmList = list;
+}
+  ;
+_.setPoints = function setPoints_52() {
+  $setPoints_19(this);
+}
+  ;
+_.stamp = function stamp_45() {
+  $stamp_2(this.ind, this.nodes[this.nCoil1], this.nodes[this.nCoil3]);
+  $stampResistor(sim_0, this.nodes[this.nCoil3], this.nodes[this.nCoil2], this.coilR);
+  if (this.type_0 == 1) {
+    this.switchingTimeOn = this.switchingTime;
+    this.switchingTimeOff = 0;
+  }
+  else if (this.type_0 == 2) {
+    this.switchingTimeOff = this.switchingTime;
+    this.switchingTimeOn = 0;
+  }
+  else {
+    this.switchingTimeOff = this.switchingTimeOn = this.switchingTime;
+  }
+  $setSwitchPositions_0(this);
+}
+  ;
+_.startIteration = function startIteration_10() {
+  var a, absCurrent, oldSwitchPosition;
+  $startIteration(this.ind, this.volts[this.nCoil1] - this.volts[this.nCoil3]);
+  absCurrent = $wnd.Math.abs(this.coilCurrent);
+  a = $wnd.Math.exp(-sim_0.timeStep * $intern_21);
+  this.avgCurrent = a * this.avgCurrent + (1 - a) * absCurrent;
+  oldSwitchPosition = this.switchPosition;
+  if (this.state == 0) {
+    if (this.avgCurrent > this.onCurrent) {
+      this.lastTransition = sim_0.t;
+      this.state = 1;
+    }
+  }
+  else if (this.state == 1) {
+    if (this.avgCurrent < this.offCurrent)
+      this.state = 0;
+    else if (sim_0.t - this.lastTransition > this.switchingTimeOn) {
+      this.state = 2;
+      this.type_0 == 3 ? (this.switchPosition = 1 - this.switchPosition) : (this.switchPosition = 1);
+    }
+  }
+  else if (this.state == 2) {
+    if (this.avgCurrent < this.offCurrent) {
+      this.lastTransition = sim_0.t;
+      this.state = 3;
+    }
+  }
+  else if (this.state == 3) {
+    if (this.avgCurrent > this.onCurrent)
+      this.state = 2;
+    else if (sim_0.t - this.lastTransition > this.switchingTimeOff) {
+      this.state = 0;
+      this.type_0 != 3 && (this.switchPosition = 0);
+    }
+  }
+  oldSwitchPosition != this.switchPosition && $setSwitchPositions_0(this);
+}
+  ;
+_.undumpXml = function undumpXml_59(xml) {
+  this.flags = $parseIntAttr(xml, 'f', this.flags);
+  this.label_0 = $parseStringAttr(xml, 'lb', this.label_0);
+  this.inductance = $parseDoubleAttr(xml, 'in', this.inductance);
+  this.onCurrent = $parseDoubleAttr(xml, 'oc', this.onCurrent);
+  this.coilR = $parseDoubleAttr(xml, 'cr', this.coilR);
+  this.offCurrent = $parseDoubleAttr(xml, 'ofc', this.offCurrent);
+  this.switchingTime = $parseDoubleAttr(xml, 'swt', this.switchingTime);
+  this.type_0 = $parseIntAttr(xml, 'tp', this.type_0);
+  this.coilCurrent = $parseDoubleAttr(xml, 'ci', this.coilCurrent);
+  this.state = $parseIntAttr(xml, 'st', this.state);
+  this.switchPosition = $parseIntAttr(xml, 'sp', this.switchPosition);
+  this.noDiagonal = true;
+  this.ind = new Inductor(sim_0);
+  $setup_1(this.ind, this.inductance, this.coilCurrent, 2);
+  $setupPoles(this);
+  $allocNodes(this);
+}
+  ;
+_.avgCurrent = 0;
+_.coilCurCount = 0;
+_.coilCurrent = 0;
+_.coilR = 0;
+_.currentOffset1 = 0;
+_.currentOffset2 = 0;
+_.i_position = 0;
+_.inductance = 0;
+_.lastTransition = 0;
+_.nCoil1 = 0;
+_.nCoil2 = 0;
+_.nCoil3 = 0;
+_.offCurrent = 0;
+_.onCurrent = 0;
+_.state = 0;
+_.switchPosition = 0;
+_.switchingTime = 0;
+_.switchingTimeOff = 0;
+_.switchingTimeOn = 0;
+_.type_0 = 0;
+var Lcom_lushprojects_circuitjs1_client_RelayCoilElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'RelayCoilElm', 392);
+function $setPoints_20(this$static) {
+  var ds, j;
+  $setPoints(this$static);
+  $allocNodes(this$static);
+  this$static.openhs = this$static.dsign * 16;
+  $calcLeads(this$static, 32);
+  this$static.swposts = initUnidimensionalArray(Lcom_lushprojects_circuitjs1_client_Point_2_classLit, $intern_72, 17, 3, 0, 1);
+  this$static.swpoles = initUnidimensionalArray(Lcom_lushprojects_circuitjs1_client_Point_2_classLit, $intern_72, 17, 3, 0, 1);
+  for (j = 0; j != 3; j++) {
+    this$static.swposts[j] = new Point_1;
+    this$static.swpoles[j] = new Point_1;
+  }
+  $interpPoint_2(this$static.lead1, this$static.lead2, this$static.swpoles[0], 0, 0);
+  $interpPoint_2(this$static.lead1, this$static.lead2, this$static.swpoles[1], 1, 0);
+  $interpPoint_2(this$static.lead1, this$static.lead2, this$static.swpoles[2], 1, this$static.openhs);
+  $interpPoint_2(this$static.point1, this$static.point2, this$static.swposts[0], 0, 0);
+  $interpPoint_2(this$static.point1, this$static.point2, this$static.swposts[1], 1, 0);
+  $interpPoint_2(this$static.point1, this$static.point2, this$static.swposts[2], 1, this$static.openhs);
+  this$static.ptSwitch = new Point_1;
+  if ((this$static.flags & 4) != 0) {
+    this$static.extraPoints = $newPointArray(5);
+    ds = 22 * this$static.dsign;
+    $interpPoint_2(this$static.lead1, this$static.lead2, this$static.extraPoints[2], 0.4375, ds);
+    $interpPoint_2(this$static.lead1, this$static.lead2, this$static.extraPoints[3], 0.5625, ds);
+  }
+}
+
+function $setPosition_1(this$static, i_position_, type_) {
+  this$static.i_position = (this$static.flags & 2) != 0 ? 1 - i_position_ : i_position_;
+  this$static.type_0 = type_;
+}
+
+function RelayContactElm(xx, yy) {
+  CircuitElm.call(this, xx, yy);
+  this.noDiagonal = true;
+  this.r_on = 0.05;
+  this.r_off = $intern_78;
+  this.label_0 = 'label';
+  this.flags |= 4;
+}
+
+function RelayContactElm_0(xa, ya, xb, yb, f, st) {
+  CircuitElm_0.call(this, xa, ya, xb, yb, f);
+  this.label_0 = unescape_0($nextToken(st));
+  this.r_on = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.r_off = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  try {
+    this.i_position = __parseAndValidateInt($nextToken(st), 10);
+  }
+  catch ($e0) {
+    $e0 = toJava($e0);
+    if (!instanceOf($e0, 15))
+      throw toJs($e0);
+  }
+  this.noDiagonal = true;
+  $allocNodes(this);
+}
+
+defineClass(234, 7, { 7: 1, 10: 1, 234: 1 }, RelayContactElm, RelayContactElm_0);
+_.calculateCurrent = function calculateCurrent_25() {
+  this.i_position == 1 ? (this.switchCurrent = 0) : (this.switchCurrent = (this.volts[0] - this.volts[1 + this.i_position]) / this.r_on);
+}
+  ;
+_.doStep = function doStep_35() {
+  $stampResistor(sim_0, this.nodes[0], this.nodes[1], this.i_position == 0 ? this.r_on : this.r_off);
+}
+  ;
+_.draw = function draw_58(g) {
+  var ang, ds, i;
+  for (i = 0; i != 2; i++) {
+    $setVoltageColor(this, g, this.volts[i]);
+    drawThickLine_0(g, this.swposts[i], this.swpoles[i]);
+  }
+  $interpPoint_1(this.swpoles[1], this.swpoles[2], this.ptSwitch, this.i_position);
+  $setColor_0(g, ($clinit_Color(), lightGray));
+  drawThickLine_0(g, this.swpoles[0], this.ptSwitch);
+  $setColor_0(g, mouseElmRef == this || this.selected_0 || app_0.mouse.plotYElm == this || instanceOf(mouseElmRef, 20) && $getElm_0(mouseElmRef.elmScope) == this || $isOnHighlightedNet(this) ? selectColor_0 : whiteColor);
+  if (this.x_0 == this.x2)
+    $drawString(g, this.label_0, this.x_0 + 10, this.swpoles[this.y_0 < this.y2 ? 0 : 1].y_0 - 5);
+  else {
+    g.context.save();
+    g.savedFontSize = g.currentFontSize;
+    g.context.textAlign = 'center';
+    $drawString(g, this.label_0, (this.x_0 + this.x2) / 2 | 0, this.y_0 + 15);
+    g.context.restore();
+    g.currentFontSize = g.savedFontSize;
+  }
+  if ((this.flags & 4) != 0 && (this.type_0 == 1 || this.type_0 == 2)) {
+    $setColor_0(g, lightGray);
+    $interpPoint_2(this.lead1, this.lead2, this.extraPoints[0], 0.4375, this.i_position == 1 ? this.openhs / 2 | 0 : 0);
+    $interpPoint_2(this.lead1, this.lead2, this.extraPoints[1], 0.5625, this.i_position == 1 ? this.openhs / 2 | 0 : 0);
+    $drawLine_0(g, this.extraPoints[0], this.extraPoints[2]);
+    $drawLine_0(g, this.extraPoints[1], this.extraPoints[3]);
+    g.context.beginPath();
+    ang = -$wnd.Math.atan2(-this.dy * this.dsign, this.dx * this.dsign);
+    ds = 22 * this.dsign;
+    if (this.type_0 == 2) {
+      ang += $intern_1;
+      $interpPoint_2(this.lead1, this.lead2, this.extraPoints[4], 0.5, ds + 6 * this.dsign);
+    }
+    else {
+      $interpPoint_2(this.lead1, this.lead2, this.extraPoints[4], 0.5, ds - 5 * this.dsign);
+    }
+    $arc_0(g.context, this.extraPoints[4].x_0, this.extraPoints[4].y_0, 6, -0.39269908169872414 + ang, 3.5342917352885173 + ang, true);
+    g.context.stroke();
+  }
+  this.switchCurCount = $updateDotCount(this.switchCurrent, this.switchCurCount);
+  $drawDots(g, this.swposts[0], this.swpoles[0], this.switchCurCount);
+  this.i_position == 0 && $drawDots(g, this.swpoles[this.i_position + 1], this.swposts[this.i_position + 1], this.switchCurCount);
+  $drawPosts(this, g);
+  $setBbox_0(this, this.point1, this.point2, this.openhs);
+}
+  ;
+_.dumpXml = function dumpXml_58(doc, elem) {
+  dumpAttr_1(elem, 'x', this.x_0 + ' ' + this.y_0 + ' ' + this.x2 + ' ' + this.y2);
+  dumpAttr_0(elem, 'f', this.flags);
+  dumpAttr_1(elem, 'lb', this.label_0);
+  dumpAttr(elem, 'ron', this.r_on);
+  dumpAttr(elem, 'roff', this.r_off);
+  dumpAttr_0(elem, 'ip', this.i_position);
+}
+  ;
+_.getConnection = function getConnection_27(n1, n2) {
+  return true;
+}
+  ;
+_.getCurrentIntoNode = function getCurrentIntoNode_22(n) {
+  if (n == 0)
+    return -this.switchCurrent;
+  if (n == 1 + this.i_position)
+    return this.switchCurrent;
+  return 0;
+}
+  ;
+_.getDumpType = function getDumpType_82() {
+  return 426;
+}
+  ;
+_.getEditInfo = function getEditInfo_56(n) {
+  if (n == 0)
+    return new EditInfo_0('On Resistance (ohms)', this.r_on, 0, 0);
+  if (n == 1)
+    return new EditInfo_0('Off Resistance (ohms)', this.r_off, 0, 0);
+  if (n == 2)
+    return new EditInfo_1('Label (for linking)', this.label_0);
+  if (n == 3)
+    return createCheckbox('Normally Closed', (this.flags & 2) != 0);
+  if (n == 4)
+    return createCheckbox('IEC Symbol', (this.flags & 4) != 0);
+  return null;
+}
+  ;
+_.getElmType = function getElmType_19() {
+  return 'relay';
+}
+  ;
+_.getInfo_0 = function getInfo_64(arr) {
+  var ln;
+  arr[0] = LS('relay');
+  this.i_position == 0 ? (arr[0] += ' (' + LS('off') + ')') : this.i_position == 1 && (arr[0] += ' (' + LS('on') + ')');
+  ln = 1;
+  arr[ln++] = 'I = ' + getUnitText($wnd.Math.abs(this.switchCurrent), 'A', false);
+}
+  ;
+_.getPost = function getPost_15(n) {
+  return this.swposts[n];
+}
+  ;
+_.getPostCount_0 = function getPostCount_51() {
+  return 2;
+}
+  ;
+_.nonLinear = function nonLinear_16() {
+  return true;
+}
+  ;
+_.reset_0 = function reset_33() {
+  $reset(this);
+  this.switchCurrent = this.switchCurCount = 0;
+  this.i_position = 0;
+}
+  ;
+_.setEditValue = function setEditValue_54(n, ei) {
+  n == 0 && ei.value_0 > 0 && (this.r_on = ei.value_0);
+  n == 1 && ei.value_0 > 0 && (this.r_off = ei.value_0);
+  n == 2 && (this.label_0 = $getText(ei.textf));
+  n == 3 && (this.flags = $changeFlag(ei, this.flags, 2));
+  if (n == 4) {
+    this.flags = $changeFlag(ei, this.flags, 4);
+    $setPoints_20(this);
+  }
+}
+  ;
+_.setPoints = function setPoints_53() {
+  $setPoints_20(this);
+}
+  ;
+_.stamp = function stamp_46() {
+  $stampNonLinear(sim_0, this.nodes[0]);
+  $stampNonLinear(sim_0, this.nodes[1]);
+}
+  ;
+_.undumpXml = function undumpXml_60(xml) {
+  this.flags = $parseIntAttr(xml, 'f', this.flags);
+  this.label_0 = $parseStringAttr(xml, 'lb', this.label_0);
+  this.r_on = $parseDoubleAttr(xml, 'ron', this.r_on);
+  this.r_off = $parseDoubleAttr(xml, 'roff', this.r_off);
+  this.i_position = $parseIntAttr(xml, 'ip', this.i_position);
+  this.noDiagonal = true;
+  $allocNodes(this);
+}
+  ;
+_.i_position = 0;
+_.openhs = 0;
+_.r_off = 0;
+_.r_on = 0;
+_.switchCurCount = 0;
+_.switchCurrent = 0;
+_.type_0 = 0;
+var Lcom_lushprojects_circuitjs1_client_RelayContactElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'RelayContactElm', 234);
+function $$init_15(this$static) {
+  this$static.outline = $newPointArray(4);
+}
+
+function $postUndump(this$static) {
+  this$static.i_position == 1 && (this$static.onState = true);
+  this$static.i_position == 2 && (this$static.d_position = 0.5);
+  this$static.noDiagonal = true;
+  this$static.ind = new Inductor(sim_0);
+  $setup_1(this$static.ind, this$static.inductance, this$static.coilCurrent, 2);
+  $setupPoles_0(this$static);
+  $allocNodes(this$static);
+}
+
+function $setPoints_21(this$static) {
+  var boxSize, boxWScale, i, j, x_0;
+  $setPoints(this$static);
+  $setupPoles_0(this$static);
+  $allocNodes(this$static);
+  this$static.dflip = (this$static.flags & 8) != 0 ? -this$static.dsign : this$static.dsign;
+  this$static.openhs = -this$static.dflip * 16;
+  $calcLeads(this$static, 32);
+  this$static.swposts = initMultidimensionalArray(Lcom_lushprojects_circuitjs1_client_Point_2_classLit, [$intern_3, $intern_72], [76, 17], 0, [this$static.poleCount, 3], 2);
+  this$static.swpoles = initMultidimensionalArray(Lcom_lushprojects_circuitjs1_client_Point_2_classLit, [$intern_3, $intern_72], [76, 17], 0, [this$static.poleCount, 3], 2);
+  for (i = 0; i != this$static.poleCount; i++) {
+    for (j = 0; j != 3; j++) {
+      this$static.swposts[i][j] = new Point_1;
+      this$static.swpoles[i][j] = new Point_1;
+    }
+    $interpPoint_2(this$static.lead1, this$static.lead2, this$static.swpoles[i][0], 0, -this$static.openhs * 3 * i);
+    $interpPoint_2(this$static.lead1, this$static.lead2, this$static.swpoles[i][1], 1, -this$static.openhs * 3 * i - this$static.openhs);
+    $interpPoint_2(this$static.lead1, this$static.lead2, this$static.swpoles[i][2], 1, -this$static.openhs * 3 * i + this$static.openhs);
+    $interpPoint_2(this$static.point1, this$static.point2, this$static.swposts[i][0], 0, -this$static.openhs * 3 * i);
+    $interpPoint_2(this$static.point1, this$static.point2, this$static.swposts[i][1], 1, -this$static.openhs * 3 * i - this$static.openhs);
+    $interpPoint_2(this$static.point1, this$static.point2, this$static.swposts[i][2], 1, -this$static.openhs * 3 * i + this$static.openhs);
+  }
+  this$static.coilPosts = $newPointArray(2);
+  this$static.coilLeads = $newPointArray(2);
+  this$static.ptSwitch = $newPointArray(this$static.poleCount);
+  x_0 = (this$static.flags & 1) != 0 ? 1 : 0;
+  if ((this$static.flags & 4) == 0) {
+    $interpPoint_2(this$static.point1, this$static.point2, this$static.coilPosts[0], x_0, this$static.openhs * 2);
+    $interpPoint_2(this$static.point1, this$static.point2, this$static.coilPosts[1], x_0, this$static.openhs * 3);
+    $interpPoint_2(this$static.point1, this$static.point2, this$static.coilLeads[0], 0.5, this$static.openhs * 2);
+    $interpPoint_2(this$static.point1, this$static.point2, this$static.coilLeads[1], 0.5, this$static.openhs * 3);
+    boxSize = 56;
+  }
+  else {
+    $interpPoint_2(this$static.point1, this$static.point2, this$static.coilPosts[0], 0, this$static.openhs * 2);
+    $interpPoint_2(this$static.point1, this$static.point2, this$static.coilPosts[1], 1, this$static.openhs * 2);
+    $interpPoint_2(this$static.point1, this$static.point2, this$static.coilLeads[0], 0.5 - 16 / this$static.dn, this$static.openhs * 2);
+    $interpPoint_2(this$static.point1, this$static.point2, this$static.coilLeads[1], 0.5 + 16 / this$static.dn, this$static.openhs * 2);
+    boxSize = 40;
+  }
+  this$static.lines = $newPointArray(this$static.poleCount * 2);
+  boxWScale = $wnd.Math.min(0.4, 25 / this$static.dn);
+  $interpPoint_2(this$static.point1, this$static.point2, this$static.outline[0], 0.5 - boxWScale, -boxSize * this$static.dflip);
+  $interpPoint_2(this$static.point1, this$static.point2, this$static.outline[1], 0.5 + boxWScale, -boxSize * this$static.dflip);
+  $interpPoint_2(this$static.point1, this$static.point2, this$static.outline[2], 0.5 + boxWScale, -(this$static.openhs * 3 * this$static.poleCount) - 24 * this$static.dflip);
+  $interpPoint_2(this$static.point1, this$static.point2, this$static.outline[3], 0.5 - boxWScale, -(this$static.openhs * 3 * this$static.poleCount) - 24 * this$static.dflip);
+  this$static.currentOffset1 = distance(this$static.coilPosts[0], this$static.coilLeads[0]);
+  this$static.currentOffset2 = this$static.currentOffset1 + distance(this$static.coilLeads[0], this$static.coilLeads[1]);
+}
+
+function $setupPoles_0(this$static) {
+  this$static.nCoil1 = 3 * this$static.poleCount;
+  this$static.nCoil2 = this$static.nCoil1 + 1;
+  this$static.nCoil3 = this$static.nCoil1 + 2;
+  if (this$static.switchCurrent == null || this$static.switchCurrent.length != this$static.poleCount) {
+    this$static.switchCurrent = initUnidimensionalArray(D_classLit, $intern_70, 8, this$static.poleCount, 15, 1);
+    this$static.switchCurCount = initUnidimensionalArray(D_classLit, $intern_70, 8, this$static.poleCount, 15, 1);
+  }
+}
+
+function RelayElm(xx, yy) {
+  CircuitElm.call(this, xx, yy);
+  $$init_15(this);
+  this.ind = new Inductor(sim_0);
+  this.inductance = 0.2;
+  $setup_1(this.ind, this.inductance, 0, 2);
+  this.noDiagonal = true;
+  this.onCurrent = 0.02;
+  this.offCurrent = 0.015;
+  this.r_on = 0.05;
+  this.r_off = $intern_78;
+  this.coilR = 20;
+  this.switchingTime = $intern_119;
+  this.coilCurrent = this.coilCurCount = 0;
+  this.poleCount = 1;
+  this.flags |= 22;
+  $setupPoles_0(this);
+}
+
+function RelayElm_0(xa, ya, xb, yb, f, st) {
+  CircuitElm_0.call(this, xa, ya, xb, yb, f);
+  $$init_15(this);
+  this.poleCount = (new Integer_0($nextToken(st))).value_0;
+  this.inductance = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.coilCurrent = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.r_on = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.r_off = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.onCurrent = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.coilR = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  try {
+    this.offCurrent = this.onCurrent;
+    this.switchingTime = 0;
+    this.offCurrent = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+    this.switchingTime = __parseAndValidateDouble($nextToken(st));
+    this.d_position = this.i_position = __parseAndValidateInt($nextToken(st), 10);
+  }
+  catch ($e0) {
+    $e0 = toJava($e0);
+    if (!instanceOf($e0, 15))
+      throw toJs($e0);
+  }
+  $postUndump(this);
+}
+
+defineClass(388, 7, $intern_79, RelayElm, RelayElm_0);
+_.calculateCurrent = function calculateCurrent_26() {
+  var p, voltdiff;
+  voltdiff = this.volts[this.nCoil1] - this.volts[this.nCoil3];
+  this.coilCurrent = $calculateCurrent_1(this.ind, voltdiff);
+  for (p = 0; p != this.poleCount; p++) {
+    this.i_position == 2 ? (this.switchCurrent[p] = 0) : (this.switchCurrent[p] = (this.volts[p * 3] - this.volts[1 + p * 3 + this.i_position]) / this.r_on);
+  }
+}
+  ;
+_.doStep = function doStep_36() {
+  var p;
+  $doStep_1(this.ind);
+  for (p = 0; p != this.poleCount * 3; p += 3) {
+    if (this.i_position == 0) {
+      $stampResistor(sim_0, this.nodes[p], this.nodes[1 + p], this.r_on);
+      (this.flags & 16) != 0 || $stampResistor(sim_0, this.nodes[p], this.nodes[2 + p], this.r_off);
+    }
+    else if (this.i_position == 1) {
+      $stampResistor(sim_0, this.nodes[p], this.nodes[2 + p], this.r_on);
+      (this.flags & 16) != 0 || $stampResistor(sim_0, this.nodes[p], this.nodes[1 + p], this.r_off);
+    }
+    else {
+      $stampResistor(sim_0, this.nodes[p], this.nodes[1 + p], this.r_off);
+      $stampResistor(sim_0, this.nodes[p], this.nodes[2 + p], this.r_off);
+    }
+  }
+}
+  ;
+_.draw = function draw_59(g) {
+  var i, off, p, po, x_0;
+  for (i = 0; i != 2; i++) {
+    $setVoltageColor(this, g, this.volts[this.nCoil1 + i]);
+    drawThickLine_0(g, this.coilLeads[i], this.coilPosts[i]);
+  }
+  x_0 = (this.flags & 1) != 0 ? 1 : 0;
+  $setPowerColor(this, g, this.coilCurrent * (this.volts[this.nCoil1] - this.volts[this.nCoil2]));
+  $drawCoil(this, g, this.dflip * 6, this.coilLeads[x_0], this.coilLeads[1 - x_0], this.volts[this.nCoil1 + x_0], this.volts[this.nCoil2 - x_0]);
+  if ((this.flags & 2) != 0) {
+    $setColor_0(g, mouseElmRef == this || this.selected_0 || app_0.mouse.plotYElm == this || instanceOf(mouseElmRef, 20) && $getElm_0(mouseElmRef.elmScope) == this || $isOnHighlightedNet(this) ? selectColor_0 : lightGrayColor);
+    drawThickLine_0(g, this.outline[0], this.outline[1]);
+    drawThickLine_0(g, this.outline[1], this.outline[2]);
+    drawThickLine_0(g, this.outline[2], this.outline[3]);
+    drawThickLine_0(g, this.outline[3], this.outline[0]);
+  }
+  $setColor_0(g, ($clinit_Color(), darkGray));
+  for (i = 0; i != this.poleCount; i++) {
+    if (i == 0) {
+      off = (this.flags & 4) == 0 ? 0 : 4;
+      $interpPoint_2(this.point1, this.point2, this.lines[0], 0.5, this.openhs * 2 + 5 * this.dflip + off);
+    }
+    else
+      $interpPoint_2(this.point1, this.point2, this.lines[i * 2], 0.5, round_int(this.openhs * (-i * 3 + 3 - 0.5 + this.d_position)) + 5 * this.dflip);
+    $interpPoint_2(this.point1, this.point2, this.lines[i * 2 + 1], 0.5, round_int(this.openhs * (-i * 3 - 0.5 + this.d_position)) - 5 * this.dflip);
+    setLineDash(g.context, 4, 4);
+    $drawLine(g, this.lines[i * 2].x_0, this.lines[i * 2].y_0, this.lines[i * 2 + 1].x_0, this.lines[i * 2 + 1].y_0);
+    setLineDash(g.context, 0, 0);
+  }
+  for (p = 0; p != this.poleCount; p++) {
+    po = p * 3;
+    for (i = 0; i != 3; i++) {
+      $setVoltageColor(this, g, this.volts[po + i]);
+      drawThickLine_0(g, this.swposts[p][i], this.swpoles[p][i]);
+    }
+    $interpPoint_1(this.swpoles[p][1], this.swpoles[p][2], this.ptSwitch[p], this.d_position);
+    $setColor_0(g, lightGray);
+    drawThickLine_0(g, this.swpoles[p][0], this.ptSwitch[p]);
+    this.switchCurCount[p] = $updateDotCount(this.switchCurrent[p], this.switchCurCount[p]);
+    $drawDots(g, this.swposts[p][0], this.swpoles[p][0], this.switchCurCount[p]);
+    this.i_position != 2 && $drawDots(g, this.swpoles[p][this.i_position + 1], this.swposts[p][this.i_position + 1], this.switchCurCount[p]);
+  }
+  this.coilCurCount = $updateDotCount(this.coilCurrent, this.coilCurCount);
+  if (this.coilCurCount != 0) {
+    $drawDots(g, this.coilPosts[0], this.coilLeads[0], this.coilCurCount);
+    $drawDots(g, this.coilLeads[0], this.coilLeads[1], $addCurCount(this.coilCurCount, this.currentOffset1));
+    $drawDots(g, this.coilLeads[1], this.coilPosts[1], $addCurCount(this.coilCurCount, this.currentOffset2));
+  }
+  $drawPosts(this, g);
+  $setBbox_0(this, this.outline[0], this.outline[2], 0);
+  $adjustBbox_0(this, this.coilPosts[0], this.coilPosts[1]);
+  $adjustBbox_0(this, this.swposts[0][0], this.swposts[0][1]);
+}
+  ;
+_.dumpXml = function dumpXml_59(doc, elem) {
+  dumpAttr_1(elem, 'x', this.x_0 + ' ' + this.y_0 + ' ' + this.x2 + ' ' + this.y2);
+  dumpAttr_0(elem, 'f', this.flags);
+  dumpAttr_0(elem, 'po', this.poleCount);
+  dumpAttr(elem, 'in', this.inductance);
+  dumpAttr(elem, 'ron', this.r_on);
+  dumpAttr(elem, 'roff', this.r_off);
+  dumpAttr(elem, 'on', this.onCurrent);
+  dumpAttr(elem, 'coR', this.coilR);
+  dumpAttr(elem, 'of', this.offCurrent);
+  dumpAttr(elem, 'sw', this.switchingTime);
+}
+  ;
+_.dumpXmlState = function dumpXmlState_11(doc, elem) {
+  dumpAttr(elem, 'i', this.coilCurrent);
+  dumpAttr_0(elem, 'ip', this.i_position);
+}
+  ;
+_.flipX = function flipX_12(c2, count) {
+  this.dx == 0 && (this.flags ^= 8);
+  $flipX(this, c2);
+}
+  ;
+_.flipXY = function flipXY_9(xmy, count) {
+  this.flags ^= 8;
+  $flipXY(this, xmy);
+}
+  ;
+_.flipY = function flipY_12(c2, count) {
+  this.dy == 0 && (this.flags ^= 8);
+  $flipY(this, c2);
+}
+  ;
+_.getConnection = function getConnection_28(n1, n2) {
+  var k1, k2;
+  if ((n1 / 3 | 0) != (n2 / 3 | 0))
+    return false;
+  if (n1 >= this.nCoil1)
+    return true;
+  if ((this.flags & 16) == 0)
+    return true;
+  k1 = n1 % 3;
+  k2 = n2 % 3;
+  if (this.i_position == 0)
+    return k1 == 0 && k2 == 1 || k1 == 1 && k2 == 0;
+  if (this.i_position == 1)
+    return k1 == 0 && k2 == 2 || k1 == 2 && k2 == 0;
+  return false;
+}
+  ;
+_.getCurrentIntoNode = function getCurrentIntoNode_23(n) {
+  var k, p;
+  if (n < 3 * this.poleCount) {
+    p = n / 3 | 0;
+    k = n % 3;
+    if (k == 0)
+      return -this.switchCurrent[p];
+    if (k == 1 + this.i_position)
+      return this.switchCurrent[p];
+    return 0;
+  }
+  if (n == 3 * this.poleCount)
+    return -this.coilCurrent;
+  return this.coilCurrent;
+}
+  ;
+_.getDumpType = function getDumpType_83() {
+  return 178;
+}
+  ;
+_.getEditInfo = function getEditInfo_57(n) {
+  var ei, style;
+  if (n == 0)
+    return new EditInfo_0('Inductance (H)', this.inductance, 0, 0);
+  if (n == 1)
+    return new EditInfo_0('On Resistance (ohms)', this.r_on, 0, 0);
+  if (n == 2)
+    return new EditInfo_0('Off Resistance (ohms)', this.r_off, 0, 0);
+  if (n == 3)
+    return new EditInfo_0('On Current (A)', this.onCurrent, 0, 0);
+  if (n == 4) {
+    if (this.switchingTime == 0) {
+      ei = new EditInfo_0('', 0, -1, -1);
+      ei.button_0 = new Button_1(LS('Use New Model'));
+      return ei;
+    }
+    return new EditInfo_0('Off Current (A)', this.offCurrent, 0, 0);
+  }
+  if (n == 5)
+    return $setDimensionless(new EditInfo_0('Number of Poles', this.poleCount, 1, 4));
+  if (n == 6)
+    return new EditInfo_0('Coil Resistance (ohms)', this.coilR, 0, 0);
+  if (n == 7) {
+    style = 1;
+    (this.flags & 1) != 0 ? (style = 2) : (this.flags & 4) != 0 && (style = 0);
+    ei = new EditInfo_0('Coil Style', style, -1, -1);
+    ei.choice = new Choice;
+    $addItem(ei.choice, LS('Both Sides'));
+    $addItem(ei.choice, LS('Side 1'));
+    $addItem(ei.choice, LS('Side 2'));
+    $select(ei.choice, style);
+    return ei;
+  }
+  if (n == 8) {
+    ei = new EditInfo_0('', 0, -1, -1);
+    ei.checkbox = new Checkbox_0('Show Box', (this.flags & 2) != 0);
+    return ei;
+  }
+  if (n == 9 && this.switchingTime > 0)
+    return new EditInfo_0('Switching Time (s)', this.switchingTime, 0, 0);
+  if (n == 10)
+    return createCheckbox('Pulldown Resistor', (this.flags & 16) != 0);
+  return null;
+}
+  ;
+_.getElmType = function getElmType_20() {
+  return 'relay';
+}
+  ;
+_.getInfo_0 = function getInfo_65(arr) {
+  var i, ln;
+  arr[0] = LS('relay');
+  this.i_position == 0 ? (arr[0] += ' (' + LS('off') + ')') : this.i_position == 1 && (arr[0] += ' (' + LS('on') + ')');
+  this.switchingTime == 0 && (arr[0] += ' (' + LS('old model') + ')');
+  ln = 1;
+  for (i = 0; i != this.poleCount; i++)
+    arr[ln++] = 'I' + (i + 1) + ' = ' + getUnitText($wnd.Math.abs(this.switchCurrent[i]), 'A', false);
+  arr[ln++] = LS('coil I') + ' = ' + getUnitText($wnd.Math.abs(this.coilCurrent), 'A', false);
+  arr[ln++] = LS('coil Vd') + ' = ' + getUnitText($wnd.Math.abs(this.volts[this.nCoil1] - this.volts[this.nCoil2]), 'V', false);
+}
+  ;
+_.getInternalNodeCount = function getInternalNodeCount_7() {
+  return 1;
+}
+  ;
+_.getPost = function getPost_16(n) {
+  if (n < 3 * this.poleCount)
+    return this.swposts[n / 3 | 0][n % 3];
+  return this.coilPosts[n - 3 * this.poleCount];
+}
+  ;
+_.getPostCount_0 = function getPostCount_52() {
+  return 2 + this.poleCount * 3;
+}
+  ;
+_.getShortcut = function getShortcut_36() {
+  return 82;
+}
+  ;
+_.getXmlDumpType = function getXmlDumpType_18() {
+  return 'rl';
+}
+  ;
+_.hasGroundConnection = function hasGroundConnection_15(n) {
+  return (this.flags & 16) != 0 && n < this.nCoil1;
+}
+  ;
+_.nonLinear = function nonLinear_17() {
+  return true;
+}
+  ;
+_.reset_0 = function reset_34() {
+  var i;
+  $reset(this);
+  $resetTo(this.ind, 0);
+  this.coilCurrent = this.coilCurCount = 0;
+  for (i = 0; i != this.poleCount; i++)
+    this.switchCurrent[i] = this.switchCurCount[i] = 0;
+  this.d_position = this.i_position = 0;
+}
+  ;
+_.setEditValue = function setEditValue_55(n, ei) {
+  var style, styles;
+  if (n == 0 && ei.value_0 > 0) {
+    this.inductance = ei.value_0;
+    $setup_1(this.ind, this.inductance, this.coilCurrent, 2);
+  }
+  n == 1 && ei.value_0 > 0 && (this.r_on = ei.value_0);
+  n == 2 && ei.value_0 > 0 && (this.r_off = ei.value_0);
+  n == 3 && ei.value_0 > 0 && (this.onCurrent = ei.value_0);
+  if (n == 4) {
+    if (ei.button_0) {
+      this.switchingTime = $intern_119;
+      ei.newDialog = true;
+    }
+    else
+      ei.value_0 > 0 && (this.offCurrent = ei.value_0);
+  }
+  if (n == 5 && ei.value_0 >= 1) {
+    this.poleCount = round_int(ei.value_0);
+    $setPoints_21(this);
+  }
+  n == 6 && ei.value_0 > 0 && (this.coilR = ei.value_0);
+  if (n == 7) {
+    style = $getElement(ei.choice).selectedIndex;
+    styles = stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [4, 0, 1]);
+    this.flags &= -6;
+    this.flags |= styles[style];
+    $setPoints_21(this);
+  }
+  n == 8 && (this.flags = $changeFlag(ei, this.flags, 2));
+  n == 9 && ei.value_0 > 0 && (this.switchingTime = ei.value_0);
+  n == 10 && (this.flags = $changeFlag(ei, this.flags, 16));
+}
+  ;
+_.setPoints = function setPoints_54() {
+  $setPoints_21(this);
+}
+  ;
+_.stamp = function stamp_47() {
+  var i;
+  $stamp_2(this.ind, this.nodes[this.nCoil1], this.nodes[this.nCoil3]);
+  $stampResistor(sim_0, this.nodes[this.nCoil3], this.nodes[this.nCoil2], this.coilR);
+  for (i = 0; i != this.poleCount * 3; i++)
+    $stampNonLinear(sim_0, this.nodes[i]);
+  if ((this.flags & 16) != 0) {
+    for (i = 0; i < this.poleCount; i++) {
+      $stampResistor(sim_0, this.nodes[1 + i * 3], 0, this.r_off);
+      $stampResistor(sim_0, this.nodes[2 + i * 3], 0, this.r_off);
+    }
+  }
+}
+  ;
+_.startIteration = function startIteration_11() {
+  var absCurrent, pmult, c, p;
+  if (this.switchingTime == 0) {
+    $startIteration(this.ind, this.volts[this.nCoil1] - this.volts[this.nCoil3]);
+    pmult = $wnd.Math.sqrt(2.3);
+    c = this.onCurrent;
+    p = this.coilCurrent * pmult / c;
+    this.d_position = $wnd.Math.abs(p * p) - 1.3;
+    this.d_position < 0 && (this.d_position = 0);
+    this.d_position > 1 && (this.d_position = 1);
+    this.d_position < 0.1 ? (this.i_position = 0) : this.d_position > 0.9 ? (this.i_position = 1) : (this.i_position = 2);
+    return;
+  }
+  $startIteration(this.ind, this.volts[this.nCoil1] - this.volts[this.nCoil3]);
+  absCurrent = $wnd.Math.abs(this.coilCurrent);
+  if (this.onState) {
+    if (absCurrent < this.offCurrent) {
+      this.onState = false;
+      this.i_position = 2;
+    }
+    else {
+      this.d_position += sim_0.timeStep / this.switchingTime;
+      this.d_position >= 1 && (this.d_position = this.i_position = 1);
+    }
+  }
+  else {
+    if (absCurrent > this.onCurrent) {
+      this.onState = true;
+      this.i_position = 2;
+    }
+    else {
+      this.d_position -= sim_0.timeStep / this.switchingTime;
+      this.d_position <= 0 && (this.d_position = this.i_position = 0);
+    }
+  }
+}
+  ;
+_.undumpXml = function undumpXml_61(xml) {
+  this.flags = $parseIntAttr(xml, 'f', this.flags);
+  this.poleCount = $parseIntAttr(xml, 'po', this.poleCount);
+  this.inductance = $parseDoubleAttr(xml, 'in', this.inductance);
+  this.r_on = $parseDoubleAttr(xml, 'ron', this.r_on);
+  this.r_off = $parseDoubleAttr(xml, 'roff', this.r_off);
+  this.onCurrent = $parseDoubleAttr(xml, 'on', this.onCurrent);
+  this.coilR = $parseDoubleAttr(xml, 'coR', this.coilR);
+  this.offCurrent = $parseDoubleAttr(xml, 'of', this.offCurrent);
+  this.switchingTime = $parseDoubleAttr(xml, 'sw', this.switchingTime);
+  this.coilCurrent = $parseDoubleAttr(xml, 'i', this.coilCurrent);
+  this.d_position = this.i_position = $parseIntAttr(xml, 'ip', this.i_position);
+  $postUndump(this);
+}
+  ;
+_.coilCurCount = 0;
+_.coilCurrent = 0;
+_.coilR = 0;
+_.currentOffset1 = 0;
+_.currentOffset2 = 0;
+_.d_position = 0;
+_.dflip = 0;
+_.i_position = 0;
+_.inductance = 0;
+_.nCoil1 = 0;
+_.nCoil2 = 0;
+_.nCoil3 = 0;
+_.offCurrent = 0;
+_.onCurrent = 0;
+_.onState = false;
+_.openhs = 0;
+_.poleCount = 0;
+_.r_off = 0;
+_.r_on = 0;
+_.switchingTime = 0;
+var Lcom_lushprojects_circuitjs1_client_RelayElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'RelayElm', 388);
+function $setResistance(this$static, r) {
+  this$static.resistance = r;
+}
+
+function ResistorElm(xx, yy) {
+  CircuitElm.call(this, xx, yy);
+  this.resistance = $intern_21;
+}
+
+function ResistorElm_0(xa, ya, xb, yb, f, st) {
+  CircuitElm_0.call(this, xa, ya, xb, yb, f);
+  this.resistance = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+}
+
+defineClass(174, 7, { 7: 1, 10: 1, 174: 1 }, ResistorElm, ResistorElm_0);
+_.addRoutingObstacle = function addRoutingObstacle_16(wr) {
+  $addRoutingObstacleWithLeads(this, wr, 6);
+}
+  ;
+_.calculateCurrent = function calculateCurrent_27() {
+  this.current_0 = (this.volts[0] - this.volts[1]) / this.resistance;
+}
+  ;
+_.draw = function draw_60(g) {
+  var grad, hs, i, len, s, v1, v2;
+  hs = 6;
+  v1 = this.volts[0];
+  v2 = this.volts[1];
+  $setBbox_0(this, this.point1, this.point2, 6);
+  $draw2Leads(this, g);
+  len = distance(this.lead1, this.lead2);
+  g.context.save();
+  g.context.lineWidth = 3;
+  $transform(g.context, (this.lead2.x_0 - this.lead1.x_0) / len, (this.lead2.y_0 - this.lead1.y_0) / len, -(this.lead2.y_0 - this.lead1.y_0) / len, (this.lead2.x_0 - this.lead1.x_0) / len, this.lead1.x_0, this.lead1.y_0);
+  if (app_0.menus.voltsCheckItem.on) {
+    grad = $createLinearGradient(g.context, 0, 0, len, 0);
+    $addColorStop(grad, 0, $getHexValue($getVoltageColor(this, v1)));
+    $addColorStop(grad, 1, $getHexValue($getVoltageColor(this, v2)));
+    $setStrokeStyleWeb(g.context, grad);
+  }
+  else
+    $setPowerColor_0(this, g);
+  this.dn < 30 && (hs = 2);
+  if (app_0.menus.euroResistorCheckItem.on) {
+    $strokeRect(g.context, 0, -hs, len, 2 * hs);
+  }
+  else {
+    g.context.beginPath();
+    g.context.moveTo(0, 0);
+    for (i = 0; i < 4; i++) {
+      $lineTo(g.context, (1 + 4 * i) * len / 16, hs);
+      $lineTo(g.context, (3 + 4 * i) * len / 16, -hs);
+    }
+    $lineTo(g.context, len, 0);
+    g.context.stroke();
+  }
+  g.context.restore();
+  if (app_0.menus.showValuesCheckItem.on) {
+    s = getUnitText(this.resistance, '', true);
+    $drawValues(this, g, s, hs + 2);
+  }
+  this.curcount_0 = $updateDotCount(this.current_0, this.curcount_0);
+  app_0.mouse.dragElm == this || $drawDots(g, this.point1, this.point2, this.curcount_0);
+  $drawPosts(this, g);
+}
+  ;
+_.dumpXml = function dumpXml_60(doc, elem) {
+  dumpAttr_1(elem, 'x', this.x_0 + ' ' + this.y_0 + ' ' + this.x2 + ' ' + this.y2);
+  dumpAttr_0(elem, 'f', this.flags);
+  dumpAttr(elem, 'r', this.resistance);
+}
+  ;
+_.getDumpType = function getDumpType_84() {
+  return 114;
+}
+  ;
+_.getEditInfo = function getEditInfo_58(n) {
+  if (n == 0)
+    return new EditInfo_0('Resistance (ohms)', this.resistance, 0, 0);
+  return null;
+}
+  ;
+_.getInfo_0 = function getInfo_66(arr) {
+  arr[0] = 'resistor';
+  arr[1] = 'I = ' + getUnitText($wnd.Math.abs(this.current_0), 'A', false);
+  arr[2] = 'Vd = ' + getUnitText($wnd.Math.abs(this.volts[0] - this.volts[1]), 'V', false);
+  arr[3] = 'R = ' + getUnitText(this.resistance, ohmString, false);
+  arr[4] = 'P = ' + getUnitText((this.volts[0] - this.volts[1]) * this.current_0, 'W', false);
+}
+  ;
+_.getScopeText = function getScopeText_5(v) {
+  return LS('resistor') + ', ' + getUnitText(this.resistance, ohmString, false);
+}
+  ;
+_.getShortcut = function getShortcut_37() {
+  return 114;
+}
+  ;
+_.setEditValue = function setEditValue_56(n, ei) {
+  this.resistance = ei.value_0 <= 0 ? $intern_74 : ei.value_0;
+}
+  ;
+_.setPoints = function setPoints_55() {
+  $setPoints(this);
+  $calcLeads(this, 32);
+  new Point_1;
+  new Point_1;
+}
+  ;
+_.stamp = function stamp_48() {
+  $stampResistor(sim_0, this.nodes[0], this.nodes[1], this.resistance);
+}
+  ;
+_.undumpXml = function undumpXml_62(xml) {
+  this.flags = $parseIntAttr(xml, 'f', this.flags);
+  this.resistance = $parseDoubleAttr(xml, 'r', this.resistance);
+}
+  ;
+_.resistance = 0;
+var Lcom_lushprojects_circuitjs1_client_ResistorElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ResistorElm', 174);
+function $setupPins_16(this$static) {
+  var i, ii;
+  this$static.sizeX = this$static.bits > 2 ? this$static.bits : 2;
+  this$static.sizeY = 2;
+  this$static.pins = initUnidimensionalArray(Lcom_lushprojects_circuitjs1_client_ChipElm$Pin_2_classLit, $intern_3, 9, (this$static.flags & 2) != 0 && this$static.bits >= 3 ? this$static.bits + 3 : this$static.bits + 2, 0, 1);
+  this$static.pins[0] = new ChipElm$Pin(this$static, 1, 2, '');
+  this$static.pins[0].clock = true;
+  this$static.pins[1] = new ChipElm$Pin(this$static, this$static.sizeX - 1, 1, 'R');
+  this$static.pins[1].lineOver = (this$static.flags & 4) == 0;
+  for (i = 0; i != this$static.bits; i++) {
+    ii = i + 2;
+    this$static.pins[ii] = new ChipElm$Pin(this$static, i, 0, 'Q' + i);
+    this$static.pins[ii].output = this$static.pins[ii].state = true;
+  }
+  if ((this$static.flags & 2) != 0 && this$static.bits >= 3) {
+    this$static.clockInhibit = this$static.pins.length - 1;
+    this$static.pins[this$static.clockInhibit] = new ChipElm$Pin(this$static, 1, 1, 'CE');
+    this$static.pins[this$static.clockInhibit].lineOver = true;
+  }
+  else
+    this$static.clockInhibit = -1;
+  $allocNodes(this$static);
+}
+
+function RingCounterElm(xx, yy) {
+  $clinit_ChipElm();
+  ChipElm.call(this, xx, yy);
+  this.flags |= 2;
+  $setupPins_16(this);
+}
+
+function RingCounterElm_0(xa, ya, xb, yb, f, st) {
+  $clinit_ChipElm();
+  ChipElm_0.call(this, xa, ya, xb, yb, f, st);
+  this.justLoaded = true;
+}
+
+defineClass(293, 32, $intern_79, RingCounterElm, RingCounterElm_0);
+_.defaultBitCount = function defaultBitCount_1() {
+  return 10;
+}
+  ;
+_.execute_3 = function execute_35() {
+  var i, running;
+  if (this.justLoaded) {
+    this.justLoaded = false;
+    return;
+  }
+  running = true;
+  (this.flags & 2) != 0 && this.bits >= 3 && this.pins[this.clockInhibit].value_0 && (running = false);
+  for (i = 0; i != this.bits; i++)
+    if (this.pins[i + 2].value_0)
+      break;
+  if (this.pins[0].value_0 && !this.lastClock && running) {
+    i < this.bits && (this.pins[i++ + 2].value_0 = false);
+    i %= this.bits;
+    this.pins[i + 2].value_0 = true;
+  }
+  if (this.pins[1].value_0 != ((this.flags & 4) == 0) || i == this.bits) {
+    for (i = 1; i != this.bits; i++)
+      this.pins[i + 2].value_0 = false;
+    this.pins[2].value_0 = true;
+  }
+  this.lastClock = this.pins[0].value_0;
+}
+  ;
+_.getChipEditInfo = function getChipEditInfo_17(n) {
+  var ei;
+  if (n == 0) {
+    ei = new EditInfo_0('', 0, -1, -1);
+    ei.checkbox = new Checkbox_0('Invert reset pin', (this.flags & 4) == 0);
+    return ei;
+  }
+  if (n == 1)
+    return $setDimensionless(new EditInfo_0('# of Bits', this.bits, 1, 1));
+  return null;
+}
+  ;
+_.getChipName = function getChipName_21() {
+  return 'ring counter';
+}
+  ;
+_.getDumpType = function getDumpType_85() {
+  return 163;
+}
+  ;
+_.getPostCount_0 = function getPostCount_53() {
+  return (this.flags & 2) != 0 && this.bits >= 3 ? this.bits + 3 : this.bits + 2;
+}
+  ;
+_.getVoltageSourceCount = function getVoltageSourceCount_38() {
+  return this.bits;
+}
+  ;
+_.needsBits = function needsBits_8() {
+  return true;
+}
+  ;
+_.setChipEditValue = function setChipEditValue_18(n, ei) {
+  if (n == 0) {
+    $getState(ei.checkbox) ? (this.flags &= -5) : (this.flags |= 4);
+    $setupPins_16(this);
+    $setPoints_0(this);
+    return;
+  }
+  if (n == 1 && ei.value_0 >= 2) {
+    this.bits = round_int(ei.value_0);
+    $setupPins_16(this);
+    $setPoints_0(this);
+  }
+}
+  ;
+_.setupPins = function setupPins_22() {
+  $setupPins_16(this);
+}
+  ;
+_.clockInhibit = 0;
+_.justLoaded = false;
+var Lcom_lushprojects_circuitjs1_client_RingCounterElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'RingCounterElm', 293);
+function WireElm(xx, yy) {
+  CircuitElm.call(this, xx, yy);
+}
+
+function WireElm_0(xa, ya, xb, yb, f) {
+  CircuitElm_0.call(this, xa, ya, xb, yb, f);
+}
+
+defineClass(125, 7, { 7: 1, 10: 1, 125: 1 }, WireElm, WireElm_0);
+_.draw = function draw_61(g) {
+  var s;
+  $setVoltageColor(this, g, this.volts[0]);
+  drawThickLine_0(g, this.point1, this.point2);
+  this.doDots(g);
+  $setBbox_0(this, this.point1, this.point2, 3);
+  s = '';
+  (this.flags & 1) != 0 && (s = getUnitText($wnd.Math.abs(this.current_0), 'A', true));
+  (this.flags & 2) != 0 && (s = (s.length > 0 ? s + ' ' : '') + getUnitText(this.volts[0], 'V', true));
+  $drawValues(this, g, s, 4);
+  $drawPosts(this, g);
+}
+  ;
+_.getDumpType = function getDumpType_86() {
+  return 119;
+}
+  ;
+_.getEditInfo = function getEditInfo_59(n) {
+  var ei;
+  if (n == 0) {
+    ei = new EditInfo_0('', 0, -1, -1);
+    ei.checkbox = new Checkbox_0('Show Current', (this.flags & 1) != 0);
+    return ei;
+  }
+  if (n == 1) {
+    ei = new EditInfo_0('', 0, -1, -1);
+    ei.checkbox = new Checkbox_0('Show Voltage', (this.flags & 2) != 0);
+    return ei;
+  }
+  return null;
+}
+  ;
+_.getInfo_0 = function getInfo_67(arr) {
+  arr[0] = 'wire';
+  arr[1] = 'I = ' + getUnitText($wnd.Math.abs(this.current_0), 'A', false);
+  arr[2] = 'V = ' + getUnitText(this.volts[0], 'V', false);
+}
+  ;
+_.getMouseDistance = function getMouseDistance_2(gx, gy) {
+  var d2;
+  d2 = $lineDistanceSq(this.x_0, this.y_0, this.x2, this.y2, gx, gy);
+  if (d2 <= 100)
+    return d2;
+  return -1;
+}
+  ;
+_.getPower = function getPower_9() {
+  return 0;
+}
+  ;
+_.getShortcut = function getShortcut_38() {
+  return 119;
+}
+  ;
+_.getVoltageDiff_0 = function getVoltageDiff_18() {
+  return this.volts[0];
+}
+  ;
+_.isRemovableWire = function isRemovableWire_7() {
+  return true;
+}
+  ;
+_.isWireEquivalent = function isWireEquivalent_8() {
+  return true;
+}
+  ;
+_.setEditValue = function setEditValue_57(n, ei) {
+  n == 0 && ($getState(ei.checkbox) ? (this.flags |= 1) : (this.flags &= -2));
+  n == 1 && ($getState(ei.checkbox) ? (this.flags |= 2) : (this.flags &= -3));
+}
+  ;
+_.stamp = function stamp_49() {
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_WireElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'WireElm', 125);
+function $doDots(this$static, g) {
+  var a, b, cc, dx, dy, i, segLen;
+  this$static.curcount_0 = $updateDotCount(this$static.current_0, this$static.curcount_0);
+  if (app_0.mouse.dragElm == this$static || this$static.curcount_0 == 0)
+    return;
+  cc = this$static.curcount_0;
+  for (i = 0; i < this$static.routePoints.array.length - 1; i++) {
+    a = $get_2(this$static.routePoints, i);
+    b = $get_2(this$static.routePoints, i + 1);
+    $drawDots(g, a, b, cc);
+    dx = b.x_0 - a.x_0;
+    dy = b.y_0 - a.y_0;
+    segLen = $wnd.Math.sqrt(dx * dx + dy * dy);
+    cc = $addCurCount(cc, segLen);
+  }
+}
+
+function $getSnapPointOnWire(this$static, mx, my) {
+  var a, a0, b, b0, bestDist, bestSeg, d, i, sx, sy;
+  if (!this$static.routePoints || this$static.routePoints.array.length < 2)
+    return null;
+  bestSeg = -1;
+  bestDist = $intern_0;
+  for (i = 0; i < this$static.routePoints.array.length - 1; i++) {
+    a0 = $get_2(this$static.routePoints, i);
+    b0 = $get_2(this$static.routePoints, i + 1);
+    d = $lineDistanceSq(a0.x_0, a0.y_0, b0.x_0, b0.y_0, mx, my);
+    if (d < bestDist) {
+      bestDist = d;
+      bestSeg = i;
+    }
+  }
+  a = $get_2(this$static.routePoints, bestSeg);
+  b = $get_2(this$static.routePoints, bestSeg + 1);
+  if (a.x_0 == b.x_0) {
+    sx = a.x_0;
+    sy = $snapGrid_0(app_0, my);
+  }
+  else {
+    sy = a.y_0;
+    sx = $snapGrid_0(app_0, mx);
+  }
+  return new Point_2(sx, sy);
+}
+
+function $rerouteVia(this$static, vx, vy) {
+  var a, b, combined, i, i0, router, rp1, rp2;
+  router = new WireRouter;
+  $initGrid(router, this$static);
+  rp1 = $routeWire(router, this$static.x_0, this$static.y_0, vx, vy);
+  if (rp1.array.length < 2)
+    return;
+  for (i0 = 0; i0 < rp1.array.length - 1; i0++) {
+    a = (checkCriticalElementIndex(i0, rp1.array.length), rp1.array[i0]);
+    b = (checkCriticalElementIndex(i0 + 1, rp1.array.length), rp1.array[i0 + 1]);
+    $addWire(router, a.x_0, a.y_0, b.x_0, b.y_0);
+  }
+  rp2 = $routeWire(router, vx, vy, this$static.x2, this$static.y2);
+  if (rp2.array.length < 2)
+    return;
+  combined = new ArrayList_1(rp1);
+  for (i = 1; i < rp2.array.length; i++)
+    $add_8(combined, (checkCriticalElementIndex(i, rp2.array.length), rp2.array[i]));
+  this$static.routePoints = combined;
+}
+
+function $setPoints_22(this$static, points) {
+  var first, last;
+  first = (checkCriticalElementIndex(0, points.array.length), points.array[0]);
+  last = $get_2(points, points.array.length - 1);
+  this$static.x_0 = first.x_0;
+  this$static.y_0 = first.y_0;
+  this$static.x2 = last.x_0;
+  this$static.y2 = last.y_0;
+  $setPoints_23(this$static, false);
+  this$static.routePoints = points;
+}
+
+function $setPoints_23(this$static, routing) {
+  var first, last, router;
+  $setPoints(this$static);
+  if (!!this$static.routePoints && this$static.routePoints.array.length >= 2) {
+    first = $get_2(this$static.routePoints, 0);
+    last = $get_2(this$static.routePoints, this$static.routePoints.array.length - 1);
+    if (first.x_0 == this$static.x_0 && first.y_0 == this$static.y_0 && last.x_0 == this$static.x2 && last.y_0 == this$static.y2)
+      return;
+  }
+  if (!routing) {
+    this$static.routePoints = new ArrayList;
+    $add_8(this$static.routePoints, this$static.point1);
+    $add_8(this$static.routePoints, this$static.point2);
+    return;
+  }
+  router = new WireRouter;
+  $initGrid(router, this$static);
+  this$static.routePoints = $routeWire(router, this$static.x_0, this$static.y_0, this$static.x2, this$static.y2);
+  if (this$static.routePoints.array.length < 2) {
+    console.log('routing failed');
+    this$static.routePoints = new ArrayList;
+    $add_8(this$static.routePoints, this$static.point1);
+    $add_8(this$static.routePoints, new Point_2(this$static.x2, this$static.y_0));
+    $add_8(this$static.routePoints, this$static.point2);
+    return;
+  }
+  console.log('route success');
+}
+
+function $split(this$static, mx, my) {
+  var a, a0, b, b0, bestDist, bestSeg, d, i, i0, i1, rp1, rp2, sx, sy;
+  if (!this$static.routePoints || this$static.routePoints.array.length < 2)
+    return null;
+  bestSeg = -1;
+  bestDist = $intern_0;
+  for (i0 = 0; i0 < this$static.routePoints.array.length - 1; i0++) {
+    a0 = $get_2(this$static.routePoints, i0);
+    b0 = $get_2(this$static.routePoints, i0 + 1);
+    d = $lineDistanceSq(a0.x_0, a0.y_0, b0.x_0, b0.y_0, mx, my);
+    if (d < bestDist) {
+      bestDist = d;
+      bestSeg = i0;
+    }
+  }
+  a = $get_2(this$static.routePoints, bestSeg);
+  b = $get_2(this$static.routePoints, bestSeg + 1);
+  if (a.x_0 == b.x_0) {
+    sx = a.x_0;
+    sy = $snapGrid_0(app_0, my);
+    sy = $wnd.Math.max($wnd.Math.min(a.y_0, b.y_0), $wnd.Math.min(sy, $wnd.Math.max(a.y_0, b.y_0)));
+  }
+  else {
+    sy = a.y_0;
+    sx = $snapGrid_0(app_0, mx);
+    sx = $wnd.Math.max($wnd.Math.min(a.x_0, b.x_0), $wnd.Math.min(sx, $wnd.Math.max(a.x_0, b.x_0)));
+  }
+  if (sx == this$static.x_0 && sy == this$static.y_0 || sx == this$static.x2 && sy == this$static.y2)
+    return null;
+  rp1 = new ArrayList;
+  for (i1 = 0; i1 <= bestSeg; i1++)
+    $add_8(rp1, $get_2(this$static.routePoints, i1));
+  $add_8(rp1, new Point_2(sx, sy));
+  rp2 = new ArrayList;
+  $add_8(rp2, new Point_2(sx, sy));
+  for (i = bestSeg + 1; i < this$static.routePoints.array.length; i++)
+    $add_8(rp2, $get_2(this$static.routePoints, i));
+  $setPoints_22(this$static, rp1);
+  return new RoutedWireElm_1(rp2);
+}
+
+function RoutedWireElm(xx, yy) {
+  WireElm.call(this, xx, yy);
+}
+
+function RoutedWireElm_0(xa, ya, xb, yb, f) {
+  WireElm_0.call(this, xa, ya, xb, yb, f);
+}
+
+function RoutedWireElm_1(points) {
+  WireElm.call(this, (checkCriticalElementIndex(0, points.array.length), points.array[0]).x_0, (checkCriticalElementIndex(0, points.array.length), points.array[0]).y_0);
+  $setPoints_22(this, points);
+}
+
+defineClass(132, 125, { 7: 1, 10: 1, 132: 1, 125: 1 }, RoutedWireElm, RoutedWireElm_0, RoutedWireElm_1);
+_.addRoutingObstacle = function addRoutingObstacle_17(router) {
+  var a, b, i;
+  if (!this.routePoints)
+    return;
+  for (i = 0; i < this.routePoints.array.length - 1; i++) {
+    a = $get_2(this.routePoints, i);
+    b = $get_2(this.routePoints, i + 1);
+    $addWire(router, a.x_0, a.y_0, b.x_0, b.y_0);
+  }
+}
+  ;
+_.doDots = function doDots_0(g) {
+  $doDots(this, g);
+}
+  ;
+_.draw = function draw_62(g) {
+  var i, i0, maxX, maxY, minX, minY, p, s;
+  $setVoltageColor(this, g, this.volts[0]);
+  for (i0 = 0; i0 < this.routePoints.array.length - 1; i0++)
+    drawThickLine_0(g, $get_2(this.routePoints, i0), $get_2(this.routePoints, i0 + 1));
+  $doDots(this, g);
+  minX = this.point1.x_0;
+  minY = this.point1.y_0;
+  maxX = this.point1.x_0;
+  maxY = this.point1.y_0;
+  for (i = 1; i < this.routePoints.array.length; i++) {
+    p = $get_2(this.routePoints, i);
+    minX = min_1(minX, p.x_0);
+    minY = min_1(minY, p.y_0);
+    maxX = max_1(maxX, p.x_0);
+    maxY = max_1(maxY, p.y_0);
+  }
+  $setBbox(this, minX - 5, minY - 5, maxX + 5, maxY + 5);
+  s = '';
+  (this.flags & 1) != 0 && (s = getUnitText($wnd.Math.abs(this.current_0), 'A', true));
+  (this.flags & 2) != 0 && (s = (s.length > 0 ? s + ' ' : '') + getUnitText(this.volts[0], 'V', true));
+  s.length > 0 && $drawValues(this, g, s, 4);
+  $drawPosts(this, g);
+}
+  ;
+_.dumpXml = function dumpXml_61(doc, elem) {
+  var i, p, sb;
+  dumpAttr_1(elem, 'x', this.x_0 + ' ' + this.y_0 + ' ' + this.x2 + ' ' + this.y2);
+  dumpAttr_0(elem, 'f', this.flags);
+  if (!!this.routePoints && this.routePoints.array.length > 0) {
+    sb = new StringBuilder;
+    for (i = 0; i < this.routePoints.array.length; i++) {
+      i > 0 && (sb.string += ';', sb);
+      p = $get_2(this.routePoints, i);
+      $append_2($append_0($append_2(sb, p.x_0), 44), p.y_0);
+    }
+    $appendChild_0(elem, $createTextNode(doc, sb.string));
+  }
+}
+  ;
+_.getDumpType = function getDumpType_87() {
+  return 0;
+}
+  ;
+_.getInfo_0 = function getInfo_68(arr) {
+  arr[0] = 'routed wire';
+  arr[1] = 'I = ' + getUnitText($wnd.Math.abs(this.current_0), 'A', false);
+  arr[2] = 'V = ' + getUnitText(this.volts[0], 'V', false);
+}
+  ;
+_.getMouseDistance = function getMouseDistance_3(gx, gy) {
+  var a, b, best, d, i;
+  best = $intern_0;
+  for (i = 0; i < this.routePoints.array.length - 1; i++) {
+    a = $get_2(this.routePoints, i);
+    b = $get_2(this.routePoints, i + 1);
+    d = $lineDistanceSq(a.x_0, a.y_0, b.x_0, b.y_0, gx, gy);
+    d < best && (best = d);
+  }
+  if (best <= 100)
+    return best;
+  return -1;
+}
+  ;
+_.getShortcut = function getShortcut_39() {
+  return 87;
+}
+  ;
+_.getXmlDumpType = function getXmlDumpType_19() {
+  return 'rw';
+}
+  ;
+_.setPoints = function setPoints_56() {
+  $setPoints_23(this, true);
+}
+  ;
+_.undumpXml = function undumpXml_63(xml) {
+  var contents, pair, pair$index, pair$max, pairs, points, xy;
+  this.flags = $parseIntAttr(xml, 'f', this.flags);
+  try {
+    contents = $parseContents(xml);
+    if (contents != null && contents.length > 0) {
+      points = new ArrayList;
+      pairs = $split_1(contents, ';', 0);
+      for (pair$index = 0, pair$max = pairs.length; pair$index < pair$max; ++pair$index) {
+        pair = pairs[pair$index];
+        xy = $split_1(pair, ',', 0);
+        $add_8(points, new Point_2(__parseAndValidateInt(xy[0], 10), __parseAndValidateInt(xy[1], 10)));
+      }
+      points.array.length >= 2 && (this.routePoints = points);
+    }
+  }
+  catch ($e0) {
+    $e0 = toJava($e0);
+    if (!instanceOf($e0, 15))
+      throw toJs($e0);
+  }
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_RoutedWireElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'RoutedWireElm', 132);
+function RowInfo() {
+  this.type_0 = 0;
+}
+
+defineClass(275, 1, { 275: 1 }, RowInfo);
+_.dropRow = false;
+_.lsChanges = false;
+_.mapCol = 0;
+_.mapRow = 0;
+_.rsChanges = false;
+_.type_0 = 0;
+_.value_0 = 0;
+var Lcom_lushprojects_circuitjs1_client_RowInfo_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'RowInfo', 275);
+function $fixEnds(this$static) {
+  var pt;
+  pt = new Point_1;
+  $interpPoint_2(this$static.point1, this$static.point2, pt, 1, app_0.gridSize * this$static.dir_0);
+  this$static.x2 = pt.x_0;
+  this$static.y2 = pt.y_0;
+}
+
+function $setDefaults(this$static) {
+  this$static.gresistance = 50;
+  this$static.holdingI = 0.0082;
+  this$static.triggerI = $intern_34;
+}
+
+function $setup_5(this$static) {
+  this$static.diode = new Diode(sim_0);
+  $setup(this$static.diode, getModelWithName_1('default'));
+  this$static.aresistance = 1;
+}
+
+function SCRElm(xx, yy) {
+  CircuitElm.call(this, xx, yy);
+  $setDefaults(this);
+  this.flags |= 1;
+  $setup_5(this);
+}
+
+function SCRElm_0(xa, ya, xb, yb, f, st) {
+  CircuitElm_0.call(this, xa, ya, xb, yb, f);
+  $setDefaults(this);
+  try {
+    this.lastvac = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+    this.lastvag = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+    this.volts[0] = 0;
+    this.volts[1] = -this.lastvac;
+    this.volts[2] = -this.lastvag;
+    this.triggerI = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+    this.holdingI = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+    this.gresistance = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  }
+  catch ($e0) {
+    $e0 = toJava($e0);
+    if (!instanceOf($e0, 15))
+      throw toJs($e0);
+  }
+  $setup_5(this);
+}
+
+defineClass(399, 7, $intern_79, SCRElm, SCRElm_0);
+_.calculateCurrent = function calculateCurrent_28() {
+  this.ig = (this.volts[2] - this.volts[1]) / this.gresistance;
+  this.ia = (this.volts[0] - this.volts[3]) / this.aresistance;
+  this.ic = -this.ig - this.ia;
+}
+  ;
+_.doStep = function doStep_37() {
+  var iamult, icmult, vac, vag;
+  vac = this.volts[0] - this.volts[1];
+  vag = this.volts[0] - this.volts[2];
+  ($wnd.Math.abs(vac - this.lastvac) > $intern_34 || $wnd.Math.abs(vag - this.lastvag) > $intern_34) && (sim_0.converged = false);
+  this.lastvac = vac;
+  this.lastvag = vag;
+  $doStep_0(this.diode, this.volts[3] - this.volts[1]);
+  icmult = 1 / this.triggerI;
+  iamult = 1 / this.holdingI - icmult;
+  this.aresistance = -icmult * this.ic + this.ia * iamult > 1 ? 0.0105 : $intern_78;
+  $stampResistor(sim_0, this.nodes[0], this.nodes[3], this.aresistance);
+}
+  ;
+_.draw = function draw_63(g) {
+  var ds, v1, v2;
+  $setBbox_0(this, this.point1, this.point2, 8);
+  $adjustBbox_0(this, this.gate[0], this.gate[1]);
+  v1 = this.volts[0];
+  v2 = this.volts[1];
+  $draw2Leads(this, g);
+  $setColor_0(g, $getVoltageColor(this, v1));
+  $setPowerColor_0(this, g);
+  $fillPolygon(g, this.poly);
+  $setVoltageColor(this, g, this.volts[2]);
+  drawThickLine_0(g, this.lead2, this.gate[0]);
+  drawThickLine_0(g, this.gate[0], this.gate[1]);
+  $setColor_0(g, $getVoltageColor(this, v2));
+  $setPowerColor_0(this, g);
+  drawThickLine_0(g, this.cathode[0], this.cathode[1]);
+  this.curcount_a = $updateDotCount(this.ia, this.curcount_a);
+  this.curcount_c = $updateDotCount(this.ic, this.curcount_c);
+  this.curcount_g = $updateDotCount(this.ig, this.curcount_g);
+  if (app_0.mouse.dragElm != this) {
+    $drawDots(g, this.point1, this.lead2, this.curcount_a);
+    $drawDots(g, this.point2, this.lead2, this.curcount_c);
+    $drawDots(g, this.gate[1], this.gate[0], this.curcount_g);
+    $drawDots(g, this.gate[0], this.lead2, this.curcount_g + distance(this.gate[1], this.gate[0]));
+  }
+  if ((mouseElmRef == this || this.selected_0 || app_0.mouse.plotYElm == this || instanceOf(mouseElmRef, 20) && $getElm_0(mouseElmRef.elmScope) == this || $isOnHighlightedNet(this) || app_0.mouse.dragElm == this) && this.point1.x_0 == this.point2.x_0 && this.point2.y_0 > this.point1.y_0) {
+    $setColor_0(g, whiteColor);
+    ds = sign_0(this.dx);
+    $drawString(g, 'C', this.lead2.x_0 + (ds < 0 ? 5 : -15), this.lead2.y_0 + 12);
+    $drawString(g, 'A', this.lead1.x_0 + 5, this.lead1.y_0 - 4);
+    $drawString(g, 'G', this.gate[0].x_0, this.gate[0].y_0 + 12);
+  }
+  $drawPosts(this, g);
+}
+  ;
+_.dumpXml = function dumpXml_62(doc, elem) {
+  dumpAttr_1(elem, 'x', this.x_0 + ' ' + this.y_0 + ' ' + this.x2 + ' ' + this.y2);
+  dumpAttr_0(elem, 'f', this.flags);
+  dumpAttr(elem, 'tr', this.triggerI);
+  dumpAttr(elem, 'ho', this.holdingI);
+  dumpAttr(elem, 'gr', this.gresistance);
+}
+  ;
+_.flipX = function flipX_13(c2, count) {
+  $fixEnds(this);
+  $flipX(this, c2);
+}
+  ;
+_.flipXY = function flipXY_10(c2, count) {
+  $fixEnds(this);
+  $flipXY(this, c2);
+}
+  ;
+_.flipY = function flipY_13(c2, count) {
+  $fixEnds(this);
+  $flipY(this, c2);
+}
+  ;
+_.getCurrentIntoNode = function getCurrentIntoNode_24(n) {
+  if (n == 0)
+    return -this.ia;
+  if (n == 1)
+    return -this.ic;
+  return -this.ig;
+}
+  ;
+_.getDumpType = function getDumpType_88() {
+  return 177;
+}
+  ;
+_.getEditInfo = function getEditInfo_60(n) {
+  if (n == 0)
+    return new EditInfo_0('Trigger Current (A)', this.triggerI, 0, 0);
+  if (n == 1)
+    return new EditInfo_0('Holding Current (A)', this.holdingI, 0, 0);
+  if (n == 2)
+    return new EditInfo_0('Gate Resistance (ohms)', this.gresistance, 0, 0);
+  return null;
+}
+  ;
+_.getInfo_0 = function getInfo_69(arr) {
+  var vac, vag, vgc;
+  arr[0] = 'SCR';
+  vac = this.volts[0] - this.volts[1];
+  vag = this.volts[0] - this.volts[2];
+  vgc = this.volts[2] - this.volts[1];
+  arr[1] = 'Ia = ' + getUnitText(this.ia, 'A', false);
+  arr[2] = 'Ig = ' + getUnitText(this.ig, 'A', false);
+  arr[3] = 'Vac = ' + getUnitText(vac, 'V', false);
+  arr[4] = 'Vag = ' + getUnitText(vag, 'V', false);
+  arr[5] = 'Vgc = ' + getUnitText(vgc, 'V', false);
+  arr[6] = 'P = ' + getUnitText((this.volts[0] - this.volts[2]) * this.ia + (this.volts[1] - this.volts[2]) * this.ic, 'W', false);
+}
+  ;
+_.getInternalNodeCount = function getInternalNodeCount_8() {
+  return 1;
+}
+  ;
+_.getPost = function getPost_17(n) {
+  return n == 0 ? this.point1 : n == 1 ? this.point2 : this.gate[1];
+}
+  ;
+_.getPostCount_0 = function getPostCount_54() {
+  return 3;
+}
+  ;
+_.getPower = function getPower_10() {
+  return (this.volts[0] - this.volts[2]) * this.ia + (this.volts[1] - this.volts[2]) * this.ic;
+}
+  ;
+_.nonLinear = function nonLinear_18() {
+  return true;
+}
+  ;
+_.reset_0 = function reset_35() {
+  this.volts[0] = this.volts[1] = this.volts[2] = 0;
+  this.diode.lastvoltdiff = 0;
+  this.lastvag = this.lastvac = this.curcount_a = this.curcount_c = this.curcount_g = 0;
+}
+  ;
+_.setEditValue = function setEditValue_58(n, ei) {
+  n == 0 && ei.value_0 > 0 && (this.triggerI = ei.value_0);
+  n == 1 && ei.value_0 > 0 && (this.holdingI = ei.value_0);
+  n == 2 && ei.value_0 > 0 && (this.gresistance = ei.value_0);
+}
+  ;
+_.setPoints = function setPoints_57() {
+  var gatelen, leadlen, pa;
+  $setPoints(this);
+  this.dir_0 = 0;
+  if (abs_0(this.dx) > abs_0(this.dy)) {
+    this.dir_0 = -sign_0(this.dx) * sign_0(this.dy);
+    (this.flags & 1) != 0 && (this.dn = abs_0(this.dx));
+    this.point2.y_0 = this.point1.y_0;
+  }
+  else {
+    this.dir_0 = sign_0(this.dy) * sign_0(this.dx);
+    (this.flags & 1) != 0 && (this.dn = abs_0(this.dy));
+    this.point2.x_0 = this.point1.x_0;
+  }
+  this.dir_0 == 0 && (this.dir_0 = 1);
+  $calcLeads(this, 16);
+  this.cathode = $newPointArray(2);
+  pa = $newPointArray(2);
+  $interpPoint2(this.lead1, this.lead2, pa[0], pa[1], 0, 8);
+  $interpPoint2(this.lead1, this.lead2, this.cathode[0], this.cathode[1], 1, 8);
+  this.poly = $createPolygon(pa[0], pa[1], this.lead2);
+  this.gate = $newPointArray(2);
+  leadlen = (this.dn - 16) / 2;
+  gatelen = app_0.gridSize;
+  gatelen = round_int(gatelen + leadlen % app_0.gridSize);
+  if (leadlen < gatelen) {
+    this.x2 = this.x_0;
+    this.y2 = this.y_0;
+    return;
+  }
+  $interpPoint_2(this.lead2, this.point2, this.gate[0], gatelen / leadlen, gatelen * this.dir_0);
+  $interpPoint_2(this.lead2, this.point2, this.gate[1], gatelen / leadlen, app_0.gridSize * 2 * this.dir_0);
+  this.gate[1].x_0 = $snapGrid(this.gate[1].x_0);
+  this.gate[1].y_0 = $snapGrid(this.gate[1].y_0);
+}
+  ;
+_.stamp = function stamp_50() {
+  $stampNonLinear(sim_0, this.nodes[0]);
+  $stampNonLinear(sim_0, this.nodes[1]);
+  $stampNonLinear(sim_0, this.nodes[2]);
+  $stampNonLinear(sim_0, this.nodes[3]);
+  $stampResistor(sim_0, this.nodes[2], this.nodes[1], this.gresistance);
+  $stamp_0(this.diode, this.nodes[3], this.nodes[1]);
+}
+  ;
+_.undumpXml = function undumpXml_64(xml) {
+  this.flags = $parseIntAttr(xml, 'f', this.flags);
+  this.triggerI = $parseDoubleAttr(xml, 'tr', this.triggerI);
+  this.holdingI = $parseDoubleAttr(xml, 'ho', this.holdingI);
+  this.gresistance = $parseDoubleAttr(xml, 'gr', this.gresistance);
+  $setup_5(this);
+}
+  ;
+_.aresistance = 0;
+_.curcount_a = 0;
+_.curcount_c = 0;
+_.curcount_g = 0;
+_.dir_0 = 0;
+_.gresistance = 0;
+_.holdingI = 0;
+_.ia = 0;
+_.ic = 0;
+_.ig = 0;
+_.lastvac = 0;
+_.lastvag = 0;
+_.triggerI = 0;
+var Lcom_lushprojects_circuitjs1_client_SCRElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SCRElm', 399);
+function $contentsToString(this$static) {
+  var ct, h, h0, hex, i, maxI, s, val, number, number_0, number_1;
+  hex = (this$static.flags & 4) != 0;
+  s = '';
+  maxI = 1 << this$static.addressBits;
+  for (i = 0; i < maxI; i++) {
+    val = $get_1(this$static.map_0, valueOf(i));
+    if (!val)
+      continue;
+    s += (hex ? (number = i >>> 0, number.toString(16)).toUpperCase() : '' + i) + ': ' + (hex ? (h0 = (number_0 = (val.value_0 & 255) >>> 0, number_0.toString(16)).toUpperCase(), h0.length < 2 ? '0' + h0 : h0) : '' + val);
+    ct = 1;
+    while (true) {
+      val = $get_1(this$static.map_0, valueOf(++i));
+      if (!val)
+        break;
+      s += ' ' + (hex ? (h = (number_1 = (val.value_0 & 255) >>> 0, number_1.toString(16)).toUpperCase(), h.length < 2 ? '0' + h : h) : '' + val);
+      if (++ct == 8)
+        break;
+    }
+    s += '\n';
+  }
+  return s;
+}
+
+function $parseContentsString(this$static, s) {
+  var addr, args, i, j, line, lines, val, vals;
+  $reset_10(this$static.map_0);
+  lines = $split_1(s, '\n', 0);
+  for (i = 0; i != lines.length; i++) {
+    try {
+      line = lines[i];
+      args = $split_1(line, ': *', 0);
+      addr = $parseNumber_0(this$static, args[0]);
+      vals = $split_1(args[1], ' +', 0);
+      for (j = 0; j != vals.length; j++) {
+        val = $parseNumber_0(this$static, vals[j]);
+        $put_0(this$static.map_0, valueOf(addr++), valueOf(val));
+      }
+    }
+    catch ($e0) {
+      $e0 = toJava($e0);
+      if (!instanceOf($e0, 15))
+        throw toJs($e0);
+    }
+  }
+}
+
+function $parseNumber_0(this$static, str) {
+  if ($equals_1(str.substr(0, 2), '0x'))
+    return __parseAndValidateInt(str.substr(2), 16);
+  if ($equals_1(str.substr(0, 2), '0b'))
+    return __parseAndValidateInt(str.substr(2), 2);
+  if ((this$static.flags & 4) != 0)
+    return __parseAndValidateInt(str, 16);
+  return __parseAndValidateInt(str, 10);
+}
+
+function $setupPins_17(this$static) {
+  var i, ii;
+  this$static.sizeX = 2;
+  this$static.sizeY = max_1(this$static.addressBits, this$static.dataBits) + 1;
+  this$static.pins = initUnidimensionalArray(Lcom_lushprojects_circuitjs1_client_ChipElm$Pin_2_classLit, $intern_3, 9, 2 + this$static.addressBits + this$static.dataBits, 0, 1);
+  this$static.pins[0] = new ChipElm$Pin(this$static, 0, 2, 'WE');
+  this$static.pins[0].lineOver = true;
+  this$static.pins[1] = new ChipElm$Pin(this$static, 0, 3, 'OE');
+  this$static.pins[1].lineOver = true;
+  this$static.addressNodes = 2;
+  this$static.dataNodes = 2 + this$static.addressBits;
+  this$static.internalNodes = 2 + this$static.addressBits + this$static.dataBits;
+  for (i = 0; i != this$static.addressBits; i++) {
+    ii = i + this$static.addressNodes;
+    this$static.pins[ii] = new ChipElm$Pin(this$static, this$static.sizeY - this$static.addressBits + i, 2, 'A' + (this$static.addressBits - i - 1));
+  }
+  for (i = 0; i != this$static.dataBits; i++) {
+    ii = i + this$static.dataNodes;
+    this$static.pins[ii] = new ChipElm$Pin(this$static, this$static.sizeY - this$static.dataBits + i, 3, 'D' + (this$static.dataBits - i - 1));
+    this$static.pins[ii].output = true;
+  }
+  $allocNodes(this$static);
+}
+
+function SRAMElm(xx, yy) {
+  $clinit_ChipElm();
+  ChipElm.call(this, xx, yy);
+  this.addressBits = this.dataBits = 4;
+  this.map_0 = new HashMap;
+  $setupPins_17(this);
+}
+
+function SRAMElm_0(xa, ya, xb, yb, f, st) {
+  $clinit_ChipElm();
+  var a, v;
+  ChipElm_0.call(this, xa, ya, xb, yb, f, st);
+  this.map_0 = new HashMap;
+  this.addressBits = __parseAndValidateInt($nextToken(st), 10);
+  this.dataBits = __parseAndValidateInt($nextToken(st), 10);
+  $setupPins_17(this);
+  try {
+    while (true) {
+      a = __parseAndValidateInt($nextToken(st), 10);
+      if (a < 0)
+        break;
+      v = __parseAndValidateInt($nextToken(st), 10);
+      $put_0(this.map_0, valueOf(a), valueOf(v));
+      while (true) {
+        v = __parseAndValidateInt($nextToken(st), 10);
+        if (v < 0)
+          break;
+        $put_0(this.map_0, valueOf(++a), valueOf(v));
+      }
+    }
+  }
+  catch ($e0) {
+    $e0 = toJava($e0);
+    if (!instanceOf($e0, 15))
+      throw toJs($e0);
+  }
+}
+
+defineClass(391, 32, $intern_79, SRAMElm, SRAMElm_0);
+_.doStep = function doStep_38() {
+  var data_0, dataObj, i, outputEnabled, p, writeEnabled;
+  writeEnabled = this.volts[0] < this.highVoltage / 2;
+  outputEnabled = this.volts[1] < this.highVoltage / 2 && !writeEnabled;
+  this.address = 0;
+  for (i = 0; i != this.addressBits; i++) {
+    this.address |= this.volts[this.addressNodes + i] > this.highVoltage / 2 ? 1 << this.addressBits - 1 - i : 0;
+  }
+  dataObj = $get_1(this.map_0, valueOf(this.address));
+  data_0 = !dataObj ? 0 : dataObj.value_0;
+  for (i = 0; i != this.dataBits; i++) {
+    p = this.pins[i + this.dataNodes];
+    $updateVoltageSource(sim_0, p.voltSource, (data_0 & 1 << this.dataBits - 1 - i) == 0 ? 0 : this.highVoltage);
+    $stampResistor(sim_0, this.nodes[this.internalNodes + i], this.nodes[this.dataNodes + i], outputEnabled ? 1 : $intern_90);
+  }
+}
+  ;
+_.dumpXml = function dumpXml_63(doc, elem) {
+  $dumpXml_0(this, elem);
+  dumpAttr_0(elem, 'ab', this.addressBits);
+  dumpAttr_0(elem, 'db', this.dataBits);
+}
+  ;
+_.dumpXmlState = function dumpXmlState_12(doc, elem) {
+  $dumpXmlState(this, elem);
+  $size(this.map_0) == 0 || $appendChild_0(elem, $createTextNode(doc, $contentsToString(this)));
+}
+  ;
+_.getChipEditInfo = function getChipEditInfo_18(n) {
+  var ei, s;
+  if (n == 0)
+    return $setDimensionless(new EditInfo_0('# of Address Bits', this.addressBits, 1, 1));
+  if (n == 1)
+    return $setDimensionless(new EditInfo_0('# of Data Bits', this.dataBits, 1, 1));
+  if (n == 2) {
+    ei = new EditInfo('Contents', 0);
+    ei.textArea = new TextArea_0;
+    this.editTextArea = ei.textArea;
+    $setVisibleLines(ei.textArea);
+    s = contentsOverride != null ? contentsOverride : $contentsToString(this);
+    contentsOverride = null;
+    $setText_2(ei.textArea, s);
+    return ei;
+  }
+  if (n == 3) {
+    ei = new EditInfo_0('', 0, -1, -1);
+    ei.checkbox = new Checkbox_0('Hex Display', (this.flags & 4) != 0);
+    return ei;
+  }
+  if (n == 4 && ($clinit_FocusWidget(), isSupported_1())) {
+    ei = new EditInfo_0('', 0, -1, -1);
+    ei.loadFile = new SRAMLoadFile;
+    ei.button_0 = new Button_1('Load Contents From File');
+    ei.newDialog = true;
+    return ei;
+  }
+  return null;
+}
+  ;
+_.getChipName = function getChipName_22() {
+  return 'Static RAM';
+}
+  ;
+_.getDumpType = function getDumpType_89() {
+  return 413;
+}
+  ;
+_.getInternalNodeCount = function getInternalNodeCount_9() {
+  return this.dataBits;
+}
+  ;
+_.getPostCount_0 = function getPostCount_55() {
+  return 2 + this.addressBits + this.dataBits;
+}
+  ;
+_.getVoltageSourceCount = function getVoltageSourceCount_39() {
+  return this.dataBits;
+}
+  ;
+_.nonLinear = function nonLinear_19() {
+  return true;
+}
+  ;
+_.setChipEditValue = function setChipEditValue_19(n, ei) {
+  var oldFlags;
+  if (n == 0 && ei.value_0 >= 2 && ei.value_0 <= 16) {
+    this.addressBits = round_int(ei.value_0);
+    $setupPins_17(this);
+    $setPoints_0(this);
+  }
+  if (n == 1 && ei.value_0 >= 2 && ei.value_0 <= 16) {
+    this.dataBits = round_int(ei.value_0);
+    $setupPins_17(this);
+    $setPoints_0(this);
+  }
+  n == 2 && (this.hexTogglePending || $parseContentsString(this, $getText(ei.textArea)));
+  if (n == 3) {
+    if (this.hexTogglePending) {
+      this.hexTogglePending = false;
+      return;
+    }
+    oldFlags = this.flags;
+    !!this.editTextArea && $parseContentsString(this, $getText(this.editTextArea));
+    this.flags = $changeFlag(ei, this.flags, 4);
+    if (this.flags != oldFlags) {
+      contentsOverride = $contentsToString(this);
+      this.hexTogglePending = true;
+      ei.newDialog = true;
+    }
+  }
+}
+  ;
+_.setupPins = function setupPins_23() {
+  $setupPins_17(this);
+}
+  ;
+_.stamp = function stamp_51() {
+  var i, p;
+  for (i = 0; i != this.dataBits; i++) {
+    p = this.pins[i + this.dataNodes];
+    $stampVoltageSource(sim_0, 0, this.nodes[this.internalNodes + i], p.voltSource);
+    $stampNonLinear(sim_0, this.nodes[this.internalNodes + i]);
+    $stampNonLinear(sim_0, this.nodes[this.dataNodes + i]);
+  }
+}
+  ;
+_.stepFinished = function stepFinished_18() {
+  var data_0, i, writeEnabled;
+  data_0 = 0;
+  writeEnabled = this.volts[0] < this.highVoltage / 2;
+  if (!writeEnabled)
+    return;
+  for (i = 0; i != this.dataBits; i++) {
+    data_0 |= this.volts[this.dataNodes + i] > this.highVoltage / 2 ? 1 << this.dataBits - 1 - i : 0;
+  }
+  $put_0(this.map_0, valueOf(this.address), valueOf(data_0));
+}
+  ;
+_.undumpXml = function undumpXml_65(xml) {
+  $undumpXml_0(this, xml);
+  this.addressBits = $parseIntAttr(xml, 'ab', this.addressBits);
+  this.dataBits = $parseIntAttr(xml, 'db', this.dataBits);
+  this.map_0 = new HashMap;
+  try {
+    $parseContentsString(this, $parseContents(xml));
+  }
+  catch ($e0) {
+    $e0 = toJava($e0);
+    if (!instanceOf($e0, 15))
+      throw toJs($e0);
+  }
+  $setupPins_17(this);
+}
+  ;
+_.address = 0;
+_.addressBits = 0;
+_.addressNodes = 0;
+_.dataBits = 0;
+_.dataNodes = 0;
+_.hexTogglePending = false;
+_.internalNodes = 0;
+var contentsOverride = null;
+var Lcom_lushprojects_circuitjs1_client_SRAMElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SRAMElm', 391);
+function $handle() {
+  var oFiles = $doc.getElementById('EditDialogLoadFileElement').files, nFiles = oFiles.length;
+  if (nFiles >= 1) {
+    if (oFiles[0].size >= 128000) {
+      alert_0(LS('Cannot load: That file is too large!'));
+      return;
+    }
+    var reader = new FileReader;
+    reader.onload = function (e) {
+      var arr = new Uint8Array(reader.result);
+      var str = '0:';
+      for (var i = 0; i < arr.length; i++)
+        str += ' ' + arr[i];
+      $clinit_ChipElm();
+      contentsOverride = str;
+      $resetDialog(editDialog_0);
+      contentsOverride = null;
+    }
+      ;
+    reader.readAsArrayBuffer(oFiles[0]);
+  }
+}
+
+function SRAMLoadFile() {
+  $clinit_FocusWidget();
+  FileUpload.call(this);
+  $setName_0(this, LS('Load File'));
+  ($clinit_DOM(), this.element).id = 'EditDialogLoadFileElement';
+  $addDomHandler(this, this, ($clinit_ChangeEvent(), $clinit_ChangeEvent(), TYPE_0));
+  setStyleName(this.element, 'offScreen', true);
+  this.element.style['width'] = '0px';
+  this.element.style['height'] = '0px';
+}
+
+defineClass(875, 874, $intern_107, SRAMLoadFile);
+var Lcom_lushprojects_circuitjs1_client_SRAMLoadFile_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SRAMLoadFile', 875);
+function SchmittElm(xx, yy) {
+  InvertingSchmittElm.call(this, xx, yy);
+}
+
+function SchmittElm_0(xa, ya, xb, yb, f, st) {
+  InvertingSchmittElm_0.call(this, xa, ya, xb, yb, f, st);
+}
+
+defineClass(413, 254, $intern_79, SchmittElm, SchmittElm_0);
+_.doStep = function doStep_39() {
+  var maxStep, out;
+  if (this.state) {
+    if (this.volts[0] > this.upperTrigger) {
+      this.state = false;
+      out = this.logicOnLevel;
+    }
+    else {
+      out = this.logicOffLevel;
+    }
+  }
+  else {
+    if (this.volts[0] < this.lowerTrigger) {
+      this.state = true;
+      out = this.logicOffLevel;
+    }
+    else {
+      out = this.logicOnLevel;
+    }
+  }
+  maxStep = this.slewRate * sim_0.timeStep * $intern_32;
+  out = $wnd.Math.max($wnd.Math.min(this.lastOutputVoltage + maxStep, out), this.lastOutputVoltage - maxStep);
+  $updateVoltageSource(sim_0, this.voltSource, out);
+}
+  ;
+_.draw = function draw_64(g) {
+  $drawPosts(this, g);
+  $draw2Leads(this, g);
+  $setColor_0(g, mouseElmRef == this || this.selected_0 || app_0.mouse.plotYElm == this || instanceOf(mouseElmRef, 20) && $getElm_0(mouseElmRef.elmScope) == this || $isOnHighlightedNet(this) ? selectColor_0 : lightGrayColor);
+  drawThickPolygon(g, this.gatePoly);
+  g.context.lineWidth = 2;
+  drawPolygon(g, this.symbolPoly);
+  g.context.lineWidth = 1;
+  this.curcount_0 = $updateDotCount(this.current_0, this.curcount_0);
+  $drawDots(g, this.lead2, this.point2, this.curcount_0);
+}
+  ;
+_.getCurrentIntoNode = function getCurrentIntoNode_25(n) {
+  if (n == 1)
+    return this.current_0;
+  return 0;
+}
+  ;
+_.getDumpType = function getDumpType_90() {
+  return 182;
+}
+  ;
+_.getInfo_0 = function getInfo_70(arr) {
+  arr[0] = 'Schmitt Trigger~';
+}
+  ;
+_.setPoints = function setPoints_58() {
+  var triPoints, ww;
+  $setPoints_12(this);
+  ww = 16;
+  16 > this.dn / 2 && (ww = round_int(this.dn / 2));
+  this.lead1 = $interpPoint(this.point1, this.point2, 0.5 - ww / this.dn);
+  this.lead2 = $interpPoint(this.point1, this.point2, 0.5 + (ww - 3) / this.dn);
+  triPoints = $newPointArray(3);
+  $interpPoint2(this.lead1, this.lead2, triPoints[0], triPoints[1], 0, 16);
+  triPoints[2] = $interpPoint(this.point1, this.point2, 0.5 + (ww - 5) / this.dn);
+  this.gatePoly = $createPolygon_1(triPoints);
+}
+  ;
+_.startIteration = function startIteration_12() {
+  this.lastOutputVoltage = this.volts[1];
+}
+  ;
+_.lastOutputVoltage = 0;
+var Lcom_lushprojects_circuitjs1_client_SchmittElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SchmittElm', 413);
+function $clinit_Scope() {
+  $clinit_Scope = emptyMethod;
+  multa = stampJavaTypeInfo(getClassLiteralForArray(D_classLit, 1), $intern_70, 8, 15, [2, 2.5, 2]);
+}
+
+function $addElm(this$static, ce) {
+  instanceOf(ce, 151) ? $addValue(this$static, 6, ce) : $addValue(this$static, 0, ce);
+}
+
+function $addValue(this$static, val, ce) {
+  var u;
+  if (val == 0) {
+    $add_11(this$static.plots, new ScopePlot_0(ce, 0, 0, $getManScaleFromMaxScale(this$static, 0, false)));
+    !!ce && this$static.app.menus.dotsCheckItem.on && !(instanceOf(ce, 229) || instanceOf(ce, 253) || instanceOf(ce, 233) || instanceOf(ce, 230)) && $add_11(this$static.plots, new ScopePlot_0(ce, 1, 3, $getManScaleFromMaxScale(this$static, 1, false)));
+  }
+  else {
+    u = ce.getScopeUnits(val);
+    $add_11(this$static.plots, new ScopePlot_0(ce, u, val, $getManScaleFromMaxScale(this$static, u, false)));
+    u == 0 && (this$static.showV = true);
+    u == 1 && (this$static.showI = true);
+  }
+  $calcVisiblePlots(this$static);
+  $resetGraph(this$static, false);
+}
+
+function $allocImage(this$static) {
+  if (this$static.imageCanvas) {
+    $setWidth(this$static.imageCanvas, this$static.rect_0.width_0 + 'PX');
+    $setHeight(this$static.imageCanvas, this$static.rect_0.height_0 + 'PX');
+    $setCoordinateSpaceWidth(this$static.imageCanvas, this$static.rect_0.width_0);
+    $setCoordinateSpaceHeight(this$static.imageCanvas, this$static.rect_0.height_0);
+    $clear2dView(this$static);
+  }
+}
+
+function $calc2dGridPx(this$static, width_0, height) {
+  var m;
+  m = width_0 < height ? width_0 : height;
+  return m / 2 / (this$static.manDivisions / 2 + 0.05);
+}
+
+function $calcGridStepX(this$static) {
+  var gsx, multptr, ts;
+  multptr = 0;
+  gsx = 1.0E-15;
+  ts = this$static.sim.maxTimeStep * this$static.speed;
+  while (gsx < ts * 20) {
+    gsx *= multa[multptr++ % 3];
+  }
+  return gsx;
+}
+
+function $calcMaxAndMin(this$static, units) {
+  var i, ip, ipa, maxV, minV, plot, si, validCount;
+  this$static.maxValue = -100000000;
+  this$static.minValue = $intern_90;
+  for (si = 0; si != this$static.visiblePlots.arrayList.array.length; si++) {
+    plot = $get_4(this$static.visiblePlots, si);
+    if (plot.units != units)
+      continue;
+    ipa = $displayStartIndex(this$static, plot, this$static.rect_0.width_0);
+    validCount = $validDataCount(this$static, plot, ipa, this$static.rect_0.width_0);
+    maxV = plot.maxValues;
+    minV = plot.minValues;
+    for (i = 0; i != validCount; i++) {
+      ip = i + ipa & this$static.scopePointCount - 1;
+      maxV[ip] > this$static.maxValue && (this$static.maxValue = maxV[ip]);
+      minV[ip] < this$static.minValue && (this$static.minValue = minV[ip]);
+    }
+  }
+}
+
+function $calcPlotScale(this$static, plot) {
+  var gridMax, i, ip, ipa, max_0, maxV, minV, validCount;
+  if (this$static.manualScale)
+    return;
+  ipa = $displayStartIndex(this$static, plot, this$static.rect_0.width_0);
+  validCount = $validDataCount(this$static, plot, ipa, this$static.rect_0.width_0);
+  maxV = plot.maxValues;
+  minV = plot.minValues;
+  max_0 = 0;
+  gridMax = this$static.scale_0[plot.units];
+  for (i = 0; i != validCount; i++) {
+    ip = i + ipa & this$static.scopePointCount - 1;
+    maxV[ip] > max_0 && (max_0 = maxV[ip]);
+    minV[ip] < -max_0 && (max_0 = -minV[ip]);
+  }
+  if (this$static.maxScale)
+    gridMax = $wnd.Math.max(max_0, gridMax);
+  else
+    while (max_0 > gridMax)
+      gridMax *= 2;
+  this$static.scale_0[plot.units] = gridMax;
+}
+
+function $calcVisiblePlots(this$static) {
+  var ac, i, oc, plot, vc;
+  this$static.visiblePlots = new Vector;
+  vc = 0;
+  ac = 0;
+  oc = 0;
+  if (this$static.plot2d) {
+    for (i = 0; i < 2 && i < this$static.plots.arrayList.array.length; i++) {
+      $add_11(this$static.visiblePlots, $get_4(this$static.plots, i));
+    }
+  }
+  else {
+    for (i = 0; i != this$static.plots.arrayList.array.length; i++) {
+      plot = $get_4(this$static.plots, i);
+      if (plot.units == 0) {
+        if (this$static.showV) {
+          $add_11(this$static.visiblePlots, plot);
+          $assignColor(plot, vc++);
+        }
+      }
+      else if (plot.units == 1) {
+        if (this$static.showI) {
+          $add_11(this$static.visiblePlots, plot);
+          $assignColor(plot, ac++);
+        }
+      }
+      else {
+        $add_11(this$static.visiblePlots, plot);
+        $assignColor(plot, oc++);
+      }
+    }
+  }
+}
+
+function $canShowRMS(this$static) {
+  var plot;
+  if (this$static.visiblePlots.arrayList.array.length == 0)
+    return false;
+  plot = $firstElement(this$static.visiblePlots);
+  return plot.units == 0 || plot.units == 1;
+}
+
+function $checkForSelection(this$static, mouseX, mouseY) {
+  var best, bestdist, dist, i, ip, ipa, maxvy, maxy, plot;
+  if ($dialogIsShowing(this$static.app.ui))
+    return;
+  if (!$contains(this$static.rect_0, mouseX, mouseY)) {
+    this$static.selectedPlot = -1;
+    return;
+  }
+  if (this$static.plots.arrayList.array.length == 0) {
+    this$static.selectedPlot = -1;
+    return;
+  }
+  ipa = $displayStartIndex(this$static, $get_4(this$static.plots, 0), this$static.rect_0.width_0);
+  ip = mouseX - this$static.rect_0.x_0 + ipa & this$static.scopePointCount - 1;
+  maxy = (this$static.rect_0.height_0 - 1) / 2 | 0;
+  bestdist = $intern_82;
+  best = -1;
+  for (i = 0; i != this$static.visiblePlots.arrayList.array.length; i++) {
+    plot = $get_4(this$static.visiblePlots, i);
+    maxvy = round_int(plot.gridMult * (plot.maxValues[ip] + plot.plotOffset));
+    dist = $wnd.Math.abs(mouseY - (this$static.rect_0.y_0 + maxy - maxvy));
+    if (dist < bestdist) {
+      bestdist = dist;
+      best = i;
+    }
+  }
+  this$static.selectedPlot = best;
+  this$static.selectedPlot >= 0 && (cursorUnits = $get_4(this$static.visiblePlots, this$static.selectedPlot).units);
+}
+
+function $checkForSelectionElsewhere(this$static) {
+  var i, p;
+  if (cursorScope == this$static)
+    return;
+  if (!cursorScope || this$static.visiblePlots.arrayList.array.length == 0) {
+    this$static.selectedPlot = -1;
+    return;
+  }
+  for (i = 0; i != this$static.visiblePlots.arrayList.array.length; i++) {
+    p = $get_4(this$static.visiblePlots, i);
+    if (p.units == cursorUnits) {
+      this$static.selectedPlot = i;
+      return;
+    }
+  }
+  this$static.selectedPlot = 0;
+}
+
+function $checkTrigger(this$static) {
+  var currentPtr, edgeCrossing, plot, val;
+  if (this$static.triggerMode == 0 || this$static.visiblePlots.arrayList.array.length == 0 || this$static.plot2d)
+    return;
+  plot = $firstElement(this$static.visiblePlots);
+  currentPtr = plot.ptr;
+  if (currentPtr == this$static.lastTriggerCheckPtr)
+    return;
+  this$static.lastTriggerCheckPtr = currentPtr;
+  val = (plot.maxValues[currentPtr] + plot.minValues[currentPtr]) * 0.5;
+  this$static.triggerEdge == 0 ? (edgeCrossing = this$static.prevTriggerValue < this$static.triggerLevel && val >= this$static.triggerLevel) : (edgeCrossing = this$static.prevTriggerValue > this$static.triggerLevel && val <= this$static.triggerLevel);
+  switch (this$static.triggerState) {
+    case 0:
+      if (edgeCrossing) {
+        this$static.triggerState = 1;
+        this$static.triggerPtr = currentPtr;
+        this$static.triggerTime = this$static.sim.t;
+        this$static.triggerHoldoff = 0;
+        this$static.triggerWaiting = false;
+        this$static.hasTriggerFired = true;
+      }
+      else {
+        this$static.triggerWaiting = true;
+        if (this$static.triggerMode == 2) {
+          ++this$static.triggerHoldoff;
+          if (this$static.triggerHoldoff >= this$static.triggerAutoTimeout) {
+            this$static.triggerState = 2;
+            this$static.triggerWaiting = false;
+          }
+        }
+      }
+
+      break;
+    case 1:
+      ++this$static.triggerHoldoff;
+      if (this$static.triggerHoldoff >= this$static.rect_0.width_0) {
+        this$static.triggerState = 0;
+        this$static.triggerHoldoff = 0;
+      }
+
+      break;
+    case 2:
+      if (edgeCrossing) {
+        this$static.triggerState = 1;
+        this$static.triggerPtr = currentPtr;
+        this$static.triggerTime = this$static.sim.t;
+        this$static.triggerHoldoff = 0;
+        this$static.hasTriggerFired = true;
+      }
+
+  }
+  this$static.prevTriggerValue = val;
+}
+
+function $clear2dView(this$static) {
+  if (this$static.imageContext) {
+    this$static.app.menus.printableCheckItem.on ? (this$static.imageContext.fillStyle = '#eee', undefined) : (this$static.imageContext.fillStyle = '#111', undefined);
+    $fillRect(this$static.imageContext, 0, 0, this$static.rect_0.width_0 - 1, this$static.rect_0.height_0 - 1);
+  }
+  this$static.draw_ox = this$static.draw_oy = -1;
+}
+
+function $combine(this$static, s) {
+  this$static.plots = this$static.visiblePlots;
+  $addAll_1(this$static.plots, s.visiblePlots);
+  s.plots.arrayList.array = initUnidimensionalArray(Ljava_lang_Object_2_classLit, $intern_3, 1, 0, 5, 1);
+  $calcVisiblePlots(this$static);
+}
+
+function $cursorInSettingsWheel(this$static) {
+  return this$static.rect_0.height_0 > 100 && this$static.rect_0.width_0 > 100 && this$static.app.mouse.mouseCursorX >= this$static.rect_0.x_0 && this$static.app.mouse.mouseCursorX <= this$static.rect_0.x_0 + 36 && this$static.app.mouse.mouseCursorY >= this$static.rect_0.y_0 + this$static.rect_0.height_0 - 36 && this$static.app.mouse.mouseCursorY <= this$static.rect_0.y_0 + this$static.rect_0.height_0;
+}
+
+function $displayStartIndex(this$static, plot, w) {
+  if (this$static.triggerMode == 0 || !this$static.hasTriggerFired || this$static.triggerState == 2)
+    return plot.ptr + plot.scopePointCount - w;
+  return this$static.triggerPtr + this$static.scopePointCount - (w / 2 | 0);
+}
+
+function $draw_2(this$static, g) {
+  var allPlotsSameUnits, i, plot, sel, si;
+  if (this$static.plots.arrayList.array.length == 0)
+    return;
+  if (this$static.scopeTimeStep != this$static.sim.maxTimeStep) {
+    this$static.scopeTimeStep = this$static.sim.maxTimeStep;
+    $resetGraph(this$static, false);
+  }
+  if (this$static.plot2d) {
+    $draw2d(this$static, g);
+    return;
+  }
+  $drawSettingsWheel(this$static, g);
+  g.context.save();
+  $setColor_0(g, ($clinit_Color(), red));
+  $translate(g.context, this$static.rect_0.x_0, this$static.rect_0.y_0);
+  $clipRect(g, this$static.rect_0.width_0, this$static.rect_0.height_0);
+  if (this$static.showFFT) {
+    $drawFFTVerticalGridLines(this$static, g);
+    $drawFFT(this$static, g);
+  }
+  for (i = 0; i != 5; i++) {
+    this$static.reduceRange[i] = false;
+    this$static.maxScale && !this$static.manualScale && (this$static.scale_0[i] = $intern_81);
+  }
+  this$static.somethingSelected = false;
+  for (si = 0; si != this$static.visiblePlots.arrayList.array.length; si++) {
+    plot = $get_4(this$static.visiblePlots, si);
+    $calcPlotScale(this$static, plot);
+    this$static.app.scopeManager.scopeSelected == -1 && !!plot.elm && $isMouseElm(plot.elm) && (this$static.somethingSelected = true);
+    this$static.reduceRange[plot.units] = true;
+  }
+  sel = $scopeMenuIsSelected(this$static.app.scopeManager, this$static);
+  $checkForSelectionElsewhere(this$static);
+  this$static.selectedPlot >= 0 && (this$static.somethingSelected = true);
+  this$static.drawGridLines = true;
+  allPlotsSameUnits = true;
+  for (i = 1; i < this$static.visiblePlots.arrayList.array.length; i++) {
+    $get_4(this$static.visiblePlots, i).units != $get_4(this$static.visiblePlots, 0).units && (allPlotsSameUnits = false);
+  }
+  (allPlotsSameUnits || this$static.showMax || this$static.showMin || this$static.showP2P) && this$static.visiblePlots.arrayList.array.length > 0 && $calcMaxAndMin(this$static, $firstElement(this$static.visiblePlots).units);
+  for (i = 0; i != this$static.visiblePlots.arrayList.array.length; i++) {
+    $get_4(this$static.visiblePlots, i).units > 1 && i != this$static.selectedPlot && $drawPlot(this$static, g, $get_4(this$static.visiblePlots, i), allPlotsSameUnits, false, sel);
+  }
+  for (i = 0; i != this$static.visiblePlots.arrayList.array.length; i++) {
+    $get_4(this$static.visiblePlots, i).units == 1 && i != this$static.selectedPlot && $drawPlot(this$static, g, $get_4(this$static.visiblePlots, i), allPlotsSameUnits, false, sel);
+  }
+  for (i = 0; i != this$static.visiblePlots.arrayList.array.length; i++) {
+    $get_4(this$static.visiblePlots, i).units == 0 && i != this$static.selectedPlot && $drawPlot(this$static, g, $get_4(this$static.visiblePlots, i), allPlotsSameUnits, false, sel);
+  }
+  this$static.selectedPlot >= 0 && this$static.selectedPlot < this$static.visiblePlots.arrayList.array.length && $drawPlot(this$static, g, $get_4(this$static.visiblePlots, this$static.selectedPlot), allPlotsSameUnits, true, sel);
+  $drawTriggerIndicator(this$static, g);
+  $drawInfoTexts(this$static, g);
+  g.context.restore();
+  g.currentFontSize = g.savedFontSize;
+  $drawCursor(this$static, g);
+  if ($get_4(this$static.plots, 0).ptr > 5 && !this$static.manualScale) {
+    for (i = 0; i != 5; i++)
+      this$static.scale_0[i] > $intern_81 && this$static.reduceRange[i] && (this$static.scale_0[i] /= 2);
+  }
+  !!this$static.properties && this$static.properties.showing && $refreshDraw(this$static.properties);
+}
+
+function $draw2d(this$static, g) {
+  var gridPx, i, info, px, py, sx, sy, xValue, yValue;
+  if (!this$static.imageContext)
+    return;
+  g.context.save();
+  $translate(g.context, this$static.rect_0.x_0, this$static.rect_0.y_0);
+  $clipRect(g, this$static.rect_0.width_0, this$static.rect_0.height_0);
+  ++this$static.alphaCounter;
+  if (this$static.alphaCounter > 2) {
+    this$static.alphaCounter = 0;
+    this$static.imageContext.globalAlpha = $intern_34;
+    this$static.app.menus.printableCheckItem.on ? (this$static.imageContext.fillStyle = '#ffffff', undefined) : (this$static.imageContext.fillStyle = '#000000', undefined);
+    $fillRect(this$static.imageContext, 0, 0, this$static.rect_0.width_0, this$static.rect_0.height_0);
+    this$static.imageContext.globalAlpha = 1;
+  }
+  $drawImage(g.context, this$static.imageContext.canvas, 0, 0);
+  $setColor_0(g, whiteColor);
+  $fillOval(g, this$static.draw_ox - 2, this$static.draw_oy - 2, 5);
+  $setColor_0(g, positiveColor_0);
+  $drawLine(g, 0, this$static.rect_0.height_0 / 2 | 0, this$static.rect_0.width_0 - 1, this$static.rect_0.height_0 / 2 | 0);
+  this$static.plotXY || $setColor_0(g, ($clinit_Color(), yellow));
+  $drawLine(g, this$static.rect_0.width_0 / 2 | 0, 0, this$static.rect_0.width_0 / 2 | 0, this$static.rect_0.height_0 - 1);
+  if (this$static.manualScale) {
+    gridPx = $calc2dGridPx(this$static, this$static.rect_0.width_0, this$static.rect_0.height_0);
+    g.context.strokeStyle = '#404040';
+    g.context.fillStyle = '#404040';
+    for (i = -this$static.manDivisions; i <= this$static.manDivisions; i++) {
+      i != 0 && $drawLine(g, round_int(gridPx * i) + (this$static.rect_0.width_0 / 2 | 0), 0, round_int(gridPx * i) + (this$static.rect_0.width_0 / 2 | 0), this$static.rect_0.height_0);
+      $drawLine(g, 0, round_int(gridPx * i) + (this$static.rect_0.height_0 / 2 | 0), this$static.rect_0.width_0, round_int(gridPx * i) + (this$static.rect_0.height_0 / 2 | 0));
+    }
+  }
+  this$static.textY = 10;
+  $setColor_0(g, whiteColor);
+  this$static.text_0 != null && $drawInfoText(this$static, g, this$static.text_0);
+  if (this$static.showScale && this$static.plots.arrayList.array.length >= 2 && this$static.manualScale) {
+    px = $get_4(this$static.plots, 0);
+    sx = $getUnitText(px, px.manScale);
+    py = $get_4(this$static.plots, 1);
+    sy = $getUnitText(py, py.manScale);
+    $drawInfoText(this$static, g, 'X=' + sx + '/div, Y=' + sy + '/div');
+  }
+  g.context.restore();
+  $drawSettingsWheel(this$static, g);
+  if (!$dialogIsShowing(this$static.app.ui) && $contains(this$static.rect_0, this$static.app.mouse.mouseCursorX, this$static.app.mouse.mouseCursorY) && this$static.plots.arrayList.array.length >= 2) {
+    gridPx = $calc2dGridPx(this$static, this$static.rect_0.width_0, this$static.rect_0.height_0);
+    info = initUnidimensionalArray(Ljava_lang_String_2_classLit, $intern_23, 2, 2, 6, 1);
+    px = $get_4(this$static.plots, 0);
+    py = $get_4(this$static.plots, 1);
+    if (this$static.manualScale) {
+      xValue = px.manScale * ((this$static.app.mouse.mouseCursorX - this$static.rect_0.x_0 - (this$static.rect_0.width_0 / 2 | 0)) / gridPx - this$static.manDivisions * px.manVPosition / 200);
+      yValue = py.manScale * ((-this$static.app.mouse.mouseCursorY + this$static.rect_0.y_0 + (this$static.rect_0.height_0 / 2 | 0)) / gridPx - this$static.manDivisions * py.manVPosition / 200);
+    }
+    else {
+      xValue = ((this$static.app.mouse.mouseCursorX - this$static.rect_0.x_0) / ($intern_121 * this$static.rect_0.width_0) - 1) * this$static.scaleX;
+      yValue = -((this$static.app.mouse.mouseCursorY - this$static.rect_0.y_0) / ($intern_121 * this$static.rect_0.height_0) - 1) * this$static.scaleY;
+    }
+    info[0] = $getUnitText(px, xValue);
+    info[1] = $getUnitText(py, yValue);
+    $drawCursorInfo(this$static, g, info, 2, this$static.app.mouse.mouseCursorX, ($clinit_Boolean(), true));
+  }
+}
+
+function $drawAverage(this$static, g) {
+  var avg, end, endAvg, firstState, i, ip, ipa, m, maxV, mid, minV, plot, start_0, state, sw, validCount, waveCount;
+  plot = $firstElement(this$static.visiblePlots);
+  avg = 0;
+  ipa = $displayStartIndex(this$static, plot, this$static.rect_0.width_0);
+  validCount = $validDataCount(this$static, plot, ipa, this$static.rect_0.width_0);
+  maxV = plot.maxValues;
+  minV = plot.minValues;
+  mid = (this$static.maxValue + this$static.minValue) / 2;
+  state = -1;
+  for (i = 0; i != validCount; i++) {
+    ip = i + ipa & this$static.scopePointCount - 1;
+    if (maxV[ip] != 0) {
+      maxV[ip] > mid && (state = 1);
+      break;
+    }
+  }
+  firstState = -state;
+  start_0 = i;
+  end = 0;
+  waveCount = 0;
+  endAvg = 0;
+  for (; i != validCount; i++) {
+    ip = i + ipa & this$static.scopePointCount - 1;
+    sw = false;
+    state == 1 ? maxV[ip] < mid && (sw = true) : minV[ip] > mid && (sw = true);
+    if (sw) {
+      state = -state;
+      if (firstState == state) {
+        if (waveCount == 0) {
+          start_0 = i;
+          firstState = state;
+          avg = 0;
+        }
+        ++waveCount;
+        end = i;
+        endAvg = avg;
+      }
+    }
+    if (waveCount > 0) {
+      m = (maxV[ip] + minV[ip]) * 0.5;
+      avg += m;
+    }
+  }
+  if (waveCount > 1) {
+    avg = endAvg / (end - start_0);
+    $drawInfoText(this$static, g, $getUnitText(plot, avg) + ('' + LS(' average')));
+  }
+}
+
+function $drawCursor(this$static, g) {
+  var ct, cursorX, db, fftIndex, info, ip, ipa, mag, maxFrequency, maxvy, maxy, plot;
+  if ($dialogIsShowing(this$static.app.ui))
+    return;
+  if (!cursorScope)
+    return;
+  info = initUnidimensionalArray(Ljava_lang_String_2_classLit, $intern_23, 2, 5, 6, 1);
+  cursorX = -1;
+  ct = 0;
+  if (cursorTime >= 0) {
+    this$static.triggerMode != 0 && this$static.hasTriggerFired && this$static.triggerState != 2 ? (cursorX = round_int(this$static.rect_0.x_0 + (this$static.rect_0.width_0 / 2 | 0) + (cursorTime - this$static.triggerTime) / (this$static.sim.maxTimeStep * this$static.speed))) : (cursorX = -round_int((this$static.sim.t - cursorTime) / (this$static.sim.maxTimeStep * this$static.speed) - this$static.rect_0.x_0 - this$static.rect_0.width_0));
+    if (cursorX >= this$static.rect_0.x_0) {
+      ipa = $displayStartIndex(this$static, $get_4(this$static.plots, 0), this$static.rect_0.width_0);
+      ip = cursorX - this$static.rect_0.x_0 + ipa & this$static.scopePointCount - 1;
+      maxy = (this$static.rect_0.height_0 - 1) / 2 | 0;
+      if (this$static.visiblePlots.arrayList.array.length > 0) {
+        plot = $get_4(this$static.visiblePlots, this$static.selectedPlot >= 0 ? this$static.selectedPlot : 0);
+        info[ct++] = $getUnitText(plot, plot.maxValues[ip]);
+        maxvy = round_int(plot.gridMult * (plot.maxValues[ip] + plot.plotOffset));
+        $setColor_1(g, plot.color_0);
+        $fillOval(g, cursorX - 2, this$static.rect_0.y_0 + maxy - maxvy - 2, 5);
+      }
+    }
+  }
+  if (this$static.showFFT && cursorScope == this$static) {
+    maxFrequency = 1 / (this$static.sim.maxTimeStep * this$static.speed * 2);
+    cursorX < 0 && (cursorX = this$static.app.mouse.mouseCursorX);
+    info[ct++] = getUnitText(maxFrequency * (this$static.app.mouse.mouseCursorX - this$static.rect_0.x_0) / this$static.rect_0.width_0, 'Hz', false);
+    if (!!this$static.fft && this$static.fftReal != null && this$static.fftMaxMagnitude > 0) {
+      fftIndex = (this$static.app.mouse.mouseCursorX - this$static.rect_0.x_0) * this$static.scopePointCount / (2 * this$static.rect_0.width_0) | 0;
+      if (fftIndex >= 0 && fftIndex < (this$static.scopePointCount / 2 | 0)) {
+        mag = $magnitude(this$static.fft, this$static.fftReal[fftIndex], this$static.fftImag[fftIndex]);
+        db = 20 * $wnd.Math.log(mag / this$static.fftMaxMagnitude) / $wnd.Math.log(10);
+        info[ct++] = toString_8(fromDouble_0($wnd.Math.round(db))) + ' dB';
+      }
+    }
+  }
+  else if (cursorX < this$static.rect_0.x_0)
+    return;
+  this$static.visiblePlots.arrayList.array.length > 0 && (info[ct++] = getTimeText(cursorTime));
+  if (cursorScope != this$static) {
+    if (this$static.rect_0.height_0 < 40 || this$static.position_0 >= 0 && cursorScope.position_0 == this$static.position_0) {
+      $drawCursorInfo(this$static, g, null, 0, cursorX, ($clinit_Boolean(), false));
+      return;
+    }
+  }
+  $drawCursorInfo(this$static, g, info, ct, cursorX, ($clinit_Boolean(), false));
+}
+
+function $drawCursorInfo(this$static, g, info, ct, x_0, drawY) {
+  var bx, i, szh, szw, w;
+  szw = 0;
+  szh = 15 * ct;
+  for (i = 0; i != ct; i++) {
+    w = round_int($measureText(g.context, info[i]).width);
+    w > szw && (szw = w);
+  }
+  $setColor_0(g, whiteColor);
+  $drawLine(g, x_0, this$static.rect_0.y_0, x_0, this$static.rect_0.y_0 + this$static.rect_0.height_0);
+  (checkCriticalNotNull(drawY), drawY) && $drawLine(g, this$static.rect_0.x_0, this$static.app.mouse.mouseCursorY, this$static.rect_0.x_0 + this$static.rect_0.width_0, this$static.app.mouse.mouseCursorY);
+  $setColor_0(g, this$static.app.menus.printableCheckItem.on ? ($clinit_Color(), white) : ($clinit_Color(), black));
+  bx = x_0;
+  x_0 < (szw / 2 | 0) && (bx = szw / 2 | 0);
+  $fillRect_0(g, bx - (szw / 2 | 0), this$static.rect_0.y_0 - szh, szw, szh);
+  $setColor_0(g, whiteColor);
+  for (i = 0; i != ct; i++) {
+    w = round_int($measureText(g.context, info[i]).width);
+    $drawString(g, info[i], bx - (w / 2 | 0), this$static.rect_0.y_0 - 2 - (ct - 1 - i) * 15);
+  }
+}
+
+function $drawDutyCycle(this$static, g) {
+  var duty, dutyLen, end, i, ip, ipa, maxV, mid, middle, minV, plot, start_0, state, sw, validCount, waveCount;
+  plot = $firstElement(this$static.visiblePlots);
+  ipa = $displayStartIndex(this$static, plot, this$static.rect_0.width_0);
+  validCount = $validDataCount(this$static, plot, ipa, this$static.rect_0.width_0);
+  maxV = plot.maxValues;
+  minV = plot.minValues;
+  mid = (this$static.maxValue + this$static.minValue) / 2;
+  state = -1;
+  for (i = 0; i != validCount; i++) {
+    ip = i + ipa & this$static.scopePointCount - 1;
+    if (maxV[ip] != 0) {
+      maxV[ip] > mid && (state = 1);
+      break;
+    }
+  }
+  start_0 = i;
+  end = 0;
+  waveCount = 0;
+  dutyLen = 0;
+  middle = 0;
+  for (; i != validCount; i++) {
+    ip = i + ipa & this$static.scopePointCount - 1;
+    sw = false;
+    state == 1 ? maxV[ip] < mid && (sw = true) : minV[ip] > mid && (sw = true);
+    if (sw) {
+      state = -state;
+      if (1 == state) {
+        if (waveCount == 0) {
+          start_0 = end = i;
+        }
+        else {
+          end = start_0;
+          start_0 = i;
+          dutyLen = end - middle;
+        }
+        ++waveCount;
+      }
+      else
+        middle = i;
+    }
+  }
+  if (waveCount > 1) {
+    duty = 100 * dutyLen / (end - start_0) | 0;
+    $drawInfoText(this$static, g, LS('Duty cycle ') + duty + '%');
+  }
+}
+
+function $drawElmInfo(this$static, g) {
+  var i, info;
+  info = initUnidimensionalArray(Ljava_lang_String_2_classLit, $intern_23, 2, 1, 6, 1);
+  $getElm_0(this$static).getInfo_0(info);
+  for (i = 0; info[i] != null; i++)
+    $drawInfoText(this$static, g, info[i]);
+}
+
+function $drawFFT(this$static, g) {
+  var db, db0, height, i, i0, i1, ii, imag, m, magnitude, maxM, maxV, minV, pixelsPerDb, plot, plotHeight, prevHeight, prevX, prevY, ptr, real, x_0, y_0;
+  (!this$static.fft || this$static.fft.size_0 != this$static.scopePointCount) && (this$static.fft = new FFT(this$static.scopePointCount));
+  real = initUnidimensionalArray(D_classLit, $intern_70, 8, this$static.scopePointCount, 15, 1);
+  imag = initUnidimensionalArray(D_classLit, $intern_70, 8, this$static.scopePointCount, 15, 1);
+  plot = this$static.visiblePlots.arrayList.array.length == 0 ? $firstElement(this$static.plots) : $firstElement(this$static.visiblePlots);
+  maxV = plot.maxValues;
+  minV = plot.minValues;
+  ptr = plot.ptr;
+  for (i0 = 0; i0 < this$static.scopePointCount; i0++) {
+    ii = ptr - i0 + this$static.scopePointCount & this$static.scopePointCount - 1;
+    real[i0] = 0.5 * (maxV[ii] + minV[ii]);
+    imag[i0] = 0;
+  }
+  $fft(this$static.fft, real, imag);
+  maxM = $intern_106;
+  for (i1 = 0; i1 < (this$static.scopePointCount / 2 | 0); i1++) {
+    m = $magnitude(this$static.fft, real[i1], imag[i1]);
+    m > maxM && (maxM = m);
+  }
+  this$static.fftMaxMagnitude = maxM;
+  this$static.fftReal = real;
+  this$static.fftImag = imag;
+  prevX = 0;
+  g.context.strokeStyle = '#FF0000';
+  g.context.fillStyle = '#FF0000';
+  if (this$static.logSpectrum) {
+    plotHeight = this$static.rect_0.height_0 - 5 - 12;
+    pixelsPerDb = plotHeight / 80;
+    prevY = 0;
+    for (db0 = -20; db0 >= -80; db0 -= 20) {
+      y_0 = 5 + round_int(-db0 * pixelsPerDb);
+      if (y_0 < 0 || y_0 >= this$static.rect_0.height_0)
+        continue;
+      g.context.strokeStyle = '#880000';
+      g.context.fillStyle = '#880000';
+      $drawLine(g, 0, y_0, this$static.rect_0.width_0, y_0);
+      g.context.strokeStyle = '#FF0000';
+      g.context.fillStyle = '#FF0000';
+      $fillText(g.context, db0 + ' dB', 2, y_0 - 2);
+    }
+    g.context.strokeStyle = '#FF0000';
+    g.context.fillStyle = '#FF0000';
+    for (i = 0; i < (this$static.scopePointCount / 2 | 0); i++) {
+      x_0 = 2 * i * this$static.rect_0.width_0 / this$static.scopePointCount | 0;
+      magnitude = $magnitude(this$static.fft, real[i], imag[i]);
+      db = 20 * $wnd.Math.log(magnitude / maxM) / $wnd.Math.log(10);
+      db < -80 && (db = -80);
+      y_0 = 5 + round_int(-db * pixelsPerDb);
+      x_0 != prevX && $drawLine(g, prevX, prevY, x_0, y_0);
+      prevY = y_0;
+      prevX = x_0;
+    }
+  }
+  else {
+    prevHeight = 0;
+    y_0 = this$static.rect_0.height_0 - 1 - 12;
+    for (i = 0; i < (this$static.scopePointCount / 2 | 0); i++) {
+      x_0 = 2 * i * this$static.rect_0.width_0 / this$static.scopePointCount | 0;
+      magnitude = $magnitude(this$static.fft, real[i], imag[i]);
+      height = round_int(magnitude * y_0 / maxM);
+      x_0 != prevX && $drawLine(g, prevX, y_0 - prevHeight, x_0, y_0 - height);
+      prevHeight = height;
+      prevX = x_0;
+    }
+  }
+}
+
+function $drawFFTVerticalGridLines(this$static, g) {
+  var i, maxFrequency, prevEnd, s, sWidth, x_0;
+  prevEnd = 0;
+  maxFrequency = 1 / (this$static.sim.maxTimeStep * this$static.speed * 20 * 2);
+  for (i = 0; i < 20; i++) {
+    x_0 = this$static.rect_0.width_0 * i / 20 | 0;
+    if (x_0 < prevEnd)
+      continue;
+    s = toInt_0(fromDouble_0($wnd.Math.round(i * maxFrequency))) + 'Hz';
+    sWidth = round_int($wnd.Math.ceil($measureText(g.context, s).width));
+    prevEnd = x_0 + sWidth + 4;
+    if (i > 0) {
+      g.context.strokeStyle = '#880000';
+      g.context.fillStyle = '#880000';
+      $drawLine(g, x_0, 0, x_0, this$static.rect_0.height_0);
+    }
+    g.context.strokeStyle = '#FF0000';
+    g.context.fillStyle = '#FF0000';
+    $drawString(g, s, x_0 + 2, this$static.rect_0.height_0);
+  }
+}
+
+function $drawFrequency(this$static, g) {
+  var avg, avperiod, avperiod2, freq, i, ip, ipa, maxV, minV, oi, os, pd, periodct, periodstd, plot, q, state, thresh, validCount;
+  avg = 0;
+  plot = $firstElement(this$static.visiblePlots);
+  ipa = $displayStartIndex(this$static, plot, this$static.rect_0.width_0);
+  validCount = $validDataCount(this$static, plot, ipa, this$static.rect_0.width_0);
+  minV = plot.minValues;
+  maxV = plot.maxValues;
+  for (i = 0; i != validCount; i++) {
+    ip = i + ipa & this$static.scopePointCount - 1;
+    avg += minV[ip] + maxV[ip];
+  }
+  avg /= i * 2;
+  state = 0;
+  thresh = avg * 0.05;
+  oi = 0;
+  avperiod = 0;
+  periodct = -1;
+  avperiod2 = 0;
+  for (i = 0; i != validCount; i++) {
+    ip = i + ipa & this$static.scopePointCount - 1;
+    q = maxV[ip] - avg;
+    os = state;
+    q < thresh ? (state = 1) : q > -thresh && (state = 2);
+    if (state == 2 && os == 1) {
+      pd = i - oi;
+      oi = i;
+      if (pd < 12)
+        continue;
+      if (periodct >= 0) {
+        avperiod += pd;
+        avperiod2 += pd * pd;
+      }
+      ++periodct;
+    }
+  }
+  avperiod /= periodct;
+  avperiod2 /= periodct;
+  periodstd = $wnd.Math.sqrt(avperiod2 - avperiod * avperiod);
+  freq = 1 / (avperiod * this$static.sim.maxTimeStep * this$static.speed);
+  (periodct < 1 || periodstd > 2) && (freq = 0);
+  freq != 0 && $drawInfoText(this$static, g, getUnitText(freq, 'Hz', false));
+}
+
+function $drawInfoText(this$static, g, text_0) {
+  if (this$static.rect_0.y_0 + this$static.rect_0.height_0 <= this$static.textY + 5)
+    return;
+  $drawString(g, text_0, 0, this$static.textY);
+  this$static.textY += 15;
+}
+
+function $drawInfoTexts(this$static, g) {
+  var plot, t, ym;
+  $setColor_0(g, whiteColor);
+  this$static.textY = 10;
+  if (this$static.visiblePlots.arrayList.array.length == 0) {
+    this$static.showElmInfo && $drawElmInfo(this$static, g);
+    return;
+  }
+  plot = $firstElement(this$static.visiblePlots);
+  this$static.showScale && $drawScale(this$static, plot, g);
+  this$static.showMax && $drawInfoText(this$static, g, 'Max=' + $getUnitText(plot, this$static.maxValue));
+  if (this$static.showMin) {
+    ym = this$static.rect_0.height_0 - 5;
+    $drawString(g, 'Min=' + $getUnitText(plot, this$static.minValue), 0, ym);
+  }
+  this$static.showP2P && $drawInfoText(this$static, g, 'P-P=' + $getUnitText(plot, this$static.maxValue - this$static.minValue));
+  this$static.showRMS && $drawRMS(this$static, g);
+  this$static.showAverage && $drawAverage(this$static, g);
+  this$static.showDutyCycle && $drawDutyCycle(this$static, g);
+  t = $getScopeLabelOrText(this$static, true);
+  t != null && t != '' && $drawInfoText(this$static, g, t);
+  this$static.showFreq && $drawFrequency(this$static, g);
+  this$static.showElmInfo && $drawElmInfo(this$static, g);
+}
+
+function $drawPlot(this$static, g, plot, allPlotsSameUnits, selected, allSelected) {
+  var col, color_0, drawWidth, gridMax, gridMid, gx, highlightCenter, i, ip, ipa, ll, ll0, majorDiv, maxV, maxvy, maxy, minRangeHi, minRangeLo, minV, minorDiv, minvy, mn, multptr, mx, ox, oy, positionOffset, showHGridLines, tRight, tl, ts, tstart, tx, y0, yl;
+  if (!plot.elm)
+    return;
+  multptr = 0;
+  maxy = (this$static.rect_0.height_0 - 1) / 2 | 0;
+  color_0 = this$static.somethingSelected ? '#A0A0A0' : plot.color_0;
+  allSelected || this$static.app.scopeManager.scopeSelected == -1 && $isMouseElm(plot.elm) ? (color_0 = $getHexValue(selectColor_0)) : selected && (color_0 = plot.color_0);
+  ipa = $displayStartIndex(this$static, plot, this$static.rect_0.width_0);
+  maxV = plot.maxValues;
+  minV = plot.minValues;
+  if (this$static.manualScale) {
+    gridMid = 0;
+    gridMax = (this$static.manDivisions / 2 + 0.05) * plot.manScale;
+    positionOffset = gridMax * 2 * plot.manVPosition / 200;
+  }
+  else {
+    gridMax = this$static.scale_0[plot.units];
+    gridMid = 0;
+    positionOffset = 0;
+    if (allPlotsSameUnits) {
+      mx = gridMax;
+      mn = 0;
+      if (this$static.maxScale) {
+        mx = this$static.maxValue;
+        mn = this$static.minValue;
+      }
+      else if (this$static.showNegative || this$static.minValue < (gridMax + mn) * 0.5 - (gridMax - mn) * 0.55) {
+        mn = -gridMax;
+        this$static.showNegative = true;
+      }
+      gridMid = (mx + mn) * 0.5;
+      gridMax = (mx - mn) * 0.55;
+    }
+  }
+  plot.plotOffset = -gridMid + positionOffset;
+  plot.gridMult = maxy / gridMax;
+  minRangeLo = -10 - round_int(gridMid * plot.gridMult);
+  minRangeHi = 10 - round_int(gridMid * plot.gridMult);
+  if (this$static.manualScale) {
+    this$static.gridStepY = plot.manScale;
+  }
+  else {
+    this$static.gridStepY = $intern_106;
+    while (this$static.gridStepY < 20 * gridMax / maxy) {
+      this$static.gridStepY *= multa[multptr++ % 3];
+    }
+  }
+  minorDiv = '#404040';
+  majorDiv = '#A0A0A0';
+  if (this$static.app.menus.printableCheckItem.on) {
+    minorDiv = '#D0D0D0';
+    majorDiv = '#808080';
+  }
+  allSelected && (majorDiv = $getHexValue(selectColor_0));
+  ts = this$static.sim.maxTimeStep * this$static.speed;
+  this$static.gridStepX = $calcGridStepX(this$static);
+  highlightCenter = !this$static.manualScale;
+  if (this$static.drawGridLines) {
+    showHGridLines = this$static.gridStepY != 0 && (this$static.manualScale || allPlotsSameUnits);
+    for (ll0 = -100; ll0 <= 100; ll0++) {
+      if (ll0 != 0 && !showHGridLines)
+        continue;
+      yl = maxy - round_int((ll0 * this$static.gridStepY - gridMid) * plot.gridMult);
+      if (yl < 0 || yl >= this$static.rect_0.height_0 - 1)
+        continue;
+      col = ll0 == 0 && highlightCenter ? majorDiv : minorDiv;
+      $setStrokeStyleWeb(g.context, col);
+      $setFillStyleWeb(g.context, col);
+      $drawLine(g, 0, yl, this$static.rect_0.width_0 - 1, yl);
+    }
+    tRight = this$static.triggerMode != 0 && this$static.hasTriggerFired && this$static.triggerState != 2 ? this$static.triggerTime + this$static.sim.maxTimeStep * this$static.speed * this$static.rect_0.width_0 / 2 : this$static.sim.t;
+    tstart = tRight - this$static.sim.maxTimeStep * this$static.speed * this$static.rect_0.width_0;
+    tx = tRight - tRight % this$static.gridStepX;
+    for (ll = 0; ; ll++) {
+      tl = tx - this$static.gridStepX * ll;
+      gx = round_int((tl - tstart) / ts);
+      if (gx < 0)
+        break;
+      if (gx >= this$static.rect_0.width_0)
+        continue;
+      if (tl < 0)
+        continue;
+      col = minorDiv;
+      (tl + this$static.gridStepX / 4) % (this$static.gridStepX * 10) < this$static.gridStepX && (col = majorDiv);
+      $setStrokeStyleWeb(g.context, col);
+      $setFillStyleWeb(g.context, col);
+      $drawLine(g, gx, 0, gx, this$static.rect_0.height_0 - 1);
+    }
+  }
+  this$static.drawGridLines = false;
+  $setStrokeStyleWeb(g.context, color_0);
+  $setFillStyleWeb(g.context, color_0);
+  if (this$static.manualScale) {
+    y0 = maxy - round_int(plot.gridMult * plot.plotOffset);
+    $drawLine(g, 0, y0, 8, y0);
+    $fillText(g.context, '0', 0, y0 - 2);
+  }
+  drawWidth = $validDataCount(this$static, plot, ipa, this$static.rect_0.width_0);
+  ox = -1;
+  oy = -1;
+  for (i = 0; i != drawWidth; i++) {
+    ip = i + ipa & this$static.scopePointCount - 1;
+    minvy = round_int(plot.gridMult * (minV[ip] + plot.plotOffset));
+    maxvy = round_int(plot.gridMult * (maxV[ip] + plot.plotOffset));
+    if (minvy <= maxy) {
+      if (minvy < minRangeLo || maxvy > minRangeHi) {
+        this$static.reduceRange[plot.units] = false;
+        minRangeLo = -1000;
+        minRangeHi = $intern_21;
+      }
+      if (ox != -1) {
+        if (minvy == oy && maxvy == oy)
+          continue;
+        $drawLine(g, ox, maxy - oy, i, maxy - oy);
+        ox = oy = -1;
+      }
+      if (minvy == maxvy) {
+        ox = i;
+        oy = minvy;
+        continue;
+      }
+      $drawLine(g, i, maxy - minvy, i, maxy - maxvy);
+    }
+  }
+  ox != -1 && $drawLine(g, ox, maxy - oy, i - 1, maxy - oy);
+}
+
+function $drawRMS(this$static, g) {
+  var avg, end, endAvg, firstState, i, ip, ipa, m, maxV, mid, minV, plot, rms, start_0, state, sw, validCount, waveCount;
+  if (!$canShowRMS(this$static)) {
+    this$static.showRMS = false;
+    this$static.showAverage = true;
+    $drawAverage(this$static, g);
+    return;
+  }
+  plot = $firstElement(this$static.visiblePlots);
+  avg = 0;
+  ipa = $displayStartIndex(this$static, plot, this$static.rect_0.width_0);
+  validCount = $validDataCount(this$static, plot, ipa, this$static.rect_0.width_0);
+  maxV = plot.maxValues;
+  minV = plot.minValues;
+  mid = (this$static.maxValue + this$static.minValue) / 2;
+  state = -1;
+  for (i = 0; i != validCount; i++) {
+    ip = i + ipa & this$static.scopePointCount - 1;
+    if (maxV[ip] != 0) {
+      maxV[ip] > mid && (state = 1);
+      break;
+    }
+  }
+  firstState = -state;
+  start_0 = i;
+  end = 0;
+  waveCount = 0;
+  endAvg = 0;
+  for (; i != validCount; i++) {
+    ip = i + ipa & this$static.scopePointCount - 1;
+    sw = false;
+    state == 1 ? maxV[ip] < mid && (sw = true) : minV[ip] > mid && (sw = true);
+    if (sw) {
+      state = -state;
+      if (firstState == state) {
+        if (waveCount == 0) {
+          start_0 = i;
+          firstState = state;
+          avg = 0;
+        }
+        ++waveCount;
+        end = i;
+        endAvg = avg;
+      }
+    }
+    if (waveCount > 0) {
+      m = (maxV[ip] + minV[ip]) * 0.5;
+      avg += m * m;
+    }
+  }
+  if (waveCount > 1) {
+    rms = $wnd.Math.sqrt(endAvg / (end - start_0));
+    $drawInfoText(this$static, g, $getUnitText(plot, rms) + 'rms');
+  }
+}
+
+function $drawScale(this$static, plot, g) {
+  var hs, i, p, s, vScaleText, vScaleWidth, x_0;
+  if (this$static.manualScale) {
+    if (this$static.rect_0.y_0 + this$static.rect_0.height_0 <= this$static.textY + 5)
+      return;
+    x_0 = 0;
+    hs = 'H=' + getUnitText(this$static.gridStepX, 's', false) + '/div';
+    $drawString(g, hs, 0, this$static.textY);
+    x_0 += $measureText(g.context, hs).width;
+    for (i = 0; i < this$static.visiblePlots.arrayList.array.length; i++) {
+      p = $get_4(this$static.visiblePlots, i);
+      s = $getUnitText(p, p.manScale);
+      if (p) {
+        vScaleText = '=' + s + '/div';
+        vScaleWidth = $measureText(g.context, vScaleText).width;
+        if (x_0 + 17 + vScaleWidth > this$static.rect_0.width_0) {
+          x_0 = 0;
+          this$static.textY += 15;
+          if (this$static.rect_0.y_0 + this$static.rect_0.height_0 <= this$static.textY + 5)
+            return;
+        }
+        $setColor_1(g, p.color_0);
+        $fillOval(g, round_int(x_0) + 7, this$static.textY - 9, 8);
+        x_0 += 17;
+        $setColor_0(g, whiteColor);
+        $drawString(g, vScaleText, round_int(x_0), this$static.textY);
+        x_0 += vScaleWidth;
+      }
+    }
+    this$static.textY += 15;
+  }
+  else {
+    if (this$static.gridStepY != 0 && !(this$static.showV && this$static.showI)) {
+      vScaleText = ' V=' + $getUnitText(plot, this$static.gridStepY) + '/div';
+      $drawInfoText(this$static, g, 'H=' + getUnitText(this$static.gridStepX, 's', false) + '/div' + vScaleText);
+    }
+  }
+}
+
+function $drawSettingsWheel(this$static, g) {
+  if (this$static.rect_0.height_0 > 100 && this$static.rect_0.width_0 > 100) {
+    g.context.save();
+    this$static.rect_0.height_0 > 100 && this$static.rect_0.width_0 > 100 && this$static.app.mouse.mouseCursorX >= this$static.rect_0.x_0 && this$static.app.mouse.mouseCursorX <= this$static.rect_0.x_0 + 36 && this$static.app.mouse.mouseCursorY >= this$static.rect_0.y_0 + this$static.rect_0.height_0 - 36 && this$static.app.mouse.mouseCursorY <= this$static.rect_0.y_0 + this$static.rect_0.height_0 ? $setColor_0(g, selectColor_0) : $setColor_0(g, ($clinit_Color(), dark_gray));
+    $translate(g.context, this$static.rect_0.x_0 + 18, this$static.rect_0.y_0 + this$static.rect_0.height_0 - 18);
+    drawThickCircle(g, 0, 0, 5);
+    drawThickLine(g, -8, 0, -5, 0);
+    drawThickLine(g, 8, 0, 5, 0);
+    drawThickLine(g, 0, -8, 0, -5);
+    drawThickLine(g, 0, 8, 0, 5);
+    drawThickLine(g, -6, -6, -4, -4);
+    drawThickLine(g, 6, -6, 4, -4);
+    drawThickLine(g, -6, 6, -4, 4);
+    drawThickLine(g, 6, 6, 4, 4);
+    g.context.restore();
+  }
+}
+
+function $drawTo(this$static, x2, y2) {
+  if (this$static.draw_ox == -1) {
+    this$static.draw_ox = x2;
+    this$static.draw_oy = y2;
+  }
+  this$static.app.menus.printableCheckItem.on ? (this$static.imageContext.strokeStyle = '#000000', undefined) : (this$static.imageContext.strokeStyle = '#ffffff', undefined);
+  this$static.imageContext.beginPath();
+  $moveTo(this$static.imageContext, this$static.draw_ox, this$static.draw_oy);
+  $lineTo(this$static.imageContext, x2, y2);
+  this$static.imageContext.stroke();
+  this$static.draw_ox = x2;
+  this$static.draw_oy = y2;
+}
+
+function $drawTriggerIndicator(this$static, g) {
+  var edgeText, maxy, plot, statusText, sw, trigY, x_0, x2;
+  if (this$static.triggerMode == 0 || this$static.visiblePlots.arrayList.array.length == 0)
+    return;
+  plot = $firstElement(this$static.visiblePlots);
+  maxy = (this$static.rect_0.height_0 - 1) / 2 | 0;
+  trigY = maxy - round_int((this$static.triggerLevel + plot.plotOffset) * plot.gridMult);
+  if (trigY >= 0 && trigY < this$static.rect_0.height_0) {
+    g.context.strokeStyle = '#FF8000';
+    g.context.fillStyle = '#FF8000';
+    for (x_0 = 0; x_0 < this$static.rect_0.width_0; x_0 += 8) {
+      x2 = $wnd.Math.min(x_0 + 4, this$static.rect_0.width_0 - 1);
+      $drawLine(g, x_0, trigY, x2, trigY);
+    }
+    edgeText = this$static.triggerEdge == 0 ? 'T\u2191' : 'T\u2193';
+    $drawString(g, edgeText, this$static.rect_0.width_0 - 25, trigY - 3);
+  }
+  switch (this$static.triggerState) {
+    case 0:
+      statusText = this$static.triggerWaiting ? 'WAIT' : 'ARMED';
+      break;
+    case 1:
+      statusText = 'TRIG';
+      break;
+    case 2:
+      statusText = 'AUTO';
+      break;
+    default: statusText = '';
+  }
+  g.context.strokeStyle = '#FF8000';
+  g.context.fillStyle = '#FF8000';
+  sw = round_int($measureText(g.context, statusText).width);
+  $drawString(g, statusText, this$static.rect_0.width_0 - sw - 5, this$static.rect_0.height_0 - 5);
+}
+
+function $dumpXml_8(this$static, doc, root) {
+  var elm, eno, f, flags, i, p, pelm, vPlot, xmlElm, number, number_0;
+  vPlot = $get_4(this$static.plots, 0);
+  elm = vPlot.elm;
+  if (!elm)
+    return;
+  if (this$static.plot2d && this$static.plots.arrayList.array.length >= 2) {
+    this$static.scale_0[$get_4(this$static.plots, 0).units] = this$static.scaleX;
+    this$static.scale_0[$get_4(this$static.plots, 1).units] = this$static.scaleY;
+  }
+  flags = $getFlags(this$static);
+  eno = $locateElm(this$static.app, elm);
+  if (eno < 0)
+    return;
+  xmlElm = $createElement_1(doc, 'o');
+  checkAttr(xmlElm, 'en');
+  $setAttribute_0(xmlElm, 'en', '' + eno);
+  dumpAttr_0(xmlElm, 'sp', vPlot.scopePlotSpeed);
+  f = flags & -790529;
+  dumpAttr_1(xmlElm, 'f', f >= 0 ? 'x' + (number = f >>> 0, number.toString(16)) : '' + f);
+  dumpAttr_0(xmlElm, 'p', this$static.position_0);
+  this$static.manDivisions != 8 && dumpAttr_0(xmlElm, 'md', this$static.manDivisions);
+  if (this$static.triggerMode != 0) {
+    dumpAttr_0(xmlElm, 'triggerMode', this$static.triggerMode);
+    dumpAttr_0(xmlElm, 'triggerEdge', this$static.triggerEdge);
+    dumpAttr(xmlElm, 'triggerLevel', this$static.triggerLevel);
+  }
+  $appendChild_0(root, xmlElm);
+  for (i = 0; i < this$static.plots.arrayList.array.length; i++) {
+    p = $get_4(this$static.plots, i);
+    pelm = $createElement_1(doc, 'p');
+    (p.acCoupled ? 1 : 0) > 0 && dumpAttr_1(pelm, 'f', (number_0 = (p.acCoupled ? 1 : 0) >>> 0, number_0.toString(16)));
+    p.elm != elm && dumpAttr_0(pelm, 'e', $locateElm(this$static.app, p.elm));
+    dumpAttr_0(pelm, 'v', p.value_0);
+    dumpAttr(pelm, 'sc', this$static.scale_0[p.units]);
+    if (this$static.manualScale) {
+      dumpAttr(pelm, 'ms', p.manScale);
+      dumpAttr_0(pelm, 'mp', p.manVPosition);
+    }
+    $appendChild_0(xmlElm, pelm);
+  }
+  this$static.text_0 != null && $setAttribute_0(xmlElm, 'x', this$static.text_0);
+}
+
+function $exportCSV(this$static) {
+  var i, ip, j, name_0, plot, sb, t, tStart, ts, unit, w;
+  if (this$static.visiblePlots.arrayList.array.length == 0)
+    return;
+  sb = new StringBuilder;
+  sb.string += 'time';
+  for (i = 0; i != this$static.visiblePlots.arrayList.array.length; i++) {
+    plot = $get_4(this$static.visiblePlots, i);
+    name_0 = $replace_0($getSimpleName(plot.elm.___clazz), 'Elm', '');
+    unit = getScaleUnitsText(plot.units);
+    sb.string += ',"' + name_0 + ' ' + unit + ' min"';
+    sb.string += ',"' + name_0 + ' ' + unit + ' max"';
+  }
+  sb.string += '\n';
+  $get_4(this$static.visiblePlots, 0);
+  w = this$static.rect_0.width_0;
+  ts = this$static.sim.maxTimeStep * this$static.speed;
+  tStart = this$static.sim.t - ts * w;
+  for (i = 0; i != w; i++) {
+    t = tStart + ts * i;
+    if (t < 0)
+      continue;
+    sb.string += t;
+    for (j = 0; j != this$static.visiblePlots.arrayList.array.length; j++) {
+      plot = $get_4(this$static.visiblePlots, j);
+      ip = i + (plot.ptr + plot.scopePointCount - w) & plot.scopePointCount - 1;
+      $append_4(sb, ',' + plot.minValues[ip]);
+      $append_4(sb, ',' + plot.maxValues[ip]);
+    }
+    sb.string += '\n';
+  }
+  downloadCSV(sb.string, 'scope-data.csv');
+}
+
+function $getElm_0(this$static) {
+  if (this$static.selectedPlot >= 0 && this$static.visiblePlots.arrayList.array.length > this$static.selectedPlot)
+    return $get_4(this$static.visiblePlots, this$static.selectedPlot).elm;
+  return this$static.visiblePlots.arrayList.array.length > 0 ? $get_4(this$static.visiblePlots, 0).elm : $get_4(this$static.plots, 0).elm;
+}
+
+function $getFlags(this$static) {
+  var allPlotFlags, flags, p, p$iterator;
+  flags = (this$static.showI ? 1 : 0) | (this$static.showV ? 2 : 0) | (this$static.showMax ? 0 : 4) | (this$static.showFreq ? 8 : 0) | (this$static.manualScale ? 524304 : 0) | (this$static.plot2d ? 64 : 0) | (this$static.plotXY ? 128 : 0) | (this$static.showMin ? 256 : 0) | (this$static.showScale ? 512 : 0) | (this$static.showFFT ? $intern_24 : 0) | (this$static.maxScale ? 8192 : 0) | (this$static.showRMS ? $intern_40 : 0) | (this$static.showDutyCycle ? 32768 : 0) | (this$static.logSpectrum ? $intern_41 : 0) | (this$static.showAverage ? $intern_42 : 0) | (this$static.showElmInfo ? $intern_44 : 0) | (this$static.showP2P ? $intern_30 : 0);
+  flags |= $intern_38;
+  allPlotFlags = 0;
+  for (p$iterator = new ArrayList$1(this$static.plots.arrayList); p$iterator.i < p$iterator.this$01.array.length;) {
+    p = $next_4(p$iterator);
+    allPlotFlags |= p.acCoupled ? 1 : 0;
+  }
+  flags |= allPlotFlags != 0 ? $intern_43 : 0;
+  this$static.manualScale && (flags |= $intern_45);
+  if (this$static.triggerMode != 0) {
+    flags |= $intern_46;
+    flags |= this$static.triggerMode << 25;
+    flags |= this$static.triggerEdge << 27;
+  }
+  return flags;
+}
+
+function $getManScaleFromMaxScale(this$static, units, roundUp) {
+  var s;
+  s = this$static.scale_0[units];
+  units > 1 && (s = 0.5 * s);
+  return roundUp ? nextHighestScale(2 * s / this$static.manDivisions) : 2 * s / this$static.manDivisions;
+}
+
+function $getScaleUnitsText(this$static) {
+  var p;
+  if (this$static.visiblePlots.arrayList.array.length == 0)
+    return 'V';
+  p = $get_4(this$static.visiblePlots, 0);
+  return getScaleUnitsText(p.units);
+}
+
+function $getScaleValue(this$static) {
+  var p;
+  if (this$static.visiblePlots.arrayList.array.length == 0)
+    return 0;
+  p = $get_4(this$static.visiblePlots, 0);
+  return this$static.scale_0[p.units];
+}
+
+function $getScopeLabelOrText(this$static, forInfo) {
+  var t;
+  t = this$static.text_0;
+  if (t == null) {
+    if (forInfo && this$static.showElmInfo)
+      return null;
+    t = $getScopeText(this$static);
+    if (t == null)
+      return '';
+    return LS(t);
+  }
+  else
+    return t;
+}
+
+function $getScopeText(this$static) {
+  var plot;
+  if (this$static.stackCount != 1)
+    return null;
+  if (this$static.selectedPlot < 0 && !$getSingleElm(this$static))
+    return null;
+  if (this$static.visiblePlots.arrayList.array.length == 0)
+    return null;
+  plot = $firstElement(this$static.visiblePlots);
+  this$static.selectedPlot >= 0 && this$static.visiblePlots.arrayList.array.length > this$static.selectedPlot && (plot = $get_4(this$static.visiblePlots, this$static.selectedPlot));
+  return !plot.elm ? '' : plot.elm.getScopeText(plot.value_0);
+}
+
+function $getSingleElm(this$static) {
+  var elm, i;
+  elm = $get_4(this$static.plots, 0).elm;
+  for (i = 1; i < this$static.plots.arrayList.array.length; i++) {
+    if ($get_4(this$static.plots, i).elm != elm)
+      return null;
+  }
+  return elm;
+}
+
+function $getYElm(this$static) {
+  if (this$static.plots.arrayList.array.length == 2)
+    return $get_4(this$static.plots, 1).elm;
+  return null;
+}
+
+function $handleMenu(this$static, mi, state) {
+  mi == 'maxscale' && $maxScale(this$static);
+  mi == 'showvoltage' && (this$static.showV = state, state && !$showingVoltageAndMaybeCurrent(this$static) && $setValue_0(this$static, 0), $calcVisiblePlots(this$static), undefined);
+  mi == 'showcurrent' && (this$static.showI = state, state && !$showingVoltageAndMaybeCurrent(this$static) && $setValue_0(this$static, 0), $calcVisiblePlots(this$static), undefined);
+  mi == 'showscale' && (this$static.showScale = state);
+  mi == 'showpeak' && (this$static.showMax = state);
+  mi == 'shownegpeak' && (this$static.showMin = state);
+  mi == 'showp2p' && (this$static.showP2P = state);
+  mi == 'showfreq' && (this$static.showFreq = state);
+  mi == 'showfft' && (this$static.showFFT = state, this$static.showFFT || (this$static.fft = null));
+  mi == 'logspectrum' && (this$static.logSpectrum = state);
+  mi == 'showrms' && (this$static.showRMS = state);
+  mi == 'showaverage' && (this$static.showAverage = state);
+  mi == 'showduty' && (this$static.showDutyCycle = state);
+  mi == 'showelminfo' && (this$static.showElmInfo = state);
+  mi == 'showpower' && $setValue_0(this$static, 7);
+  mi == 'showib' && $setValue_0(this$static, 1);
+  mi == 'showic' && $setValue_0(this$static, 2);
+  mi == 'showie' && $setValue_0(this$static, 3);
+  mi == 'showvbe' && $setValue_0(this$static, 4);
+  mi == 'showvbc' && $setValue_0(this$static, 5);
+  mi == 'showvce' && $setValue_0(this$static, 6);
+  if (mi == 'showvcevsic') {
+    this$static.plot2d = true;
+    this$static.plotXY = false;
+    $setValues(this$static, 6, 2, $getElm_0(this$static), null);
+    $resetGraph(this$static, false);
+  }
+  if (mi == 'showvvsi') {
+    this$static.plot2d = state;
+    this$static.plotXY = false;
+    $resetGraph(this$static, false);
+  }
+  mi == 'manualscale' && $setManualScale(this$static, state, true);
+  if (mi == 'plotxy') {
+    this$static.plotXY = this$static.plot2d = state;
+    this$static.plot2d && (this$static.plots = this$static.visiblePlots);
+    this$static.plot2d && this$static.plots.arrayList.array.length == 1 && $selectY(this$static);
+    $resetGraph(this$static, false);
+  }
+  mi == 'showresistance' && $setValue_0(this$static, 2);
+  mi == 'showcharge' && $showCharge(this$static, state);
+}
+
+function $hasPlotValue(this$static) {
+  var i;
+  for (i = 0; i != this$static.plots.arrayList.array.length; i++) {
+    if ($get_4(this$static.plots, i).value_0 == 8)
+      return true;
+  }
+  return false;
+}
+
+function $initialize(this$static) {
+  var i, plot;
+  $resetGraph(this$static, false);
+  this$static.scale_0[2] = this$static.scale_0[3] = this$static.scale_0[0] = this$static.scale_0[4] = 5;
+  this$static.scale_0[1] = 0.1;
+  this$static.scaleX = 5;
+  this$static.scaleY = 0.1;
+  this$static.speed = 64;
+  this$static.showMax = true;
+  this$static.showV = this$static.showI = false;
+  this$static.showScale = this$static.showFreq = this$static.manualScale = this$static.showMin = this$static.showP2P = this$static.showElmInfo = false;
+  this$static.showFFT = false;
+  this$static.plot2d = false;
+  if (!$loadDefaults(this$static)) {
+    for (i = 0; i != this$static.plots.arrayList.array.length; i++) {
+      plot = $get_4(this$static.plots, i);
+      plot.units == 0 && (this$static.showV = true);
+      plot.units == 1 && (this$static.showI = true);
+    }
+  }
+}
+
+function $isShowingVceAndIc(this$static) {
+  return this$static.plot2d && this$static.plots.arrayList.array.length == 2 && $get_4(this$static.plots, 0).value_0 == 6 && $get_4(this$static.plots, 1).value_0 == 2;
+}
+
+function $loadDefaults(this$static) {
+  var arr, flags, stor, str;
+  stor = (!localStorage_0 && ($clinit_Storage$StorageSupportDetector(), localStorageSupported) && (localStorage_0 = new Storage_0('localStorage')), localStorage_0);
+  if (!stor)
+    return false;
+  str = $getItem_0(stor.storage, 'scopeDefaults');
+  if (str == null)
+    return false;
+  arr = $split_1(str, ' ', 0);
+  flags = __parseAndValidateInt(arr[1], 10);
+  $setFlags(this$static, flags);
+  this$static.speed = __parseAndValidateInt(arr[2], 10);
+  arr.length > 3 && (flags & $intern_46) != 0 && (this$static.triggerLevel = __parseAndValidateDouble(arr[3]));
+  return true;
+}
+
+function $maxScale(this$static) {
+  if (this$static.plot2d) {
+    this$static.scale_0[0] *= $intern_106;
+    this$static.scale_0[1] *= $intern_106;
+    this$static.scale_0[3] *= $intern_106;
+    this$static.scale_0[2] *= $intern_106;
+    this$static.scale_0[4] *= $intern_106;
+    this$static.scaleX *= $intern_106;
+    this$static.scaleY *= $intern_106;
+    return;
+  }
+  this$static.maxScale = !this$static.maxScale;
+  this$static.showNegative = false;
+}
+
+function $needToRemove(this$static) {
+  var i, plot, removed, ret;
+  ret = true;
+  removed = false;
+  for (i = 0; i != this$static.plots.arrayList.array.length; i++) {
+    plot = $get_4(this$static.plots, i);
+    if ($locateElm(this$static.app, plot.elm) < 0) {
+      $remove_19(this$static.plots, i--);
+      removed = true;
+    }
+    else
+      ret = false;
+  }
+  removed && $calcVisiblePlots(this$static);
+  return ret;
+}
+
+function $onMouseWheel(this$static, e) {
+  this$static.wheelDeltaY += $getMouseWheelVelocityY(e.nativeEvent) * this$static.app.mouse.wheelSensitivity;
+  if (this$static.wheelDeltaY > 5) {
+    this$static.speed < $intern_24 && (this$static.speed *= 2);
+    $resetGraph(this$static, false);
+    this$static.wheelDeltaY = 0;
+  }
+  if (this$static.wheelDeltaY < -5) {
+    $speedUp(this$static);
+    this$static.wheelDeltaY = 0;
+  }
+}
+
+function $removePlot(this$static, plot) {
+  var p;
+  if (plot < this$static.visiblePlots.arrayList.array.length) {
+    p = $get_4(this$static.visiblePlots, plot);
+    $advanceToFind(this$static.plots, p, true);
+    $calcVisiblePlots(this$static);
+  }
+}
+
+function $resetGraph(this$static, full) {
+  var i;
+  this$static.scopePointCount = 1;
+  while (this$static.scopePointCount <= this$static.rect_0.width_0)
+    this$static.scopePointCount *= 2;
+  this$static.triggerMode != 0 && (this$static.scopePointCount *= 2);
+  !this$static.plots && (this$static.plots = new Vector);
+  this$static.showNegative = false;
+  for (i = 0; i != this$static.plots.arrayList.array.length; i++)
+    $reset_7($get_4(this$static.plots, i), this$static.scopePointCount, this$static.speed, full);
+  $calcVisiblePlots(this$static);
+  this$static.scopeTimeStep = this$static.sim.maxTimeStep;
+  $allocImage(this$static);
+  this$static.triggerState = 0;
+  this$static.triggerHoldoff = 0;
+  this$static.triggerWaiting = false;
+  this$static.hasTriggerFired = false;
+  this$static.lastTriggerCheckPtr = -1;
+  this$static.triggerAutoTimeout = 2 * this$static.scopePointCount;
+}
+
+function $rightEdge(this$static) {
+  return this$static.rect_0.x_0 + this$static.rect_0.width_0;
+}
+
+function $saveAsDefault(this$static) {
+  var flags, s, stor, vPlot;
+  stor = (!localStorage_0 && ($clinit_Storage$StorageSupportDetector(), localStorageSupported) && (localStorage_0 = new Storage_0('localStorage')), localStorage_0);
+  if (!stor)
+    return;
+  vPlot = $get_4(this$static.plots, 0);
+  flags = $getFlags(this$static);
+  s = '1 ' + flags + ' ' + vPlot.scopePlotSpeed;
+  (flags & $intern_46) != 0 && (s += ' ' + this$static.triggerLevel);
+  $setItem_0(stor.storage, 'scopeDefaults', s);
+  console.log('saved defaults ' + flags);
+}
+
+function $selectScope(this$static, mouseX, mouseY) {
+  if (!$contains(this$static.rect_0, mouseX, mouseY))
+    return;
+  this$static.plot2d || this$static.visiblePlots.arrayList.array.length == 0 ? (cursorTime = -1) : this$static.triggerMode != 0 && this$static.hasTriggerFired && this$static.triggerState != 2 ? (cursorTime = this$static.triggerTime + this$static.sim.maxTimeStep * this$static.speed * (mouseX - this$static.rect_0.x_0 - (this$static.rect_0.width_0 / 2 | 0))) : (cursorTime = this$static.sim.t - this$static.sim.maxTimeStep * this$static.speed * (this$static.rect_0.x_0 + this$static.rect_0.width_0 - mouseX));
+  $checkForSelection(this$static, mouseX, mouseY);
+  cursorScope = this$static;
+}
+
+function $selectY(this$static) {
+  var ce, e, firstE, yElm;
+  yElm = this$static.plots.arrayList.array.length == 2 ? $get_4(this$static.plots, 1).elm : null;
+  e = !yElm ? -1 : $locateElm(this$static.app, yElm);
+  firstE = e;
+  while (true) {
+    for (++e; e < this$static.app.elmList.arrayList.array.length; e++) {
+      ce = $getElm(this$static.app, e);
+      if ((instanceOf(ce, 229) || instanceOf(ce, 230)) && ce != $get_4(this$static.plots, 0).elm) {
+        if (this$static.plots.arrayList.array.length == 1)
+          $add_11(this$static.plots, new ScopePlot(ce));
+        else {
+          $get_4(this$static.plots, 1).elm = ce;
+          $get_4(this$static.plots, 1).units = 0;
+        }
+        return;
+      }
+    }
+    if (firstE == -1)
+      return;
+    e = firstE = -1;
+  }
+}
+
+function $separate(this$static, arr, pos) {
+  var i, lastPlot, s, sp;
+  lastPlot = null;
+  for (i = 0; i != this$static.visiblePlots.arrayList.array.length; i++) {
+    if (pos >= arr.length)
+      return pos;
+    s = new Scope(this$static.app, this$static.sim);
+    sp = $get_4(this$static.visiblePlots, i);
+    if (!!lastPlot && lastPlot.elm == sp.elm && lastPlot.value_0 == 0 && sp.value_0 == 3)
+      continue;
+    $setValue_1(s, sp.value_0, sp.elm);
+    s.position_0 = pos;
+    arr[pos++] = s;
+    lastPlot = sp;
+    $setFlags(s, $getFlags(this$static));
+    $setSpeed(s, this$static.speed);
+  }
+  return pos;
+}
+
+function $setElm(this$static, ce) {
+  this$static.plots = new Vector;
+  instanceOf(ce, 151) ? (this$static.plots = new Vector, $addValue(this$static, 6, ce)) : (this$static.plots = new Vector, $addValue(this$static, 0, ce));
+  $initialize(this$static);
+}
+
+function $setFlags(this$static, flags) {
+  this$static.showI = (flags & 1) != 0;
+  this$static.showV = (flags & 2) != 0;
+  this$static.showMax = (flags & 4) == 0;
+  this$static.showFreq = (flags & 8) != 0;
+  this$static.manualScale = (flags & 16) != 0;
+  this$static.plot2d = (flags & 64) != 0;
+  this$static.plotXY = (flags & 128) != 0;
+  this$static.showMin = (flags & 256) != 0;
+  this$static.showScale = (flags & 512) != 0;
+  this$static.showFFT = (flags & $intern_24) != 0;
+  this$static.showFFT || (this$static.fft = null);
+  this$static.maxScale = (flags & 8192) != 0;
+  this$static.showRMS = (flags & $intern_40) != 0;
+  this$static.showDutyCycle = (flags & 32768) != 0;
+  this$static.logSpectrum = (flags & $intern_41) != 0;
+  this$static.showAverage = (flags & $intern_42) != 0;
+  this$static.showElmInfo = (flags & $intern_44) != 0;
+  this$static.showP2P = (flags & $intern_30) != 0;
+  if ((flags & $intern_46) != 0) {
+    this$static.triggerMode = flags >> 25 & 3;
+    this$static.triggerEdge = flags >> 27 & 1;
+  }
+  else {
+    this$static.triggerMode = 0;
+    this$static.triggerEdge = 0;
+  }
+}
+
+function $setManDivisions(this$static, d) {
+  this$static.manDivisions = lastManDivisions = d;
+}
+
+function $setManualScale(this$static, value_0, roundup) {
+  var p, p$iterator;
+  value_0 != this$static.manualScale && $clear2dView(this$static);
+  this$static.manualScale = value_0;
+  for (p$iterator = new ArrayList$1(this$static.plots.arrayList); p$iterator.i < p$iterator.this$01.array.length;) {
+    p = $next_4(p$iterator);
+    if (!p.manScaleSet) {
+      p.manScale = $getManScaleFromMaxScale(this$static, p.units, roundup);
+      p.manVPosition = 0;
+      p.manScaleSet = true;
+    }
+  }
+}
+
+function $setManualScaleValue(this$static, plotId, d) {
+  if (plotId >= this$static.visiblePlots.arrayList.array.length)
+    return;
+  $clear2dView(this$static);
+  $get_4(this$static.visiblePlots, plotId).manScale = d;
+  $get_4(this$static.visiblePlots, plotId).manScaleSet = true;
+}
+
+function $setMaxScale(this$static, s) {
+  $maxScale(this$static);
+  this$static.maxScale = s;
+}
+
+function $setPlotPosition(this$static, plot, v) {
+  $get_4(this$static.visiblePlots, plot).manVPosition = v;
+}
+
+function $setRect(this$static, r) {
+  var w;
+  w = this$static.rect_0.width_0;
+  this$static.rect_0 = r;
+  this$static.rect_0.width_0 != w && $resetGraph(this$static, false);
+}
+
+function $setSpeed(this$static, sp) {
+  sp < 1 && (sp = 1);
+  sp > $intern_24 && (sp = $intern_24);
+  this$static.speed = sp;
+  $resetGraph(this$static, false);
+}
+
+function $setText_3(this$static, s) {
+  this$static.text_0 = s;
+}
+
+function $setTriggerMode(this$static, mode) {
+  this$static.triggerMode = mode;
+  this$static.triggerState = 0;
+  this$static.triggerHoldoff = 0;
+  this$static.triggerWaiting = false;
+  this$static.hasTriggerFired = false;
+  this$static.lastTriggerCheckPtr = -1;
+  $resetGraph(this$static, false);
+}
+
+function $setValue_0(this$static, val) {
+  var ce;
+  if (this$static.plots.arrayList.array.length > 2 || this$static.plots.arrayList.array.length == 0)
+    return;
+  ce = $firstElement(this$static.plots).elm;
+  if (this$static.plots.arrayList.array.length == 2 && $get_4(this$static.plots, 1).elm != ce)
+    return;
+  this$static.plot2d = this$static.plotXY = false;
+  this$static.plots = new Vector;
+  $addValue(this$static, val, ce);
+}
+
+function $setValue_1(this$static, val, ce) {
+  this$static.plots = new Vector;
+  $addValue(this$static, val, ce);
+}
+
+function $setValues(this$static, val, ival, ce, yelm) {
+  if (ival > 0) {
+    this$static.plots = new Vector;
+    $add_11(this$static.plots, new ScopePlot_0(ce, ce.getScopeUnits(val), val, $getManScaleFromMaxScale(this$static, ce.getScopeUnits(val), false)));
+    $add_11(this$static.plots, new ScopePlot_0(ce, ce.getScopeUnits(ival), ival, $getManScaleFromMaxScale(this$static, ce.getScopeUnits(ival), false)));
+    return;
+  }
+  if (yelm) {
+    this$static.plots = new Vector;
+    $add_11(this$static.plots, new ScopePlot_0(ce, ce.getScopeUnits(val), 0, $getManScaleFromMaxScale(this$static, ce.getScopeUnits(val), false)));
+    $add_11(this$static.plots, new ScopePlot_0(yelm, ce.getScopeUnits(ival), 0, $getManScaleFromMaxScale(this$static, ce.getScopeUnits(val), false)));
+    return;
+  }
+  $setValue_0(this$static, val);
+}
+
+function $showCharge(this$static, b) {
+  var ce, i, u;
+  if (b) {
+    if (!$hasPlotValue(this$static)) {
+      ce = $getElm_0(this$static);
+      if (ce) {
+        u = ce.getScopeUnits(8);
+        $add_11(this$static.plots, new ScopePlot_0(ce, u, 8, $getManScaleFromMaxScale(this$static, u, false)));
+      }
+    }
+  }
+  else {
+    for (i = this$static.plots.arrayList.array.length - 1; i >= 0; i--) {
+      $get_4(this$static.plots, i).value_0 == 8 && $remove_19(this$static.plots, i);
+    }
+  }
+  $calcVisiblePlots(this$static);
+  $resetGraph(this$static, false);
+}
+
+function $showingValue(this$static, v) {
+  var i, sp;
+  for (i = 0; i != this$static.plots.arrayList.array.length; i++) {
+    sp = $get_4(this$static.plots, i);
+    if (sp.value_0 != v)
+      return false;
+  }
+  return true;
+}
+
+function $showingVoltageAndMaybeCurrent(this$static) {
+  var gotv, i, sp;
+  gotv = false;
+  for (i = 0; i != this$static.plots.arrayList.array.length; i++) {
+    sp = $get_4(this$static.plots, i);
+    if (sp.value_0 == 0)
+      gotv = true;
+    else if (sp.value_0 != 3 && sp.value_0 != 8)
+      return false;
+  }
+  return gotv;
+}
+
+function $speedUp(this$static) {
+  if (this$static.speed > 1) {
+    this$static.speed = this$static.speed / 2 | 0;
+    $resetGraph(this$static, false);
+  }
+}
+
+function $timeStep(this$static) {
+  var gridPx, i, newscale, v, x_0, xa, y_0, ya, yval;
+  for (i = 0; i != this$static.plots.arrayList.array.length; i++)
+    $timeStep_1($get_4(this$static.plots, i));
+  $checkTrigger(this$static);
+  if (this$static.plot2d && !!this$static.imageContext && this$static.plots.arrayList.array.length >= 2) {
+    v = $get_4(this$static.plots, 0).lastValue;
+    yval = $get_4(this$static.plots, 1).lastValue;
+    if (this$static.manualScale) {
+      gridPx = $calc2dGridPx(this$static, this$static.rect_0.width_0, this$static.rect_0.height_0);
+      x_0 = round_int(this$static.rect_0.width_0 * $intern_121 + v / $get_4(this$static.plots, 0).manScale * gridPx + gridPx * this$static.manDivisions * $get_4(this$static.plots, 0).manVPosition / 200);
+      y_0 = round_int(this$static.rect_0.height_0 * $intern_121 - yval / $get_4(this$static.plots, 1).manScale * gridPx - gridPx * this$static.manDivisions * $get_4(this$static.plots, 1).manVPosition / 200);
+    }
+    else {
+      newscale = false;
+      while (v > this$static.scaleX || v < -this$static.scaleX) {
+        this$static.scaleX *= 2;
+        newscale = true;
+      }
+      while (yval > this$static.scaleY || yval < -this$static.scaleY) {
+        this$static.scaleY *= 2;
+        newscale = true;
+      }
+      newscale && $clear2dView(this$static);
+      xa = v / this$static.scaleX;
+      ya = yval / this$static.scaleY;
+      x_0 = round_int(this$static.rect_0.width_0 * (1 + xa) * $intern_121);
+      y_0 = round_int(this$static.rect_0.height_0 * (1 - ya) * $intern_121);
+    }
+    $drawTo(this$static, x_0, y_0);
+  }
+}
+
+function $undump_1(this$static, st) {
+  var ce, e, elm, flags, hasPlotFlags, i, ivalue, ne, p, plot2dFlag, plotFlags, sz, u, val, value_0, yElm, ye;
+  $initialize(this$static);
+  e = (new Integer_0($nextToken(st))).value_0;
+  if (e == -1)
+    return;
+  ce = $getElm(this$static.app, e);
+  $setElm(this$static, ce);
+  this$static.speed = (new Integer_0($nextToken(st))).value_0;
+  value_0 = (new Integer_0($nextToken(st))).value_0;
+  !instanceOf(ce, 151) && value_0 == 1 && (value_0 = 7);
+  flags = importDecOrHex($nextToken(st));
+  this$static.scale_0[0] = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this$static.scale_0[1] = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this$static.scale_0[0] == 0 && (this$static.scale_0[0] = 0.5);
+  this$static.scale_0[1] == 0 && (this$static.scale_0[1] = 1);
+  this$static.scaleX = this$static.scale_0[0];
+  this$static.scaleY = this$static.scale_0[1];
+  this$static.scale_0[3] = this$static.scale_0[2] = this$static.scale_0[4] = this$static.scale_0[0];
+  this$static.text_0 = null;
+  plot2dFlag = (flags & 64) != 0;
+  hasPlotFlags = (flags & $intern_43) != 0;
+  if ((flags & $intern_38) != 0) {
+    try {
+      this$static.position_0 = __parseAndValidateInt($nextToken(st), 10);
+      sz = __parseAndValidateInt($nextToken(st), 10);
+      this$static.manDivisions = 8;
+      (flags & $intern_45) != 0 && (this$static.manDivisions = lastManDivisions = __parseAndValidateInt($nextToken(st), 10));
+      (flags & $intern_46) != 0 && (this$static.triggerLevel = __parseAndValidateDouble($nextToken(st)));
+      u = ce.getScopeUnits(value_0);
+      u > 1 && (this$static.scale_0[u] = __parseAndValidateDouble($nextToken(st)));
+      $setValue_0(this$static, value_0);
+      while (this$static.plots.arrayList.array.length > 1)
+        $removeElementAt(this$static.plots, 1);
+      plotFlags = 0;
+      for (i = 0; i != sz; i++) {
+        hasPlotFlags && (plotFlags = __parseAndValidateInt($nextToken(st), 16));
+        if (i != 0) {
+          ne = __parseAndValidateInt($nextToken(st), 10);
+          val = __parseAndValidateInt($nextToken(st), 10);
+          elm = $getElm(this$static.app, ne);
+          u = elm.getScopeUnits(val);
+          u > 1 && (this$static.scale_0[u] = __parseAndValidateDouble($nextToken(st)));
+          $add_11(this$static.plots, new ScopePlot_0(elm, u, val, $getManScaleFromMaxScale(this$static, u, false)));
+        }
+        p = $get_4(this$static.plots, i);
+        p.acCoupled = (plotFlags & 1) != 0;
+        if ((flags & $intern_29) != 0) {
+          p.manScaleSet = true;
+          p.manScale = __parseAndValidateDouble($nextToken(st));
+          p.manVPosition = __parseAndValidateInt($nextToken(st), 10);
+        }
+      }
+      while ($hasMoreTokens(st)) {
+        this$static.text_0 == null ? (this$static.text_0 = $nextToken(st)) : (this$static.text_0 += ' ' + $nextToken(st));
+      }
+    }
+    catch ($e0) {
+      $e0 = toJava($e0);
+      if (!instanceOf($e0, 15))
+        throw toJs($e0);
+    }
+  }
+  else {
+    yElm = null;
+    ivalue = 0;
+    this$static.manDivisions = 8;
+    try {
+      this$static.position_0 = (new Integer_0($nextToken(st))).value_0;
+      if ((flags & 32) != 0) {
+        ye = (new Integer_0($nextToken(st))).value_0;
+        ye != -1 && (yElm = $getElm(this$static.app, ye));
+        plot2dFlag || (yElm = null);
+      }
+      (flags & $intern_39) != 0 && (ivalue = (new Integer_0($nextToken(st))).value_0);
+      while ($hasMoreTokens(st)) {
+        this$static.text_0 == null ? (this$static.text_0 = $nextToken(st)) : (this$static.text_0 += ' ' + $nextToken(st));
+      }
+    }
+    catch ($e1) {
+      $e1 = toJava($e1);
+      if (!instanceOf($e1, 15))
+        throw toJs($e1);
+    }
+    $setValues(this$static, value_0, ivalue, $getElm(this$static.app, e), yElm);
+  }
+  this$static.text_0 != null && (this$static.text_0 = unescape_0(this$static.text_0));
+  this$static.plot2d = plot2dFlag;
+  $setFlags(this$static, flags);
+}
+
+function $undumpXml_5(this$static, xml) {
+  var ce, e, elem, elem$iterator, elm, flags, fs, ms, p, plotFlags, sc, u, val, xmlTriggerEdge, xmlTriggerLevel, xmlTriggerMode;
+  e = $parseIntAttr(xml, 'en', -1);
+  if (e == -1)
+    return;
+  ce = $getElm(this$static.app, e);
+  $setElm(this$static, ce);
+  this$static.plots = new Vector;
+  this$static.speed = $parseIntAttr(xml, 'sp', 64);
+  fs = $parseStringAttr(xml, 'f', '0');
+  flags = (checkCriticalStringElementIndex(0, fs.length), fs.charCodeAt(0) == 120 ? __parseAndValidateInt(fs.substr(1), 16) : __parseAndValidateInt(fs, 10));
+  this$static.position_0 = $parseIntAttr(xml, 'p', 0);
+  this$static.manDivisions = $parseIntAttr(xml, 'md', 8);
+  this$static.text_0 = $parseStringAttr(xml, 'x', null);
+  xmlTriggerMode = $parseIntAttr(xml, 'triggerMode', 0);
+  xmlTriggerEdge = $parseIntAttr(xml, 'triggerEdge', 0);
+  xmlTriggerLevel = $parseDoubleAttr(xml, 'triggerLevel', 0);
+  for (elem$iterator = new ArrayList$1($getChildElements(xml)); elem$iterator.i < elem$iterator.this$01.array.length;) {
+    elem = $next_4(elem$iterator);
+    xml.currentXmlElement = elem;
+    plotFlags = __parseAndValidateInt($parseStringAttr(xml, 'f', '0'), 16);
+    elm = $getElm(this$static.app, $parseIntAttr(xml, 'e', e));
+    val = $parseIntAttr(xml, 'v', -1);
+    u = elm.getScopeUnits(val);
+    sc = $parseDoubleAttr(xml, 'sc', -1);
+    sc >= 0 && (this$static.scale_0[u] = sc);
+    p = new ScopePlot_0(elm, u, val, $getManScaleFromMaxScale(this$static, u, false));
+    $add_11(this$static.plots, p);
+    p.acCoupled = (plotFlags & 1) != 0;
+    ms = $parseDoubleAttr(xml, 'ms', -1);
+    if (ms >= 0) {
+      p.manScaleSet = true;
+      p.manScale = ms;
+      p.manVPosition = $parseIntAttr(xml, 'mp', 0);
+    }
+  }
+  $setFlags(this$static, flags);
+  if (this$static.plot2d && this$static.plots.arrayList.array.length >= 2) {
+    this$static.scaleX = this$static.scale_0[$get_4(this$static.plots, 0).units];
+    this$static.scaleY = this$static.scale_0[$get_4(this$static.plots, 1).units];
+  }
+  this$static.triggerMode = xmlTriggerMode;
+  this$static.triggerEdge = xmlTriggerEdge;
+  this$static.triggerLevel = xmlTriggerLevel;
+}
+
+function $validDataCount(this$static, plot, ipa, w) {
+  var count;
+  if (!(this$static.triggerMode != 0 && this$static.hasTriggerFired && this$static.triggerState != 2))
+    return w;
+  count = (plot.ptr - ipa & this$static.scopePointCount - 1) + 1;
+  return $wnd.Math.min(count, w);
+}
+
+function $viewingWire(this$static) {
+  var i;
+  for (i = 0; i != this$static.plots.arrayList.array.length; i++)
+    if (instanceOf($get_4(this$static.plots, i).elm, 125))
+      return true;
+  return false;
+}
+
+function Scope(app_, sim_) {
+  $clinit_Scope();
+  this.sim = sim_;
+  this.app = app_;
+  this.position_0 = -1;
+  this.scale_0 = initUnidimensionalArray(D_classLit, $intern_70, 8, 5, 15, 1);
+  this.reduceRange = initUnidimensionalArray(Z_classLit, $intern_88, 8, 5, 16, 1);
+  this.manDivisions = lastManDivisions;
+  this.rect_0 = new Rectangle_0(0, 0, 1, 1);
+  this.imageCanvas = createIfSupported();
+  this.imageContext = $getContext2d(this.imageCanvas);
+  $allocImage(this);
+  $initialize(this);
+}
+
+function downloadCSV(data_0, filename) {
+  var blob = new Blob([data_0], { type: 'text/csv' });
+  var url_0 = URL.createObjectURL(blob);
+  var a = $doc.createElement('a');
+  a.href = url_0;
+  a.download = filename;
+  $doc.body.appendChild(a);
+  a.click();
+  $doc.body.removeChild(a);
+  URL.revokeObjectURL(url_0);
+}
+
+function getScaleUnitsText(units) {
+  $clinit_Scope();
+  switch (units) {
+    case 1:
+      return 'A';
+    case 3:
+      return ohmString;
+    case 2:
+      return 'W';
+    case 4:
+      return 'C';
+    default: return 'V';
+  }
+}
+
+function importDecOrHex(s) {
+  return checkCriticalStringElementIndex(0, s.length), s.charCodeAt(0) == 120 ? __parseAndValidateInt(s.substr(1), 16) : __parseAndValidateInt(s, 10);
+}
+
+defineClass(169, 1, { 169: 1 }, Scope);
+_.alphaCounter = 0;
+_.drawGridLines = false;
+_.draw_ox = 0;
+_.draw_oy = 0;
+_.fftMaxMagnitude = 0;
+_.gridStepX = 0;
+_.gridStepY = 0;
+_.hasTriggerFired = false;
+_.lastTriggerCheckPtr = -1;
+_.logSpectrum = false;
+_.manDivisions = 0;
+_.manualScale = false;
+_.maxScale = false;
+_.maxValue = 0;
+_.minValue = 0;
+_.plot2d = false;
+_.plotXY = false;
+_.position_0 = 0;
+_.prevTriggerValue = 0;
+_.scaleX = 0;
+_.scaleY = 0;
+_.scopePointCount = 128;
+_.scopeTimeStep = 0;
+_.selectedPlot = 0;
+_.showAverage = false;
+_.showDutyCycle = false;
+_.showElmInfo = false;
+_.showFFT = false;
+_.showFreq = false;
+_.showI = false;
+_.showMax = false;
+_.showMin = false;
+_.showNegative = false;
+_.showP2P = false;
+_.showRMS = false;
+_.showScale = false;
+_.showV = false;
+_.somethingSelected = false;
+_.speed = 0;
+_.stackCount = 0;
+_.textY = 0;
+_.triggerAutoTimeout = 0;
+_.triggerEdge = 0;
+_.triggerHoldoff = 0;
+_.triggerLevel = 0;
+_.triggerMode = 0;
+_.triggerPtr = 0;
+_.triggerState = 0;
+_.triggerTime = 0;
+_.triggerWaiting = false;
+_.wheelDeltaY = 0;
+var cursorScope, cursorTime = 0, cursorUnits = 0, lastManDivisions = 8, multa;
+var Lcom_lushprojects_circuitjs1_client_Scope_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'Scope', 169);
+function ScopeCheckBox(text_0, menu) {
+  $clinit_FocusWidget();
+  CheckBox_0.call(this, text_0);
+  this.menuCmd = menu;
+}
+
+defineClass(59, 162, { 167: 1, 65: 1, 117: 1, 90: 1, 120: 1, 81: 1, 94: 1, 119: 1, 63: 1, 64: 1, 66: 1, 67: 1, 69: 1, 68: 1, 70: 1, 71: 1, 72: 1, 118: 1, 92: 1, 93: 1, 91: 1, 122: 1, 123: 1, 121: 1, 82: 1, 86: 1, 84: 1, 85: 1, 83: 1, 87: 1, 98: 1, 97: 1, 96: 1, 95: 1, 28: 1, 202: 1, 24: 1, 134: 1, 56: 1, 26: 1, 216: 1, 179: 1, 162: 1, 78: 1, 114: 1, 236: 1, 197: 1, 102: 1, 113: 1, 55: 1, 143: 1, 50: 1, 215: 1, 22: 1, 185: 1, 29: 1, 88: 1, 115: 1, 116: 1, 89: 1, 21: 1, 23: 1, 59: 1 }, ScopeCheckBox);
+var Lcom_lushprojects_circuitjs1_client_ScopeCheckBox_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ScopeCheckBox', 59);
+function $selectScope_0(this$static, mx, my) {
+  $selectScope(this$static.elmScope, mx, my);
+}
+
+function $setElmScope(this$static, s) {
+  this$static.elmScope = s;
+}
+
+function $setScopeElm(this$static, e) {
+  $setElm(this$static.elmScope, e);
+  $resetGraph(this$static.elmScope, false);
+}
+
+function $setScopeRect(this$static) {
+  var i1, i2, j1, j2, r;
+  i1 = $transformX(app_0.mouse, min_1(this$static.x_0, this$static.x2));
+  i2 = $transformX(app_0.mouse, max_1(this$static.x_0, this$static.x2));
+  j1 = $transformY(app_0.mouse, min_1(this$static.y_0, this$static.y2));
+  j2 = $transformY(app_0.mouse, max_1(this$static.y_0, this$static.y2));
+  r = new Rectangle_0(i1, j1, i2 - i1, j2 - j1);
+  $equals_0(r, this$static.elmScope.rect_0) || $setRect(this$static.elmScope, r);
+}
+
+function ScopeElm(xx, yy) {
+  CircuitElm.call(this, xx, yy);
+  this.noDiagonal = false;
+  this.x2 = this.x_0 + 128;
+  this.y2 = this.y_0 + 64;
+  this.elmScope = new Scope(app_0, sim_0);
+  $setPoints(this);
+  $setScopeRect(this);
+}
+
+function ScopeElm_0(xa, ya, xb, yb, f, st) {
+  var sStr, sst;
+  CircuitElm_0.call(this, xa, ya, xb, yb, f);
+  this.noDiagonal = false;
+  sStr = $nextToken(st);
+  sst = new StringTokenizer_0(sStr, '_');
+  this.elmScope = new Scope(app_0, sim_0);
+  $undump_1(this.elmScope, sst);
+  $setPoints(this);
+  $setScopeRect(this);
+  $resetGraph(this.elmScope, false);
+}
+
+defineClass(20, 7, { 7: 1, 10: 1, 20: 1 }, ScopeElm, ScopeElm_0);
+_.canViewInScope = function canViewInScope_4() {
+  return false;
+}
+  ;
+_.draw = function draw_65(g) {
+  $setColor_0(g, mouseElmRef == this || this.selected_0 || app_0.mouse.plotYElm == this || instanceOf(mouseElmRef, 20) && $getElm_0(mouseElmRef.elmScope) == this || $isOnHighlightedNet(this) ? selectColor_0 : whiteColor);
+  g.context.save();
+  $scale(g.context, 1 / app_0.transform_0[0], 1 / app_0.transform_0[3]);
+  $translate(g.context, -app_0.transform_0[4], -app_0.transform_0[5]);
+  $setScopeRect(this);
+  this.elmScope.position_0 = -1;
+  $draw_2(this.elmScope, g);
+  g.context.restore();
+  $setBbox_0(this, this.point1, this.point2, 0);
+  $drawPosts(this, g);
+}
+  ;
+_.dumpXml = function dumpXml_64(doc, elem) {
+  dumpAttr_1(elem, 'x', this.x_0 + ' ' + this.y_0 + ' ' + this.x2 + ' ' + this.y2);
+  dumpAttr_0(elem, 'f', this.flags);
+  $dumpXml_8(this.elmScope, doc, elem);
+}
+  ;
+_.getDumpType = function getDumpType_91() {
+  return 403;
+}
+  ;
+_.getNumHandles = function getNumHandles_2() {
+  return 2;
+}
+  ;
+_.getPostCount_0 = function getPostCount_56() {
+  return 0;
+}
+  ;
+_.reset_1 = function reset_36() {
+  $reset(this);
+  $resetGraph(this.elmScope, true);
+}
+  ;
+_.reset_0 = function () {
+  this.reset_1();
+}
+  ;
+_.setPoints_0 = function setPoints_59() {
+  $setPoints(this);
+  $setScopeRect(this);
+}
+  ;
+_.setPoints = function () {
+  this.setPoints_0();
+}
+  ;
+_.undumpXml = function undumpXml_66(xml) {
+  var child, child$iterator;
+  this.flags = $parseIntAttr(xml, 'f', this.flags);
+  for (child$iterator = new ArrayList$1($getChildElements(xml)); child$iterator.i < child$iterator.this$01.array.length;) {
+    child = $next_4(child$iterator);
+    if ($equals_1(getTagName(child.jsObject), 'o')) {
+      xml.currentXmlElement = child;
+      $undumpXml_5(this.elmScope, xml);
+      break;
+    }
+  }
+  $resetGraph(this.elmScope, false);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_ScopeElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ScopeElm', 20);
+function $addScope(this$static, sc) {
+  sc.position_0 < 0 && (sc.position_0 = this$static.scopeCount);
+  this$static.scopes[this$static.scopeCount++] = sc;
+}
+
+function $canDelayWireProcessing(this$static) {
+  var ce, ce$iterator, i;
+  for (i = 0; i != this$static.scopeCount; i++)
+    if ($viewingWire(this$static.scopes[i]))
+      return false;
+  for (ce$iterator = new ArrayList$1(this$static.sim.elmList.arrayList); ce$iterator.i < ce$iterator.this$01.array.length;) {
+    ce = $next_4(ce$iterator);
+    if (instanceOf(ce, 20) && $viewingWire(ce.elmScope))
+      return false;
+  }
+  return true;
+}
+
+function $canStackScope(this$static, s) {
+  if (this$static.scopeCount < 2)
+    return false;
+  s == 0 && (s = 1);
+  if (this$static.scopes[s].position_0 == this$static.scopes[s - 1].position_0)
+    return false;
+  return true;
+}
+
+function $canUnstackScope(this$static, s) {
+  if (this$static.scopeCount < 2)
+    return false;
+  s == 0 && (s = 1);
+  if (this$static.scopes[s].position_0 != this$static.scopes[s - 1].position_0) {
+    return s + 1 < this$static.scopeCount && this$static.scopes[s + 1].position_0 == this$static.scopes[s].position_0;
+  }
+  return true;
+}
+
+function $combineAll(this$static) {
+  var i;
+  for (i = this$static.scopeCount - 2; i >= 0; i--) {
+    $combine(this$static.scopes[i], this$static.scopes[i + 1]);
+    $setElm(this$static.scopes[i + 1], null);
+  }
+}
+
+function $combineScope(this$static, s) {
+  if (this$static.scopeCount < 2)
+    return;
+  s == 0 && (s = 1);
+  $combine(this$static.scopes[s - 1], this$static.scopes[s]);
+  $setElm(this$static.scopes[s], null);
+}
+
+function $composeSelectScopeMenu(this$static, sb) {
+  var c, i, j, l_0, mi, mi$iterator, s;
+  $clearItems(sb);
+  this$static.selectScopeMenuItems = new Vector;
+  for (i = 0; i < this$static.scopeCount; i++) {
+    s = LS('Scope') + ' ' + ('' + (i + 1));
+    l_0 = $getScopeLabelOrText(this$static.scopes[i], false);
+    l_0 != '' && (s += ' (' + htmlEscape(l_0) + ')');
+    $add_11(this$static.selectScopeMenuItems, new MenuItem_1(s, new MyCommand('elm', 'addToScope' + ('' + i))));
+  }
+  c = $countScopeElms(this$static);
+  for (j = 0; j < c; j++) {
+    s = LS('Undocked Scope') + ' ' + ('' + (j + 1));
+    l_0 = $getScopeLabelOrText($getNthScopeElm(this$static, j).elmScope, false);
+    l_0 != '' && (s += ' (' + htmlEscape(l_0) + ')');
+    $add_11(this$static.selectScopeMenuItems, new MenuItem_1(s, new MyCommand('elm', 'addToScope' + ('' + (this$static.scopeCount + j)))));
+  }
+  for (mi$iterator = new ArrayList$1(this$static.selectScopeMenuItems.arrayList); mi$iterator.i < mi$iterator.this$01.array.length;) {
+    mi = $next_4(mi$iterator);
+    $insertItem_0(sb, mi, sb.allItems.array.length);
+  }
+}
+
+function $countScopeElms(this$static) {
+  var c, i;
+  c = 0;
+  for (i = 0; i != this$static.sim.elmList.arrayList.array.length; i++) {
+    instanceOf($get_4(this$static.sim.elmList, i), 20) && ++c;
+  }
+  return c;
+}
+
+function $deleteUnusedScopeElms(this$static) {
+  var ce, i;
+  for (i = this$static.sim.elmList.arrayList.array.length - 1; i >= 0; i--) {
+    ce = $get_4(this$static.sim.elmList, i);
+    if (instanceOf(ce, 20) && $needToRemove(ce.elmScope)) {
+      ce.delete_0();
+      $removeElementAt(this$static.sim.elmList, i);
+      $needAnalyze(this$static.sim);
+    }
+  }
+}
+
+function $getNthScopeElm(this$static, n) {
+  var i;
+  for (i = 0; i != this$static.sim.elmList.arrayList.array.length; i++) {
+    if (instanceOf($get_4(this$static.sim.elmList, i), 20)) {
+      --n;
+      if (n < 0)
+        return $get_4(this$static.sim.elmList, i);
+    }
+  }
+  return null;
+}
+
+function $resetGraphs(this$static) {
+  var i;
+  for (i = 0; i != this$static.scopeCount; i++)
+    $resetGraph(this$static.scopes[i], true);
+}
+
+function $scopeMenuIsSelected(this$static, s) {
+  if (this$static.scopeMenuSelected < 0)
+    return false;
+  if (this$static.scopeMenuSelected < this$static.scopeCount)
+    return this$static.scopes[this$static.scopeMenuSelected] == s;
+  return $getNthScopeElm(this$static, this$static.scopeMenuSelected - this$static.scopeCount).elmScope == s;
+}
+
+function $separateAll(this$static) {
+  var ct, i, newscopes;
+  newscopes = initUnidimensionalArray(Lcom_lushprojects_circuitjs1_client_Scope_2_classLit, $intern_3, 169, 20, 0, 1);
+  ct = 0;
+  for (i = 0; i < this$static.scopeCount; i++)
+    ct = $separate(this$static.scopes[i], newscopes, ct);
+  this$static.scopes = newscopes;
+  this$static.scopeCount = ct;
+}
+
+function $setupScopes(this$static) {
+  var colct, colh, h, i, iw, j, pos, r, row, s, speed, ui, w;
+  pos = -1;
+  for (i = 0; i < this$static.scopeCount; i++) {
+    if ($needToRemove(this$static.scopes[i])) {
+      for (j = i; j != this$static.scopeCount; j++)
+        this$static.scopes[j] = this$static.scopes[j + 1];
+      --this$static.scopeCount;
+      --i;
+      continue;
+    }
+    this$static.scopes[i].position_0 > pos + 1 && (this$static.scopes[i].position_0 = pos + 1);
+    pos = this$static.scopes[i].position_0;
+  }
+  while (this$static.scopeCount > 0 && !$getElm_0(this$static.scopes[this$static.scopeCount - 1]))
+    --this$static.scopeCount;
+  ui = this$static.sim.ui;
+  h = ui.canvasHeight - this$static.sim.circuitArea.height_0;
+  pos = 0;
+  for (i = 0; i != this$static.scopeCount; i++)
+    this$static.scopeColCount[i] = 0;
+  for (i = 0; i != this$static.scopeCount; i++) {
+    pos = max_2(this$static.scopes[i].position_0, pos);
+    ++this$static.scopeColCount[this$static.scopes[i].position_0];
+  }
+  colct = pos + 1;
+  iw = 160;
+  colct <= 2 && (iw = 240);
+  w = (ui.canvasWidth - iw) / colct | 0;
+  w < 20 && (w = 20);
+  pos = -1;
+  colh = 0;
+  row = 0;
+  speed = 0;
+  for (i = 0; i != this$static.scopeCount; i++) {
+    s = this$static.scopes[i];
+    if (s.position_0 > pos) {
+      pos = s.position_0;
+      colh = h / this$static.scopeColCount[pos] | 0;
+      row = 0;
+      speed = s.speed;
+    }
+    s.stackCount = this$static.scopeColCount[pos];
+    if (s.speed != speed) {
+      s.speed = speed;
+      $resetGraph(s, false);
+    }
+    r = new Rectangle_0(pos * w, ui.canvasHeight - h + colh * row, w - 10, colh);
+    ++row;
+    $equals_0(r, s.rect_0) || $setRect(s, r);
+  }
+  if (this$static.oldScopeCount != this$static.scopeCount) {
+    $setCircuitArea(ui);
+    this$static.oldScopeCount = this$static.scopeCount;
+  }
+}
+
+function $stackAll(this$static) {
+  var i;
+  for (i = 0; i != this$static.scopeCount; i++) {
+    this$static.scopes[i].position_0 = 0;
+    this$static.scopes[i].showMax = this$static.scopes[i].showMin = false;
+  }
+}
+
+function $stackScope(this$static, s) {
+  if (!$canStackScope(this$static, s))
+    return;
+  s == 0 && (s = 1);
+  this$static.scopes[s].position_0 = this$static.scopes[s - 1].position_0;
+  for (++s; s < this$static.scopeCount; s++)
+    --this$static.scopes[s].position_0;
+}
+
+function $timeStep_0(this$static) {
+  var i;
+  for (i = 0; i != this$static.scopeCount; i++)
+    $timeStep(this$static.scopes[i]);
+  for (i = 0; i != this$static.sim.scopeElmArr.length; i++)
+    $timeStep(this$static.sim.scopeElmArr[i].elmScope);
+}
+
+function $unstackAll(this$static) {
+  var i;
+  for (i = 0; i != this$static.scopeCount; i++) {
+    this$static.scopes[i].position_0 = i;
+    this$static.scopes[i].showMax = true;
+  }
+}
+
+function $unstackScope(this$static, s) {
+  if (!$canUnstackScope(this$static, s))
+    return;
+  s == 0 && (s = 1);
+  this$static.scopes[s].position_0 != this$static.scopes[s - 1].position_0 && ++s;
+  for (; s < this$static.scopeCount; s++)
+    ++this$static.scopes[s].position_0;
+}
+
+function ScopeManager(sim) {
+  this.sim = sim;
+  this.scopes = initUnidimensionalArray(Lcom_lushprojects_circuitjs1_client_Scope_2_classLit, $intern_3, 169, 20, 0, 1);
+  this.scopeColCount = initUnidimensionalArray(I_classLit, $intern_25, 8, 20, 15, 1);
+  this.scopeCount = 0;
+  this.selectScopeMenuBar = new ScopeManager$1(this);
+  this.scopePopupMenu = new ScopePopupMenu;
+}
+
+function max_2(a, b) {
+  return a > b ? a : b;
+}
+
+defineClass(523, 1, {}, ScopeManager);
+_.menuPlot = -1;
+_.menuScope = -1;
+_.oldScopeCount = -1;
+_.scopeCount = 0;
+_.scopeHeightFraction = 0.2;
+_.scopeMenuSelected = -1;
+_.scopeSelected = -1;
+var Lcom_lushprojects_circuitjs1_client_ScopeManager_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ScopeManager', 523);
+function ScopeManager$1(this$0) {
+  this.this$01 = this$0;
+  MenuBar_0.call(this, true);
+}
+
+defineClass(524, 53, $intern_61, ScopeManager$1);
+_.onBrowserEvent = function onBrowserEvent_5(event_0) {
+  var currentItem, i, item_0;
+  currentItem = -1;
+  for (i = 0; i != this.this$01.selectScopeMenuItems.arrayList.array.length; i++) {
+    item_0 = $get_4(this.this$01.selectScopeMenuItems, i);
+    isOrHasChild(($clinit_DOM(), item_0.element), $eventGetTarget(($clinit_DOMImpl(), event_0))) && (currentItem = i);
+  }
+  switch ($clinit_DOM(), $eventGetTypeInt(($clinit_DOMImpl(), event_0).type)) {
+    case 16:
+      this.this$01.scopeMenuSelected = currentItem;
+      break;
+    case 32:
+      this.this$01.scopeMenuSelected = -1;
+  }
+  $onBrowserEvent_0(this, event_0);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_ScopeManager$1_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ScopeManager/1', 524);
+function $clinit_ScopePlot() {
+  $clinit_ScopePlot = emptyMethod;
+  colors = stampJavaTypeInfo(getClassLiteralForArray(Ljava_lang_String_2_classLit, 1), $intern_23, 2, 6, ['#FF0000', '#FF8000', '#FF00FF', '#7F00FF', '#0000FF', '#0080FF', '#FFFF00', '#00FFFF']);
+}
+
+function $$init_16(this$static) {
+}
+
+function $assignColor(this$static, count) {
+  if (count > 0) {
+    this$static.color_0 = colors[(count - 1) % 8];
+    return;
+  }
+  switch (this$static.units) {
+    case 0:
+      this$static.color_0 = $getHexValue(positiveColor_0);
+      break;
+    case 1:
+      this$static.color_0 = theApp.menus.printableCheckItem.on ? '#A0A000' : '#FFFF00';
+      break;
+    default: this$static.color_0 = theApp.menus.printableCheckItem.on ? '#000000' : '#FFFFFF';
+  }
+}
+
+function $getUnitText(this$static, v) {
+  switch (this$static.units) {
+    case 0:
+      return getUnitText(v, 'V', false);
+    case 1:
+      return getUnitText(v, 'A', false);
+    case 3:
+      return getUnitText(v, ohmString, false);
+    case 2:
+      return getUnitText(v, 'W', false);
+    case 4:
+      return getUnitText(v, 'C', false);
+  }
+  return null;
+}
+
+function $reset_7(this$static, spc, sp, full) {
+  var i, i1, i2, oldMax, oldMin, oldSpc;
+  oldSpc = this$static.scopePointCount;
+  this$static.scopePointCount = spc;
+  this$static.scopePlotSpeed != sp && (oldSpc = 0);
+  this$static.scopePlotSpeed = sp;
+  this$static.acAlpha = 1 - 1 / (1.15 * this$static.scopePlotSpeed * this$static.scopePointCount);
+  oldMin = this$static.minValues;
+  oldMax = this$static.maxValues;
+  this$static.minValues = initUnidimensionalArray(D_classLit, $intern_70, 8, this$static.scopePointCount, 15, 1);
+  this$static.maxValues = initUnidimensionalArray(D_classLit, $intern_70, 8, this$static.scopePointCount, 15, 1);
+  if (oldMin != null && !full) {
+    for (i = 0; i != this$static.scopePointCount && i != oldSpc; i++) {
+      i1 = -i & this$static.scopePointCount - 1;
+      i2 = this$static.ptr - i & oldSpc - 1;
+      this$static.minValues[i1] = oldMin[i2];
+      this$static.maxValues[i1] = oldMax[i2];
+    }
+  }
+  else
+    this$static.lastUpdateTime = theSim.t;
+  this$static.ptr = 0;
+}
+
+function $setAcCoupled(this$static, b) {
+  this$static.units == 0 ? (this$static.acCoupled = b) : (this$static.acCoupled = false);
+}
+
+function $timeStep_1(this$static) {
+  var maxTimeStep, newAcOut, v;
+  if (!this$static.elm)
+    return;
+  v = this$static.elm.getScopeValue(this$static.value_0);
+  newAcOut = this$static.acAlpha * (this$static.acLastOut + v - this$static.lastValue);
+  this$static.lastValue = v;
+  this$static.acLastOut = newAcOut;
+  this$static.acCoupled && (v = newAcOut);
+  v < this$static.minValues[this$static.ptr] && (this$static.minValues[this$static.ptr] = v);
+  v > this$static.maxValues[this$static.ptr] && (this$static.maxValues[this$static.ptr] = v);
+  maxTimeStep = theSim.maxTimeStep;
+  if (theSim.t - this$static.lastUpdateTime >= maxTimeStep * this$static.scopePlotSpeed) {
+    this$static.ptr = this$static.ptr + 1 & this$static.scopePointCount - 1;
+    this$static.minValues[this$static.ptr] = this$static.maxValues[this$static.ptr] = v;
+    this$static.lastUpdateTime += maxTimeStep * this$static.scopePlotSpeed;
+  }
+}
+
+function ScopePlot(e) {
+  $clinit_ScopePlot();
+  $$init_16(this);
+  this.elm = e;
+  this.units = 0;
+}
+
+function ScopePlot_0(e, u, v, manS) {
+  $clinit_ScopePlot();
+  $$init_16(this);
+  this.elm = e;
+  this.units = u;
+  this.value_0 = v;
+  this.manScale = manS;
+  (this.units == 3 || this.units == 2 || this.units == 4) && (this.manVPosition = -100);
+}
+
+defineClass(150, 1, { 150: 1 }, ScopePlot, ScopePlot_0);
+_.acAlpha = 0.9999;
+_.acCoupled = false;
+_.acLastOut = 0;
+_.gridMult = 0;
+_.lastUpdateTime = 0;
+_.lastValue = 0;
+_.manScale = 1;
+_.manScaleSet = false;
+_.manVPosition = 0;
+_.plotOffset = 0;
+_.ptr = 0;
+_.scopePlotSpeed = 0;
+_.scopePointCount = 0;
+_.units = 0;
+_.value_0 = 0;
+var colors;
+var Lcom_lushprojects_circuitjs1_client_ScopePlot_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ScopePlot', 150);
+function $doScopePopupChecks(this$static, floating, canstack, cancombine, canunstack, s) {
+  $setState_1(this$static.maxScaleItem, s.maxScale);
+  $setVisible(this$static.stackItem, !floating);
+  $setEnabled_1(this$static.stackItem, canstack);
+  $setVisible(this$static.unstackItem, !floating);
+  $setEnabled_1(this$static.unstackItem, canunstack);
+  $setVisible(this$static.combineItem, !floating);
+  $setEnabled_1(this$static.combineItem, cancombine);
+  $setVisible(this$static.dockItem, floating);
+  $setVisible(this$static.undockItem, !floating);
+}
+
+function ScopePopupMenu() {
+  this.m_0 = new MenuBar_0(true);
+  $addItem_0(this.m_0, new CheckboxAlignedMenuItem(LS('Remove Scope'), new MyCommand('scopepop', 'remove')));
+  $addItem_0(this.m_0, this.dockItem = new CheckboxAlignedMenuItem(LS('Dock Scope'), new MyCommand('scopepop', 'dock')));
+  $addItem_0(this.m_0, this.undockItem = new CheckboxAlignedMenuItem(LS('Undock Scope'), new MyCommand('scopepop', 'undock')));
+  $addItem_0(this.m_0, this.maxScaleItem = new CheckboxMenuItem_0(LS('Max Scale'), new MyCommand('scopepop', 'maxscale')));
+  $addItem_0(this.m_0, this.stackItem = new CheckboxAlignedMenuItem(LS('Stack'), new MyCommand('scopepop', 'stack')));
+  $addItem_0(this.m_0, this.unstackItem = new CheckboxAlignedMenuItem(LS('Unstack'), new MyCommand('scopepop', 'unstack')));
+  $addItem_0(this.m_0, this.combineItem = new CheckboxAlignedMenuItem(LS('Combine'), new MyCommand('scopepop', 'combine')));
+  $addItem_0(this.m_0, new CheckboxAlignedMenuItem(LS('Remove Plot'), new MyCommand('scopepop', 'removeplot')));
+  $addItem_0(this.m_0, new CheckboxAlignedMenuItem(LS('Reset'), new MyCommand('scopepop', 'reset')));
+  $addItem_0(this.m_0, new CheckboxAlignedMenuItem(LS('Export CSV...'), new MyCommand('scopepop', 'exportcsv')));
+  $addItem_0(this.m_0, new CheckboxAlignedMenuItem(LS('Properties...'), new MyCommand('scopepop', 'properties')));
+}
+
+defineClass(743, 1, {}, ScopePopupMenu);
+var Lcom_lushprojects_circuitjs1_client_ScopePopupMenu_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ScopePopupMenu', 743);
+function $addItemToGrid(this$static, g, scb) {
+  $setWidget_2(g, this$static.ny, this$static.nx, scb);
+  if (++this$static.nx >= this$static.grid.numColumns) {
+    this$static.nx = 0;
+    ++this$static.ny;
+  }
+}
+
+function $apply_1(this$static) {
+  var d, label_0, n;
+  label_0 = $getText(this$static.labelTextBox);
+  label_0.length == 0 && (label_0 = null);
+  $setText_3(this$static.scope_0, label_0);
+  if (this$static.scope_0.manualScale) {
+    d = $getManualScaleValue(this$static);
+    d > 0 && $setManualScaleValue(this$static.scope_0, this$static.plotSelection, d);
+    n = $getDivisionsValue(this$static);
+    n > 0 && $setManDivisions(this$static.scope_0, n);
+  }
+}
+
+function $applyTriggerLevel(this$static) {
+  var d;
+  try {
+    d = parseUnits($getText(this$static.triggerLevelTextBox));
+    this$static.scope_0.triggerLevel = d;
+    $resetGraph(this$static.scope_0, false);
+  }
+  catch ($e0) {
+    $e0 = toJava($e0);
+    if (!instanceOf($e0, 15))
+      throw toJs($e0);
+  }
+}
+
+function $closeDialog_1(this$static) {
+  $hide_0(this$static, false);
+  dialogShowing == this$static && (dialogShowing = null);
+  $apply_1(this$static);
+}
+
+function $getChannelButtonLabel(this$static, i) {
+  var l_0, p;
+  p = $get_4(this$static.scope_0.visiblePlots, i);
+  l_0 = '<span style="color: ' + p.color_0 + ';">&#x25CF;<\/span>&nbsp;CH ' + ('' + (i + 1));
+  switch (p.units) {
+    case 0:
+      l_0 += ' (V)';
+      break;
+    case 1:
+      l_0 += ' (I)';
+      break;
+    case 3:
+      l_0 += ' (R)';
+      break;
+    case 2:
+      l_0 += ' (P)';
+      break;
+    case 4:
+      l_0 += ' (Q)';
+  }
+  return l_0;
+}
+
+function $getDivisionsValue(this$static) {
+  var n;
+  try {
+    n = __parseAndValidateInt($getText(this$static.divisionsTextBox), 10);
+    return n;
+  }
+  catch ($e0) {
+    $e0 = toJava($e0);
+    if (instanceOf($e0, 15)) {
+      return 0;
+    }
+    else
+      throw toJs($e0);
+  }
+}
+
+function $getManualScaleValue(this$static) {
+  var d;
+  try {
+    d = parseUnits($getText(this$static.manualScaleTextBox));
+    d < $intern_74 && (d = $intern_74);
+    return d;
+  }
+  catch ($e0) {
+    $e0 = toJava($e0);
+    if (instanceOf($e0, 15)) {
+      return 0;
+    }
+    else
+      throw toJs($e0);
+  }
+}
+
+function $positionBarChanged(this$static) {
+  var p;
+  if (!this$static.scope_0.manualScale || this$static.plotSelection > this$static.scope_0.visiblePlots.arrayList.array.length)
+    return;
+  p = this$static.positionBar.val_0;
+  $setPlotPosition(this$static.scope_0, this$static.plotSelection, p);
+}
+
+function $refreshDraw(this$static) {
+  this$static.scope_0.manualScale || $updateManualScaleUi(this$static);
+}
+
+function $scrollbarChanged(this$static) {
+  var newsp;
+  newsp = round_int($wnd.Math.pow(2, 10 - this$static.speedBar.val_0));
+  console_0('changed ' + this$static.scope_0.speed + ' ' + newsp + ' ' + this$static.speedBar.val_0);
+  this$static.scope_0.speed != newsp && $setSpeed(this$static.scope_0, newsp);
+  $setText_0(this$static.scopeSpeedLabel, getUnitText($calcGridStepX(this$static.scope_0), 's', false) + '/div');
+}
+
+function $updateChannelButtons(this$static) {
+  var b, b0, i, i0;
+  this$static.plotSelection >= this$static.scope_0.visiblePlots.arrayList.array.length && (this$static.plotSelection = 0);
+  for (i0 = this$static.chanButtons.arrayList.array.length - 1; i0 >= this$static.scope_0.visiblePlots.arrayList.array.length; i0--) {
+    $remove_1(this$static.channelButtonsp, $get_4(this$static.chanButtons, i0));
+    $remove_19(this$static.chanButtons, i0);
+  }
+  for (i = 0; i < this$static.scope_0.visiblePlots.arrayList.array.length; i++) {
+    if (i >= this$static.chanButtons.arrayList.array.length) {
+      b0 = new Button;
+      $add_11(this$static.chanButtons, b0);
+      $addDomHandler($get_4(this$static.chanButtons, i), new ScopePropertiesDialog$PlotClickHandler(this$static, i), ($clinit_ClickEvent(), $clinit_ClickEvent(), TYPE_1));
+      setStyleName(($clinit_DOM(), b0.element), 'chbut', true);
+      whiteColor == ($clinit_Color(), white) ? setStyleName(b0.element, 'chbut-black', true) : setStyleName(b0.element, 'chbut-white', true);
+      $add_2(this$static.channelButtonsp, b0);
+    }
+    b = $get_4(this$static.chanButtons, i);
+    $setHTML(b, $getChannelButtonLabel(this$static, i));
+    i == this$static.plotSelection ? setStyleName(($clinit_DOM(), b.element), 'chsel', true) : setStyleName(($clinit_DOM(), b.element), 'chsel', false);
+  }
+}
+
+function $updateManualScaleUi(this$static) {
+  var p;
+  $updateChannelButtons(this$static);
+  $setVisible(this$static.channelSettingsp, this$static.scope_0.manualScale && $booleanValue(this$static.vScaleLabel.expanded));
+  $setVisible(this$static.vScaleGrid, $booleanValue(this$static.vScaleLabel.expanded));
+  if ($booleanValue(this$static.vScaleLabel.expanded)) {
+    $setVisible_1(this$static.vScaleGrid.rowFormatter, 0, this$static.scope_0.manualScale && this$static.plotSelection < this$static.scope_0.visiblePlots.arrayList.array.length);
+    $setVisible_1(this$static.vScaleGrid.rowFormatter, 1, this$static.scope_0.manualScale && this$static.plotSelection < this$static.scope_0.visiblePlots.arrayList.array.length);
+    $setVisible_1(this$static.vScaleGrid.rowFormatter, 2, !this$static.scope_0.manualScale || this$static.plotSelection < this$static.scope_0.visiblePlots.arrayList.array.length);
+    $setVisible_1(this$static.vScaleGrid.rowFormatter, 3, this$static.scope_0.manualScale);
+  }
+  $setVisible(this$static.scaleUpButton, this$static.scope_0.manualScale);
+  $setVisible(this$static.scaleDownButton, this$static.scope_0.manualScale);
+  if (this$static.scope_0.manualScale) {
+    if (this$static.plotSelection < this$static.scope_0.visiblePlots.arrayList.array.length) {
+      p = $get_4(this$static.scope_0.visiblePlots, this$static.plotSelection);
+      $setText_0(this$static.manualScaleId, 'CH ' + ('' + (this$static.plotSelection + 1)) + ' ' + LS('Scale'));
+      $setText_0(this$static.manualScaleLabel, getScaleUnitsText(p.units) + LS('/div'));
+      $setText_2(this$static.manualScaleTextBox, unitString(null, p.manScale));
+      $setEnabled(this$static.manualScaleTextBox, true);
+      $setText_2(this$static.divisionsTextBox, '' + this$static.scope_0.manDivisions);
+      $setEnabled(this$static.divisionsTextBox, true);
+      $setText_0(this$static.positionLabel, 'CH ' + ('' + (this$static.plotSelection + 1)) + ' ' + LS('Position'));
+      $setValue_2(this$static.positionBar, p.manVPosition);
+      $setEnabled_0(this$static.dcButton, true);
+      $enable(this$static.positionBar);
+      $setValue(this$static.dcButton, ($clinit_Boolean(), p.acCoupled ? false : true));
+      $setEnabled_0(this$static.acButton, p.units == 0);
+      $setValue(this$static.acButton, p.acCoupled ? true : false);
+    }
+    else {
+      $setText_0(this$static.manualScaleId, '');
+      $setText_0(this$static.manualScaleLabel, '');
+      $setText_2(this$static.manualScaleTextBox, '');
+      $setEnabled(this$static.manualScaleTextBox, false);
+      $setText_0(this$static.positionLabel, '');
+      $setEnabled_0(this$static.dcButton, false);
+      $setEnabled_0(this$static.acButton, false);
+      $disable(this$static.positionBar);
+    }
+  }
+  else {
+    $setText_0(this$static.manualScaleId, '');
+    $setText_0(this$static.manualScaleLabel, LS('Max Value') + ' (' + $getScaleUnitsText(this$static.scope_0) + ')');
+    $setText_2(this$static.manualScaleTextBox, unitString(null, $getScaleValue(this$static.scope_0)));
+    $setEnabled(this$static.manualScaleTextBox, false);
+    $setText_0(this$static.positionLabel, '');
+  }
+  $setText_0(this$static.scopeSpeedLabel, getUnitText($calcGridStepX(this$static.scope_0), 's', false) + '/div');
+}
+
+function $updateUi(this$static) {
+  var elm, trigActive;
+  $setVisible(this$static.vModep, $booleanValue(this$static.vScaleLabel.expanded));
+  $updateRowVisibility(this$static.gridLabels);
+  $setVisible_1(this$static.hScaleGrid.rowFormatter, 1, $booleanValue(this$static.hScaleLabel.expanded));
+  $setValue_2(this$static.speedBar, 10 - toInt_0(fromDouble_0($wnd.Math.round($wnd.Math.log(this$static.scope_0.speed) / $wnd.Math.log(2)))));
+  if (this$static.voltageBox) {
+    $setValue(this$static.voltageBox, ($clinit_Boolean(), this$static.scope_0.showV && !$showingValue(this$static.scope_0, 7) ? true : false));
+    $setValue(this$static.currentBox, this$static.scope_0.showI && !$showingValue(this$static.scope_0, 7) ? true : false);
+    $setValue(this$static.powerBox, $showingValue(this$static.scope_0, 7) ? true : false);
+  }
+  $setValue(this$static.scaleBox, ($clinit_Boolean(), this$static.scope_0.showScale ? true : false));
+  $setValue(this$static.peakBox, this$static.scope_0.showMax ? true : false);
+  $setValue(this$static.negPeakBox, this$static.scope_0.showMin ? true : false);
+  $setValue(this$static.p2pBox, this$static.scope_0.showP2P ? true : false);
+  $setValue(this$static.freqBox, this$static.scope_0.showFreq ? true : false);
+  $setValue(this$static.spectrumBox, this$static.scope_0.showFFT ? true : false);
+  $setValue(this$static.logSpectrumBox, this$static.scope_0.logSpectrum ? true : false);
+  $setValue(this$static.rmsBox, this$static.scope_0.showRMS ? true : false);
+  $setValue(this$static.averageBox, this$static.scope_0.showAverage ? true : false);
+  $setValue(this$static.dutyBox, this$static.scope_0.showDutyCycle ? true : false);
+  $setValue(this$static.elmInfoBox, this$static.scope_0.showElmInfo ? true : false);
+  $setEnabled_0(this$static.rmsBox, $canShowRMS(this$static.scope_0));
+  $setValue(this$static.viBox, this$static.scope_0.plot2d && !this$static.scope_0.plotXY ? true : false);
+  $setValue(this$static.xyBox, this$static.scope_0.plotXY ? true : false);
+  $setValue(this$static.resistanceBox, $showingValue(this$static.scope_0, 2) ? true : false);
+  $setEnabled_0(this$static.resistanceBox, (elm = $getSingleElm(this$static.scope_0), !!elm && elm.canShowValueInScope(2)));
+  !!this$static.chargeBox && $setValue(this$static.chargeBox, $hasPlotValue(this$static.scope_0) ? true : false);
+  if (this$static.vbeBox) {
+    $setValue(this$static.ibBox, $showingValue(this$static.scope_0, 1) ? true : false);
+    $setValue(this$static.icBox, $showingValue(this$static.scope_0, 2) ? true : false);
+    $setValue(this$static.ieBox, $showingValue(this$static.scope_0, 3) ? true : false);
+    $setValue(this$static.vbeBox, $showingValue(this$static.scope_0, 4) ? true : false);
+    $setValue(this$static.vbcBox, $showingValue(this$static.scope_0, 5) ? true : false);
+    $setValue(this$static.vceBox, $showingValue(this$static.scope_0, 6) ? true : false);
+    $setValue(this$static.vceIcBox, $isShowingVceAndIc(this$static.scope_0) ? true : false);
+  }
+  if (this$static.scope_0.manualScale) {
+    $setValue(this$static.manualButton, true);
+    $setValue(this$static.autoButton, false);
+    $setValue(this$static.maxButton, false);
+    $setVisible(this$static.applyButton, true);
+  }
+  else {
+    $setValue(this$static.manualButton, false);
+    $setValue(this$static.autoButton, this$static.scope_0.maxScale ? false : true);
+    $setValue(this$static.maxButton, this$static.scope_0.maxScale ? true : false);
+    $setVisible(this$static.applyButton, false);
+  }
+  $updateManualScaleUi(this$static);
+  $setValue(this$static.trigFreeRunButton, this$static.scope_0.triggerMode == 0 ? true : false);
+  $setValue(this$static.trigNormalButton, this$static.scope_0.triggerMode == 1 ? true : false);
+  $setValue(this$static.trigAutoButton, this$static.scope_0.triggerMode == 2 ? true : false);
+  trigActive = this$static.scope_0.triggerMode != 0;
+  $setValue(this$static.trigRisingButton, this$static.scope_0.triggerEdge == 0 ? true : false);
+  $setValue(this$static.trigFallingButton, this$static.scope_0.triggerEdge == 1 ? true : false);
+  $setEnabled_0(this$static.trigRisingButton, trigActive);
+  $setEnabled_0(this$static.trigFallingButton, trigActive);
+  $setText_2(this$static.triggerLevelTextBox, unitString(null, this$static.scope_0.triggerLevel));
+  $setEnabled(this$static.triggerLevelTextBox, trigActive);
+  $setVisible(this$static.trigModep, $booleanValue(this$static.triggerLabel.expanded));
+  $setVisible(this$static.trigEdgep, $booleanValue(this$static.triggerLabel.expanded) && trigActive);
+  $setVisible_1(this$static.triggerGrid.rowFormatter, 1, $booleanValue(this$static.triggerLabel.expanded));
+  $setVisible_1(this$static.triggerGrid.rowFormatter, 2, $booleanValue(this$static.triggerLabel.expanded) && trigActive);
+  $setVisible_1(this$static.triggerGrid.rowFormatter, 3, $booleanValue(this$static.triggerLabel.expanded) && trigActive);
+}
+
+function ScopePropertiesDialog(s) {
+  var allowedHeight, applyButton2, applyButtonDiv, capacitor, displayAll, displayScales, elm, labelText, okButton, resetPosButton, saveAsDefaultButton, scaleBoxGrid, transistor, trigApplyButton, trigLevelp, vSLG;
+  Dialog.call(this);
+  this.chanButtons = new Vector;
+  this.plotSelection = 0;
+  allowedHeight = $getClientHeight($doc) * 4 / 5 | 0;
+  displayAll = allowedHeight > 600;
+  displayScales = allowedHeight > 470;
+  this.scope_0 = s;
+  this.fp = new FlowPanel;
+  $setWidget_1(this, this.fp);
+  $setText(this, LS('Scope Properties'));
+  vSLG = new Grid(1, 1);
+  this.vScaleLabel = new ScopePropertiesDialog$expandingLabel(this, LS('Vertical Scale'), ($clinit_Boolean(), displayScales ? true : false));
+  $setWidget_2(vSLG, 0, 0, this.vScaleLabel.p);
+  $add_2(this.fp, vSLG);
+  this.vModep = new HorizontalPanel;
+  this.autoButton = new RadioButton('vMode', LS('Auto'));
+  $addValueChangeHandler_0(this.autoButton, new ScopePropertiesDialog$1(this));
+  this.maxButton = new RadioButton('vMode', LS('Auto (Max Scale)'));
+  $addValueChangeHandler_0(this.maxButton, new ScopePropertiesDialog$2(this));
+  this.manualButton = new RadioButton('vMode', LS('Manual'));
+  $addValueChangeHandler_0(this.manualButton, new ScopePropertiesDialog$3(this));
+  $add_3(this.vModep, this.autoButton);
+  $add_3(this.vModep, this.maxButton);
+  $add_3(this.vModep, this.manualButton);
+  $add_2(this.fp, this.vModep);
+  this.channelSettingsp = new VerticalPanel;
+  this.channelButtonsp = new FlowPanel;
+  $updateChannelButtons(this);
+  $add_5(this.channelSettingsp, this.channelButtonsp);
+  $add_2(this.fp, this.channelSettingsp);
+  this.vScaleGrid = new Grid(4, 5);
+  this.dcButton = new RadioButton('acdc', LS('DC Coupled'));
+  $addValueChangeHandler_0(this.dcButton, new ScopePropertiesDialog$4(this));
+  $setWidget_2(this.vScaleGrid, 0, 0, this.dcButton);
+  this.acButton = new RadioButton('acdc', LS('AC Coupled'));
+  $addValueChangeHandler_0(this.acButton, new ScopePropertiesDialog$5(this));
+  $setWidget_2(this.vScaleGrid, 0, 1, this.acButton);
+  this.positionLabel = new Label_1(LS('Position'));
+  $setWidget_2(this.vScaleGrid, 1, 0, this.positionLabel);
+  $setVerticalAlignment(this.vScaleGrid.cellFormatter, 0, 0, ($clinit_HasVerticalAlignment(), ALIGN_MIDDLE));
+  this.positionBar = new Scrollbar_0(0, -200, 200, new ScopePropertiesDialog$6(this));
+  $setWidget_2(this.vScaleGrid, 1, 1, this.positionBar);
+  resetPosButton = new Button_1(LS('Reset Position'));
+  $addDomHandler(resetPosButton, new ScopePropertiesDialog$7(this), ($clinit_ClickEvent(), $clinit_ClickEvent(), TYPE_1));
+  $setWidget_2(this.vScaleGrid, 1, 4, resetPosButton);
+  this.manualScaleId = new Label;
+  $setWidget_2(this.vScaleGrid, 2, 0, this.manualScaleId);
+  scaleBoxGrid = new Grid(1, 3);
+  this.scaleDownButton = new Button_1('&#9660;');
+  $addDomHandler(this.scaleDownButton, new ScopePropertiesDialog$downClickHandler(this), (null, TYPE_1));
+  $setWidget_2(scaleBoxGrid, 0, 0, this.scaleDownButton);
+  this.manualScaleTextBox = new TextBox;
+  $addValueChangeHandler_1(this.manualScaleTextBox, new ScopePropertiesDialog$manualScaleTextHandler(this));
+  $addStyleName(this.manualScaleTextBox, 'scalebox');
+  $setWidget_2(scaleBoxGrid, 0, 1, this.manualScaleTextBox);
+  this.scaleUpButton = new Button_1('&#9650;');
+  $addDomHandler(this.scaleUpButton, new ScopePropertiesDialog$upClickHandler(this), (null, TYPE_1));
+  $setWidget_2(scaleBoxGrid, 0, 2, this.scaleUpButton);
+  $setWidget_2(this.vScaleGrid, 2, 1, scaleBoxGrid);
+  this.manualScaleLabel = new Label_1('');
+  $setWidget_2(this.vScaleGrid, 2, 2, this.manualScaleLabel);
+  $setWidget_2(this.vScaleGrid, 2, 4, this.applyButton = new Button_1(LS('Apply')));
+  this.divisionsLabel = new Label_1(LS('# of Divisions'));
+  this.divisionsTextBox = new TextBox;
+  $addValueChangeHandler_1(this.divisionsTextBox, new ScopePropertiesDialog$manualScaleTextHandler(this));
+  $setWidget_2(this.vScaleGrid, 3, 0, this.divisionsLabel);
+  $setWidget_2(this.vScaleGrid, 3, 1, this.divisionsTextBox);
+  $addDomHandler(this.applyButton, new ScopePropertiesDialog$8(this), (null, TYPE_1));
+  $setWidget_2(this.vScaleGrid, 3, 4, applyButtonDiv = new Button_1(LS('Apply')));
+  $addDomHandler(applyButtonDiv, new ScopePropertiesDialog$9(this), (null, TYPE_1));
+  $setVerticalAlignment(this.vScaleGrid.cellFormatter, 1, 1, ALIGN_MIDDLE);
+  $add_2(this.fp, this.vScaleGrid);
+  this.hScaleGrid = new Grid(2, 4);
+  this.hScaleLabel = new ScopePropertiesDialog$expandingLabel(this, LS('Horizontal Scale'), displayScales ? true : false);
+  $setWidget_2(this.hScaleGrid, 0, 0, this.hScaleLabel.p);
+  this.speedBar = new Scrollbar_0(2, 0, 11, new ScopePropertiesDialog$10(this));
+  $setWidget_2(this.hScaleGrid, 1, 0, this.speedBar);
+  this.scopeSpeedLabel = new Label_1('');
+  $setHorizontalAlignment(this.scopeSpeedLabel, ($clinit_HasHorizontalAlignment(), ALIGN_RIGHT));
+  $setWidget_2(this.hScaleGrid, 1, 1, this.scopeSpeedLabel);
+  $setVerticalAlignment(this.hScaleGrid.cellFormatter, 1, 1, ALIGN_MIDDLE);
+  $add_2(this.fp, this.hScaleGrid);
+  this.triggerGrid = new Grid(4, 4);
+  this.triggerLabel = new ScopePropertiesDialog$expandingLabel(this, LS('Trigger'), false);
+  $setWidget_2(this.triggerGrid, 0, 0, this.triggerLabel.p);
+  this.trigModep = new HorizontalPanel;
+  this.trigFreeRunButton = new RadioButton('trigMode', LS('Free Run'));
+  $addValueChangeHandler_0(this.trigFreeRunButton, new ScopePropertiesDialog$11(this));
+  this.trigNormalButton = new RadioButton('trigMode', LS('Normal'));
+  $addValueChangeHandler_0(this.trigNormalButton, new ScopePropertiesDialog$12(this));
+  this.trigAutoButton = new RadioButton('trigMode', LS('Auto'));
+  $addValueChangeHandler_0(this.trigAutoButton, new ScopePropertiesDialog$13(this));
+  $add_3(this.trigModep, this.trigFreeRunButton);
+  $add_3(this.trigModep, this.trigNormalButton);
+  $add_3(this.trigModep, this.trigAutoButton);
+  $setWidget_2(this.triggerGrid, 1, 0, this.trigModep);
+  this.trigEdgep = new HorizontalPanel;
+  this.trigRisingButton = new RadioButton('trigEdge', LS('Rising'));
+  $addValueChangeHandler_0(this.trigRisingButton, new ScopePropertiesDialog$14(this));
+  this.trigFallingButton = new RadioButton('trigEdge', LS('Falling'));
+  $addValueChangeHandler_0(this.trigFallingButton, new ScopePropertiesDialog$15(this));
+  $add_3(this.trigEdgep, new Label_1(LS('Edge') + ': '));
+  $add_3(this.trigEdgep, this.trigRisingButton);
+  $add_3(this.trigEdgep, this.trigFallingButton);
+  $setWidget_2(this.triggerGrid, 2, 0, this.trigEdgep);
+  trigLevelp = new HorizontalPanel;
+  $add_3(trigLevelp, new Label_1(LS('Level') + ': '));
+  this.triggerLevelTextBox = new TextBox;
+  $addStyleName(this.triggerLevelTextBox, 'scalebox');
+  $add_3(trigLevelp, this.triggerLevelTextBox);
+  trigApplyButton = new Button_1(LS('Apply'));
+  $addDomHandler(trigApplyButton, new ScopePropertiesDialog$16(this), (null, TYPE_1));
+  $add_3(trigLevelp, trigApplyButton);
+  $setWidget_2(this.triggerGrid, 3, 0, trigLevelp);
+  $add_2(this.fp, this.triggerGrid);
+  elm = $getSingleElm(this.scope_0);
+  transistor = !!elm && instanceOf(elm, 151);
+  capacitor = !!elm && instanceOf(elm, 140);
+  if (transistor) {
+    this.grid = new Grid(13, 3);
+    this.gridLabels = new ScopePropertiesDialog$labelledGridManager(this, this.grid);
+    $addLabel(this.gridLabels, LS('Plots'), displayAll);
+    $addItemToGrid(this, this.grid, this.ibBox = new ScopeCheckBox(LS('Show Ib'), 'showib'));
+    $addValueChangeHandler_0(this.ibBox, this);
+    $addItemToGrid(this, this.grid, this.icBox = new ScopeCheckBox(LS('Show Ic'), 'showic'));
+    $addValueChangeHandler_0(this.icBox, this);
+    $addItemToGrid(this, this.grid, this.ieBox = new ScopeCheckBox(LS('Show Ie'), 'showie'));
+    $addValueChangeHandler_0(this.ieBox, this);
+    $addItemToGrid(this, this.grid, this.vbeBox = new ScopeCheckBox(LS('Show Vbe'), 'showvbe'));
+    $addValueChangeHandler_0(this.vbeBox, this);
+    $addItemToGrid(this, this.grid, this.vbcBox = new ScopeCheckBox(LS('Show Vbc'), 'showvbc'));
+    $addValueChangeHandler_0(this.vbcBox, this);
+    $addItemToGrid(this, this.grid, this.vceBox = new ScopeCheckBox(LS('Show Vce'), 'showvce'));
+    $addValueChangeHandler_0(this.vceBox, this);
+  }
+  else {
+    this.grid = new Grid(capacitor ? 12 : 11, 3);
+    this.gridLabels = new ScopePropertiesDialog$labelledGridManager(this, this.grid);
+    $addLabel(this.gridLabels, LS('Plots'), displayAll);
+    $addItemToGrid(this, this.grid, this.voltageBox = new ScopeCheckBox(LS('Show Voltage'), 'showvoltage'));
+    $addValueChangeHandler_0(this.voltageBox, this);
+    $addItemToGrid(this, this.grid, this.currentBox = new ScopeCheckBox(LS('Show Current'), 'showcurrent'));
+    $addValueChangeHandler_0(this.currentBox, this);
+  }
+  $addItemToGrid(this, this.grid, this.powerBox = new ScopeCheckBox(LS('Show Power Consumed'), 'showpower'));
+  $addValueChangeHandler_0(this.powerBox, this);
+  if (capacitor) {
+    $addItemToGrid(this, this.grid, this.chargeBox = new ScopeCheckBox(LS('Show Charge'), 'showcharge'));
+    $addValueChangeHandler_0(this.chargeBox, this);
+  }
+  $addItemToGrid(this, this.grid, this.resistanceBox = new ScopeCheckBox(LS('Show Resistance'), 'showresistance'));
+  $addValueChangeHandler_0(this.resistanceBox, this);
+  $addItemToGrid(this, this.grid, this.spectrumBox = new ScopeCheckBox(LS('Show Spectrum'), 'showfft'));
+  $addValueChangeHandler_0(this.spectrumBox, this);
+  $addItemToGrid(this, this.grid, this.logSpectrumBox = new ScopeCheckBox(LS('Log Spectrum'), 'logspectrum'));
+  $addValueChangeHandler_0(this.logSpectrumBox, this);
+  $addLabel(this.gridLabels, LS('X-Y Plots'), displayAll);
+  $addItemToGrid(this, this.grid, this.viBox = new ScopeCheckBox(LS('Show V vs I'), 'showvvsi'));
+  $addValueChangeHandler_0(this.viBox, this);
+  $addItemToGrid(this, this.grid, this.xyBox = new ScopeCheckBox(LS('Plot X/Y'), 'plotxy'));
+  $addValueChangeHandler_0(this.xyBox, this);
+  if (transistor) {
+    $addItemToGrid(this, this.grid, this.vceIcBox = new ScopeCheckBox(LS('Show Vce vs Ic'), 'showvcevsic'));
+    $addValueChangeHandler_0(this.vceIcBox, this);
+  }
+  $addLabel(this.gridLabels, LS('Show Info'), displayAll);
+  $addItemToGrid(this, this.grid, this.scaleBox = new ScopeCheckBox(LS('Show Scale'), 'showscale'));
+  $addValueChangeHandler_0(this.scaleBox, this);
+  $addItemToGrid(this, this.grid, this.peakBox = new ScopeCheckBox(LS('Show Peak Value'), 'showpeak'));
+  $addValueChangeHandler_0(this.peakBox, this);
+  $addItemToGrid(this, this.grid, this.negPeakBox = new ScopeCheckBox(LS('Show Negative Peak Value'), 'shownegpeak'));
+  $addValueChangeHandler_0(this.negPeakBox, this);
+  $addItemToGrid(this, this.grid, this.p2pBox = new ScopeCheckBox(LS('Show Peak-to-Peak'), 'showp2p'));
+  $addValueChangeHandler_0(this.p2pBox, this);
+  $addItemToGrid(this, this.grid, this.freqBox = new ScopeCheckBox(LS('Show Frequency'), 'showfreq'));
+  $addValueChangeHandler_0(this.freqBox, this);
+  $addItemToGrid(this, this.grid, this.averageBox = new ScopeCheckBox(LS('Show Average'), 'showaverage'));
+  $addValueChangeHandler_0(this.averageBox, this);
+  $addItemToGrid(this, this.grid, this.rmsBox = new ScopeCheckBox(LS('Show RMS Average'), 'showrms'));
+  $addValueChangeHandler_0(this.rmsBox, this);
+  $addItemToGrid(this, this.grid, this.dutyBox = new ScopeCheckBox(LS('Show Duty Cycle'), 'showduty'));
+  $addValueChangeHandler_0(this.dutyBox, this);
+  $addItemToGrid(this, this.grid, this.elmInfoBox = new ScopeCheckBox(LS('Show Extended Info'), 'showelminfo'));
+  $addValueChangeHandler_0(this.elmInfoBox, this);
+  $add_2(this.fp, this.grid);
+  $addLabel(this.gridLabels, LS('Custom Label'), displayAll);
+  this.labelTextBox = new TextBox;
+  $addItemToGrid(this, this.grid, this.labelTextBox);
+  labelText = this.scope_0.text_0;
+  labelText != null && $setText_2(this.labelTextBox, labelText);
+  $addItemToGrid(this, this.grid, applyButton2 = new Button_1(LS('Apply')));
+  $addDomHandler(applyButton2, new ScopePropertiesDialog$17(this), (null, TYPE_1));
+  $updateUi(this);
+  this.hp = new HorizontalPanel;
+  $setWidth(this.hp, '100%');
+  $setHorizontalAlignment_0(this.hp, ALIGN_LEFT);
+  $setStyleName(this.hp, 'topSpace');
+  $add_2(this.fp, this.hp);
+  $add_3(this.hp, okButton = new Button_1(LS('OK')));
+  $addDomHandler(okButton, new ScopePropertiesDialog$18(this), (null, TYPE_1));
+  $setHorizontalAlignment_0(this.hp, ALIGN_RIGHT);
+  $add_3(this.hp, saveAsDefaultButton = new Button_1(LS('Save as Default')));
+  $addDomHandler(saveAsDefaultButton, new ScopePropertiesDialog$19(this), (null, TYPE_1));
+  $center(this);
+  !this.resizeHandlerRegistration && (this.resizeHandlerRegistration = addResizeHandler(new DialogBox$1(this)));
+  $show(this);
+}
+
+function nextHighestScale(d) {
+  var a, s;
+  d = d * 1.001;
+  s = $intern_74;
+  for (a = 0; s < d; a++) {
+    s *= ($clinit_Scope(), multa)[a % 3];
+  }
+  return s;
+}
+
+defineClass(335, 138, { 28: 1, 62: 1, 136: 1, 11: 1, 24: 1, 56: 1, 26: 1, 77: 1, 55: 1, 50: 1, 22: 1, 43: 1, 29: 1, 49: 1, 21: 1, 23: 1, 36: 1, 112: 1 }, ScopePropertiesDialog);
+_.apply_0 = function apply_6() {
+  $apply_1(this);
+}
+  ;
+_.closeDialog = function closeDialog_3() {
+  $closeDialog_1(this);
+}
+  ;
+_.onValueChange = function onValueChange_2(event_0) {
+  var cb;
+  cb = event_0.source;
+  $handleMenu(this.scope_0, cb.menuCmd, $booleanValue(cb.attached ? ($clinit_Boolean(), cb.inputElem.checked ? true : false) : ($clinit_Boolean(), cb.inputElem.defaultChecked ? true : false)));
+  $updateUi(this);
+}
+  ;
+_.nx = 0;
+_.ny = 0;
+_.plotSelection = 0;
+var Lcom_lushprojects_circuitjs1_client_ScopePropertiesDialog_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ScopePropertiesDialog', 335);
+function ScopePropertiesDialog$1(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(716, 1, $intern_63, ScopePropertiesDialog$1);
+_.onValueChange = function onValueChange_3(e) {
+  $setManualScale(this.this$01.scope_0, false, false);
+  $setMaxScale(this.this$01.scope_0, false);
+  $updateUi(this.this$01);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_ScopePropertiesDialog$1_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ScopePropertiesDialog/1', 716);
+function ScopePropertiesDialog$10(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(725, 1, {}, ScopePropertiesDialog$10);
+_.execute_1 = function execute_36() {
+  $scrollbarChanged(this.this$01);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_ScopePropertiesDialog$10_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ScopePropertiesDialog/10', 725);
+function ScopePropertiesDialog$11(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(726, 1, $intern_63, ScopePropertiesDialog$11);
+_.onValueChange = function onValueChange_4(e) {
+  if ($booleanValue(e.value_0)) {
+    $setTriggerMode(this.this$01.scope_0, 0);
+    $updateUi(this.this$01);
+  }
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_ScopePropertiesDialog$11_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ScopePropertiesDialog/11', 726);
+function ScopePropertiesDialog$12(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(727, 1, $intern_63, ScopePropertiesDialog$12);
+_.onValueChange = function onValueChange_5(e) {
+  if ($booleanValue(e.value_0)) {
+    $setTriggerMode(this.this$01.scope_0, 1);
+    $updateUi(this.this$01);
+  }
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_ScopePropertiesDialog$12_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ScopePropertiesDialog/12', 727);
+function ScopePropertiesDialog$13(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(728, 1, $intern_63, ScopePropertiesDialog$13);
+_.onValueChange = function onValueChange_6(e) {
+  if ($booleanValue(e.value_0)) {
+    $setTriggerMode(this.this$01.scope_0, 2);
+    $updateUi(this.this$01);
+  }
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_ScopePropertiesDialog$13_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ScopePropertiesDialog/13', 728);
+function ScopePropertiesDialog$14(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(729, 1, $intern_63, ScopePropertiesDialog$14);
+_.onValueChange = function onValueChange_7(e) {
+  if ($booleanValue(e.value_0)) {
+    this.this$01.scope_0.triggerEdge = 0;
+    $resetGraph(this.this$01.scope_0, false);
+  }
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_ScopePropertiesDialog$14_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ScopePropertiesDialog/14', 729);
+function ScopePropertiesDialog$15(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(730, 1, $intern_63, ScopePropertiesDialog$15);
+_.onValueChange = function onValueChange_8(e) {
+  if ($booleanValue(e.value_0)) {
+    this.this$01.scope_0.triggerEdge = 1;
+    $resetGraph(this.this$01.scope_0, false);
+  }
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_ScopePropertiesDialog$15_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ScopePropertiesDialog/15', 730);
+function ScopePropertiesDialog$16(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(731, 1, $intern_51, ScopePropertiesDialog$16);
+_.onClick = function onClick_29(event_0) {
+  $applyTriggerLevel(this.this$01);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_ScopePropertiesDialog$16_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ScopePropertiesDialog/16', 731);
+function ScopePropertiesDialog$17(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(732, 1, $intern_51, ScopePropertiesDialog$17);
+_.onClick = function onClick_30(event_0) {
+  $apply_1(this.this$01);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_ScopePropertiesDialog$17_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ScopePropertiesDialog/17', 732);
+function ScopePropertiesDialog$18(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(733, 1, $intern_51, ScopePropertiesDialog$18);
+_.onClick = function onClick_31(event_0) {
+  $closeDialog_1(this.this$01);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_ScopePropertiesDialog$18_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ScopePropertiesDialog/18', 733);
+function ScopePropertiesDialog$19(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(734, 1, $intern_51, ScopePropertiesDialog$19);
+_.onClick = function onClick_32(event_0) {
+  $saveAsDefault(this.this$01.scope_0);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_ScopePropertiesDialog$19_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ScopePropertiesDialog/19', 734);
+function ScopePropertiesDialog$2(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(717, 1, $intern_63, ScopePropertiesDialog$2);
+_.onValueChange = function onValueChange_9(e) {
+  $setManualScale(this.this$01.scope_0, false, false);
+  $setMaxScale(this.this$01.scope_0, true);
+  $updateUi(this.this$01);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_ScopePropertiesDialog$2_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ScopePropertiesDialog/2', 717);
+function ScopePropertiesDialog$3(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(718, 1, $intern_63, ScopePropertiesDialog$3);
+_.onValueChange = function onValueChange_10(e) {
+  $setManualScale(this.this$01.scope_0, true, true);
+  $updateUi(this.this$01);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_ScopePropertiesDialog$3_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ScopePropertiesDialog/3', 718);
+function ScopePropertiesDialog$4(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(719, 1, $intern_63, ScopePropertiesDialog$4);
+_.onValueChange = function onValueChange_11(e) {
+  this.this$01.plotSelection < this.this$01.scope_0.visiblePlots.arrayList.array.length && $setAcCoupled($get_4(this.this$01.scope_0.visiblePlots, this.this$01.plotSelection), false);
+  $updateUi(this.this$01);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_ScopePropertiesDialog$4_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ScopePropertiesDialog/4', 719);
+function ScopePropertiesDialog$5(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(720, 1, $intern_63, ScopePropertiesDialog$5);
+_.onValueChange = function onValueChange_12(e) {
+  this.this$01.plotSelection < this.this$01.scope_0.visiblePlots.arrayList.array.length && $setAcCoupled($get_4(this.this$01.scope_0.visiblePlots, this.this$01.plotSelection), true);
+  $updateUi(this.this$01);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_ScopePropertiesDialog$5_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ScopePropertiesDialog/5', 720);
+function ScopePropertiesDialog$6(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(721, 1, {}, ScopePropertiesDialog$6);
+_.execute_1 = function execute_37() {
+  $positionBarChanged(this.this$01);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_ScopePropertiesDialog$6_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ScopePropertiesDialog/6', 721);
+function ScopePropertiesDialog$7(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(722, 1, $intern_51, ScopePropertiesDialog$7);
+_.onClick = function onClick_33(event_0) {
+  $setValue_2(this.this$01.positionBar, 0);
+  $positionBarChanged(this.this$01);
+  $updateUi(this.this$01);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_ScopePropertiesDialog$7_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ScopePropertiesDialog/7', 722);
+function ScopePropertiesDialog$8(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(723, 1, $intern_51, ScopePropertiesDialog$8);
+_.onClick = function onClick_34(event_0) {
+  $apply_1(this.this$01);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_ScopePropertiesDialog$8_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ScopePropertiesDialog/8', 723);
+function ScopePropertiesDialog$9(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(724, 1, $intern_51, ScopePropertiesDialog$9);
+_.onClick = function onClick_35(event_0) {
+  $apply_1(this.this$01);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_ScopePropertiesDialog$9_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ScopePropertiesDialog/9', 724);
+function ScopePropertiesDialog$PlotClickHandler(this$0, n) {
+  this.this$01 = this$0;
+  this.num = n;
+}
+
+defineClass(712, 1, $intern_51, ScopePropertiesDialog$PlotClickHandler);
+_.onClick = function onClick_36(event_0) {
+  var i;
+  this.this$01.plotSelection = this.num;
+  for (i = 0; i < this.this$01.chanButtons.arrayList.array.length; i++) {
+    i == this.num ? $addStyleName($get_4(this.this$01.chanButtons, i), 'chsel') : $removeStyleName($get_4(this.this$01.chanButtons, i), 'chsel');
+  }
+  $updateUi(this.this$01);
+}
+  ;
+_.num = 0;
+var Lcom_lushprojects_circuitjs1_client_ScopePropertiesDialog$PlotClickHandler_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ScopePropertiesDialog/PlotClickHandler', 712);
+function ScopePropertiesDialog$downClickHandler(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(713, 1, $intern_51, ScopePropertiesDialog$downClickHandler);
+_.onClick = function onClick_37(event_0) {
+  var a, d, lasts, s;
+  if (!this.this$01.scope_0.manualScale || this.this$01.plotSelection > this.this$01.scope_0.visiblePlots.arrayList.array.length)
+    return;
+  d = $getManualScaleValue(this.this$01);
+  if (d == 0)
+    return;
+  d = d * 0.999;
+  s = $intern_74;
+  lasts = $intern_74;
+  for (a = 0; s < d; a++) {
+    lasts = s;
+    s *= ($clinit_Scope(), multa)[a % 3];
+  }
+  $setManualScaleValue(this.this$01.scope_0, this.this$01.plotSelection, lasts);
+  $updateUi(this.this$01);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_ScopePropertiesDialog$downClickHandler_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ScopePropertiesDialog/downClickHandler', 713);
+function ScopePropertiesDialog$expandingLabel(this$0, s, ex) {
+  this.this$01 = this$0;
+  this.expanded = ex;
+  this.p = new HorizontalPanel;
+  this.b = new Button_1((checkCriticalNotNull(ex), ex) ? '-' : '+');
+  $addDomHandler(this.b, new ScopePropertiesDialog$expandingLabel$1(this), ($clinit_ClickEvent(), $clinit_ClickEvent(), TYPE_1));
+  $addStyleName(this.b, 'expand-but');
+  $add_3(this.p, this.b);
+  this.l_0 = new Label_1(s);
+  $getElement(this.l_0).style['fontWeight'] = ($clinit_Style$FontWeight(), 'bold');
+  $add_3(this.p, this.l_0);
+  $setCellVerticalAlignment_1(this.p, this.l_0, ($clinit_HasVerticalAlignment(), ALIGN_BOTTOM));
+}
+
+defineClass(231, 1, { 231: 1 }, ScopePropertiesDialog$expandingLabel);
+var Lcom_lushprojects_circuitjs1_client_ScopePropertiesDialog$expandingLabel_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ScopePropertiesDialog/expandingLabel', 231);
+function ScopePropertiesDialog$expandingLabel$1(this$1) {
+  this.this$11 = this$1;
+}
+
+defineClass(715, 1, $intern_51, ScopePropertiesDialog$expandingLabel$1);
+_.onClick = function onClick_38(event_0) {
+  this.this$11.expanded = ($clinit_Boolean(), $booleanValue(this.this$11.expanded) ? false : true);
+  $setHTML(this.this$11.b, $booleanValue(this.this$11.expanded) ? '-' : '+');
+  $updateUi(this.this$11.this$01);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_ScopePropertiesDialog$expandingLabel$1_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ScopePropertiesDialog/expandingLabel/1', 715);
+function $addLabel(this$static, s, e) {
+  var l_0;
+  this$static.this$01.nx != 0 && ++this$static.this$01.ny;
+  this$static.this$01.nx = 0;
+  l_0 = new ScopePropertiesDialog$expandingLabel(this$static.this$01, LS(s), ($clinit_Boolean(), e ? true : false));
+  $setWidget_2(this$static.g, this$static.this$01.ny, this$static.this$01.nx, l_0.p);
+  $add_11(this$static.labels, l_0);
+  $add_11(this$static.labelRows, valueOf(this$static.this$01.ny));
+  ++this$static.this$01.ny;
+}
+
+function $updateRowVisibility(this$static) {
+  var end, i, j, start_0;
+  for (i = 0; i < this$static.labels.arrayList.array.length; i++) {
+    start_0 = $get_4(this$static.labelRows, i).value_0;
+    i < this$static.labels.arrayList.array.length - 1 ? (end = $get_4(this$static.labelRows, i + 1).value_0) : (end = this$static.g.numRows);
+    for (j = start_0 + 1; j < end; j++)
+      $setVisible_1(this$static.g.rowFormatter, j, $booleanValue($get_4(this$static.labels, i).expanded));
+  }
+}
+
+function ScopePropertiesDialog$labelledGridManager(this$0, gIn) {
+  this.this$01 = this$0;
+  this.g = gIn;
+  this.labels = new Vector;
+  this.labelRows = new Vector;
+}
+
+defineClass(337, 1, {}, ScopePropertiesDialog$labelledGridManager);
+var Lcom_lushprojects_circuitjs1_client_ScopePropertiesDialog$labelledGridManager_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ScopePropertiesDialog/labelledGridManager', 337);
+function ScopePropertiesDialog$manualScaleTextHandler(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(336, 1, $intern_63, ScopePropertiesDialog$manualScaleTextHandler);
+_.onValueChange = function onValueChange_13(event_0) {
+  $apply_1(this.this$01);
+  $updateUi(this.this$01);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_ScopePropertiesDialog$manualScaleTextHandler_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ScopePropertiesDialog/manualScaleTextHandler', 336);
+function ScopePropertiesDialog$upClickHandler(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(714, 1, $intern_51, ScopePropertiesDialog$upClickHandler);
+_.onClick = function onClick_39(event_0) {
+  var d, s;
+  if (!this.this$01.scope_0.manualScale || this.this$01.plotSelection > this.this$01.scope_0.visiblePlots.arrayList.array.length)
+    return;
+  d = $getManualScaleValue(this.this$01);
+  if (d == 0)
+    return;
+  s = nextHighestScale(d);
+  $setManualScaleValue(this.this$01.scope_0, this.this$01.plotSelection, s);
+  $updateUi(this.this$01);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_ScopePropertiesDialog$upClickHandler_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ScopePropertiesDialog/upClickHandler', 714);
+function $clinit_ScrollValuePopup() {
+  $clinit_ScrollValuePopup = emptyMethod;
+  e12 = stampJavaTypeInfo(getClassLiteralForArray(D_classLit, 1), $intern_70, 8, 15, [1, 1.2, 1.5, 1.8, 2.2, 2.7, 3.3, 3.9, 4.7, 5.6, 6.8, 8.2]);
+}
+
+function $close_0(this$static, keepChanges) {
+  var idx;
+  keepChanges ? (idx = $getSelIdx(this$static), $setElmValue(this$static, idx)) : $setElmValue(this$static, this$static.currentidx);
+  $hide(this$static, false);
+}
+
+function $doDeltaY(this$static, dy) {
+  var idx;
+  this$static.deltaY += dy / (window.devicePixelRatio || 1);
+  idx = $getSelIdx(this$static);
+  $setElmValue(this$static, idx);
+  $setupLabels(this$static);
+}
+
+function $getSelIdx(this$static) {
+  var r;
+  r = this$static.currentidx + toInt_0(fromDouble_0($wnd.Math.round(this$static.sim.mouse.wheelSensitivity * this$static.deltaY / 6)));
+  r < 0 && (r = 0);
+  r >= this$static.nvalues && (r = this$static.nvalues - 1);
+  return r;
+}
+
+function $setElmValue(this$static, i) {
+  if (i != this$static.lastidx) {
+    this$static.lastidx = i;
+    this$static.inf.value_0 = this$static.values[i];
+    this$static.myElm.setEditValue(0, this$static.inf);
+    $needAnalyze(this$static.sim);
+  }
+}
+
+function $setupLabels(this$static) {
+  var i, thissel;
+  thissel = $getSelIdx(this$static);
+  for (i = 0; i < 5; i++) {
+    $removeStyleDependentName(this$static.labels[i]);
+    if (thissel + i - 2 < 0 || thissel + i - 2 >= this$static.nvalues)
+      $setText_0(this$static.labels[i], '---');
+    else {
+      $setText_0(this$static.labels[i], getUnitText(this$static.values[thissel + i - 2], '', true));
+      thissel + i - 2 == this$static.currentidx && $addStyleDependentName(this$static.labels[i], 'current');
+    }
+  }
+}
+
+function $setupValues(this$static) {
+  var currentvalue, i, i0, j, ptr;
+  if (instanceOf(this$static.myElm, 174)) {
+    this$static.minpow = -1;
+    this$static.maxpow = 7;
+  }
+  if (instanceOf(this$static.myElm, 140)) {
+    this$static.minpow = -11;
+    this$static.maxpow = -3;
+  }
+  if (instanceOf(this$static.myElm, 173)) {
+    this$static.minpow = -6;
+    this$static.maxpow = 0;
+  }
+  this$static.values = initUnidimensionalArray(D_classLit, $intern_70, 8, 2 + (this$static.maxpow - this$static.minpow) * 12, 15, 1);
+  ptr = 0;
+  for (i0 = this$static.minpow; i0 <= this$static.maxpow; i0++) {
+    for (j = 0; j < (i0 != this$static.maxpow ? 12 : 1); ++j, ptr++) {
+      this$static.values[ptr] = $wnd.Math.pow(10, i0) * e12[j];
+    }
+  }
+  this$static.nvalues = ptr;
+  this$static.values[this$static.nvalues] = 1.0E99;
+  this$static.inf = this$static.myElm.getEditInfo(0);
+  currentvalue = this$static.inf.value_0;
+  for (i = 0; i < this$static.nvalues + 1; i++) {
+    if (getUnitText(currentvalue, '', true) == getUnitText(this$static.values[i], '', true)) {
+      this$static.values[i] = currentvalue;
+      this$static.currentidx = i;
+      break;
+    }
+    if (currentvalue < this$static.values[i]) {
+      this$static.currentidx = i;
+      for (j = this$static.nvalues - 1; j >= i; j--)
+        this$static.values[j + 1] = this$static.values[j];
+      this$static.values[i] = currentvalue;
+      ++this$static.nvalues;
+      break;
+    }
+  }
+  this$static.name_0 = this$static.inf.name_0;
+  this$static.lastidx = this$static.currentidx;
+}
+
+function ScrollValuePopup(x_0, y_0, dy, e, s) {
+  $clinit_ScrollValuePopup();
+  var i;
+  PopupPanel.call(this);
+  this.minpow = 0;
+  this.maxpow = 1;
+  this.myElm = e;
+  this.deltaY = 0;
+  this.sim = s;
+  $pushUndo(this.sim.undoManager);
+  this.vp = new VerticalPanel;
+  $setWidget_0(this, this.vp);
+  $setupValues(this);
+  $add_5(this.vp, new Label_1(this.name_0));
+  this.labels = initUnidimensionalArray(Lcom_google_gwt_user_client_ui_Label_2_classLit, $intern_3, 37, 5, 0, 1);
+  for (i = 0; i < 5; i++) {
+    this.labels[i] = new Label_1('---');
+    $setHorizontalAlignment(this.labels[i], ($clinit_HasHorizontalAlignment(), ALIGN_CENTER));
+    i == 2 ? $addStyleDependentName(this.labels[2], 'selected') : i == 1 || i == 3 ? $addStyleDependentName(this.labels[i], '1off') : $addStyleDependentName(this.labels[i], '2off');
+    $add_5(this.vp, this.labels[i]);
+  }
+  $doDeltaY(this, dy);
+  $addDomHandler(this, this, ($clinit_MouseOutEvent(), $clinit_MouseOutEvent(), TYPE_7));
+  $addDomHandler(this, this, ($clinit_MouseWheelEvent(), $clinit_MouseWheelEvent(), TYPE_10));
+  $addDomHandler(this, this, ($clinit_MouseDownEvent(), $clinit_MouseDownEvent(), TYPE_5));
+  $setPopupPositionAndShow(this, new ScrollValuePopup$1(this, x_0, y_0));
+}
+
+defineClass(855, 49, $intern_122, ScrollValuePopup);
+_.onMouseDown = function onMouseDown_2(e) {
+  var idx;
+  $getButton(e.nativeEvent) == 1 || $getButton(e.nativeEvent) == 4 ? (idx = $getSelIdx(this), $setElmValue(this, idx), $hide(this, false)) : ($setElmValue(this, this.currentidx), $hide(this, false));
+}
+  ;
+_.onMouseOut = function onMouseOut_2(e) {
+  var idx;
+  idx = $getSelIdx(this);
+  $setElmValue(this, idx);
+  $hide(this, false);
+}
+  ;
+_.onMouseWheel = function onMouseWheel_4(e) {
+  !!e.nativeEvent && $preventDefault(e.nativeEvent);
+  $doDeltaY(this, $getMouseWheelVelocityY(e.nativeEvent));
+}
+  ;
+_.currentidx = 0;
+_.deltaY = 0;
+_.lastidx = 0;
+_.maxpow = 0;
+_.minpow = 0;
+_.nvalues = 0;
+var e12;
+var Lcom_lushprojects_circuitjs1_client_ScrollValuePopup_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ScrollValuePopup', 855);
+function ScrollValuePopup$1(this$0, val$x, val$y) {
+  this.this$01 = this$0;
+  this.val$x2 = val$x;
+  this.val$y3 = val$y;
+}
+
+defineClass(856, 1, {}, ScrollValuePopup$1);
+_.setPosition = function setPosition_0(offsetWidth, offsetHeight) {
+  var left, top_0;
+  left = $wnd.Math.max(0, this.val$x2 - (offsetWidth / 4 | 0));
+  top_0 = $wnd.Math.max(0, this.val$y3 - (7 * offsetHeight / 12 | 0));
+  $setPopupPosition(this.this$01, left, top_0);
+}
+  ;
+_.val$x2 = 0;
+_.val$y3 = 0;
+var Lcom_lushprojects_circuitjs1_client_ScrollValuePopup$1_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ScrollValuePopup/1', 856);
+function $calcValueFromPos(this$static, x_0) {
+  var v;
+  v = this$static.min_0 + ((this$static.max_0 - this$static.min_0) * (x_0 - HMARGIN - SCROLLHEIGHT - BARMARGIN) / (this$static.VERTICALPANELWIDTH - 2 * (HMARGIN + SCROLLHEIGHT + BARMARGIN)) | 0);
+  v < this$static.min_0 && (v = this$static.min_0);
+  v > this$static.max_0 && (v = this$static.max_0);
+  return $snapToStep(this$static, v);
+}
+
+function $disable(this$static) {
+  this$static.enabled = false;
+  this$static.dragging = false;
+  $draw_3(this$static);
+}
+
+function $doMouseDown(this$static, x_0, mouse) {
+  var step;
+  if (this$static.enabled) {
+    step = this$static.stepSize > 0 ? $wnd.Math.max(1, toInt_0(fromDouble_0($wnd.Math.round(this$static.stepSize)))) : 1;
+    if (x_0 < HMARGIN + SCROLLHEIGHT) {
+      this$static.val_0 = $snapToStep(this$static, $wnd.Math.max(this$static.min_0, this$static.val_0 - step));
+    }
+    else {
+      if (x_0 > this$static.VERTICALPANELWIDTH - HMARGIN - SCROLLHEIGHT) {
+        this$static.val_0 = $snapToStep(this$static, $wnd.Math.min(this$static.max_0, this$static.val_0 + step));
+      }
+      else {
+        this$static.val_0 = $calcValueFromPos(this$static, x_0);
+        this$static.dragging = true;
+        mouse && setCapture_0($getElement(this$static.can));
+      }
+    }
+    $draw_3(this$static);
+    !!this$static.command && this$static.command.execute_1();
+  }
+}
+
+function $doMouseMove(this$static, x_0) {
+  if (this$static.enabled) {
+    if (this$static.dragging) {
+      this$static.val_0 = $calcValueFromPos(this$static, x_0);
+      $draw_3(this$static);
+      !!this$static.command && this$static.command.execute_1();
+    }
+  }
+}
+
+function $draw_3(this$static) {
+  var p;
+  this$static.enabled ? (this$static.g.strokeStyle = '#000000', undefined) : (this$static.g.strokeStyle = 'lightgrey', undefined);
+  this$static.g.lineWidth = 1;
+  $fillRect(this$static.g, 0, 0, this$static.VERTICALPANELWIDTH, SCROLLHEIGHT);
+  this$static.g.beginPath();
+  $moveTo(this$static.g, HMARGIN + SCROLLHEIGHT - 3, 0);
+  $lineTo(this$static.g, HMARGIN, SCROLLHEIGHT / 2 | 0);
+  $lineTo(this$static.g, HMARGIN + SCROLLHEIGHT - 3, SCROLLHEIGHT);
+  $moveTo(this$static.g, this$static.VERTICALPANELWIDTH - HMARGIN - SCROLLHEIGHT + 3, 0);
+  $lineTo(this$static.g, this$static.VERTICALPANELWIDTH - HMARGIN, SCROLLHEIGHT / 2 | 0);
+  $lineTo(this$static.g, this$static.VERTICALPANELWIDTH - HMARGIN - SCROLLHEIGHT + 3, SCROLLHEIGHT);
+  this$static.g.stroke();
+  this$static.enabled && (this$static.g.strokeStyle = 'grey', undefined);
+  this$static.g.beginPath();
+  this$static.g.lineWidth = 5;
+  $moveTo(this$static.g, HMARGIN + SCROLLHEIGHT + BARMARGIN, SCROLLHEIGHT / 2 | 0);
+  $lineTo(this$static.g, this$static.VERTICALPANELWIDTH - HMARGIN - SCROLLHEIGHT - BARMARGIN, SCROLLHEIGHT / 2 | 0);
+  this$static.g.stroke();
+  p = HMARGIN + SCROLLHEIGHT + BARMARGIN + (this$static.VERTICALPANELWIDTH - 2 * (HMARGIN + SCROLLHEIGHT + BARMARGIN)) * (this$static.val_0 - this$static.min_0) / (this$static.max_0 - this$static.min_0);
+  if (this$static.enabled) {
+    !!this$static.attachedElm && $needsHighlight(this$static.attachedElm) ? $setStrokeStyleWeb(this$static.g, $getHexValue(selectColor_0)) : (this$static.g.strokeStyle = 'red', undefined);
+    this$static.g.beginPath();
+    $moveTo(this$static.g, HMARGIN + SCROLLHEIGHT + BARMARGIN, SCROLLHEIGHT / 2 | 0);
+    $lineTo(this$static.g, p, SCROLLHEIGHT / 2 | 0);
+    this$static.g.stroke();
+    this$static.g.strokeStyle = '#000000';
+    this$static.g.lineWidth = 2;
+    $fillRect(this$static.g, p - 2, 2, 5, SCROLLHEIGHT - 4);
+    $strokeRect(this$static.g, p - 2, 2, 5, SCROLLHEIGHT - 4);
+  }
+}
+
+function $enable(this$static) {
+  this$static.enabled = true;
+  $draw_3(this$static);
+}
+
+function $onMouseWheel_0(this$static, e) {
+  !!e.nativeEvent && $preventDefault(e.nativeEvent);
+  this$static.enabled && $setValue_2(this$static, this$static.val_0 + ($getMouseWheelVelocityY(e.nativeEvent) / 3 | 0));
+}
+
+function $setStepSize(this$static, step) {
+  this$static.stepSize = step;
+}
+
+function $setValue_2(this$static, i) {
+  i < this$static.min_0 ? (i = this$static.min_0) : i > this$static.max_0 && (i = this$static.max_0);
+  this$static.val_0 = i;
+  $draw_3(this$static);
+  !!this$static.command && this$static.command.execute_1();
+}
+
+function $snapToStep(this$static, v) {
+  if (this$static.stepSize > 0) {
+    v = round_int(toDouble_0(fromDouble_0($wnd.Math.round((v - this$static.min_0) / this$static.stepSize))) * this$static.stepSize) + this$static.min_0;
+    v < this$static.min_0 && (v = this$static.min_0);
+    v > this$static.max_0 && (v = this$static.max_0);
+  }
+  return v;
+}
+
+function Scrollbar(value_0, minimum, maximum) {
+  this.VERTICALPANELWIDTH = VERTICALPANELWIDTH;
+  this.min_0 = minimum;
+  this.max_0 = maximum - 1;
+  this.val_0 = value_0;
+  this.pan = new VerticalPanel;
+  this.can = createIfSupported();
+  $setWidth(this.can, this.VERTICALPANELWIDTH + ' px');
+  $setHeight(this.can, '40 px');
+  $setCoordinateSpaceWidth(this.can, this.VERTICALPANELWIDTH);
+  $setCoordinateSpaceHeight(this.can, SCROLLHEIGHT);
+  $add_5(this.pan, this.can);
+  this.g = $getContext2d(this.can);
+  this.g.fillStyle = '#ffffff';
+  $addDomHandler(this.can, this, ($clinit_ClickEvent(), $clinit_ClickEvent(), TYPE_1));
+  $addDomHandler(this.can, this, ($clinit_MouseDownEvent(), $clinit_MouseDownEvent(), TYPE_5));
+  $addDomHandler(this.can, this, ($clinit_MouseUpEvent(), $clinit_MouseUpEvent(), TYPE_9));
+  $addDomHandler(this.can, this, ($clinit_MouseMoveEvent(), $clinit_MouseMoveEvent(), TYPE_6));
+  $addDomHandler(this.can, this, ($clinit_MouseOutEvent(), $clinit_MouseOutEvent(), TYPE_7));
+  $addDomHandler(this.can, this, ($clinit_MouseOverEvent(), $clinit_MouseOverEvent(), TYPE_8));
+  $addDomHandler(this.can, this, ($clinit_MouseWheelEvent(), $clinit_MouseWheelEvent(), TYPE_10));
+  $addDomHandler(this.can, this, ($clinit_TouchStartEvent(), $clinit_TouchStartEvent(), TYPE_14));
+  $addDomHandler(this.can, this, ($clinit_TouchMoveEvent(), $clinit_TouchMoveEvent(), TYPE_13));
+  $addDomHandler(this.can, this, ($clinit_TouchEndEvent(), $clinit_TouchEndEvent(), TYPE_12));
+  $addDomHandler(this.can, this, ($clinit_TouchCancelEvent(), $clinit_TouchCancelEvent(), TYPE_11));
+  $draw_3(this);
+  $initWidget(this, this.pan);
+}
+
+function Scrollbar_0(value_0, minimum, maximum, cmd) {
+  Scrollbar.call(this, value_0, minimum, maximum);
+  this.command = cmd;
+}
+
+function Scrollbar_1(value_0, cmd, e) {
+  Scrollbar.call(this, value_0, 0, 101);
+  this.command = cmd;
+  this.attachedElm = e;
+}
+
+defineClass(149, 915, { 35: 1, 267: 1, 445: 1, 199: 1, 268: 1, 444: 1, 130: 1, 938: 1, 939: 1, 940: 1, 937: 1, 28: 1, 11: 1, 24: 1, 26: 1, 22: 1, 29: 1, 21: 1, 23: 1 }, Scrollbar, Scrollbar_0, Scrollbar_1);
+_.onClick = function onClick_40(e) {
+  !!e.nativeEvent && $preventDefault(e.nativeEvent);
+}
+  ;
+_.onMouseDown = function onMouseDown_3(e) {
+  this.dragging = false;
+  !!e.nativeEvent && $preventDefault(e.nativeEvent);
+  $doMouseDown(this, $getX(e), true);
+}
+  ;
+_.onMouseMove = function onMouseMove_2(e) {
+  !!e.nativeEvent && $preventDefault(e.nativeEvent);
+  if (this.dragging && e.nativeEvent.buttons == 0) {
+    releaseCapture_0($getElement(this.can));
+    this.dragging = false;
+    return;
+  }
+  $doMouseMove(this, $getX(e));
+}
+  ;
+_.onMouseOut = function onMouseOut_3(e) {
+  if (this.dragging)
+    return;
+  this.enabled && !!this.attachedElm && $isMouseElm(this.attachedElm) && $setMouseElm_0(theApp.mouse, null);
+}
+  ;
+_.onMouseOver = function onMouseOver_1(e) {
+  this.enabled && !!this.attachedElm && $setMouseElm_0(theApp.mouse, this.attachedElm);
+}
+  ;
+_.onMouseUp = function onMouseUp_2(e) {
+  !!e.nativeEvent && $preventDefault(e.nativeEvent);
+  releaseCapture_0($getElement(this.can));
+  if (this.enabled && this.dragging) {
+    this.val_0 = $calcValueFromPos(this, $getX(e));
+    this.dragging = false;
+    $draw_3(this);
+    !!this.command && this.command.execute_1();
+  }
+}
+  ;
+_.onMouseWheel = function onMouseWheel_5(e) {
+  $onMouseWheel_0(this, e);
+}
+  ;
+_.onTouchCancel = function onTouchCancel_0(event_0) {
+  !!event_0.nativeEvent && $preventDefault(event_0.nativeEvent);
+  this.dragging = false;
+}
+  ;
+_.onTouchEnd = function onTouchEnd_0(event_0) {
+  !!event_0.nativeEvent && $preventDefault(event_0.nativeEvent);
+  if (this.enabled && this.dragging) {
+    this.dragging = false;
+    $draw_3(this);
+    !!this.command && this.command.execute_1();
+  }
+}
+  ;
+_.onTouchMove = function onTouchMove_0(e) {
+  var t;
+  !!e.nativeEvent && $preventDefault(e.nativeEvent);
+  t = $getTouches(e.nativeEvent)[0];
+  $doMouseMove(this, $getRelativeX(t, ($clinit_DOM(), this.element)));
+}
+  ;
+_.onTouchStart = function onTouchStart_0(event_0) {
+  var t;
+  !!event_0.nativeEvent && $preventDefault(event_0.nativeEvent);
+  this.dragging = false;
+  t = $getTouches(event_0.nativeEvent)[0];
+  $doMouseDown(this, $getRelativeX(t, ($clinit_DOM(), this.element)), false);
+}
+  ;
+_.VERTICALPANELWIDTH = 0;
+_.attachedElm = null;
+_.command = null;
+_.dragging = false;
+_.enabled = true;
+_.max_0 = 0;
+_.min_0 = 0;
+_.stepSize = 0;
+_.val_0 = 0;
+var BARMARGIN = 3, HMARGIN = 2, SCROLLHEIGHT = 14;
+var Lcom_lushprojects_circuitjs1_client_Scrollbar_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'Scrollbar', 149);
+function $apply_2(this$static) {
+  var i, item_0, s;
+  s = $getSelectedItemText(this$static.listBox);
+  for (i = 0; i != this$static.ui.mainMenuItems.arrayList.array.length; i++) {
+    item_0 = $get_4(this$static.ui.mainMenuItems, i);
+    if ($equals_1(item_0.name_0, s)) {
+      item_0.command.execute_1();
+      break;
+    }
+  }
+  $hide_0(this$static, false);
+  dialogShowing == this$static && (dialogShowing = null);
+}
+
+function $search(this$static) {
+  var i, item_0, items, str;
+  str = $getText(this$static.textBox).toLowerCase();
+  $clear($getElement(this$static.listBox));
+  items = new Vector;
+  for (i = 0; i != this$static.ui.mainMenuItems.arrayList.array.length; i++) {
+    item_0 = $get_4(this$static.ui.mainMenuItems, i);
+    $indexOf_0(item_0.name_0.toLowerCase(), (checkCriticalNotNull(str), str)) != -1 && ($contains_5(items, item_0.name_0) || $add_11(items, item_0.name_0));
+  }
+  $clinit_Collections();
+  $sort_0(items, new SearchDialog$5);
+  for (i = 0; i != items.arrayList.array.length; i++)
+    $addItem(this$static.listBox, (checkArrayElementIndex(i, items.arrayList.array.length), $get_2(items.arrayList, i)));
+  items.arrayList.array.length > 0 && $setItemSelected(this$static.listBox);
+}
+
+function SearchDialog(asim) {
+  var cancelButton, hp, i, item_0;
+  Dialog.call(this);
+  this.sim = asim;
+  this.ui = this.sim.ui;
+  this.vp = new VerticalPanel;
+  $setWidget_1(this, this.vp);
+  this.textBox = new TextBox;
+  $setMaxLength(this.textBox);
+  $add_5(this.vp, this.textBox);
+  $addDomHandler(this.textBox, new SearchDialog$1(this), ($clinit_KeyUpEvent(), $clinit_KeyUpEvent(), TYPE_4));
+  $setText(this, LS('Find Component'));
+  this.listBox = new ListBox;
+  $setWidth(this.listBox, '100%');
+  $addDomHandler(this.listBox, new SearchDialog$2(this), ($clinit_DoubleClickEvent(), $clinit_DoubleClickEvent(), TYPE_3));
+  $setVisibleItemCount(this.listBox, 10);
+  $add_5(this.vp, this.listBox);
+  for (i = 0; i != this.ui.mainMenuItems.arrayList.array.length; i++) {
+    item_0 = $get_4(this.ui.mainMenuItems, i);
+    if (item_0.shortcut.length > 1)
+      break;
+    $addItem(this.listBox, item_0.name_0);
+  }
+  hp = new HorizontalPanel;
+  ($clinit_DOM(), hp.element).style['width'] = '100%';
+  $setHorizontalAlignment_0(hp, ($clinit_HasHorizontalAlignment(), ALIGN_LEFT));
+  hp.element.className = 'topSpace';
+  $add_5(this.vp, hp);
+  $add_3(hp, this.okButton = new Button_1(LS('OK')));
+  $setHorizontalAlignment_0(hp, ALIGN_RIGHT);
+  $add_3(hp, cancelButton = new Button_1(LS('Cancel')));
+  $addDomHandler(this.okButton, new SearchDialog$3(this), ($clinit_ClickEvent(), $clinit_ClickEvent(), TYPE_1));
+  $addDomHandler(cancelButton, new SearchDialog$4(this), (null, TYPE_1));
+  $center(this);
+  $setFocus(this.textBox);
+}
+
+defineClass(665, 138, $intern_53, SearchDialog);
+_.apply_0 = function apply_7() {
+  $apply_2(this);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_SearchDialog_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SearchDialog', 665);
+function SearchDialog$1(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(666, 1, { 950: 1, 11: 1 }, SearchDialog$1);
+_.onKeyUp = function onKeyUp(ev) {
+  $search(this.this$01);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_SearchDialog$1_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SearchDialog/1', 666);
+function SearchDialog$2(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(667, 1, { 941: 1, 11: 1 }, SearchDialog$2);
+_.onDoubleClick = function onDoubleClick_0(ev) {
+  $apply_2(this.this$01);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_SearchDialog$2_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SearchDialog/2', 667);
+function SearchDialog$3(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(668, 1, $intern_51, SearchDialog$3);
+_.onClick = function onClick_41(event_0) {
+  $apply_2(this.this$01);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_SearchDialog$3_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SearchDialog/3', 668);
+function SearchDialog$4(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(669, 1, $intern_51, SearchDialog$4);
+_.onClick = function onClick_42(event_0) {
+  $closeDialog(this.this$01);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_SearchDialog$4_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SearchDialog/4', 669);
+function SearchDialog$5() {
+}
+
+defineClass(670, 1, {}, SearchDialog$5);
+_.compare = function compare_2(a, b) {
+  return $compareTo(a, b);
+}
+  ;
+_.equals_0 = function equals_10(other) {
+  return this === other;
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_SearchDialog$5_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SearchDialog/5', 670);
+function $$init_17(this$static) {
+  this$static.bitPosition = 0;
+  this$static.bitCount = 0;
+  this$static.clockstate = false;
+}
+
+function $nextBit(this$static) {
+  if (this$static.data_0.length > 0 && this$static.bitCount > 0) {
+    if (this$static.bitPosition >= this$static.bitCount) {
+      if ((this$static.flags & 4) != 0) {
+        this$static.pins[1].value_0 = false;
+        return;
+      }
+      this$static.bitPosition = 0;
+    }
+    this$static.pins[1].value_0 = (this$static.data_0[this$static.bitPosition / 32 | 0] & 1 << this$static.bitPosition % 32) != 0;
+    ++this$static.bitPosition;
+  }
+  else {
+    this$static.pins[1].value_0 = false;
+  }
+}
+
+function $setupPins_18(this$static) {
+  this$static.sizeX = 2;
+  this$static.sizeY = 2;
+  this$static.pins = initUnidimensionalArray(Lcom_lushprojects_circuitjs1_client_ChipElm$Pin_2_classLit, $intern_3, 9, (this$static.flags & 8) != 0 ? 3 : 2, 0, 1);
+  this$static.pins[0] = new ChipElm$Pin(this$static, 0, 2, '');
+  this$static.pins[0].clock = true;
+  this$static.pins[1] = new ChipElm$Pin(this$static, 1, 3, 'Q');
+  this$static.pins[1].output = true;
+  (this$static.flags & 8) != 0 && (this$static.pins[2] = new ChipElm$Pin(this$static, 1, 2, 'R'));
+}
+
+function SeqGenElm(xx, yy) {
+  $clinit_ChipElm();
+  ChipElm.call(this, xx, yy);
+  $$init_17(this);
+  this.bitCount = 8;
+  this.data_0 = stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [0]);
+  this.flags |= 2;
+  this.flags |= 8;
+  $setupPins_18(this);
+  $allocNodes(this);
+}
+
+function SeqGenElm_0(xa, ya, xb, yb, f, st) {
+  $clinit_ChipElm();
+  var i, newData, oldData;
+  ChipElm_0.call(this, xa, ya, xb, yb, f, st);
+  $$init_17(this);
+  try {
+    if ((this.flags & 2) == 0) {
+      this.flags |= 2;
+      oldData = __parseAndValidateInt($nextToken(st), 10) << 24 >> 24;
+      newData = 0;
+      for (i = 0; i < 32; i++)
+        newData = (newData | oldData & (-2147483647 >> i != 0 ? 1 << i : 0)) << 24 >> 24;
+      this.bitCount = 8;
+      this.data_0 = stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [newData]);
+    }
+    else {
+      this.bitCount = __parseAndValidateInt($nextToken(st), 10);
+      this.data_0 = initUnidimensionalArray(I_classLit, $intern_25, 8, (this.bitCount / 32 | 0) + (this.bitCount % 32 != 0 ? 1 : 0), 15, 1);
+      for (i = 0; i < this.data_0.length; i++)
+        this.data_0[i] = __parseAndValidateInt($nextToken(st), 10);
+    }
+  }
+  catch ($e0) {
+    $e0 = toJava($e0);
+    if (!instanceOf($e0, 161))
+      throw toJs($e0);
+  }
+  this.bitCount > this.data_0.length * 32 && (this.bitCount = this.data_0.length * 32);
+}
+
+defineClass(381, 32, $intern_79, SeqGenElm, SeqGenElm_0);
+_.dumpXml = function dumpXml_65(doc, elem) {
+  var i, s;
+  $dumpXml_0(this, elem);
+  dumpAttr_0(elem, 'bc', this.bitCount);
+  s = '';
+  for (i = 0; i < this.data_0.length; i++) {
+    i > 0 && (s += ' ');
+    s += this.data_0[i];
+  }
+  dumpAttr_1(elem, 'dt', s);
+}
+  ;
+_.execute_3 = function execute_38() {
+  if ((this.flags & 8) != 0 && this.pins[2].value_0) {
+    this.bitPosition = 0;
+    this.clockstate = this.pins[0].value_0;
+    $nextBit(this);
+  }
+  else {
+    if (this.pins[0].value_0 != this.clockstate) {
+      this.clockstate = this.pins[0].value_0;
+      this.clockstate && $nextBit(this);
+    }
+  }
+}
+  ;
+_.getChipEditInfo = function getChipEditInfo_19(n) {
+  var ei, i, sb;
+  if (n == 0) {
+    ei = new EditInfo_0('', 0, -1, -1);
+    ei.checkbox = new Checkbox_0('Play Once', (this.flags & 4) != 0);
+    return ei;
+  }
+  if (n == 1) {
+    ei = new EditInfo_0('Sequence', 0, -1, -1);
+    ei.textArea = new TextArea_0;
+    $setVisibleLines(ei.textArea);
+    sb = new StringBuilder_0;
+    for (i = 0; i < this.bitCount; i++)
+      $append_0(sb, (this.data_0[i / 32 | 0] & 1 << i % 32) != 0 ? 49 : 48);
+    $setText_2(ei.textArea, sb.string);
+    return ei;
+  }
+  return null;
+}
+  ;
+_.getChipName = function getChipName_23() {
+  return 'sequence generator';
+}
+  ;
+_.getDumpType = function getDumpType_92() {
+  return 188;
+}
+  ;
+_.getPostCount_0 = function getPostCount_57() {
+  return (this.flags & 8) != 0 ? 3 : 2;
+}
+  ;
+_.getVoltageDiff_0 = function getVoltageDiff_19() {
+  return this.volts[1];
+}
+  ;
+_.getVoltageSourceCount = function getVoltageSourceCount_40() {
+  return 1;
+}
+  ;
+_.reset_0 = function reset_37() {
+  $reset_0(this);
+  this.bitPosition = 0;
+}
+  ;
+_.setChipEditValue = function setChipEditValue_20(n, ei) {
+  var c, i, i0, s;
+  if (n == 0) {
+    this.flags = $changeFlag(ei, this.flags, 4);
+    return;
+  }
+  if (n == 1) {
+    s = $getText(ei.textArea);
+    this.bitCount = 0;
+    for (i0 = 0; i0 < s.length; i0++) {
+      c = (checkCriticalStringElementIndex(i0, s.length), s.charCodeAt(i0));
+      (c == 48 || c == 49) && ++this.bitCount;
+    }
+    this.data_0 = initUnidimensionalArray(I_classLit, $intern_25, 8, this.bitCount / 32 | 0, 15, 1);
+    this.bitCount = 0;
+    for (i = 0; i < s.length; i++) {
+      c = (checkCriticalStringElementIndex(i, s.length), s.charCodeAt(i));
+      if (c == 48 || c == 49) {
+        c == 49 && (this.data_0[this.bitCount / 32 | 0] |= 1 << this.bitCount % 32);
+        ++this.bitCount;
+      }
+    }
+    return;
+  }
+}
+  ;
+_.setupPins = function setupPins_24() {
+  $setupPins_18(this);
+}
+  ;
+_.undumpXml = function undumpXml_67(xml) {
+  var dt, i, st;
+  $undumpXml_0(this, xml);
+  this.bitCount = $parseIntAttr(xml, 'bc', this.bitCount);
+  dt = $parseStringAttr(xml, 'dt', null);
+  if (dt != null) {
+    st = new StringTokenizer_0(dt, ' ');
+    this.data_0 = initUnidimensionalArray(I_classLit, $intern_25, 8, $countTokens(st), 15, 1);
+    for (i = 0; i < this.data_0.length; i++)
+      this.data_0[i] = __parseAndValidateInt($nextToken(st), 10);
+  }
+  this.bitCount > this.data_0.length * 32 && (this.bitCount = this.data_0.length * 32);
+}
+  ;
+_.bitCount = 0;
+_.bitPosition = 0;
+_.clockstate = false;
+var Lcom_lushprojects_circuitjs1_client_SeqGenElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SeqGenElm', 381);
+function $clinit_SevenSegDecoderElm() {
+  $clinit_SevenSegDecoderElm = emptyMethod;
+  $clinit_ChipElm();
+  symbols = stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 2), $intern_3, 30, 0, [stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, true, true, true, true, true, false]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [false, true, true, false, false, false, false]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, true, false, true, true, false, true]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, true, true, true, false, false, true]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [false, true, true, false, false, true, true]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, false, true, true, false, true, true]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, false, true, true, true, true, true]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, true, true, false, false, false, false]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, true, true, true, true, true, true]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, true, true, false, false, true, true]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, true, true, false, true, true, true]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [false, false, true, true, true, true, true]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, false, false, true, true, true, false]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [false, true, true, true, true, false, true]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, false, false, true, true, true, true]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, false, false, false, true, true, true])]);
+  symbols14 = stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 2), $intern_3, 30, 0, [stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, true, true, true, true, true, false, false, true, false, false, false, true, false]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [false, true, true, false, false, false, false, false, true, false, false, false, false, false]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, true, false, true, true, false, false, false, false, true, false, false, false, true]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, true, true, true, false, false, false, false, false, true, false, false, false, true]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [false, true, true, false, false, true, false, false, false, true, false, false, false, true]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, false, true, true, false, true, false, false, false, true, false, false, false, true]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, false, true, true, true, true, false, false, false, true, false, false, false, true]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, false, false, false, false, false, false, false, true, false, false, true, false, false]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, true, true, true, true, true, false, false, false, true, false, false, false, true]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, true, true, true, false, true, false, false, false, true, false, false, false, true]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, true, true, false, true, true, false, false, false, true, false, false, false, true]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, true, true, true, false, false, false, true, false, true, false, true, false, false]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, false, false, true, true, true, false, false, false, false, false, false, false, false]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, true, true, true, false, false, false, true, false, false, false, true, false, false]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, false, false, true, true, true, false, false, false, true, false, false, false, true]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, false, false, false, true, true, false, false, false, true, false, false, false, true])]);
+  symbols16 = stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 2), $intern_3, 30, 0, [stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, true, true, true, true, true, true, true, false, false, true, false, false, false, true, false]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [false, false, true, true, false, false, false, false, false, false, true, false, false, false, false, false]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, true, true, false, true, true, true, false, false, false, false, true, false, false, false, true]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, true, true, true, true, true, false, false, false, false, false, true, false, false, false, true]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [false, false, true, true, false, false, false, true, false, false, false, true, false, false, false, true]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, true, false, true, true, true, false, true, false, false, false, true, false, false, false, true]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, true, false, true, true, true, true, true, false, false, false, true, false, false, false, true]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, true, false, false, false, false, false, false, false, false, true, false, false, true, false, false]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, true, true, true, true, true, true, true, false, false, false, true, false, false, false, true]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, true, true, true, true, true, false, true, false, false, false, true, false, false, false, true]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, true, true, true, false, false, true, true, false, false, false, true, false, false, false, true]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, true, true, true, true, true, false, false, false, true, false, true, false, true, false, false]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, true, false, false, true, true, true, true, false, false, false, false, false, false, false, false]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, true, true, true, true, true, false, false, false, true, false, false, false, true, false, false]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, true, false, false, true, true, true, true, false, false, false, true, false, false, false, true]), stampJavaTypeInfo(getClassLiteralForArray(Z_classLit, 1), $intern_88, 8, 16, [true, true, false, false, false, false, true, true, false, false, false, true, false, false, false, true])]);
+}
+
+function $getSegmentCount(this$static) {
+  if (this$static.segmentType == 1)
+    return 14;
+  if (this$static.segmentType == 2)
+    return 16;
+  return 7;
+}
+
+function $setupPins_19(this$static) {
+  var i, segCount, segCount0;
+  segCount0 = $getSegmentCount(this$static);
+  this$static.sizeX = 3;
+  this$static.sizeY = $wnd.Math.max(segCount0, 4);
+  this$static.pins = initUnidimensionalArray(Lcom_lushprojects_circuitjs1_client_ChipElm$Pin_2_classLit, $intern_3, 9, (segCount = $getSegmentCount(this$static), segCount + 4 + ((this$static.flags & 2) != 0 ? 1 : 0)), 0, 1);
+  this$static.pins[segCount0] = new ChipElm$Pin(this$static, 0, 2, 'I3');
+  this$static.pins[segCount0 + 1] = new ChipElm$Pin(this$static, 1, 2, 'I2');
+  this$static.pins[segCount0 + 2] = new ChipElm$Pin(this$static, 2, 2, 'I1');
+  this$static.pins[segCount0 + 3] = new ChipElm$Pin(this$static, 3, 2, 'I0');
+  for (i = 0; i < segCount0; i++) {
+    this$static.pins[i] = new ChipElm$Pin(this$static, i, 3, String.fromCharCode(97 + i & $intern_22));
+    this$static.pins[i].output = true;
+  }
+  if ((this$static.flags & 2) != 0) {
+    this$static.pins[segCount0 + 4] = new ChipElm$Pin(this$static, 4, 2, 'BI');
+    this$static.pins[segCount0 + 4].bubble = true;
+  }
+  $allocNodes(this$static);
+}
+
+function SevenSegDecoderElm(xx, yy) {
+  $clinit_SevenSegDecoderElm();
+  ChipElm.call(this, xx, yy);
+}
+
+function SevenSegDecoderElm_0(xa, ya, xb, yb, f, st) {
+  $clinit_SevenSegDecoderElm();
+  ChipElm_0.call(this, xa, ya, xb, yb, f, st);
+  try {
+    this.segmentType = __parseAndValidateInt($nextToken(st), 10);
+    $setupPins_19(this);
+    $setPoints_0(this);
+  }
+  catch ($e0) {
+    $e0 = toJava($e0);
+    if (!instanceOf($e0, 15))
+      throw toJs($e0);
+  }
+}
+
+defineClass(420, 32, $intern_79, SevenSegDecoderElm, SevenSegDecoderElm_0);
+_.dumpXml = function dumpXml_66(doc, elem) {
+  $dumpXml_0(this, elem);
+  dumpAttr_0(elem, 'sgt', this.segmentType);
+}
+  ;
+_.execute_3 = function execute_39() {
+  var en, i, input_0, segCount, sym;
+  segCount = $getSegmentCount(this);
+  input_0 = 0;
+  this.pins[segCount].value_0 && (input_0 += 8);
+  this.pins[segCount + 1].value_0 && (input_0 += 4);
+  this.pins[segCount + 2].value_0 && (input_0 += 2);
+  this.pins[segCount + 3].value_0 && (input_0 += 1);
+  en = true;
+  (this.flags & 2) != 0 && !this.pins[segCount + 4].value_0 && (en = false);
+  if (!en || input_0 == 15 && (this.flags & 4) != 0) {
+    for (i = 0; i != segCount; i++) {
+      this.pins[i].output || (console.log('pin ' + i + ' is not an output!'), undefined);
+      this.pins[i].value_0 = false;
+    }
+  }
+  else {
+    sym = segCount == 14 ? symbols14 : segCount == 16 ? symbols16 : symbols;
+    for (i = 0; i < segCount; i++)
+      $writeOutput(this, i, sym[input_0][i]);
+  }
+}
+  ;
+_.getChipEditInfo = function getChipEditInfo_20(n) {
+  var ei;
+  if (n == 0) {
+    ei = new EditInfo_0('Segments', 0, -1, -1);
+    ei.choice = new Choice;
+    $addItem(ei.choice, LS('7 Segment'));
+    $addItem(ei.choice, LS('14 Segment'));
+    $addItem(ei.choice, LS('16 Segment'));
+    $select(ei.choice, this.segmentType);
+    return ei;
+  }
+  if (n == 1) {
+    ei = new EditInfo_0('', 0, -1, -1);
+    ei.checkbox = new Checkbox_0('Blank Pin', (this.flags & 2) != 0);
+    return ei;
+  }
+  if (n == 2) {
+    ei = new EditInfo_0('', 0, -1, -1);
+    ei.checkbox = new Checkbox_0('Blank on 1111', (this.flags & 4) != 0);
+    return ei;
+  }
+  return null;
+}
+  ;
+_.getChipName = function getChipName_24() {
+  if ($getSegmentCount(this) == 7)
+    return '7-Segment Decoder';
+  if ($getSegmentCount(this) == 14)
+    return '14-Segment Decoder';
+  return '16-Segment Decoder';
+}
+  ;
+_.getDumpType = function getDumpType_93() {
+  return 197;
+}
+  ;
+_.getPostCount_0 = function getPostCount_58() {
+  var segCount;
+  return segCount = $getSegmentCount(this), segCount + 4 + ((this.flags & 2) != 0 ? 1 : 0);
+}
+  ;
+_.getVoltageSourceCount = function getVoltageSourceCount_41() {
+  return $getSegmentCount(this);
+}
+  ;
+_.setChipEditValue = function setChipEditValue_21(n, ei) {
+  if (n == 0) {
+    this.segmentType = $getElement(ei.choice).selectedIndex;
+    $setupPins_19(this);
+    $setPoints_0(this);
+    return;
+  }
+  if (n == 1) {
+    this.flags = $changeFlag(ei, this.flags, 2);
+    $setupPins_19(this);
+    $setPoints_0(this);
+    return;
+  }
+  n == 2 && (this.flags = $changeFlag(ei, this.flags, 4));
+}
+  ;
+_.setupPins = function setupPins_25() {
+  $setupPins_19(this);
+}
+  ;
+_.undumpXml = function undumpXml_68(xml) {
+  $undumpXml_0(this, xml);
+  this.segmentType = $parseIntAttr(xml, 'sgt', this.segmentType);
+  $setupPins_19(this);
+}
+  ;
+_.segmentType = 0;
+var symbols, symbols14, symbols16;
+var Lcom_lushprojects_circuitjs1_client_SevenSegDecoderElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SevenSegDecoderElm', 420);
+function $clinit_SevenSegElm() {
+  $clinit_SevenSegElm = emptyMethod;
+  $clinit_ChipElm();
+  display7 = stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [0, 0, 2, 0, 2, 0, 2, 1, 2, 1, 2, 2, 0, 2, 2, 2, 0, 1, 0, 2, 0, 0, 0, 1, 0, 1, 2, 1]);
+  display16 = stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [0, 0, 1, 0, 1, 0, 2, 0, 2, 0, 2, 1, 2, 1, 2, 2, 2, 2, 1, 2, 1, 2, 0, 2, 0, 2, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 2, 0, 1, 1, 1, 1, 2, 1, 1, 1, 2, 2, 1, 1, 1, 2, 1, 1, 0, 2, 0, 1, 1, 1]);
+  display14 = stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [0, 0, 2, 0, 2, 0, 2, 1, 2, 1, 2, 2, 2, 2, 0, 2, 0, 2, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 2, 0, 1, 1, 1, 1, 2, 1, 1, 1, 2, 2, 1, 1, 1, 2, 1, 1, 0, 2, 0, 1, 1, 1]);
+}
+
+function $drawDecimal(g, x_0, y_0, sp) {
+  g.context.beginPath();
+  $moveTo(g.context, x_0, y_0 - sp);
+  $lineTo(g.context, x_0 - sp, y_0);
+  $lineTo(g.context, x_0, y_0 + sp);
+  $lineTo(g.context, x_0 + sp, y_0);
+  $lineTo(g.context, x_0, y_0 - sp);
+  g.context.fill();
+}
+
+function $drawSegment(g, p1, p2, thick) {
+  var dn, p3, p4, p5, p6;
+  g.context.beginPath();
+  p3 = new Point_1;
+  p4 = new Point_1;
+  p5 = new Point_1;
+  p6 = new Point_1;
+  dn = hypot(p1.x_0 - p2.x_0, p1.y_0 - p2.y_0);
+  $interpPoint2(p1, p2, p3, p4, thick / dn, thick);
+  $interpPoint2(p1, p2, p5, p6, 1 - thick / dn, thick);
+  $moveTo(g.context, p1.x_0, p1.y_0);
+  $lineTo(g.context, p3.x_0, p3.y_0);
+  $lineTo(g.context, p5.x_0, p5.y_0);
+  $lineTo(g.context, p2.x_0, p2.y_0);
+  $lineTo(g.context, p6.x_0, p6.y_0);
+  $lineTo(g.context, p4.x_0, p4.y_0);
+  $lineTo(g.context, p1.x_0, p1.y_0);
+  g.context.fill();
+}
+
+function $setColor_3(this$static, g, p) {
+  var cc, minw, w, whiteBkg, wi;
+  whiteBkg = app_0.menus.printableCheckItem.on;
+  if (this$static.diodeDirection == 0) {
+    $setColor_0(g, this$static.pins[p].value_0 ? ($clinit_Color(), red) : whiteBkg ? this$static.lightgray : this$static.darkred);
+    return;
+  }
+  w = -this$static.diodeDirection * this$static.pins[p].current / $intern_34;
+  w > 0 && (w = 255 * (1 + 0.2 * $wnd.Math.log(w)));
+  w > 255 && (w = 255);
+  minw = whiteBkg ? 5 : 30;
+  w < minw && (w = minw);
+  wi = round_int(w);
+  cc = whiteBkg ? new Color(255, 255 - wi, 255 - wi) : new Color(wi, 0, 0);
+  $setColor_0(g, cc);
+}
+
+function $setPinCount(this$static) {
+  this$static.segmentCount = this$static.baseSegmentCount;
+  this$static.extraSegment > 0 && ++this$static.segmentCount;
+  if (this$static.diodeDirection == 0) {
+    this$static.pinCount = this$static.segmentCount;
+    this$static.commonPin = -1;
+  }
+  else {
+    this$static.pinCount = this$static.segmentCount + 1;
+    this$static.commonPin = this$static.pinCount - 1;
+  }
+  $allocNodes(this$static);
+  $setupPins_20(this$static);
+  $setPoints_0(this$static);
+}
+
+function $setupPins_20(this$static) {
+  var backwardCompatibility, i, s, segmentPinsOnLeftSide, side;
+  if (this$static.pinCount == 0)
+    return;
+  this$static.darkred = new Color(30, 0, 0);
+  this$static.lightgray = new Color(245, 245, 245);
+  segmentPinsOnLeftSide = (this$static.baseSegmentCount + 1) / 2 | 0;
+  this$static.sizeY = segmentPinsOnLeftSide;
+  if (this$static.baseSegmentCount == 7) {
+    this$static.sizeX = 4;
+    this$static.pinCount > 7 && (this$static.sizeX = 5);
+  }
+  else
+    this$static.sizeX = 5;
+  this$static.pinCount > this$static.sizeY * 2 && ++this$static.sizeY;
+  this$static.pins = initUnidimensionalArray(Lcom_lushprojects_circuitjs1_client_ChipElm$Pin_2_classLit, $intern_3, 9, this$static.pinCount, 0, 1);
+  for (i = 0; i != segmentPinsOnLeftSide; i++)
+    this$static.pins[i] = new ChipElm$Pin(this$static, i, 2, String.fromCharCode(97 + i & $intern_22));
+  backwardCompatibility = this$static.segmentCount == 7 && this$static.diodeDirection == 0 && this$static.extraSegment == 0;
+  s = backwardCompatibility ? 1 : 0;
+  for (; i != this$static.segmentCount; i++)
+    this$static.pins[i] = new ChipElm$Pin(this$static, s++, backwardCompatibility ? 1 : 3, String.fromCharCode(97 + i & $intern_22));
+  this$static.extraSegment == 1 && (this$static.pins[this$static.segmentCount - 1].text_0 = 'dp');
+  if (this$static.commonPin > 0) {
+    side = 3;
+    if (this$static.segmentCount != 7) {
+      side = 2;
+      s = segmentPinsOnLeftSide;
+    }
+    this$static.pins[this$static.commonPin] = new ChipElm$Pin(this$static, s++, side, this$static.diodeDirection == 1 ? 'gnd' : 'Vcc');
+  }
+}
+
+function SevenSegElm(xx, yy) {
+  $clinit_SevenSegElm();
+  ChipElm.call(this, xx, yy);
+  this.baseSegmentCount = this.segmentCount = 7;
+  this.diodeDirection = 0;
+  $setPinCount(this);
+}
+
+function SevenSegElm_0(xa, ya, xb, yb, f, st) {
+  $clinit_SevenSegElm();
+  ChipElm_0.call(this, xa, ya, xb, yb, f, st);
+  this.baseSegmentCount = this.segmentCount = 7;
+  this.diodeDirection = 0;
+  try {
+    this.baseSegmentCount = __parseAndValidateInt($nextToken(st), 10);
+    this.extraSegment = __parseAndValidateInt($nextToken(st), 10);
+    this.diodeDirection = __parseAndValidateInt($nextToken(st), 10);
+  }
+  catch ($e0) {
+    $e0 = toJava($e0);
+    if (!instanceOf($e0, 15))
+      throw toJs($e0);
+  }
+  $setPinCount(this);
+}
+
+defineClass(417, 32, $intern_79, SevenSegElm, SevenSegElm_0);
+_.calculateCurrent = function calculateCurrent_29() {
+  var i, i0;
+  if (this.diodeDirection == 0 || this.diodes == null) {
+    for (i0 = 0; i0 != this.pinCount; i0++)
+      this.pins[i0].current = 0;
+    return;
+  }
+  this.pins[this.commonPin].current = 0;
+  for (i = 0; i != this.segmentCount; i++) {
+    this.pins[i].current = -this.diodeDirection * $calculateCurrent_0(this.diodes[i], this.diodeDirection * (this.volts[i] - this.volts[this.commonPin]));
+    this.pins[this.commonPin].current -= this.pins[i].current;
+  }
+}
+  ;
+_.doStep = function doStep_40() {
+  var i;
+  $doStep(this);
+  if (this.diodeDirection == 0)
+    return;
+  for (i = 0; i != this.segmentCount; i++)
+    $doStep_0(this.diodes[i], this.diodeDirection * (this.volts[i] - this.volts[this.commonPin]));
+}
+  ;
+_.draw = function draw_66(g) {
+  var diag, disp, dist, dpsize, i, i4, spx, spy, step, thick, xl, yl;
+  $drawChip(this, g);
+  $setColor_0(g, ($clinit_Color(), red));
+  spx = this.cspc * 2;
+  this.extraSegment != 0 && (spx = round_int(spx * 0.9));
+  (this.sizeY <= 4 || (this.flags & $intern_38) != 0) && (spx = spx / 2 | 0);
+  spy = spx * 2;
+  xl = this.x_0 + this.cspc + this.flippedSizeX * this.cspc - spx;
+  yl = this.y_0 - this.cspc + this.flippedSizeY * this.cspc - spy;
+  this.sizeY <= 4 && (this.flags & 6144) != 0 && (yl += 10);
+  disp = this.baseSegmentCount == 7 ? display7 : this.baseSegmentCount == 14 ? display14 : display16;
+  thick = this.sizeY <= 4 ? 5 : spx / 6 | 0;
+  dpsize = this.sizeY <= 4 ? 7 : (this.flags & $intern_38) != 0 ? 3 : 7;
+  for (step = 0; step != 2; step++)
+    for (i = 0; i != this.segmentCount; i++) {
+      i4 = i * 4;
+      diag = disp[i4] !== disp[i4 + 2] && disp[i4 + 1] !== disp[i4 + 3];
+      if (diag != (step == 0))
+        continue;
+      $setColor_3(this, g, i);
+      $drawSegment(g, new Point_2(xl + disp[i4] * spx, yl + disp[i4 + 1] * spy), new Point_2(xl + disp[i4 + 2] * spx, yl + disp[i4 + 3] * spy), thick);
+    }
+  if (this.extraSegment == 1) {
+    $setColor_3(this, g, this.baseSegmentCount);
+    dist = round_int($wnd.Math.max(spx * 1.5, spx + 12));
+    $drawDecimal(g, xl + spx + dist, yl + spy * 2, dpsize);
+  }
+  if (this.extraSegment == 2) {
+    $setColor_3(this, g, this.baseSegmentCount);
+    dist = round_int($wnd.Math.max(spx * 1.5, spx + 14));
+    $drawDecimal(g, xl + spx + dist, yl + round_int(spy * 0.5), dpsize);
+    $drawDecimal(g, xl + spx + dist, yl + round_int(spy * 1.5), dpsize);
+  }
+}
+  ;
+_.dumpXml = function dumpXml_67(doc, elem) {
+  $dumpXml_0(this, elem);
+  dumpAttr_0(elem, 'ba', this.baseSegmentCount);
+  dumpAttr_0(elem, 'ex', this.extraSegment);
+  dumpAttr_0(elem, 'di', this.diodeDirection);
+}
+  ;
+_.getChipEditInfo = function getChipEditInfo_21(n) {
+  var ei;
+  if (n == 0) {
+    ei = new EditInfo_0('Segments', 0, -1, -1);
+    ei.choice = new Choice;
+    $addItem(ei.choice, LS('7 Segment'));
+    $addItem(ei.choice, LS('14 Segment'));
+    $addItem(ei.choice, LS('16 Segment'));
+    $select(ei.choice, this.baseSegmentCount == 7 ? 0 : this.baseSegmentCount == 14 ? 1 : 2);
+    return ei;
+  }
+  if (n == 1) {
+    ei = new EditInfo_0('Extra Segment', 0, -1, -1);
+    ei.choice = new Choice;
+    $addItem(ei.choice, LS('None'));
+    $addItem(ei.choice, LS('Decimal Point'));
+    $addItem(ei.choice, LS('Colon'));
+    $select(ei.choice, this.extraSegment);
+    return ei;
+  }
+  if (n == 2) {
+    ei = new EditInfo_0('Diodes', 0, -1, -1);
+    ei.choice = new Choice;
+    $addItem(ei.choice, LS('Common Cathode'));
+    $addItem(ei.choice, LS('Common Anode'));
+    $addItem(ei.choice, LS('None (logic inputs)'));
+    $select(ei.choice, this.diodeDirection == 1 ? 0 : this.diodeDirection == -1 ? 1 : 2);
+    return ei;
+  }
+  return null;
+}
+  ;
+_.getChipName = function getChipName_25() {
+  return this.segmentCount + '-segment display';
+}
+  ;
+_.getDumpType = function getDumpType_94() {
+  return 157;
+}
+  ;
+_.getPostCount_0 = function getPostCount_59() {
+  return this.pinCount;
+}
+  ;
+_.getVoltageSourceCount = function getVoltageSourceCount_42() {
+  return 0;
+}
+  ;
+_.getXmlDumpType = function getXmlDumpType_20() {
+  return 'ssd';
+}
+  ;
+_.isDigitalChip = function isDigitalChip_5() {
+  return false;
+}
+  ;
+_.nonLinear = function nonLinear_20() {
+  return this.diodeDirection != 0;
+}
+  ;
+_.setChipEditValue = function setChipEditValue_22(n, ei) {
+  var ix;
+  if (n == 0) {
+    ix = $getElement(ei.choice).selectedIndex;
+    this.baseSegmentCount = ix == 0 ? 7 : ix == 1 ? 14 : 16;
+    $setPinCount(this);
+    return;
+  }
+  if (n == 1) {
+    this.extraSegment = $getElement(ei.choice).selectedIndex;
+    $setPinCount(this);
+    return;
+  }
+  if (n == 2) {
+    ix = $getElement(ei.choice).selectedIndex;
+    this.diodeDirection = ix == 0 ? 1 : ix == 1 ? -1 : 0;
+    $setPinCount(this);
+    return;
+  }
+}
+  ;
+_.setupPins = function setupPins_26() {
+  $setupPins_20(this);
+}
+  ;
+_.stamp = function stamp_52() {
+  var i, model;
+  $stamp(this);
+  if (this.diodeDirection == 0)
+    return;
+  this.diodes = initUnidimensionalArray(Lcom_lushprojects_circuitjs1_client_Diode_2_classLit, $intern_3, 129, this.segmentCount, 0, 1);
+  model = getModelWithName_1('default-led');
+  for (i = 0; i != this.segmentCount; i++) {
+    this.diodes[i] = new Diode(sim_0);
+    $setup(this.diodes[i], model);
+    this.diodeDirection == 1 ? $stamp_0(this.diodes[i], this.nodes[i], this.nodes[this.commonPin]) : $stamp_0(this.diodes[i], this.nodes[this.commonPin], this.nodes[i]);
+  }
+}
+  ;
+_.stepFinished = function stepFinished_19() {
+  this.commonPin > 0 && $wnd.Math.abs(this.pins[this.commonPin].current) > $intern_75 && $stop(sim_0, 'max current exceeded', this);
+}
+  ;
+_.undumpXml = function undumpXml_69(xml) {
+  $undumpXml_0(this, xml);
+  this.baseSegmentCount = $parseIntAttr(xml, 'ba', this.baseSegmentCount);
+  this.extraSegment = $parseIntAttr(xml, 'ex', this.extraSegment);
+  this.diodeDirection = $parseIntAttr(xml, 'di', this.diodeDirection);
+  $setPinCount(this);
+}
+  ;
+_.baseSegmentCount = 0;
+_.commonPin = 0;
+_.diodeDirection = 0;
+_.extraSegment = 0;
+_.pinCount = 0;
+_.segmentCount = 0;
+var display14, display16, display7;
+var Lcom_lushprojects_circuitjs1_client_SevenSegElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SevenSegElm', 417);
+function $checkForDuplicates(this$static) {
+  var box, boxForShortcut, c, i, result, str;
+  boxForShortcut = initUnidimensionalArray(Lcom_google_gwt_user_client_ui_TextBox_2_classLit, $intern_3, 124, 127, 0, 1);
+  result = false;
+  for (i = 0; i != this$static.textBoxes.arrayList.array.length; i++) {
+    box = $get_4(this$static.textBoxes, i);
+    str = $getPropertyString(($clinit_DOM(), box.element), 'value');
+    if (str.length == 0)
+      continue;
+    c = (checkCriticalStringElementIndex(0, str.length), str.charCodeAt(0));
+    if (c > boxForShortcut.length) {
+      box.element.style['color'] = 'red';
+      result = true;
+      continue;
+    }
+    if (boxForShortcut[c]) {
+      box.element.style['color'] = 'red';
+      boxForShortcut[c].element.style['color'] = 'red';
+      result = true;
+    }
+    else {
+      box.element.style['color'] = 'black';
+    }
+    boxForShortcut[c] = box;
+  }
+  $setEnabled(this$static.okButton, !result);
+  return result;
+}
+
+function $enterPressed_0(this$static) {
+  var i, item_0, str;
+  if ($checkForDuplicates(this$static))
+    return;
+  for (i = 0; i != this$static.sim.shortcuts.length; i++)
+    this$static.sim.shortcuts[i] = null;
+  for (i = 0; i != this$static.textBoxes.arrayList.array.length; i++) {
+    str = $getText($get_4(this$static.textBoxes, i));
+    item_0 = $get_4(this$static.ui.mainMenuItems, i);
+    item_0.shortcut = str;
+    str.length > 0 && (this$static.sim.shortcuts[checkCriticalStringElementIndex(0, str.length), str.charCodeAt(0)] = $get_4(this$static.ui.mainMenuItemNames, i));
+  }
+  $saveShortcuts(this$static.sim.ui);
+  $hide_0(this$static, false);
+  dialogShowing == this$static && (dialogShowing = null);
+}
+
+function ShortcutsDialog(asim) {
+  var cancelButton, hp, i, item_0, sp, table, text_0;
+  Dialog.call(this);
+  this.sim = asim;
+  this.ui = this.sim.ui;
+  this.vp = new VerticalPanel;
+  $setWidget_1(this, this.vp);
+  sp = new ScrollPanel;
+  $add_5(this.vp, sp);
+  ($clinit_DOM(), sp.element).style['height'] = '400px';
+  sp.scrollableElem.style['overflow'] = ($clinit_Style$Overflow(), 'scroll');
+  $setText(this, LS('Edit Shortcuts'));
+  this.textBoxes = new Vector;
+  table = new FlexTable;
+  $add_1(sp, table);
+  for (i = 0; i != asim.ui.mainMenuItems.arrayList.array.length; i++) {
+    item_0 = $get_4(this.ui.mainMenuItems, i);
+    if (item_0.shortcut.length > 1)
+      break;
+    $setText_1(table, i, item_0.name_0);
+    text_0 = new TextBox;
+    $setText_2(text_0, item_0.shortcut);
+    text_0.element.maxLength = 1;
+    $addDomHandler(text_0, new ShortcutsDialog$1(this), ($clinit_ChangeEvent(), $clinit_ChangeEvent(), TYPE_0));
+    $setWidget_2(table, i, 1, text_0);
+    $add_11(this.textBoxes, text_0);
+  }
+  hp = new HorizontalPanel;
+  hp.element.style['width'] = '100%';
+  $setHorizontalAlignment_0(hp, ($clinit_HasHorizontalAlignment(), ALIGN_LEFT));
+  hp.element.className = 'topSpace';
+  $add_5(this.vp, hp);
+  $add_3(hp, this.okButton = new Button_1(LS('OK')));
+  $setHorizontalAlignment_0(hp, ALIGN_RIGHT);
+  $add_3(hp, cancelButton = new Button_1(LS('Cancel')));
+  $addDomHandler(this.okButton, new ShortcutsDialog$2(this), ($clinit_ClickEvent(), $clinit_ClickEvent(), TYPE_1));
+  $addDomHandler(cancelButton, new ShortcutsDialog$3(this), (null, TYPE_1));
+  $center(this);
+}
+
+defineClass(657, 138, $intern_53, ShortcutsDialog);
+_.enterPressed = function enterPressed_1() {
+  $enterPressed_0(this);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_ShortcutsDialog_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ShortcutsDialog', 657);
+function ShortcutsDialog$1(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(658, 1, $intern_66, ShortcutsDialog$1);
+_.onChange = function onChange_5(ev) {
+  $checkForDuplicates(this.this$01);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_ShortcutsDialog$1_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ShortcutsDialog/1', 658);
+function ShortcutsDialog$2(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(659, 1, $intern_51, ShortcutsDialog$2);
+_.onClick = function onClick_43(event_0) {
+  $enterPressed_0(this.this$01);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_ShortcutsDialog$2_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ShortcutsDialog/2', 659);
+function ShortcutsDialog$3(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(660, 1, $intern_51, ShortcutsDialog$3);
+_.onClick = function onClick_44(event_0) {
+  $closeDialog(this.this$01);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_ShortcutsDialog$3_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ShortcutsDialog/3', 660);
+function $addChildElms(this$static, list) {
+  var ce, ce$iterator, childList, cn, cnl, cnobj, i, nodeCount;
+  for (ce$iterator = new ArrayList$1(list.arrayList); ce$iterator.i < ce$iterator.this$01.array.length;) {
+    ce = $next_4(ce$iterator);
+    childList = ce.getChildElmList();
+    if (childList) {
+      $addChildElms(this$static, childList);
+      continue;
+    }
+    $add_11(this$static.elmList, ce);
+    nodeCount = ce.getPostCount_0() + ce.getInternalNodeCount();
+    for (i = 0; i != nodeCount; i++) {
+      cn = ce.nodes[i];
+      cnl = new CircuitNodeLink;
+      cnl.num = i;
+      cnl.elm = ce;
+      cnobj = $getCircuitNode(this$static, cn);
+      $addElement(cnobj.links_0, cnl);
+      cnobj.internal = false;
+      cn == 0 && ce.setNodeVoltage(i, 0);
+    }
+  }
+}
+
+function $analyzeCircuit(this$static) {
+  $setStopElm(this$static.app, null, null);
+  this$static.elmList = this$static.app.elmList;
+  if (this$static.elmList.arrayList.array.length == 0) {
+    this$static.app.postDrawList = new Vector;
+    this$static.app.badConnectionList = new Vector;
+    return;
+  }
+  $makePostDrawList(this$static);
+  this$static.needsStamp = true;
+}
+
+function $applySolvedRightSide(this$static, rs) {
+  var j, ji, res, ri;
+  for (j = 0; j != this$static.circuitMatrixFullSize; j++) {
+    ri = this$static.circuitRowInfo[j];
+    ri.type_0 == 1 ? (res = ri.value_0) : (res = rs[ri.mapCol]);
+    if (isNaN(res)) {
+      this$static.converged = false;
+      break;
+    }
+    if (j < this$static.nodeList.arrayList.array.length - 1) {
+      this$static.nodeVoltages[j] = res;
+    }
+    else {
+      ji = j - (this$static.nodeList.arrayList.array.length - 1);
+      this$static.voltageSources[ji].setCurrent(ji, res);
+    }
+  }
+  $setNodeVoltages(this$static, this$static.nodeVoltages);
+}
+
+function $assignUiWireNodes(this$static) {
+  var ce, cn, cnl, i, i0, j, nme, node, pt, uiList;
+  uiList = this$static.app.ui.elmList;
+  for (i0 = 0; i0 != uiList.arrayList.array.length; i0++) {
+    ce = (checkArrayElementIndex(i0, uiList.arrayList.array.length), $get_2(uiList.arrayList, i0));
+    if (ce.isRemovableWire())
+      continue;
+    for (j = 0; j != ce.getPostCount_0(); j++) {
+      pt = ce.getPost(j);
+      nme = $get_1(this$static.uiNodeMap, pt);
+      !!nme && nme.node == -1 && (nme.node = ce.nodes[j]);
+      node = ce.nodes[j];
+      cn = node >= 0 ? $getCircuitNode(this$static, node) : null;
+      if (cn) {
+        cnl = new CircuitNodeLink;
+        cnl.num = j;
+        cnl.elm = ce;
+        $addElement(cn.links_0, cnl);
+      }
+    }
+  }
+  for (i = 0; i != uiList.arrayList.array.length; i++) {
+    ce = (checkArrayElementIndex(i, uiList.arrayList.array.length), $get_2(uiList.arrayList, i));
+    if (!ce.isRemovableWire())
+      continue;
+    for (j = 0; j != ce.getPostCount_0(); j++) {
+      pt = ce.getPost(j);
+      nme = $get_1(this$static.uiNodeMap, pt);
+      if (!!nme && nme.node >= 0) {
+        ce.setNode(j, nme.node);
+        cnl = new CircuitNodeLink;
+        cnl.num = j;
+        cnl.elm = ce;
+        $addElement($getCircuitNode(this$static, nme.node).links_0, cnl);
+      }
+      else {
+        console.log('missing node for ' + pt);
+      }
+    }
+  }
+}
+
+function $calcWireCurrents(this$static) {
+  var ce, cur, i, j, n, p, wi;
+  for (i = 0; i != this$static.wireInfoList.arrayList.array.length; i++) {
+    wi = $get_4(this$static.wireInfoList, i);
+    cur = 0;
+    p = wi.wire.getPost(wi.post);
+    for (j = 0; j != wi.neighbors.arrayList.array.length; j++) {
+      ce = $get_4(wi.neighbors, j);
+      n = $getNodeAtPoint(ce, p.x_0, p.y_0);
+      cur += ce.getCurrentIntoNode(n);
+    }
+    wi.post == 0 || instanceOf(wi.wire, 164) ? wi.wire.setCurrent(-1, cur) : wi.wire.setCurrent(-1, -cur);
+  }
+}
+
+function $calcWireInfo(this$static) {
+  var ce, cn1, cnl, i, isReady0, isReady1, j, k, k0, k1, mainList, moved, ne, neighbors0, neighbors1, notReady, p2, pt, uiList, wi, wire, wk, ww;
+  moved = 0;
+  for (i = 0; i != this$static.wireInfoList.arrayList.array.length; i++) {
+    wi = $get_4(this$static.wireInfoList, i);
+    wire = wi.wire;
+    cn1 = $get_4(this$static.nodeList, wire.nodes[0]);
+    neighbors0 = new Vector;
+    neighbors1 = new Vector;
+    isReady0 = true;
+    isReady1 = !instanceOf(wire, 165);
+    for (j = 0; j != cn1.links_0.arrayList.array.length; j++) {
+      cnl = $get_4(cn1.links_0, j);
+      ce = cnl.elm;
+      if (ce == wire)
+        continue;
+      if (!$contains_3(this$static.wireInfoElmSet, ce))
+        continue;
+      if (cnl.num >= ce.getPostCount_0())
+        continue;
+      pt = ce.getPost(cnl.num);
+      if (!pt)
+        continue;
+      notReady = ce.isRemovableWire() && !ce.hasWireInfo;
+      if (pt.x_0 == wire.x_0 && pt.y_0 == wire.y_0) {
+        $add_8(neighbors0.arrayList, ce);
+        notReady && (isReady0 = false);
+      }
+      else if (wire.getPostCount_0() > 1) {
+        p2 = wire.getConnectedPost();
+        if (pt.x_0 == p2.x_0 && pt.y_0 == p2.y_0) {
+          $add_8(neighbors1.arrayList, ce);
+          notReady && (isReady1 = false);
+        }
+      }
+      else if (instanceOf(ce, 164) && instanceOf(wire, 164) && ce.text_0 == wire.text_0) {
+        $add_8(neighbors1.arrayList, ce);
+        notReady && (isReady1 = false);
+      }
+    }
+    if (isReady0) {
+      wi.neighbors = neighbors0;
+      wi.post = 0;
+      wire.hasWireInfo = true;
+      moved = 0;
+    }
+    else if (isReady1 && (neighbors1.arrayList.array.length != 0 || !instanceOf(wire, 164))) {
+      wi.neighbors = neighbors1;
+      wi.post = 1;
+      wire.hasWireInfo = true;
+      moved = 0;
+    }
+    else {
+      $add_11(this$static.wireInfoList, $remove_19(this$static.wireInfoList, i--));
+      ++moved;
+      if (moved > this$static.wireInfoList.arrayList.array.length * 2) {
+        uiList = this$static.app.ui.elmList;
+        mainList = this$static.app.elmList;
+        console_1('wire loop detected, ' + this$static.wireInfoList.arrayList.array.length + ' wires total, unresolved:');
+        for (k0 = i; k0 < this$static.wireInfoList.arrayList.array.length; k0++) {
+          wk = $get_4(this$static.wireInfoList, k0);
+          ww = wk.wire;
+          console_1('  unresolved: ' + ww + ' (' + ww.x_0 + ',' + ww.y_0 + ')-(' + ww.x2 + ',' + ww.y2 + ') hasWireInfo=' + ww.hasWireInfo + ' inUI=' + ($indexOf_2(uiList.arrayList, ww, 0) != -1) + ' inMain=' + ($indexOf_2(mainList.arrayList, ww, 0) != -1));
+        }
+        console_1('current wire: ' + wire + ' (' + wire.x_0 + ',' + wire.y_0 + ')-(' + wire.x2 + ',' + wire.y2 + ')' + ' inUI=' + ($indexOf_2(uiList.arrayList, wire, 0) != -1) + ' inMain=' + ($indexOf_2(mainList.arrayList, wire, 0) != -1));
+        console_1('  isReady0=false neighbors0=' + neighbors0.arrayList.array.length + ' isReady1=' + isReady1 + ' neighbors1=' + neighbors1.arrayList.array.length);
+        for (k1 = 0; k1 < neighbors0.arrayList.array.length; k1++) {
+          ne = (checkArrayElementIndex(k1, neighbors0.arrayList.array.length), $get_2(neighbors0.arrayList, k1));
+          console_1('  neighbor0: ' + ne + ' removable=' + ne.isRemovableWire() + ' hasWireInfo=' + ne.hasWireInfo + ' inUI=' + ($indexOf_2(uiList.arrayList, ne, 0) != -1) + ' inMain=' + ($indexOf_2(mainList.arrayList, ne, 0) != -1));
+        }
+        for (k = 0; k < neighbors1.arrayList.array.length; k++) {
+          ne = (checkArrayElementIndex(k, neighbors1.arrayList.array.length), $get_2(neighbors1.arrayList, k));
+          console_1('  neighbor1: ' + ne + ' removable=' + ne.isRemovableWire() + ' hasWireInfo=' + ne.hasWireInfo + ' inUI=' + ($indexOf_2(uiList.arrayList, ne, 0) != -1) + ' inMain=' + ($indexOf_2(mainList.arrayList, ne, 0) != -1));
+        }
+        $stop(this$static, 'wire loop detected', wire);
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
+function $calculateWireClosureForList(this$static, list, uiList) {
+  var ce, cn, cn2, entry, entry$iterator, i, nm, p0, p1;
+  nm = new HashMap;
+  this$static.wireInfoList = new Vector;
+  this$static.wireInfoElmSet = new HashSet_0(list);
+  for (i = 0; i != list.arrayList.array.length; i++) {
+    ce = (checkArrayElementIndex(i, list.arrayList.array.length), $get_2(list.arrayList, i));
+    if (!ce.isRemovableWire())
+      continue;
+    ce.hasWireInfo = false;
+    $add_11(this$static.wireInfoList, new SimulationManager$WireInfo(ce));
+    p0 = ce.getPost(0);
+    cn = getEntryValueOrNull($getEntry(nm.hashCodeMap, p0));
+    p1 = uiList && instanceOf(ce, 164) ? null : ce.getConnectedPost();
+    if (!p1) {
+      if (!cn) {
+        cn = new SimulationManager$NodeMapEntry;
+        $put_1(nm.hashCodeMap, p0, cn);
+      }
+      continue;
+    }
+    cn2 = getEntryValueOrNull($getEntry(nm.hashCodeMap, p1));
+    if (!!cn && !!cn2) {
+      for (entry$iterator = new AbstractHashMap$EntrySetIterator((new AbstractHashMap$EntrySet(nm)).this$01); entry$iterator.hasNext;) {
+        entry = $next_2(entry$iterator);
+        maskUndefined(entry.getValue()) === maskUndefined(cn2) && entry.setValue(cn);
+      }
+      continue;
+    }
+    if (cn) {
+      $put_1(nm.hashCodeMap, p1, cn);
+      continue;
+    }
+    if (cn2) {
+      $put_1(nm.hashCodeMap, p0, cn2);
+      continue;
+    }
+    cn = new SimulationManager$NodeMapEntry;
+    $put_1(nm.hashCodeMap, p0, cn);
+    $put_1(nm.hashCodeMap, p1, cn);
+  }
+  uiList ? (this$static.uiNodeMap = nm) : (this$static.nodeMap = nm);
+}
+
+function $connectUnconnectedNodes(this$static) {
+  var i, n;
+  for (i = 0; i != this$static.unconnectedNodes.arrayList.array.length; i++) {
+    n = $get_4(this$static.unconnectedNodes, i).value_0;
+    $stampResistor(this$static, 0, n, $intern_90);
+  }
+}
+
+function $findUnconnectedNodes(this$static) {
+  var ce, changed, closure, hasGround, hg, i, j, k, kn;
+  closure = initUnidimensionalArray(Z_classLit, $intern_88, 8, this$static.nodeList.arrayList.array.length, 16, 1);
+  changed = true;
+  this$static.unconnectedNodes = new Vector;
+  this$static.nodesWithGroundConnection = new Vector;
+  closure[0] = true;
+  while (changed) {
+    changed = false;
+    for (i = 0; i != this$static.elmList.arrayList.array.length; i++) {
+      ce = $getElm_1(this$static, i);
+      if (instanceOf(ce, 125))
+        continue;
+      hasGround = false;
+      for (j = 0; j < ce.getPostCount_0(); j++) {
+        hg = ce.hasGroundConnection(j);
+        hg && (hasGround = true);
+        if (!closure[ce.nodes[j]]) {
+          hg && (closure[ce.nodes[j]] = changed = true);
+          continue;
+        }
+        for (k = 0; k != ce.getPostCount_0(); k++) {
+          if (j == k)
+            continue;
+          kn = ce.nodes[k];
+          if (ce.getConnection(j, k) && !closure[kn]) {
+            closure[kn] = true;
+            changed = true;
+          }
+        }
+      }
+      hasGround && $add_11(this$static.nodesWithGroundConnection, ce);
+    }
+    if (changed)
+      continue;
+    for (i = 0; i != this$static.nodeList.arrayList.array.length; i++)
+      if (!closure[i] && !$getCircuitNode(this$static, i).internal) {
+        $add_11(this$static.unconnectedNodes, valueOf(i));
+        console.log('node ' + i + ' unconnected');
+        closure[i] = true;
+        changed = true;
+        break;
+      }
+  }
+}
+
+function $getCircuitAsComposite(this$static) {
+  var ccm, ce, child, cn, dumpList, elmDoc, elmRoot, ent, extList, extnodes, extraList, i, j, lne, n, next, nn, pos, sel, side, side0, sideLabels, used;
+  elmDoc = ($clinit_XMLParser(), build($createDocumentImpl()));
+  elmRoot = $createElement_1(elmDoc, 'elms');
+  $appendChild_0(elmDoc, elmRoot);
+  clearDumpedFlags_0();
+  clearDumpedFlags_1();
+  clearDumpedFlags_2();
+  sideLabels = stampJavaTypeInfo(getClassLiteralForArray(Ljava_util_Vector_2_classLit, 1), $intern_3, 25, 0, [new Vector, new Vector, new Vector, new Vector]);
+  extList = new Vector;
+  sel = $isSelection(this$static.app.ui);
+  used = initUnidimensionalArray(Z_classLit, $intern_88, 8, this$static.nodeList.arrayList.array.length, 16, 1);
+  extnodes = initUnidimensionalArray(Z_classLit, $intern_88, 8, this$static.nodeList.arrayList.array.length, 16, 1);
+  if (!$preStampCircuit(this$static, true))
+    return null;
+  for (i = 0; i != this$static.elmList.arrayList.array.length; i++) {
+    ce = $getElm_1(this$static, i);
+    if (sel && !ce.selected_0)
+      continue;
+    if (instanceOf(ce, 164)) {
+      lne = ce;
+      if ((lne.flags & 1) != 0)
+        continue;
+      if (extnodes[ce.nodes[0]])
+        continue;
+      side0 = 2;
+      $wnd.Math.abs(ce.dx) >= $wnd.Math.abs(ce.dy) && ce.dx > 0 && (side0 = 3);
+      $wnd.Math.abs(ce.dx) <= $wnd.Math.abs(ce.dy) && ce.dy < 0 && (side0 = 0);
+      $wnd.Math.abs(ce.dx) <= $wnd.Math.abs(ce.dy) && ce.dy > 0 && (side0 = 1);
+      $add_8(sideLabels[side0].arrayList, lne);
+      extnodes[ce.nodes[0]] = true;
+      if (ce.nodes[0] == 0) {
+        alert_0('Node "' + lne.text_0 + '" can\'t be connected to ground');
+        return null;
+      }
+    }
+  }
+  $clinit_Collections();
+  $sort_0(sideLabels[2], new SimulationManager$lambda$0$Type);
+  $sort_0(sideLabels[3], new SimulationManager$lambda$1$Type);
+  $sort_0(sideLabels[0], new SimulationManager$lambda$2$Type);
+  $sort_0(sideLabels[1], new SimulationManager$lambda$3$Type);
+  for (side = 0; side < sideLabels.length; side++) {
+    for (pos = 0; pos < sideLabels[side].arrayList.array.length; pos++) {
+      lne = $get_4(sideLabels[side], pos);
+      ent = new ExtListEntry_0(lne.text_0, lne.nodes[0], pos, side);
+      $add_8(extList.arrayList, ent);
+    }
+  }
+  dumpList = new Vector;
+  extraList = new Vector;
+  for (i = 0; i != this$static.app.elmList.arrayList.array.length; i++) {
+    ce = $get_4(this$static.app.elmList, i);
+    if (sel && !ce.selected_0)
+      continue;
+    instanceOf(ce, 125) || instanceOf(ce, 132) || instanceOf(ce, 164) || instanceOf(ce, 20) || instanceOf(ce, 133) || instanceOf(ce, 165) ? $add_8(extraList.arrayList, ce) : $add_8(dumpList.arrayList, ce);
+  }
+  $addAll_0(dumpList.arrayList, extraList);
+  for (i = 0; i != dumpList.arrayList.array.length; i++) {
+    ce = (checkArrayElementIndex(i, dumpList.arrayList.array.length), $get_2(dumpList.arrayList, i));
+    nn = '';
+    for (j = 0; j != ce.getPostCount_0(); j++) {
+      n = ce.nodes[j];
+      used[n] = true;
+      nn.length > 0 && (nn += ' ');
+      nn += n;
+    }
+    child = $createElement_1(elmDoc, ce.getXmlDumpType());
+    dumpAttr_1(child, 'nn', nn);
+    ce.dumpXml(elmDoc, child);
+    for (cn = $item(new NodeListImpl(getChildNodes(child.jsObject)), 0); cn;) {
+      next = build(getNextSibling(cn.jsObject));
+      getNodeType(cn.jsObject) == 1 && $removeChild_2(child, cn);
+      cn = next;
+    }
+    $appendChild_0(elmRoot, child);
+  }
+  for (i = 0; i != extList.arrayList.array.length; i++) {
+    ent = (checkArrayElementIndex(i, extList.arrayList.array.length), $get_2(extList.arrayList, i));
+    if (!used[ent.node]) {
+      alert_0('Node "' + ent.name_0 + '" is not used!');
+      return null;
+    }
+  }
+  ccm = new CustomCompositeModel;
+  ccm.elmDoc = elmDoc;
+  ccm.extList = extList;
+  console_1('created model ' + prettyPrint(build(getDocumentElement(elmDoc.jsObject)), 0));
+  return ccm;
+}
+
+function $getCircuitNode(this$static, n) {
+  if (n >= this$static.nodeList.arrayList.array.length)
+    return null;
+  return $get_4(this$static.nodeList, n);
+}
+
+function $getElm_1(this$static, n) {
+  if (n >= this$static.elmList.arrayList.array.length)
+    return null;
+  return $get_4(this$static.elmList, n);
+}
+
+function $getLabeledNodeVoltage(this$static, name_0) {
+  var node;
+  node = getByName(name_0);
+  if (!node || node.value_0 == 0)
+    return 0;
+  return this$static.nodeVoltages[node.value_0 - 1];
+}
+
+function $makeNodeList(this$static) {
+  var ce, cln, cn, cnl, i, inodes, ivs, j, n, posts, pt, vscount;
+  vscount = 0;
+  for (i = 0; i != this$static.elmList.arrayList.array.length; i++)
+    $getElm_1(this$static, i).preStamp();
+  for (i = 0; i != this$static.elmList.arrayList.array.length; i++) {
+    ce = $getElm_1(this$static, i);
+    inodes = ce.getInternalNodeCount();
+    ivs = ce.getVoltageSourceCount();
+    posts = ce.getPostCount_0();
+    for (j = 0; j != posts; j++) {
+      pt = ce.getPost(j);
+      cln = $get_1(this$static.nodeMap, pt);
+      if (!cln || cln.node == -1) {
+        cn = new CircuitNode;
+        cnl = new CircuitNodeLink;
+        cnl.num = j;
+        cnl.elm = ce;
+        $addElement(cn.links_0, cnl);
+        ce.setNode(j, this$static.nodeList.arrayList.array.length);
+        cln ? (cln.node = this$static.nodeList.arrayList.array.length) : $put_0(this$static.nodeMap, pt, new SimulationManager$NodeMapEntry_0(this$static.nodeList.arrayList.array.length));
+        $addElement(this$static.nodeList, cn);
+      }
+      else {
+        n = cln.node;
+        cnl = new CircuitNodeLink;
+        cnl.num = j;
+        cnl.elm = ce;
+        $addElement($getCircuitNode(this$static, n).links_0, cnl);
+        ce.setNode(j, n);
+        n == 0 && ce.setNodeVoltage(j, 0);
+      }
+    }
+    for (j = 0; j != inodes; j++) {
+      cn = new CircuitNode;
+      cn.internal = true;
+      cnl = new CircuitNodeLink;
+      cnl.num = j + posts;
+      cnl.elm = ce;
+      $addElement(cn.links_0, cnl);
+      ce.setNode(cnl.num, this$static.nodeList.arrayList.array.length);
+      $addElement(this$static.nodeList, cn);
+    }
+    vscount += ivs;
+  }
+  this$static.voltageSources = initUnidimensionalArray(Lcom_lushprojects_circuitjs1_client_CircuitElm_2_classLit, $intern_3, 7, vscount, 0, 1);
+}
+
+function $makePostDrawList(this$static) {
+  var bad, badConnectionList, ce, cn, drawList, entry, entry$iterator, g, i, j, k, list, op, other, otherPosts, pc, postCountMap, postDrawList, posts, pt, rp, rw, rwPt;
+  postCountMap = new HashMap;
+  drawList = this$static.app.ui.elmList;
+  for (i = 0; i != drawList.arrayList.array.length; i++) {
+    ce = (checkArrayElementIndex(i, drawList.arrayList.array.length), $get_2(drawList.arrayList, i));
+    posts = ce.getPostCount_0();
+    for (j = 0; j != posts; j++) {
+      pt = ce.getPost(j);
+      g = getEntryValueOrNull($getEntry(postCountMap.hashCodeMap, pt));
+      $put_0(postCountMap, pt, valueOf(!g ? 1 : g.value_0 + 1));
+    }
+  }
+  postDrawList = this$static.app.postDrawList = new Vector;
+  badConnectionList = this$static.app.badConnectionList = new Vector;
+  for (entry$iterator = new AbstractHashMap$EntrySetIterator((new AbstractHashMap$EntrySet(postCountMap)).this$01); entry$iterator.hasNext;) {
+    entry = $next_2(entry$iterator);
+    entry.getValue().value_0 != 2 && $add_11(postDrawList, entry.getKey());
+    if (entry.getValue().value_0 == 1) {
+      bad = false;
+      cn = entry.getKey();
+      for (j = 0; j != drawList.arrayList.array.length && !bad; j++) {
+        ce = (checkArrayElementIndex(j, drawList.arrayList.array.length), $get_2(drawList.arrayList, j));
+        if (instanceOf(ce, 133))
+          continue;
+        if (!$contains(ce.boundingBox, cn.x_0, cn.y_0))
+          continue;
+        pc = ce.getPostCount_0();
+        for (k = 0; k != pc; k++)
+          if ($equals(ce.getPost(k), cn))
+            break;
+        k == pc && (bad = true);
+      }
+      bad && $add_8(badConnectionList.arrayList, cn);
+    }
+  }
+  this$static.routedWireMap = new HashMap;
+  for (i = 0; i != drawList.arrayList.array.length; i++) {
+    ce = (checkArrayElementIndex(i, drawList.arrayList.array.length), $get_2(drawList.arrayList, i));
+    if (!instanceOf(ce, 132))
+      continue;
+    rw = ce;
+    for (rp = 0; rp < 2; rp++) {
+      rwPt = rp == 0 ? rw.point1 : rp == 1 ? rw.point2 : null;
+      for (j = 0; j != drawList.arrayList.array.length; j++) {
+        other = (checkArrayElementIndex(j, drawList.arrayList.array.length), $get_2(drawList.arrayList, j));
+        if (other == rw || instanceOf(other, 132))
+          continue;
+        otherPosts = other.getPostCount_0();
+        for (op = 0; op < otherPosts; op++) {
+          if ($equals(other.getPost(op), rwPt)) {
+            list = $get_1(this$static.routedWireMap, other);
+            if (!list) {
+              list = new ArrayList;
+              $put_0(this$static.routedWireMap, other, list);
+            }
+            $add_8(list, new SimulationManager$RoutedWireConnection(rw, rp, op));
+          }
+        }
+      }
+    }
+  }
+}
+
+function $preStampAndStampCircuit(this$static) {
+  var i;
+  for (i = 0; i != 10; i++)
+    if ($preStampCircuit(this$static, false) || this$static.app.stopMessage != null)
+      break;
+  if (this$static.app.stopMessage != null)
+    return;
+  if (i == 10) {
+    $stop(this$static, 'failed to stamp circuit', null);
+    return;
+  }
+  $stampCircuit(this$static);
+}
+
+function $preStampCircuit(this$static, subcircuit) {
+  var ce, elm, elm$iterator, gotVoltageSource, i, ivs, j, list, vscount, hook;
+  this$static.nodeList = new Vector;
+  this$static.elmList = this$static.app.elmList;
+  labelList = new HashMap;
+  firstGround = null;
+  $calculateWireClosureForList(this$static, this$static.elmList, false);
+  $setGroundNode(this$static, subcircuit);
+  $makeNodeList(this$static);
+  if (this$static.app.ui.elmList != this$static.app.elmList) {
+    $calculateWireClosureForList(this$static, this$static.app.ui.elmList, true);
+    $assignUiWireNodes(this$static);
+  }
+  if (!$calcWireInfo(this$static))
+    return false;
+  this$static.nodeMap = null;
+  this$static.uiNodeMap = null;
+  this$static.elmList = new Vector_0(this$static.app.elmList);
+  for (elm$iterator = new ArrayList$1(this$static.elmList.arrayList); elm$iterator.i < elm$iterator.this$01.array.length;) {
+    elm = $next_4(elm$iterator);
+    list = elm.getChildElmList();
+    !!list && $addChildElms(this$static, list);
+  }
+  vscount = 0;
+  this$static.circuitNonLinear = false;
+  for (i = 0; i != this$static.elmList.arrayList.array.length; i++) {
+    ce = $getElm_1(this$static, i);
+    ce.nonLinear() && (this$static.circuitNonLinear = true);
+    ivs = ce.getVoltageSourceCount();
+    for (j = 0; j != ivs; j++) {
+      this$static.voltageSources[vscount] = ce;
+      ce.setVoltageSource(j, vscount++);
+    }
+  }
+  this$static.voltageSourceCount = vscount;
+  gotVoltageSource = false;
+  this$static.app.showResistanceInVoltageSources = true;
+  for (i = 0; i != this$static.elmList.arrayList.array.length; i++) {
+    ce = $getElm_1(this$static, i);
+    instanceOf(ce, 51) && (gotVoltageSource ? (this$static.app.showResistanceInVoltageSources = false) : (gotVoltageSource = true));
+  }
+  $findUnconnectedNodes(this$static);
+  if (!$validateCircuit(this$static))
+    return false;
+  this$static.nodesWithGroundConnection = null;
+  this$static.timeStep = this$static.maxTimeStep;
+  this$static.needsStamp = true;
+  hook = $wnd.CircuitJS1.onanalyze;
+  hook && hook($wnd.CircuitJS1);
+  return true;
+}
+
+function $resetTime(this$static) {
+  this$static.t = this$static.timeStepAccum = 0;
+  this$static.timeStepCount = 0;
+}
+
+function $runCircuit(this$static, didAnalyze) {
+  var debugprint, delayWireProcessing, frameTimeLimit, goodIterations, i, iter, j, lit, printit, steprate, subiter, subiterCount, timeStepCountAtFrameStart, tm, x_0, hook;
+  if (this$static.circuitMatrix == null || this$static.elmList.arrayList.array.length == 0) {
+    this$static.circuitMatrix = null;
+    return;
+  }
+  debugprint = this$static.app.dumpMatrix;
+  this$static.app.dumpMatrix = false;
+  steprate = fromDouble_0(160 * $getIterCount(this$static.app));
+  tm = ($clinit_System(), fromDouble_0(Date.now()));
+  lit = this$static.lastIterTime;
+  if (compare_0(lit, 0) == 0) {
+    this$static.lastIterTime = tm;
+    return;
+  }
+  if (gte_0($intern_21, mul_0(steprate, sub_1(tm, this$static.lastIterTime))) && !didAnalyze)
+    return;
+  delayWireProcessing = $canDelayWireProcessing(this$static.app.scopeManager);
+  timeStepCountAtFrameStart = this$static.timeStepCount;
+  goodIterations = 100;
+  frameTimeLimit = round_int($intern_21 / this$static.app.minFrameRate);
+  for (iter = 1; ; iter++) {
+    if (goodIterations >= 3 && this$static.timeStep < this$static.maxTimeStep) {
+      this$static.timeStep = $wnd.Math.min(this$static.timeStep * 2, this$static.maxTimeStep);
+      console_1('timestep up = ' + this$static.timeStep + ' at ' + this$static.t);
+      $stampCircuit(this$static);
+      goodIterations = 0;
+    }
+    for (i = 0; i != this$static.elmArr.length; i++)
+      this$static.elmArr[i].startIteration();
+    ++this$static.app.ui.steps;
+    subiterCount = this$static.adjustTimeStep && this$static.timeStep / 2 > this$static.minTimeStep ? 100 : 5000;
+    for (subiter = 0; subiter != subiterCount; subiter++) {
+      this$static.converged = true;
+      this$static.subIterations = subiter;
+      for (i = 0; i != this$static.circuitMatrixSize; i++)
+        this$static.circuitRightSide[i] = this$static.origRightSide[i];
+      if (this$static.circuitNonLinear) {
+        for (i = 0; i != this$static.circuitMatrixSize; i++)
+          for (j = 0; j != this$static.circuitMatrixSize; j++)
+            this$static.circuitMatrix[i][j] = this$static.origMatrix[i][j];
+      }
+      for (i = 0; i != this$static.elmArr.length; i++)
+        this$static.elmArr[i].doStep();
+      if (this$static.app.stopMessage != null)
+        return;
+      printit = debugprint;
+      debugprint = false;
+      if (this$static.circuitMatrixSize < 8) {
+        for (j = 0; j != this$static.circuitMatrixSize; j++) {
+          for (i = 0; i != this$static.circuitMatrixSize; i++) {
+            x_0 = this$static.circuitMatrix[i][j];
+            if (isNaN(x_0) || !isNaN(x_0) && !isFinite(x_0)) {
+              $stop(this$static, 'nan/infinite matrix!', null);
+              console.log('circuitMatrix ' + i + ' ' + j + ' is ' + x_0);
+              return;
+            }
+          }
+        }
+      }
+      if (printit) {
+        for (j = 0; j != this$static.circuitMatrixSize; j++) {
+          x_0 = '';
+          for (i = 0; i != this$static.circuitMatrixSize; i++)
+            x_0 += this$static.circuitMatrix[j][i] + ',';
+          x_0 += '\n';
+          console.log(x_0);
+        }
+        console.log('done');
+      }
+      if (this$static.circuitNonLinear) {
+        if (this$static.converged && subiter > 0)
+          break;
+        if (!lu_factor(this$static.circuitMatrix, this$static.circuitMatrixSize, this$static.circuitPermute)) {
+          $stop(this$static, 'Singular matrix!', null);
+          return;
+        }
+      }
+      lu_solve(this$static.circuitMatrix, this$static.circuitMatrixSize, this$static.circuitPermute, this$static.circuitRightSide);
+      $applySolvedRightSide(this$static, this$static.circuitRightSide);
+      if (!this$static.circuitNonLinear)
+        break;
+    }
+    if (subiter == subiterCount) {
+      goodIterations = 0;
+      if (this$static.adjustTimeStep) {
+        this$static.timeStep /= 2;
+        console_1('timestep down to ' + this$static.timeStep + ' at ' + this$static.t);
+      }
+      if (this$static.timeStep < this$static.minTimeStep || !this$static.adjustTimeStep) {
+        console.log('convergence failed after ' + subiter + ' iterations');
+        $stop(this$static, 'Convergence failed!', null);
+        break;
+      }
+      $setNodeVoltages(this$static, this$static.lastNodeVoltages);
+      $stampCircuit(this$static);
+      continue;
+    }
+    (subiter > 5 || this$static.timeStep < this$static.maxTimeStep) && console_1('converged after ' + subiter + ' iterations, timeStep = ' + this$static.timeStep);
+    subiter < 3 ? ++goodIterations : (goodIterations = 0);
+    this$static.t += this$static.timeStep;
+    this$static.timeStepAccum += this$static.timeStep;
+    if (this$static.timeStepAccum >= this$static.maxTimeStep) {
+      this$static.timeStepAccum -= this$static.maxTimeStep;
+      ++this$static.timeStepCount;
+    }
+    for (i = 0; i != this$static.elmArr.length; i++)
+      this$static.elmArr[i].stepFinished();
+    delayWireProcessing || $calcWireCurrents(this$static);
+    $timeStep_0(this$static.app.scopeManager);
+    hook = $wnd.CircuitJS1.ontimestep;
+    hook && hook($wnd.CircuitJS1);
+    for (i = 0; i != this$static.lastNodeVoltages.length; i++)
+      this$static.lastNodeVoltages[i] = this$static.nodeVoltages[i];
+    tm = fromDouble_0(Date.now());
+    lit = tm;
+    if (gte_0((this$static.timeStepCount - timeStepCountAtFrameStart) * $intern_21, mul_0(steprate, sub_1(tm, this$static.lastIterTime))) || gt(sub_1(tm, this$static.app.ui.lastFrameTime), frameTimeLimit))
+      break;
+    if (!this$static.app.simRunning)
+      break;
+  }
+  this$static.lastIterTime = lit;
+  delayWireProcessing && $calcWireCurrents(this$static);
+}
+
+function $setGroundNode(this$static, subcircuit) {
+  var ce, cln, cn, gotGround, gotRail, i, nme, pt, volt;
+  gotGround = false;
+  gotRail = false;
+  volt = null;
+  for (i = 0; i != this$static.elmList.arrayList.array.length; i++) {
+    ce = $getElm_1(this$static, i);
+    if (instanceOf(ce, 165)) {
+      gotGround = true;
+      nme = $get_1(this$static.nodeMap, ce.getPost(0));
+      nme.node = 0;
+      break;
+    }
+    instanceOf(ce, 47) && (gotRail = true);
+    !volt && instanceOf(ce, 51) && (volt = ce);
+  }
+  if (!subcircuit && !gotGround && !!volt && !gotRail) {
+    cn = new CircuitNode;
+    pt = volt.getPost(0);
+    $addElement(this$static.nodeList, cn);
+    cln = $get_1(this$static.nodeMap, pt);
+    cln ? (cln.node = 0) : $put_0(this$static.nodeMap, pt, new SimulationManager$NodeMapEntry_0(0));
+  }
+  else {
+    cn = new CircuitNode;
+    $addElement(this$static.nodeList, cn);
+  }
+}
+
+function $setNodeVoltages(this$static, nv) {
+  var cn, cnl, j, k, res;
+  for (j = 0; j != nv.length; j++) {
+    res = nv[j];
+    cn = $getCircuitNode(this$static, j + 1);
+    for (k = 0; k != cn.links_0.arrayList.array.length; k++) {
+      cnl = $get_4(cn.links_0, k);
+      cnl.elm.setNodeVoltage(cnl.num, res);
+    }
+  }
+}
+
+function $simplifyMatrix(this$static, matrixSize) {
+  var elt, i, ii, j, newmatx, newrs, nn, q, qp, qv, re, ri, rri, rsadd;
+  for (i = 0; i != matrixSize; i++) {
+    qp = -1;
+    qv = 0;
+    re = this$static.circuitRowInfo[i];
+    if (re.lsChanges || re.dropRow || re.rsChanges)
+      continue;
+    rsadd = 0;
+    for (j = 0; j != matrixSize; j++) {
+      q = this$static.circuitMatrix[i][j];
+      if (this$static.circuitRowInfo[j].type_0 == 1) {
+        rsadd -= this$static.circuitRowInfo[j].value_0 * q;
+        continue;
+      }
+      if (q == 0)
+        continue;
+      if (qp == -1) {
+        qp = j;
+        qv = q;
+        continue;
+      }
+      break;
+    }
+    if (j == matrixSize) {
+      if (qp == -1) {
+        $stop(this$static, 'Matrix error', null);
+        return false;
+      }
+      elt = this$static.circuitRowInfo[qp];
+      if (elt.type_0 != 0) {
+        $clinit_System();
+        continue;
+      }
+      elt.type_0 = 1;
+      elt.value_0 = (this$static.circuitRightSide[i] + rsadd) / qv;
+      this$static.circuitRowInfo[i].dropRow = true;
+      for (j = 0; j != i; j++)
+        if (this$static.circuitMatrix[j][qp] != 0)
+          break;
+      i = j - 1;
+    }
+  }
+  nn = 0;
+  for (i = 0; i != matrixSize; i++) {
+    elt = this$static.circuitRowInfo[i];
+    if (elt.type_0 == 0) {
+      elt.mapCol = nn++;
+      continue;
+    }
+    elt.type_0 == 1 && (elt.mapCol = -1);
+  }
+  newmatx = initMultidimensionalArray(D_classLit, [$intern_3, $intern_70], [13, 8], 15, [nn, nn], 2);
+  newrs = initUnidimensionalArray(D_classLit, $intern_70, 8, nn, 15, 1);
+  ii = 0;
+  for (i = 0; i != matrixSize; i++) {
+    rri = this$static.circuitRowInfo[i];
+    if (rri.dropRow) {
+      rri.mapRow = -1;
+      continue;
+    }
+    newrs[ii] = this$static.circuitRightSide[i];
+    rri.mapRow = ii;
+    for (j = 0; j != matrixSize; j++) {
+      ri = this$static.circuitRowInfo[j];
+      ri.type_0 == 1 ? (newrs[ii] -= ri.value_0 * this$static.circuitMatrix[i][j]) : (newmatx[ii][ri.mapCol] += this$static.circuitMatrix[i][j]);
+    }
+    ++ii;
+  }
+  this$static.circuitMatrix = newmatx;
+  this$static.circuitRightSide = newrs;
+  matrixSize = this$static.circuitMatrixSize = nn;
+  for (i = 0; i != matrixSize; i++)
+    this$static.origRightSide[i] = this$static.circuitRightSide[i];
+  for (i = 0; i != matrixSize; i++)
+    for (j = 0; j != matrixSize; j++)
+      this$static.origMatrix[i][j] = this$static.circuitMatrix[i][j];
+  this$static.circuitNeedsMap = true;
+  return true;
+}
+
+function $stampCCCS(this$static, n1, n2, vs, gain) {
+  var vn;
+  vn = this$static.nodeList.arrayList.array.length + vs;
+  $stampMatrix(this$static, n1, vn, gain);
+  $stampMatrix(this$static, n2, vn, -gain);
+}
+
+function $stampCircuit(this$static) {
+  var ce, i, j, matrixSize, scopeElmArr, scopeElmCount;
+  matrixSize = this$static.nodeList.arrayList.array.length - 1 + this$static.voltageSourceCount;
+  this$static.circuitMatrix = initMultidimensionalArray(D_classLit, [$intern_3, $intern_70], [13, 8], 15, [matrixSize, matrixSize], 2);
+  this$static.circuitRightSide = initUnidimensionalArray(D_classLit, $intern_70, 8, matrixSize, 15, 1);
+  this$static.nodeVoltages = initUnidimensionalArray(D_classLit, $intern_70, 8, this$static.nodeList.arrayList.array.length - 1, 15, 1);
+  (this$static.lastNodeVoltages == null || this$static.lastNodeVoltages.length != this$static.nodeVoltages.length) && (this$static.lastNodeVoltages = initUnidimensionalArray(D_classLit, $intern_70, 8, this$static.nodeList.arrayList.array.length - 1, 15, 1));
+  this$static.origMatrix = initMultidimensionalArray(D_classLit, [$intern_3, $intern_70], [13, 8], 15, [matrixSize, matrixSize], 2);
+  this$static.origRightSide = initUnidimensionalArray(D_classLit, $intern_70, 8, matrixSize, 15, 1);
+  this$static.circuitMatrixSize = this$static.circuitMatrixFullSize = matrixSize;
+  this$static.circuitRowInfo = initUnidimensionalArray(Lcom_lushprojects_circuitjs1_client_RowInfo_2_classLit, $intern_3, 275, matrixSize, 0, 1);
+  this$static.circuitPermute = initUnidimensionalArray(I_classLit, $intern_25, 8, matrixSize, 15, 1);
+  for (i = 0; i != matrixSize; i++)
+    this$static.circuitRowInfo[i] = new RowInfo;
+  this$static.circuitNeedsMap = false;
+  $connectUnconnectedNodes(this$static);
+  for (i = 0; i != this$static.elmList.arrayList.array.length; i++) {
+    ce = $getElm_1(this$static, i);
+    ce.setParentList(this$static.elmList);
+    ce.stamp();
+  }
+  if (!$simplifyMatrix(this$static, matrixSize))
+    return;
+  if (this$static.circuitMatrix == null)
+    return;
+  if (!this$static.circuitNonLinear) {
+    if (!lu_factor(this$static.circuitMatrix, this$static.circuitMatrixSize, this$static.circuitPermute)) {
+      $stop(this$static, 'Singular matrix!', null);
+      return;
+    }
+  }
+  this$static.elmArr = initUnidimensionalArray(Lcom_lushprojects_circuitjs1_client_CircuitElm_2_classLit, $intern_3, 7, this$static.elmList.arrayList.array.length, 0, 1);
+  scopeElmCount = 0;
+  for (i = 0; i != this$static.elmList.arrayList.array.length; i++) {
+    this$static.elmArr[i] = $get_4(this$static.elmList, i);
+    instanceOf(this$static.elmArr[i], 20) && ++scopeElmCount;
+  }
+  scopeElmArr = initUnidimensionalArray(Lcom_lushprojects_circuitjs1_client_ScopeElm_2_classLit, $intern_3, 20, scopeElmCount, 0, 1);
+  j = 0;
+  for (i = 0; i != this$static.elmList.arrayList.array.length; i++) {
+    instanceOf(this$static.elmArr[i], 20) && (scopeElmArr[j++] = this$static.elmArr[i]);
+  }
+  this$static.app.scopeElmArr = scopeElmArr;
+  this$static.needsStamp = false;
+}
+
+function $stampConductance(this$static, n1, n2, r0) {
+  $stampMatrix(this$static, n1, n1, r0);
+  $stampMatrix(this$static, n2, n2, r0);
+  $stampMatrix(this$static, n1, n2, -r0);
+  $stampMatrix(this$static, n2, n1, -r0);
+}
+
+function $stampCurrentSource(this$static, n1, n2, i) {
+  $stampRightSide_0(this$static, n1, -i);
+  $stampRightSide_0(this$static, n2, i);
+}
+
+function $stampMatrix(this$static, i, j, x_0) {
+  var ri;
+  !isNaN(x_0) && !isFinite(x_0) && debugger_1();
+  if (i > 0 && j > 0) {
+    if (this$static.circuitNeedsMap) {
+      i = this$static.circuitRowInfo[i - 1].mapRow;
+      ri = this$static.circuitRowInfo[j - 1];
+      if (ri.type_0 == 1) {
+        this$static.circuitRightSide[i] -= x_0 * ri.value_0;
+        return;
+      }
+      j = ri.mapCol;
+    }
+    else {
+      --i;
+      --j;
+    }
+    this$static.circuitMatrix[i][j] += x_0;
+  }
+}
+
+function $stampNonLinear(this$static, i) {
+  i > 0 && (this$static.circuitRowInfo[i - 1].lsChanges = true);
+}
+
+function $stampResistor(this$static, n1, n2, r) {
+  var a, r0;
+  r0 = 1 / r;
+  if (isNaN(r0) || !isNaN(r0) && !isFinite(r0)) {
+    $clinit_System();
+    a = 0;
+    a = a / 0 | 0;
+  }
+  $stampMatrix(this$static, n1, n1, r0);
+  $stampMatrix(this$static, n2, n2, r0);
+  $stampMatrix(this$static, n1, n2, -r0);
+  $stampMatrix(this$static, n2, n1, -r0);
+}
+
+function $stampRightSide(this$static, i) {
+  i > 0 && (this$static.circuitRowInfo[i - 1].rsChanges = true);
+}
+
+function $stampRightSide_0(this$static, i, x_0) {
+  if (i > 0) {
+    this$static.circuitNeedsMap ? (i = this$static.circuitRowInfo[i - 1].mapRow) : --i;
+    this$static.circuitRightSide[i] += x_0;
+  }
+}
+
+function $stampVCCurrentSource(this$static, cn1, cn2, vn1, vn2, g) {
+  $stampMatrix(this$static, cn1, vn1, g);
+  $stampMatrix(this$static, cn2, vn2, g);
+  $stampMatrix(this$static, cn1, vn2, -g);
+  $stampMatrix(this$static, cn2, vn1, -g);
+}
+
+function $stampVCVS(this$static, n2, coef, vs) {
+  var vn;
+  vn = this$static.nodeList.arrayList.array.length + vs;
+  $stampMatrix(this$static, vn, 0, coef);
+  $stampMatrix(this$static, vn, n2, -coef);
+}
+
+function $stampVoltageSource(this$static, n1, n2, vs) {
+  var vn;
+  vn = this$static.nodeList.arrayList.array.length + vs;
+  $stampMatrix(this$static, vn, n1, -1);
+  $stampMatrix(this$static, vn, n2, 1);
+  vn > 0 && (this$static.circuitRowInfo[vn - 1].rsChanges = true);
+  $stampMatrix(this$static, n1, vn, 1);
+  $stampMatrix(this$static, n2, vn, -1);
+}
+
+function $stampVoltageSource_0(this$static, n1, n2, vs, v) {
+  var vn;
+  vn = this$static.nodeList.arrayList.array.length + vs;
+  $stampMatrix(this$static, vn, n1, -1);
+  $stampMatrix(this$static, vn, n2, 1);
+  $stampRightSide_0(this$static, vn, v);
+  $stampMatrix(this$static, n1, vn, 1);
+  $stampMatrix(this$static, n2, vn, -1);
+}
+
+function $stop(this$static, s, ce) {
+  $setStopElm(this$static.app, ce, LS(s));
+  this$static.circuitMatrix = null;
+  $setSimRunning(this$static.app, false);
+  this$static.app.analyzeFlag = false;
+}
+
+function $updateVoltageSource(this$static, vs, v) {
+  var vn;
+  vn = this$static.nodeList.arrayList.array.length + vs;
+  $stampRightSide_0(this$static, vn, v);
+}
+
+function $validateCircuit(this$static) {
+  var ce, cur, fpi, i;
+  for (i = 0; i != this$static.elmList.arrayList.array.length; i++) {
+    ce = $getElm_1(this$static, i);
+    if (instanceOf(ce, 173)) {
+      fpi = new SimulationManager$FindPathInfo(this$static, 1, ce, ce.nodes[1]);
+      $findPath(fpi, ce.nodes[0]) || ce.reset_0();
+    }
+    if (instanceOf(ce, 182)) {
+      cur = ce;
+      fpi = new SimulationManager$FindPathInfo(this$static, 1, ce, ce.nodes[1]);
+      $setBroken(cur, !$findPath(fpi, ce.nodes[0]));
+    }
+    if (instanceOf(ce, 141)) {
+      cur = ce;
+      fpi = new SimulationManager$FindPathInfo(this$static, 1, ce, cur.nodes[cur.inputCount]);
+      cur.hasCurrentOutput() && !$findPath(fpi, cur.nodes[1 + cur.inputCount]) ? (cur.broken = true) : (cur.broken = false);
+    }
+    if (ce.getPostCount_0() == 2) {
+      if (instanceOf(ce, 51)) {
+        fpi = new SimulationManager$FindPathInfo(this$static, 2, ce, ce.nodes[1]);
+        if ($findPath(fpi, ce.nodes[0])) {
+          $stop(this$static, 'Voltage source/wire loop with no resistance!', ce);
+          return false;
+        }
+      }
+    }
+    if (instanceOf(ce, 47) || instanceOf(ce, 183)) {
+      fpi = new SimulationManager$FindPathInfo(this$static, 2, ce, ce.nodes[0]);
+      if ($findPath(fpi, 0)) {
+        $stop(this$static, 'Path to ground with no resistance!', ce);
+        return false;
+      }
+    }
+    if (ce.isIdealCapacitor()) {
+      fpi = new SimulationManager$FindPathInfo(this$static, 3, ce, ce.nodes[1]);
+      if ($findPath(fpi, ce.nodes[0])) {
+        console.log(ce + ' shorted');
+        $reset(ce);
+        ce.voltdiff = ce.current_0 = ce.curcount_0 = ce.curSourceValue = 0;
+      }
+      else {
+        fpi = new SimulationManager$FindPathInfo(this$static, 4, ce, ce.nodes[1]);
+        if ($findPath(fpi, ce.nodes[0])) {
+          ce.seriesResistance = 0.1;
+          return false;
+        }
+      }
+    }
+  }
+  return true;
+}
+
+function SimulationManager(app_) {
+  theSim = this;
+  this.app = app_;
+}
+
+function console_1(text_0) {
+  console.log(text_0);
+}
+
+function debugger_1() {
+  debugger;
+}
+
+function invertMatrix(a, n) {
+  var b, i, inva, ipvt, j;
+  ipvt = initUnidimensionalArray(I_classLit, $intern_25, 8, n, 15, 1);
+  lu_factor(a, n, ipvt);
+  b = initUnidimensionalArray(D_classLit, $intern_70, 8, n, 15, 1);
+  inva = initMultidimensionalArray(D_classLit, [$intern_3, $intern_70], [13, 8], 15, [n, n], 2);
+  for (i = 0; i != n; i++) {
+    for (j = 0; j != n; j++)
+      b[j] = 0;
+    b[i] = 1;
+    lu_solve(a, n, ipvt, b);
+    for (j = 0; j != n; j++)
+      inva[j][i] = b[j];
+  }
+  for (i = 0; i != n; i++)
+    for (j = 0; j != n; j++)
+      a[i][j] = inva[i][j];
+}
+
+function lu_factor(a, n, ipvt) {
+  var i, j, k, largest, largestRow, mult, q, row_all_zeros, x_0;
+  for (i = 0; i != n; i++) {
+    row_all_zeros = true;
+    for (j = 0; j != n; j++) {
+      if (a[i][j] != 0) {
+        row_all_zeros = false;
+        break;
+      }
+    }
+    if (row_all_zeros)
+      return false;
+  }
+  for (j = 0; j != n; j++) {
+    for (i = 0; i != j; i++) {
+      q = a[i][j];
+      for (k = 0; k != i; k++)
+        q -= a[i][k] * a[k][j];
+      a[i][j] = q;
+    }
+    largest = 0;
+    largestRow = -1;
+    for (i = j; i != n; i++) {
+      q = a[i][j];
+      for (k = 0; k != j; k++)
+        q -= a[i][k] * a[k][j];
+      a[i][j] = q;
+      x_0 = $wnd.Math.abs(q);
+      if (x_0 >= largest) {
+        largest = x_0;
+        largestRow = i;
+      }
+    }
+    if (j != largestRow) {
+      if (largestRow == -1) {
+        console.log('largestRow == -1');
+        return false;
+      }
+      for (k = 0; k != n; k++) {
+        x_0 = a[largestRow][k];
+        a[largestRow][k] = a[j][k];
+        a[j][k] = x_0;
+      }
+    }
+    ipvt[j] = largestRow;
+    if (a[j][j] == 0) {
+      console.log("didn't avoid zero");
+      return false;
+    }
+    if (j != n - 1) {
+      mult = 1 / a[j][j];
+      for (i = j + 1; i != n; i++)
+        a[i][j] *= mult;
+    }
+  }
+  return true;
+}
+
+function lu_solve(a, n, ipvt, b) {
+  var bi, i, j, row, swap, tot;
+  for (i = 0; i != n; i++) {
+    row = ipvt[i];
+    swap = b[row];
+    b[row] = b[i];
+    b[i] = swap;
+    if (swap != 0)
+      break;
+  }
+  bi = i++;
+  for (; i < n; i++) {
+    row = ipvt[i];
+    tot = b[row];
+    b[row] = b[i];
+    for (j = bi; j < i; j++)
+      tot -= a[i][j] * b[j];
+    b[i] = tot;
+  }
+  for (i = n - 1; i >= 0; i--) {
+    tot = b[i];
+    for (j = i + 1; j != n; j++)
+      tot -= a[i][j] * b[j];
+    b[i] = tot / a[i][i];
+  }
+}
+
+defineClass(483, 1, {}, SimulationManager);
+_.adjustTimeStep = false;
+_.circuitMatrixFullSize = 0;
+_.circuitMatrixSize = 0;
+_.circuitNeedsMap = false;
+_.circuitNonLinear = false;
+_.converged = false;
+_.lastIterTime = 0;
+_.maxTimeStep = 0;
+_.minTimeStep = 0;
+_.needsStamp = false;
+_.subIterations = 0;
+_.t = 0;
+_.timeStep = 0;
+_.timeStepAccum = 0;
+_.timeStepCount = 0;
+_.voltageSourceCount = 0;
+var theSim;
+var Lcom_lushprojects_circuitjs1_client_SimulationManager_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SimulationManager', 483);
+function $checkElm(this$static, n1, ce) {
+  var c, j, j0, k;
+  if (ce == this$static.firstElm)
+    return false;
+  if (this$static.type_0 == 1) {
+    if (instanceOf(ce, 182))
+      return false;
+  }
+  if (this$static.type_0 == 2) {
+    if (!(ce.isWireEquivalent() || instanceOf(ce, 51) || instanceOf(ce, 165)))
+      return false;
+  }
+  if (this$static.type_0 == 3 && !ce.isWireEquivalent())
+    return false;
+  if (this$static.type_0 == 4) {
+    if (!(ce.isWireEquivalent() || ce.isIdealCapacitor() || instanceOf(ce, 51)))
+      return false;
+  }
+  if (n1 == 0) {
+    for (j0 = 0; j0 != ce.getPostCount_0(); j0++)
+      if (ce.hasGroundConnection(j0) && $findPath(this$static, ce.nodes[j0]))
+        return true;
+  }
+  for (j = 0; j != ce.getPostCount_0(); j++) {
+    if (ce.nodes[j] == n1) {
+      if (ce.hasGroundConnection(j) && $findPath(this$static, 0))
+        return true;
+      if (this$static.type_0 == 1 && instanceOf(ce, 173)) {
+        c = ce.getCurrent_0();
+        j == 0 && (c = -c);
+        if ($wnd.Math.abs(c - this$static.firstElm.getCurrent_0()) > 1.0E-10)
+          continue;
+      }
+      for (k = 0; k != ce.getPostCount_0(); k++) {
+        if (j == k)
+          continue;
+        if (ce.getConnection(j, k) && $findPath(this$static, ce.nodes[k])) {
+          return true;
+        }
+      }
+    }
+  }
+  return false;
+}
+
+function $findPath(this$static, n1) {
+  var ce, cn, cnl, i;
+  if (n1 == this$static.dest)
+    return true;
+  if (this$static.visited[n1])
+    return false;
+  this$static.visited[n1] = true;
+  cn = $getCircuitNode(this$static.this$01, n1);
+  if (!cn)
+    return false;
+  for (i = 0; i != cn.links_0.arrayList.array.length; i++) {
+    cnl = $get_4(cn.links_0, i);
+    ce = cnl.elm;
+    if ($checkElm(this$static, n1, ce))
+      return true;
+  }
+  if (n1 == 0) {
+    for (i = 0; i != this$static.this$01.nodesWithGroundConnection.arrayList.array.length; i++)
+      if ($checkElm(this$static, 0, $get_4(this$static.this$01.nodesWithGroundConnection, i)))
+        return true;
+  }
+  return false;
+}
+
+function SimulationManager$FindPathInfo(this$0, type_, elm_, dest_) {
+  this.this$01 = this$0;
+  this.dest = dest_;
+  this.type_0 = type_;
+  this.firstElm = elm_;
+  this.visited = initUnidimensionalArray(Z_classLit, $intern_88, 8, this$0.nodeList.arrayList.array.length, 16, 1);
+}
+
+defineClass(187, 1, {}, SimulationManager$FindPathInfo);
+_.dest = 0;
+_.type_0 = 0;
+var Lcom_lushprojects_circuitjs1_client_SimulationManager$FindPathInfo_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SimulationManager/FindPathInfo', 187);
+function SimulationManager$NodeMapEntry() {
+  this.node = -1;
+}
+
+function SimulationManager$NodeMapEntry_0(n) {
+  this.node = n;
+}
+
+defineClass(220, 1, { 220: 1 }, SimulationManager$NodeMapEntry, SimulationManager$NodeMapEntry_0);
+_.node = 0;
+var Lcom_lushprojects_circuitjs1_client_SimulationManager$NodeMapEntry_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SimulationManager/NodeMapEntry', 220);
+function SimulationManager$RoutedWireConnection(wire, wirePost, elmPost) {
+  this.wire = wire;
+  this.wirePost = wirePost;
+  this.elmPost = elmPost;
+}
+
+defineClass(318, 1, { 318: 1 }, SimulationManager$RoutedWireConnection);
+_.elmPost = 0;
+_.wirePost = 0;
+var Lcom_lushprojects_circuitjs1_client_SimulationManager$RoutedWireConnection_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SimulationManager/RoutedWireConnection', 318);
+function SimulationManager$WireInfo(w) {
+  this.wire = w;
+}
+
+defineClass(317, 1, { 317: 1 }, SimulationManager$WireInfo);
+_.post = 0;
+var Lcom_lushprojects_circuitjs1_client_SimulationManager$WireInfo_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SimulationManager/WireInfo', 317);
+function SimulationManager$lambda$0$Type() {
+}
+
+defineClass(484, 1, {}, SimulationManager$lambda$0$Type);
+_.equals_0 = function equals_11(other) {
+  return this === other;
+}
+  ;
+_.compare = function compare_3(arg0, arg1) {
+  return signum(arg0.y_0 - arg1.y_0);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_SimulationManager$lambda$0$Type_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SimulationManager/lambda$0$Type', 484);
+function SimulationManager$lambda$1$Type() {
+}
+
+defineClass(485, 1, {}, SimulationManager$lambda$1$Type);
+_.equals_0 = function equals_12(other) {
+  return this === other;
+}
+  ;
+_.compare = function compare_4(arg0, arg1) {
+  return signum(arg0.y_0 - arg1.y_0);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_SimulationManager$lambda$1$Type_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SimulationManager/lambda$1$Type', 485);
+function SimulationManager$lambda$2$Type() {
+}
+
+defineClass(486, 1, {}, SimulationManager$lambda$2$Type);
+_.equals_0 = function equals_13(other) {
+  return this === other;
+}
+  ;
+_.compare = function compare_5(arg0, arg1) {
+  return signum(arg0.x_0 - arg1.x_0);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_SimulationManager$lambda$2$Type_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SimulationManager/lambda$2$Type', 486);
+function SimulationManager$lambda$3$Type() {
+}
+
+defineClass(487, 1, {}, SimulationManager$lambda$3$Type);
+_.equals_0 = function equals_14(other) {
+  return this === other;
+}
+  ;
+_.compare = function compare_6(arg0, arg1) {
+  return signum(arg0.x_0 - arg1.x_0);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_SimulationManager$lambda$3$Type_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SimulationManager/lambda$3$Type', 487);
+function $setupPins_21(this$static) {
+  var i, pin, value_0;
+  this$static.sizeX = this$static.bits + 1;
+  this$static.sizeY = 3;
+  this$static.pins = initUnidimensionalArray(Lcom_lushprojects_circuitjs1_client_ChipElm$Pin_2_classLit, $intern_3, 9, 2 + this$static.bits, 0, 1);
+  this$static.pins[0] = new ChipElm$Pin(this$static, 1, 2, 'D');
+  this$static.pins[1] = new ChipElm$Pin(this$static, 2, 2, '');
+  this$static.pins[1].clock = true;
+  for (i = 0; i < this$static.bits; i++) {
+    value_0 = !!this$static.pins[2 + i] && this$static.pins[2 + i].value_0;
+    pin = this$static.pins[2 + i] = new ChipElm$Pin(this$static, i + 1, 0, 'Q' + i);
+    pin.value_0 = value_0;
+    pin.output = true;
+  }
+  $allocNodes(this$static);
+}
+
+function SipoShiftElm(xx, yy) {
+  $clinit_ChipElm();
+  ChipElm.call(this, xx, yy);
+  this.clockstate = false;
+}
+
+function SipoShiftElm_0(xa, ya, xb, yb, f, st) {
+  $clinit_ChipElm();
+  var data_0, i;
+  ChipElm_0.call(this, xa, ya, xb, yb, f, st);
+  this.clockstate = false;
+  data_0 = initUnidimensionalArray(Z_classLit, $intern_88, 8, this.bits, 16, 1);
+  readBits(st, data_0);
+  for (i = 0; i < this.bits; i++)
+    this.pins[2 + i].value_0 = data_0[i];
+}
+
+defineClass(393, 32, $intern_79, SipoShiftElm, SipoShiftElm_0);
+_.defaultBitCount = function defaultBitCount_2() {
+  return 8;
+}
+  ;
+_.dumpXml = function dumpXml_68(doc, elem) {
+  $dumpXml_0(this, elem);
+}
+  ;
+_.dumpXmlState = function dumpXmlState_13(doc, elem) {
+  var data_0, i;
+  $dumpXmlState(this, elem);
+  data_0 = initUnidimensionalArray(Z_classLit, $intern_88, 8, this.bits, 16, 1);
+  for (i = 0; i < this.bits; i++)
+    data_0[i] = this.pins[2 + i].value_0;
+  dumpAttr_1(elem, 'dt', writeBitsToString(data_0));
+}
+  ;
+_.execute_3 = function execute_40() {
+  var i;
+  if (this.pins[1].value_0 != this.clockstate) {
+    this.clockstate = this.pins[1].value_0;
+    if (this.clockstate && this.bits > 0) {
+      for (i = this.bits - 2; i >= 0; i--)
+        this.pins[2 + i + 1].value_0 = this.pins[2 + i].value_0;
+      this.pins[2].value_0 = this.pins[0].value_0;
+    }
+  }
+}
+  ;
+_.getChipEditInfo = function getChipEditInfo_22(n) {
+  if (n == 0)
+    return $setDimensionless(new EditInfo_0('# of Bits', this.bits, 1, 1));
+  return null;
+}
+  ;
+_.getChipName = function getChipName_26() {
+  return 'SIPO shift register';
+}
+  ;
+_.getDumpType = function getDumpType_95() {
+  return 189;
+}
+  ;
+_.getPostCount_0 = function getPostCount_60() {
+  return 2 + this.bits;
+}
+  ;
+_.getVoltageSourceCount = function getVoltageSourceCount_43() {
+  return this.bits;
+}
+  ;
+_.needsBits = function needsBits_9() {
+  return true;
+}
+  ;
+_.setChipEditValue = function setChipEditValue_23(n, ei) {
+  if (n == 0) {
+    if (ei.value_0 != this.bits && ei.value_0 >= 1) {
+      this.bits = round_int(ei.value_0);
+      $setupPins_21(this);
+      $setPoints_0(this);
+    }
+    return;
+  }
+}
+  ;
+_.setupPins = function setupPins_27() {
+  $setupPins_21(this);
+}
+  ;
+_.undumpXml = function undumpXml_70(xml) {
+  var data_0, dt, i;
+  $undumpXml_0(this, xml);
+  dt = $parseStringAttr(xml, 'dt', null);
+  if (dt != null) {
+    data_0 = initUnidimensionalArray(Z_classLit, $intern_88, 8, this.bits, 16, 1);
+    readBitsFromString(dt, data_0);
+    for (i = 0; i < this.bits; i++)
+      this.pins[2 + i].value_0 = data_0[i];
+  }
+}
+  ;
+_.clockstate = false;
+var Lcom_lushprojects_circuitjs1_client_SipoShiftElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SipoShiftElm', 393);
+function $apply_3(this$static) {
+  var adj, d, e, ei, i;
+  for (i = 0; i != this$static.einfocount; i++) {
+    adj = $findAdjustable(this$static.sim, this$static.elm, i);
+    if (!adj)
+      continue;
+    ei = this$static.einfos[i];
+    try {
+      adj.sliderText = !ei.labelBox ? '' : $getText(ei.labelBox);
+      console_0('slidertext ' + adj.sliderText + ' ' + ei.labelBox);
+      !!adj.label_0 && $setText_0(adj.label_0, adj.sliderText);
+      d = parseUnits($getText(ei.minBox));
+      adj.minValue = d;
+      d = parseUnits($getText(ei.maxBox));
+      adj.maxValue = d;
+      d = parseUnits($getText(ei.stepBox));
+      adj.sliderStep = d;
+      !!adj.slider && adj.maxValue != adj.minValue && $setStepSize(adj.slider, d * 100 / (adj.maxValue - adj.minValue));
+      !!this$static.logCheckboxes[i] && (adj.logarithmic = $getState(this$static.logCheckboxes[i]));
+      adj.logarithmic && adj.minValue <= 0 && (adj.logarithmic = false);
+      $setSliderValue(adj, ei.value_0);
+    }
+    catch ($e0) {
+      $e0 = toJava($e0);
+      if (instanceOf($e0, 15)) {
+        e = $e0;
+        console_0($toString(e, e.getMessage()));
+      }
+      else
+        throw toJs($e0);
+    }
+  }
+}
+
+function $buildDialog_0(this$static) {
+  var adj, adji, ch_0, ei, i, idx, j, name_0;
+  for (i = 0; ; i++) {
+    this$static.einfos[i] = this$static.elm.getEditInfo(i);
+    if (!this$static.einfos[i])
+      break;
+    ei = this$static.einfos[i];
+    if (!(!ei.choice && !ei.checkbox && !ei.button_0 && !ei.textArea && !ei.widget && !ei.noSliders))
+      continue;
+    adj = $findAdjustable(this$static.sim, this$static.elm, i);
+    name_0 = LS(ei.name_0);
+    idx = $getWidgetIndex(this$static.vp, this$static.hp);
+    name_0 = $replaceAll(name_0, '<[^>]*>', '');
+    ei.checkbox = new Checkbox_0(name_0, !!adj);
+    $insert_2(this$static.vp, ei.checkbox, idx++);
+    $addValueChangeHandler_0(ei.checkbox, new SliderDialog$4(this$static));
+    if (adj) {
+      if (!$sliderBeingShared(adj)) {
+        ch_0 = ei.choice = new Choice;
+        $addDomHandler(ei.choice, new SliderDialog$5(this$static), ($clinit_ChangeEvent(), $clinit_ChangeEvent(), TYPE_0));
+        $addItem(ch_0, LS('New Slider'));
+        for (j = 0; j != this$static.sim.adjustables.arrayList.array.length; j++) {
+          adji = $get_4(this$static.sim.adjustables, j);
+          if (adji.sharedSlider)
+            break;
+          if (adji == adj)
+            continue;
+          $addItem(ch_0, LS('Share Slider: ' + adji.sliderText));
+          adji == adj.sharedSlider && $setSelectedIndex_0(ch_0, $getOptions(($clinit_DOM(), ch_0.element)).length - 1);
+        }
+        $insert_2(this$static.vp, ch_0, idx++);
+      }
+      $insert_2(this$static.vp, new Label_1(LS('Min Value')), idx++);
+      ei.minBox = new TextBox;
+      $insert_2(this$static.vp, ei.minBox, idx++);
+      $insert_2(this$static.vp, new Label_1(LS('Max Value')), idx++);
+      ei.maxBox = new TextBox;
+      $insert_2(this$static.vp, ei.maxBox, idx++);
+      $insert_2(this$static.vp, new Label_1(LS('Step (0=continuous)')), idx++);
+      ei.stepBox = new TextBox;
+      $insert_2(this$static.vp, ei.stepBox, idx++);
+      this$static.logCheckboxes[i] = new Checkbox_0(LS('Logarithmic'), adj.logarithmic);
+      $insert_2(this$static.vp, this$static.logCheckboxes[i], idx++);
+      if (!adj.sharedSlider) {
+        $insert_2(this$static.vp, new Label_1(LS('Label')), idx++);
+        ei.labelBox = new TextBox;
+        $setText_2(ei.labelBox, adj.sliderText);
+        $insert_2(this$static.vp, ei.labelBox, idx++);
+      }
+      $setText_2(ei.minBox, unitString(ei, adj.minValue));
+      $setText_2(ei.maxBox, unitString(ei, adj.maxValue));
+      $setText_2(ei.stepBox, unitString(ei, adj.sliderStep));
+    }
+  }
+  this$static.einfocount = i;
+}
+
+function $clearDialog_0(this$static) {
+  var j;
+  while ($getWidget(this$static.vp, 0) != this$static.hp)
+    $remove_0(this$static.vp, 0);
+  for (j = 0; j < this$static.logCheckboxes.length; j++)
+    this$static.logCheckboxes[j] = null;
+}
+
+function $itemStateChanged_0(this$static, e) {
+  var adj, adji, changed, ct, ei, i, j, src_0;
+  src_0 = e.source;
+  changed = false;
+  for (i = 0; i != this$static.einfocount; i++) {
+    ei = this$static.einfos[i];
+    if (maskUndefined(ei.checkbox) === maskUndefined(src_0)) {
+      $apply_3(this$static);
+      if ($getState(ei.checkbox)) {
+        adj = new Adjustable(this$static.elm, i);
+        adj.sliderText = $replaceAll(ei.name_0, ' \\(.*\\)$', '');
+        $createSlider_0(adj, this$static.sim, ei.value_0);
+        $add_11(this$static.sim.adjustables, adj);
+      }
+      else {
+        adj = $findAdjustable(this$static.sim, this$static.elm, i);
+        $deleteSlider(adj, this$static.sim);
+        $advanceToFind(this$static.sim.adjustables, adj, true);
+      }
+      changed = true;
+    }
+    if (maskUndefined(ei.choice) === maskUndefined(src_0)) {
+      $apply_3(this$static);
+      adj = $findAdjustable(this$static.sim, this$static.elm, i);
+      if ($getElement(ei.choice).selectedIndex == 0) {
+        adj.sharedSlider = null;
+        (adj.sliderText == null || adj.sliderText.length == 0) && (adj.sliderText = $replaceAll(ei.name_0, ' \\(.*\\)$', ''));
+        $createSlider_0(adj, this$static.sim, ei.value_0);
+      }
+      else {
+        ct = 0;
+        for (j = 0; j != this$static.sim.adjustables.arrayList.array.length; j++) {
+          adji = $get_4(this$static.sim.adjustables, j);
+          if (adji.sharedSlider)
+            break;
+          if (adji == adj)
+            continue;
+          if (++ct == $getElement(ei.choice).selectedIndex) {
+            adj.sharedSlider = adji;
+            $deleteSlider(adj, this$static.sim);
+          }
+        }
+      }
+      changed = true;
+    }
+  }
+  if (changed) {
+    reorderAdjustables();
+    $clearDialog_0(this$static);
+    $buildDialog_0(this$static);
+  }
+}
+
+function SliderDialog(ce, f) {
+  Dialog.call(this);
+  $setText(this, LS('Add Sliders'));
+  this.sim = f;
+  this.elm = ce;
+  this.vp = new VerticalPanel;
+  $setWidget_1(this, this.vp);
+  this.einfos = initUnidimensionalArray(Lcom_lushprojects_circuitjs1_client_EditInfo_2_classLit, $intern_3, 5, 10, 0, 1);
+  this.logCheckboxes = initUnidimensionalArray(Lcom_lushprojects_circuitjs1_client_Checkbox_2_classLit, $intern_3, 33, 10, 0, 1);
+  $clinit_NumberFormat();
+  new NumberFormat_0('####.##########', $getDefaultNative());
+  this.hp = new HorizontalPanel;
+  $setWidth(this.hp, '100%');
+  $setHorizontalAlignment_0(this.hp, ($clinit_HasHorizontalAlignment(), ALIGN_LEFT));
+  $setStyleName(this.hp, 'topSpace');
+  $add_5(this.vp, this.hp);
+  $add_3(this.hp, this.applyButton = new Button_1(LS('Apply')));
+  $addDomHandler(this.applyButton, new SliderDialog$1(this), ($clinit_ClickEvent(), $clinit_ClickEvent(), TYPE_1));
+  $add_3(this.hp, this.okButton = new Button_1(LS('OK')));
+  $addDomHandler(this.okButton, new SliderDialog$2(this), (null, TYPE_1));
+  $setHorizontalAlignment_0(this.hp, ALIGN_RIGHT);
+  $add_3(this.hp, this.cancelButton = new Button_1(LS('Cancel')));
+  $addDomHandler(this.cancelButton, new SliderDialog$3(this), (null, TYPE_1));
+  $buildDialog_0(this);
+  $center(this);
+}
+
+defineClass(706, 138, $intern_53, SliderDialog);
+_.apply_0 = function apply_8() {
+  $apply_3(this);
+}
+  ;
+_.einfocount = 0;
+var Lcom_lushprojects_circuitjs1_client_SliderDialog_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SliderDialog', 706);
+function SliderDialog$1(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(707, 1, $intern_51, SliderDialog$1);
+_.onClick = function onClick_45(event_0) {
+  $apply_3(this.this$01);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_SliderDialog$1_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SliderDialog/1', 707);
+function SliderDialog$2(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(708, 1, $intern_51, SliderDialog$2);
+_.onClick = function onClick_46(event_0) {
+  $apply_3(this.this$01);
+  $closeDialog(this.this$01);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_SliderDialog$2_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SliderDialog/2', 708);
+function SliderDialog$3(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(709, 1, $intern_51, SliderDialog$3);
+_.onClick = function onClick_47(event_0) {
+  $closeDialog(this.this$01);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_SliderDialog$3_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SliderDialog/3', 709);
+function SliderDialog$4(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(710, 1, $intern_63, SliderDialog$4);
+_.onValueChange = function onValueChange_14(e) {
+  $itemStateChanged_0(this.this$01, e);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_SliderDialog$4_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SliderDialog/4', 710);
+function SliderDialog$5(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(711, 1, $intern_66, SliderDialog$5);
+_.onChange = function onChange_6(e) {
+  $itemStateChanged_0(this.this$01, e);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_SliderDialog$5_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SliderDialog/5', 711);
+function SparkGapElm(xx, yy) {
+  CircuitElm.call(this, xx, yy);
+  this.offresistance = $intern_32;
+  this.onresistance = $intern_21;
+  this.breakdown = $intern_21;
+  this.holdcurrent = $intern_77;
+  this.state = false;
+}
+
+function SparkGapElm_0(xa, ya, xb, yb, f, st) {
+  CircuitElm_0.call(this, xa, ya, xb, yb, f);
+  this.onresistance = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.offresistance = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.breakdown = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.holdcurrent = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+}
+
+defineClass(365, 7, $intern_79, SparkGapElm, SparkGapElm_0);
+_.calculateCurrent = function calculateCurrent_30() {
+  var vd;
+  vd = this.volts[0] - this.volts[1];
+  this.current_0 = vd / this.resistance;
+}
+  ;
+_.doStep = function doStep_41() {
+  this.resistance = this.state ? this.onresistance : this.offresistance;
+  $stampResistor(sim_0, this.nodes[0], this.nodes[1], this.resistance);
+}
+  ;
+_.draw = function draw_67(g) {
+  $setBbox_0(this, this.point1, this.point2, 8);
+  $draw2Leads(this, g);
+  $setVoltageColor(this, g, this.volts[0]);
+  $setPowerColor_0(this, g);
+  $fillPolygon(g, this.arrow1);
+  $setVoltageColor(this, g, this.volts[1]);
+  $setPowerColor_0(this, g);
+  $fillPolygon(g, this.arrow2);
+  this.state && (this.curcount_0 = $updateDotCount(this.current_0, this.curcount_0), app_0.mouse.dragElm == this || $drawDots(g, this.point1, this.point2, this.curcount_0));
+  $drawPosts(this, g);
+}
+  ;
+_.dumpXml = function dumpXml_69(doc, elem) {
+  dumpAttr_1(elem, 'x', this.x_0 + ' ' + this.y_0 + ' ' + this.x2 + ' ' + this.y2);
+  dumpAttr_0(elem, 'f', this.flags);
+  dumpAttr(elem, 'on', this.onresistance);
+  dumpAttr(elem, 'of', this.offresistance);
+  dumpAttr(elem, 'br', this.breakdown);
+  dumpAttr(elem, 'ho', this.holdcurrent);
+}
+  ;
+_.getDumpType = function getDumpType_96() {
+  return 187;
+}
+  ;
+_.getEditInfo = function getEditInfo_61(n) {
+  if (n == 0)
+    return new EditInfo_0('On resistance (ohms)', this.onresistance, 0, 0);
+  if (n == 1)
+    return new EditInfo_0('Off resistance (ohms)', this.offresistance, 0, 0);
+  if (n == 2)
+    return new EditInfo_0('Breakdown voltage', this.breakdown, 0, 0);
+  if (n == 3)
+    return new EditInfo_0('Holding current (A)', this.holdcurrent, 0, 0);
+  return null;
+}
+  ;
+_.getInfo_0 = function getInfo_71(arr) {
+  arr[0] = 'spark gap';
+  $getBasicInfo(this, arr);
+  arr[3] = this.state ? 'on' : 'off';
+  arr[4] = 'Ron = ' + getUnitText(this.onresistance, ohmString, false);
+  arr[5] = 'Roff = ' + getUnitText(this.offresistance, ohmString, false);
+  arr[6] = 'Vbreakdown = ' + getUnitText(this.breakdown, 'V', false);
+}
+  ;
+_.nonLinear = function nonLinear_21() {
+  return true;
+}
+  ;
+_.reset_0 = function reset_38() {
+  $reset(this);
+  this.state = false;
+}
+  ;
+_.setEditValue = function setEditValue_59(n, ei) {
+  ei.value_0 > 0 && n == 0 && (this.onresistance = ei.value_0);
+  ei.value_0 > 0 && n == 1 && (this.offresistance = ei.value_0);
+  ei.value_0 > 0 && n == 2 && (this.breakdown = ei.value_0);
+  ei.value_0 > 0 && n == 3 && (this.holdcurrent = ei.value_0);
+}
+  ;
+_.setPoints = function setPoints_60() {
+  var p1;
+  $setPoints(this);
+  $calcLeads(this, 24);
+  p1 = $interpPoint(this.point1, this.point2, (this.dn - 8) / (2 * this.dn));
+  this.arrow1 = $calcArrow(this.point1, p1, 8, 8);
+  p1 = $interpPoint(this.point1, this.point2, (this.dn + 8) / (2 * this.dn));
+  this.arrow2 = $calcArrow(this.point2, p1, 8, 8);
+}
+  ;
+_.stamp = function stamp_53() {
+  $stampNonLinear(sim_0, this.nodes[0]);
+  $stampNonLinear(sim_0, this.nodes[1]);
+}
+  ;
+_.startIteration = function startIteration_13() {
+  var vd;
+  $wnd.Math.abs(this.current_0) < this.holdcurrent && (this.state = false);
+  vd = this.volts[0] - this.volts[1];
+  $wnd.Math.abs(vd) > this.breakdown && (this.state = true);
+}
+  ;
+_.undumpXml = function undumpXml_71(xml) {
+  this.flags = $parseIntAttr(xml, 'f', this.flags);
+  this.onresistance = $parseDoubleAttr(xml, 'on', this.onresistance);
+  this.offresistance = $parseDoubleAttr(xml, 'of', this.offresistance);
+  this.breakdown = $parseDoubleAttr(xml, 'br', this.breakdown);
+  this.holdcurrent = $parseDoubleAttr(xml, 'ho', this.holdcurrent);
+}
+  ;
+_.breakdown = 0;
+_.holdcurrent = 0;
+_.offresistance = 0;
+_.onresistance = 0;
+_.resistance = 0;
+_.state = false;
+var Lcom_lushprojects_circuitjs1_client_SparkGapElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SparkGapElm', 365);
+function SquareRailElm(xx, yy) {
+  RailElm_0.call(this, xx, yy, 2);
+}
+
+defineClass(862, 47, $intern_86, SquareRailElm);
+_.getDumpClass = function getDumpClass_16() {
+  return Lcom_lushprojects_circuitjs1_client_RailElm_2_classLit;
+}
+  ;
+_.getShortcut = function getShortcut_40() {
+  return 0;
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_SquareRailElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SquareRailElm', 862);
+function StopTriggerElm(xx, yy) {
+  CircuitElm.call(this, xx, yy);
+  this.triggerVoltage = 1;
+}
+
+function StopTriggerElm_0(xa, ya, xb, yb, f, st) {
+  CircuitElm_0.call(this, xa, ya, xb, yb, f);
+  this.triggerVoltage = __parseAndValidateDouble($nextToken(st));
+  this.type_0 = __parseAndValidateInt($nextToken(st), 10);
+  this.delay = __parseAndValidateDouble($nextToken(st));
+}
+
+defineClass(362, 7, $intern_79, StopTriggerElm, StopTriggerElm_0);
+_.draw = function draw_68(g) {
+  var f, s, selected;
+  g.context.save();
+  g.savedFontSize = g.currentFontSize;
+  selected = mouseElmRef == this || this.selected_0 || app_0.mouse.plotYElm == this || instanceOf(mouseElmRef, 20) && $getElm_0(mouseElmRef.elmScope) == this || $isOnHighlightedNet(this) || this.stopped;
+  f = new Font('SansSerif', selected ? 1 : 0, 14);
+  $setFont_0(g, f);
+  $setColor_0(g, selected ? selectColor_0 : whiteColor);
+  $setBbox_0(this, this.point1, this.lead1, 0);
+  s = LS('trigger');
+  $drawLabeledNode(this, g, s, this.point1, this.lead1);
+  $setVoltageColor(this, g, this.volts[0]);
+  selected && $setColor_0(g, selectColor_0);
+  drawThickLine_0(g, this.point1, this.lead1);
+  $drawPosts(this, g);
+  g.context.restore();
+  g.currentFontSize = g.savedFontSize;
+}
+  ;
+_.dumpXml = function dumpXml_70(doc, elem) {
+  dumpAttr_1(elem, 'x', this.x_0 + ' ' + this.y_0 + ' ' + this.x2 + ' ' + this.y2);
+  dumpAttr_0(elem, 'f', this.flags);
+  dumpAttr(elem, 'tv', this.triggerVoltage);
+  dumpAttr_0(elem, 'tp', this.type_0);
+  dumpAttr(elem, 'dl', this.delay);
+}
+  ;
+_.getDumpType = function getDumpType_97() {
+  return 408;
+}
+  ;
+_.getEditInfo = function getEditInfo_62(n) {
+  var ei;
+  if (n == 0) {
+    ei = new EditInfo('Voltage', this.triggerVoltage);
+    return ei;
+  }
+  if (n == 1) {
+    ei = new EditInfo_0('Trigger Type', this.type_0, -1, -1);
+    ei.choice = new Choice;
+    $addItem(ei.choice, LS('>='));
+    $addItem(ei.choice, LS('<='));
+    $select(ei.choice, this.type_0);
+    return ei;
+  }
+  if (n == 2) {
+    ei = new EditInfo('Delay (s)', this.delay);
+    return ei;
+  }
+  return null;
+}
+  ;
+_.getInfo_0 = function getInfo_72(arr) {
+  arr[0] = 'stop trigger';
+  arr[1] = 'V = ' + getUnitText(this.volts[0], 'V', false);
+  arr[2] = 'Vtrigger = ' + getUnitText(this.triggerVoltage, 'V', false);
+  arr[3] = this.triggered ? 'stopping in ' + getUnitText(this.triggerTime + this.delay - sim_0.t, 's', false) : this.stopped ? 'stopped' : 'waiting';
+}
+  ;
+_.getPostCount_0 = function getPostCount_61() {
+  return 1;
+}
+  ;
+_.getVoltageDiff_0 = function getVoltageDiff_20() {
+  return this.volts[0];
+}
+  ;
+_.reset_0 = function reset_39() {
+  this.triggered = false;
+}
+  ;
+_.setEditValue = function setEditValue_60(n, ei) {
+  n == 0 && (this.triggerVoltage = ei.value_0);
+  n == 1 && (this.type_0 = $getElement(ei.choice).selectedIndex);
+  n == 2 && (this.delay = ei.value_0);
+}
+  ;
+_.setPoints = function setPoints_61() {
+  $setPoints(this);
+  this.lead1 = $interpPoint(this.point1, this.point2, 1 - 8 / this.dn);
+}
+  ;
+_.stepFinished = function stepFinished_20() {
+  this.stopped = false;
+  if (!this.triggered && (this.type_0 == 0 && this.volts[0] >= this.triggerVoltage || this.type_0 == 1 && this.volts[0] <= this.triggerVoltage)) {
+    this.triggered = true;
+    this.triggerTime = sim_0.t;
+  }
+  if (this.triggered && sim_0.t >= this.triggerTime + this.delay) {
+    this.triggered = false;
+    this.stopped = true;
+    $setSimRunning(app_0, false);
+  }
+}
+  ;
+_.undumpXml = function undumpXml_72(xml) {
+  this.flags = $parseIntAttr(xml, 'f', this.flags);
+  this.triggerVoltage = $parseDoubleAttr(xml, 'tv', this.triggerVoltage);
+  this.type_0 = $parseIntAttr(xml, 'tp', this.type_0);
+  this.delay = $parseDoubleAttr(xml, 'dl', this.delay);
+}
+  ;
+_.delay = 0;
+_.stopped = false;
+_.triggerTime = 0;
+_.triggerVoltage = 0;
+_.triggered = false;
+_.type_0 = 0;
+var Lcom_lushprojects_circuitjs1_client_StopTriggerElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'StopTriggerElm', 362);
+function $countTokens(this$static) {
+  var count, delimiterCount, tmpPos, tokenFound;
+  count = 0;
+  delimiterCount = 0;
+  tokenFound = false;
+  tmpPos = this$static.pos;
+  while (tmpPos < this$static.len) {
+    if ($indexOf_0(this$static.delim, fromCodePoint($charAt_0(this$static.str, tmpPos++))) >= 0) {
+      if (tokenFound) {
+        ++count;
+        tokenFound = false;
+      }
+      ++delimiterCount;
+    }
+    else {
+      tokenFound = true;
+      while (tmpPos < this$static.len && $indexOf_0(this$static.delim, fromCodePoint($charAt_0(this$static.str, tmpPos))) < 0)
+        ++tmpPos;
+    }
+  }
+  tokenFound && ++count;
+  return this$static.retDelims ? count + delimiterCount : count;
+}
+
+function $hasMoreTokens(this$static) {
+  if (!this$static.retDelims) {
+    while (this$static.pos < this$static.len && $indexOf_0(this$static.delim, fromCodePoint($charAt_0(this$static.str, this$static.pos))) >= 0)
+      ++this$static.pos;
+  }
+  return this$static.pos < this$static.len;
+}
+
+function $nextToken(this$static) {
+  var start_0;
+  if (this$static.pos < this$static.len && $indexOf_0(this$static.delim, fromCodePoint($charAt_0(this$static.str, this$static.pos))) >= 0) {
+    if (this$static.retDelims)
+      return $substring_0(this$static.str, this$static.pos, ++this$static.pos);
+    while (++this$static.pos < this$static.len && $indexOf_0(this$static.delim, fromCodePoint($charAt_0(this$static.str, this$static.pos))) >= 0)
+      ;
+  }
+  if (this$static.pos < this$static.len) {
+    start_0 = this$static.pos;
+    while (++this$static.pos < this$static.len && $indexOf_0(this$static.delim, fromCodePoint($charAt_0(this$static.str, this$static.pos))) < 0)
+      ;
+    return $substring_0(this$static.str, start_0, this$static.pos);
+  }
+  throw toJs(new NoSuchElementException);
+}
+
+function StringTokenizer(str) {
+  StringTokenizer_1.call(this, str, ' \t\n\r\f', false);
+}
+
+function StringTokenizer_0(str, delim) {
+  StringTokenizer_1.call(this, str, delim, false);
+}
+
+function StringTokenizer_1(str, delim, returnDelims) {
+  this.len = str.length;
+  this.str = str;
+  this.delim = delim;
+  this.retDelims = returnDelims;
+  this.pos = 0;
+}
+
+defineClass(75, 1, {}, StringTokenizer, StringTokenizer_0, StringTokenizer_1);
+_.len = 0;
+_.pos = 0;
+_.retDelims = false;
+var Lcom_lushprojects_circuitjs1_client_StringTokenizer_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'StringTokenizer', 75);
+function $createButton_0(text_0, handler) {
+  var btn, s;
+  btn = new Button_1(LS(text_0));
+  $addDomHandler(btn, handler, ($clinit_ClickEvent(), $clinit_ClickEvent(), TYPE_1));
+  s = ($clinit_DOM(), btn.element).style;
+  s['marginLeft'] = ($clinit_Style$Unit(), '5.0px');
+  s['marginRight'] = '5.0px';
+  return btn;
+}
+
+function $setContextInfo(this$static, modelName) {
+  this$static.hasContext = modelName != null;
+  $setVisible(this$static.contextLabel, this$static.hasContext);
+  $setVisible(this$static.contextSaveButton, this$static.hasContext);
+  $setVisible(this$static.contextSaveCopyButton, this$static.hasContext);
+  this$static.hasContext && $setText_0(this$static.contextLabel, LS('Editing: ') + ('' + modelName));
+  $updateVisibility(this$static);
+}
+
+function $setSubcircuitPath(this$static, path) {
+  this$static.hasSubcircuit = path != null;
+  $setVisible(this$static.subcircuitLabel, this$static.hasSubcircuit);
+  this$static.hasSubcircuit && $setText_0(this$static.subcircuitLabel, path);
+  $updateVisibility(this$static);
+}
+
+function $styleLabel(label_0) {
+  var style;
+  style = ($clinit_DOM(), label_0.element).style;
+  style['fontSize'] = ($clinit_Style$Unit(), '14.0px');
+  style['color'] = '#333';
+  style['paddingRight'] = '10.0px';
+}
+
+function $updatePosition(this$static, top_0, width_0) {
+  var style;
+  style = ($clinit_DOM(), this$static.element).style;
+  style['left'] = ($clinit_Style$Unit(), '0.0px');
+  style['top'] = top_0 + 'px';
+  style['width'] = width_0 + 'px';
+}
+
+function $updateVisibility(this$static) {
+  var show;
+  show = this$static.hasSubcircuit || this$static.hasContext;
+  ($clinit_DOM(), this$static.element).style['display'] = (show ? ($clinit_Style$Display(), BLOCK) : ($clinit_Style$Display(), NONE_0)).getCssName();
+  $setVisible(this$static.backButton, show);
+}
+
+function SubcircuitBar() {
+  var style;
+  FlowPanel.call(this);
+  style = ($clinit_DOM(), this.element).style;
+  style['background'] = 'rgba(248,248,248,0.85)';
+  style['position'] = ($clinit_Style$Position(), 'absolute');
+  style['padding'] = ($clinit_Style$Unit(), '4.0px');
+  style['paddingLeft'] = '8.0px';
+  style['paddingRight'] = '8.0px';
+  style['borderBottom'] = '1px solid #ccc';
+  style['pointerEvents'] = 'auto';
+  style['boxSizing'] = 'border-box';
+  style['whiteSpace'] = 'nowrap';
+  style['display'] = ($clinit_Style$Display(), 'none');
+  this.subcircuitLabel = new InlineLabel;
+  $styleLabel(this.subcircuitLabel);
+  $setVisible(this.subcircuitLabel, false);
+  $add_2(this, this.subcircuitLabel);
+  this.contextLabel = new InlineLabel;
+  $styleLabel(this.contextLabel);
+  $setVisible(this.contextLabel, false);
+  $add_2(this, this.contextLabel);
+  this.backButton = $createButton_0('\u25C0 Back', new SubcircuitBar$lambda$0$Type);
+  $setVisible(this.backButton, false);
+  $add_2(this, this.backButton);
+  this.contextSaveButton = $createButton_0('Save', new SubcircuitBar$lambda$1$Type);
+  $setVisible(this.contextSaveButton, false);
+  $add_2(this, this.contextSaveButton);
+  this.contextSaveCopyButton = $createButton_0('Save Copy', new SubcircuitBar$lambda$2$Type);
+  $setVisible(this.contextSaveCopyButton, false);
+  $add_2(this, this.contextSaveCopyButton);
+}
+
+function lambda$1() {
+  var app, dlg, modelName;
+  app = theApp;
+  modelName = $getEditingModelName(app);
+  dlg = new EditCompositeModelDialog;
+  if (!$createModel(dlg))
+    return;
+  $setName_1(dlg.model, modelName);
+  dlg.popContext = true;
+  $createDialog(dlg);
+  dialogShowing = dlg;
+  !dlg.resizeHandlerRegistration && (dlg.resizeHandlerRegistration = addResizeHandler(new DialogBox$1(dlg)));
+  $show(dlg);
+  $drawChip_0(dlg);
+}
+
+function lambda$2() {
+  var dlg;
+  dlg = new EditCompositeModelDialog;
+  if (!$createModel(dlg))
+    return;
+  dlg.popContext = true;
+  $createDialog(dlg);
+  dialogShowing = dlg;
+  !dlg.resizeHandlerRegistration && (dlg.resizeHandlerRegistration = addResizeHandler(new DialogBox$1(dlg)));
+  $show(dlg);
+  $drawChip_0(dlg);
+}
+
+defineClass(643, 208, $intern_49, SubcircuitBar);
+_.hasContext = false;
+_.hasSubcircuit = false;
+var Lcom_lushprojects_circuitjs1_client_SubcircuitBar_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SubcircuitBar', 643);
+function SubcircuitBar$lambda$0$Type() {
+}
+
+defineClass(644, 1, $intern_51, SubcircuitBar$lambda$0$Type);
+_.onClick = function onClick_48(arg0) {
+  var app;
+  app = theApp;
+  app.ui.subcircuitStack.arrayList.array.length == 0 ? $popContextAndGetChangedModels(app) : $popSubcircuit(app.ui);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_SubcircuitBar$lambda$0$Type_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SubcircuitBar/lambda$0$Type', 644);
+function SubcircuitBar$lambda$1$Type() {
+}
+
+defineClass(645, 1, $intern_51, SubcircuitBar$lambda$1$Type);
+_.onClick = function onClick_49(arg0) {
+  lambda$1();
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_SubcircuitBar$lambda$1$Type_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SubcircuitBar/lambda$1$Type', 645);
+function SubcircuitBar$lambda$2$Type() {
+}
+
+defineClass(646, 1, $intern_51, SubcircuitBar$lambda$2$Type);
+_.onClick = function onClick_50(arg0) {
+  lambda$2();
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_SubcircuitBar$lambda$2$Type_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SubcircuitBar/lambda$2$Type', 646);
+function $handleDelete(this$static) {
+  var confirm_0, model, selectedIndex, selectedSubcircuit, confirm_1;
+  selectedIndex = $getElement(this$static.subcircuitListBox).selectedIndex;
+  if (selectedIndex == -1) {
+    $wnd.alert('Please select a subcircuit to delete.');
+    return;
+  }
+  selectedSubcircuit = $getItemText(this$static.subcircuitListBox, selectedIndex);
+  confirm_0 = $wnd.confirm('Are you sure you want to delete ' + selectedSubcircuit + '?');
+  if (confirm_0) {
+    model = $get_4(this$static.subcircuits, selectedIndex);
+    $advanceToFind(this$static.subcircuits, model, true);
+    $setSaved(model, false);
+    $removeStringValue(localModelMap, model.name_0);
+    $removeStringValue(globalModelMap, model.name_0);
+    ++sequenceNumber;
+    $removeItem_1(this$static.subcircuitListBox, selectedIndex);
+  }
+}
+
+function SubcircuitDialog() {
+  var i, name_0;
+  Dialog.call(this);
+  $setText_0(this.caption, 'Subcircuit Manager');
+  $setGlassEnabled(this);
+  this.mainPanel = new VerticalPanel;
+  this.mainPanel.table['cellSpacing'] = 10;
+  $setWidth(this.mainPanel, '400px');
+  this.subcircuitListBox = new ListBox;
+  $setVisibleItemCount(this.subcircuitListBox, 5);
+  $setWidth(this.subcircuitListBox, '100%');
+  this.subcircuits = getModelList();
+  $removeIf_0(this.subcircuits, new SubcircuitDialog$0methodref$isBuiltin$Type);
+  for (i = 0; i != this.subcircuits.arrayList.array.length; i++) {
+    name_0 = $get_4(this.subcircuits, i).name_0;
+    $addItem(this.subcircuitListBox, name_0);
+  }
+  $add_5(this.mainPanel, this.subcircuitListBox);
+  this.deleteButton = new Button_1('Delete');
+  $addDomHandler(this.deleteButton, new SubcircuitDialog$1(this), ($clinit_ClickEvent(), $clinit_ClickEvent(), TYPE_1));
+  $add_5(this.mainPanel, this.deleteButton);
+  this.doneButton = new Button_1('Done');
+  $addDomHandler(this.doneButton, new SubcircuitDialog$2(this), (null, TYPE_1));
+  $add_5(this.mainPanel, this.doneButton);
+  $setWidget_1(this, this.mainPanel);
+  $center(this);
+}
+
+defineClass(661, 138, $intern_53, SubcircuitDialog);
+var Lcom_lushprojects_circuitjs1_client_SubcircuitDialog_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SubcircuitDialog', 661);
+function SubcircuitDialog$0methodref$isBuiltin$Type() {
+}
+
+defineClass(662, 1, {}, SubcircuitDialog$0methodref$isBuiltin$Type);
+var Lcom_lushprojects_circuitjs1_client_SubcircuitDialog$0methodref$isBuiltin$Type_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SubcircuitDialog/0methodref$isBuiltin$Type', 662);
+function SubcircuitDialog$1(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(663, 1, $intern_51, SubcircuitDialog$1);
+_.onClick = function onClick_51(event_0) {
+  $handleDelete(this.this$01);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_SubcircuitDialog$1_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SubcircuitDialog/1', 663);
+function SubcircuitDialog$2(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(664, 1, $intern_51, SubcircuitDialog$2);
+_.onClick = function onClick_52(event_0) {
+  $hide_0(this.this$01, false);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_SubcircuitDialog$2_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SubcircuitDialog/2', 664);
+function $reset_8(this$static) {
+  this$static.frequency = this$static.minF;
+  this$static.freqTime = 0;
+  this$static.dir_0 = 1;
+  $setParams(this$static);
+}
+
+function $setParams(this$static) {
+  if (this$static.frequency < this$static.minF || this$static.frequency > this$static.maxF) {
+    this$static.frequency = this$static.minF;
+    this$static.freqTime = 0;
+    this$static.dir_0 = 1;
+  }
+  if ((this$static.flags & 1) == 0) {
+    this$static.fadd = this$static.dir_0 * sim_0.timeStep * (this$static.maxF - this$static.minF) / this$static.sweepTime;
+    this$static.fmul = 1;
+  }
+  else {
+    this$static.fadd = 0;
+    this$static.fmul = $wnd.Math.pow(this$static.maxF / this$static.minF, this$static.dir_0 * sim_0.timeStep / this$static.sweepTime);
+  }
+  this$static.savedTimeStep = sim_0.timeStep;
+}
+
+function SweepElm(xx, yy) {
+  CircuitElm.call(this, xx, yy);
+  this.dir_0 = 1;
+  this.minF = 20;
+  this.maxF = 4000;
+  this.maxV = 5;
+  this.sweepTime = 0.1;
+  this.flags = 2;
+  $reset_8(this);
+}
+
+function SweepElm_0(xa, ya, xb, yb, f, st) {
+  CircuitElm_0.call(this, xa, ya, xb, yb, f);
+  this.dir_0 = 1;
+  this.minF = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.maxF = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.maxV = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.sweepTime = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  $reset_8(this);
+}
+
+defineClass(258, 7, { 7: 1, 10: 1, 258: 1 }, SweepElm, SweepElm_0);
+_.addRoutingObstacle = function addRoutingObstacle_18(router) {
+  $addWire(router, this.point1.x_0, this.point1.y_0, this.lead1.x_0, this.lead1.y_0);
+  $addObstacle(router, this.point2.x_0 - 17, this.point2.y_0 - 17, this.point2.x_0 + 17, this.point2.y_0 + 17);
+}
+  ;
+_.doStep = function doStep_42() {
+  $updateVoltageSource(sim_0, this.voltSource, this.v);
+}
+  ;
+_.draw = function draw_69(g) {
+  var i, s, tm, w, xc, yc, yy;
+  $setBbox_0(this, this.point1, this.point2, 17);
+  $setVoltageColor(this, g, this.volts[0]);
+  drawThickLine_0(g, this.point1, this.lead1);
+  $setColor_0(g, mouseElmRef == this || this.selected_0 || app_0.mouse.plotYElm == this || instanceOf(mouseElmRef, 20) && $getElm_0(mouseElmRef.elmScope) == this || $isOnHighlightedNet(this) ? selectColor_0 : ($clinit_Color(), gray));
+  $setPowerColor_0(this, g);
+  xc = this.point2.x_0;
+  yc = this.point2.y_0;
+  drawThickCircle(g, xc, yc, 17);
+  $adjustBbox(this, xc - 17, yc - 17, xc + 17, yc + 17);
+  tm = ($clinit_System(), fromDouble_0(Date.now()));
+  tm = mod(tm, 2000);
+  compare_0(tm, $intern_21) > 0 && (tm = sub_1(2000, tm));
+  w = 1 + toDouble_0(tm) * 0.002;
+  app_0.ui.app.simRunning && (w = 1 + 2 * (this.frequency - this.minF) / (this.maxF - this.minF));
+  g.context.beginPath();
+  g.context.lineWidth = 3;
+  for (i = -10; i <= 10; i++) {
+    yy = yc + round_int(0.95 * $wnd.Math.sin(i * $intern_1 * w / 10) * 8);
+    i == -10 ? $moveTo(g.context, xc + -10, yy) : $lineTo(g.context, xc + i, yy);
+  }
+  g.context.stroke();
+  g.context.lineWidth = 1;
+  if (app_0.menus.showValuesCheckItem.on) {
+    s = getUnitText(this.frequency, 'Hz', true);
+    (this.dx == 0 || this.dy == 0) && $drawValues(this, g, s, 17);
+  }
+  $drawPosts(this, g);
+  this.curcount_0 = $updateDotCount(-this.current_0, this.curcount_0);
+  app_0.mouse.dragElm == this || $drawDots(g, this.point1, this.lead1, this.curcount_0);
+}
+  ;
+_.dumpXml = function dumpXml_71(doc, elem) {
+  dumpAttr_1(elem, 'x', this.x_0 + ' ' + this.y_0 + ' ' + this.x2 + ' ' + this.y2);
+  dumpAttr_0(elem, 'f', this.flags);
+  dumpAttr(elem, 'mi', this.minF);
+  dumpAttr(elem, 'ma', this.maxF);
+  dumpAttr(elem, 'mv', this.maxV);
+  dumpAttr(elem, 'sw', this.sweepTime);
+}
+  ;
+_.getDumpType = function getDumpType_98() {
+  return 170;
+}
+  ;
+_.getEditInfo = function getEditInfo_63(n) {
+  var ei;
+  if (n == 0)
+    return new EditInfo_0('Min Frequency (Hz)', this.minF, 0, 0);
+  if (n == 1)
+    return new EditInfo_0('Max Frequency (Hz)', this.maxF, 0, 0);
+  if (n == 2)
+    return new EditInfo_0('Sweep Time (s)', this.sweepTime, 0, 0);
+  if (n == 3) {
+    ei = new EditInfo_0('', 0, -1, -1);
+    ei.checkbox = new Checkbox_0('Logarithmic', (this.flags & 1) != 0);
+    return ei;
+  }
+  if (n == 4)
+    return new EditInfo_0('Max Voltage', this.maxV, 0, 0);
+  if (n == 5) {
+    ei = new EditInfo_0('', 0, -1, -1);
+    ei.checkbox = new Checkbox_0('Bidirectional', (this.flags & 2) != 0);
+    return ei;
+  }
+  return null;
+}
+  ;
+_.getElmType = function getElmType_21() {
+  return 'sweep';
+}
+  ;
+_.getInfo_0 = function getInfo_73(arr) {
+  arr[0] = 'sweep ' + ((this.flags & 1) == 0 ? '(linear)' : '(log)');
+  arr[1] = 'I = ' + getUnitText($wnd.Math.abs(this.current_0), 'A', false);
+  arr[2] = 'V = ' + getUnitText(this.volts[0], 'V', false);
+  arr[3] = 'f = ' + getUnitText(this.frequency, 'Hz', false);
+  arr[4] = 'range = ' + getUnitText(this.minF, 'Hz', false) + ' .. ' + getUnitText(this.maxF, 'Hz', false);
+  arr[5] = 'time = ' + getUnitText(this.sweepTime, 's', false);
+}
+  ;
+_.getPostCount_0 = function getPostCount_62() {
+  return 1;
+}
+  ;
+_.getPower = function getPower_11() {
+  return -this.volts[0] * this.current_0;
+}
+  ;
+_.getVoltageDiff_0 = function getVoltageDiff_21() {
+  return this.volts[0];
+}
+  ;
+_.getVoltageSourceCount = function getVoltageSourceCount_44() {
+  return 1;
+}
+  ;
+_.getXmlDumpType = function getXmlDumpType_21() {
+  return 'sw';
+}
+  ;
+_.hasGroundConnection = function hasGroundConnection_16(n1) {
+  return true;
+}
+  ;
+_.reset_0 = function reset_40() {
+  $reset_8(this);
+}
+  ;
+_.setEditValue = function setEditValue_61(n, ei) {
+  var maxfreq;
+  maxfreq = 1 / (8 * sim_0.timeStep);
+  if (n == 0) {
+    this.minF = ei.value_0;
+    this.minF > maxfreq && (this.minF = maxfreq);
+  }
+  if (n == 1) {
+    this.maxF = ei.value_0;
+    this.maxF > maxfreq && (this.maxF = maxfreq);
+  }
+  n == 2 && (this.sweepTime = ei.value_0);
+  if (n == 3) {
+    this.flags &= -2;
+    $getState(ei.checkbox) && (this.flags |= 1);
+  }
+  n == 4 && (this.maxV = ei.value_0);
+  if (n == 5) {
+    this.flags &= -3;
+    $getState(ei.checkbox) && (this.flags |= 2);
+  }
+  $setParams(this);
+}
+  ;
+_.setPoints = function setPoints_62() {
+  $setPoints(this);
+  this.lead1 = $interpPoint(this.point1, this.point2, 1 - 17 / this.dn);
+}
+  ;
+_.stamp = function stamp_54() {
+  $stampVoltageSource(sim_0, 0, this.nodes[0], this.voltSource);
+}
+  ;
+_.startIteration = function startIteration_14() {
+  sim_0.timeStep != this.savedTimeStep && $setParams(this);
+  this.v = $wnd.Math.sin(this.freqTime) * this.maxV;
+  this.freqTime += this.frequency * 2 * $intern_1 * sim_0.timeStep;
+  this.frequency = this.frequency * this.fmul + this.fadd;
+  if (this.frequency >= this.maxF && this.dir_0 == 1) {
+    if ((this.flags & 2) != 0) {
+      this.fadd = -this.fadd;
+      this.fmul = 1 / this.fmul;
+      this.dir_0 = -1;
+    }
+    else
+      this.frequency = this.minF;
+  }
+  if (this.frequency <= this.minF && this.dir_0 == -1) {
+    this.fadd = -this.fadd;
+    this.fmul = 1 / this.fmul;
+    this.dir_0 = 1;
+  }
+}
+  ;
+_.undumpXml = function undumpXml_73(xml) {
+  this.flags = $parseIntAttr(xml, 'f', this.flags);
+  this.minF = $parseDoubleAttr(xml, 'mi', this.minF);
+  this.maxF = $parseDoubleAttr(xml, 'ma', this.maxF);
+  this.maxV = $parseDoubleAttr(xml, 'mv', this.maxV);
+  this.sweepTime = $parseDoubleAttr(xml, 'sw', this.sweepTime);
+  $reset_8(this);
+}
+  ;
+_.dir_0 = 0;
+_.fadd = 0;
+_.fmul = 0;
+_.freqTime = 0;
+_.frequency = 0;
+_.maxF = 0;
+_.maxV = 0;
+_.minF = 0;
+_.savedTimeStep = 0;
+_.sweepTime = 0;
+_.v = 0;
+var Lcom_lushprojects_circuitjs1_client_SweepElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'SweepElm', 258);
+function $setPoints_24(this$static) {
+  var hs, i;
+  $setPoints_4(this$static);
+  $calcLeads(this$static, 32);
+  this$static.swposts = $newPointArray(this$static.throwCount);
+  this$static.swpoles = $newPointArray(2 + this$static.throwCount);
+  for (i = 0; i != this$static.throwCount; i++) {
+    hs = -16 * (i - ((this$static.throwCount - 1) / 2 | 0));
+    this$static.throwCount == 2 && i == 0 && (hs = 16);
+    $interpPoint_2(this$static.lead1, this$static.lead2, this$static.swpoles[i], 1, hs);
+    $interpPoint_2(this$static.point1, this$static.point2, this$static.swposts[i], 1, hs);
+  }
+  this$static.swpoles[i] = this$static.lead2;
+  this$static.posCount = (this$static.flags & 1) != 0 && this$static.throwCount == 2 ? 3 : this$static.throwCount;
+}
+
+function Switch2Elm(xx, yy) {
+  SwitchElm_1.call(this, xx, yy, false);
+  this.noDiagonal = true;
+  this.throwCount = 2;
+}
+
+function Switch2Elm_0(xa, ya, xb, yb, f, st) {
+  SwitchElm_0.call(this, xa, ya, xb, yb, f, st);
+  this.link_0 = (new Integer_0($nextToken(st))).value_0;
+  this.throwCount = 2;
+  try {
+    this.throwCount = (new Integer_0($nextToken(st))).value_0;
+  }
+  catch ($e0) {
+    $e0 = toJava($e0);
+    if (!instanceOf($e0, 15))
+      throw toJs($e0);
+  }
+  this.noDiagonal = true;
+}
+
+defineClass(255, 61, { 7: 1, 10: 1, 255: 1, 61: 1 }, Switch2Elm, Switch2Elm_0);
+_.addRoutingObstacle = function addRoutingObstacle_19(router) {
+  var i, i0, pts;
+  $addWire(router, this.point1.x_0, this.point1.y_0, this.lead1.x_0, this.lead1.y_0);
+  for (i0 = 0; i0 != this.throwCount; i0++)
+    $addWire(router, this.swposts[i0].x_0, this.swposts[i0].y_0, this.swpoles[i0].x_0, this.swpoles[i0].y_0);
+  pts = initUnidimensionalArray(Lcom_lushprojects_circuitjs1_client_Point_2_classLit, $intern_72, 17, this.throwCount + 1, 0, 1);
+  pts[0] = this.lead1;
+  for (i = 0; i != this.throwCount; i++)
+    pts[i + 1] = this.swpoles[i];
+  $addObstacle_0(router, pts);
+}
+  ;
+_.calculateCurrent = function calculateCurrent_31() {
+  this.position_0 == 2 && (this.flags & 1) != 0 && this.throwCount == 2 && (this.current_0 = 0);
+}
+  ;
+_.draw = function draw_70(g) {
+  var i;
+  $setBbox_0(this, this.point1, this.point2, 16);
+  $adjustBbox_0(this, this.swposts[0], this.swposts[this.throwCount - 1]);
+  $setVoltageColor(this, g, this.volts[0]);
+  drawThickLine_0(g, this.point1, this.lead1);
+  for (i = 0; i != this.throwCount; i++) {
+    $setVoltageColor(this, g, this.volts[i + 1]);
+    drawThickLine_0(g, this.swpoles[i], this.swposts[i]);
+  }
+  mouseElmRef == this || this.selected_0 || app_0.mouse.plotYElm == this || instanceOf(mouseElmRef, 20) && $getElm_0(mouseElmRef.elmScope) == this || $isOnHighlightedNet(this) || $setColor_0(g, whiteColor);
+  drawThickLine_0(g, this.lead1, this.swpoles[this.position_0]);
+  this.curcount_0 = $updateDotCount(this.current_0, this.curcount_0);
+  $drawDots(g, this.point1, this.lead1, this.curcount_0);
+  this.position_0 == 2 && (this.flags & 1) != 0 && this.throwCount == 2 || $drawDots(g, this.swpoles[this.position_0], this.swposts[this.position_0], this.curcount_0);
+  $drawPosts(this, g);
+}
+  ;
+_.dumpXml = function dumpXml_72(doc, elem) {
+  $dumpXml_3(this, elem);
+  dumpAttr_0(elem, 'li', this.link_0);
+  dumpAttr_0(elem, 'th', this.throwCount);
+}
+  ;
+_.flipX = function flipX_14(c2, count) {
+  $flipX(this, c2);
+  this.position_0 = this.posCount - 1 - this.position_0;
+  this.positionFlipped = !this.positionFlipped;
+}
+  ;
+_.flipXY = function flipXY_11(c2, count) {
+  $flipXY(this, c2);
+  this.position_0 = this.posCount - 1 - this.position_0;
+  this.positionFlipped = !this.positionFlipped;
+}
+  ;
+_.flipY = function flipY_14(c2, count) {
+  $flipY(this, c2);
+  this.position_0 = this.posCount - 1 - this.position_0;
+  this.positionFlipped = !this.positionFlipped;
+}
+  ;
+_.getConnection = function getConnection_29(n1, n2) {
+  if (this.position_0 == 2 && (this.flags & 1) != 0 && this.throwCount == 2)
+    return false;
+  return $comparePair(n1, n2, 0, 1 + this.position_0);
+}
+  ;
+_.getCurrentIntoNode = function getCurrentIntoNode_26(n) {
+  if (n == 0)
+    return -this.current_0;
+  if (n == this.position_0 + 1)
+    return this.current_0;
+  return 0;
+}
+  ;
+_.getDumpType = function getDumpType_99() {
+  return 83;
+}
+  ;
+_.getEditInfo = function getEditInfo_64(n) {
+  if (n == 1)
+    return $disallowSliders($setDimensionless(new EditInfo_0('Switch Group', this.link_0, 0, 100)));
+  if (n == 2)
+    return $disallowSliders($setDimensionless(new EditInfo_0('# of Throws', this.throwCount, 2, 10)));
+  return $getEditInfo_1(this, n);
+}
+  ;
+_.getElmType = function getElmType_22() {
+  return 'switch (SPDT)';
+}
+  ;
+_.getInfo_0 = function getInfo_74(arr) {
+  arr[0] = 'switch (' + (this.link_0 == 0 ? 'S' : 'D') + 'P' + (this.throwCount > 2 ? this.throwCount + 'T)' : 'DT)');
+  arr[1] = 'I = ' + getUnitText($wnd.Math.abs(this.current_0), 'A', false);
+}
+  ;
+_.getPost = function getPost_18(n) {
+  return n == 0 ? this.point1 : this.swposts[n - 1];
+}
+  ;
+_.getPostCount_0 = function getPostCount_63() {
+  return 1 + this.throwCount;
+}
+  ;
+_.getShortcut = function getShortcut_41() {
+  return 83;
+}
+  ;
+_.getSwitchRect = function getSwitchRect_4() {
+  return $union($union(new Rectangle_1(this.lead1), new Rectangle_1(this.swpoles[0])), new Rectangle_1(this.swpoles[this.throwCount - 1]));
+}
+  ;
+_.getVoltageSourceCount = function getVoltageSourceCount_45() {
+  return this.position_0 == 2 && (this.flags & 1) != 0 && this.throwCount == 2 ? 0 : 1;
+}
+  ;
+_.isRemovableWire = function isRemovableWire_8() {
+  return false;
+}
+  ;
+_.isWireEquivalent = function isWireEquivalent_9() {
+  return true;
+}
+  ;
+_.setEditValue = function setEditValue_62(n, ei) {
+  if (n == 1) {
+    this.link_0 = round_int(ei.value_0);
+  }
+  else if (n == 2) {
+    ei.value_0 >= 2 && (this.throwCount = round_int(ei.value_0));
+    this.throwCount > 2 && (this.momentary = false);
+    $allocNodes(this);
+    $setPoints_24(this);
+  }
+  else
+    $setEditValue_1(this, n, ei);
+}
+  ;
+_.setPoints = function setPoints_63() {
+  $setPoints_24(this);
+}
+  ;
+_.stamp = function stamp_55() {
+  if (this.position_0 == 2 && (this.flags & 1) != 0 && this.throwCount == 2)
+    return;
+  $stampVoltageSource_0(sim_0, this.nodes[0], this.nodes[this.position_0 + 1], this.voltSource, 0);
+}
+  ;
+_.toggle = function toggle_1() {
+  var i, o, pos, s2;
+  $toggle(this);
+  if (this.link_0 != 0) {
+    for (i = 0; i != sim_0.elmList.arrayList.array.length; i++) {
+      o = $elementAt(sim_0.elmList, i);
+      if (instanceOf(o, 255)) {
+        s2 = o;
+        if (s2.link_0 == this.link_0) {
+          pos = this.position_0;
+          s2.positionFlipped != this.positionFlipped && (pos = this.posCount - 1 - pos);
+          pos < s2.posCount && (s2.position_0 = pos);
+        }
+      }
+    }
+  }
+}
+  ;
+_.undumpXml = function undumpXml_74(xml) {
+  $undumpXml_3(this, xml);
+  this.link_0 = $parseIntAttr(xml, 'li', this.link_0);
+  this.throwCount = $parseIntAttr(xml, 'th', this.throwCount);
+}
+  ;
+_.link_0 = 0;
+_.positionFlipped = false;
+_.throwCount = 0;
+var Lcom_lushprojects_circuitjs1_client_Switch2Elm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'Switch2Elm', 255);
+function $setupPins_22(this$static) {
+  this$static.sizeX = 2;
+  this$static.sizeY = 3;
+  this$static.pins = initUnidimensionalArray(Lcom_lushprojects_circuitjs1_client_ChipElm$Pin_2_classLit, $intern_3, 9, 4 + ((this$static.flags & 2) != 0 || (this$static.flags & 4) != 0 ? 1 : 0) + ((this$static.flags & 4) != 0 ? 1 : 0), 0, 1);
+  this$static.pins[0] = new ChipElm$Pin(this$static, 0, 2, 'T');
+  this$static.pins[1] = new ChipElm$Pin(this$static, 0, 3, 'Q');
+  this$static.pins[1].output = this$static.pins[1].state = true;
+  this$static.pins[2] = new ChipElm$Pin(this$static, (this$static.flags & 4) != 0 ? 1 : 2, 3, 'Q');
+  this$static.pins[2].output = true;
+  this$static.pins[2].lineOver = true;
+  this$static.pins[3] = new ChipElm$Pin(this$static, 1, 2, '');
+  this$static.pins[3].clock = true;
+  if ((this$static.flags & 4) != 0) {
+    this$static.pins[5] = new ChipElm$Pin(this$static, 2, 2, 'S');
+    this$static.pins[4] = new ChipElm$Pin(this$static, 2, 3, 'R');
+  }
+  else {
+    ((this$static.flags & 2) != 0 || (this$static.flags & 4) != 0) && (this$static.pins[4] = new ChipElm$Pin(this$static, 2, 2, 'R'));
+  }
+}
+
+function TFlipFlopElm(xx, yy) {
+  $clinit_ChipElm();
+  ChipElm.call(this, xx, yy);
+}
+
+function TFlipFlopElm_0(xa, ya, xb, yb, f, st) {
+  $clinit_ChipElm();
+  ChipElm_0.call(this, xa, ya, xb, yb, f, st);
+  this.pins[2].value_0 = !this.pins[1].value_0;
+}
+
+defineClass(409, 32, $intern_79, TFlipFlopElm, TFlipFlopElm_0);
+_.execute_3 = function execute_41() {
+  this.pins[3].value_0 && !this.lastClock && this.pins[0].value_0 && (this.pins[1].value_0 = !this.pins[1].value_0);
+  (this.flags & 4) != 0 && this.pins[5].value_0 && (this.pins[1].value_0 = true);
+  ((this.flags & 2) != 0 || (this.flags & 4) != 0) && this.pins[4].value_0 && (this.pins[1].value_0 = false);
+  this.pins[2].value_0 = !this.pins[1].value_0;
+  this.lastClock = this.pins[3].value_0;
+}
+  ;
+_.getChipEditInfo = function getChipEditInfo_23(n) {
+  var ei;
+  if (n == 0) {
+    ei = new EditInfo_0('', 0, -1, -1);
+    ei.checkbox = new Checkbox_0('Reset Pin', (this.flags & 2) != 0 || (this.flags & 4) != 0);
+    return ei;
+  }
+  if (n == 1) {
+    ei = new EditInfo_0('', 0, -1, -1);
+    ei.checkbox = new Checkbox_0('Set Pin', (this.flags & 4) != 0);
+    return ei;
+  }
+  return null;
+}
+  ;
+_.getChipName = function getChipName_27() {
+  return 'T flip-flop';
+}
+  ;
+_.getDumpType = function getDumpType_100() {
+  return 193;
+}
+  ;
+_.getPostCount_0 = function getPostCount_64() {
+  return 4 + ((this.flags & 2) != 0 || (this.flags & 4) != 0 ? 1 : 0) + ((this.flags & 4) != 0 ? 1 : 0);
+}
+  ;
+_.getVoltageSourceCount = function getVoltageSourceCount_46() {
+  return 2;
+}
+  ;
+_.reset_0 = function reset_41() {
+  $reset_0(this);
+  this.volts[2] = this.highVoltage;
+  this.pins[2].value_0 = true;
+}
+  ;
+_.setChipEditValue = function setChipEditValue_24(n, ei) {
+  if (n == 0) {
+    $getState(ei.checkbox) ? (this.flags |= 2) : (this.flags &= -3);
+    $setupPins_22(this);
+    $allocNodes(this);
+    $setPoints_0(this);
+  }
+  if (n == 1) {
+    $getState(ei.checkbox) ? (this.flags |= 4) : (this.flags &= -5);
+    $setupPins_22(this);
+    $allocNodes(this);
+    $setPoints_0(this);
+  }
+}
+  ;
+_.setupPins = function setupPins_28() {
+  $setupPins_22(this);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_TFlipFlopElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'TFlipFlopElm', 409);
+function TappedTransformerElm(xx, yy) {
+  CircuitElm.call(this, xx, yy);
+  this.inductance = 4;
+  this.ratio = 1;
+  this.noDiagonal = true;
+  this.couplingCoef = 0.99;
+  this.current = initUnidimensionalArray(D_classLit, $intern_70, 8, 4, 15, 1);
+  this.curcount = initUnidimensionalArray(D_classLit, $intern_70, 8, 4, 15, 1);
+  this.voltdiff = initUnidimensionalArray(D_classLit, $intern_70, 8, 3, 15, 1);
+  this.curSourceValue = initUnidimensionalArray(D_classLit, $intern_70, 8, 3, 15, 1);
+  this.a = initUnidimensionalArray(D_classLit, $intern_70, 8, 9, 15, 1);
+}
+
+function TappedTransformerElm_0(xa, ya, xb, yb, f, st) {
+  CircuitElm_0.call(this, xa, ya, xb, yb, f);
+  this.inductance = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.ratio = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.current = initUnidimensionalArray(D_classLit, $intern_70, 8, 4, 15, 1);
+  this.curcount = initUnidimensionalArray(D_classLit, $intern_70, 8, 4, 15, 1);
+  this.current[0] = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.current[1] = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  try {
+    this.current[2] = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  }
+  catch ($e0) {
+    $e0 = toJava($e0);
+    if (!instanceOf($e0, 15))
+      throw toJs($e0);
+  }
+  this.couplingCoef = 0.99;
+  try {
+    this.couplingCoef = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  }
+  catch ($e1) {
+    $e1 = toJava($e1);
+    if (!instanceOf($e1, 15))
+      throw toJs($e1);
+  }
+  this.voltdiff = initUnidimensionalArray(D_classLit, $intern_70, 8, 3, 15, 1);
+  this.curSourceValue = initUnidimensionalArray(D_classLit, $intern_70, 8, 3, 15, 1);
+  this.noDiagonal = true;
+  this.a = initUnidimensionalArray(D_classLit, $intern_70, 8, 9, 15, 1);
+}
+
+defineClass(395, 7, $intern_79, TappedTransformerElm, TappedTransformerElm_0);
+_.calculateCurrent = function calculateCurrent_32() {
+  var i, j;
+  this.voltdiff[0] = this.volts[0] - this.volts[1];
+  this.voltdiff[1] = this.volts[2] - this.volts[3];
+  this.voltdiff[2] = this.volts[3] - this.volts[4];
+  for (i = 0; i != 3; i++) {
+    this.current[i] = this.curSourceValue[i];
+    for (j = 0; j != 3; j++)
+      this.current[i] += this.a[i * 3 + j] * this.voltdiff[j];
+  }
+  this.current[3] = this.current[1] - this.current[2];
+}
+  ;
+_.doStep = function doStep_43() {
+  $stampCurrentSource(sim_0, this.nodes[0], this.nodes[1], this.curSourceValue[0]);
+  $stampCurrentSource(sim_0, this.nodes[2], this.nodes[3], this.curSourceValue[1]);
+  $stampCurrentSource(sim_0, this.nodes[3], this.nodes[4], this.curSourceValue[2]);
+}
+  ;
+_.draw = function draw_71(g) {
+  var i;
+  for (i = 0; i != 5; i++) {
+    $setVoltageColor(this, g, this.volts[i]);
+    drawThickLine_0(g, this.ptEnds[i], this.ptCoil[i]);
+  }
+  for (i = 0; i != 4; i++) {
+    if (i == 1)
+      continue;
+    $setPowerColor(this, g, this.current[i] * (this.volts[i] - this.volts[i + 1]));
+    $drawCoil(this, g, i > 1 ? -6 * this.flip : 6 * this.flip, this.ptCoil[i], this.ptCoil[i + 1], this.volts[i], this.volts[i + 1]);
+  }
+  $setColor_0(g, mouseElmRef == this || this.selected_0 || app_0.mouse.plotYElm == this || instanceOf(mouseElmRef, 20) && $getElm_0(mouseElmRef.elmScope) == this || $isOnHighlightedNet(this) ? selectColor_0 : lightGrayColor);
+  for (i = 0; i != 4; i += 2) {
+    drawThickLine_0(g, this.ptCore[i], this.ptCore[i + 1]);
+  }
+  for (i = 0; i != 4; i++)
+    this.curcount[i] = $updateDotCount(this.current[i], this.curcount[i]);
+  $drawDots(g, this.ptEnds[0], this.ptCoil[0], this.curcount[0]);
+  $drawDots(g, this.ptCoil[0], this.ptCoil[1], this.curcount[0]);
+  $drawDots(g, this.ptCoil[1], this.ptEnds[1], this.curcount[0]);
+  $drawDots(g, this.ptEnds[2], this.ptCoil[2], this.curcount[1]);
+  $drawDots(g, this.ptCoil[2], this.ptCoil[3], this.curcount[1]);
+  $drawDots(g, this.ptCoil[3], this.ptEnds[3], this.curcount[3]);
+  $drawDots(g, this.ptCoil[3], this.ptCoil[4], this.curcount[2]);
+  $drawDots(g, this.ptCoil[4], this.ptEnds[4], this.curcount[2]);
+  $drawPosts(this, g);
+  $setBbox_0(this, this.ptEnds[0], this.ptEnds[4], 0);
+}
+  ;
+_.dumpXml = function dumpXml_73(doc, elem) {
+  dumpAttr_1(elem, 'x', this.x_0 + ' ' + this.y_0 + ' ' + this.x2 + ' ' + this.y2);
+  dumpAttr_0(elem, 'f', this.flags);
+  dumpAttr(elem, 'in', this.inductance);
+  dumpAttr(elem, 'ra', this.ratio);
+  dumpAttr(elem, 'co', this.couplingCoef);
+}
+  ;
+_.dumpXmlState = function dumpXmlState_14(doc, elem) {
+  dumpAttr(elem, 'c0', this.current[0]);
+  dumpAttr(elem, 'c1', this.current[1]);
+  dumpAttr(elem, 'c2', this.current[2]);
+}
+  ;
+_.flipX = function flipX_15(c2, count) {
+  this.flags ^= 1;
+  $flipX(this, c2);
+}
+  ;
+_.flipXY = function flipXY_12(c2, count) {
+  this.flags ^= 1;
+  $flipXY(this, c2);
+}
+  ;
+_.flipY = function flipY_15(c2, count) {
+  this.flags ^= 1;
+  $flipY(this, c2);
+}
+  ;
+_.getConnection = function getConnection_30(n1, n2) {
+  if (n1 == 0 && n2 == 1 || n1 == 1 && n2 == 0)
+    return true;
+  if (n1 == 2 && n2 == 3 || n1 == 3 && n2 == 2)
+    return true;
+  if (n1 == 3 && n2 == 4 || n1 == 4 && n2 == 3)
+    return true;
+  if (n1 == 2 && n2 == 4 || n1 == 4 && n2 == 2)
+    return true;
+  return false;
+}
+  ;
+_.getCurrentIntoNode = function getCurrentIntoNode_27(n) {
+  if (n == 0)
+    return -this.current[0];
+  if (n == 1)
+    return this.current[0];
+  if (n == 2)
+    return -this.current[1];
+  if (n == 3)
+    return this.current[3];
+  return this.current[2];
+}
+  ;
+_.getDumpType = function getDumpType_101() {
+  return 169;
+}
+  ;
+_.getEditInfo = function getEditInfo_65(n) {
+  var ei;
+  if (n == 0)
+    return new EditInfo_0('Primary Inductance (H)', this.inductance, $intern_34, 5);
+  if (n == 1)
+    return $setDimensionless(new EditInfo_0('Ratio (N1/N2)', 1 / this.ratio, 1, 10));
+  if (n == 2)
+    return $setDimensionless(new EditInfo_0('Coupling Coefficient', this.couplingCoef, 0, 1));
+  if (n == 3) {
+    ei = new EditInfo_0('', 0, -1, -1);
+    ei.checkbox = new Checkbox_0('Trapezoidal Approximation', (this.flags & 2) == 0);
+    return ei;
+  }
+  return null;
+}
+  ;
+_.getInfo_0 = function getInfo_75(arr) {
+  arr[0] = 'transformer';
+  arr[1] = 'L = ' + getUnitText(this.inductance, 'H', false);
+  arr[2] = 'Ratio = 1:' + this.ratio;
+  arr[3] = 'Vd1 = ' + getUnitText(this.volts[0] - this.volts[2], 'V', false);
+  arr[4] = 'Vd2 = ' + getUnitText(this.volts[1] - this.volts[3], 'V', false);
+}
+  ;
+_.getPost = function getPost_19(n) {
+  return this.ptEnds[n];
+}
+  ;
+_.getPostCount_0 = function getPostCount_65() {
+  return 5;
+}
+  ;
+_.getXmlDumpType = function getXmlDumpType_22() {
+  return 'tt';
+}
+  ;
+_.reset_0 = function reset_42() {
+  this.current[0] = this.current[1] = this.current[2] = this.current[3] = this.volts[0] = this.volts[1] = this.volts[2] = this.volts[3] = this.volts[4] = this.curcount[0] = this.curcount[1] = this.curcount[2] = 0;
+  this.curSourceValue[0] = this.curSourceValue[1] = this.curSourceValue[2] = 0;
+}
+  ;
+_.setEditValue = function setEditValue_63(n, ei) {
+  n == 0 && ei.value_0 > 0 && (this.inductance = ei.value_0);
+  n == 1 && this.ratio > 0 && (this.ratio = 1 / ei.value_0);
+  n == 2 && ei.value_0 > 0 && ei.value_0 < 1 && (this.couplingCoef = ei.value_0);
+  n == 3 && ($getState(ei.checkbox) ? (this.flags &= -3) : (this.flags |= 2));
+}
+  ;
+_.setPoints = function setPoints_64() {
+  var b, cd, ce, hs, i;
+  $setPoints(this);
+  this.flip = (this.flags & 1) != 0 ? -1 : 1;
+  hs = 32 * this.flip;
+  this.ptEnds = $newPointArray(5);
+  this.ptCoil = $newPointArray(5);
+  this.ptCore = $newPointArray(4);
+  this.ptEnds[0] = this.point1;
+  this.ptEnds[2] = this.point2;
+  $interpPoint_2(this.point1, this.point2, this.ptEnds[1], 0, -hs * 2);
+  $interpPoint_2(this.point1, this.point2, this.ptEnds[3], 1, -hs);
+  $interpPoint_2(this.point1, this.point2, this.ptEnds[4], 1, -hs * 2);
+  ce = 0.5 - 12 / this.dn;
+  cd = 0.5 - 2 / this.dn;
+  $interpPoint_1(this.ptEnds[0], this.ptEnds[2], this.ptCoil[0], ce);
+  $interpPoint_2(this.ptEnds[0], this.ptEnds[2], this.ptCoil[1], ce, -hs * 2);
+  $interpPoint_1(this.ptEnds[0], this.ptEnds[2], this.ptCoil[2], 1 - ce);
+  $interpPoint_2(this.ptEnds[0], this.ptEnds[2], this.ptCoil[3], 1 - ce, -hs);
+  $interpPoint_2(this.ptEnds[0], this.ptEnds[2], this.ptCoil[4], 1 - ce, -hs * 2);
+  for (i = 0; i != 2; i++) {
+    b = -hs * i * 2;
+    $interpPoint_2(this.ptEnds[0], this.ptEnds[2], this.ptCore[i], cd, b);
+    $interpPoint_2(this.ptEnds[0], this.ptEnds[2], this.ptCore[i + 2], 1 - cd, b);
+  }
+}
+  ;
+_.stamp = function stamp_56() {
+  var det, i, l1, l2, m1, m2;
+  l1 = this.inductance;
+  l2 = this.inductance * this.ratio * this.ratio / 4;
+  m1 = this.couplingCoef * $wnd.Math.sqrt(l1 * l2);
+  m2 = this.couplingCoef * l2;
+  this.a[0] = l2 + m2;
+  this.a[1] = this.a[2] = this.a[3] = this.a[6] = -m1;
+  this.a[4] = this.a[8] = (l1 * l2 - m1 * m1) / (l2 - m2);
+  this.a[5] = this.a[7] = (m1 * m1 - l1 * m2) / (l2 - m2);
+  det = l1 * (l2 + m2) - 2 * m1 * m1;
+  for (i = 0; i != 9; i++)
+    this.a[i] *= ((this.flags & 2) == 0 ? sim_0.timeStep / 2 : sim_0.timeStep) / det;
+  $stampConductance(sim_0, this.nodes[0], this.nodes[1], this.a[0]);
+  $stampVCCurrentSource(sim_0, this.nodes[0], this.nodes[1], this.nodes[2], this.nodes[3], this.a[1]);
+  $stampVCCurrentSource(sim_0, this.nodes[0], this.nodes[1], this.nodes[3], this.nodes[4], this.a[2]);
+  $stampVCCurrentSource(sim_0, this.nodes[2], this.nodes[3], this.nodes[0], this.nodes[1], this.a[3]);
+  $stampConductance(sim_0, this.nodes[2], this.nodes[3], this.a[4]);
+  $stampVCCurrentSource(sim_0, this.nodes[2], this.nodes[3], this.nodes[3], this.nodes[4], this.a[5]);
+  $stampVCCurrentSource(sim_0, this.nodes[3], this.nodes[4], this.nodes[0], this.nodes[1], this.a[6]);
+  $stampVCCurrentSource(sim_0, this.nodes[3], this.nodes[4], this.nodes[2], this.nodes[3], this.a[7]);
+  $stampConductance(sim_0, this.nodes[3], this.nodes[4], this.a[8]);
+  for (i = 0; i != 5; i++)
+    $stampRightSide(sim_0, this.nodes[i]);
+}
+  ;
+_.startIteration = function startIteration_15() {
+  var i, j;
+  this.voltdiff[0] = this.volts[0] - this.volts[1];
+  this.voltdiff[1] = this.volts[2] - this.volts[3];
+  this.voltdiff[2] = this.volts[3] - this.volts[4];
+  for (i = 0; i != 3; i++) {
+    this.curSourceValue[i] = this.current[i];
+    if ((this.flags & 2) == 0)
+      for (j = 0; j != 3; j++)
+        this.curSourceValue[i] += this.a[i * 3 + j] * this.voltdiff[j];
+  }
+}
+  ;
+_.undumpXml = function undumpXml_75(xml) {
+  this.flags = $parseIntAttr(xml, 'f', this.flags);
+  this.inductance = $parseDoubleAttr(xml, 'in', this.inductance);
+  this.ratio = $parseDoubleAttr(xml, 'ra', this.ratio);
+  this.couplingCoef = $parseDoubleAttr(xml, 'co', this.couplingCoef);
+  this.current[0] = $parseDoubleAttr(xml, 'c0', 0);
+  this.current[1] = $parseDoubleAttr(xml, 'c1', 0);
+  this.current[2] = $parseDoubleAttr(xml, 'c2', 0);
+}
+  ;
+_.couplingCoef = 0;
+_.flip = 0;
+_.inductance = 0;
+_.ratio = 0;
+var Lcom_lushprojects_circuitjs1_client_TappedTransformerElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'TappedTransformerElm', 395);
+function $$init_18(this$static) {
+  this$static.zerocount = 0;
+  this$static.rmsV = 0;
+  this$static.maxV = 0;
+  this$static.minV = 0;
+  this$static.frequency = 0;
+  this$static.period = 0;
+  this$static.binaryLevel = 0;
+  this$static.pulseWidth = 0;
+  this$static.dutyCycle = 0;
+  this$static.selectedValue = 0;
+  this$static.increasingV = true;
+  this$static.decreasingV = true;
+}
+
+function $drawText(this$static, g, str, str2, pt1, pt2) {
+  var h, w1, w2, wmax, x_0, y_0;
+  w1 = round_int($measureText(g.context, str).width);
+  w2 = round_int($measureText(g.context, str2).width);
+  wmax = w1 > w2 ? w1 : w2;
+  h = g.currentFontSize;
+  g.context.save();
+  g.savedFontSize = g.currentFontSize;
+  g.context.textBaseline = 'middle';
+  x_0 = pt2.x_0;
+  y_0 = pt2.y_0;
+  if (pt1.y_0 != pt2.y_0) {
+    x_0 -= wmax / 2 | 0;
+    y_0 += sign_0(pt2.y_0 - pt1.y_0) * h;
+    pt2.y_0 < pt1.y_0 && (y_0 -= 10);
+  }
+  else {
+    pt2.x_0 > pt1.x_0 ? (x_0 += 4) : (x_0 -= 4 + wmax);
+  }
+  $fillText(g.context, str, x_0 + ((wmax - w1) / 2 | 0), y_0);
+  $fillText(g.context, str2, x_0 + ((wmax - w2) / 2 | 0), y_0 + 14);
+  $adjustBbox(this$static, x_0, y_0 - (h / 2 | 0), x_0 + wmax, y_0 + 14 + (h / 2 | 0));
+  g.context.restore();
+  g.currentFontSize = g.savedFontSize;
+}
+
+function TestPointElm(xx, yy) {
+  CircuitElm.call(this, xx, yy);
+  $$init_18(this);
+  this.meter = 0;
+  this.label_0 = 'TP';
+}
+
+function TestPointElm_0(xa, ya, xb, yb, f, st) {
+  CircuitElm_0.call(this, xa, ya, xb, yb, f);
+  $$init_18(this);
+  this.meter = (new Integer_0($nextToken(st))).value_0;
+  (this.flags & 1) != 0 ? (this.label_0 = unescape_0($nextToken(st))) : (this.label_0 = 'TP');
+}
+
+defineClass(360, 7, $intern_79, TestPointElm, TestPointElm_0);
+_.draw = function draw_72(g) {
+  var f, s, selected;
+  g.context.save();
+  g.savedFontSize = g.currentFontSize;
+  selected = mouseElmRef == this || this.selected_0 || app_0.mouse.plotYElm == this || instanceOf(mouseElmRef, 20) && $getElm_0(mouseElmRef.elmScope) == this || $isOnHighlightedNet(this);
+  f = new Font('SansSerif', selected ? 1 : 0, 14);
+  $setFont_0(g, f);
+  $setColor_0(g, selected ? selectColor_0 : whiteColor);
+  s = this.label_0;
+  $interpPoint_1(this.point1, this.point2, this.lead1, 1 - ((round_int(g.context.measureText('TP').width) / 2 | 0) + 8) / this.dn);
+  $setBbox_0(this, this.point1, this.lead1, 0);
+  switch (this.meter) {
+    case 0:
+      s = getUnitText(this.volts[0], 'V', false);
+      break;
+    case 1:
+      s = getUnitText(this.rmsV, 'V(rms)', false);
+      break;
+    case 2:
+      s = getUnitText(this.lastMaxV, 'Vpk', false);
+      break;
+    case 3:
+      s = getUnitText(this.lastMinV, 'Vmin', false);
+      break;
+    case 4:
+      s = getUnitText(this.lastMaxV - this.lastMinV, 'Vp2p', false);
+      break;
+    case 5:
+      s = this.binaryLevel + '';
+      break;
+    case 6:
+      s = getUnitText(this.frequency, 'Hz', false);
+      break;
+    case 8:
+      s = getUnitText(this.pulseWidth, 'S', false);
+      break;
+    case 9:
+      s = $format_0(showFormat, this.dutyCycle);
+  }
+  $drawText(this, g, this.label_0, s, this.point1, this.lead1);
+  $setVoltageColor(this, g, this.volts[0]);
+  selected && $setColor_0(g, selectColor_0);
+  drawThickLine_0(g, this.point1, this.lead1);
+  $drawPosts(this, g);
+  g.context.restore();
+  g.currentFontSize = g.savedFontSize;
+}
+  ;
+_.dumpXml = function dumpXml_74(doc, elem) {
+  dumpAttr_1(elem, 'x', this.x_0 + ' ' + this.y_0 + ' ' + this.x2 + ' ' + this.y2);
+  dumpAttr_0(elem, 'f', this.flags);
+  dumpAttr_0(elem, 'me', this.meter);
+  $equals_1(this.label_0, 'TP') || dumpAttr_1(elem, 'lb', this.label_0);
+}
+  ;
+_.getDumpType = function getDumpType_102() {
+  return 368;
+}
+  ;
+_.getEditInfo = function getEditInfo_66(n) {
+  var ei;
+  if (n == 0) {
+    ei = new EditInfo_0('Value', this.selectedValue, -1, -1);
+    ei.choice = new Choice;
+    $addItem(ei.choice, LS('Voltage'));
+    $addItem(ei.choice, LS('RMS Voltage'));
+    $addItem(ei.choice, LS('Max Voltage'));
+    $addItem(ei.choice, LS('Min Voltage'));
+    $addItem(ei.choice, LS('P2P Voltage'));
+    $addItem(ei.choice, LS('Binary Value'));
+    $select(ei.choice, this.meter);
+    return ei;
+  }
+  if (n == 1) {
+    ei = new EditInfo_0('Label', 0, -1, -1);
+    ei.text_0 = this.label_0;
+    return ei;
+  }
+  return null;
+}
+  ;
+_.getInfo_0 = function getInfo_76(arr) {
+  arr[0] = 'Test Point';
+  switch (this.meter) {
+    case 0:
+      arr[1] = 'V = ' + getUnitText(this.volts[0], 'V', false);
+      break;
+    case 1:
+      arr[1] = 'V(rms) = ' + getUnitText(this.rmsV, 'V', false);
+      break;
+    case 2:
+      arr[1] = 'Vmax = ' + getUnitText(this.lastMaxV, 'Vpk', false);
+      break;
+    case 3:
+      arr[1] = 'Vmin = ' + getUnitText(this.lastMinV, 'Vmin', false);
+      break;
+    case 4:
+      arr[1] = 'Vp2p = ' + getUnitText(this.lastMaxV - this.lastMinV, 'Vp2p', false);
+      break;
+    case 5:
+      arr[1] = 'Binary:' + this.binaryLevel + '';
+      break;
+    case 6:
+      arr[1] = 'Freq = ' + getUnitText(this.frequency, 'Hz', false);
+      break;
+    case 7:
+      arr[1] = 'Period = ' + getUnitText(this.period * sim_0.maxTimeStep / $getIterCount(app_0), 'S', false);
+      break;
+    case 8:
+      arr[1] = 'Pulse width = ' + getUnitText(this.pulseWidth * sim_0.maxTimeStep * $getIterCount(app_0), 'S', false);
+      break;
+    case 9:
+      arr[1] = 'Duty cycle = ' + $format_0(showFormat, this.dutyCycle);
+  }
+}
+  ;
+_.getPostCount_0 = function getPostCount_66() {
+  return 1;
+}
+  ;
+_.getScopeValue = function getScopeValue_5(x_0) {
+  return this.selectedValue;
+}
+  ;
+_.getVoltageDiff_0 = function getVoltageDiff_22() {
+  return this.volts[0];
+}
+  ;
+_.setEditValue = function setEditValue_64(n, ei) {
+  n == 0 && (this.meter = $getElement(ei.choice).selectedIndex);
+  n == 1 && (this.label_0 = $getText(ei.textf));
+}
+  ;
+_.setPoints = function setPoints_65() {
+  $setPoints(this);
+  this.lead1 = new Point_1;
+}
+  ;
+_.stepFinished = function stepFinished_21() {
+  if (sim_0.timeStepCount == this.lastStepCount)
+    return;
+  this.lastStepCount = sim_0.timeStepCount;
+  ++this.count;
+  this.total += this.volts[0] * this.volts[0];
+  this.volts[0] < 2.5 ? (this.binaryLevel = 0) : (this.binaryLevel = 1);
+  if (this.volts[0] > this.maxV && this.increasingV) {
+    this.maxV = this.volts[0];
+    this.increasingV = true;
+    this.decreasingV = false;
+  }
+  if (this.volts[0] < this.maxV && this.increasingV) {
+    this.lastMaxV = this.maxV;
+    this.periodLength = ($clinit_System(), sub_1(fromDouble_0(Date.now()), this.periodStart));
+    this.periodStart = fromDouble_0(Date.now());
+    this.period = toDouble_0(this.periodLength);
+    this.pulseWidth = toDouble_0(sub_1(fromDouble_0(Date.now()), this.pulseStart));
+    this.dutyCycle = this.pulseWidth / toDouble_0(this.periodLength);
+    this.minV = this.volts[0];
+    this.increasingV = false;
+    this.decreasingV = true;
+    this.total = this.total / this.count;
+    this.rmsV = $wnd.Math.sqrt(this.total);
+    isNaN(this.rmsV) && (this.rmsV = 0);
+    this.count = 0;
+    this.total = 0;
+  }
+  if (this.volts[0] < this.minV && this.decreasingV) {
+    this.minV = this.volts[0];
+    this.increasingV = false;
+    this.decreasingV = true;
+  }
+  if (this.volts[0] > this.minV && this.decreasingV) {
+    this.lastMinV = this.minV;
+    this.pulseStart = ($clinit_System(), fromDouble_0(Date.now()));
+    this.maxV = this.volts[0];
+    this.increasingV = true;
+    this.decreasingV = false;
+    this.total = this.total / this.count;
+    this.rmsV = $wnd.Math.sqrt(this.total);
+    isNaN(this.rmsV) && (this.rmsV = 0);
+    this.count = 0;
+    this.total = 0;
+  }
+  if (this.volts[0] == 0) {
+    ++this.zerocount;
+    if (this.zerocount > 5) {
+      this.total = 0;
+      this.rmsV = 0;
+      this.maxV = 0;
+      this.minV = 0;
+    }
+  }
+  else {
+    this.zerocount = 0;
+  }
+  switch (this.meter) {
+    case 0:
+      this.selectedValue = this.volts[0];
+      break;
+    case 1:
+      this.selectedValue = this.rmsV;
+      break;
+    case 2:
+      this.selectedValue = this.lastMaxV;
+      break;
+    case 3:
+      this.selectedValue = this.lastMinV;
+      break;
+    case 4:
+      this.selectedValue = this.lastMaxV - this.lastMinV;
+      break;
+    case 5:
+      this.selectedValue = this.binaryLevel;
+      break;
+    case 6:
+      this.selectedValue = this.frequency;
+      break;
+    case 7:
+      this.selectedValue = this.period;
+      break;
+    case 8:
+      this.selectedValue = this.pulseWidth;
+      break;
+    case 9:
+      this.selectedValue = this.dutyCycle;
+  }
+}
+  ;
+_.undumpXml = function undumpXml_76(xml) {
+  this.flags = $parseIntAttr(xml, 'f', this.flags);
+  this.meter = $parseIntAttr(xml, 'me', this.meter);
+  this.label_0 = $parseStringAttr(xml, 'lb', 'TP');
+}
+  ;
+_.binaryLevel = 0;
+_.count = 0;
+_.decreasingV = false;
+_.dutyCycle = 0;
+_.frequency = 0;
+_.increasingV = false;
+_.lastMaxV = 0;
+_.lastMinV = 0;
+_.lastStepCount = 0;
+_.maxV = 0;
+_.meter = 0;
+_.minV = 0;
+_.period = 0;
+_.periodLength = 0;
+_.periodStart = 0;
+_.pulseStart = 0;
+_.pulseWidth = 0;
+_.rmsV = 0;
+_.selectedValue = 0;
+_.total = 0;
+_.zerocount = 0;
+var Lcom_lushprojects_circuitjs1_client_TestPointElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'TestPointElm', 360);
+function $split_0(this$static) {
+  var c, i, sb;
+  this$static.lines = new Vector;
+  sb = new StringBuffer(this$static.text_0);
+  for (i = 0; i < sb.string.length; i++) {
+    c = $charAt_0(sb.string, i);
+    if (c == 92) {
+      sb.string = $substring_0(sb.string, 0, i) + '' + $substring(sb.string, i + 1);
+      c = $charAt_0(sb.string, i);
+      if (c == 110) {
+        $add_11(this$static.lines, $substring_0(sb.string, 0, i));
+        sb.string = sb.string.substr(0, 0) + '' + $substring(sb.string, i + 1);
+        i = -1;
+        continue;
+      }
+    }
+  }
+  $add_11(this$static.lines, sb.string);
+}
+
+function TextElm(xx, yy) {
+  GraphicElm.call(this, xx, yy);
+  this.text_0 = 'hello';
+  this.lines = new Vector;
+  $add_11(this.lines, this.text_0);
+  this.size_0 = 24;
+}
+
+function TextElm_0(xa, ya, xb, yb, f, st) {
+  GraphicElm_0.call(this, xa, ya, xb, yb, f);
+  this.size_0 = (new Integer_0($nextToken(st))).value_0;
+  this.text_0 = $nextToken(st);
+  if ((this.flags & 4) == 0) {
+    while ($hasMoreTokens(st))
+      this.text_0 += ' ' + $nextToken(st);
+    this.text_0 = $replaceAll(this.text_0, '%2[bB]', '+');
+  }
+  else {
+    this.text_0 = unescape_0(this.text_0);
+  }
+  $split_0(this);
+}
+
+defineClass(402, 133, $intern_92, TextElm, TextElm_0);
+_.drag = function drag_4(xx, yy) {
+  this.x_0 = xx;
+  this.y_0 = yy;
+  this.x2 = xx + 16;
+  this.y2 = yy;
+}
+  ;
+_.draw = function draw_73(g) {
+  var by, cury, f, i, maxw, s, sw, w;
+  g.context.save();
+  g.savedFontSize = g.currentFontSize;
+  $setColor_0(g, mouseElmRef == this || this.selected_0 || app_0.mouse.plotYElm == this || instanceOf(mouseElmRef, 20) && $getElm_0(mouseElmRef.elmScope) == this || $isOnHighlightedNet(this) ? selectColor_0 : lightGrayColor);
+  f = new Font('SansSerif', 0, this.size_0);
+  $setFont_0(g, f);
+  maxw = -1;
+  for (i = 0; i != this.lines.arrayList.array.length; i++) {
+    w = round_int($measureText(g.context, $elementAt(this.lines, i)).width);
+    w > maxw && (maxw = w);
+  }
+  cury = this.y_0;
+  $setBbox(this, this.x_0, this.y_0, this.x_0, this.y_0);
+  for (i = 0; i != this.lines.arrayList.array.length; i++) {
+    s = $elementAt(this.lines, i);
+    s = LS(s);
+    sw = round_int($measureText(g.context, s).width);
+    $drawString(g, s, this.x_0, cury);
+    if ((this.flags & 2) != 0) {
+      by = cury - g.currentFontSize;
+      $drawLine(g, this.x_0, by, this.x_0 + sw - 1, by);
+    }
+    $adjustBbox(this, this.x_0, cury - g.currentFontSize, this.x_0 + sw, cury + 3);
+    cury += g.currentFontSize + 3;
+  }
+  this.x2 = this.boundingBox.x_0 + this.boundingBox.width_0;
+  this.y2 = this.boundingBox.y_0 + this.boundingBox.height_0;
+  g.context.restore();
+  g.currentFontSize = g.savedFontSize;
+}
+  ;
+_.dumpXml = function dumpXml_75(doc, elem) {
+  dumpAttr_1(elem, 'x', this.x_0 + ' ' + this.y_0 + ' ' + this.x2 + ' ' + this.y2);
+  dumpAttr_0(elem, 'f', this.flags);
+  dumpAttr_0(elem, 'si', this.size_0);
+  dumpAttr_1(elem, 'te', this.text_0);
+}
+  ;
+_.getDumpType = function getDumpType_103() {
+  return 120;
+}
+  ;
+_.getEditInfo = function getEditInfo_67(n) {
+  var ei;
+  if (n == 0) {
+    ei = new EditInfo_0('Text', 0, -1, -1);
+    ei.text_0 = this.text_0;
+    return ei;
+  }
+  if (n == 1)
+    return new EditInfo_0('Size', this.size_0, 5, 100);
+  if (n == 2) {
+    ei = new EditInfo_0('', 0, -1, -1);
+    ei.checkbox = new Checkbox_0('Draw Bar On Top', (this.flags & 2) != 0);
+    return ei;
+  }
+  return null;
+}
+  ;
+_.getElmType = function getElmType_23() {
+  return 'text';
+}
+  ;
+_.getInfo_0 = function getInfo_77(arr) {
+  arr[0] = this.text_0;
+}
+  ;
+_.getShortcut = function getShortcut_42() {
+  return 116;
+}
+  ;
+_.setEditValue = function setEditValue_65(n, ei) {
+  if (n == 0) {
+    this.text_0 = $getText(ei.textf);
+    $split_0(this);
+  }
+  n == 1 && (this.size_0 = round_int(ei.value_0));
+  n == 2 && ($getState(ei.checkbox) ? (this.flags |= 2) : (this.flags &= -3));
+}
+  ;
+_.undumpXml = function undumpXml_77(xml) {
+  this.flags = $parseIntAttr(xml, 'f', this.flags);
+  this.size_0 = $parseIntAttr(xml, 'si', this.size_0);
+  this.text_0 = $parseStringAttr(xml, 'te', this.text_0);
+  $split_0(this);
+}
+  ;
+_.size_0 = 0;
+var Lcom_lushprojects_circuitjs1_client_TextElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'TextElm', 402);
+function $$init_19(this$static) {
+  this$static.t0 = 273.15;
+  this$static.t25 = this$static.t0 + 25;
+}
+
+function $calcB25100(this$static) {
+  var kelvin1, kelvin2;
+  kelvin1 = this$static.t0 + 25;
+  kelvin2 = this$static.t0 + 50;
+  return ($wnd.Math.log(this$static.r25) - $wnd.Math.log(this$static.r50)) / (1 / kelvin1 - 1 / kelvin2);
+}
+
+function $calcResistance_0(this$static, tempr) {
+  return toDouble_0(fromDouble_0($wnd.Math.round(this$static.r25 * $wnd.Math.exp(this$static.b25100 * (1 / (tempr + this$static.t0) - 1 / this$static.t25)))));
+}
+
+function $createSlider_3(this$static) {
+  var value_0;
+  $addWidgetToVerticalPanel(app_0, this$static.label_0 = new Label_1(this$static.sliderText));
+  $addStyleName(this$static.label_0, 'topSpace');
+  value_0 = round_int(this$static.position_0 * 100);
+  $addWidgetToVerticalPanel(app_0, this$static.slider = new Scrollbar_1(value_0, this$static, this$static));
+}
+
+function $setPoints_25(this$static) {
+  $setPoints(this$static);
+  $calcLeads(this$static, 32);
+  this$static.position_0 = this$static.slider.val_0 * $intern_114 + $intern_119;
+  this$static.temperature = toDouble_0(fromDouble_0($wnd.Math.round(this$static.position_0 * (this$static.maxTempr - this$static.minTempr) + this$static.minTempr)));
+  this$static.resistance = $calcResistance_0(this$static, this$static.temperature);
+  new Point_1;
+  new Point_1;
+}
+
+function ThermistorNTCElm(xx, yy) {
+  CircuitElm.call(this, xx, yy);
+  $$init_19(this);
+  this.minTempr = -40;
+  this.maxTempr = 150;
+  this.r25 = $intern_82;
+  this.r50 = 3605;
+  this.position_0 = 0.34;
+  $calcResistance_0(this, this.minTempr);
+  this.b25100 = $calcB25100(this);
+  this.temperature = toDouble_0(fromDouble_0($wnd.Math.round(this.position_0 * (this.maxTempr - this.minTempr) + this.minTempr)));
+  this.resistance = $calcResistance_0(this, this.temperature);
+  this.sliderText = 'Temperature';
+  $createSlider_3(this);
+}
+
+function ThermistorNTCElm_0(xa, ya, xb, yb, f, st) {
+  CircuitElm_0.call(this, xa, ya, xb, yb, f);
+  $$init_19(this);
+  this.r25 = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.r50 = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.minTempr = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.maxTempr = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.position_0 = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  $calcResistance_0(this, this.minTempr);
+  this.b25100 = $calcB25100(this);
+  this.temperature = toDouble_0(fromDouble_0($wnd.Math.round(this.position_0 * (this.maxTempr - this.minTempr) + this.minTempr)));
+  this.resistance = $calcResistance_0(this, this.temperature);
+  this.sliderText = unescape_0($nextToken(st));
+  $createSlider_3(this);
+}
+
+defineClass(380, 7, $intern_115, ThermistorNTCElm, ThermistorNTCElm_0);
+_.calculateCurrent = function calculateCurrent_33() {
+  this.current_0 = (this.volts[0] - this.volts[1]) / this.resistance;
+}
+  ;
+_.delete_0 = function delete_5() {
+  $removeWidgetFromVerticalPanel(app_0, this.label_0);
+  $removeWidgetFromVerticalPanel(app_0, this.slider);
+}
+  ;
+_.draw = function draw_74(g) {
+  var grad, i, len, s, t, v1, v2;
+  v1 = this.volts[0];
+  v2 = this.volts[1];
+  $setBbox_0(this, this.point1, this.point2, 6);
+  $draw2Leads(this, g);
+  $setPowerColor_0(this, g);
+  len = distance(this.lead1, this.lead2);
+  g.context.save();
+  g.context.lineWidth = 3;
+  $transform(g.context, (this.lead2.x_0 - this.lead1.x_0) / len, (this.lead2.y_0 - this.lead1.y_0) / len, -(this.lead2.y_0 - this.lead1.y_0) / len, (this.lead2.x_0 - this.lead1.x_0) / len, this.lead1.x_0, this.lead1.y_0);
+  grad = $createLinearGradient(g.context, 0, 0, len, 0);
+  $addColorStop(grad, 0, $getHexValue($getVoltageColor(this, v1)));
+  $addColorStop(grad, 1, $getHexValue($getVoltageColor(this, v2)));
+  $setStrokeStyleWeb(g.context, grad);
+  if (app_0.menus.euroResistorCheckItem.on) {
+    $strokeRect(g.context, 0, -6, len, 12);
+  }
+  else {
+    g.context.beginPath();
+    g.context.moveTo(0, 0);
+    for (i = 0; i < 4; i++) {
+      $lineTo(g.context, (1 + 4 * i) * len / 16, 6);
+      $lineTo(g.context, (3 + 4 * i) * len / 16, -6);
+    }
+    $lineTo(g.context, len, 0);
+    g.context.stroke();
+  }
+  g.context.beginPath();
+  g.context.moveTo(-6, 12);
+  g.context.lineTo(6, 12);
+  $lineTo(g.context, len, -12);
+  g.context.stroke();
+  g.context.restore();
+  if (app_0.menus.showValuesCheckItem.on) {
+    this.temperature = toDouble_0(fromDouble_0($wnd.Math.round(this.position_0 * (this.maxTempr - this.minTempr) + this.minTempr)));
+    this.resistance = $calcResistance_0(this, this.temperature);
+    s = getUnitText(this.resistance, '', true);
+    t = String.fromCharCode(176);
+    $drawValues(this, g, this.temperature + t + 'C=' + s + '\u03A9', 6);
+  }
+  this.curcount_0 = $updateDotCount(this.current_0, this.curcount_0);
+  app_0.mouse.dragElm == this || $drawDots(g, this.point1, this.point2, this.curcount_0);
+  $drawPosts(this, g);
+}
+  ;
+_.dumpXml = function dumpXml_76(doc, elem) {
+  dumpAttr_1(elem, 'x', this.x_0 + ' ' + this.y_0 + ' ' + this.x2 + ' ' + this.y2);
+  dumpAttr_0(elem, 'f', this.flags);
+  dumpAttr(elem, 'r25', this.r25);
+  dumpAttr(elem, 'r50', this.r50);
+  dumpAttr(elem, 'mnt', this.minTempr);
+  dumpAttr(elem, 'mxt', this.maxTempr);
+  dumpAttr(elem, 'ps', this.position_0);
+  dumpAttr_1(elem, 'st', this.sliderText);
+}
+  ;
+_.execute_1 = function execute_42() {
+  app_0.analyzeFlag = true;
+  $setPoints_25(this);
+}
+  ;
+_.getDumpType = function getDumpType_104() {
+  return 350;
+}
+  ;
+_.getEditInfo = function getEditInfo_68(n) {
+  var ei;
+  if (n == 0)
+    return new EditInfo_0('R at 25\xB0C', this.r25, this.r50 + 100, $intern_110);
+  if (n == 1)
+    return new EditInfo_0('R at 50\xB0C', this.r50, 100, this.r25 - 100);
+  if (n == 2)
+    return new EditInfo_0('Slider min temp (\xB0C)', this.minTempr, -40, this.maxTempr);
+  if (n == 3)
+    return new EditInfo_0('Slider max temp (\xB0C)', this.maxTempr, this.minTempr, 150);
+  if (n == 4) {
+    ei = new EditInfo_0('Slider Text', 0, -1, -1);
+    ei.text_0 = this.sliderText;
+    return ei;
+  }
+  return null;
+}
+  ;
+_.getInfo_0 = function getInfo_78(arr) {
+  arr[0] = 'thermistor';
+  arr[1] = 'I = ' + getUnitText($wnd.Math.abs(this.current_0), 'A', false);
+  arr[2] = 'Vd = ' + getUnitText($wnd.Math.abs(this.volts[0] - this.volts[1]), 'V', false);
+  arr[3] = 'R = ' + getUnitText(this.resistance, ohmString, false);
+  arr[4] = 'P = ' + getUnitText((this.volts[0] - this.volts[1]) * this.current_0, 'W', false);
+  arr[5] = 'T = ' + getUnitText(this.temperature, '\xB0C', false);
+}
+  ;
+_.getPostCount_0 = function getPostCount_67() {
+  return 2;
+}
+  ;
+_.onMouseWheel = function onMouseWheel_6(e) {
+  !!this.slider && $onMouseWheel_0(this.slider, e);
+}
+  ;
+_.setEditValue = function setEditValue_66(n, ei) {
+  n == 0 && (this.r25 = ei.value_0);
+  n == 1 && (this.r50 = ei.value_0);
+  n == 2 && (this.minTempr = ei.value_0);
+  n == 3 && (this.maxTempr = ei.value_0);
+  if (n == 4) {
+    this.sliderText = $getText(ei.textf);
+    $setText_0(this.label_0, this.sliderText);
+    $setiFrameHeight(app_0.ui);
+  }
+  $calcResistance_0(this, this.minTempr);
+  this.b25100 = $calcB25100(this);
+  this.temperature = toDouble_0(fromDouble_0($wnd.Math.round(this.position_0 * (this.maxTempr - this.minTempr) + this.minTempr)));
+  this.resistance = $calcResistance_0(this, this.temperature);
+}
+  ;
+_.setMouseElm = function setMouseElm_2(v) {
+  v ? (mouseElmRef = this) : mouseElmRef == this && (mouseElmRef = null);
+  !!this.slider && $draw_3(this.slider);
+}
+  ;
+_.setPoints = function setPoints_66() {
+  $setPoints_25(this);
+}
+  ;
+_.stamp = function stamp_57() {
+  this.temperature = toDouble_0(fromDouble_0($wnd.Math.round(this.position_0 * (this.maxTempr - this.minTempr) + this.minTempr)));
+  this.resistance = $calcResistance_0(this, this.temperature);
+  $stampResistor(sim_0, this.nodes[0], this.nodes[1], this.resistance);
+}
+  ;
+_.undumpXml = function undumpXml_78(xml) {
+  this.flags = $parseIntAttr(xml, 'f', this.flags);
+  this.r25 = $parseDoubleAttr(xml, 'r25', this.r25);
+  this.r50 = $parseDoubleAttr(xml, 'r50', this.r50);
+  this.minTempr = $parseDoubleAttr(xml, 'mnt', this.minTempr);
+  this.maxTempr = $parseDoubleAttr(xml, 'mxt', this.maxTempr);
+  this.position_0 = $parseDoubleAttr(xml, 'ps', this.position_0);
+  this.sliderText = $parseStringAttr(xml, 'st', this.sliderText);
+  $calcResistance_0(this, this.minTempr);
+  this.b25100 = $calcB25100(this);
+  this.temperature = toDouble_0(fromDouble_0($wnd.Math.round(this.position_0 * (this.maxTempr - this.minTempr) + this.minTempr)));
+  this.resistance = $calcResistance_0(this, this.temperature);
+  $createSlider_3(this);
+}
+  ;
+_.b25100 = 0;
+_.maxTempr = 0;
+_.minTempr = 0;
+_.position_0 = 0;
+_.r25 = 0;
+_.r50 = 0;
+_.resistance = 0;
+_.t0 = 0;
+_.t25 = 0;
+_.temperature = 0;
+var Lcom_lushprojects_circuitjs1_client_ThermistorNTCElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ThermistorNTCElm', 380);
+function $$init_20(this$static) {
+  this$static.coilNodes = stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [6, 1, 8, 3, 10, 5, 7, 9, 11, 12]);
+  this$static.cr = 37;
+}
+
+function $interpPointFix_0(a, b, c, f, g) {
+  var gx, gy;
+  gx = b.y_0 - a.y_0;
+  gy = a.x_0 - b.x_0;
+  c.x_0 = toInt_0(fromDouble_0($wnd.Math.round(a.x_0 * (1 - f) + b.x_0 * f + g * gx)));
+  c.y_0 = toInt_0(fromDouble_0($wnd.Math.round(a.y_0 * (1 - f) + b.y_0 * f + g * gy)));
+}
+
+function ThreePhaseMotorElm(xx, yy) {
+  CircuitElm.call(this, xx, yy);
+  $$init_20(this);
+  this.Rs = 0.435;
+  this.Rr = 0.816;
+  this.Ls = 0.0294;
+  this.Lr = 0.0297;
+  this.Lm = 0.0287;
+  this.J = 1;
+  this.angle = $intern_83;
+  this.speed = this.filteredSpeed = 0;
+  this.b = 0.05;
+  this.voltSources = initUnidimensionalArray(I_classLit, $intern_25, 8, 2, 15, 1);
+  this.curcounts = initUnidimensionalArray(D_classLit, $intern_70, 8, 3, 15, 1);
+  this.coilCurrents = initUnidimensionalArray(D_classLit, $intern_70, 8, 5, 15, 1);
+}
+
+function ThreePhaseMotorElm_0(xa, ya, xb, yb, f, st) {
+  CircuitElm_0.call(this, xa, ya, xb, yb, f);
+  $$init_20(this);
+  this.angle = $intern_83;
+  this.filteredSpeed = this.speed = 0;
+  this.Rs = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.Rr = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.Ls = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.Lr = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.Lm = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.b = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  try {
+    this.J = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  }
+  catch ($e0) {
+    $e0 = toJava($e0);
+    if (instanceOf($e0, 15)) {
+      this.J = 1;
+    }
+    else
+      throw toJs($e0);
+  }
+  this.voltSources = initUnidimensionalArray(I_classLit, $intern_25, 8, 2, 15, 1);
+  this.curcounts = initUnidimensionalArray(D_classLit, $intern_70, 8, 3, 15, 1);
+  this.coilCurrents = initUnidimensionalArray(D_classLit, $intern_70, 8, 5, 15, 1);
+}
+
+function drawThickerLine_0(g, pa, pb) {
+  g.context.lineWidth = 6;
+  $drawLine(g, pa.x_0, pa.y_0, pb.x_0, pb.y_0);
+  g.context.lineWidth = 1;
+}
+
+function getUnitTextRPM(v, u) {
+  var nf, va;
+  nf = ($clinit_NumberFormat(), new NumberFormat_0('####.##', $getDefaultNative()));
+  va = $wnd.Math.abs(v);
+  if (va < $intern_73)
+    return '0 ' + u;
+  if (va < $intern_74)
+    return $format_0(nf, v * $intern_75) + ' ' + 'p' + u;
+  if (va < $intern_76)
+    return $format_0(nf, v * $intern_32) + ' ' + 'n' + u;
+  if (va < $intern_77)
+    return $format_0(nf, v * $intern_78) + ' ' + muString + u;
+  if (va < 1)
+    return $format_0(nf, v * $intern_21) + ' ' + 'm' + u;
+  if (va < $intern_21)
+    return $format_0(nf, v) + ' ' + u;
+  if (va < $intern_78)
+    return $format_0(nf, v * $intern_77) + ' ' + 'k' + u;
+  if (va < $intern_32)
+    return $format_0(nf, v * $intern_76) + ' ' + 'M' + u;
+  if (va < $intern_75)
+    return $format_0(nf, v * $intern_74) + ' ' + 'G' + u;
+  return $format_0(new NumberFormat_0('#.##E000', $getDefaultNative()), v) + ' ' + u;
+}
+
+defineClass(418, 7, $intern_79, ThreePhaseMotorElm, ThreePhaseMotorElm_0);
+_.calculateCurrent = function calculateCurrent_34() {
+  var i, j, n1, n2, ni, val, voltdiff;
+  if (this.nodeCurrents == null)
+    return;
+  for (i = 0; i != 13; i++)
+    this.nodeCurrents[i] = 0;
+  for (i = 0; i != 5; i++) {
+    val = this.coilCurSourceValues[i];
+    if (this.xformMatrix != null) {
+      for (j = 0; j != 5; j++) {
+        n1 = this.coilNodes[j * 2];
+        n2 = this.coilNodes[j * 2 + 1];
+        voltdiff = this.volts[n1] - this.volts[n2];
+        val += voltdiff * this.xformMatrix[i][j];
+      }
+    }
+    this.coilCurrents[i] = val;
+    ni = this.coilNodes[i];
+    this.nodeCurrents[ni] += val;
+    this.nodeCurrents[ni + 1] -= val;
+  }
+}
+  ;
+_.canFlipX = function canFlipX_4() {
+  return false;
+}
+  ;
+_.canFlipY = function canFlipY_5() {
+  return false;
+}
+  ;
+_.doStep = function doStep_44() {
+  var i, n1, n2;
+  for (i = 0; i != 5; i++) {
+    n1 = this.coilNodes[i * 2];
+    n2 = this.coilNodes[i * 2 + 1];
+    $stampCurrentSource(sim_0, this.nodes[n1], this.nodes[n2], this.coilCurSourceValues[i]);
+  }
+  $updateVoltageSource(sim_0, this.voltSources[0], -this.vs1value);
+  $updateVoltageSource(sim_0, this.voltSources[1], -this.vs2value);
+}
+  ;
+_.draw = function draw_75(g) {
+  var angleAux, cc, i, q;
+  $setBbox_0(this, this.point1, this.point2, this.cr);
+  for (i = 0; i != 6; i++) {
+    $setVoltageColor(this, g, this.volts[i]);
+    drawThickLine_0(g, this.posts[i], this.leads[i]);
+  }
+  for (i = 0; i != 3; i++) {
+    this.curcounts[i] = $updateDotCount(this.coilCurrents[i], this.curcounts[i]);
+    $drawDots(g, this.posts[i * 2], this.leads[i * 2], this.curcounts[i]);
+    $drawDots(g, this.leads[i * 2 + 1], this.posts[i * 2 + 1], this.curcounts[i]);
+  }
+  $setPowerColor_0(this, g);
+  cc = new Color(165, 165, 165);
+  $setColor_0(g, cc);
+  $fillOval(g, this.motorCenter.x_0 - this.cr, this.motorCenter.y_0 - this.cr, this.cr * 2);
+  cc = new Color(10, 10, 10);
+  $setColor_0(g, cc);
+  angleAux = toDouble_0(fromDouble_0($wnd.Math.round(this.angle * 300))) / 300;
+  $fillOval(g, this.motorCenter.x_0 - round_int(this.cr / 2.2), this.motorCenter.y_0 - round_int(this.cr / 2.2), round_int(2 * this.cr / 2.2));
+  $setColor_0(g, cc);
+  q = 17.136000000000003 / this.dn * 37 / 27;
+  $interpPointFix_0(this.point1, this.point2, ps1, 0.5 + q * $wnd.Math.cos(angleAux), q * $wnd.Math.sin(angleAux));
+  $interpPointFix_0(this.point1, this.point2, ps2, 0.5 - q * $wnd.Math.cos(angleAux), -q * $wnd.Math.sin(angleAux));
+  drawThickerLine_0(g, ps1, ps2);
+  $interpPointFix_0(this.point1, this.point2, ps1, 0.5 + q * $wnd.Math.cos(angleAux + $intern_100), q * $wnd.Math.sin(angleAux + $intern_100));
+  $interpPointFix_0(this.point1, this.point2, ps2, 0.5 - q * $wnd.Math.cos(angleAux + $intern_100), -q * $wnd.Math.sin(angleAux + $intern_100));
+  drawThickerLine_0(g, ps1, ps2);
+  $interpPointFix_0(this.point1, this.point2, ps1, 0.5 + q * $wnd.Math.cos(angleAux + $intern_101), q * $wnd.Math.sin(angleAux + $intern_101));
+  $interpPointFix_0(this.point1, this.point2, ps2, 0.5 - q * $wnd.Math.cos(angleAux + $intern_101), -q * $wnd.Math.sin(angleAux + $intern_101));
+  drawThickerLine_0(g, ps1, ps2);
+  $drawPosts(this, g);
+  $setColor_0(g, mouseElmRef == this || this.selected_0 || app_0.mouse.plotYElm == this || instanceOf(mouseElmRef, 20) && $getElm_0(mouseElmRef.elmScope) == this || $isOnHighlightedNet(this) ? selectColor_0 : whiteColor);
+  g.context.save();
+  g.savedFontSize = g.currentFontSize;
+  if ($wnd.Math.abs(this.dy) > $wnd.Math.abs(this.dx)) {
+    for (i = 0; i != 3; i++) {
+      $drawString(g, 'UVW'.substr(i, i + 1 - i) + '1', this.posts[i * 2].x_0 + 5, this.posts[i * 2].y_0 + 8);
+      $drawString(g, 'UVW'.substr(i, i + 1 - i) + '2', this.posts[i * 2 + 1].x_0 + 5, this.posts[i * 2 + 1].y_0 - 2);
+    }
+  }
+  else {
+    g.context.textAlign = 'center';
+    for (i = 0; i != 3; i++) {
+      $drawString(g, 'UVW'.substr(i, i + 1 - i) + '1', this.posts[i * 2].x_0 + 11, this.posts[i * 2].y_0 - 7);
+      $drawString(g, 'UVW'.substr(i, i + 1 - i) + '2', this.posts[i * 2 + 1].x_0 - 11, this.posts[i * 2 + 1].y_0 - 7);
+    }
+  }
+  g.context.restore();
+  g.currentFontSize = g.savedFontSize;
+  this.filteredSpeed = this.filteredSpeed * 0.98 + this.speed * 0.02;
+}
+  ;
+_.dumpXml = function dumpXml_77(doc, elem) {
+  dumpAttr_1(elem, 'x', this.x_0 + ' ' + this.y_0 + ' ' + this.x2 + ' ' + this.y2);
+  dumpAttr_0(elem, 'f', this.flags);
+  dumpAttr(elem, 'rs', this.Rs);
+  dumpAttr(elem, 'rr', this.Rr);
+  dumpAttr(elem, 'ls', this.Ls);
+  dumpAttr(elem, 'lr', this.Lr);
+  dumpAttr(elem, 'lm', this.Lm);
+  dumpAttr(elem, 'b', this.b);
+  dumpAttr(elem, 'j', this.J);
+}
+  ;
+_.getConnection = function getConnection_31(n1, n2) {
+  return true;
+}
+  ;
+_.getCurrentIntoNode = function getCurrentIntoNode_28(n) {
+  if (n % 2 == 1)
+    return this.coilCurrents[n / 2 | 0];
+  return -this.coilCurrents[n / 2 | 0];
+}
+  ;
+_.getDumpType = function getDumpType_105() {
+  return 427;
+}
+  ;
+_.getEditInfo = function getEditInfo_69(n) {
+  if (n == 0)
+    return new EditInfo_0('Stator Inductance (H)', this.Ls, 0, 0);
+  if (n == 1)
+    return new EditInfo_0('Rotor Inductance (H)', this.Lr, 0, 0);
+  if (n == 2)
+    return $setDimensionless(new EditInfo_0('Coupling Coefficient', this.Lm / $wnd.Math.sqrt(this.Ls * this.Lr), 0, 0));
+  if (n == 3)
+    return new EditInfo_0('Stator Resistance (ohms)', this.Rs, 0, 0);
+  if (n == 4)
+    return new EditInfo_0('Rotor Resistance (ohms)', this.Rr, 0, 0);
+  if (n == 5)
+    return new EditInfo_0('Friction coefficient (Nms/rad)', this.b, 0, 0);
+  if (n == 6)
+    return new EditInfo_0('Moment of inertia (Kg.m^2)', this.J, 0, 0);
+  return null;
+}
+  ;
+_.getInfo_0 = function getInfo_79(arr) {
+  arr[0] = '3-Phase Motor';
+  arr[1] = 'I = ' + getUnitText($wnd.Math.abs(this.current_0), 'A', false);
+  arr[2] = 'Vd = ' + getUnitText($wnd.Math.abs(this.volts[0] - this.volts[1]), 'V', false);
+  arr[3] = LS('speed') + ' = ' + getUnitTextRPM(60 * $wnd.Math.abs(this.filteredSpeed) / $intern_2, LS('RPM'));
+}
+  ;
+_.getInternalNodeCount = function getInternalNodeCount_10() {
+  return 7;
+}
+  ;
+_.getPost = function getPost_20(n) {
+  return this.posts[n];
+}
+  ;
+_.getPostCount_0 = function getPostCount_68() {
+  return 6;
+}
+  ;
+_.getVoltageSourceCount = function getVoltageSourceCount_47() {
+  return 2;
+}
+  ;
+_.hasGroundConnection = function hasGroundConnection_17(n1) {
+  return false;
+}
+  ;
+_.reset_0 = function reset_43() {
+  $reset(this);
+  this.filteredSpeed = this.speed = 0;
+  this.coilCurSourceValues = initUnidimensionalArray(D_classLit, $intern_70, 8, 5, 15, 1);
+  this.coilCurrents = initUnidimensionalArray(D_classLit, $intern_70, 8, 5, 15, 1);
+}
+  ;
+_.setEditValue = function setEditValue_67(n, ei) {
+  ei.value_0 > 0 && n == 0 && (this.Ls = ei.value_0);
+  ei.value_0 > 0 && n == 1 && (this.Lr = ei.value_0);
+  ei.value_0 > 0 && ei.value_0 < 1 && n == 2 && (this.Lm = ei.value_0 * $wnd.Math.sqrt(this.Ls * this.Lr));
+  ei.value_0 > 0 && n == 3 && (this.Rs = ei.value_0);
+  ei.value_0 > 0 && n == 4 && (this.Rr = ei.value_0);
+  n == 5 && (this.b = ei.value_0);
+  ei.value_0 > 0 && n == 6 && (this.J = ei.value_0);
+}
+  ;
+_.setPoints = function setPoints_67() {
+  var i, q;
+  $setPoints(this);
+  this.posts = $newPointArray(6);
+  this.leads = $newPointArray(6);
+  q = $wnd.Math.abs(this.dy) > $wnd.Math.abs(this.dx) ? -1 : 1;
+  for (i = 0; i != 3; i++) {
+    $interpPoint_2(this.point1, this.point2, this.posts[i * 2], 0, -q * 32 * (i - 1));
+    $interpPoint_2(this.point1, this.point2, this.leads[i * 2], 0.45, -q * 32 * (i - 1));
+    $interpPoint_2(this.point1, this.point2, this.posts[i * 2 + 1], 1, q * 32 * (i - 1));
+    $interpPoint_2(this.point1, this.point2, this.leads[i * 2 + 1], 0.55, q * 32 * (i - 1));
+  }
+  this.motorCenter = $interpPoint(this.point1, this.point2, 0.5);
+  $allocNodes(this);
+}
+  ;
+_.setVoltageSource = function setVoltageSource_7(n, v) {
+  this.voltSources[n] = v;
+}
+  ;
+_.stamp = function stamp_58() {
+  var Lr2, coilInductances, couplingCoefs, i, j, k0, n001, n002, n003, n004, n005, n006, n007, ni1, ni2, nj1, nj2, ts;
+  n001 = this.nodes[6];
+  n002 = this.nodes[7];
+  n003 = this.nodes[8];
+  n004 = this.nodes[9];
+  n005 = this.nodes[10];
+  n006 = this.nodes[11];
+  n007 = this.nodes[12];
+  $stampResistor(sim_0, this.nodes[0], n001, this.Rs);
+  $stampResistor(sim_0, this.nodes[2], n003, this.Rs);
+  $stampResistor(sim_0, this.nodes[4], n005, this.Rs);
+  $stampResistor(sim_0, n004, 0, 1.5 * this.Rr);
+  $stampResistor(sim_0, n007, 0, 1.5 * this.Rr);
+  Lr2 = this.Lr * 1.5;
+  coilInductances = stampJavaTypeInfo(getClassLiteralForArray(D_classLit, 1), $intern_70, 8, 15, [this.Ls, this.Ls, this.Ls, Lr2, Lr2]);
+  couplingCoefs = initMultidimensionalArray(D_classLit, [$intern_3, $intern_70], [13, 8], 15, [5, 5], 2);
+  this.xformMatrix = initMultidimensionalArray(D_classLit, [$intern_3, $intern_70], [13, 8], 15, [5, 5], 2);
+  for (i = 0; i != 5; i++)
+    this.xformMatrix[i][i] = coilInductances[i];
+  k0 = this.Lm / $wnd.Math.sqrt(this.Ls * Lr2);
+  couplingCoefs[0][3] = couplingCoefs[3][0] = k0;
+  couplingCoefs[1][3] = couplingCoefs[3][1] = -k0 / 2;
+  couplingCoefs[1][4] = couplingCoefs[4][1] = k0 * $wnd.Math.sqrt(3) / 2;
+  couplingCoefs[2][3] = couplingCoefs[3][2] = -k0 / 2;
+  couplingCoefs[2][4] = couplingCoefs[4][2] = -k0 * $wnd.Math.sqrt(3) / 2;
+  for (i = 0; i != 5; i++)
+    for (j = 0; j != i; j++)
+      this.xformMatrix[i][j] = this.xformMatrix[j][i] = couplingCoefs[i][j] * $wnd.Math.sqrt(coilInductances[i] * coilInductances[j]);
+  invertMatrix(this.xformMatrix, 5);
+  ts = sim_0.timeStep;
+  for (i = 0; i != 5; i++)
+    for (j = 0; j != 5; j++) {
+      this.xformMatrix[i][j] *= ts;
+      ni1 = this.coilNodes[i * 2];
+      nj1 = this.coilNodes[j * 2];
+      ni2 = this.coilNodes[i * 2 + 1];
+      nj2 = this.coilNodes[j * 2 + 1];
+      i == j ? $stampConductance(sim_0, this.nodes[ni1], this.nodes[ni2], this.xformMatrix[i][i]) : $stampVCCurrentSource(sim_0, this.nodes[ni1], this.nodes[ni2], this.nodes[nj1], this.nodes[nj2], this.xformMatrix[i][j]);
+    }
+  for (i = 0; i != 10; i++)
+    $stampRightSide(sim_0, this.nodes[this.coilNodes[i]]);
+  $stampVoltageSource(sim_0, n002, 0, this.voltSources[0]);
+  $stampVoltageSource(sim_0, n006, 0, this.voltSources[1]);
+  (this.coilCurSourceValues == null || this.coilCurSourceValues.length != 5) && (this.coilCurSourceValues = initUnidimensionalArray(D_classLit, $intern_70, 8, 5, 15, 1));
+  (this.coilCurrents == null || this.coilCurrents.length != 5) && (this.coilCurrents = initUnidimensionalArray(D_classLit, $intern_70, 8, 5, 15, 1));
+  (this.nodeCurrents == null || this.nodeCurrents.length != 13) && (this.nodeCurrents = initUnidimensionalArray(D_classLit, $intern_70, 8, 13, 15, 1));
+}
+  ;
+_.startIteration = function startIteration_16() {
+  var i, torque, val;
+  for (i = 0; i != 5; i++) {
+    val = this.coilCurrents[i];
+    this.coilCurSourceValues[i] = val;
+  }
+  torque = 2 * $wnd.Math.sqrt(3) / 2 * this.Lm * ((this.coilCurrents[1] - this.coilCurrents[2]) * this.coilCurrents[3] - $wnd.Math.sqrt(3) * this.coilCurrents[0] * this.coilCurrents[4]);
+  this.speed += sim_0.timeStep * (torque - this.b * this.speed) / this.J;
+  this.angle = this.angle + this.speed * sim_0.timeStep;
+  this.vs1value = -2 * this.speed * (this.Lm * $wnd.Math.sqrt(3) / 2 * (this.coilCurrents[1] - this.coilCurrents[2]) + 1.5 * this.Lr * this.coilCurrents[4]);
+  this.vs2value = 2 * this.speed * (1.5 * this.Lm * this.coilCurrents[0] + 1.5 * this.Lr * this.coilCurrents[3]);
+}
+  ;
+_.undumpXml = function undumpXml_79(xml) {
+  this.flags = $parseIntAttr(xml, 'f', this.flags);
+  this.Rs = $parseDoubleAttr(xml, 'rs', this.Rs);
+  this.Rr = $parseDoubleAttr(xml, 'rr', this.Rr);
+  this.Ls = $parseDoubleAttr(xml, 'ls', this.Ls);
+  this.Lr = $parseDoubleAttr(xml, 'lr', this.Lr);
+  this.Lm = $parseDoubleAttr(xml, 'lm', this.Lm);
+  this.b = $parseDoubleAttr(xml, 'b', this.b);
+  this.J = $parseDoubleAttr(xml, 'j', this.J);
+}
+  ;
+_.J = 0;
+_.Lm = 0;
+_.Lr = 0;
+_.Ls = 0;
+_.Rr = 0;
+_.Rs = 0;
+_.angle = 0;
+_.b = 0;
+_.cr = 0;
+_.filteredSpeed = 0;
+_.speed = 0;
+_.vs1value = 0;
+_.vs2value = 0;
+var Lcom_lushprojects_circuitjs1_client_ThreePhaseMotorElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ThreePhaseMotorElm', 418);
+function TimeDelayRelayElm(xx, yy) {
+  $clinit_ChipElm();
+  ChipElm.call(this, xx, yy);
+  this.onDelay = 1;
+  this.offDelay = 0;
+  this.onResistance = 1;
+  this.offResistance = this.resistance = 10000000;
+}
+
+function TimeDelayRelayElm_0(xa, ya, xb, yb, f, st) {
+  $clinit_ChipElm();
+  ChipElm_0.call(this, xa, ya, xb, yb, f, st);
+  this.onDelay = __parseAndValidateDouble($nextToken(st));
+  this.offDelay = __parseAndValidateDouble($nextToken(st));
+  this.onResistance = __parseAndValidateDouble($nextToken(st));
+  this.offResistance = this.resistance = __parseAndValidateDouble($nextToken(st));
+}
+
+defineClass(401, 32, $intern_79, TimeDelayRelayElm, TimeDelayRelayElm_0);
+_.doStep = function doStep_45() {
+  this.resistance = this.onState ? this.onResistance : this.offResistance;
+  $stampResistor(sim_0, this.nodes[2], this.nodes[3], this.resistance);
+}
+  ;
+_.draw = function draw_76(g) {
+  this.pins[0].current = -(this.volts[0] - this.volts[1]) / $intern_82;
+  this.pins[2].current = -(this.volts[2] - this.volts[3]) / this.resistance;
+  this.pins[1].current = -this.pins[0].current;
+  this.pins[3].current = -this.pins[2].current;
+  $drawChip(this, g);
+}
+  ;
+_.dumpXml = function dumpXml_78(doc, elem) {
+  $dumpXml_0(this, elem);
+  dumpAttr(elem, 'ond', this.onDelay);
+  dumpAttr(elem, 'ofd', this.offDelay);
+  dumpAttr(elem, 'onr', this.onResistance);
+  dumpAttr(elem, 'ofr', this.offResistance);
+}
+  ;
+_.getChipEditInfo = function getChipEditInfo_24(n) {
+  if (n == 0)
+    return new EditInfo_0('On Delay (s)', this.onDelay, 0, 0);
+  if (n == 1)
+    return new EditInfo_0('Off Delay (s)', this.offDelay, 0, 0);
+  if (n == 2)
+    return new EditInfo_0('On Resistance (ohms)', this.onResistance, 0, 0);
+  if (n == 3)
+    return new EditInfo_0('Off Resistance (ohms)', this.offResistance, 0, 0);
+  return null;
+}
+  ;
+_.getChipName = function getChipName_28() {
+  return 'time delay relay';
+}
+  ;
+_.getDumpType = function getDumpType_106() {
+  return 414;
+}
+  ;
+_.getPostCount_0 = function getPostCount_69() {
+  return 4;
+}
+  ;
+_.getVoltageSourceCount = function getVoltageSourceCount_48() {
+  return 0;
+}
+  ;
+_.isDigitalChip = function isDigitalChip_6() {
+  return false;
+}
+  ;
+_.nonLinear = function nonLinear_22() {
+  return true;
+}
+  ;
+_.reset_0 = function reset_44() {
+  this.lastTransition = 0;
+  this.poweredState = this.onState = false;
+}
+  ;
+_.setChipEditValue = function setChipEditValue_25(n, ei) {
+  n == 0 && (this.onDelay = ei.value_0);
+  n == 1 && (this.offDelay = ei.value_0);
+  n == 2 && ei.value_0 > 0 && (this.onResistance = ei.value_0);
+  n == 3 && ei.value_0 > 0 && (this.offResistance = ei.value_0);
+}
+  ;
+_.setupPins = function setupPins_29() {
+  this.sizeX = 2;
+  this.sizeY = 2;
+  this.pins = initUnidimensionalArray(Lcom_lushprojects_circuitjs1_client_ChipElm$Pin_2_classLit, $intern_3, 9, 4, 0, 1);
+  this.pins[0] = new ChipElm$Pin(this, 1, 2, 'Vin');
+  this.pins[1] = new ChipElm$Pin(this, 1, 3, 'gnd');
+  this.pins[2] = new ChipElm$Pin(this, 0, 2, 'in');
+  this.pins[3] = new ChipElm$Pin(this, 0, 3, 'out');
+}
+  ;
+_.stamp = function stamp_59() {
+  this.resistance = this.onState ? this.onResistance : this.offResistance;
+  $stampResistor(sim_0, this.nodes[0], this.nodes[1], $intern_82);
+  $stampNonLinear(sim_0, this.nodes[2]);
+  $stampNonLinear(sim_0, this.nodes[3]);
+}
+  ;
+_.stepFinished = function stepFinished_22() {
+  var oldState;
+  oldState = this.poweredState;
+  this.poweredState = this.volts[0] - this.volts[1] > 2.5;
+  oldState != this.poweredState && (this.lastTransition = sim_0.t);
+  sim_0.t > this.lastTransition + (this.poweredState ? this.onDelay : this.offDelay) && (this.onState = this.poweredState);
+}
+  ;
+_.undumpXml = function undumpXml_80(xml) {
+  $undumpXml_0(this, xml);
+  this.onDelay = $parseDoubleAttr(xml, 'ond', this.onDelay);
+  this.offDelay = $parseDoubleAttr(xml, 'ofd', this.offDelay);
+  this.onResistance = $parseDoubleAttr(xml, 'onr', this.onResistance);
+  this.offResistance = $parseDoubleAttr(xml, 'ofr', this.offResistance);
+  this.resistance = this.offResistance;
+}
+  ;
+_.lastTransition = 0;
+_.offDelay = 0;
+_.offResistance = 0;
+_.onDelay = 0;
+_.onResistance = 0;
+_.onState = false;
+_.poweredState = false;
+_.resistance = 0;
+var Lcom_lushprojects_circuitjs1_client_TimeDelayRelayElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'TimeDelayRelayElm', 401);
+function $setupPins_23(this$static) {
+  this$static.sizeX = 3;
+  this$static.sizeY = 5;
+  this$static.pins = initUnidimensionalArray(Lcom_lushprojects_circuitjs1_client_ChipElm$Pin_2_classLit, $intern_3, 9, 8, 0, 1);
+  this$static.pins[0] = new ChipElm$Pin(this$static, 1, 2, (this$static.flags & 8) == 0 ? 'dis' : '7');
+  this$static.pins[1] = new ChipElm$Pin(this$static, 3, 2, (this$static.flags & 8) == 0 ? 'tr' : '2');
+  (this$static.flags & 8) == 0 && (this$static.pins[1].lineOver = true);
+  this$static.pins[2] = new ChipElm$Pin(this$static, 4, 2, (this$static.flags & 8) == 0 ? 'th' : '6');
+  this$static.pins[3] = new ChipElm$Pin(this$static, 1, 0, (this$static.flags & 8) == 0 ? 'Vcc' : '8');
+  this$static.pins[4] = new ChipElm$Pin(this$static, 1, 1, (this$static.flags & 8) == 0 ? 'ctl' : '5');
+  this$static.pins[5] = new ChipElm$Pin(this$static, 2, 3, (this$static.flags & 8) == 0 ? 'out' : '3');
+  this$static.pins[5].state = true;
+  this$static.pins[6] = new ChipElm$Pin(this$static, 1, 3, (this$static.flags & 8) == 0 ? 'rst' : '4');
+  (this$static.flags & 8) == 0 && (this$static.pins[6].lineOver = true);
+  this$static.pins[7] = new ChipElm$Pin(this$static, 2, 1, (this$static.flags & 8) == 0 ? 'gnd' : '1');
+}
+
+function TimerElm(xx, yy) {
+  $clinit_ChipElm();
+  ChipElm.call(this, xx, yy);
+}
+
+function TimerElm_0(xa, ya, xb, yb, f, st) {
+  $clinit_ChipElm();
+  ChipElm_0.call(this, xa, ya, xb, yb, f, st);
+}
+
+defineClass(435, 32, $intern_79, TimerElm, TimerElm_0);
+_.calculateCurrent = function calculateCurrent_35() {
+  var groundVolts;
+  this.pins[3].current = (this.volts[4] - this.volts[3]) / 5000;
+  groundVolts = (this.flags & 4) != 0 ? this.volts[7] : 0;
+  this.pins[4].current = -(this.volts[4] - groundVolts) / $intern_82 - this.pins[3].current;
+  this.pins[0].current = this.out ? 0 : -(this.volts[0] - groundVolts) / 10;
+  this.pins[5].current = -(this.volts[5] - (this.out ? this.volts[3] : groundVolts));
+  this.out && (this.pins[3].current -= this.pins[5].current);
+  if ((this.flags & 4) != 0) {
+    this.pins[7].current = (this.volts[4] - groundVolts) / $intern_82;
+    this.out || (this.pins[7].current += (this.volts[0] - groundVolts) / 10 + (this.volts[5] - groundVolts));
+  }
+}
+  ;
+_.doStep = function doStep_46() {
+  this.out || $stampResistor(sim_0, this.nodes[0], this.ground, 10);
+  $stampResistor(sim_0, this.out ? this.nodes[3] : this.ground, this.nodes[5], 1);
+}
+  ;
+_.getChipEditInfo = function getChipEditInfo_25(n) {
+  var ei;
+  if (n == 0) {
+    ei = new EditInfo_0('', 0, 0, 0);
+    ei.checkbox = new Checkbox_0('Ground Pin', (this.flags & 4) != 0);
+    return ei;
+  }
+  if (n == 1) {
+    ei = createCheckbox('Show Pin Numbers', (this.flags & 8) != 0);
+    return ei;
+  }
+  return null;
+}
+  ;
+_.getChipName = function getChipName_29() {
+  return '555 Timer';
+}
+  ;
+_.getDefaultFlags = function getDefaultFlags_0() {
+  return 6;
+}
+  ;
+_.getDumpType = function getDumpType_107() {
+  return 165;
+}
+  ;
+_.getPostCount_0 = function getPostCount_70() {
+  return (this.flags & 4) != 0 ? 8 : (this.flags & 2) != 0 || (this.flags & 4) != 0 ? 7 : 6;
+}
+  ;
+_.getVoltageSourceCount = function getVoltageSourceCount_49() {
+  return 0;
+}
+  ;
+_.isDigitalChip = function isDigitalChip_7() {
+  return false;
+}
+  ;
+_.nonLinear = function nonLinear_23() {
+  return true;
+}
+  ;
+_.setChipEditValue = function setChipEditValue_26(n, ei) {
+  if (n == 0) {
+    this.flags = $changeFlag(ei, this.flags, 4);
+    $allocNodes(this);
+    $setPoints_0(this);
+    return;
+  }
+  if (n == 1) {
+    this.flags = $changeFlag(ei, this.flags, 8);
+    $setupPins_23(this);
+    $setPoints_0(this);
+    return;
+  }
+}
+  ;
+_.setupPins = function setupPins_30() {
+  $setupPins_23(this);
+}
+  ;
+_.stamp = function stamp_60() {
+  this.ground = (this.flags & 4) != 0 ? this.nodes[7] : 0;
+  $stampResistor(sim_0, this.nodes[3], this.nodes[4], 5000);
+  $stampResistor(sim_0, this.nodes[4], this.ground, $intern_82);
+  $stampNonLinear(sim_0, this.nodes[0]);
+  $stampNonLinear(sim_0, this.nodes[5]);
+  $stampNonLinear(sim_0, this.nodes[3]);
+  (this.flags & 4) != 0 && $stampNonLinear(sim_0, this.nodes[7]);
+}
+  ;
+_.startIteration = function startIteration_17() {
+  var groundVolts, triggered;
+  groundVolts = (this.flags & 4) != 0 ? this.volts[7] : 0;
+  this.out = this.volts[5] > (this.volts[3] + groundVolts) / 2;
+  this.volts[2] > this.volts[4] && (this.out = false);
+  triggered = (this.volts[4] + groundVolts) / 2 > this.volts[1];
+  (triggered || this.triggerSuppressed) && (this.out = true);
+  if (((this.flags & 2) != 0 || (this.flags & 4) != 0) && this.volts[6] < 0.7 + groundVolts) {
+    this.out = false;
+    this.triggerSuppressed = triggered;
+  }
+  else
+    this.triggerSuppressed = false;
+}
+  ;
+_.ground = 0;
+_.out = false;
+_.triggerSuppressed = false;
+var Lcom_lushprojects_circuitjs1_client_TimerElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'TimerElm', 435);
+function $createButtonSet(this$static, info) {
+  var app, command, i, iconLabel, mainCommand, paletteContainer, paletteStyle, smallSvg, variantButton, variantStyle;
+  mainCommand = new MyCommand('main', info[1]);
+  app = theApp;
+  iconLabel = $createIconButton(this$static, info[0], $getLabelTextForClass(app.ui, info[1]), mainCommand);
+  paletteContainer = new FlowPanel;
+  setVisible(($clinit_DOM(), paletteContainer.element), false);
+  paletteContainer.element.className = 'palette-container';
+  paletteStyle = paletteContainer.element.style;
+  paletteStyle['position'] = ($clinit_Style$Position(), 'absolute');
+  paletteStyle['zIndex'] = '1000';
+  paletteStyle['backgroundColor'] = '#ffffff';
+  paletteStyle['borderWidth'] = ($clinit_Style$Unit(), '1.0px');
+  paletteStyle['borderColor'] = '#ccc';
+  paletteStyle['borderStyle'] = ($clinit_Style$BorderStyle(), 'solid');
+  paletteStyle['padding'] = '5.0px';
+  for (i = 0; i < info.length; i += 2) {
+    variantButton = new Label;
+    $setTextOrHtml(variantButton.directionalTextHelper, '', false);
+    $updateHorizontalAlignment(variantButton);
+    $setInnerHTML(variantButton.element, $makeSvg(info[i], 40));
+    $setTitle(variantButton, $getLabelTextForClass(app.ui, info[i + 1]));
+    variantStyle = variantButton.element.style;
+    variantStyle['color'] = '#333';
+    variantStyle['cursor'] = ($clinit_Style$Cursor(), 'pointer');
+    command = new MyCommand('main', info[i + 1]);
+    smallSvg = $makeSvg(info[i], 24);
+    $addDomHandler(variantButton, new Toolbar$lambda$2$Type(this$static, iconLabel, smallSvg, mainCommand, command, paletteContainer), ($clinit_ClickEvent(), $clinit_ClickEvent(), TYPE_1));
+    $add(paletteContainer, variantButton, paletteContainer.element);
+  }
+  $add_0(($clinit_RootPanel(), get_1()), paletteContainer);
+  $addDomHandler(iconLabel, new Toolbar$lambda$3$Type(paletteContainer, iconLabel), ($clinit_MouseOverEvent(), $clinit_MouseOverEvent(), TYPE_8));
+  $addDomHandler(iconLabel, new Toolbar$lambda$4$Type(paletteContainer), ($clinit_MouseOutEvent(), $clinit_MouseOutEvent(), TYPE_7));
+  $addDomHandler(paletteContainer, new Toolbar$lambda$5$Type(paletteContainer), (null, TYPE_8));
+  $addDomHandler(paletteContainer, new Toolbar$lambda$6$Type(paletteContainer), (null, TYPE_7));
+  return iconLabel;
+}
+
+function $createIconButton(this$static, iconClass, tooltip, command) {
+  var iconLabel, style;
+  iconLabel = new Label;
+  $setTextOrHtml(iconLabel.directionalTextHelper, '', false);
+  $updateHorizontalAlignment(iconLabel);
+  $equals_1(iconClass.substr(0, 4), '<svg') ? $setInnerHTML(($clinit_DOM(), iconLabel.element), "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24'><g transform='scale(1.0)'>" + $substring_0(iconClass, 5, iconClass.length - 5) + '<g><\/svg>') : $addClassName(($clinit_DOM(), iconLabel.element), 'cirjsicon-' + iconClass);
+  $setTitle(iconLabel, LS(tooltip));
+  style = ($clinit_DOM(), iconLabel.element).style;
+  style['fontSize'] = ($clinit_Style$Unit(), '24.0px');
+  style['color'] = '#333';
+  style['padding'] = '1.0px';
+  style['marginRight'] = '5.0px';
+  style['cursor'] = ($clinit_Style$Cursor(), 'pointer');
+  $equals_1(iconClass.substr(0, 4), '<svg') && (style['paddingTop'] = '5.0px', undefined);
+  $addDomHandler(iconLabel, new Toolbar$lambda$0$Type(iconLabel), ($clinit_MouseOverEvent(), $clinit_MouseOverEvent(), TYPE_8));
+  $addDomHandler(iconLabel, new Toolbar$lambda$1$Type(iconLabel), ($clinit_MouseOutEvent(), $clinit_MouseOutEvent(), TYPE_7));
+  $addDomHandler(iconLabel, new Toolbar$1(this$static, iconLabel, command), ($clinit_ClickEvent(), $clinit_ClickEvent(), TYPE_1));
+  $equals_1(command.menuName, 'main') && $putStringValue(this$static.highlightableButtons, command.itemName, iconLabel);
+  return iconLabel;
+}
+
+function $highlightButton(this$static, key) {
+  var newActiveButton;
+  if (this$static.activeButton) {
+    $getElement(this$static.activeButton).style['color'] = '#333';
+    $getElement(this$static.activeButton).style['backgroundColor'] = null;
+  }
+  newActiveButton = $getStringValue(this$static.highlightableButtons, key);
+  if (newActiveButton) {
+    ($clinit_DOM(), newActiveButton.element).style['color'] = '#007bff';
+    newActiveButton.element.style['backgroundColor'] = '#e6f7ff';
+    this$static.activeButton = newActiveButton;
+  }
+}
+
+function $lambda$2(this$static, iconLabel_1, smallSvg_2, mainCommand_3, command_4, paletteContainer_5) {
+  $setInnerHTML(($clinit_DOM(), iconLabel_1.element), smallSvg_2);
+  $removeStringValue(this$static.highlightableButtons, mainCommand_3.itemName);
+  $putStringValue(this$static.highlightableButtons, command_4.itemName, iconLabel_1);
+  setVisible(paletteContainer_5.element, false);
+  $setItemName(mainCommand_3, command_4.itemName);
+  $menuPerformed(theApp.commands, command_4.menuName, command_4.itemName);
+}
+
+function $makeSvg(s, size_0) {
+  var scale;
+  scale = size_0 / 24;
+  return "<svg xmlns='http://www.w3.org/2000/svg' width='" + size_0 + "' height='" + size_0 + "'><g transform='scale(" + scale + ")'>" + $substring_0(s, 5, s.length - 5) + '<g><\/svg>';
+}
+
+function $setEuroResistors(this$static, euro) {
+  $setInnerHTML($getElement(this$static.resistorButton), "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24'><g transform='scale(1.0)'>" + $substring_0(euro ? "<svg><g transform='translate(97.71,-28.71) scale(0.428571)'><path fill='none' stroke='currentColor' d=' M -224 96 L -216 96' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M -184 96 L -176 96' stroke-linecap='round' stroke-width='3' /><g transform='matrix(1,0,0,1,-216,96)'><rect fill='none' stroke='currentColor' x='0' y='-6' width='32' height='12' stroke-linecap='round' stroke-width='3' /><\/g><path fill='currentColor' stroke='currentColor' d=' M -221 96 A 3 3 0 1 1 -221.00026077471009 95.96044522459944 Z' /><path fill='currentColor' stroke='currentColor' d=' M -173 96 A 3 3 0 1 1 -173.00026077471009 95.96044522459944 Z' /><\/g><\/svg>" : "<svg> <g transform='scale(.5,.5) translate(-544,-297)'><path stroke='#000000' d=' M 544 320 L 552 320' stroke-width='3'/><path stroke='#000000' d=' M 584 320 L 592 320' stroke-width='3'/><g transform='matrix(1,0,0,1,552,320)'><path fill='none' stroke='currentColor' d=' M 0 0 L 2 6 L 6 -6 L 10 6 L 14 -6 L 18 6 L 22 -6 L 26 6 L 30 -6 L 32 0' stroke-width='2'/> <\/g> <\/g> <\/svg>", 5, (euro ? "<svg><g transform='translate(97.71,-28.71) scale(0.428571)'><path fill='none' stroke='currentColor' d=' M -224 96 L -216 96' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M -184 96 L -176 96' stroke-linecap='round' stroke-width='3' /><g transform='matrix(1,0,0,1,-216,96)'><rect fill='none' stroke='currentColor' x='0' y='-6' width='32' height='12' stroke-linecap='round' stroke-width='3' /><\/g><path fill='currentColor' stroke='currentColor' d=' M -221 96 A 3 3 0 1 1 -221.00026077471009 95.96044522459944 Z' /><path fill='currentColor' stroke='currentColor' d=' M -173 96 A 3 3 0 1 1 -173.00026077471009 95.96044522459944 Z' /><\/g><\/svg>" : "<svg> <g transform='scale(.5,.5) translate(-544,-297)'><path stroke='#000000' d=' M 544 320 L 552 320' stroke-width='3'/><path stroke='#000000' d=' M 584 320 L 592 320' stroke-width='3'/><g transform='matrix(1,0,0,1,552,320)'><path fill='none' stroke='currentColor' d=' M 0 0 L 2 6 L 6 -6 L 10 6 L 14 -6 L 18 6 L 22 -6 L 26 6 L 30 -6 L 32 0' stroke-width='2'/> <\/g> <\/g> <\/svg>").length - 5) + '<g><\/svg>');
+}
+
+function $setModeLabel(this$static, text_0) {
+  $setText_0(this$static.modeLabel, text_0);
+}
+
+function $styleModeLabel(label_0) {
+  var style;
+  style = ($clinit_DOM(), label_0.element).style;
+  style['fontSize'] = ($clinit_Style$Unit(), '16.0px');
+  style['color'] = '#333';
+  style['paddingRight'] = '10.0px';
+  style['whiteSpace'] = 'nowrap';
+}
+
+function Toolbar() {
+  var app, app0, app1, app2, app3, app4, app5, app6, fetInfo, gateInfo, opAmpInfo, srcInfo, style, switchInfo, transistorInfo;
+  FlowPanel.call(this);
+  this.highlightableButtons = new HashMap;
+  style = ($clinit_DOM(), this.element).style;
+  style['padding'] = ($clinit_Style$Unit(), '2.0px');
+  style['backgroundColor'] = '#f8f8f8';
+  style['borderWidth'] = '1.0px';
+  style['borderStyle'] = ($clinit_Style$BorderStyle(), 'solid');
+  style['borderColor'] = '#ccc';
+  style['display'] = ($clinit_Style$Display(), 'flex');
+  style['alignItems'] = 'center';
+  $add_2(this, $createIconButton(this, 'ccw', 'Undo', new MyCommand('edit', 'undo')));
+  $add_2(this, $createIconButton(this, 'cw', 'Redo', new MyCommand('edit', 'redo')));
+  $add_2(this, $createIconButton(this, 'scissors', 'Cut', new MyCommand('edit', 'cut')));
+  $add_2(this, $createIconButton(this, 'copy', 'Copy', new MyCommand('edit', 'copy')));
+  $add_2(this, $createIconButton(this, 'paste', 'Paste', new MyCommand('edit', 'paste')));
+  $add_2(this, $createIconButton(this, 'clone', 'Duplicate', new MyCommand('edit', 'duplicate')));
+  $add_2(this, $createIconButton(this, 'search', 'Find Component...', new MyCommand('edit', 'search')));
+  $add_2(this, $createIconButton(this, 'zoom-11', 'Zoom 100%', new MyCommand('zoom', 'zoom100')));
+  $add_2(this, $createIconButton(this, 'zoom-in', 'Zoom In', new MyCommand('zoom', 'zoomin')));
+  $add_2(this, $createIconButton(this, 'zoom-out', 'Zoom Out', new MyCommand('zoom', 'zoomout')));
+  $add_2(this, (app0 = theApp, $createIconButton(this, "<svg><g transform='scale(0.208) translate(7.5, 32)'><line x1='5' y1='45' x2='95' y2='5' stroke='currentColor' stroke-width='8' /> <circle cx='5' cy='45' r='10' fill='currentColor' /><circle cx='95' cy='5' r='10' fill='currentColor' /> <\/g><\/svg>", $getLabelTextForClass(app0.ui, 'WireElm'), new MyCommand('main', 'WireElm'))));
+  $add_2(this, this.resistorButton = (app1 = theApp, $createIconButton(this, "<svg> <g transform='scale(.5,.5) translate(-544,-297)'><path stroke='#000000' d=' M 544 320 L 552 320' stroke-width='3'/><path stroke='#000000' d=' M 584 320 L 592 320' stroke-width='3'/><g transform='matrix(1,0,0,1,552,320)'><path fill='none' stroke='currentColor' d=' M 0 0 L 2 6 L 6 -6 L 10 6 L 14 -6 L 18 6 L 22 -6 L 26 6 L 30 -6 L 32 0' stroke-width='2'/> <\/g> <\/g> <\/svg>", $getLabelTextForClass(app1.ui, 'ResistorElm'), new MyCommand('main', 'ResistorElm'))));
+  $add_2(this, (app2 = theApp, $createIconButton(this, "<svg><defs /><g transform='scale(.6) translate(-826.46,-231.31) scale(1.230769)'><path fill='none' stroke='currentColor' d=' M 688 192 L 688 208' stroke-linecap='round' stroke-width='3' /> <path fill='none' stroke='currentColor' d=' M 698 208 L 678 208' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 694 213 L 682 213' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 690 218 L 686 218' stroke-linecap='round' stroke-width='3' /><path fill='currentColor' stroke='currentColor' d=' M 691 192 A 3 3 0 1 1 690.9997392252899 191.96044522459943 Z' /> <\/g><\/svg>", $getLabelTextForClass(app2.ui, 'GroundElm'), new MyCommand('main', 'GroundElm'))));
+  $add_2(this, (app3 = theApp, $createIconButton(this, "<svg><defs /><g transform='translate(-323.76,-71.18) scale(0.470588)'><path fill='none' stroke='currentColor' d=' M 688 176 L 708 176' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 708 164 L 708 188' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 736 176 L 716 176' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 716 164 L 716 188' stroke-linecap='round' stroke-width='3' /><path fill='currentColor' stroke='currentColor' d=' M 691 176 A 3 3 0 1 1 690.9997392252899 175.96044522459943 Z' /><path fill='currentColor' stroke='currentColor' d=' M 739 176 A 3 3 0 1 1 738.9997392252899 175.96044522459943 Z' /><\/g><\/svg>", $getLabelTextForClass(app3.ui, 'CapacitorElm'), new MyCommand('main', 'CapacitorElm'))));
+  $add_2(this, (app4 = theApp, $createIconButton(this, "<svg><g transform='translate(-101.59,-58.18) scale(0.405680)'><path fill='none' stroke='currentColor' d=' M 256 176 L 264 176' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 296 176 L 304 176' stroke-linecap='round' stroke-width='3' /><g transform='matrix(1,0,0,1,264,176) scale(1,1)'><path fill='none' stroke='currentColor' d=' M 0 0 L 0 6.53144959545255e-16 A 5.333333333333333 5.333333333333333 0 0 1 10.666666666666666 0 L 10.666666666666666 0' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 10.666666666666666 0 L 10.666666666666668 6.53144959545255e-16 A 5.333333333333333 5.333333333333333 0 0 1 21.333333333333332 0 L 21.333333333333332 0' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 21.333333333333332 0 L 21.333333333333336 6.53144959545255e-16 A 5.333333333333333 5.333333333333333 0 0 1 32 0 L 32 0' stroke-linecap='round' stroke-width='3' /><\/g><path fill='currentColor' stroke='currentColor' d=' M 259 176 A 3 3 0 1 1 258.99973922528994 175.96044522459943 Z' /><path fill='currentColor' stroke='currentColor' d=' M 307 176 A 3 3 0 1 1 306.99973922528994 175.96044522459943 Z' /><\/g><\/svg>", $getLabelTextForClass(app4.ui, 'InductorElm'), new MyCommand('main', 'InductorElm'))));
+  $add_2(this, (app5 = theApp, $createIconButton(this, "<svg><defs /><g transform='translate(-323.76,-72.06) scale(0.470588)'><path fill='none' stroke='currentColor' d=' M 688 176 L 704 176' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 720 176 L 736 176' stroke-linecap='round' stroke-width='3' /><path fill='currentColor' stroke='currentColor' d=' M 704 168 L 704 184 L 720 176 Z' /><path fill='none' stroke='currentColor' d=' M 720 168 L 720 184' stroke-linecap='round' stroke-width='3' /><path fill='currentColor' stroke='currentColor' d=' M 691 176 A 3 3 0 1 1 690.9997392252899 175.96044522459943 Z' /><path fill='currentColor' stroke='currentColor' d=' M 739 176 A 3 3 0 1 1 738.9997392252899 175.96044522459943 Z' /><\/g><\/svg>", $getLabelTextForClass(app5.ui, 'DiodeElm'), new MyCommand('main', 'DiodeElm'))));
+  srcInfo = stampJavaTypeInfo(getClassLiteralForArray(Ljava_lang_String_2_classLit, 1), $intern_23, 2, 6, ["<svg><defs /><g transform='scale(.8) translate(-122.00,-53.00) scale(0.500000)'><path fill='none' stroke='currentColor' d=' M 272 160 L 272 140' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 272 132 L 272 112' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 262 140 L 282 140' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 256 132 L 288 132' stroke-linecap='round' stroke-width='3' /><path fill='currentColor' stroke='currentColor' d=' M 275 160 A 3 3 0 1 1 274.99973922528994 159.96044522459943 Z' /><path fill='currentColor' stroke='currentColor' d=' M 275 112 A 3 3 0 1 1 274.99973922528994 111.96044522459944 Z' /><\/g><\/svg>", 'DCVoltageElm', "<svg><g transform='translate(-104.09,-66.93) scale(0.266667)'><path fill='none' stroke='currentColor' d=' M 432 336 L 432 313' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 432 279 L 432 256' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 448.66 296 A 16.66 16.66 0 1 1 448.6599916700007 295.98334000277663' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 422 296 L 423 294 L 424 292 L 425 290 L 426 289 L 427 289 L 428 289 L 429 290 L 430 292 L 431 294 L 432 296 L 433 298 L 434 300 L 435 302 L 436 303 L 437 303 L 438 303 L 439 302 L 440 300 L 441 298 L 442 296' stroke-linecap='round' stroke-width='3' /><\/g><\/svg>", 'ACVoltageElm']);
+  $add_2(this, $createButtonSet(this, srcInfo));
+  $add_2(this, (app6 = theApp, $createIconButton(this, "<svg><g><text style='user-select: none;' fill='currentColor' stroke='none' font-family='sans-serif' font-size='10px' font-style='normal' font-weight='normal' text-decoration='normal' x='2' y='11' text-anchor='start' dominant-baseline='central'>+5V<\/text><\/g><\/svg>", $getLabelTextForClass(app6.ui, 'RailElm'), new MyCommand('main', 'RailElm'))));
+  switchInfo = stampJavaTypeInfo(getClassLiteralForArray(Ljava_lang_String_2_classLit, 1), $intern_23, 2, 6, ["<svg><defs /><g transform='translate(55.79,-100.42) scale(0.421053)'><path fill='none' stroke='currentColor' d=' M -128 272 L -120 272' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M -88 272 L -80 272' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M -120 272 L -88 256' stroke-linecap='round' stroke-width='3' /><\/g><\/svg>", 'SwitchElm', "<svg><g transform='translate(-242.27,-143.68) scale(0.324324)'><path fill='none' stroke='currentColor' d=' M 752 480 L 768 480' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 800 464 L 816 464' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 800 496 L 816 496' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 768 480 L 800 464' stroke-linecap='round' stroke-width='3' /><\/g><\/svg>", 'Switch2Elm', "<svg><g transform='translate(-242.27,-122.92) scale(0.324324)'><path fill='none' stroke='currentColor' d=' M 752 416 L 768 416' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 800 416 L 816 416' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 768 416 L 800 400' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 784 432 L 784 424' stroke-linecap='round' stroke-width='3' /><\/g><\/svg>", 'AnalogSwitchElm', "<svg><g transform='translate(-237.08,-146.27) scale(0.324324)'><path fill='none' stroke='currentColor' d=' M 736 480 L 752 480' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 784 496 L 800 496' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 784 464 L 800 464' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 752 480 L 784 464' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 768 496 L 768 512' stroke-linecap='round' stroke-width='3' /><\/g><\/svg>", 'AnalogSwitch2Elm']);
+  $add_2(this, $createButtonSet(this, switchInfo));
+  opAmpInfo = stampJavaTypeInfo(getClassLiteralForArray(Ljava_lang_String_2_classLit, 1), $intern_23, 2, 6, ["<svg><g transform='translate(-169.33,-86.13) scale(0.266667)'><path fill='none' stroke='currentColor' d=' M 640 352 L 654 352' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 640 384 L 654 384' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 706 368 L 720 368' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 654 336 L 654 400 L 706 368 Z' stroke-linecap='round' stroke-width='3' /><g><text fill='currentColor' stroke='currentColor' font-family='sans-serif' font-size='14px' font-style='normal' font-weight='normal' text-decoration='normal' x='664' y='350' text-anchor='middle' dominant-baseline='central'>-<\/text><\/g><g><text fill='currentColor' stroke='currentColor' font-family='sans-serif' font-size='14px' font-style='normal' font-weight='normal' text-decoration='normal' x='664' y='384' text-anchor='middle' dominant-baseline='central'>+<\/text><\/g><\/g><\/svg>", 'OpAmpElm', "<svg><g transform='translate(-169.33,-86.13) scale(0.266667)'><path fill='none' stroke='currentColor' d=' M 640 384 L 654 384' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 640 352 L 654 352' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 706 368 L 720 368' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 654 400 L 654 336 L 706 368 Z' stroke-linecap='round' stroke-width='3' /><g><text fill='currentColor' stroke='currentColor' font-family='sans-serif' font-size='14px' font-style='normal' font-weight='normal' text-decoration='normal' x='664' y='382' text-anchor='middle' dominant-baseline='central'>-<\/text><\/g><g><text fill='currentColor' stroke='currentColor' font-family='sans-serif' font-size='14px' font-style='normal' font-weight='normal' text-decoration='normal' x='664' y='352' text-anchor='middle' dominant-baseline='central'>+<\/text><\/g><\/g><\/svg>", 'OpAmpSwapElm']);
+  $add_2(this, $createButtonSet(this, opAmpInfo));
+  transistorInfo = stampJavaTypeInfo(getClassLiteralForArray(Ljava_lang_String_2_classLit, 1), $intern_23, 2, 6, ["<svg><defs /><g transform='translate(-107.73,-90.40) scale(0.533333)'><path fill='none' stroke='currentColor' d=' M 240 176 L 227 186' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 240 208 L 227 198' stroke-linecap='round' stroke-width='3' /><path fill='currentColor' stroke='currentColor' d=' M 240 208 L 236 200 L 231 206 Z' /><path fill='none' stroke='currentColor' d=' M 208 192 L 224 192' stroke-linecap='round' stroke-width='3' /><path fill='currentColor' stroke='currentColor' d=' M 224 176 L 227 176 L 227 208 L 224 208 Z' /><path fill='currentColor' stroke='currentColor' d=' M 211 192 A 3 3 0 1 1 210.99973922528991 191.96044522459943 Z' /><path fill='currentColor' stroke='currentColor' d=' M 243 176 A 3 3 0 1 1 242.99973922528991 175.96044522459943 Z' /><path fill='currentColor' stroke='currentColor' d=' M 243 208 A 3 3 0 1 1 242.99973922528991 207.96044522459943 Z' /><\/g><\/svg>", 'NTransistorElm', "<svg><defs /><g transform='translate(-116.27,-90.40) scale(0.533333)'><path fill='none' stroke='currentColor' d=' M 256 208 L 243 198' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 256 176 L 243 186' stroke-linecap='round' stroke-width='3' /><path fill='currentColor' stroke='currentColor' d=' M 245 187 L 253 184 L 248 178 Z' /><path fill='none' stroke='currentColor' d=' M 224 192 L 240 192' stroke-linecap='round' stroke-width='3' /><path fill='currentColor' stroke='currentColor' d=' M 240 176 L 243 176 L 243 208 L 240 208 Z' /><path fill='currentColor' stroke='currentColor' d=' M 227 192 A 3 3 0 1 1 226.99973922528991 191.96044522459943 Z' /><path fill='currentColor' stroke='currentColor' d=' M 259 208 A 3 3 0 1 1 258.99973922528994 207.96044522459943 Z' /><path fill='currentColor' stroke='currentColor' d=' M 259 176 A 3 3 0 1 1 258.99973922528994 175.96044522459943 Z' /><\/g><\/svg>", 'PTransistorElm']);
+  $add_2(this, $createButtonSet(this, transistorInfo));
+  fetInfo = stampJavaTypeInfo(getClassLiteralForArray(Ljava_lang_String_2_classLit, 1), $intern_23, 2, 6, ["<svg><defs /><g transform='translate(-68.92,-50.27) scale(0.324324)'><path fill='none' stroke='currentColor' d=' M 272 208 L 250 208' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 272 176 L 250 176' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 250 208 L 250 203' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 250 197 L 250 192' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 250 192 L 250 187' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 250 181 L 250 176' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 250 208 L 250 213' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 250 176 L 250 171' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 272 208 L 272 192' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 272 192 L 250 192' stroke-linecap='round' stroke-width='3' /><path fill='currentColor' stroke='currentColor' d=' M 250 192 L 262 197 L 262 187 Z' /><path fill='none' stroke='currentColor' d=' M 224 192 L 244 192' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 244 184 L 244 200' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 272 176 L 272 160' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 272 208 L 272 224' stroke-linecap='round' stroke-width='3' /><path fill='currentColor' stroke='currentColor' d=' M 227 192 A 3 3 0 1 1 226.99973922528991 191.96044522459943 Z' /><path fill='currentColor' stroke='currentColor' d=' M 275 160 A 3 3 0 1 1 274.99973922528994 159.96044522459943 Z' /><path fill='currentColor' stroke='currentColor' d=' M 275 224 A 3 3 0 1 1 274.99973922528994 223.96044522459943 Z' /><\/g><\/svg>", 'NMosfetElm', "<svg><defs /><g transform='translate(-68.92,-50.27) scale(0.324324)'><path fill='none' stroke='currentColor' d=' M 272 176 L 272 160' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 272 208 L 272 224' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 272 208 L 250 208' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 272 176 L 250 176' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 250 208 L 250 203' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 250 197 L 250 192' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 250 192 L 250 187' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 250 181 L 250 176' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 250 208 L 250 213' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 250 176 L 250 171' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 272 176 L 272 192' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 272 192 L 250 192' stroke-linecap='round' stroke-width='3' /><path fill='currentColor' stroke='currentColor' d=' M 272 192 L 260 187 L 260 197 Z' /><path fill='none' stroke='currentColor' d=' M 224 192 L 244 192' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 244 184 L 244 200' stroke-linecap='round' stroke-width='3' /><path fill='currentColor' stroke='currentColor' d=' M 275 160 A 3 3 0 1 1 274.99973922528994 159.96044522459943 Z' /><path fill='currentColor' stroke='currentColor' d=' M 275 224 A 3 3 0 1 1 274.99973922528994 223.96044522459943 Z' /><path fill='currentColor' stroke='currentColor' d=' M 227 192 A 3 3 0 1 1 226.99973922528991 191.96044522459943 Z' /><\/g><\/svg>", 'PMosfetElm']);
+  $add_2(this, $createButtonSet(this, fetInfo));
+  $add_2(this, (app = theApp, $createIconButton(this, "<svg><g transform='translate(-288.41,-166.76) scale(0.413793)'><path fill='none' stroke='currentColor' d=' M 704 432 L 712 432' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 746 432 L 752 432' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 712 416 L 712 448 L 739 432 Z' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 744.94 432 A 2.94 2.94 0 1 1 744.9399985300001 431.99706000049' stroke-linecap='round' stroke-width='3' /><\/g><\/svg>", $getLabelTextForClass(app.ui, 'InverterElm'), new MyCommand('main', 'InverterElm'))));
+  gateInfo = stampJavaTypeInfo(getClassLiteralForArray(Ljava_lang_String_2_classLit, 1), $intern_23, 2, 6, ["<svg><g transform='translate(-143.64,-130.55) scale(0.363636)'><path fill='none' stroke='currentColor' d=' M 400 400 L 414 400' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 400 384 L 414 384' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 442 392 L 456 392' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 414 378 L 428 378 A 14 14 0 0 1 428 406 L 414 406 Z' stroke-linecap='round' stroke-width='3' /><\/g><\/svg>", 'AndGateElm', "<svg><g transform='translate(-143.64,-142.18) scale(0.363636)'><path fill='none' stroke='currentColor' d=' M 400 432 L 414 432' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 400 416 L 414 416' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 450 424 L 456 424' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 414 410 L 428 410 A 14 14 0 0 1 428 438 L 414 438 Z' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 448.94 424 A 2.94 2.94 0 1 1 448.93999853000014 423.99706000049' stroke-linecap='round' stroke-width='3' /><\/g><\/svg>", 'NandGateElm', "<svg><g transform='translate(-143.64,-153.82) scale(0.363636)'><path fill='none' stroke='currentColor' d=' M 400 464 L 414 464' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 400 448 L 414 448' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 442 456 L 456 456' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 413 442 L 422 442 C 434 445 434 445 442 456 C 434 467 434 467 422 470 L 413 470 C 416 456 416 456 413 442 Z' stroke-linecap='round' stroke-width='3' /><\/g><\/svg>", 'OrGateElm', "<svg><g transform='translate(-143.64,-165.45) scale(0.363636)'><path fill='none' stroke='currentColor' d=' M 400 496 L 414 496' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 400 480 L 414 480' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 450 488 L 456 488' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 413 474 L 422 474 C 434 477 434 477 442 488 C 434 499 434 499 422 502 L 413 502 C 416 488 416 488 413 474 Z' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 448.94 488 A 2.94 2.94 0 1 1 448.93999853000014 487.99706000049' stroke-linecap='round' stroke-width='3' /><\/g><\/svg>", 'NorGateElm', "<svg><g transform='translate(-143.64,-180.00) scale(0.363636)'><path fill='none' stroke='currentColor' d=' M 400 536 L 414 536' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 400 520 L 414 520' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 442 528 L 456 528' stroke-linecap='round' stroke-width='3' /><path fill='none' stroke='currentColor' d=' M 413 514 L 422 514 C 434 517 434 517 442 528 C 434 539 434 539 422 542 L 413 542 C 416 528 416 528 413 514 Z M 408 514 C 411 528 411 528 408 542' stroke-linecap='round' stroke-width='3' /><\/g><\/svg>", 'XorGateElm']);
+  $add_2(this, $createButtonSet(this, gateInfo));
+  this.modeLabel = new Label_1('');
+  $styleModeLabel(this.modeLabel);
+  $add_2(this, this.modeLabel);
+}
+
+function lambda$0(iconLabel_0) {
+  ($clinit_DOM(), iconLabel_0.element).style['color'] = '#007bff';
+}
+
+function lambda$1_0(iconLabel_0) {
+  ($clinit_DOM(), iconLabel_0.element).style['color'] = '#333';
+}
+
+function lambda$3(paletteContainer_0, iconLabel_1) {
+  var leftOffset, topOffset;
+  setVisible(($clinit_DOM(), paletteContainer_0.element), true);
+  leftOffset = $getAbsoluteLeft(iconLabel_1.element) - 12;
+  topOffset = $getAbsoluteTop_0(iconLabel_1.element) + $getPropertyInt(iconLabel_1.element, 'offsetHeight') - 2;
+  paletteContainer_0.element.style['left'] = leftOffset + ($clinit_Style$Unit(), 'px');
+  paletteContainer_0.element.style['top'] = topOffset + 'px';
+}
+
+defineClass(628, 208, $intern_49, Toolbar);
+var Lcom_lushprojects_circuitjs1_client_Toolbar_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'Toolbar', 628);
+function Toolbar$1(this$0, val$iconLabel, val$command) {
+  this.this$01 = this$0;
+  this.val$iconLabel2 = val$iconLabel;
+  this.val$command3 = val$command;
+}
+
+defineClass(631, 1, $intern_51, Toolbar$1);
+_.onClick = function onClick_53(event_0) {
+  $getElement(this.val$iconLabel2).style['color'] = '#333';
+  if (this.val$iconLabel2 == this.this$01.activeButton) {
+    $execute_1(new MyCommand('main', 'Select'));
+    this.this$01.activeButton = null;
+  }
+  else
+    $execute_1(this.val$command3);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_Toolbar$1_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'Toolbar/1', 631);
+function Toolbar$lambda$0$Type(iconLabel_0) {
+  this.iconLabel_0 = iconLabel_0;
+}
+
+defineClass(629, 1, $intern_123, Toolbar$lambda$0$Type);
+_.onMouseOver = function onMouseOver_2(arg0) {
+  lambda$0(this.iconLabel_0);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_Toolbar$lambda$0$Type_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'Toolbar/lambda$0$Type', 629);
+function Toolbar$lambda$1$Type(iconLabel_0) {
+  this.iconLabel_0 = iconLabel_0;
+}
+
+defineClass(630, 1, $intern_124, Toolbar$lambda$1$Type);
+_.onMouseOut = function onMouseOut_4(arg0) {
+  lambda$1_0(this.iconLabel_0);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_Toolbar$lambda$1$Type_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'Toolbar/lambda$1$Type', 630);
+function Toolbar$lambda$2$Type($$outer_0, iconLabel_1, smallSvg_2, mainCommand_3, command_4, paletteContainer_5) {
+  this.$$outer_0 = $$outer_0;
+  this.iconLabel_1 = iconLabel_1;
+  this.smallSvg_2 = smallSvg_2;
+  this.mainCommand_3 = mainCommand_3;
+  this.command_4 = command_4;
+  this.paletteContainer_5 = paletteContainer_5;
+}
+
+defineClass(632, 1, $intern_51, Toolbar$lambda$2$Type);
+_.onClick = function onClick_54(arg0) {
+  $lambda$2(this.$$outer_0, this.iconLabel_1, this.smallSvg_2, this.mainCommand_3, this.command_4, this.paletteContainer_5);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_Toolbar$lambda$2$Type_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'Toolbar/lambda$2$Type', 632);
+function Toolbar$lambda$3$Type(paletteContainer_0, iconLabel_1) {
+  this.paletteContainer_0 = paletteContainer_0;
+  this.iconLabel_1 = iconLabel_1;
+}
+
+defineClass(633, 1, $intern_123, Toolbar$lambda$3$Type);
+_.onMouseOver = function onMouseOver_3(arg0) {
+  lambda$3(this.paletteContainer_0, this.iconLabel_1);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_Toolbar$lambda$3$Type_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'Toolbar/lambda$3$Type', 633);
+function Toolbar$lambda$4$Type(paletteContainer_0) {
+  this.paletteContainer_0 = paletteContainer_0;
+}
+
+defineClass(634, 1, $intern_124, Toolbar$lambda$4$Type);
+_.onMouseOut = function onMouseOut_5(arg0) {
+  $setVisible(this.paletteContainer_0, false);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_Toolbar$lambda$4$Type_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'Toolbar/lambda$4$Type', 634);
+function Toolbar$lambda$5$Type(paletteContainer_0) {
+  this.paletteContainer_0 = paletteContainer_0;
+}
+
+defineClass(635, 1, $intern_123, Toolbar$lambda$5$Type);
+_.onMouseOver = function onMouseOver_4(arg0) {
+  $setVisible(this.paletteContainer_0, true);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_Toolbar$lambda$5$Type_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'Toolbar/lambda$5$Type', 635);
+function Toolbar$lambda$6$Type(paletteContainer_0) {
+  this.paletteContainer_0 = paletteContainer_0;
+}
+
+defineClass(636, 1, $intern_124, Toolbar$lambda$6$Type);
+_.onMouseOut = function onMouseOut_6(arg0) {
+  $setVisible(this.paletteContainer_0, false);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_Toolbar$lambda$6$Type_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'Toolbar/lambda$6$Type', 636);
+function $reset_9(this$static) {
+  if (sim_0.maxTimeStep == 0)
+    return;
+  this$static.lenSteps = round_int(this$static.delay / sim_0.maxTimeStep);
+  $clinit_System();
+  if (this$static.lenSteps > $intern_110)
+    this$static.voltageL = this$static.voltageR = null;
+  else {
+    this$static.voltageL = initUnidimensionalArray(D_classLit, $intern_70, 8, this$static.lenSteps, 15, 1);
+    this$static.voltageR = initUnidimensionalArray(D_classLit, $intern_70, 8, this$static.lenSteps, 15, 1);
+  }
+  this$static.ptr = 0;
+  $reset(this$static);
+  this$static.lastStepCount = 0;
+}
+
+function $setPoints_26(this$static) {
+  var ds, p3, p4, p5, p6, p7, p8, sep;
+  $setPoints(this$static);
+  ds = this$static.dy == 0 ? sign_0(this$static.dx) : -sign_0(this$static.dy);
+  p3 = $interpPoint_0(this$static.point1, this$static.point2, 0, -this$static.width_0 * ds);
+  p4 = $interpPoint_0(this$static.point1, this$static.point2, 1, -this$static.width_0 * ds);
+  sep = app_0.gridSize / 2 | 0;
+  p5 = $interpPoint_0(this$static.point1, this$static.point2, 0, -((this$static.width_0 / 2 | 0) - sep) * ds);
+  p6 = $interpPoint_0(this$static.point1, this$static.point2, 1, -((this$static.width_0 / 2 | 0) - sep) * ds);
+  p7 = $interpPoint_0(this$static.point1, this$static.point2, 0, -((this$static.width_0 / 2 | 0) + sep) * ds);
+  p8 = $interpPoint_0(this$static.point1, this$static.point2, 1, -((this$static.width_0 / 2 | 0) + sep) * ds);
+  this$static.posts = stampJavaTypeInfo(getClassLiteralForArray(Lcom_lushprojects_circuitjs1_client_Point_2_classLit, 1), $intern_72, 17, 0, [p3, p4, this$static.point1, this$static.point2]);
+  this$static.inner = stampJavaTypeInfo(getClassLiteralForArray(Lcom_lushprojects_circuitjs1_client_Point_2_classLit, 1), $intern_72, 17, 0, [p7, p8, p5, p6]);
+}
+
+function TransLineElm(xx, yy) {
+  CircuitElm.call(this, xx, yy);
+  this.delay = $intern_21 * sim_0.maxTimeStep;
+  this.imped = 75;
+  this.noDiagonal = true;
+  $reset_9(this);
+}
+
+function TransLineElm_0(xa, ya, xb, yb, f, st) {
+  CircuitElm_0.call(this, xa, ya, xb, yb, f);
+  this.delay = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.imped = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.width_0 = (new Integer_0($nextToken(st))).value_0;
+  $nextToken(st);
+  this.noDiagonal = true;
+  $reset_9(this);
+}
+
+defineClass(405, 7, $intern_79, TransLineElm, TransLineElm_0);
+_.canFlipX = function canFlipX_5() {
+  return this.dy == 0;
+}
+  ;
+_.canFlipY = function canFlipY_6() {
+  return this.dx == 0;
+}
+  ;
+_.doStep = function doStep_47() {
+  var nextPtr;
+  if (this.voltageL == null) {
+    $stop(sim_0, 'Transmission line delay too large!', this);
+    return;
+  }
+  nextPtr = (this.ptr + 1) % this.lenSteps;
+  $updateVoltageSource(sim_0, this.voltSource1, -this.voltageR[nextPtr]);
+  $updateVoltageSource(sim_0, this.voltSource2, -this.voltageL[nextPtr]);
+  if ($wnd.Math.abs(this.volts[0]) > 1.0E-5 || $wnd.Math.abs(this.volts[1]) > 1.0E-5) {
+    $stop(sim_0, 'Need to ground transmission line!', this);
+    return;
+  }
+}
+  ;
+_.drag = function drag_5(xx, yy) {
+  var w1, w2;
+  xx = $snapGrid_0(app_0, xx);
+  yy = $snapGrid_0(app_0, yy);
+  w1 = max_1(app_0.gridSize, abs_0(yy - this.y_0));
+  w2 = max_1(app_0.gridSize, abs_0(xx - this.x_0));
+  if (w1 > w2) {
+    xx = this.x_0;
+    this.width_0 = w2;
+  }
+  else {
+    yy = this.y_0;
+    this.width_0 = w1;
+  }
+  this.x2 = xx;
+  this.y2 = yy;
+  $setPoints_26(this);
+}
+  ;
+_.draw = function draw_77(g) {
+  var i, ix0, ix1, ix2, segf, segments, v;
+  $setBbox_0(this, this.posts[0], this.posts[3], 0);
+  segments = round_int(this.dn / 2);
+  ix0 = this.ptr - 1 + this.lenSteps;
+  segf = 1 / segments;
+  $setColor_0(g, ($clinit_Color(), darkGray));
+  $fillRect_0(g, this.inner[2].x_0, this.inner[2].y_0, this.inner[1].x_0 - this.inner[2].x_0 + 2, this.inner[1].y_0 - this.inner[2].y_0 + 2);
+  for (i = 0; i != 4; i++) {
+    $setVoltageColor(this, g, this.volts[i]);
+    drawThickLine_0(g, this.posts[i], this.inner[i]);
+  }
+  if (this.voltageL != null) {
+    for (i = 0; i != segments; i++) {
+      ix1 = (ix0 - (this.lenSteps * i / segments | 0)) % this.lenSteps;
+      ix2 = (ix0 - (this.lenSteps * (segments - 1 - i) / segments | 0)) % this.lenSteps;
+      v = (this.voltageL[ix1] + this.voltageR[ix2]) / 2;
+      $setColor_0(g, $getVoltageColor(this, v));
+      $interpPoint_1(this.inner[0], this.inner[1], ps1, i * segf);
+      $interpPoint_1(this.inner[2], this.inner[3], ps2, i * segf);
+      $drawLine(g, ps1.x_0, ps1.y_0, ps2.x_0, ps2.y_0);
+      $interpPoint_1(this.inner[2], this.inner[3], ps1, (i + 1) * segf);
+      drawThickLine_0(g, ps1, ps2);
+    }
+  }
+  $setVoltageColor(this, g, this.volts[0]);
+  drawThickLine_0(g, this.inner[0], this.inner[1]);
+  $drawPosts(this, g);
+  this.curCount1 = $updateDotCount(-this.current1, this.curCount1);
+  this.curCount2 = $updateDotCount(this.current2, this.curCount2);
+  if (app_0.mouse.dragElm != this) {
+    $drawDots(g, this.posts[0], this.inner[0], this.curCount1);
+    $drawDots(g, this.posts[2], this.inner[2], -this.curCount1);
+    $drawDots(g, this.posts[1], this.inner[1], -this.curCount2);
+    $drawDots(g, this.posts[3], this.inner[3], this.curCount2);
+  }
+}
+  ;
+_.dumpXml = function dumpXml_79(doc, elem) {
+  dumpAttr_1(elem, 'x', this.x_0 + ' ' + this.y_0 + ' ' + this.x2 + ' ' + this.y2);
+  dumpAttr_0(elem, 'f', this.flags);
+  dumpAttr(elem, 'de', this.delay);
+  dumpAttr(elem, 'im', this.imped);
+  dumpAttr_0(elem, 'wi', this.width_0);
+}
+  ;
+_.getConnection = function getConnection_32(n1, n2) {
+  return false;
+}
+  ;
+_.getCurrentIntoNode = function getCurrentIntoNode_29(n) {
+  if (n == 0)
+    return this.current1;
+  if (n == 2)
+    return -this.current1;
+  if (n == 3)
+    return -this.current2;
+  return this.current2;
+}
+  ;
+_.getDumpType = function getDumpType_108() {
+  return 171;
+}
+  ;
+_.getEditInfo = function getEditInfo_70(n) {
+  if (n == 0)
+    return new EditInfo_0('Delay (s)', this.delay, 0, 0);
+  if (n == 1)
+    return new EditInfo_0('Impedance (ohms)', this.imped, 0, 0);
+  return null;
+}
+  ;
+_.getInfo_0 = function getInfo_80(arr) {
+  arr[0] = 'transmission line';
+  arr[1] = getUnitText(this.imped, ohmString, false);
+  arr[2] = 'length = ' + getUnitText(194863500 * this.delay, 'm', false);
+  arr[3] = 'delay = ' + getUnitText(this.delay, 's', false);
+}
+  ;
+_.getInternalNodeCount = function getInternalNodeCount_11() {
+  return 2;
+}
+  ;
+_.getPost = function getPost_21(n) {
+  return this.posts[n];
+}
+  ;
+_.getPostCount_0 = function getPostCount_71() {
+  return 4;
+}
+  ;
+_.getVoltageSourceCount = function getVoltageSourceCount_50() {
+  return 2;
+}
+  ;
+_.getXmlDumpType = function getXmlDumpType_23() {
+  return 'tl';
+}
+  ;
+_.hasGroundConnection = function hasGroundConnection_18(n1) {
+  return false;
+}
+  ;
+_.reset_0 = function reset_45() {
+  $reset_9(this);
+}
+  ;
+_.setCurrent = function setCurrent_10(v, c) {
+  v == this.voltSource1 ? (this.current1 = c) : (this.current2 = c);
+}
+  ;
+_.setEditValue = function setEditValue_68(n, ei) {
+  if (n == 0 && ei.value_0 > 0) {
+    this.delay = ei.value_0;
+    $reset_9(this);
+  }
+  if (n == 1 && ei.value_0 > 0) {
+    this.imped = ei.value_0;
+    $reset_9(this);
+  }
+}
+  ;
+_.setPoints = function setPoints_68() {
+  $setPoints_26(this);
+}
+  ;
+_.setVoltageSource = function setVoltageSource_8(n, v) {
+  n == 0 ? (this.voltSource1 = v) : (this.voltSource2 = v);
+}
+  ;
+_.stamp = function stamp_61() {
+  $stampVoltageSource(sim_0, this.nodes[4], this.nodes[0], this.voltSource1);
+  $stampVoltageSource(sim_0, this.nodes[5], this.nodes[1], this.voltSource2);
+  $stampResistor(sim_0, this.nodes[2], this.nodes[4], this.imped);
+  $stampResistor(sim_0, this.nodes[3], this.nodes[5], this.imped);
+}
+  ;
+_.startIteration = function startIteration_18() {
+  if (this.voltageL == null) {
+    $stop(sim_0, 'Transmission line delay too large!', this);
+    return;
+  }
+  this.voltageL[this.ptr] = this.volts[2] - this.volts[0] + this.volts[2] - this.volts[4];
+  this.voltageR[this.ptr] = this.volts[3] - this.volts[1] + this.volts[3] - this.volts[5];
+}
+  ;
+_.stepFinished = function stepFinished_23() {
+  if (sim_0.timeStepCount == this.lastStepCount)
+    return;
+  this.lastStepCount = sim_0.timeStepCount;
+  this.ptr = (this.ptr + 1) % this.lenSteps;
+}
+  ;
+_.undumpXml = function undumpXml_81(xml) {
+  this.flags = $parseIntAttr(xml, 'f', this.flags);
+  this.delay = $parseDoubleAttr(xml, 'de', this.delay);
+  this.imped = $parseDoubleAttr(xml, 'im', this.imped);
+  this.width_0 = $parseIntAttr(xml, 'wi', this.width_0);
+  $reset_9(this);
+}
+  ;
+_.curCount1 = 0;
+_.curCount2 = 0;
+_.current1 = 0;
+_.current2 = 0;
+_.delay = 0;
+_.imped = 0;
+_.lastStepCount = 0;
+_.lenSteps = 0;
+_.ptr = 0;
+_.voltSource1 = 0;
+_.voltSource2 = 0;
+_.width_0 = 0;
+var Lcom_lushprojects_circuitjs1_client_TransLineElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'TransLineElm', 405);
+function $calcEffectiveInductance_0(l0, i, isat) {
+  var ratio;
+  if (isat <= 0)
+    return l0;
+  ratio = i / isat;
+  return l0 / (1 + ratio * ratio);
+}
+
+function $computeCoefficients(this$static, l1, l2, m) {
+  var deti, ts;
+  deti = 1 / (l1 * l2 - m * m);
+  ts = (this$static.flags & 2) == 0 ? sim_0.timeStep / 2 : sim_0.timeStep;
+  this$static.a1 = l2 * deti * ts;
+  this$static.a2 = -m * deti * ts;
+  this$static.a3 = -m * deti * ts;
+  this$static.a4 = l1 * deti * ts;
+}
+
+function $setPoints_27(this$static) {
+  var cd, ce, dotp, i, vsign, x_0;
+  $setPoints(this$static);
+  (this$static.flags & 8) != 0 ? (this$static.point2.x_0 = this$static.point1.x_0) : (this$static.point2.y_0 = this$static.point1.y_0);
+  this$static.ptEnds = $newPointArray(4);
+  this$static.ptCoil = $newPointArray(4);
+  this$static.ptCore = $newPointArray(4);
+  this$static.ptEnds[0] = this$static.point1;
+  this$static.ptEnds[1] = this$static.point2;
+  this$static.flip = (this$static.flags & 16) != 0 ? -1 : 1;
+  $interpPoint_2(this$static.point1, this$static.point2, this$static.ptEnds[2], 0, -this$static.dsign * this$static.width_0 * this$static.flip);
+  $interpPoint_2(this$static.point1, this$static.point2, this$static.ptEnds[3], 1, -this$static.dsign * this$static.width_0 * this$static.flip);
+  ce = 0.5 - 12 / this$static.dn;
+  cd = 0.5 - 2 / this$static.dn;
+  for (i = 0; i != 4; i += 2) {
+    $interpPoint_1(this$static.ptEnds[i], this$static.ptEnds[i + 1], this$static.ptCoil[i], ce);
+    $interpPoint_1(this$static.ptEnds[i], this$static.ptEnds[i + 1], this$static.ptCoil[i + 1], 1 - ce);
+    $interpPoint_1(this$static.ptEnds[i], this$static.ptEnds[i + 1], this$static.ptCore[i], cd);
+    $interpPoint_1(this$static.ptEnds[i], this$static.ptEnds[i + 1], this$static.ptCore[i + 1], 1 - cd);
+  }
+  if (this$static.polarity == -1) {
+    vsign = (this$static.flags & 8) != 0 ? -1 : 1;
+    this$static.dots = initUnidimensionalArray(Lcom_lushprojects_circuitjs1_client_Point_2_classLit, $intern_72, 17, 2, 0, 1);
+    dotp = $wnd.Math.abs(7 / this$static.width_0);
+    this$static.dots[0] = $interpPoint_0(this$static.ptCoil[0], this$static.ptCoil[2], dotp, -7 * this$static.dsign * vsign * this$static.flip);
+    this$static.dots[1] = $interpPoint_0(this$static.ptCoil[3], this$static.ptCoil[1], dotp, -7 * this$static.dsign * vsign * this$static.flip);
+    x_0 = this$static.ptEnds[1];
+    this$static.ptEnds[1] = this$static.ptEnds[3];
+    this$static.ptEnds[3] = x_0;
+    x_0 = this$static.ptCoil[1];
+    this$static.ptCoil[1] = this$static.ptCoil[3];
+    this$static.ptCoil[3] = x_0;
+  }
+  else
+    this$static.dots = null;
+}
+
+function TransformerElm(xx, yy) {
+  CircuitElm.call(this, xx, yy);
+  this.inductance = 4;
+  this.ratio = this.polarity = 1;
+  this.width_0 = 32;
+  this.noDiagonal = true;
+  this.couplingCoef = 0.999;
+  this.current = initUnidimensionalArray(D_classLit, $intern_70, 8, 2, 15, 1);
+  this.curcount = initUnidimensionalArray(D_classLit, $intern_70, 8, 2, 15, 1);
+}
+
+function TransformerElm_0(xa, ya, xb, yb, f, st) {
+  CircuitElm_0.call(this, xa, ya, xb, yb, f);
+  (this.flags & 8) != 0 ? (this.width_0 = -(32 > (xb - xa < 0 ? -(xb - xa) : xb - xa) ? 32 : xb - xa < 0 ? -(xb - xa) : xb - xa)) : (this.width_0 = 32 > (yb - ya < 0 ? -(yb - ya) : yb - ya) ? 32 : yb - ya < 0 ? -(yb - ya) : yb - ya);
+  this.inductance = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.ratio = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.current = initUnidimensionalArray(D_classLit, $intern_70, 8, 2, 15, 1);
+  this.curcount = initUnidimensionalArray(D_classLit, $intern_70, 8, 2, 15, 1);
+  this.current[0] = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.current[1] = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.couplingCoef = 0.999;
+  try {
+    this.couplingCoef = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+    this.saturationCurrent = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  }
+  catch ($e0) {
+    $e0 = toJava($e0);
+    if (!instanceOf($e0, 15))
+      throw toJs($e0);
+  }
+  this.noDiagonal = true;
+  this.polarity = (this.flags & 4) != 0 ? -1 : 1;
+}
+
+defineClass(384, 7, $intern_79, TransformerElm, TransformerElm_0);
+_.calculateCurrent = function calculateCurrent_36() {
+  var voltdiff1, voltdiff2;
+  voltdiff1 = this.volts[0] - this.volts[2];
+  voltdiff2 = this.volts[1] - this.volts[3];
+  this.current[0] = voltdiff1 * this.a1 + voltdiff2 * this.a2 + this.curSourceValue1;
+  this.current[1] = voltdiff1 * this.a3 + voltdiff2 * this.a4 + this.curSourceValue2;
+}
+  ;
+_.doStep = function doStep_48() {
+  if (this.saturationCurrent > 0) {
+    $stampConductance(sim_0, this.nodes[0], this.nodes[2], this.a1);
+    $stampVCCurrentSource(sim_0, this.nodes[0], this.nodes[2], this.nodes[1], this.nodes[3], this.a2);
+    $stampVCCurrentSource(sim_0, this.nodes[1], this.nodes[3], this.nodes[0], this.nodes[2], this.a3);
+    $stampConductance(sim_0, this.nodes[1], this.nodes[3], this.a4);
+  }
+  $stampCurrentSource(sim_0, this.nodes[0], this.nodes[2], this.curSourceValue1);
+  $stampCurrentSource(sim_0, this.nodes[1], this.nodes[3], this.curSourceValue2);
+}
+  ;
+_.drag = function drag_6(xx, yy) {
+  xx = $snapGrid_0(app_0, xx);
+  yy = $snapGrid_0(app_0, yy);
+  abs_0(xx - this.x_0) > abs_0(yy - this.y_0) ? (this.flags &= -9) : (this.flags |= 8);
+  (this.flags & 8) != 0 ? (this.width_0 = -max_1(32, abs_0(xx - this.x_0))) : (this.width_0 = max_1(32, abs_0(yy - this.y_0)));
+  xx == this.x_0 && (yy = this.y_0);
+  this.x2 = xx;
+  this.y2 = yy;
+  $setPoints_27(this);
+}
+  ;
+_.draw = function draw_78(g) {
+  var csign, i;
+  for (i = 0; i != 4; i++) {
+    $setVoltageColor(this, g, this.volts[i]);
+    drawThickLine_0(g, this.ptEnds[i], this.ptCoil[i]);
+  }
+  for (i = 0; i != 2; i++) {
+    $setPowerColor(this, g, this.current[i] * (this.volts[i] - this.volts[i + 2]));
+    csign = this.dsign * (i == 1 ? -6 * this.polarity : 6) * this.flip;
+    (this.flags & 8) != 0 && (csign *= -1);
+    $drawCoil(this, g, csign, this.ptCoil[i], this.ptCoil[i + 2], this.volts[i], this.volts[i + 2]);
+  }
+  $setColor_0(g, mouseElmRef == this || this.selected_0 || app_0.mouse.plotYElm == this || instanceOf(mouseElmRef, 20) && $getElm_0(mouseElmRef.elmScope) == this || $isOnHighlightedNet(this) ? selectColor_0 : lightGrayColor);
+  for (i = 0; i != 2; i++) {
+    drawThickLine_0(g, this.ptCore[i], this.ptCore[i + 2]);
+    this.dots != null && $fillOval(g, this.dots[i].x_0 - 2, this.dots[i].y_0 - 2, 5);
+    this.curcount[i] = $updateDotCount(this.current[i], this.curcount[i]);
+  }
+  for (i = 0; i != 2; i++) {
+    $drawDots(g, this.ptEnds[i], this.ptCoil[i], this.curcount[i]);
+    $drawDots(g, this.ptCoil[i], this.ptCoil[i + 2], this.curcount[i]);
+    $drawDots(g, this.ptEnds[i + 2], this.ptCoil[i + 2], -this.curcount[i]);
+  }
+  $drawPosts(this, g);
+  $setBbox_0(this, this.ptEnds[0], this.ptEnds[this.polarity == 1 ? 3 : 1], 0);
+}
+  ;
+_.dumpXml = function dumpXml_80(doc, elem) {
+  dumpAttr_1(elem, 'x', this.x_0 + ' ' + this.y_0 + ' ' + this.x2 + ' ' + this.y2);
+  dumpAttr_0(elem, 'f', this.flags);
+  dumpAttr(elem, 'in', this.inductance);
+  dumpAttr(elem, 'ra', this.ratio);
+  dumpAttr(elem, 'co', this.couplingCoef);
+  dumpAttr_0(elem, 'wi', this.width_0);
+  this.saturationCurrent != 0 && dumpAttr(elem, 'isat', this.saturationCurrent);
+}
+  ;
+_.dumpXmlState = function dumpXmlState_15(doc, elem) {
+  dumpAttr(elem, 'c0', this.current[0]);
+  dumpAttr(elem, 'c1', this.current[1]);
+}
+  ;
+_.flipX = function flipX_16(c2, count) {
+  (this.flags & 8) != 0 && (this.flags ^= 16);
+  $flipX(this, c2);
+}
+  ;
+_.flipXY = function flipXY_13(xmy, count) {
+  this.flags ^= 8;
+  this.width_0 *= -1;
+  $flipXY(this, xmy);
+}
+  ;
+_.flipY = function flipY_16(c2, count) {
+  (this.flags & 8) != 0 || (this.flags ^= 16);
+  $flipY(this, c2);
+}
+  ;
+_.getConnection = function getConnection_33(n1, n2) {
+  if (n1 == 0 && n2 == 2 || n1 == 2 && n2 == 0)
+    return true;
+  if (n1 == 1 && n2 == 3 || n1 == 3 && n2 == 1)
+    return true;
+  return false;
+}
+  ;
+_.getCurrentIntoNode = function getCurrentIntoNode_30(n) {
+  if (n < 2)
+    return -this.current[n];
+  return this.current[n - 2];
+}
+  ;
+_.getDumpType = function getDumpType_109() {
+  return 84;
+}
+  ;
+_.getEditInfo = function getEditInfo_71(n) {
+  var ei;
+  if (n == 0)
+    return new EditInfo_0('Primary Inductance (H)', this.inductance, $intern_34, 5);
+  if (n == 1)
+    return $setDimensionless(new EditInfo_0('Ratio (N1/N2)', 1 / this.ratio, 1, 10));
+  if (n == 2)
+    return $setDimensionless(new EditInfo_0('Coupling Coefficient', this.couplingCoef, 0, 1));
+  if (n == 3) {
+    ei = new EditInfo_0('', 0, -1, -1);
+    ei.checkbox = new Checkbox_0('Trapezoidal Approximation', (this.flags & 2) == 0);
+    return ei;
+  }
+  if (n == 4) {
+    ei = new EditInfo_0('', 0, -1, -1);
+    ei.checkbox = new Checkbox_0('Swap Secondary Polarity', this.polarity == -1);
+    return ei;
+  }
+  if (n == 5)
+    return new EditInfo('Saturation Current (A) (0=none)', this.saturationCurrent);
+  return null;
+}
+  ;
+_.getInfo_0 = function getInfo_81(arr) {
+  var l1Eff;
+  arr[0] = this.saturationCurrent > 0 ? 'transformer (sat)' : 'transformer';
+  arr[1] = 'L = ' + getUnitText(this.inductance, 'H', false);
+  arr[2] = 'Ratio = 1:' + this.ratio;
+  arr[3] = 'Vd1 = ' + getUnitText(this.volts[0] - this.volts[2], 'V', false);
+  arr[4] = 'Vd2 = ' + getUnitText(this.volts[1] - this.volts[3], 'V', false);
+  arr[5] = 'I1 = ' + getUnitText(this.current[0], 'A', false);
+  arr[6] = 'I2 = ' + getUnitText(this.current[1], 'A', false);
+  if (this.saturationCurrent > 0) {
+    l1Eff = $calcEffectiveInductance_0(this.inductance, this.current[0], this.saturationCurrent);
+    arr[7] = 'L1eff = ' + getUnitText(l1Eff, 'H', false);
+  }
+}
+  ;
+_.getPost = function getPost_22(n) {
+  return this.ptEnds[n];
+}
+  ;
+_.getPostCount_0 = function getPostCount_72() {
+  return 4;
+}
+  ;
+_.getShortcut = function getShortcut_43() {
+  return 84;
+}
+  ;
+_.nonLinear = function nonLinear_24() {
+  return this.saturationCurrent > 0;
+}
+  ;
+_.reset_0 = function reset_46() {
+  this.current[0] = this.current[1] = this.volts[0] = this.volts[1] = this.volts[2] = this.volts[3] = this.curcount[0] = this.curcount[1] = this.curSourceValue1 = this.curSourceValue2 = 0;
+}
+  ;
+_.setEditValue = function setEditValue_69(n, ei) {
+  n == 0 && ei.value_0 > 0 && (this.inductance = ei.value_0);
+  n == 1 && ei.value_0 > 0 && (this.ratio = 1 / ei.value_0);
+  n == 2 && ei.value_0 > 0 && ei.value_0 < 1 && (this.couplingCoef = ei.value_0);
+  n == 3 && ($getState(ei.checkbox) ? (this.flags &= -3) : (this.flags |= 2));
+  if (n == 4) {
+    this.polarity = $getState(ei.checkbox) ? -1 : 1;
+    $getState(ei.checkbox) ? (this.flags |= 4) : (this.flags &= -5);
+    $setPoints_27(this);
+  }
+  n == 5 && ei.value_0 >= 0 && (this.saturationCurrent = ei.value_0);
+}
+  ;
+_.setPoints = function setPoints_69() {
+  $setPoints_27(this);
+}
+  ;
+_.stamp = function stamp_62() {
+  var l1, l2, m;
+  l1 = this.inductance;
+  l2 = this.inductance * this.ratio * this.ratio;
+  m = this.couplingCoef * $wnd.Math.sqrt(l1 * l2);
+  $computeCoefficients(this, l1, l2, m);
+  if (this.saturationCurrent > 0) {
+    $stampNonLinear(sim_0, this.nodes[0]);
+    $stampNonLinear(sim_0, this.nodes[1]);
+    $stampNonLinear(sim_0, this.nodes[2]);
+    $stampNonLinear(sim_0, this.nodes[3]);
+  }
+  else {
+    $stampConductance(sim_0, this.nodes[0], this.nodes[2], this.a1);
+    $stampVCCurrentSource(sim_0, this.nodes[0], this.nodes[2], this.nodes[1], this.nodes[3], this.a2);
+    $stampVCCurrentSource(sim_0, this.nodes[1], this.nodes[3], this.nodes[0], this.nodes[2], this.a3);
+    $stampConductance(sim_0, this.nodes[1], this.nodes[3], this.a4);
+  }
+  $stampRightSide(sim_0, this.nodes[0]);
+  $stampRightSide(sim_0, this.nodes[1]);
+  $stampRightSide(sim_0, this.nodes[2]);
+  $stampRightSide(sim_0, this.nodes[3]);
+}
+  ;
+_.startIteration = function startIteration_19() {
+  var l1, l2, m, voltdiff1, voltdiff2;
+  if (this.saturationCurrent > 0) {
+    l1 = $calcEffectiveInductance_0(this.inductance, this.current[0], this.saturationCurrent);
+    l2 = $calcEffectiveInductance_0(this.inductance * this.ratio * this.ratio, this.current[1], this.saturationCurrent * this.ratio);
+    m = this.couplingCoef * $wnd.Math.sqrt(l1 * l2);
+    $computeCoefficients(this, l1, l2, m);
+  }
+  voltdiff1 = this.volts[0] - this.volts[2];
+  voltdiff2 = this.volts[1] - this.volts[3];
+  if ((this.flags & 2) == 0) {
+    this.curSourceValue1 = voltdiff1 * this.a1 + voltdiff2 * this.a2 + this.current[0];
+    this.curSourceValue2 = voltdiff1 * this.a3 + voltdiff2 * this.a4 + this.current[1];
+  }
+  else {
+    this.curSourceValue1 = this.current[0];
+    this.curSourceValue2 = this.current[1];
+  }
+}
+  ;
+_.undumpXml = function undumpXml_82(xml) {
+  this.flags = $parseIntAttr(xml, 'f', this.flags);
+  (this.flags & 8) != 0 ? (this.width_0 = -max_1(32, abs_0(this.x2 - this.x_0))) : (this.width_0 = max_1(32, abs_0(this.y2 - this.y_0)));
+  this.inductance = $parseDoubleAttr(xml, 'in', this.inductance);
+  this.ratio = $parseDoubleAttr(xml, 'ra', this.ratio);
+  this.couplingCoef = $parseDoubleAttr(xml, 'co', this.couplingCoef);
+  this.width_0 = $parseIntAttr(xml, 'wi', this.width_0);
+  this.saturationCurrent = $parseDoubleAttr(xml, 'isat', 0);
+  this.current[0] = $parseDoubleAttr(xml, 'c0', 0);
+  this.current[1] = $parseDoubleAttr(xml, 'c1', 0);
+  this.polarity = (this.flags & 4) != 0 ? -1 : 1;
+}
+  ;
+_.a1 = 0;
+_.a2 = 0;
+_.a3 = 0;
+_.a4 = 0;
+_.couplingCoef = 0;
+_.curSourceValue1 = 0;
+_.curSourceValue2 = 0;
+_.flip = 0;
+_.inductance = 0;
+_.polarity = 0;
+_.ratio = 0;
+_.saturationCurrent = 0;
+_.width_0 = 0;
+var Lcom_lushprojects_circuitjs1_client_TransformerElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'TransformerElm', 384);
+function $dumpXml_9(this$static, doc) {
+  var elem;
+  this$static.dumped = true;
+  elem = $createElement_1(doc, 'tm');
+  dumpAttr_1(elem, 'nm', this$static.name_0);
+  dumpAttr_0(elem, 'f', this$static.flags);
+  dumpAttr(elem, 'is', this$static.satCur);
+  dumpAttr(elem, 'ikf', this$static.invRollOffF);
+  dumpAttr(elem, 'ise', this$static.BEleakCur);
+  dumpAttr(elem, 'ne', this$static.leakBEemissionCoeff);
+  dumpAttr(elem, 'ikr', this$static.invRollOffR);
+  dumpAttr(elem, 'isc', this$static.BCleakCur);
+  dumpAttr(elem, 'nc', this$static.leakBCemissionCoeff);
+  dumpAttr(elem, 'nf', this$static.emissionCoeffF);
+  dumpAttr(elem, 'nr', this$static.emissionCoeffR);
+  dumpAttr(elem, 'vaf', this$static.invEarlyVoltF);
+  dumpAttr(elem, 'var', this$static.invEarlyVoltR);
+  dumpAttr(elem, 'br', this$static.betaR);
+  $appendChild_0(build(getDocumentElement(doc.jsObject)), elem);
+}
+
+function $getDescription_0(this$static) {
+  if (this$static.description == null || $equals_1(this$static.description, this$static.name_0))
+    return this$static.name_0;
+  return this$static.name_0 + ' (' + LS(this$static.description) + ')';
+}
+
+function TransistorModel() {
+}
+
+function TransistorModel_0(copy) {
+  this.flags = copy.flags;
+  this.satCur = copy.satCur;
+  this.invRollOffF = copy.invRollOffF;
+  this.BEleakCur = copy.BEleakCur;
+  this.leakBEemissionCoeff = copy.leakBEemissionCoeff;
+  this.invRollOffR = copy.invRollOffR;
+  this.BCleakCur = copy.BCleakCur;
+  this.leakBCemissionCoeff = copy.leakBCemissionCoeff;
+  this.emissionCoeffF = copy.emissionCoeffF;
+  this.emissionCoeffR = copy.emissionCoeffR;
+  this.invEarlyVoltF = copy.invEarlyVoltF;
+  this.invEarlyVoltR = copy.invEarlyVoltR;
+  this.betaR = copy.betaR;
+}
+
+function TransistorModel_1(d, sc) {
+  this.description = d;
+  this.satCur = sc;
+  this.emissionCoeffF = this.emissionCoeffR = 1;
+  this.leakBEemissionCoeff = 1.5;
+  this.leakBCemissionCoeff = 2;
+  this.betaR = 1;
+}
+
+function addDefaultModel_0(name_0, dm) {
+  $putStringValue(modelMap_1, name_0, dm);
+  dm.readOnly = dm.builtIn = true;
+  dm.name_0 = name_0;
+}
+
+function clearDumpedFlags_2() {
+  var it, pair;
+  if (!modelMap_1)
+    return;
+  it = new AbstractHashMap$EntrySetIterator((new AbstractHashMap$EntrySet(modelMap_1)).this$01);
+  while (it.hasNext) {
+    pair = $next_2(it);
+    pair.getValue().dumped = false;
+  }
+}
+
+function createModelMap_0() {
+  if (modelMap_1)
+    return;
+  modelMap_1 = new HashMap;
+  addDefaultModel_0('default', new TransistorModel_1('default', 1.0E-13));
+  addDefaultModel_0('spice-default', new TransistorModel_1('spice-default', 1.0E-16));
+  loadInternalModel_0('xlm324v2-qpi 0 1.01e-16 333.3333333333333 0 1.5 0 0 2 1 1 0.0034482758620689655 0 1');
+  loadInternalModel_0('xlm324v2-qpi 0 1.01e-16 333.3333333333333 0 1.5 0 0 2 1 1 0.0034482758620689655 0 1');
+  loadInternalModel_0('xlm324v2-qpa 0 1.01e-16 333.3333333333333 0 1.5 0 0 2 1 1 0.004081632653061225 0 1');
+  loadInternalModel_0('xlm324v2-qnq 0 1e-16 200 0 1.5 0 0 2 1 1 0 0 1');
+  loadInternalModel_0('xlm324v2-qpq 0 1e-16 333.3333333333333 0 1.5 0 0 2 1 1 0 0 1');
+  loadInternalModel_0('~tl431ed-qn_ed 0 1e-16 0 0 1.5 0 0 2 1 1 0.0125 0.02 1');
+  loadInternalModel_0('~tl431ed-qn_ed-A1.2 0 1.2e-16 0 0 1.5 0 0 2 1 1 0.0125 0.02 1');
+  loadInternalModel_0('~tl431ed-qn_ed-A2.2 0 2.2000000000000002e-16 0 0 1.5 0 0 2 1 1 0.0125 0.02 1');
+  loadInternalModel_0('~tl431ed-qn_ed-A0.5 0 5e-17 0 0 1.5 0 0 2 1 1 0.0125 0.02 1');
+  loadInternalModel_0('~tl431ed-qp_ed 0 1e-16 0 0 1.5 0 0 2 1 1 0.014285714285714285 0.025 1');
+  loadInternalModel_0('~tl431ed-qn_ed-A5 0 5e-16 0 0 1.5 0 0 2 1 1 0.0125 0.02 1');
+  loadInternalModel_0('~lm317-qpl-A0.1 0 1e-17 0 0 1.5 0 0 2 1 1 0.02 0 1');
+  loadInternalModel_0('~lm317-qnl-A0.2 0 2e-17 0 0 1.5 0 0 2 1 1 0.01 0 1');
+  loadInternalModel_0('~lm317-qpl-A0.2 0 2e-17 0 0 1.5 0 0 2 1 1 0.02 0 1');
+  loadInternalModel_0('~lm317-qnl-A2 0 2e-16 0 0 1.5 0 0 2 1 1 0.01 0 1');
+  loadInternalModel_0('~lm317-qpl-A2 0 2e-16 0 0 1.5 0 0 2 1 1 0.02 0 1');
+  loadInternalModel_0('~lm317-qnl-A5 0 5e-16 0 0 1.5 0 0 2 1 1 0.01 0 1');
+  loadInternalModel_0('~lm317-qnl-A50 0 5e-15 0 0 1.5 0 0 2 1 1 0.01 0 1');
+}
+
+function getModelList_1() {
+  var it, pair, tm, vector;
+  vector = new Vector;
+  it = new AbstractHashMap$EntrySetIterator((new AbstractHashMap$EntrySet(modelMap_1)).this$01);
+  while (it.hasNext) {
+    pair = $next_2(it);
+    tm = pair.getValue();
+    if (tm.internal)
+      continue;
+    $indexOf_2(vector.arrayList, tm, 0) != -1 || $add_8(vector.arrayList, tm);
+  }
+  $clinit_Collections();
+  $sort(vector.arrayList, null);
+  return vector;
+}
+
+function getModelWithName_2(name_0) {
+  var lm;
+  createModelMap_0();
+  lm = $getStringValue(modelMap_1, name_0);
+  if (lm)
+    return lm;
+  lm = new TransistorModel;
+  lm.name_0 = name_0;
+  $putStringValue(modelMap_1, name_0, lm);
+  return lm;
+}
+
+function getModelWithNameOrCopy_1(name_0, oldmodel) {
+  var lm;
+  createModelMap_0();
+  lm = $getStringValue(modelMap_1, name_0);
+  if (lm)
+    return lm;
+  if (!oldmodel) {
+    console.log('model not found: ' + name_0);
+    return getModelWithName_2('default');
+  }
+  lm = new TransistorModel_0(oldmodel);
+  lm.name_0 = name_0;
+  $putStringValue(modelMap_1, name_0, lm);
+  return lm;
+}
+
+function loadInternalModel_0(s) {
+  var st, tm;
+  st = new StringTokenizer(s);
+  tm = undumpModel_1(st);
+  tm.builtIn = tm.internal = true;
+}
+
+function undumpModel_1(st) {
+  var dm, name_0;
+  name_0 = unescape_0($nextToken(st));
+  dm = getModelWithName_2(name_0);
+  dm.flags = (new Integer_0($nextToken(st))).value_0;
+  dm.satCur = __parseAndValidateDouble($nextToken(st));
+  dm.invRollOffF = __parseAndValidateDouble($nextToken(st));
+  dm.BEleakCur = __parseAndValidateDouble($nextToken(st));
+  dm.leakBEemissionCoeff = __parseAndValidateDouble($nextToken(st));
+  dm.invRollOffR = __parseAndValidateDouble($nextToken(st));
+  dm.BCleakCur = __parseAndValidateDouble($nextToken(st));
+  dm.leakBCemissionCoeff = __parseAndValidateDouble($nextToken(st));
+  dm.emissionCoeffF = __parseAndValidateDouble($nextToken(st));
+  dm.emissionCoeffR = __parseAndValidateDouble($nextToken(st));
+  dm.invEarlyVoltF = __parseAndValidateDouble($nextToken(st));
+  dm.invEarlyVoltR = __parseAndValidateDouble($nextToken(st));
+  dm.betaR = __parseAndValidateDouble($nextToken(st));
+  return dm;
+}
+
+defineClass(210, 1, { 10: 1, 210: 1, 14: 1 }, TransistorModel, TransistorModel_0, TransistorModel_1);
+_.compareTo = function compareTo_2(dm) {
+  return $compareTo(this.name_0, dm.name_0);
+}
+  ;
+_.getEditInfo = function getEditInfo_72(n) {
+  var ei;
+  if (n == 0) {
+    ei = new EditInfo('Model Name', 0);
+    ei.text_0 = this.name_0 == null ? '' : this.name_0;
+    return ei;
+  }
+  if (n == 1)
+    return new EditInfo('Transport Saturation Current (IS)', this.satCur);
+  if (n == 2)
+    return new EditInfo('Reverse Beta (BR)', this.betaR);
+  if (n == 3)
+    return new EditInfo('Forward Early Voltage (VAF)', 1 / this.invEarlyVoltF);
+  if (n == 4)
+    return new EditInfo('Reverse Early Voltage (VAR)', 1 / this.invEarlyVoltR);
+  if (n == 5)
+    return new EditInfo('Corner For Forward Beta High Current Roll-Off (IKF)', 1 / this.invRollOffF);
+  if (n == 6)
+    return new EditInfo('Corner For Reverse Beta High Current Roll-Off (IKR)', 1 / this.invRollOffR);
+  if (n == 7)
+    return new EditInfo('Forward Current Emission Coefficient (NF)', this.emissionCoeffF);
+  if (n == 8)
+    return new EditInfo('Reverse Current Emission Coefficient (NR)', this.emissionCoeffR);
+  if (n == 9)
+    return new EditInfo('B-E Leakage Saturation Current (ISE)', this.BEleakCur);
+  if (n == 10)
+    return new EditInfo('B-E Leakage Emission Coefficient (NE)', this.leakBEemissionCoeff);
+  if (n == 11)
+    return new EditInfo('B-C Leakage Saturation Current (ISC)', this.BCleakCur);
+  if (n == 12)
+    return new EditInfo('B-C Leakage Emission Coefficient (NC)', this.leakBCemissionCoeff);
+  return null;
+}
+  ;
+_.setEditValue = function setEditValue_70(n, ei) {
+  if (n == 0) {
+    this.name_0 = $getText(ei.textf);
+    this.name_0.length > 0 && $putStringValue(modelMap_1, this.name_0, this);
+  }
+  n == 1 && (this.satCur = ei.value_0);
+  n == 2 && (this.betaR = ei.value_0);
+  n == 3 && (this.invEarlyVoltF = 1 / ei.value_0);
+  n == 4 && (this.invEarlyVoltR = 1 / ei.value_0);
+  n == 5 && (this.invRollOffF = 1 / ei.value_0);
+  n == 6 && (this.invRollOffR = 1 / ei.value_0);
+  n == 7 && (this.emissionCoeffF = ei.value_0);
+  n == 8 && (this.emissionCoeffR = ei.value_0);
+  n == 9 && (this.BEleakCur = ei.value_0);
+  n == 10 && (this.leakBEemissionCoeff = ei.value_0);
+  n == 11 && (this.BCleakCur = ei.value_0);
+  n == 12 && (this.leakBCemissionCoeff = ei.value_0);
+  $updateModels(theApp);
+}
+  ;
+_.BCleakCur = 0;
+_.BEleakCur = 0;
+_.betaR = 0;
+_.builtIn = false;
+_.dumped = false;
+_.emissionCoeffF = 0;
+_.emissionCoeffR = 0;
+_.flags = 0;
+_.internal = false;
+_.invEarlyVoltF = 0;
+_.invEarlyVoltR = 0;
+_.invRollOffF = 0;
+_.invRollOffR = 0;
+_.leakBCemissionCoeff = 0;
+_.leakBEemissionCoeff = 0;
+_.readOnly = false;
+_.satCur = 0;
+var modelMap_1;
+var Lcom_lushprojects_circuitjs1_client_TransistorModel_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'TransistorModel', 210);
+function TriStateElm(xx, yy) {
+  CircuitElm.call(this, xx, yy);
+  this.r_on = 0.1;
+  this.r_off = $intern_87;
+  this.r_off_ground = $intern_90;
+  this.noDiagonal = true;
+  this.highVoltage = lastHighVoltage;
+}
+
+function TriStateElm_0(xa, ya, xb, yb, f, st) {
+  CircuitElm_0.call(this, xa, ya, xb, yb, f);
+  this.r_on = 0.1;
+  this.r_off = $intern_87;
+  this.r_off_ground = 0;
+  this.noDiagonal = true;
+  this.highVoltage = 5;
+  try {
+    this.r_on = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+    this.r_off = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+    this.r_off_ground = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+    this.highVoltage = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  }
+  catch ($e0) {
+    $e0 = toJava($e0);
+    if (!instanceOf($e0, 15))
+      throw toJs($e0);
+  }
+}
+
+defineClass(431, 7, $intern_79, TriStateElm, TriStateElm_0);
+_.calculateCurrent = function calculateCurrent_37() {
+  var current10, current31;
+  current31 = (this.volts[3] - this.volts[1]) / this.resistance;
+  current10 = this.r_off_ground == 0 ? 0 : this.volts[1] / this.r_off_ground;
+  this.current_0 = current31 - current10;
+}
+  ;
+_.doStep = function doStep_49() {
+  this.open_0 = this.volts[2] < this.highVoltage * 0.5;
+  this.resistance = this.open_0 ? this.r_off : this.r_on;
+  $stampResistor(sim_0, this.nodes[3], this.nodes[1], this.resistance);
+  this.r_off_ground > 0 && $stampResistor(sim_0, this.nodes[1], 0, this.r_off_ground);
+  $updateVoltageSource(sim_0, this.voltSource, this.volts[0] > this.highVoltage * 0.5 ? this.highVoltage : 0);
+}
+  ;
+_.drag = function drag_7(xx, yy) {
+  var flip;
+  flip = xx < this.x_0 == yy < this.y_0;
+  xx = $snapGrid_0(app_0, xx);
+  yy = $snapGrid_0(app_0, yy);
+  if (abs_0(this.x_0 - xx) < abs_0(this.y_0 - yy))
+    xx = this.x_0;
+  else {
+    flip = !flip;
+    yy = this.y_0;
+  }
+  this.flags = flip ? this.flags | 1 : this.flags & -2;
+  $drag(this, xx, yy);
+}
+  ;
+_.draw = function draw_79(g) {
+  $setBbox_0(this, this.point1, this.point2, 16);
+  $draw2Leads(this, g);
+  $setColor_0(g, lightGrayColor);
+  drawThickPolygon(g, this.gatePoly);
+  $setVoltageColor(this, g, this.volts[2]);
+  drawThickLine_0(g, this.point3, this.lead3);
+  this.curcount_0 = $updateDotCount(this.current_0, this.curcount_0);
+  $drawDots(g, this.lead2, this.point2, this.curcount_0);
+  $drawPosts(this, g);
+}
+  ;
+_.dumpXml = function dumpXml_81(doc, elem) {
+  dumpAttr_1(elem, 'x', this.x_0 + ' ' + this.y_0 + ' ' + this.x2 + ' ' + this.y2);
+  dumpAttr_0(elem, 'f', this.flags);
+  dumpAttr(elem, 'ron', this.r_on);
+  dumpAttr(elem, 'roff', this.r_off);
+  dumpAttr(elem, 'rog', this.r_off_ground);
+  dumpAttr(elem, 'hi', this.highVoltage);
+}
+  ;
+_.flipX = function flipX_17(c2, count) {
+  this.flags ^= 3;
+  $flipX(this, c2);
+}
+  ;
+_.flipXY = function flipXY_14(c2, count) {
+  this.flags ^= 1;
+  $flipXY(this, c2);
+}
+  ;
+_.flipY = function flipY_17(c2, count) {
+  this.flags ^= 5;
+  $flipY(this, c2);
+}
+  ;
+_.getConnection = function getConnection_34(n1, n2) {
+  return false;
+}
+  ;
+_.getCurrentIntoNode = function getCurrentIntoNode_31(n) {
+  if (n == 1)
+    return this.current_0;
+  return 0;
+}
+  ;
+_.getDumpType = function getDumpType_110() {
+  return 180;
+}
+  ;
+_.getEditInfo = function getEditInfo_73(n) {
+  if (n == 0)
+    return new EditInfo_0('On Resistance (ohms)', this.r_on, 0, 0);
+  if (n == 1)
+    return new EditInfo_0('Off Resistance (ohms)', this.r_off, 0, 0);
+  if (n == 2)
+    return new EditInfo_0('Output Pulldown Resistance (ohms)', this.r_off_ground, 0, 0);
+  if (n == 3)
+    return new EditInfo_0('High Logic Voltage', this.highVoltage, 1, 10);
+  return null;
+}
+  ;
+_.getInfo_0 = function getInfo_82(arr) {
+  arr[0] = 'tri-state buffer';
+  arr[1] = this.open_0 ? 'open' : 'closed';
+  arr[2] = 'Vd = ' + getUnitText($wnd.Math.abs(this.volts[0] - this.volts[1]), 'V', false);
+  arr[3] = 'I = ' + getUnitText($wnd.Math.abs(this.current_0), 'A', false);
+  arr[4] = 'Vc = ' + getUnitText(this.volts[2], 'V', false);
+}
+  ;
+_.getInternalNodeCount = function getInternalNodeCount_12() {
+  return 1;
+}
+  ;
+_.getPost = function getPost_23(n) {
+  return n == 0 ? this.point1 : n == 1 ? this.point2 : this.point3;
+}
+  ;
+_.getPostCount_0 = function getPostCount_73() {
+  return 3;
+}
+  ;
+_.getVoltageSourceCount = function getVoltageSourceCount_51() {
+  return 1;
+}
+  ;
+_.getXmlDumpType = function getXmlDumpType_24() {
+  return 'ts';
+}
+  ;
+_.hasGroundConnection = function hasGroundConnection_19(n1) {
+  return n1 == 1;
+}
+  ;
+_.nonLinear = function nonLinear_25() {
+  return true;
+}
+  ;
+_.setEditValue = function setEditValue_71(n, ei) {
+  n == 0 && ei.value_0 > 0 && (this.r_on = ei.value_0);
+  n == 1 && ei.value_0 > 0 && (this.r_off = ei.value_0);
+  n == 2 && ei.value_0 > 0 && (this.r_off_ground = ei.value_0);
+  n == 3 && (this.highVoltage = lastHighVoltage = ei.value_0);
+}
+  ;
+_.setPoints = function setPoints_70() {
+  var sign, triPoints, ww;
+  $setPoints(this);
+  $calcLeads(this, 32);
+  $adjustLeadsToGrid(this, (this.flags & 2) != 0, (this.flags & 4) != 0);
+  new Point_1;
+  ww = 16;
+  16 > this.dn / 2 && (ww = round_int(this.dn / 2));
+  triPoints = $newPointArray(3);
+  $interpPoint2(this.lead1, this.lead2, triPoints[0], triPoints[1], 0, 18);
+  triPoints[2] = $interpPoint(this.lead1, this.lead2, 0.5 + (ww - 2) / 32);
+  this.gatePoly = $createPolygon_1(triPoints);
+  sign = (this.flags & 1) == 0 ? -1 : 1;
+  this.point3 = $interpPoint_0(this.lead1, this.lead2, 0.5, sign * 16);
+  this.lead3 = $interpPoint_0(this.lead1, this.lead2, 0.5, sign * 16 / 2 | 0);
+}
+  ;
+_.stamp = function stamp_63() {
+  $stampVoltageSource(sim_0, 0, this.nodes[3], this.voltSource);
+  $stampNonLinear(sim_0, this.nodes[3]);
+  $stampNonLinear(sim_0, this.nodes[1]);
+}
+  ;
+_.undumpXml = function undumpXml_83(xml) {
+  this.flags = $parseIntAttr(xml, 'f', this.flags);
+  this.r_on = $parseDoubleAttr(xml, 'ron', this.r_on);
+  this.r_off = $parseDoubleAttr(xml, 'roff', this.r_off);
+  this.r_off_ground = $parseDoubleAttr(xml, 'rog', this.r_off_ground);
+  this.highVoltage = $parseDoubleAttr(xml, 'hi', this.highVoltage);
+}
+  ;
+_.highVoltage = 0;
+_.open_0 = false;
+_.r_off = 0;
+_.r_off_ground = 0;
+_.r_on = 0;
+_.resistance = 0;
+var Lcom_lushprojects_circuitjs1_client_TriStateElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'TriStateElm', 431);
+function $setDefaults_0(this$static) {
+  this$static.holdingI = 0.0082;
+  this$static.triggerI = $intern_34;
+  this$static.cresistance = 100;
+}
+
+function $setup_6(this$static) {
+  this$static.diode03 = new Diode(sim_0);
+  $setup(this$static.diode03, getModelWithName_1('default'));
+  this$static.diode30 = new Diode(sim_0);
+  $setup(this$static.diode30, getModelWithName_1('default'));
+}
+
+function TriacElm(xx, yy) {
+  CircuitElm.call(this, xx, yy);
+  $setDefaults_0(this);
+  $setup_6(this);
+}
+
+function TriacElm_0(xa, ya, xb, yb, f, st) {
+  CircuitElm_0.call(this, xa, ya, xb, yb, f);
+  $setDefaults_0(this);
+  this.triggerI = __parseAndValidateDouble($nextToken(st));
+  this.holdingI = __parseAndValidateDouble($nextToken(st));
+  this.cresistance = __parseAndValidateDouble($nextToken(st));
+  this.state = ($clinit_Boolean(), $equalsIgnoreCase('true', $nextToken(st)));
+  $setup_6(this);
+}
+
+defineClass(376, 7, $intern_79, TriacElm, TriacElm_0);
+_.calculateCurrent = function calculateCurrent_38() {
+  this.aresistance == 0 ? (this.i2 = 0) : (this.i2 = (this.volts[3] - this.volts[1]) / this.aresistance);
+  this.ig = -(this.volts[1] - this.volts[2]) / this.cresistance;
+  this.i1 = -this.i2 - this.ig;
+}
+  ;
+_.canViewInScope = function canViewInScope_5() {
+  return true;
+}
+  ;
+_.doStep = function doStep_50() {
+  $doStep_0(this.diode03, this.volts[0] - this.volts[3]);
+  $doStep_0(this.diode30, this.volts[3] - this.volts[0]);
+  $stampResistor(sim_0, this.nodes[3], this.nodes[1], this.aresistance);
+}
+  ;
+_.draw = function draw_80(g) {
+  var ds, v1, v2;
+  v1 = this.volts[0];
+  v2 = this.volts[1];
+  $setBbox_0(this, this.point1, this.point2, 6);
+  $adjustBbox_0(this, this.gate[0], this.gate[1]);
+  $draw2Leads(this, g);
+  $setColor_0(g, $getVoltageColor(this, v1));
+  $setPowerColor_0(this, g);
+  drawThickLine_0(g, this.plate1[0], this.plate1[1]);
+  $setColor_0(g, $getVoltageColor(this, v2));
+  $setPowerColor_0(this, g);
+  drawThickLine_0(g, this.plate2[0], this.plate2[1]);
+  $fillPolygon(g, this.arrows[0]);
+  $setColor_0(g, $getVoltageColor(this, v1));
+  $setPowerColor_0(this, g);
+  $fillPolygon(g, this.arrows[1]);
+  $setVoltageColor(this, g, this.volts[2]);
+  drawThickLine_0(g, this.lead2, this.gate[0]);
+  drawThickLine_0(g, this.gate[0], this.gate[1]);
+  this.curcount_1 = $updateDotCount(this.i1, this.curcount_1);
+  this.curcount_2 = $updateDotCount(this.i2, this.curcount_2);
+  this.curcount_g = $updateDotCount(this.ig, this.curcount_g);
+  if (app_0.mouse.dragElm != this) {
+    $drawDots(g, this.point1, this.lead2, this.curcount_2);
+    $drawDots(g, this.point2, this.lead2, this.curcount_1);
+    $drawDots(g, this.gate[1], this.gate[0], this.curcount_g);
+    $drawDots(g, this.gate[0], this.lead2, this.curcount_g + distance(this.gate[1], this.gate[0]));
+  }
+  if ((mouseElmRef == this || this.selected_0 || app_0.mouse.plotYElm == this || instanceOf(mouseElmRef, 20) && $getElm_0(mouseElmRef.elmScope) == this || $isOnHighlightedNet(this) || app_0.mouse.dragElm == this) && this.point1.x_0 == this.point2.x_0 && this.point2.y_0 > this.point1.y_0) {
+    $setColor_0(g, whiteColor);
+    ds = sign_0(this.dx);
+    $drawString(g, 'MT1', this.lead2.x_0 + (ds < 0 ? 5 : -30), this.lead2.y_0 + 12);
+    $drawString(g, 'MT2', this.lead1.x_0 + 5, this.lead1.y_0 - 4);
+    $drawString(g, 'G', this.gate[0].x_0, this.gate[0].y_0 + 12);
+  }
+  $drawPosts(this, g);
+}
+  ;
+_.dumpXml = function dumpXml_82(doc, elem) {
+  dumpAttr_1(elem, 'x', this.x_0 + ' ' + this.y_0 + ' ' + this.x2 + ' ' + this.y2);
+  dumpAttr_0(elem, 'f', this.flags);
+  dumpAttr(elem, 'ti', this.triggerI);
+  dumpAttr(elem, 'hi', this.holdingI);
+  dumpAttr(elem, 'cr', this.cresistance);
+}
+  ;
+_.dumpXmlState = function dumpXmlState_16(doc, elem) {
+  dumpAttr_2(elem, 'st', this.state);
+}
+  ;
+_.getCurrent_0 = function getCurrent_1() {
+  return this.i2;
+}
+  ;
+_.getCurrentIntoNode = function getCurrentIntoNode_32(n) {
+  if (n == 0)
+    return -this.i2;
+  if (n == 1)
+    return -this.i1;
+  return -this.ig;
+}
+  ;
+_.getDumpType = function getDumpType_111() {
+  return 206;
+}
+  ;
+_.getEditInfo = function getEditInfo_74(n) {
+  if (n == 0)
+    return new EditInfo_0('Trigger Current (A)', this.triggerI, 0, 0);
+  if (n == 1)
+    return new EditInfo_0('Holding Current (A)', this.holdingI, 0, 0);
+  if (n == 2)
+    return new EditInfo_0('Gate-MT1 Resistance (ohms)', this.cresistance, 0, 0);
+  return null;
+}
+  ;
+_.getInfo_0 = function getInfo_83(arr) {
+  arr[0] = 'TRIAC';
+  arr[1] = this.state ? 'on' : 'off';
+  arr[2] = 'Vmt2mt1 = ' + getUnitText(this.volts[0] - this.volts[1], 'V', false);
+  arr[3] = 'Imt1 = ' + getUnitText(this.i1, 'A', false);
+  arr[4] = 'Imt2 = ' + getUnitText(this.i2, 'A', false);
+  arr[5] = 'Ig = ' + getUnitText(this.ig, 'A', false);
+  arr[6] = 'P = ' + getUnitText((this.volts[0] - this.volts[1]) * this.i2 + (this.volts[2] - this.volts[1]) * this.ig, 'W', false);
+}
+  ;
+_.getInternalNodeCount = function getInternalNodeCount_13() {
+  return 1;
+}
+  ;
+_.getPost = function getPost_24(n) {
+  return n == 0 ? this.point1 : n == 1 ? this.point2 : this.gate[1];
+}
+  ;
+_.getPostCount_0 = function getPostCount_74() {
+  return 3;
+}
+  ;
+_.getPower = function getPower_12() {
+  return (this.volts[0] - this.volts[1]) * this.i2 + (this.volts[2] - this.volts[1]) * this.ig;
+}
+  ;
+_.getVoltageDiff_0 = function getVoltageDiff_23() {
+  return this.volts[0] - this.volts[1];
+}
+  ;
+_.nonLinear = function nonLinear_26() {
+  return true;
+}
+  ;
+_.reset_0 = function reset_47() {
+  this.volts[1] = this.volts[0] = this.volts[2] = 0;
+  this.diode03.lastvoltdiff = 0;
+  this.diode30.lastvoltdiff = 0;
+  this.curcount_1 = this.curcount_2 = this.curcount_g = 0;
+}
+  ;
+_.setEditValue = function setEditValue_72(n, ei) {
+  n == 0 && ei.value_0 > 0 && (this.triggerI = ei.value_0);
+  n == 1 && ei.value_0 > 0 && (this.holdingI = ei.value_0);
+  n == 2 && ei.value_0 > 0 && (this.cresistance = ei.value_0);
+}
+  ;
+_.setPoints = function setPoints_71() {
+  var dir_0, gatelen, i, leadlen, p1, p2, p3, sgn;
+  $setPoints(this);
+  if (abs_0(this.dx) > abs_0(this.dy)) {
+    dir_0 = -sign_0(this.dx) * sign_0(this.dy);
+    this.dn = abs_0(this.dx);
+    this.point2.y_0 = this.point1.y_0;
+  }
+  else {
+    dir_0 = sign_0(this.dy) * sign_0(this.dx);
+    this.dn = abs_0(this.dy);
+    this.point2.x_0 = this.point1.x_0;
+  }
+  dir_0 == 0 && (dir_0 = 1);
+  $calcLeads(this, 16);
+  this.plate1 = $newPointArray(2);
+  this.plate2 = $newPointArray(2);
+  this.gate = $newPointArray(2);
+  $interpPoint2(this.lead1, this.lead2, this.plate1[0], this.plate1[1], 0, 16);
+  $interpPoint2(this.lead1, this.lead2, this.plate2[0], this.plate2[1], 1, 16);
+  this.arrows = initUnidimensionalArray(Lcom_lushprojects_circuitjs1_client_Polygon_2_classLit, $intern_3, 194, 2, 0, 1);
+  for (i = 0; i != 2; i++) {
+    sgn = -1 + i * 2;
+    p1 = $interpPoint_0(this.lead1, this.lead2, i, 8 * sgn);
+    p2 = $interpPoint_0(this.lead1, this.lead2, 1 - i, 16 * sgn);
+    p3 = $interpPoint_0(this.lead1, this.lead2, 1 - i, 0);
+    this.arrows[i] = $createPolygon(p1, p2, p3);
+  }
+  gatelen = app_0.gridSize;
+  leadlen = (this.dn - 16) / 2;
+  gatelen = round_int(gatelen + leadlen % app_0.gridSize);
+  if (leadlen < gatelen) {
+    this.x2 = this.x_0;
+    this.y2 = this.y_0;
+    return;
+  }
+  $interpPoint_2(this.lead2, this.point2, this.gate[0], gatelen / leadlen, gatelen * dir_0);
+  $interpPoint_2(this.lead2, this.point2, this.gate[1], gatelen / leadlen, app_0.gridSize * 2 * dir_0);
+}
+  ;
+_.stamp = function stamp_64() {
+  $stampNonLinear(sim_0, this.nodes[1]);
+  $stampNonLinear(sim_0, this.nodes[0]);
+  $stampNonLinear(sim_0, this.nodes[2]);
+  $stampNonLinear(sim_0, this.nodes[3]);
+  $stampResistor(sim_0, this.nodes[2], this.nodes[1], this.cresistance);
+  $stamp_0(this.diode03, this.nodes[0], this.nodes[3]);
+  $stamp_0(this.diode30, this.nodes[3], this.nodes[0]);
+}
+  ;
+_.startIteration = function startIteration_20() {
+  $wnd.Math.abs(this.i2) < this.holdingI && (this.state = false);
+  $wnd.Math.abs(this.ig) > this.triggerI && (this.state = true);
+  this.aresistance = this.state ? $intern_34 : $intern_78;
+}
+  ;
+_.undumpXml = function undumpXml_84(xml) {
+  this.flags = $parseIntAttr(xml, 'f', this.flags);
+  this.triggerI = $parseDoubleAttr(xml, 'ti', this.triggerI);
+  this.holdingI = $parseDoubleAttr(xml, 'hi', this.holdingI);
+  this.cresistance = $parseDoubleAttr(xml, 'cr', this.cresistance);
+  this.state = $parseBooleanAttr(xml, 'st', this.state);
+  $setup_6(this);
+}
+  ;
+_.aresistance = 0;
+_.cresistance = 0;
+_.curcount_1 = 0;
+_.curcount_2 = 0;
+_.curcount_g = 0;
+_.holdingI = 0;
+_.i1 = 0;
+_.i2 = 0;
+_.ig = 0;
+_.state = false;
+_.triggerI = 0;
+var Lcom_lushprojects_circuitjs1_client_TriacElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'TriacElm', 376);
+function TriodeElm(xx, yy) {
+  CircuitElm.call(this, xx, yy);
+  this.mu = 93;
+  this.kg1 = 680;
+  this.noDiagonal = true;
+}
+
+function TriodeElm_0(xa, ya, xb, yb, f, st) {
+  CircuitElm_0.call(this, xa, ya, xb, yb, f);
+  this.mu = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.kg1 = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.noDiagonal = true;
+}
+
+defineClass(414, 7, $intern_79, TriodeElm, TriodeElm_0);
+_.canFlipX = function canFlipX_6() {
+  return false;
+}
+  ;
+_.canFlipY = function canFlipY_7() {
+  return false;
+}
+  ;
+_.canViewInScope = function canViewInScope_6() {
+  return true;
+}
+  ;
+_.doStep = function doStep_51() {
+  var Gds, gm, ids, ival, q, rs, vgk, vpk, vs;
+  vs = initUnidimensionalArray(D_classLit, $intern_70, 8, 3, 15, 1);
+  vs[0] = this.volts[0];
+  vs[1] = this.volts[1];
+  vs[2] = this.volts[2];
+  vs[1] > this.lastv1 + 0.5 && (vs[1] = this.lastv1 + 0.5);
+  vs[1] < this.lastv1 - 0.5 && (vs[1] = this.lastv1 - 0.5);
+  vs[2] > this.lastv2 + 0.5 && (vs[2] = this.lastv2 + 0.5);
+  vs[2] < this.lastv2 - 0.5 && (vs[2] = this.lastv2 - 0.5);
+  vgk = vs[1] - vs[2];
+  vpk = vs[0] - vs[2];
+  ($wnd.Math.abs(this.lastv0 - vs[0]) > $intern_34 || $wnd.Math.abs(this.lastv1 - vs[1]) > $intern_34 || $wnd.Math.abs(this.lastv2 - vs[2]) > $intern_34) && (sim_0.converged = false);
+  this.lastv0 = vs[0];
+  this.lastv1 = vs[1];
+  this.lastv2 = vs[2];
+  gm = 0;
+  ival = vgk + vpk / this.mu;
+  this.currentg = 0;
+  if (vgk > $intern_34) {
+    $stampResistor(sim_0, this.nodes[1], this.nodes[2], 6000);
+    this.currentg = vgk / 6000;
+  }
+  else
+    $stampResistor(sim_0, this.nodes[1], this.nodes[2], $intern_90);
+  if (ival < 0) {
+    Gds = $intern_106;
+    ids = vpk * $intern_106;
+  }
+  else {
+    ids = $wnd.Math.pow(ival, 1.5) / this.kg1;
+    q = 1.5 * $wnd.Math.sqrt(ival) / this.kg1;
+    Gds = q;
+    gm = q / this.mu;
+  }
+  this.currentp = ids;
+  this.currentc = ids + this.currentg;
+  rs = -ids + Gds * vpk + gm * vgk;
+  $stampMatrix(sim_0, this.nodes[0], this.nodes[0], Gds);
+  $stampMatrix(sim_0, this.nodes[0], this.nodes[2], -Gds - gm);
+  $stampMatrix(sim_0, this.nodes[0], this.nodes[1], gm);
+  $stampMatrix(sim_0, this.nodes[2], this.nodes[0], -Gds);
+  $stampMatrix(sim_0, this.nodes[2], this.nodes[2], Gds + gm);
+  $stampMatrix(sim_0, this.nodes[2], this.nodes[1], -gm);
+  $stampRightSide_0(sim_0, this.nodes[0], rs);
+  $stampRightSide_0(sim_0, this.nodes[2], -rs);
+}
+  ;
+_.draw = function draw_81(g) {
+  var i;
+  $setColor_0(g, ($clinit_Color(), gray));
+  drawThickCircle(g, this.point2.x_0, this.point2.y_0, this.circler);
+  $setBbox_0(this, this.point1, this.plate[0], 16);
+  $adjustBbox(this, this.cath[0].x_0, this.cath[1].y_0, this.point2.x_0 + this.circler, this.point2.y_0 + this.circler);
+  $setVoltageColor(this, g, this.volts[0]);
+  $setPowerColor(this, g, this.currentp * (this.volts[0] - this.volts[2]));
+  drawThickLine_0(g, this.plate[0], this.plate[1]);
+  drawThickLine_0(g, this.plate[2], this.plate[3]);
+  $setVoltageColor(this, g, this.volts[1]);
+  $setPowerColor(this, g, this.currentg * (this.volts[1] - this.volts[2]));
+  for (i = 0; i != 8; i += 2)
+    drawThickLine_0(g, this.grid[i], this.grid[i + 1]);
+  $setVoltageColor(this, g, this.volts[2]);
+  $setPowerColor(this, g, 0);
+  for (i = 0; i != 3; i++)
+    drawThickLine_0(g, this.cath[i], this.cath[i + 1]);
+  this.curcountp = $updateDotCount(this.currentp, this.curcountp);
+  this.curcountc = $updateDotCount(this.currentc, this.curcountc);
+  this.curcountg = $updateDotCount(this.currentg, this.curcountg);
+  if (app_0.mouse.dragElm != this) {
+    $drawDots(g, this.plate[0], this.midgrid, this.curcountp);
+    $drawDots(g, this.midgrid, this.midcath, this.curcountc);
+    $drawDots(g, this.midcath, this.cath[1], $addCurCount(this.curcountc, 8));
+    $drawDots(g, this.cath[1], this.cath[0], $addCurCount(this.curcountc, 8));
+    $drawDots(g, this.point1, this.midgrid, this.curcountg);
+  }
+  $drawPosts(this, g);
+}
+  ;
+_.dumpXml = function dumpXml_83(doc, elem) {
+  dumpAttr_1(elem, 'x', this.x_0 + ' ' + this.y_0 + ' ' + this.x2 + ' ' + this.y2);
+  dumpAttr_0(elem, 'f', this.flags);
+  dumpAttr(elem, 'mu', this.mu);
+  dumpAttr(elem, 'kg', this.kg1);
+}
+  ;
+_.getConnection = function getConnection_35(n1, n2) {
+  return !(n1 == 1 || n2 == 1);
+}
+  ;
+_.getCurrent_0 = function getCurrent_2() {
+  return this.currentc;
+}
+  ;
+_.getCurrentIntoNode = function getCurrentIntoNode_33(n) {
+  if (n == 2)
+    return this.currentc;
+  if (n == 0)
+    return -this.currentp;
+  return -this.currentg;
+}
+  ;
+_.getDumpType = function getDumpType_112() {
+  return 173;
+}
+  ;
+_.getEditInfo = function getEditInfo_75(n) {
+  if (n == 0)
+    return $setDimensionless(new EditInfo_0('mu', this.mu, 0, 0));
+  if (n == 1)
+    return $setDimensionless(new EditInfo_0('kg1', this.kg1, 0, 0));
+  return null;
+}
+  ;
+_.getInfo_0 = function getInfo_84(arr) {
+  var vac, vag, vgc;
+  arr[0] = 'triode';
+  vac = this.volts[0] - this.volts[2];
+  vgc = this.volts[1] - this.volts[2];
+  vag = this.volts[0] - this.volts[1];
+  arr[1] = 'Vac = ' + getUnitText(vac, 'V', false);
+  arr[2] = 'Vgc = ' + getUnitText(vgc, 'V', false);
+  arr[3] = 'Vag = ' + getUnitText(vag, 'V', false);
+  arr[4] = 'Ic = ' + getUnitText(this.currentc, 'A', false);
+  arr[5] = 'Ig = ' + getUnitText(this.currentg, 'A', false);
+}
+  ;
+_.getPost = function getPost_25(n) {
+  return n == 0 ? this.plate[0] : n == 1 ? this.grid[0] : this.cath[0];
+}
+  ;
+_.getPostCount_0 = function getPostCount_75() {
+  return 3;
+}
+  ;
+_.getPower = function getPower_13() {
+  return (this.volts[0] - this.volts[2]) * this.currentc + (this.volts[1] - this.volts[2]) * this.currentg;
+}
+  ;
+_.getVoltageDiff_0 = function getVoltageDiff_24() {
+  return this.volts[0] - this.volts[2];
+}
+  ;
+_.nonLinear = function nonLinear_27() {
+  return true;
+}
+  ;
+_.reset_0 = function reset_48() {
+  this.volts[0] = this.volts[1] = this.volts[2] = 0;
+  this.curcount_0 = 0;
+}
+  ;
+_.setEditValue = function setEditValue_73(n, ei) {
+  n == 0 && ei.value_0 > 0 && (this.mu = ei.value_0);
+  n == 1 && ei.value_0 > 0 && (this.kg1 = ei.value_0);
+}
+  ;
+_.setPoints = function setPoints_72() {
+  var i;
+  $setPoints(this);
+  this.plate = $newPointArray(4);
+  this.grid = $newPointArray(8);
+  this.cath = $newPointArray(4);
+  this.grid[0] = this.point1;
+  $interpPoint_2(this.point1, this.point2, this.plate[1], 1, 8);
+  $interpPoint_2(this.point1, this.point2, this.plate[0], 1, 32);
+  $interpPoint2(this.point2, this.plate[1], this.plate[2], this.plate[3], 1, 18);
+  this.circler = 24;
+  $interpPoint_2(this.point1, this.point2, this.grid[1], (this.dn - this.circler) / this.dn, 0);
+  for (i = 0; i != 3; i++) {
+    $interpPoint_2(this.grid[1], this.point2, this.grid[2 + i * 2], (i * 3 + 1) / 4.5, 0);
+    $interpPoint_2(this.grid[1], this.point2, this.grid[3 + i * 2], (i * 3 + 2) / 4.5, 0);
+  }
+  this.midgrid = this.point2;
+  this.midcath = $interpPoint_0(this.point1, this.point2, 1, -8);
+  $interpPoint2(this.point2, this.plate[1], this.cath[1], this.cath[2], -1, 16);
+  $interpPoint_2(this.point2, this.plate[1], this.cath[3], -1.2, -16);
+  $interpPoint_2(this.point2, this.plate[1], this.cath[0], -4, 16);
+}
+  ;
+_.stamp = function stamp_65() {
+  $stampNonLinear(sim_0, this.nodes[0]);
+  $stampNonLinear(sim_0, this.nodes[1]);
+  $stampNonLinear(sim_0, this.nodes[2]);
+}
+  ;
+_.undumpXml = function undumpXml_85(xml) {
+  this.flags = $parseIntAttr(xml, 'f', this.flags);
+  this.mu = $parseDoubleAttr(xml, 'mu', this.mu);
+  this.kg1 = $parseDoubleAttr(xml, 'kg', this.kg1);
+}
+  ;
+_.circler = 0;
+_.curcountc = 0;
+_.curcountg = 0;
+_.curcountp = 0;
+_.currentc = 0;
+_.currentg = 0;
+_.currentp = 0;
+_.kg1 = 0;
+_.lastv0 = 0;
+_.lastv1 = 0;
+_.lastv2 = 0;
+_.mu = 0;
+var Lcom_lushprojects_circuitjs1_client_TriodeElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'TriodeElm', 414);
+function $limitStep_1(vnew, vold) {
+  if (vnew > vold + 1)
+    return vold + 1;
+  if (vnew < vold - 1)
+    return vold - 1;
+  return vnew;
+}
+
+function TunnelDiodeElm(xx, yy) {
+  CircuitElm.call(this, xx, yy);
+}
+
+function TunnelDiodeElm_0(xa, ya, xb, yb, f) {
+  CircuitElm_0.call(this, xa, ya, xb, yb, f);
+}
+
+defineClass(396, 7, $intern_79, TunnelDiodeElm, TunnelDiodeElm_0);
+_.calculateCurrent = function calculateCurrent_39() {
+  var i0, voltdiff;
+  voltdiff = this.volts[0] - this.volts[1];
+  i0 = $intern_125 * $wnd.Math.exp(-0.37);
+  this.current_0 = $intern_126 * $wnd.Math.exp($intern_127) * ($wnd.Math.exp(voltdiff / 0.026) - 1) + $intern_126 * (voltdiff / 0.1) * $wnd.Math.exp(1 - voltdiff / 0.1) + $intern_125 * $wnd.Math.exp(voltdiff - 0.37) - i0;
+}
+  ;
+_.doStep = function doStep_52() {
+  var geq, i, i0, nc, voltdiff;
+  voltdiff = this.volts[0] - this.volts[1];
+  $wnd.Math.abs(voltdiff - this.lastvoltdiff) > $intern_34 && (sim_0.converged = false);
+  voltdiff = $limitStep_1(voltdiff, this.lastvoltdiff);
+  this.lastvoltdiff = voltdiff;
+  i0 = $intern_125 * $wnd.Math.exp(-0.37);
+  i = $intern_126 * $wnd.Math.exp($intern_127) * ($wnd.Math.exp(voltdiff / 0.026) - 1) + $intern_126 * (voltdiff / 0.1) * $wnd.Math.exp(1 - voltdiff / 0.1) + $intern_125 * $wnd.Math.exp(voltdiff - 0.37) - i0;
+  geq = $intern_126 * $wnd.Math.exp($intern_127) * $wnd.Math.exp(voltdiff / 0.026) / 0.026 + $intern_126 * $wnd.Math.exp(1 - voltdiff / 0.1) / 0.1 - $wnd.Math.exp(1 - voltdiff / 0.1) * $intern_126 * voltdiff / 0.010000000000000002 + $wnd.Math.exp(voltdiff - 0.37) * $intern_125;
+  nc = i - geq * voltdiff;
+  $stampConductance(sim_0, this.nodes[0], this.nodes[1], geq);
+  $stampCurrentSource(sim_0, this.nodes[0], this.nodes[1], nc);
+}
+  ;
+_.draw = function draw_82(g) {
+  var v1, v2;
+  $setBbox_0(this, this.point1, this.point2, 8);
+  v1 = this.volts[0];
+  v2 = this.volts[1];
+  $draw2Leads(this, g);
+  $setPowerColor_0(this, g);
+  $setColor_0(g, $getVoltageColor(this, v1));
+  $fillPolygon(g, this.poly);
+  $setColor_0(g, $getVoltageColor(this, v2));
+  drawThickLine_0(g, this.cathode[0], this.cathode[1]);
+  drawThickLine_0(g, this.cathode[2], this.cathode[0]);
+  drawThickLine_0(g, this.cathode[3], this.cathode[1]);
+  this.curcount_0 = $updateDotCount(this.current_0, this.curcount_0);
+  app_0.mouse.dragElm == this || $drawDots(g, this.point1, this.point2, this.curcount_0);
+  $drawPosts(this, g);
+}
+  ;
+_.getDumpType = function getDumpType_113() {
+  return 175;
+}
+  ;
+_.getInfo_0 = function getInfo_85(arr) {
+  arr[0] = 'tunnel diode';
+  arr[1] = 'I = ' + getUnitText(this.current_0, 'A', false);
+  arr[2] = 'Vd = ' + getUnitText(this.volts[0] - this.volts[1], 'V', false);
+  arr[3] = 'P = ' + getUnitText((this.volts[0] - this.volts[1]) * this.current_0, 'W', false);
+}
+  ;
+_.nonLinear = function nonLinear_28() {
+  return true;
+}
+  ;
+_.reset_0 = function reset_49() {
+  this.lastvoltdiff = this.volts[0] = this.volts[1] = this.curcount_0 = 0;
+}
+  ;
+_.setPoints = function setPoints_73() {
+  var pa;
+  $setPoints(this);
+  $calcLeads(this, 16);
+  this.cathode = $newPointArray(4);
+  pa = $newPointArray(2);
+  $interpPoint2(this.lead1, this.lead2, pa[0], pa[1], 0, 8);
+  $interpPoint2(this.lead1, this.lead2, this.cathode[0], this.cathode[1], 1, 8);
+  $interpPoint2(this.lead1, this.lead2, this.cathode[2], this.cathode[3], 0.8, 8);
+  this.poly = $createPolygon(pa[0], pa[1], this.lead2);
+}
+  ;
+_.stamp = function stamp_66() {
+  $stampNonLinear(sim_0, this.nodes[0]);
+  $stampNonLinear(sim_0, this.nodes[1]);
+}
+  ;
+_.lastvoltdiff = 0;
+var Lcom_lushprojects_circuitjs1_client_TunnelDiodeElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'TunnelDiodeElm', 396);
+function $close_1(this$static, keepChanges) {
+  if (!keepChanges) {
+    while (this$static.currentPnp != this$static.originalPnp)
+      $toggle_0(this$static);
+  }
+  $hide(this$static, false);
+  typeScrollPopup = null;
+}
+
+function $doDeltaY_0(this$static, dy) {
+  this$static.deltaY += dy;
+  while (this$static.deltaY >= 30) {
+    this$static.deltaY -= 30;
+    $toggle_0(this$static);
+  }
+  while (this$static.deltaY <= -30) {
+    this$static.deltaY += 30;
+    $toggle_0(this$static);
+  }
+}
+
+function $getHeaderText(this$static) {
+  if (instanceOf(this$static.myElm, 128)) {
+    if (instanceOf(this$static.myElm, 175))
+      return LS('JFET Type');
+    return LS('MOSFET Type');
+  }
+  return LS('Transistor Type');
+}
+
+function $toggle_0(this$static) {
+  var m, t, text_0;
+  if (instanceOf(this$static.myElm, 128)) {
+    m = this$static.myElm;
+    m.pnp = -m.pnp;
+    m.flags ^= m.FLAG_PNP;
+    m.setPoints();
+    this$static.currentPnp = m.pnp;
+  }
+  else if (instanceOf(this$static.myElm, 151)) {
+    t = this$static.myElm;
+    t.pnp = -t.pnp;
+    $setPoints_15(t);
+    this$static.currentPnp = t.pnp;
+  }
+  $needAnalyze(this$static.sim);
+  instanceOf(this$static.myElm, 128) ? instanceOf(this$static.myElm, 175) ? (text_0 = this$static.currentPnp == -1 ? LS('P-Channel JFET') : LS('N-Channel JFET')) : (text_0 = this$static.currentPnp == -1 ? LS('P-Channel') : LS('N-Channel')) : (text_0 = this$static.currentPnp == -1 ? 'PNP' : 'NPN');
+  $setText_0(this$static.typeLabel, text_0);
+}
+
+function TypeScrollPopup(x_0, y_0, dy, e, s) {
+  var header, text_0;
+  PopupPanel.call(this);
+  this.myElm = e;
+  this.sim = s;
+  this.deltaY = 0;
+  $pushUndo(this.sim.undoManager);
+  instanceOf(e, 128) ? (this.originalPnp = e.pnp) : instanceOf(e, 151) && (this.originalPnp = e.pnp);
+  this.currentPnp = this.originalPnp;
+  this.vp = new VerticalPanel;
+  $setWidget_0(this, this.vp);
+  header = new Label_1($getHeaderText(this));
+  $setStyleName_0(header, getStylePrimaryName(($clinit_DOM(), header.element)) + '-' + '2off', true);
+  $add_5(this.vp, header);
+  this.typeLabel = new Label;
+  $setHorizontalAlignment(this.typeLabel, ($clinit_HasHorizontalAlignment(), ALIGN_CENTER));
+  $addStyleDependentName(this.typeLabel, 'selected');
+  $add_5(this.vp, this.typeLabel);
+  instanceOf(this.myElm, 128) ? instanceOf(this.myElm, 175) ? (text_0 = this.currentPnp == -1 ? LS('P-Channel JFET') : LS('N-Channel JFET')) : (text_0 = this.currentPnp == -1 ? LS('P-Channel') : LS('N-Channel')) : (text_0 = this.currentPnp == -1 ? 'PNP' : 'NPN');
+  $setText_0(this.typeLabel, text_0);
+  $doDeltaY_0(this, dy);
+  $addDomHandler(this, this, ($clinit_MouseOutEvent(), $clinit_MouseOutEvent(), TYPE_7));
+  $addDomHandler(this, this, ($clinit_MouseWheelEvent(), $clinit_MouseWheelEvent(), TYPE_10));
+  $addDomHandler(this, this, ($clinit_MouseDownEvent(), $clinit_MouseDownEvent(), TYPE_5));
+  $setPopupPositionAndShow(this, new TypeScrollPopup$1(this, x_0, y_0));
+}
+
+defineClass(437, 49, $intern_122, TypeScrollPopup);
+_.onMouseDown = function onMouseDown_4(e) {
+  $getButton(e.nativeEvent) == 1 || $getButton(e.nativeEvent) == 4 ? $close_1(this, true) : $close_1(this, false);
+}
+  ;
+_.onMouseOut = function onMouseOut_7(e) {
+  $close_1(this, true);
+}
+  ;
+_.onMouseWheel = function onMouseWheel_7(e) {
+  !!e.nativeEvent && $preventDefault(e.nativeEvent);
+  $doDeltaY_0(this, $getMouseWheelVelocityY(e.nativeEvent));
+}
+  ;
+_.currentPnp = 0;
+_.deltaY = 0;
+_.originalPnp = 0;
+var Lcom_lushprojects_circuitjs1_client_TypeScrollPopup_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'TypeScrollPopup', 437);
+function TypeScrollPopup$1(this$0, val$x, val$y) {
+  this.this$01 = this$0;
+  this.val$x2 = val$x;
+  this.val$y3 = val$y;
+}
+
+defineClass(857, 1, {}, TypeScrollPopup$1);
+_.setPosition = function setPosition_1(offsetWidth, offsetHeight) {
+  var left, top_0;
+  left = $wnd.Math.max(0, this.val$x2 - (offsetWidth / 4 | 0));
+  top_0 = $wnd.Math.max(0, this.val$y3 - (offsetHeight / 2 | 0));
+  $setPopupPosition(this.this$01, left, top_0);
+}
+  ;
+_.val$x2 = 0;
+_.val$y3 = 0;
+var Lcom_lushprojects_circuitjs1_client_TypeScrollPopup$1_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'TypeScrollPopup/1', 857);
+function $addWidgetToVerticalPanel_0(this$static, w) {
+  var i;
+  if (!this$static.verticalPanel)
+    return;
+  if (this$static.iFrame) {
+    i = $getWidgetIndex(this$static.verticalPanel, this$static.iFrame);
+    $insert_2(this$static.verticalPanel, w, i);
+    $setiFrameHeight(this$static);
+  }
+  else
+    $add_5(this$static.verticalPanel, w);
+}
+
+function $allowSave(this$static, b) {
+  !!this$static.menus.saveFileItem && $setEnabled_1(this$static.menus.saveFileItem, b);
+}
+
+function $centerCircuit(this$static) {
+  var bounds, cheight, h, scale;
+  if (!this$static.elmList)
+    return;
+  bounds = $getCircuitBounds(this$static);
+  $setCircuitArea(this$static);
+  scale = 1;
+  cheight = this$static.app.circuitArea.height_0;
+  if (this$static.app.scopeManager.scopeCount == 0 && this$static.app.circuitArea.width_0 < 800) {
+    h = round_int(cheight * this$static.app.scopeManager.scopeHeightFraction);
+    cheight -= h;
+  }
+  !!bounds && (scale = $wnd.Math.min(this$static.app.circuitArea.width_0 / (bounds.width_0 + 140), cheight / (bounds.height_0 + 100)));
+  scale = $wnd.Math.min(scale, 1.5);
+  this$static.app.transform_0[0] = this$static.app.transform_0[3] = scale;
+  this$static.app.transform_0[1] = this$static.app.transform_0[2] = this$static.app.transform_0[4] = this$static.app.transform_0[5] = 0;
+  if (bounds) {
+    this$static.app.transform_0[4] = (this$static.app.circuitArea.width_0 - bounds.width_0 * scale) / 2 - bounds.x_0 * scale;
+    this$static.app.transform_0[5] = (cheight - bounds.height_0 * scale) / 2 - bounds.y_0 * scale;
+  }
+}
+
+function $composeSubcircuitMenu(this$static) {
+  var i, list, menu, mi, name_0;
+  if (this$static.menus.subcircuitMenuBar == null)
+    return;
+  for (mi = 0; mi != 2; mi++) {
+    menu = this$static.menus.subcircuitMenuBar[mi];
+    $clearItems(menu);
+    list = getModelList();
+    for (i = 0; i != list.arrayList.array.length; i++) {
+      name_0 = (checkArrayElementIndex(i, list.arrayList.array.length), $get_2(list.arrayList, i)).name_0;
+      $addItem_0(menu, $getClassCheckItem_0(this$static, LS('Add ') + ('' + name_0), 'CustomCompositeElm:' + name_0));
+    }
+  }
+  lastSubcircuitMenuUpdate = sequenceNumber;
+}
+
+function $createNewLoadFile(this$static) {
+  var idx, newlf;
+  idx = $getWidgetIndex(this$static.verticalPanel, this$static.loadFileInput);
+  newlf = new LoadFile(this$static.app);
+  $insert_2(this$static.verticalPanel, newlf, idx);
+  $remove_0(this$static.verticalPanel, idx + 1);
+  this$static.loadFileInput = newlf;
+}
+
+function $dialogIsShowing(this$static) {
+  if (!!editDialog_0 && editDialog_0.showing)
+    return true;
+  if (!!customLogicEditDialog && customLogicEditDialog.showing)
+    return true;
+  if (!!diodeModelEditDialog && diodeModelEditDialog.showing)
+    return true;
+  if (!!dialogShowing && dialogShowing.showing)
+    return true;
+  if (!!this$static.contextPanel && this$static.contextPanel.showing)
+    return true;
+  if (!!scrollValuePopup && scrollValuePopup.showing)
+    return true;
+  if (!!typeScrollPopup && typeScrollPopup.showing)
+    return true;
+  if (!!aboutBox && aboutBox.showing)
+    return true;
+  return false;
+}
+
+function $drawBottomArea(this$static, g) {
+  var badnodes, ct, h, h0, i, info, leftX, s, timerate, x_0, ybase;
+  leftX = 0;
+  h = 0;
+  if (this$static.app.stopMessage == null && this$static.app.scopeManager.scopeCount == 0) {
+    leftX = max_3(this$static.canvasWidth - 160, 0);
+    h0 = round_int(this$static.canvasHeight * this$static.app.scopeManager.scopeHeightFraction);
+    h = !this$static.mouse.mouseElm ? 70 : h0;
+    this$static.hideInfoBox && (h = 0);
+  }
+  this$static.app.stopMessage != null && this$static.app.circuitArea.height_0 > this$static.canvasHeight - 30 && (h = 30);
+  $setColor_1(g, this$static.menus.printableCheckItem.on ? '#eee' : '#111');
+  $fillRect_0(g, leftX, this$static.app.circuitArea.height_0 - h, this$static.app.circuitArea.width_0, this$static.canvasHeight - this$static.app.circuitArea.height_0 + h);
+  $setFont_0(g, unitsFont);
+  ct = this$static.app.scopeManager.scopeCount;
+  this$static.app.stopMessage != null && (ct = 0);
+  $clinit_Scope();
+  cursorScope = null;
+  cursorTime = -1;
+  for (i = 0; i != ct; i++)
+    $selectScope(this$static.app.scopeManager.scopes[i], this$static.mouse.mouseCursorX, this$static.mouse.mouseCursorY);
+  if (this$static.app.scopeElmArr != null)
+    for (i = 0; i != this$static.app.scopeElmArr.length; i++)
+      $selectScope_0(this$static.app.scopeElmArr[i], this$static.mouse.mouseCursorX, this$static.mouse.mouseCursorY);
+  for (i = 0; i != ct; i++)
+    $draw_2(this$static.app.scopeManager.scopes[i], g);
+  if (this$static.mouse.mouseWasOverSplitter) {
+    $setColor_0(g, selectColor_0);
+    g.context.lineWidth = 4;
+    $drawLine(g, 0, this$static.app.circuitArea.height_0 - 2, this$static.app.circuitArea.width_0, this$static.app.circuitArea.height_0 - 2);
+    g.context.lineWidth = 1;
+  }
+  $setColor_0(g, whiteColor);
+  if (this$static.app.stopMessage != null) {
+    $drawString(g, this$static.app.stopMessage, 10, this$static.canvasHeight - 10);
+  }
+  else if (!this$static.hideInfoBox) {
+    info = initUnidimensionalArray(Ljava_lang_String_2_classLit, $intern_23, 2, 10, 6, 1);
+    if (this$static.mouse.mouseElm) {
+      if (this$static.mouse.mousePost == -1) {
+        this$static.mouse.mouseElm.getInfo_0(info);
+        info[0] = LS(info[0]);
+        info[1] != null && (info[1] = LS(info[1]));
+      }
+      else
+        info[0] = 'V = ' + getUnitText($getPostVoltage(this$static.mouse.mouseElm, this$static.mouse.mousePost), 'V', false);
+    }
+    else {
+      info[0] = 't = ' + getTimeText(this$static.app.sim.t);
+      timerate = 160 * $getIterCount(this$static.app) * this$static.app.sim.timeStep;
+      timerate >= 0.1 && (info[0] += ' (' + $format_0(showFormat, timerate) + 'x)');
+      info[1] = LS('time step = ') + getTimeText(this$static.app.sim.timeStep);
+    }
+    if (this$static.app.hintType != -1) {
+      for (i = 0; info[i] != null; i++)
+        ;
+      s = $getHint(this$static.app);
+      s == null ? (this$static.app.hintType = -1) : (info[i] = s);
+    }
+    x_0 = leftX + 5;
+    ct != 0 && (x_0 = $rightEdge(this$static.app.scopeManager.scopes[ct - 1]) + 20);
+    for (i = 0; info[i] != null; i++)
+      ;
+    badnodes = this$static.app.badConnectionList.arrayList.array.length;
+    badnodes > 0 && (info[i++] = badnodes + (badnodes == 1 ? LS(' bad connection') : LS(' bad connections')));
+    this$static.app.savedFlag && (info[i++] = '(saved)');
+    ybase = this$static.app.circuitArea.height_0 - h;
+    for (i = 0; info[i] != null; i++) {
+      $fillText(g.context, info[i], x_0, ybase + 15 * (i + 1));
+    }
+  }
+}
+
+function $getBackgroundColor(this$static) {
+  if (this$static.menus.printableCheckItem.on)
+    return $clinit_Color(), white;
+  return $clinit_Color(), black;
+}
+
+function $getCircuitBounds(this$static) {
+  var bb, ce, ce$iterator, maxx, maxy, minx, miny;
+  minx = 30000;
+  maxx = $intern_97;
+  miny = 30000;
+  maxy = $intern_97;
+  for (ce$iterator = new ArrayList$1(this$static.elmList.arrayList); ce$iterator.i < ce$iterator.this$01.array.length;) {
+    ce = $next_4(ce$iterator);
+    minx = min_2(ce.x_0, min_2(ce.x2, minx));
+    maxx = max_3(ce.x_0, max_3(ce.x2, maxx));
+    miny = min_2(ce.y_0, min_2(ce.y2, miny));
+    maxy = max_3(ce.y_0, max_3(ce.y2, maxy));
+    bb = ce.boundingBox;
+    if (bb) {
+      minx = min_2(bb.x_0, minx);
+      maxx = max_3(bb.x_0 + bb.width_0, maxx);
+      miny = min_2(bb.y_0, miny);
+      maxy = max_3(bb.y_0 + bb.height_0, maxy);
+    }
+  }
+  if (minx > maxx)
+    return null;
+  return new Rectangle_0(minx, miny, maxx - minx, maxy - miny);
+}
+
+function $getClassCheckItem_0(this$static, s, t) {
+  var e, elm, mi, shortcut;
+  !this$static.app.classToLabelMap && (this$static.app.classToLabelMap = new HashMap);
+  $putStringValue(this$static.app.classToLabelMap, t, s);
+  shortcut = '';
+  elm = null;
+  try {
+    elm = constructElement(t, 0, 0);
+  }
+  catch ($e0) {
+    $e0 = toJava($e0);
+    if (instanceOf($e0, 15)) {
+      e = $e0;
+      console.log('exception: ' + e);
+    }
+    else
+      throw toJs($e0);
+  }
+  $register(elm);
+  !elm && t.indexOf('Elm') >= 0 && (console.log("can't create class: " + t), undefined);
+  if (elm) {
+    if (elm.getShortcut() > 0) {
+      shortcut += charToString(elm.getShortcut() & $intern_22);
+      this$static.app.shortcuts[elm.getShortcut()] != null && !$equals_1(this$static.app.shortcuts[elm.getShortcut()], t) && console_0('already have shortcut for ' + charToString(elm.getShortcut() & $intern_22) + ' ' + elm);
+      this$static.app.shortcuts[elm.getShortcut()] = t;
+    }
+    elm.delete_0();
+  }
+  shortcut == '' ? (mi = new CheckboxMenuItem(s)) : (mi = new CheckboxMenuItem_1(s, shortcut));
+  $setScheduledCommand(mi, new MyCommand('main', t));
+  $add_11(this$static.mainMenuItems, mi);
+  $add_11(this$static.mainMenuItemNames, t);
+  return mi;
+}
+
+function $getLabelTextForClass(this$static, cls) {
+  return $getStringValue(this$static.app.classToLabelMap, cls);
+}
+
+function $getOptionFromStorage(key, val) {
+  var s, stor;
+  stor = (!localStorage_0 && ($clinit_Storage$StorageSupportDetector(), localStorageSupported) && (localStorage_0 = new Storage_0('localStorage')), localStorage_0);
+  if (!stor)
+    return val;
+  s = $getItem_0(stor.storage, key);
+  if (s == null)
+    return val;
+  return s == 'true';
+}
+
+function $init_3(this$static) {
+  var convention, e, euroGates, euroRes, euroSetting, hideSidebar, l_0, menuBar, mouseWheelEdit, noEditing, printable, qp, sidePanelCheckbox, topPanelCheckbox, topPanelCheckboxLabel, usRes, val, val0, val1, val2, val3, val4, val5, width_0;
+  printable = false;
+  convention = true;
+  euroRes = false;
+  usRes = false;
+  hideSidebar = false;
+  noEditing = false;
+  mouseWheelEdit = false;
+  this$static.hideMenu = false;
+  qp = new QueryParameters;
+  euroGates = false;
+  this$static.elmList = this$static.app.elmList;
+  try {
+    euroRes = (val0 = $getStringValue(qp.map_0, 'euroResistors'), val0 != null && (val0 == '1' || $equalsIgnoreCase(val0, 'true')));
+    euroGates = $getBooleanValue(qp, 'IECGates', $getOptionFromStorage('euroGates', weAreInGermany()));
+    usRes = (val1 = $getStringValue(qp.map_0, 'usResistors'), val1 != null && (val1 == '1' || $equalsIgnoreCase(val1, 'true')));
+    val2 = $getStringValue(qp.map_0, 'running');
+    val2 == null || val2 == '1' || $equalsIgnoreCase(val2, 'true');
+    hideSidebar = (val3 = $getStringValue(qp.map_0, 'hideSidebar'), val3 != null && (val3 == '1' || $equalsIgnoreCase(val3, 'true')));
+    this$static.hideMenu = (val4 = $getStringValue(qp.map_0, 'hideMenu'), val4 != null && (val4 == '1' || $equalsIgnoreCase(val4, 'true')));
+    printable = $getBooleanValue(qp, 'whiteBackground', $getOptionFromStorage('whiteBackground', false));
+    convention = $getBooleanValue(qp, 'conventionalCurrent', $getOptionFromStorage('conventionalCurrent', true));
+    noEditing = (val5 = $getStringValue(qp.map_0, 'editable'), !(val5 == null || val5 == '1' || $equalsIgnoreCase(val5, 'true')));
+    mouseWheelEdit = $getBooleanValue(qp, 'mouseWheelEdit', $getOptionFromStorage('mouseWheelEdit', true));
+    $getStringValue(qp.map_0, 'positiveColor');
+    $getStringValue(qp.map_0, 'negativeColor');
+    $getStringValue(qp.map_0, 'neutralColor');
+    $getStringValue(qp.map_0, 'selectColor');
+    $getStringValue(qp.map_0, 'currentColor');
+    $getStringValue(qp.map_0, 'mouseMode');
+    this$static.hideInfoBox = (val = $getStringValue(qp.map_0, 'hideInfoBox'), val != null && (val == '1' || $equalsIgnoreCase(val, 'true')));
+  }
+  catch ($e0) {
+    $e0 = toJava($e0);
+    if (instanceOf($e0, 15)) {
+      e = $e0;
+      console.log('Exception: ' + e);
+    }
+    else
+      throw toJs($e0);
+  }
+  euroRes ? (euroSetting = true) : usRes ? (euroSetting = false) : (euroSetting = $getOptionFromStorage('euroResistors', !weAreInUS(true)));
+  this$static.layoutPanel = new DockLayoutPanel(($clinit_Style$Unit(), PX));
+  this$static.app.menus = this$static.menus = new Menus(this$static.app);
+  $init_2(this$static.menus);
+  $put_0(dumpTypeMap, valueOf(403), 'ScopeElm');
+  $putStringValue(xmlDumpTypeMap, 'Scope', 'ScopeElm');
+  $setEnabled_1(this$static.menus.recoverItem, this$static.app.recovery != null);
+  width_0 = $getOffsetWidth(get_0());
+  VERTICALPANELWIDTH = width_0 / 5 | 0;
+  VERTICALPANELWIDTH > 166 && (VERTICALPANELWIDTH = 166);
+  VERTICALPANELWIDTH < 128 && (VERTICALPANELWIDTH = 128);
+  this$static.verticalPanel = new VerticalPanel;
+  $addClassName($getElement(this$static.verticalPanel), 'verticalPanel');
+  $getElement(this$static.verticalPanel).id = 'painel';
+  sidePanelCheckbox = ($clinit_DOM(), $createCheckInputElement($doc));
+  this$static.sidePanelCheckboxLabel = $createLabelElement($doc);
+  $addClassName(this$static.sidePanelCheckboxLabel, 'triggerLabel');
+  sidePanelCheckbox.id = 'trigger';
+  this$static.sidePanelCheckboxLabel.setAttribute('for', 'trigger');
+  $addClassName(sidePanelCheckbox, 'trigger');
+  topPanelCheckbox = $createCheckInputElement($doc);
+  topPanelCheckboxLabel = $createLabelElement($doc);
+  topPanelCheckbox.id = 'toptrigger';
+  $addClassName(topPanelCheckbox, 'toptrigger');
+  $addClassName(topPanelCheckboxLabel, 'toptriggerlabel');
+  topPanelCheckboxLabel.setAttribute('for', 'toptrigger');
+  this$static.buttonPanel = VERTICALPANELWIDTH == 166 ? new HorizontalPanel : new VerticalPanel;
+  $setEnabled_1(this$static.menus.pasteItem, false);
+  $setState_1(this$static.menus.dotsCheckItem, true);
+  $setState_1(this$static.menus.voltsCheckItem, true);
+  $setState_1(this$static.menus.showValuesCheckItem, true);
+  $setState_1(this$static.menus.toolbarCheckItem, !this$static.hideMenu && !noEditing && !hideSidebar && this$static.app.startCircuit == null && this$static.app.startCircuitText_0 == null && this$static.app.startCircuitLink == null);
+  $setState_1(this$static.menus.crossHairCheckItem, $getOptionFromStorage('crossHair', false));
+  $setState_1(this$static.menus.euroResistorCheckItem, euroSetting);
+  $setCommand_0(this$static.menus.euroResistorCheckItem, new UIManager$1(this$static));
+  $setCommand_0(this$static.menus.euroGatesCheckItem, new UIManager$2(this$static));
+  $setState_1(this$static.menus.euroGatesCheckItem, euroGates);
+  $setCommand_0(this$static.menus.printableCheckItem, new UIManager$3(this$static));
+  $setState_1(this$static.menus.printableCheckItem, printable);
+  $setCommand_0(this$static.menus.conventionCheckItem, new UIManager$4(this$static));
+  $setState_1(this$static.menus.conventionCheckItem, convention);
+  $setState_1(this$static.menus.noEditCheckItem, noEditing);
+  $setState_1(this$static.menus.mouseWheelEditCheckItem, mouseWheelEdit);
+  $loadShortcuts(this$static);
+  $appendChild($getElement(this$static.layoutPanel), resolve(topPanelCheckbox));
+  $appendChild($getElement(this$static.layoutPanel), resolve(topPanelCheckboxLabel));
+  this$static.toolbar_0 = new Toolbar;
+  $setEuroResistors(this$static.toolbar_0, euroSetting);
+  menuBar = this$static.menus.menuBar;
+  this$static.hideMenu || $addNorth(this$static.layoutPanel, menuBar, 30);
+  if (hideSidebar)
+    VERTICALPANELWIDTH = 0;
+  else {
+    $appendChild($getElement(this$static.layoutPanel), resolve(sidePanelCheckbox));
+    $appendChild($getElement(this$static.layoutPanel), resolve(this$static.sidePanelCheckboxLabel));
+    $addEast(this$static.layoutPanel, this$static.verticalPanel, VERTICALPANELWIDTH);
+  }
+  $addNorth(this$static.layoutPanel, this$static.toolbar_0, 40);
+  $insertFirst(menuBar.element, menuBar.element.childNodes[1]);
+  $getFirstChildElement(menuBar.element).setAttribute('onclick', "document.getElementsByClassName('toptrigger')[0].checked = false");
+  $add_4(get_0(), this$static.layoutPanel);
+  this$static.cv = createIfSupported();
+  if (!this$static.cv) {
+    $add_0(($clinit_RootPanel(), get_1()), new Label_1('Not working. You need a browser that supports the CANVAS element.'));
+    return;
+  }
+  addResizeHandler(new UIManager$5(this$static));
+  this$static.cvcontext = $getContext2d(this$static.cv);
+  this$static.app.scopeManager = this$static.scopeManager = new ScopeManager(this$static.app);
+  this$static.subcircuitBar = new SubcircuitBar;
+  $add_0(($clinit_RootPanel(), get_1()), this$static.subcircuitBar);
+  $setWidgetHidden(this$static.layoutPanel, this$static.toolbar_0, !this$static.menus.toolbarCheckItem.on);
+  $setCanvasSize(this$static);
+  $insert_0(this$static.layoutPanel, this$static.cv, ($clinit_DockLayoutPanel$Direction(), CENTER_0), 0);
+  $add_5(this$static.verticalPanel, this$static.buttonPanel);
+  this$static.buttonPanel.add_0(this$static.resetButton = new Button_1(LS('Reset')));
+  $addDomHandler(this$static.resetButton, new UIManager$6(this$static), ($clinit_ClickEvent(), $clinit_ClickEvent(), TYPE_1));
+  $setStylePrimaryName(this$static.resetButton, 'topButton');
+  this$static.buttonPanel.add_0(this$static.runStopButton = new Button_0(($clinit_SafeHtmlUtils(), new SafeHtmlString(LS('<Strong>RUN<\/Strong>&nbsp;/&nbsp;Stop')))));
+  $addDomHandler(this$static.runStopButton, new UIManager$7(this$static), (null, TYPE_1));
+  isSupported_1() && $add_5(this$static.verticalPanel, this$static.loadFileInput = new LoadFile(this$static.app));
+  $add_5(this$static.verticalPanel, l_0 = new Label_1(LS('Simulation Speed')));
+  setStyleName(l_0.element, 'topSpace', true);
+  $add_5(this$static.verticalPanel, this$static.speedBar = new Scrollbar(3, 0, 260));
+  $add_5(this$static.verticalPanel, l_0 = new Label_1(LS('Current Speed')));
+  setStyleName(l_0.element, 'topSpace', true);
+  this$static.currentBar = new Scrollbar(50, 1, 100);
+  $add_5(this$static.verticalPanel, this$static.currentBar);
+  $add_5(this$static.verticalPanel, this$static.powerLabel = new Label_1(LS('Power Brightness')));
+  $addStyleName(this$static.powerLabel, 'topSpace');
+  $add_5(this$static.verticalPanel, this$static.powerBar = new Scrollbar(50, 1, 100));
+  $setPowerBarEnable(this$static);
+  l_0 = new Label_1(LS('Current Circuit:'));
+  setStyleName(l_0.element, 'topSpace', true);
+  this$static.titleLabel = new Label_1('Label');
+  $add_5(this$static.verticalPanel, l_0);
+  $add_5(this$static.verticalPanel, this$static.titleLabel);
+  $add_5(this$static.verticalPanel, this$static.iFrame = new Frame_0);
+  $setWidth(this$static.iFrame, VERTICALPANELWIDTH + 'px');
+  $setHeight(this$static.iFrame, '100 px');
+  $getElement(this$static.iFrame).setAttribute('scrolling', 'no');
+  $setGrid(this$static);
+  this$static.app.mouse = this$static.mouse = new MouseManager(this$static.app, this$static);
+  $register_0(this$static.mouse, this$static.cv);
+  $enableDisableMenuItems(this$static.mouse);
+  $setiFrameHeight(this$static);
+  $addDomHandler(menuBar, new UIManager$8(this$static), (null, TYPE_1));
+  addNativePreviewHandler(this$static.app);
+  addWindowClosingHandler(new UIManager$9(this$static));
+}
+
+function $isReadOnly(this$static) {
+  return this$static.menus.noEditCheckItem.on || this$static.subcircuitStack.arrayList.array.length != 0;
+}
+
+function $isSelection(this$static) {
+  var ce, ce$iterator;
+  for (ce$iterator = new ArrayList$1(this$static.elmList.arrayList); ce$iterator.i < ce$iterator.this$01.array.length;) {
+    ce = $next_4(ce$iterator);
+    if (ce.selected_0)
+      return true;
+  }
+  return false;
+}
+
+function $loadShortcuts(this$static) {
+  var arr, c, className, i, item_0, j, keys_0, stor, str;
+  stor = (!localStorage_0 && ($clinit_Storage$StorageSupportDetector(), localStorageSupported) && (localStorage_0 = new Storage_0('localStorage')), localStorage_0);
+  if (!stor)
+    return;
+  str = $getItem_0(stor.storage, 'shortcuts');
+  if (str == null)
+    return;
+  keys_0 = $split_1(str, ';', 0);
+  for (i = 0; i != this$static.app.shortcuts.length; i++)
+    this$static.app.shortcuts[i] = null;
+  for (i = 0; i != this$static.mainMenuItems.arrayList.array.length; i++) {
+    item_0 = $get_4(this$static.mainMenuItems, i);
+    if (item_0.shortcut.length > 1)
+      break;
+    item_0.shortcut = '';
+  }
+  for (i = 1; i < keys_0.length; i++) {
+    arr = $split_1(keys_0[i], '=', 0);
+    if (arr.length != 2)
+      continue;
+    c = __parseAndValidateInt(arr[0], 10);
+    className = arr[1];
+    this$static.app.shortcuts[c] = className;
+    for (j = 0; j != this$static.mainMenuItems.arrayList.array.length; j++) {
+      if (maskUndefined($get_4(this$static.mainMenuItemNames, j)) === maskUndefined(className)) {
+        item_0 = $get_4(this$static.mainMenuItems, j);
+        $setShortcut(item_0, String.fromCharCode(c & $intern_22));
+        break;
+      }
+    }
+  }
+}
+
+function $onPreviewNativeEvent(this$static, e) {
+  var c, cc, ce, cmd, code_0, dlg, dx, dy, hasSel, i, i0, keyStr, released, se, t, toggled;
+  cc = $getCharCode(e.nativeEvent);
+  t = $getTypeInt(e.nativeEvent);
+  code_0 = $getKeyCode(e.nativeEvent);
+  if (code_0 == 16) {
+    if ((t & 128) != 0) {
+      this$static.mouse.netHighlightKeyHeld = true;
+      $updateNetHighlight(this$static.mouse);
+      $repaint(this$static.app.ui);
+    }
+    if ((t & 512) != 0) {
+      this$static.mouse.netHighlightKeyHeld = false;
+      $updateNetHighlight(this$static.mouse);
+      $repaint(this$static.app.ui);
+    }
+  }
+  if ($dialogIsShowing(this$static)) {
+    if (!!scrollValuePopup && scrollValuePopup.showing && (t & 128) != 0) {
+      (code_0 == 27 || code_0 == 32) && $close_0(scrollValuePopup, false);
+      code_0 == 13 && $close_0(scrollValuePopup, true);
+    }
+    if (!!typeScrollPopup && typeScrollPopup.showing && (t & 128) != 0) {
+      (code_0 == 27 || code_0 == 32) && $close_1(typeScrollPopup, false);
+      code_0 == 13 && $close_1(typeScrollPopup, true);
+    }
+    dlg = editDialog_0;
+    !!diodeModelEditDialog && (dlg = diodeModelEditDialog);
+    !!customLogicEditDialog && (dlg = customLogicEditDialog);
+    !!dialogShowing && (dlg = dialogShowing);
+    if (!!dlg && dlg.showing && (t & 128) != 0) {
+      code_0 == 27 && dlg.closeDialog();
+      code_0 == 13 && dlg.enterPressed();
+    }
+    return;
+  }
+  if ((t & 256) != 0) {
+    if (cc == 45) {
+      $menuPerformed(this$static.app.commands, 'key', 'zoomout');
+      e.isCanceled = true;
+    }
+    if (cc == 43 || cc == 61) {
+      $menuPerformed(this$static.app.commands, 'key', 'zoomin');
+      e.isCanceled = true;
+    }
+    if (cc == 48) {
+      $menuPerformed(this$static.app.commands, 'key', 'zoom100');
+      e.isCanceled = true;
+    }
+    if (cc == 47 && this$static.app.shortcuts[47] == null) {
+      $menuPerformed(this$static.app.commands, 'key', 'search');
+      e.isCanceled = true;
+    }
+  }
+  if (this$static.menus.noEditCheckItem.on || this$static.subcircuitStack.arrayList.array.length != 0)
+    return;
+  if ((t & 512) != 0) {
+    keyStr = String.fromCharCode(code_0 & $intern_22).toLowerCase();
+    released = false;
+    for (i = 0; i != this$static.elmList.arrayList.array.length; i++) {
+      ce = $get_4(this$static.elmList, i);
+      if (instanceOf(ce, 61)) {
+        se = ce;
+        if (se.momentary && se.keyShortcut != null && $equals_1(se.keyShortcut, keyStr)) {
+          se.momentary && se.toggle();
+          released = true;
+        }
+      }
+    }
+    if (released) {
+      this$static.mouse.heldSwitchElm = null;
+      $needAnalyze(this$static.app);
+      $repaint(this$static.app.ui);
+    }
+  }
+  if ((t & 128) != 0) {
+    if (code_0 == 8 || code_0 == 46) {
+      if (this$static.app.scopeManager.scopeSelected != -1) {
+        $setElm(this$static.app.scopeManager.scopes[this$static.app.scopeManager.scopeSelected], null);
+        this$static.app.scopeManager.scopeSelected = -1;
+      }
+      else {
+        this$static.mouse.menuElm = null;
+        $pushUndo(this$static.app.undoManager);
+        $doDelete(this$static.app.commands, true);
+        e.isCanceled = true;
+      }
+    }
+    if (code_0 == 27) {
+      this$static.mouse.mouseMode = 6;
+      $setCursorStyle(this$static, 'cursorPointer');
+      this$static.mouseModeStr = 'Select';
+      this$static.mouse.dragElm ? $setModeLabel(this$static.toolbar_0, LS('Drag Mouse')) : $setModeLabel(this$static.toolbar_0, LS('Mode: ') + ('' + $getStringValue(this$static.app.classToLabelMap, this$static.mouseModeStr)));
+      $highlightButton(this$static.toolbar_0, this$static.mouseModeStr);
+      this$static.mouse.tempMouseMode = this$static.mouse.mouseMode;
+      e.isCanceled = true;
+    }
+    if (code_0 == 37 || code_0 == 39 || code_0 == 38 || code_0 == 40) {
+      dx = 0;
+      dy = 0;
+      code_0 == 37 && (dx = -this$static.app.gridSize);
+      code_0 == 39 && (dx = this$static.app.gridSize);
+      code_0 == 38 && (dy = -this$static.app.gridSize);
+      code_0 == 40 && (dy = this$static.app.gridSize);
+      hasSel = false;
+      for (i0 = 0; i0 != this$static.elmList.arrayList.array.length; i0++)
+        if ($get_4(this$static.elmList, i0).selected_0) {
+          hasSel = true;
+          break;
+        }
+      if (hasSel) {
+        $pushUndo(this$static.app.undoManager);
+        for (i = 0; i != this$static.elmList.arrayList.array.length; i++) {
+          ce = $get_4(this$static.elmList, i);
+          ce.selected_0 && $move(ce, dx, dy);
+        }
+        $needAnalyze(this$static.app);
+        e.isCanceled = true;
+      }
+    }
+    if ($getCtrlKey(e.nativeEvent) || $getMetaKey(e.nativeEvent)) {
+      if (code_0 == 67) {
+        $menuPerformed(this$static.app.commands, 'key', 'copy');
+        e.isCanceled = true;
+      }
+      if (code_0 == 88) {
+        $menuPerformed(this$static.app.commands, 'key', 'cut');
+        e.isCanceled = true;
+      }
+      if (code_0 == 86) {
+        $menuPerformed(this$static.app.commands, 'key', 'paste');
+        e.isCanceled = true;
+      }
+      if (code_0 == 90) {
+        $menuPerformed(this$static.app.commands, 'key', 'undo');
+        e.isCanceled = true;
+      }
+      if (code_0 == 89) {
+        $menuPerformed(this$static.app.commands, 'key', 'redo');
+        e.isCanceled = true;
+      }
+      if (code_0 == 68) {
+        $menuPerformed(this$static.app.commands, 'key', 'duplicate');
+        e.isCanceled = true;
+      }
+      if (code_0 == 65) {
+        $menuPerformed(this$static.app.commands, 'key', 'selectAll');
+        e.isCanceled = true;
+      }
+      if (code_0 == 80) {
+        $menuPerformed(this$static.app.commands, 'key', 'print');
+        e.isCanceled = true;
+      }
+      if (code_0 == 78 && $wnd.openFile != undefined) {
+        $menuPerformed(this$static.app.commands, 'key', 'newwindow');
+        e.isCanceled = true;
+      }
+      if (code_0 == 83) {
+        cmd = 'exportaslocalfile';
+        $wnd.openFile != undefined && (cmd = this$static.menus.saveFileItem.enabled ? 'save' : 'saveas');
+        $menuPerformed(this$static.app.commands, 'key', cmd);
+        e.isCanceled = true;
+      }
+      if (code_0 == 79) {
+        $menuPerformed(this$static.app.commands, 'key', 'importfromlocalfile');
+        e.isCanceled = true;
+      }
+    }
+  }
+  if ((t & 256) != 0) {
+    if (cc > 32 && cc < 127) {
+      keyStr = String.fromCharCode(cc & $intern_22).toLowerCase();
+      toggled = false;
+      if (!e.nativeEvent.repeat) {
+        for (i = 0; i != this$static.elmList.arrayList.array.length; i++) {
+          ce = $get_4(this$static.elmList, i);
+          if (instanceOf(ce, 61)) {
+            se = ce;
+            if (se.keyShortcut != null && $equals_1(se.keyShortcut, keyStr)) {
+              se.toggle();
+              instanceOf(se, 183) || $needAnalyze(this$static.app);
+              toggled = true;
+            }
+          }
+        }
+      }
+      if (toggled) {
+        e.isCanceled = true;
+        $repaint(this$static.app.ui);
+      }
+      else {
+        c = this$static.app.shortcuts[cc];
+        e.isCanceled = true;
+        if (c == null)
+          return;
+        this$static.mouse.mouseMode = 0;
+        $setCursorStyle(this$static, 'cursorCross');
+        this$static.mouseModeStr = c;
+        this$static.mouse.dragElm ? $setModeLabel(this$static.toolbar_0, LS('Drag Mouse')) : $setModeLabel(this$static.toolbar_0, LS('Mode: ') + ('' + $getStringValue(this$static.app.classToLabelMap, this$static.mouseModeStr)));
+        $highlightButton(this$static.toolbar_0, this$static.mouseModeStr);
+        this$static.mouse.tempMouseMode = this$static.mouse.mouseMode;
+      }
+    }
+    if (cc == 32) {
+      this$static.mouse.mouseMode = 6;
+      $setCursorStyle(this$static, 'cursorPointer');
+      this$static.mouseModeStr = 'Select';
+      this$static.mouse.dragElm ? $setModeLabel(this$static.toolbar_0, LS('Drag Mouse')) : $setModeLabel(this$static.toolbar_0, LS('Mode: ') + ('' + $getStringValue(this$static.app.classToLabelMap, this$static.mouseModeStr)));
+      $highlightButton(this$static.toolbar_0, this$static.mouseModeStr);
+      this$static.mouse.tempMouseMode = this$static.mouse.mouseMode;
+      e.isCanceled = true;
+    }
+  }
+}
+
+function $popSubcircuit(this$static) {
+  var cce;
+  if (this$static.subcircuitStack.arrayList.array.length == 0)
+    return;
+  $remove_19(this$static.subcircuitStack, this$static.subcircuitStack.arrayList.array.length - 1);
+  if (this$static.subcircuitStack.arrayList.array.length == 0)
+    this$static.elmList = this$static.app.elmList;
+  else {
+    cce = $lastElement(this$static.subcircuitStack);
+    this$static.elmList = $buildDisplayElmList(cce);
+  }
+  $updateSubcircuitPath(this$static);
+  $analyzeCircuit(this$static.app.sim);
+  $centerCircuit(this$static);
+}
+
+function $pushSubcircuit(this$static, cce, allElms) {
+  $add_11(this$static.subcircuitStack, cce);
+  this$static.elmList = allElms;
+  $updateSubcircuitPath(this$static);
+  $analyzeCircuit(this$static.app.sim);
+  $centerCircuit(this$static);
+}
+
+function $removeWidgetFromVerticalPanel_0(this$static, w) {
+  if (!this$static.verticalPanel)
+    return;
+  $remove_5(this$static.verticalPanel, w);
+  !!this$static.iFrame && $setiFrameHeight(this$static);
+}
+
+function $repaint(this$static) {
+  if (!this$static.needsRepaint) {
+    this$static.needsRepaint = true;
+    scheduleFixedDelayImpl(($clinit_SchedulerImpl(), new UIManager$10(this$static)), 16);
+  }
+}
+
+function $resetAction(this$static) {
+  var ce, ce$iterator;
+  this$static.app.analyzeFlag = true;
+  this$static.app.sim.t == 0 && $setSimRunning_0(this$static, true);
+  $resetTime(this$static.app.sim);
+  for (ce$iterator = new ArrayList$1(this$static.elmList.arrayList); ce$iterator.i < ce$iterator.this$01.array.length;) {
+    ce = $next_4(ce$iterator);
+    ce.reset_0();
+  }
+  $resetGraphs(this$static.app.scopeManager);
+  $repaint(this$static);
+}
+
+function $saveShortcuts(this$static) {
+  var i, sh, stor, str;
+  stor = (!localStorage_0 && ($clinit_Storage$StorageSupportDetector(), localStorageSupported) && (localStorage_0 = new Storage_0('localStorage')), localStorage_0);
+  if (!stor)
+    return;
+  str = '1';
+  for (i = 0; i != this$static.app.shortcuts.length; i++) {
+    sh = this$static.app.shortcuts[i];
+    if (sh == null)
+      continue;
+    str += ';' + i + '=' + sh;
+  }
+  $setItem_0(stor.storage, 'shortcuts', str);
+}
+
+function $setCanvasSize(this$static) {
+  var barTop, height, scale, width_0;
+  width_0 = $getOffsetWidth(get_0());
+  height = $getOffsetHeight(get_0());
+  height = height - (this$static.hideMenu ? 0 : 30);
+  $isMobile(this$static.sidePanelCheckboxLabel) || (width_0 = width_0 - VERTICALPANELWIDTH);
+  this$static.menus.toolbarCheckItem.on && (height -= 40);
+  width_0 = $wnd.Math.max(width_0, 0);
+  height = $wnd.Math.max(height, 0);
+  if (this$static.cv) {
+    $setWidth(this$static.cv, width_0 + 'PX');
+    $setHeight(this$static.cv, height + 'PX');
+    this$static.canvasWidth = width_0;
+    this$static.canvasHeight = height;
+    scale = window.devicePixelRatio;
+    $setCoordinateSpaceWidth(this$static.cv, round_int(width_0 * scale));
+    $setCoordinateSpaceHeight(this$static.cv, round_int(height * scale));
+  }
+  $setCircuitArea(this$static);
+  if (this$static.subcircuitBar) {
+    barTop = this$static.hideMenu ? 0 : 30;
+    this$static.menus.toolbarCheckItem.on && (barTop += 40);
+    $updatePosition(this$static.subcircuitBar, barTop, width_0);
+  }
+  (this$static.app.transform_0[0] == 0 || ($clinit_System(), lt(sub_1(fromDouble_0(Date.now()), this$static.lastResizeTime), $intern_21))) && $centerCircuit(this$static);
+}
+
+function $setCircuitArea(this$static) {
+  var h, height, width_0;
+  height = this$static.canvasHeight;
+  width_0 = this$static.canvasWidth;
+  !this$static.app.scopeManager || this$static.app.scopeManager.scopeCount == 0 ? (h = 0) : (h = round_int(height * this$static.app.scopeManager.scopeHeightFraction));
+  this$static.app.circuitArea = new Rectangle_0(0, 0, width_0, height - h);
+}
+
+function $setCircuitTitle_0(this$static, s) {
+  $setText_0(this$static.titleLabel, s == null ? null : $replace_0(s, '_', '_\u200B'));
+  s != null && s.length > 0 ? $setTitle_0($doc, s + ' - ' + 'Circuit Simulator') : ($doc.title = 'Circuit Simulator', undefined);
+}
+
+function $setColors(this$static, positiveColor, negativeColor, neutralColor, selectColor, currentColor) {
+  var stor;
+  stor = (!localStorage_0 && ($clinit_Storage$StorageSupportDetector(), localStorageSupported) && (localStorage_0 = new Storage_0('localStorage')), localStorage_0);
+  if (stor) {
+    positiveColor == null && (positiveColor = $getItem_0(stor.storage, 'positiveColor'));
+    negativeColor == null && (negativeColor = $getItem_0(stor.storage, 'negativeColor'));
+    neutralColor == null && (neutralColor = $getItem_0(stor.storage, 'neutralColor'));
+    selectColor == null && (selectColor = $getItem_0(stor.storage, 'selectColor'));
+    currentColor == null && (currentColor = $getItem_0(stor.storage, 'currentColor'));
+  }
+  positiveColor != null ? (positiveColor_0 = new Color_1((throwIfNull('encodedURLComponent', positiveColor), decodeQueryStringImpl(positiveColor)))) : $getOptionFromStorage('alternativeColor', false) ? (positiveColor_0 = ($clinit_Color(), blue)) : (positiveColor_0 = ($clinit_Color(), green));
+  negativeColor != null ? (negativeColor_0 = new Color_1((throwIfNull('encodedURLComponent', negativeColor), decodeQueryStringImpl(negativeColor)))) : (negativeColor_0 = ($clinit_Color(), red));
+  neutralColor != null ? (neutralColor_0 = new Color_1((throwIfNull('encodedURLComponent', neutralColor), decodeQueryStringImpl(neutralColor)))) : (neutralColor_0 = ($clinit_Color(), gray));
+  selectColor != null ? (selectColor_0 = new Color_1((throwIfNull('encodedURLComponent', selectColor), decodeQueryStringImpl(selectColor)))) : (selectColor_0 = ($clinit_Color(), cyan));
+  currentColor != null ? (currentColor_0 = new Color_1((throwIfNull('encodedURLComponent', currentColor), decodeQueryStringImpl(currentColor)))) : (currentColor_0 = this$static.menus.conventionCheckItem.on ? ($clinit_Color(), yellow) : ($clinit_Color(), cyan));
+  setColorScale();
+}
+
+function $setCursorStyle(this$static, s) {
+  this$static.lastCursorStyle != null && $removeStyleName(this$static.cv, this$static.lastCursorStyle);
+  $addStyleName(this$static.cv, s);
+  this$static.lastCursorStyle = s;
+}
+
+function $setGrid(this$static) {
+  this$static.app.gridSize = this$static.menus.smallGridCheckItem.on ? 8 : 16;
+  this$static.app.gridMask = ~(this$static.app.gridSize - 1);
+  this$static.app.gridRound = (this$static.app.gridSize / 2 | 0) - 1;
+}
+
+function $setMouseMode_0(this$static, mode) {
+  this$static.mouse.mouseMode = mode;
+  mode == 0 ? $setCursorStyle(this$static, 'cursorCross') : $setCursorStyle(this$static, 'cursorPointer');
+}
+
+function $setOptionInStorage(key, val) {
+  var stor;
+  stor = (!localStorage_0 && ($clinit_Storage$StorageSupportDetector(), localStorageSupported) && (localStorage_0 = new Storage_0('localStorage')), localStorage_0);
+  if (!stor)
+    return;
+  $setItem_0(stor.storage, key, val ? 'true' : 'false');
+}
+
+function $setPowerBarEnable(this$static) {
+  if (this$static.menus.powerCheckItem.on) {
+    $setStyleName_0(this$static.powerLabel, 'disabled', false);
+    $enable(this$static.powerBar);
+  }
+  else {
+    $setStyleName_0(this$static.powerLabel, 'disabled', true);
+    $disable(this$static.powerBar);
+  }
+}
+
+function $setSimRunning_0(this$static, s) {
+  if (s) {
+    if (this$static.app.stopMessage != null)
+      return;
+    this$static.app.simRunning = true;
+    $setHTML(this$static.runStopButton, ($clinit_SafeHtmlUtils(), (new SafeHtmlString(LS('<strong>RUN<\/strong>&nbsp;/&nbsp;Stop'))).html));
+    $setStylePrimaryName(this$static.runStopButton, 'topButton');
+    $scheduleRepeating(this$static.app.timer);
+  }
+  else {
+    this$static.app.simRunning = false;
+    $setHTML(this$static.runStopButton, ($clinit_SafeHtmlUtils(), (new SafeHtmlString(LS('Run&nbsp;/&nbsp;<strong>STOP<\/strong>'))).html));
+    $setStylePrimaryName(this$static.runStopButton, 'topButton-red');
+    $cancel_0(this$static.app.timer);
+    $repaint(this$static);
+  }
+}
+
+function $setToolbar(this$static) {
+  $setWidgetHidden(this$static.layoutPanel, this$static.toolbar_0, !this$static.menus.toolbarCheckItem.on);
+  $setCanvasSize(this$static);
+}
+
+function $setWheelSensitivity(this$static) {
+  var stor;
+  this$static.mouse.wheelSensitivity = 1;
+  try {
+    stor = (!localStorage_0 && ($clinit_Storage$StorageSupportDetector(), localStorageSupported) && (localStorage_0 = new Storage_0('localStorage')), localStorage_0);
+    this$static.mouse.wheelSensitivity = __parseAndValidateDouble($getItem_0(stor.storage, 'wheelSensitivity'));
+  }
+  catch ($e0) {
+    $e0 = toJava($e0);
+    if (!instanceOf($e0, 15))
+      throw toJs($e0);
+  }
+}
+
+function $setiFrameHeight(this$static) {
+  var cumheight, i, ih;
+  if (!this$static.iFrame)
+    return;
+  cumheight = 0;
+  for (i = 0; i < $getWidgetIndex(this$static.verticalPanel, this$static.iFrame); i++) {
+    if ($getWidget(this$static.verticalPanel, i) != this$static.loadFileInput) {
+      cumheight = cumheight + $getWidget(this$static.verticalPanel, i).getOffsetHeight();
+      ($getWidget(this$static.verticalPanel, i).getStyleElement().className || '').indexOf('topSpace') != -1 && (cumheight += 12);
+    }
+  }
+  ih = $getOffsetHeight(get_0()) - (this$static.hideMenu ? 0 : 30) - cumheight;
+  ih < 0 && (ih = 0);
+  $setHeight(this$static.iFrame, ih + 'px');
+}
+
+function $updateCircuit(this$static) {
+  var c, ce, ce$iterator, ce$iterator0, cn, didAnalyze, e, g, gx, gy, height, i, i0, inc, perfmon, perfmonResult, rw, scale, sp, splits, sysTime, x_0, y_0, sb, hook;
+  perfmon = new PerfMonitor;
+  $startContext(perfmon, 'updateCircuit()');
+  $getCoordinateSpaceWidth(this$static.cv) != round_int(this$static.canvasWidth * window.devicePixelRatio) && $setCanvasSize(this$static);
+  didAnalyze = this$static.app.analyzeFlag;
+  if (this$static.app.analyzeFlag || this$static.app.dcAnalysisFlag) {
+    $startContext(perfmon, 'analyzeCircuit()');
+    $analyzeCircuit(this$static.app.sim);
+    this$static.app.analyzeFlag = false;
+    $stopContext(perfmon);
+  }
+  if (this$static.app.sim.needsStamp && this$static.app.simRunning) {
+    $startContext(perfmon, 'stampCircuit()');
+    try {
+      $preStampAndStampCircuit(this$static.app.sim);
+    }
+    catch ($e0) {
+      $e0 = toJava($e0);
+      if (instanceOf($e0, 15)) {
+        $stop(this$static.app.sim, 'Exception in stampCircuit()', null);
+      }
+      else
+        throw toJs($e0);
+    }
+    $stopContext(perfmon);
+  }
+  !!this$static.app.stopElm && this$static.app.stopElm != this$static.mouse.mouseElm && this$static.app.stopElm.setMouseElm(true);
+  $setupScopes(this$static.app.scopeManager);
+  g = new Graphics(this$static.cvcontext);
+  if (this$static.menus.printableCheckItem.on) {
+    whiteColor = ($clinit_Color(), black);
+    lightGrayColor = black;
+    $setColor_0(g, white);
+    $getElement(this$static.cv).style['backgroundColor'] = '#fff';
+  }
+  else {
+    whiteColor = ($clinit_Color(), white);
+    lightGrayColor = lightGray;
+    $setColor_0(g, black);
+    $getElement(this$static.cv).style['backgroundColor'] = '#000';
+  }
+  $fillRect_0(g, 0, 0, this$static.canvasWidth, this$static.canvasHeight);
+  if (this$static.app.simRunning) {
+    this$static.app.sim.needsStamp && (console.log('needsStamp while simRunning?'), undefined);
+    $startContext(perfmon, 'runCircuit()');
+    try {
+      $runCircuit(this$static.app.sim, didAnalyze);
+    }
+    catch ($e1) {
+      $e1 = toJava($e1);
+      if (instanceOf($e1, 15)) {
+        e = $e1;
+        debugger_0();
+        console.log('exception in runCircuit ' + e);
+        $printStackTraceImpl(e, ($clinit_System(), err_0), '');
+      }
+      else
+        throw toJs($e1);
+    }
+    $stopContext(perfmon);
+  }
+  sysTime = ($clinit_System(), fromDouble_0(Date.now()));
+  if (this$static.app.simRunning) {
+    if (neq(this$static.lastTime, 0)) {
+      inc = toInt_0(sub_1(sysTime, this$static.lastTime));
+      c = this$static.currentBar.val_0;
+      c = $wnd.Math.exp(c / 3.5 - 14.2);
+      currentMult_0 = 1.7 * inc * c;
+      this$static.menus.conventionCheckItem.on || (currentMult_0 = -currentMult_0);
+    }
+    this$static.lastTime = sysTime;
+  }
+  else {
+    this$static.lastTime = 0;
+  }
+  if (gte_0(sub_1(sysTime, this$static.secTime), $intern_21)) {
+    this$static.framerate = this$static.frames_0;
+    this$static.steprate = this$static.steps;
+    this$static.frames_0 = 0;
+    this$static.steps = 0;
+    this$static.secTime = sysTime;
+  }
+  powerMult = $wnd.Math.exp(this$static.powerBar.val_0 / 4.762 - 7);
+  $startContext(perfmon, 'graphics');
+  $setFont_0(g, unitsFont);
+  $setLineCap(g.context, ($clinit_Context2d$LineCap(), ROUND).value_0);
+  this$static.menus.noEditCheckItem.on && (g.context.save(), $setColor_0(g, new Color(209, 75, 75)), g.context.lineWidth = 3, g.context.fillRect(20, 30, 30, 20), g.context.beginPath(), g.context.moveTo(25, 30), g.context.lineTo(25, 26), g.context.arc(35, 26, 10, -3.1415, 0, false), g.context.lineTo(45, 30), g.context.stroke(), g.context.restore(), undefined);
+  $setColor_0(g, ($clinit_Color(), white));
+  scale = window.devicePixelRatio;
+  $setTransform(this$static.cvcontext, this$static.app.transform_0[0] * scale, 0, 0, this$static.app.transform_0[3] * scale, this$static.app.transform_0[4] * scale, this$static.app.transform_0[5] * scale);
+  $startContext(perfmon, 'elm.draw()');
+  for (ce$iterator0 = new ArrayList$1(this$static.elmList.arrayList); ce$iterator0.i < ce$iterator0.this$01.array.length;) {
+    ce = $next_4(ce$iterator0);
+    this$static.menus.powerCheckItem.on && $setColor_0(g, gray);
+    ce.draw(g);
+  }
+  $stopContext(perfmon);
+  if (this$static.mouse.mouseMode != 2 && this$static.mouse.mouseMode != 3) {
+    for (i0 = 0; i0 != this$static.app.postDrawList.arrayList.array.length; i0++)
+      drawPost(g, $get_4(this$static.app.postDrawList, i0));
+  }
+  if (this$static.mouse.tempMouseMode == 2 || this$static.mouse.tempMouseMode == 3 || this$static.mouse.tempMouseMode == 5 || this$static.mouse.tempMouseMode == 4) {
+    for (ce$iterator = new ArrayList$1(this$static.elmList.arrayList); ce$iterator.i < ce$iterator.this$01.array.length;) {
+      ce = $next_4(ce$iterator);
+      if (ce != this$static.mouse.mouseElm || this$static.mouse.tempMouseMode != 5) {
+        $setColor_0(g, gray);
+        $fillOval(g, ce.x_0 - 3, ce.y_0 - 3, 7);
+        $fillOval(g, ce.x2 - 3, ce.y2 - 3, 7);
+      }
+      else {
+        $drawHandles(ce, g, selectColor_0);
+      }
+    }
+  }
+  if (this$static.mouse.tempMouseMode == 6 && !!this$static.mouse.mouseElm) {
+    $drawHandles(this$static.mouse.mouseElm, g, selectColor_0);
+    if (instanceOf(this$static.mouse.mouseElm, 132) && this$static.mouse.mouseCursorX >= 0) {
+      rw = this$static.mouse.mouseElm;
+      gx = $inverseTransformX(this$static.mouse, this$static.mouse.mouseCursorX);
+      gy = $inverseTransformY(this$static.mouse, this$static.mouse.mouseCursorY);
+      sp = $getSnapPointOnWire(rw, gx, gy);
+      if (sp) {
+        $setColor_0(g, selectColor_0);
+        $fillOval(g, sp.x_0 - 4, sp.y_0 - 4, 9);
+      }
+    }
+  }
+  if (!!this$static.mouse.dragElm && (this$static.mouse.dragElm.x_0 != this$static.mouse.dragElm.x2 || this$static.mouse.dragElm.y_0 != this$static.mouse.dragElm.y2)) {
+    this$static.mouse.dragElm.draw(g);
+    $drawHandles(this$static.mouse.dragElm, g, selectColor_0);
+  }
+  for (i = 0; i != this$static.app.badConnectionList.arrayList.array.length; i++) {
+    cn = $get_4(this$static.app.badConnectionList, i);
+    $setColor_0(g, red);
+    $fillOval(g, cn.x_0 - 3, cn.y_0 - 3, 7);
+  }
+  if (this$static.mouse.selectedArea) {
+    $setColor_0(g, selectColor_0);
+    $drawRect(g, this$static.mouse.selectedArea.x_0, this$static.mouse.selectedArea.y_0, this$static.mouse.selectedArea.width_0, this$static.mouse.selectedArea.height_0);
+  }
+  if (this$static.menus.crossHairCheckItem.on && this$static.mouse.mouseCursorX >= 0 && this$static.mouse.mouseCursorX <= this$static.app.circuitArea.width_0 && this$static.mouse.mouseCursorY <= this$static.app.circuitArea.height_0) {
+    $setColor_0(g, gray);
+    x_0 = $snapGrid_0(this$static.app, $inverseTransformX(this$static.mouse, this$static.mouse.mouseCursorX));
+    y_0 = $snapGrid_0(this$static.app, $inverseTransformY(this$static.mouse, this$static.mouse.mouseCursorY));
+    $drawLine(g, x_0, $inverseTransformY(this$static.mouse, 0), x_0, $inverseTransformY(this$static.mouse, this$static.app.circuitArea.height_0));
+    $drawLine(g, $inverseTransformX(this$static.mouse, 0), y_0, $inverseTransformX(this$static.mouse, this$static.app.circuitArea.width_0), y_0);
+  }
+  $setTransform(this$static.cvcontext, scale, 0, 0, scale, 0, 0);
+  $startContext(perfmon, 'drawBottomArea()');
+  $drawBottomArea(this$static, g);
+  $stopContext(perfmon);
+  $setColor_0(g, white);
+  $stopContext(perfmon);
+  !!this$static.app.stopElm && this$static.app.stopElm != this$static.mouse.mouseElm && this$static.app.stopElm.setMouseElm(false);
+  ++this$static.frames_0;
+  if (this$static.app.dcAnalysisFlag) {
+    this$static.app.dcAnalysisFlag = false;
+    this$static.app.analyzeFlag = true;
+  }
+  this$static.lastFrameTime = this$static.lastTime;
+  $stopContext(perfmon);
+  if (this$static.app.developerMode) {
+    height = 15;
+    $drawString(g, 'Framerate: ' + $format_0(showFormat, this$static.framerate), 10, 15);
+    $drawString(g, 'Steprate: ' + $format_0(showFormat, this$static.steprate), 10, height += 15);
+    $drawString(g, 'Steprate/iter: ' + $format_0(showFormat, this$static.steprate / $getIterCount(this$static.app)), 10, height += 15);
+    $drawString(g, 'iterc: ' + $format_0(showFormat, $getIterCount(this$static.app)), 10, height += 15);
+    $drawString(g, 'Frames: ' + this$static.frames_0, 10, height += 15);
+    height += 30;
+    perfmonResult = (sb = new StringBuilder, buildStringInternal(sb, perfmon.rootCtxName, perfmon.rootCtx, 0), sb).string;
+    splits = $split_1(perfmonResult, '\n', 0);
+    for (x_0 = 0; x_0 < splits.length; x_0++) {
+      $fillText(g.context, splits[x_0], 10, height + 15 * x_0);
+    }
+  }
+  hook = $wnd.CircuitJS1.onupdate;
+  hook && hook($wnd.CircuitJS1);
+}
+
+function $updateContextButtons(this$static) {
+  $setContextInfo(this$static.subcircuitBar, $getEditingModelName(this$static.app));
+}
+
+function $updateSubcircuitPath(this$static) {
+  var i, sb;
+  if (this$static.subcircuitStack.arrayList.array.length == 0) {
+    $setSubcircuitPath(this$static.subcircuitBar, null);
+  }
+  else {
+    sb = new StringBuilder_1(LS('Viewing: '));
+    for (i = 0; i < this$static.subcircuitStack.arrayList.array.length; i++) {
+      i > 0 && (sb.string += ' > ', sb);
+      $append_4(sb, $get_4(this$static.subcircuitStack, i).modelName);
+    }
+    $setSubcircuitPath(this$static.subcircuitBar, sb.string);
+  }
+}
+
+function $updateToolbar(this$static) {
+  this$static.mouse.dragElm ? $setModeLabel(this$static.toolbar_0, LS('Drag Mouse')) : $setModeLabel(this$static.toolbar_0, LS('Mode: ') + ('' + $getStringValue(this$static.app.classToLabelMap, this$static.mouseModeStr)));
+  $highlightButton(this$static.toolbar_0, this$static.mouseModeStr);
+}
+
+function UIManager(app) {
+  this.mainMenuItems = new Vector;
+  this.mainMenuItemNames = new Vector;
+  this.subcircuitStack = new Vector;
+  this.app = app;
+  theUI = this;
+}
+
+function max_3(a, b) {
+  return a > b ? a : b;
+}
+
+function min_2(a, b) {
+  return a < b ? a : b;
+}
+
+defineClass(504, 1, {}, UIManager);
+_.canvasHeight = 0;
+_.canvasWidth = 0;
+_.contextPanel = null;
+_.framerate = 0;
+_.frames_0 = 0;
+_.hideInfoBox = false;
+_.hideMenu = false;
+_.lastFrameTime = 0;
+_.lastResizeTime = 0;
+_.lastTime = 0;
+_.mouseModeStr = 'Select';
+_.needsRepaint = false;
+_.secTime = 0;
+_.steprate = 0;
+_.steps = 0;
+var VERTICALPANELWIDTH = 166, theUI;
+var Lcom_lushprojects_circuitjs1_client_UIManager_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'UIManager', 504);
+function UIManager$1(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(505, 1, {}, UIManager$1);
+_.execute_1 = function execute_43() {
+  $setOptionInStorage('euroResistors', this.this$01.menus.euroResistorCheckItem.on);
+  $setEuroResistors(this.this$01.toolbar_0, this.this$01.menus.euroResistorCheckItem.on);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_UIManager$1_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'UIManager/1', 505);
+function UIManager$10(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(514, 1, {}, UIManager$10);
+_.execute_0 = function execute_44() {
+  $updateCircuit(this.this$01);
+  this.this$01.needsRepaint = false;
+  return false;
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_UIManager$10_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'UIManager/10', 514);
+function UIManager$2(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(506, 1, {}, UIManager$2);
+_.execute_1 = function execute_45() {
+  var ce, ce$iterator;
+  $setOptionInStorage('euroGates', this.this$01.menus.euroGatesCheckItem.on);
+  for (ce$iterator = new ArrayList$1(this.this$01.elmList.arrayList); ce$iterator.i < ce$iterator.this$01.array.length;) {
+    ce = $next_4(ce$iterator);
+    ce.setPoints();
+  }
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_UIManager$2_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'UIManager/2', 506);
+function UIManager$3(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(507, 1, {}, UIManager$3);
+_.execute_1 = function execute_46() {
+  var i;
+  for (i = 0; i < this.this$01.scopeManager.scopeCount; i++)
+    $setRect(this.this$01.scopeManager.scopes[i], this.this$01.scopeManager.scopes[i].rect_0);
+  $setOptionInStorage('whiteBackground', this.this$01.menus.printableCheckItem.on);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_UIManager$3_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'UIManager/3', 507);
+function UIManager$4(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(508, 1, {}, UIManager$4);
+_.execute_1 = function execute_47() {
+  var cc;
+  $setOptionInStorage('conventionalCurrent', this.this$01.menus.conventionCheckItem.on);
+  cc = $getHexValue(currentColor_0);
+  ($equals_1(cc, '#ffff00') || $equals_1(cc, '#00ffff')) && (currentColor_0 = this.this$01.menus.conventionCheckItem.on ? ($clinit_Color(), yellow) : ($clinit_Color(), cyan));
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_UIManager$4_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'UIManager/4', 508);
+function UIManager$5(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(509, 1, $intern_37, UIManager$5);
+_.onResize = function onResize_7(event_0) {
+  this.this$01.lastResizeTime = ($clinit_System(), fromDouble_0(Date.now()));
+  $repaint(this.this$01);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_UIManager$5_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'UIManager/5', 509);
+function UIManager$6(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(510, 1, $intern_51, UIManager$6);
+_.onClick = function onClick_55(event_0) {
+  $resetAction(this.this$01);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_UIManager$6_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'UIManager/6', 510);
+function UIManager$7(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(511, 1, $intern_51, UIManager$7);
+_.onClick = function onClick_56(event_0) {
+  $setSimRunning_0(this.this$01, !this.this$01.app.simRunning);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_UIManager$7_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'UIManager/7', 511);
+function UIManager$8(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(512, 1, $intern_51, UIManager$8);
+_.onClick = function onClick_57(event_0) {
+  $doMainMenuChecks(this.this$01.mouse);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_UIManager$8_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'UIManager/8', 512);
+function UIManager$9(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(513, 1, { 11: 1, 947: 1 }, UIManager$9);
+var Lcom_lushprojects_circuitjs1_client_UIManager$9_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'UIManager/9', 513);
+function $doRecover(this$static) {
+  $pushUndo(this$static);
+  $readCircuit_0(this$static.sim.loader, this$static.sim.recovery, 0);
+  $allowSave(this$static.sim.ui, false);
+  $setEnabled_1(this$static.sim.menus.recoverItem, false);
+}
+
+function $doRedo(this$static) {
+  var ui;
+  if (this$static.redoStack.arrayList.array.length == 0)
+    return;
+  $add_11(this$static.undoStack, new UndoManager$UndoItem(this$static, $dumpCircuit(this$static.sim)));
+  ui = $remove_19(this$static.redoStack, this$static.redoStack.arrayList.array.length - 1);
+  $loadUndoItem(this$static, ui);
+  $setEnabled_1(this$static.sim.menus.redoItem, this$static.redoStack.arrayList.array.length > 0);
+  $setEnabled_1(this$static.sim.menus.undoItem, this$static.undoStack.arrayList.array.length > 0);
+}
+
+function $doUndo(this$static) {
+  var ui;
+  if (this$static.undoStack.arrayList.array.length == 0)
+    return;
+  $add_11(this$static.redoStack, new UndoManager$UndoItem(this$static, $dumpCircuit(this$static.sim)));
+  ui = $remove_19(this$static.undoStack, this$static.undoStack.arrayList.array.length - 1);
+  $loadUndoItem(this$static, ui);
+  $setEnabled_1(this$static.sim.menus.redoItem, this$static.redoStack.arrayList.array.length > 0);
+  $setEnabled_1(this$static.sim.menus.undoItem, this$static.undoStack.arrayList.array.length > 0);
+}
+
+function $enableUndoRedo(this$static) {
+  $setEnabled_1(this$static.sim.menus.redoItem, this$static.redoStack.arrayList.array.length > 0);
+  $setEnabled_1(this$static.sim.menus.undoItem, this$static.undoStack.arrayList.array.length > 0);
+}
+
+function $loadUndoItem(this$static, ui) {
+  $readCircuit_0(this$static.sim.loader, ui.dump_0, 2);
+  this$static.sim.transform_0[0] = this$static.sim.transform_0[3] = ui.scale_0;
+  this$static.sim.transform_0[4] = ui.transform4;
+  this$static.sim.transform_0[5] = ui.transform5;
+}
+
+function $pushUndo(this$static) {
+  var s;
+  this$static.redoStack.arrayList.array = initUnidimensionalArray(Ljava_lang_Object_2_classLit, $intern_3, 1, 0, 5, 1);
+  s = $dumpCircuit(this$static.sim);
+  if (this$static.undoStack.arrayList.array.length > 0 && $compareTo(s, $lastElement(this$static.undoStack).dump_0) == 0)
+    return;
+  $add_11(this$static.undoStack, new UndoManager$UndoItem(this$static, s));
+  $setEnabled_1(this$static.sim.menus.redoItem, this$static.redoStack.arrayList.array.length > 0);
+  $setEnabled_1(this$static.sim.menus.undoItem, this$static.undoStack.arrayList.array.length > 0);
+  this$static.sim.savedFlag = false;
+}
+
+function $readRecovery(this$static) {
+  var stor;
+  stor = (!localStorage_0 && ($clinit_Storage$StorageSupportDetector(), localStorageSupported) && (localStorage_0 = new Storage_0('localStorage')), localStorage_0);
+  if (!stor)
+    return;
+  this$static.sim.recovery = $getItem_0(stor.storage, 'circuitRecovery');
+}
+
+function $writeRecoveryToStorage(this$static) {
+  var s, stor;
+  console.log('write recovery');
+  stor = (!localStorage_0 && ($clinit_Storage$StorageSupportDetector(), localStorageSupported) && (localStorage_0 = new Storage_0('localStorage')), localStorage_0);
+  if (!stor)
+    return;
+  s = $dumpCircuit(this$static.sim);
+  $setItem_0(stor.storage, 'circuitRecovery', s);
+}
+
+function UndoManager(sim) {
+  this.sim = sim;
+  this.undoStack = new Vector;
+  this.redoStack = new Vector;
+}
+
+defineClass(515, 1, {}, UndoManager);
+var Lcom_lushprojects_circuitjs1_client_UndoManager_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'UndoManager', 515);
+function UndoManager$UndoItem(this$0, d) {
+  this.dump_0 = d;
+  this.scale_0 = this$0.sim.transform_0[0];
+  this.transform4 = this$0.sim.transform_0[4];
+  this.transform5 = this$0.sim.transform_0[5];
+}
+
+defineClass(249, 1, { 249: 1 }, UndoManager$UndoItem);
+_.scale_0 = 0;
+_.transform4 = 0;
+_.transform5 = 0;
+var Lcom_lushprojects_circuitjs1_client_UndoManager$UndoItem_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'UndoManager/UndoItem', 249);
+function $clinit_UnijunctionElm() {
+  $clinit_UnijunctionElm = emptyMethod;
+  ujtExternalNodes = stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [1, 2, 3]);
+}
+
+function $setup_7(this$static) {
+  var st;
+  this$static.noDiagonal = true;
+  this$static.flags |= 1;
+  st = new StringTokenizer_0(ujtModelDump, '/');
+  $loadComposite(this$static, st, ujtModelString, ujtExternalNodes);
+  sim_0.adjustTimeStep = true;
+}
+
+function UnijunctionElm(xx, yy) {
+  $clinit_UnijunctionElm();
+  CompositeElm.call(this, xx, yy);
+  $setup_7(this);
+}
+
+function UnijunctionElm_0(xa, ya, xb, yb, f) {
+  $clinit_UnijunctionElm();
+  CompositeElm_0.call(this, xa, ya, xb, yb, f);
+  $setup_7(this);
+}
+
+defineClass(423, 110, $intern_79, UnijunctionElm, UnijunctionElm_0);
+_.draw = function draw_83(g) {
+  var ib1, ib2;
+  $setBbox_0(this, this.point1, this.b1[0], 0);
+  $setVoltageColor(this, g, this.volts[1]);
+  drawThickLine_0(g, this.b1[0], this.b1[1]);
+  drawThickLine_0(g, this.b1[1], this.b1[2]);
+  $setVoltageColor(this, g, this.volts[2]);
+  drawThickLine_0(g, this.b2[0], this.b2[1]);
+  drawThickLine_0(g, this.b2[1], this.b2[2]);
+  $setVoltageColor(this, g, this.volts[0]);
+  drawThickLine_0(g, this.emitter[0], this.emitter[1]);
+  drawThickLine_0(g, this.emitter[1], this.emitter[2]);
+  $fillPolygon(g, this.arrowPoly);
+  $setPowerColor_0(this, g);
+  $fillPolygon(g, this.emitterPoly);
+  ib2 = -$getCurrentIntoNode(this, 2);
+  ib1 = -$getCurrentIntoNode(this, 1);
+  this.curcountb2 = $updateDotCount(ib2, this.curcountb2);
+  this.curcountb1 = $updateDotCount(ib1, this.curcountb1);
+  this.curcounte = $updateDotCount(-ib1 - ib2, this.curcounte);
+  if (this.curcountb1 != 0 || this.curcountb2 != 0) {
+    $drawDots(g, this.b1[0], this.b1[1], this.curcountb1);
+    $drawDots(g, this.b1[1], this.b1[2], $addCurCount(this.curcountb1, 8));
+    $drawDots(g, this.b2[0], this.b2[1], this.curcountb2);
+    $drawDots(g, this.b2[1], this.b2[2], $addCurCount(this.curcountb2, 8));
+    $drawDots(g, this.emitter[0], this.emitter[1], this.curcounte);
+    $drawDots(g, this.emitter[1], this.emitter[2], this.curcounte);
+  }
+  $drawPosts(this, g);
+}
+  ;
+_.flipX = function flipX_18(c2, count) {
+  this.dx == 0 && (this.flags ^= 2);
+  $flipX(this, c2);
+}
+  ;
+_.flipXY = function flipXY_15(xmy, count) {
+  this.flags ^= 2;
+  $flipXY(this, xmy);
+}
+  ;
+_.flipY = function flipY_18(c2, count) {
+  this.dy == 0 && (this.flags ^= 2);
+  $flipY(this, c2);
+}
+  ;
+_.getDumpType = function getDumpType_114() {
+  return 417;
+}
+  ;
+_.getInfo_0 = function getInfo_86(arr) {
+  arr[0] = 'unijunction transistor';
+  arr[1] = 'Ie = ' + getUnitText(-$getCurrentIntoNode(this, 0), 'A', false);
+  arr[2] = 'Ib2 = ' + getUnitText(-$getCurrentIntoNode(this, 2), 'A', false);
+  arr[3] = 'Veb1 = ' + getUnitText(this.volts[0] - this.volts[1], 'V', false);
+  arr[4] = 'Vb2b1 = ' + getUnitText(this.volts[2] - this.volts[1], 'V', false);
+  arr[5] = 'P = ' + getUnitText($getPower(this), 'W', false);
+}
+  ;
+_.getPost = function getPost_26(n) {
+  return n == 0 ? this.emitter[0] : n == 1 ? this.b1[0] : this.b2[0];
+}
+  ;
+_.getPostCount_0 = function getPostCount_76() {
+  return 3;
+}
+  ;
+_.reset_1 = function reset_50() {
+  $reset_1(this);
+  this.curcountb1 = this.curcountb2 = this.curcounte = 0;
+}
+  ;
+_.setPoints = function setPoints_74() {
+  var flip, hs2, p1, p2, ra;
+  $setPoints(this);
+  flip = (this.flags & 2) != 0 ? -1 : 1;
+  hs2 = 16 * this.dsign * flip;
+  this.b1 = $newPointArray(3);
+  this.b2 = $newPointArray(3);
+  this.emitter = $newPointArray(3);
+  p1 = $interpPoint_0(this.point1, this.point2, 0, -hs2);
+  p2 = $interpPoint_0(this.point1, this.point2, 1, -hs2);
+  $interpPoint2(p1, p2, this.b1[0], this.b2[0], 1, -hs2);
+  $interpPoint2(p1, p2, this.b1[1], this.b2[1], 1, -hs2 / 2 | 0);
+  $interpPoint2(p1, p2, this.b1[2], this.b2[2], 1 - 10 / this.dn, -hs2 / 2 | 0);
+  $interpPoint_2(p1, p2, this.emitter[0], 0, hs2);
+  $interpPoint_2(p1, p2, this.emitter[1], 1 - 28 / this.dn, hs2);
+  this.emitter[2] = $interpPoint(p1, p2, 1 - 14 / this.dn);
+  ra = $newPointArray(4);
+  $interpPoint2(p1, p2, ra[0], ra[1], 1 - 13 / this.dn, 16);
+  $interpPoint2(p1, p2, ra[2], ra[3], 1 - 10 / this.dn, 16);
+  this.emitterPoly = $createPolygon_0(ra[0], ra[1], ra[3], ra[2]);
+  this.arrowPoly = $calcArrow(this.emitter[1], this.emitter[2], 8, 3);
+}
+  ;
+_.curcountb1 = 0;
+_.curcountb2 = 0;
+_.curcounte = 0;
+var ujtExternalNodes, ujtModelDump = '2 x2n2646-emitter/0 0 0 0 0 0 0/2 2 1000*a/0 1000000/0 5 0.00028*(a-b)\\p0.00575*(c-d)*e/2 3.5e-11 0 0/0 38.15/0 2518', ujtModelString = 'DiodeElm 1 4\rVoltageElm 4 5\rCCVSElm 4 5 6 0\rResistorElm 0 6\rVCCSElm 5 7 5 7 6 7 5\rCapacitorElm 5 7\rResistorElm 7 2\rResistorElm 3 5';
+var Lcom_lushprojects_circuitjs1_client_UnijunctionElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'UnijunctionElm', 423);
+function VCOElm(xx, yy) {
+  $clinit_ChipElm();
+  ChipElm.call(this, xx, yy);
+}
+
+function VCOElm_0(xa, ya, xb, yb, f, st) {
+  $clinit_ChipElm();
+  ChipElm_0.call(this, xa, ya, xb, yb, f, st);
+}
+
+defineClass(382, 32, $intern_79, VCOElm, VCOElm_0);
+_.doStep = function doStep_53() {
+  var cur1, cur2, dir_0, vc, vo;
+  vc = this.volts[3] - this.volts[2];
+  vo = this.volts[1];
+  dir_0 = vo < 2.5 ? 1 : -1;
+  if (vo < 2.5 && vc > 4.5) {
+    vo = 5;
+    dir_0 = -1;
+  }
+  if (vo > 2.5 && vc < 0.5) {
+    vo = 0;
+    dir_0 = 1;
+  }
+  $updateVoltageSource(sim_0, this.pins[1].voltSource, vo);
+  cur1 = sim_0.nodeList.arrayList.array.length + this.pins[4].voltSource;
+  cur2 = sim_0.nodeList.arrayList.array.length + this.pins[5].voltSource;
+  $stampMatrix(sim_0, this.nodes[2], cur1, dir_0);
+  $stampMatrix(sim_0, this.nodes[2], cur2, dir_0);
+  $stampMatrix(sim_0, this.nodes[3], cur1, -dir_0);
+  $stampMatrix(sim_0, this.nodes[3], cur2, -dir_0);
+  this.cDir = dir_0;
+}
+  ;
+_.draw = function draw_84(g) {
+  var c;
+  c = this.cDir * (this.pins[4].current + this.pins[5].current) + (this.volts[3] - this.volts[2]) / $intern_78;
+  this.pins[2].current = -c;
+  this.pins[3].current = c;
+  this.pins[0].current = -this.pins[4].current;
+  $drawChip(this, g);
+}
+  ;
+_.getChipName = function getChipName_30() {
+  return 'VCO';
+}
+  ;
+_.getDumpType = function getDumpType_115() {
+  return 158;
+}
+  ;
+_.getPostCount_0 = function getPostCount_77() {
+  return 6;
+}
+  ;
+_.getVoltageSourceCount = function getVoltageSourceCount_52() {
+  return 3;
+}
+  ;
+_.isDigitalChip = function isDigitalChip_8() {
+  return false;
+}
+  ;
+_.nonLinear = function nonLinear_29() {
+  return true;
+}
+  ;
+_.setupPins = function setupPins_31() {
+  this.sizeX = 2;
+  this.sizeY = 4;
+  this.pins = initUnidimensionalArray(Lcom_lushprojects_circuitjs1_client_ChipElm$Pin_2_classLit, $intern_3, 9, 6, 0, 1);
+  this.pins[0] = new ChipElm$Pin(this, 0, 2, 'Vi');
+  this.pins[1] = new ChipElm$Pin(this, 3, 2, 'Vo');
+  this.pins[1].output = true;
+  this.pins[2] = new ChipElm$Pin(this, 0, 3, 'C');
+  this.pins[3] = new ChipElm$Pin(this, 1, 3, 'C');
+  this.pins[4] = new ChipElm$Pin(this, 2, 3, 'R1');
+  this.pins[4].output = true;
+  this.pins[5] = new ChipElm$Pin(this, 3, 3, 'R2');
+  this.pins[5].output = true;
+}
+  ;
+_.stamp = function stamp_67() {
+  $stampVoltageSource(sim_0, 0, this.nodes[1], this.pins[1].voltSource);
+  $stampVoltageSource_0(sim_0, this.nodes[0], this.nodes[4], this.pins[4].voltSource, 0);
+  $stampVoltageSource_0(sim_0, 0, this.nodes[5], this.pins[5].voltSource, 5);
+  $stampResistor(sim_0, this.nodes[2], this.nodes[3], $intern_78);
+  $stampNonLinear(sim_0, this.nodes[2]);
+  $stampNonLinear(sim_0, this.nodes[3]);
+}
+  ;
+_.cDir = 0;
+var Lcom_lushprojects_circuitjs1_client_VCOElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'VCOElm', 382);
+function VCVSElm(xx, yy) {
+  $clinit_ChipElm();
+  VCCSElm.call(this, xx, yy);
+}
+
+function VCVSElm_0(xa, ya, xb, yb, f, st) {
+  $clinit_ChipElm();
+  VCCSElm_0.call(this, xa, ya, xb, yb, f, st);
+}
+
+defineClass(371, 141, $intern_93, VCVSElm, VCVSElm_0);
+_.doStep = function doStep_54() {
+  var convergeLimit, dv, dx, i, rs, v, v0, v2, vn;
+  convergeLimit = $getConvergeLimit();
+  for (i = 0; i != this.inputCount; i++) {
+    $wnd.Math.abs(this.volts[i] - this.lastVolts[i]) > convergeLimit && (sim_0.converged = false);
+  }
+  vn = this.pins[this.inputCount].voltSource + sim_0.nodeList.arrayList.array.length;
+  if (this.expr) {
+    for (i = 0; i != this.inputCount; i++)
+      this.exprState.values[i] = this.volts[i];
+    this.exprState.t = sim_0.t;
+    v0 = $eval(this.expr, this.exprState);
+    $wnd.Math.abs(this.volts[this.inputCount] - this.volts[this.inputCount + 1] - v0) > $wnd.Math.abs(v0) * $intern_34 && sim_0.subIterations < 100 && (sim_0.converged = false);
+    rs = v0;
+    for (i = 0; i != this.inputCount; i++) {
+      dv = this.volts[i] - this.lastVolts[i];
+      $wnd.Math.abs(dv) < $intern_76 && (dv = $intern_76);
+      this.exprState.values[i] = this.volts[i];
+      v = $eval(this.expr, this.exprState);
+      this.exprState.values[i] = this.volts[i] - dv;
+      v2 = $eval(this.expr, this.exprState);
+      dx = (v - v2) / dv;
+      $wnd.Math.abs(dx) < $intern_76 && (dx = dx > 0 ? $intern_76 : $intern_94);
+      $stampMatrix(sim_0, vn, this.nodes[i], -dx);
+      rs -= dx * this.volts[i];
+      this.exprState.values[i] = this.volts[i];
+    }
+    $stampRightSide_0(sim_0, vn, rs);
+  }
+  for (i = 0; i != this.inputCount; i++)
+    this.lastVolts[i] = this.volts[i];
+}
+  ;
+_.getChipName = function getChipName_31() {
+  return 'VCVS';
+}
+  ;
+_.getDumpType = function getDumpType_116() {
+  return 212;
+}
+  ;
+_.getPostCount_0 = function getPostCount_78() {
+  return this.inputCount + 2;
+}
+  ;
+_.getVoltageSourceCount = function getVoltageSourceCount_53() {
+  return 1;
+}
+  ;
+_.hasCurrentOutput = function hasCurrentOutput_2() {
+  return false;
+}
+  ;
+_.setCurrent = function setCurrent_11(vn, c) {
+  if (this.pins[this.inputCount].voltSource == vn) {
+    this.pins[this.inputCount].current = c;
+    this.pins[this.inputCount + 1].current = -c;
+  }
+}
+  ;
+_.setupPins = function setupPins_32() {
+  var i;
+  this.sizeX = 2;
+  this.sizeY = this.inputCount > 2 ? this.inputCount : 2;
+  this.pins = initUnidimensionalArray(Lcom_lushprojects_circuitjs1_client_ChipElm$Pin_2_classLit, $intern_3, 9, this.inputCount + 2, 0, 1);
+  for (i = 0; i != this.inputCount; i++)
+    this.pins[i] = new ChipElm$Pin(this, i, 2, String.fromCharCode(65 + i & $intern_22));
+  this.pins[this.inputCount] = new ChipElm$Pin(this, 0, 3, 'V+');
+  this.pins[this.inputCount].output = true;
+  this.pins[this.inputCount + 1] = new ChipElm$Pin(this, 1, 3, 'V-');
+  this.lastVolts = initUnidimensionalArray(D_classLit, $intern_70, 8, this.inputCount, 15, 1);
+  this.exprState = new ExprState;
+  $allocNodes(this);
+}
+  ;
+_.stamp = function stamp_68() {
+  var vn;
+  vn = this.pins[this.inputCount].voltSource + sim_0.nodeList.arrayList.array.length;
+  $stampNonLinear(sim_0, vn);
+  $stampVoltageSource(sim_0, this.nodes[this.inputCount + 1], this.nodes[this.inputCount], this.pins[this.inputCount].voltSource);
+}
+  ;
+_.stepFinished = function stepFinished_24() {
+  $updateLastValues(this.exprState, this.volts[this.inputCount] - this.volts[this.inputCount + 1]);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_VCVSElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'VCVSElm', 371);
+function $createSlider_4(this$static) {
+  var value_0;
+  this$static.waveform = 7;
+  $addWidgetToVerticalPanel(app_0, this$static.label_0 = new Label_1(LS(this$static.sliderText)));
+  $addStyleName(this$static.label_0, 'topSpace');
+  value_0 = round_int((this$static.frequency - this$static.bias) * 100 / (this$static.maxVoltage_0 - this$static.bias));
+  $addWidgetToVerticalPanel(app_0, this$static.slider = new Scrollbar_1(value_0, null, this$static));
+}
+
+function VarRailElm(xx, yy) {
+  RailElm_0.call(this, xx, yy, 7);
+  this.sliderText = 'Voltage';
+  this.frequency = this.maxVoltage_0;
+  $createSlider_4(this);
+}
+
+function VarRailElm_0(xa, ya, xb, yb, f, st) {
+  RailElm_1.call(this, xa, ya, xb, yb, f, st);
+  this.sliderText = $nextToken(st);
+  while ($hasMoreTokens(st))
+    this.sliderText += ' ' + $nextToken(st);
+  this.sliderText = $replaceAll(this.sliderText, '%2[bB]', '+');
+  $createSlider_4(this);
+}
+
+defineClass(261, 47, { 130: 1, 11: 1, 7: 1, 10: 1, 47: 1, 261: 1, 51: 1 }, VarRailElm, VarRailElm_0);
+_.delete_0 = function delete_6() {
+  $removeWidgetFromVerticalPanel(app_0, this.label_0);
+  $removeWidgetFromVerticalPanel(app_0, this.slider);
+  mouseElmRef == this && (mouseElmRef = null);
+  $deleteSliders(app_0, this);
+}
+  ;
+_.dumpXml = function dumpXml_84(doc, elem) {
+  $dumpXml(this, elem);
+  dumpAttr_1(elem, 'st', this.sliderText);
+}
+  ;
+_.getDumpType = function getDumpType_117() {
+  return 172;
+}
+  ;
+_.getEditInfo = function getEditInfo_76(n) {
+  var ei;
+  if (n == 0)
+    return new EditInfo_0('Min Voltage', this.bias, -20, 20);
+  if (n == 1)
+    return new EditInfo_0('Max Voltage', this.maxVoltage_0, -20, 20);
+  if (n == 2) {
+    ei = new EditInfo_0('Slider Text', 0, -1, -1);
+    ei.text_0 = this.sliderText;
+    return ei;
+  }
+  return null;
+}
+  ;
+_.getShortcut = function getShortcut_44() {
+  return 0;
+}
+  ;
+_.getVoltage_0 = function getVoltage_4() {
+  this.frequency = this.slider.val_0 * (this.maxVoltage_0 - this.bias) / 100 + this.bias;
+  return this.frequency;
+}
+  ;
+_.onMouseWheel = function onMouseWheel_8(e) {
+  !!this.slider && $onMouseWheel_0(this.slider, e);
+}
+  ;
+_.setEditValue = function setEditValue_74(n, ei) {
+  n == 0 && (this.bias = ei.value_0);
+  n == 1 && (this.maxVoltage_0 = ei.value_0);
+  if (n == 2) {
+    this.sliderText = $getText(ei.textf);
+    $setText_0(this.label_0, LS(this.sliderText));
+    $setiFrameHeight(app_0.ui);
+  }
+}
+  ;
+_.setMouseElm = function setMouseElm_3(v) {
+  v ? (mouseElmRef = this) : mouseElmRef == this && (mouseElmRef = null);
+  !!this.slider && $draw_3(this.slider);
+}
+  ;
+_.undumpXml = function undumpXml_86(xml) {
+  var value_0;
+  $undumpXml(this, xml);
+  this.sliderText = $parseStringAttr(xml, 'st', this.sliderText);
+  $setText_0(this.label_0, LS(this.sliderText));
+  value_0 = round_int((this.frequency - this.bias) * 100 / (this.maxVoltage_0 - this.bias));
+  $setValue_2(this.slider, value_0);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_VarRailElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'VarRailElm', 261);
+function VaractorElm(xx, yy) {
+  DiodeElm.call(this, xx, yy);
+  this.baseCapacitance = 4.0E-12;
+}
+
+function VaractorElm_0(xa, ya, xb, yb, f, st) {
+  DiodeElm_0.call(this, xa, ya, xb, yb, f, st);
+  this.capvoltdiff = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+  this.baseCapacitance = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+}
+
+defineClass(415, 152, $intern_104, VaractorElm, VaractorElm_0);
+_.calculateCurrent = function calculateCurrent_40() {
+  this.current_0 = $calculateCurrent_0(this.diode, this.volts[0] - this.volts[this.diodeEndNode]);
+  this.current_0 += this.capCurrent;
+}
+  ;
+_.doStep = function doStep_55() {
+  $doStep_0(this.diode, this.volts[0] - this.volts[this.diodeEndNode]);
+  $stampResistor(sim_0, this.nodes[2], this.nodes[1], this.compResistance);
+  $updateVoltageSource(sim_0, this.voltSource, this.voltSourceValue);
+}
+  ;
+_.draw = function draw_85(g) {
+  $drawDiode(this, g);
+  $setVoltageColor(this, g, this.volts[0]);
+  $setPowerColor_0(this, g);
+  drawThickLine_0(g, this.plate1[0], this.plate1[1]);
+  app_0.menus.powerCheckItem.on && $setColor_0(g, ($clinit_Color(), gray));
+  $setVoltageColor(this, g, this.volts[1]);
+  $setPowerColor_0(this, g);
+  drawThickLine_0(g, this.plate2[0], this.plate2[1]);
+  this.curcount_0 = $updateDotCount(this.current_0, this.curcount_0);
+  app_0.mouse.dragElm == this || $drawDots(g, this.point1, this.point2, this.curcount_0);
+  $drawPosts(this, g);
+}
+  ;
+_.dumpXml = function dumpXml_85(doc, elem) {
+  $dumpXml_6(this, doc, elem);
+  dumpAttr(elem, 'ca', this.capvoltdiff);
+  dumpAttr(elem, 'ba', this.baseCapacitance);
+}
+  ;
+_.getDumpType = function getDumpType_118() {
+  return 176;
+}
+  ;
+_.getEditInfo = function getEditInfo_77(n) {
+  if (n == 1)
+    return new EditInfo_0('Capacitance @ 0V (F)', this.baseCapacitance, 10, $intern_21);
+  return $getEditInfo_2(this, n);
+}
+  ;
+_.getElmType = function getElmType_24() {
+  return 'varactor';
+}
+  ;
+_.getInfo_0 = function getInfo_87(arr) {
+  $getInfo_3(this, arr);
+  arr[0] = 'varactor';
+  arr[5] = 'C = ' + getUnitText(this.capacitance, 'F', false);
+}
+  ;
+_.getInternalNodeCount = function getInternalNodeCount_14() {
+  return 1;
+}
+  ;
+_.getShortcut = function getShortcut_45() {
+  return 0;
+}
+  ;
+_.getVoltageSourceCount = function getVoltageSourceCount_54() {
+  return 1;
+}
+  ;
+_.reset_0 = function reset_51() {
+  $reset_2(this);
+  this.capvoltdiff = 0;
+}
+  ;
+_.setCurrent = function setCurrent_12(x_0, c) {
+  this.capCurrent = c;
+}
+  ;
+_.setEditValue = function setEditValue_75(n, ei) {
+  if (n == 1) {
+    this.baseCapacitance = ei.value_0;
+    return;
+  }
+  $setEditValue_2(this, n, ei);
+}
+  ;
+_.setPoints = function setPoints_75() {
+  var arrowPoint, pa;
+  $setPoints_10(this);
+  pa = $newPointArray(2);
+  $interpPoint2(this.lead1, this.lead2, pa[0], pa[1], 0, 8);
+  $interpPoint2(this.lead1, this.lead2, this.cathode_0[0], this.cathode_0[1], 0.6, 8);
+  arrowPoint = $interpPoint(this.lead1, this.lead2, 0.6);
+  this.poly_0 = $createPolygon(pa[0], pa[1], arrowPoint);
+  this.plate1 = $newPointArray(2);
+  this.plate2 = $newPointArray(2);
+  $interpPoint2(this.lead1, this.lead2, this.plate1[0], this.plate1[1], 0.6, 8);
+  $interpPoint2(this.lead1, this.lead2, this.plate2[0], this.plate2[1], 1, 8);
+}
+  ;
+_.stamp = function stamp_69() {
+  $stamp_1(this);
+  $stampVoltageSource(sim_0, this.nodes[0], this.nodes[2], this.voltSource);
+  $stampNonLinear(sim_0, this.nodes[2]);
+}
+  ;
+_.startIteration = function startIteration_21() {
+  var c0;
+  c0 = this.baseCapacitance;
+  this.capvoltdiff > 0 ? (this.capacitance = c0) : (this.capacitance = c0 / $wnd.Math.pow(1 - this.capvoltdiff / this.model.fwdrop, 0.5));
+  this.compResistance = sim_0.timeStep / (2 * this.capacitance);
+  this.voltSourceValue = -this.capvoltdiff - this.capCurrent * this.compResistance;
+}
+  ;
+_.stepFinished = function stepFinished_25() {
+  this.capvoltdiff = this.volts[0] - this.volts[1];
+}
+  ;
+_.undumpXml = function undumpXml_87(xml) {
+  $undumpXml_4(this, xml);
+  this.capvoltdiff = $parseDoubleAttr(xml, 'ca', this.capvoltdiff);
+  this.baseCapacitance = $parseDoubleAttr(xml, 'ba', this.baseCapacitance);
+}
+  ;
+_.baseCapacitance = 0;
+_.capCurrent = 0;
+_.capacitance = 0;
+_.capvoltdiff = 0;
+_.compResistance = 0;
+_.voltSourceValue = 0;
+var Lcom_lushprojects_circuitjs1_client_VaractorElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'VaractorElm', 415);
+function $$init_21(this$static) {
+  this$static.increasingP = true;
+  this$static.decreasingP = true;
+}
+
+function $setPoints_28(this$static) {
+  var ds, p3, p4, p5, p6, p7, p8, r1, r2, r3, r4, sep;
+  $setPoints(this$static);
+  ds = this$static.dy == 0 ? sign_0(this$static.dx) : -sign_0(this$static.dy);
+  p3 = $interpPoint_0(this$static.point1, this$static.point2, 0, -this$static.width_0 * ds);
+  p4 = $interpPoint_0(this$static.point1, this$static.point2, 1, -this$static.width_0 * ds);
+  sep = app_0.gridSize;
+  p5 = $interpPoint(this$static.point1, this$static.point2, sep / this$static.dn);
+  p6 = $interpPoint(this$static.point1, this$static.point2, 1 - sep / this$static.dn);
+  p7 = $interpPoint(p3, p4, sep / this$static.dn);
+  p8 = $interpPoint(p3, p4, 1 - sep / this$static.dn);
+  this$static.posts = stampJavaTypeInfo(getClassLiteralForArray(Lcom_lushprojects_circuitjs1_client_Point_2_classLit, 1), $intern_72, 17, 0, [p3, p4, this$static.point1, this$static.point2]);
+  this$static.inner = stampJavaTypeInfo(getClassLiteralForArray(Lcom_lushprojects_circuitjs1_client_Point_2_classLit, 1), $intern_72, 17, 0, [p7, p8, p5, p6]);
+  r1 = $interpPoint_0(this$static.point1, this$static.point2, sep / this$static.dn, ds * sep);
+  r2 = $interpPoint_0(this$static.point1, this$static.point2, 1 - sep / this$static.dn, ds * sep);
+  r3 = $interpPoint_0(this$static.point1, this$static.point2, sep / this$static.dn, -ds * (sep + this$static.width_0));
+  r4 = $interpPoint_0(this$static.point1, this$static.point2, 1 - sep / this$static.dn, -ds * (sep + this$static.width_0));
+  this$static.rectPointsX = stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [r1.x_0, r2.x_0, r4.x_0, r3.x_0]);
+  this$static.rectPointsY = stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [r1.y_0, r2.y_0, r4.y_0, r3.y_0]);
+  this$static.center = $interpPoint(r1, r4, 0.5);
+  this$static.maxTextLen = max_1(abs_0(r1.x_0 - r4.x_0) - 5, 5);
+}
+
+function $setup_8(this$static) {
+  this$static.voltSources = initUnidimensionalArray(I_classLit, $intern_25, 8, 2, 15, 1);
+  this$static.currents = initUnidimensionalArray(D_classLit, $intern_70, 8, 2, 15, 1);
+  this$static.curcounts = initUnidimensionalArray(D_classLit, $intern_70, 8, 2, 15, 1);
+}
+
+function WattmeterElm(xx, yy) {
+  CircuitElm.call(this, xx, yy);
+  $$init_21(this);
+  $setup_8(this);
+}
+
+function WattmeterElm_0(xa, ya, xb, yb, f, st) {
+  CircuitElm_0.call(this, xa, ya, xb, yb, f);
+  $$init_21(this);
+  this.width_0 = __parseAndValidateInt($nextToken(st), 10);
+  try {
+    this.meter = __parseAndValidateInt($nextToken(st), 10);
+  }
+  catch ($e0) {
+    $e0 = toJava($e0);
+    if (!instanceOf($e0, 15))
+      throw toJs($e0);
+  }
+  $setup_8(this);
+}
+
+defineClass(357, 7, $intern_79, WattmeterElm, WattmeterElm_0);
+_.canFlipX = function canFlipX_7() {
+  return false;
+}
+  ;
+_.canFlipY = function canFlipY_8() {
+  return false;
+}
+  ;
+_.canViewInScope = function canViewInScope_7() {
+  return true;
+}
+  ;
+_.drag = function drag_8(xx, yy) {
+  var w1, w2;
+  xx = $snapGrid_0(app_0, xx);
+  yy = $snapGrid_0(app_0, yy);
+  w1 = max_1(app_0.gridSize, abs_0(yy - this.y_0));
+  w2 = max_1(app_0.gridSize, abs_0(xx - this.x_0));
+  if (w1 > w2) {
+    xx = this.x_0;
+    this.width_0 = w2;
+  }
+  else {
+    yy = this.y_0;
+    this.width_0 = w1;
+  }
+  this.x2 = xx;
+  this.y2 = yy;
+  $setPoints_28(this);
+}
+  ;
+_.draw = function draw_86(g) {
+  var flip, fsize, i, str, w;
+  for (i = 0; i != 2; i++)
+    this.curcounts[i] = $updateDotCount(this.currents[i], this.curcounts[i]);
+  flip = 1;
+  for (i = 0; i != 4; i++) {
+    $setVoltageColor(this, g, this.volts[i]);
+    drawThickLine_0(g, this.posts[i], this.inner[i]);
+    $drawDots(g, this.posts[i], this.inner[i], this.curcounts[i / 2 | 0] * flip);
+    flip *= -1;
+  }
+  $setColor_0(g, mouseElmRef == this || this.selected_0 || app_0.mouse.plotYElm == this || instanceOf(mouseElmRef, 20) && $getElm_0(mouseElmRef.elmScope) == this || $isOnHighlightedNet(this) ? selectColor_0 : lightGrayColor);
+  drawThickPolygon_0(g, this.rectPointsX, this.rectPointsY, 4);
+  $setBbox(this, this.posts[0].x_0, this.posts[0].y_0, this.posts[3].x_0, this.posts[3].y_0);
+  $drawPosts(this, g);
+  switch (this.meter) {
+    case 1:
+      str = getUnitText(this.avgPower, 'W(avg)', false);
+      break;
+    default: str = getUnitText((this.volts[2] - this.volts[0]) * this.currents[1], 'W', false);
+  }
+  g.context.save();
+  g.savedFontSize = g.currentFontSize;
+  fsize = 15;
+  while (true) {
+    $setFont_0(g, new Font('SansSerif', 0, fsize));
+    w = round_int($measureText(g.context, str).width);
+    if (w < this.maxTextLen)
+      break;
+    --fsize;
+  }
+  $setColor_0(g, whiteColor);
+  g.context.textBaseline = 'middle';
+  $drawString(g, str, this.center.x_0 - (w / 2 | 0), this.center.y_0);
+  g.context.restore();
+  g.currentFontSize = g.savedFontSize;
+}
+  ;
+_.dumpXml = function dumpXml_86(doc, elem) {
+  dumpAttr_1(elem, 'x', this.x_0 + ' ' + this.y_0 + ' ' + this.x2 + ' ' + this.y2);
+  dumpAttr_0(elem, 'f', this.flags);
+  dumpAttr_0(elem, 'w', this.width_0);
+  dumpAttr_0(elem, 'meter', this.meter);
+}
+  ;
+_.getConnection = function getConnection_36(n1, n2) {
+  return (n1 / 2 | 0) == (n2 / 2 | 0);
+}
+  ;
+_.getCurrent_0 = function getCurrent_3() {
+  return this.currents[1];
+}
+  ;
+_.getCurrentIntoNode = function getCurrentIntoNode_34(n) {
+  return n % 2 == 0 ? -this.currents[n / 2 | 0] : this.currents[n / 2 | 0];
+}
+  ;
+_.getDumpType = function getDumpType_119() {
+  return 420;
+}
+  ;
+_.getEditInfo = function getEditInfo_78(n) {
+  var ei;
+  if (n == 0) {
+    ei = new EditInfo_0('Value', 0, -1, -1);
+    ei.choice = new Choice;
+    $addItem(ei.choice, LS('Instantaneous'));
+    $addItem(ei.choice, LS('Average'));
+    $select(ei.choice, this.meter);
+    return ei;
+  }
+  return null;
+}
+  ;
+_.getInfo_0 = function getInfo_88(arr) {
+  arr[0] = 'wattmeter';
+  $getBasicInfo(this, arr);
+  arr[3] = 'P = ' + getUnitText((this.volts[2] - this.volts[0]) * this.currents[1], 'W', false);
+  this.meter == 1 && (arr[4] = 'Pavg = ' + getUnitText(this.avgPower, 'W', false));
+}
+  ;
+_.getPost = function getPost_27(n) {
+  return this.posts[n];
+}
+  ;
+_.getPostCount_0 = function getPostCount_79() {
+  return 4;
+}
+  ;
+_.getPower = function getPower_14() {
+  return (this.volts[2] - this.volts[0]) * this.currents[1];
+}
+  ;
+_.getVoltageDiff_0 = function getVoltageDiff_25() {
+  return this.volts[2] - this.volts[0];
+}
+  ;
+_.getVoltageSourceCount = function getVoltageSourceCount_55() {
+  return 2;
+}
+  ;
+_.hasGroundConnection = function hasGroundConnection_20(n1) {
+  return false;
+}
+  ;
+_.setCurrent = function setCurrent_13(vn, c) {
+  this.currents[vn == this.voltSources[0] ? 0 : 1] = c;
+}
+  ;
+_.setEditValue = function setEditValue_76(n, ei) {
+  n == 0 && (this.meter = $getElement(ei.choice).selectedIndex);
+}
+  ;
+_.setPoints = function setPoints_76() {
+  $setPoints_28(this);
+}
+  ;
+_.setVoltageSource = function setVoltageSource_9(j, vs) {
+  this.voltSources[j] = vs;
+}
+  ;
+_.stamp = function stamp_70() {
+  $stampVoltageSource_0(sim_0, this.nodes[0], this.nodes[1], this.voltSources[0], 0);
+  $stampVoltageSource_0(sim_0, this.nodes[2], this.nodes[3], this.voltSources[1], 0);
+}
+  ;
+_.stepFinished = function stepFinished_26() {
+  var p;
+  p = (this.volts[2] - this.volts[0]) * this.currents[1];
+  ++this.count;
+  this.totalPower += p;
+  if (p > this.maxP && this.increasingP) {
+    this.maxP = p;
+    this.increasingP = true;
+    this.decreasingP = false;
+  }
+  if (p < this.maxP && this.increasingP) {
+    this.minP = p;
+    this.increasingP = false;
+    this.decreasingP = true;
+    this.avgPower = this.totalPower / this.count;
+    isNaN(this.avgPower) && (this.avgPower = 0);
+    this.count = 0;
+    this.totalPower = 0;
+  }
+  if (p < this.minP && this.decreasingP) {
+    this.minP = p;
+    this.increasingP = false;
+    this.decreasingP = true;
+  }
+  if (p > this.minP && this.decreasingP) {
+    this.maxP = p;
+    this.increasingP = true;
+    this.decreasingP = false;
+    this.avgPower = this.totalPower / this.count;
+    isNaN(this.avgPower) && (this.avgPower = 0);
+    this.count = 0;
+    this.totalPower = 0;
+  }
+  if (p == 0) {
+    ++this.zerocount;
+    if (this.zerocount > 5) {
+      this.totalPower = 0;
+      this.avgPower = 0;
+      this.maxP = 0;
+      this.minP = 0;
+    }
+  }
+  else {
+    this.zerocount = 0;
+  }
+}
+  ;
+_.undumpXml = function undumpXml_88(xml) {
+  this.flags = $parseIntAttr(xml, 'f', this.flags);
+  this.width_0 = $parseIntAttr(xml, 'w', this.width_0);
+  this.meter = $parseIntAttr(xml, 'meter', this.meter);
+  $setup_8(this);
+}
+  ;
+_.avgPower = 0;
+_.count = 0;
+_.decreasingP = false;
+_.increasingP = false;
+_.maxP = 0;
+_.maxTextLen = 0;
+_.meter = 0;
+_.minP = 0;
+_.totalPower = 0;
+_.width_0 = 0;
+_.zerocount = 0;
+var Lcom_lushprojects_circuitjs1_client_WattmeterElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'WattmeterElm', 357);
+function addToList(map_0, k, w) {
+  var list;
+  list = $get_1(map_0, valueOf_0(k));
+  if (!list) {
+    list = new ArrayList;
+    $put_0(map_0, valueOf_0(k), list);
+  }
+  list.array[list.array.length] = w;
+}
+
+function buildChain(start_0, chain, visited, pointCount, pointToWires) {
+  var k1, k2, neighbor, neighbor$iterator, stack_0, w, e;
+  stack_0 = new ArrayDeque;
+  $addFirst(stack_0, start_0);
+  while (stack_0.head_0 != stack_0.tail) {
+    w = (e = $pollFirst(stack_0), checkCriticalElement(e != null), e);
+    if ($containsKey(visited.map_0, w))
+      continue;
+    $put_0(visited.map_0, w, visited);
+    chain.array[chain.array.length] = w;
+    k1 = key_0(w.x_0, w.y_0);
+    k2 = key_0(w.x2, w.y2);
+    if ($get_1(pointCount, valueOf_0(k1)).value_0 == 2) {
+      for (neighbor$iterator = new ArrayList$1($get_1(pointToWires, valueOf_0(k1))); neighbor$iterator.i < neighbor$iterator.this$01.array.length;) {
+        neighbor = $next_4(neighbor$iterator);
+        $containsKey(visited.map_0, neighbor) || $addFirst(stack_0, neighbor);
+      }
+    }
+    if ($get_1(pointCount, valueOf_0(k2)).value_0 == 2) {
+      for (neighbor$iterator = new ArrayList$1($get_1(pointToWires, valueOf_0(k2))); neighbor$iterator.i < neighbor$iterator.this$01.array.length;) {
+        neighbor = $next_4(neighbor$iterator);
+        $containsKey(visited.map_0, neighbor) || $addFirst(stack_0, neighbor);
+      }
+    }
+  }
+}
+
+function convertWires(sim) {
+  var ce, ce$iterator, ce$iterator0, ce$iterator1, chain, chain$iterator, chains, elmList, hasSelection, i, k, orderedPoints, p, pointCount, pointToWires, pts, rw, rw0, v, v0, visited, w, w$iterator, w$iterator0, w$iterator1, w$iterator2, wires;
+  elmList = sim.ui.elmList;
+  hasSelection = false;
+  for (ce$iterator0 = new ArrayList$1(elmList.arrayList); ce$iterator0.i < ce$iterator0.this$01.array.length;) {
+    ce = $next_4(ce$iterator0);
+    if (instanceOf(ce, 125) && !instanceOf(ce, 132) && ce.selected_0) {
+      hasSelection = true;
+      break;
+    }
+  }
+  wires = new ArrayList;
+  for (ce$iterator1 = new ArrayList$1(elmList.arrayList); ce$iterator1.i < ce$iterator1.this$01.array.length;) {
+    ce = $next_4(ce$iterator1);
+    if (instanceOf(ce, 132))
+      continue;
+    instanceOf(ce, 125) && (!hasSelection || ce.selected_0) && $add_8(wires, ce);
+  }
+  if (wires.array.length == 0)
+    return;
+  pointCount = new HashMap;
+  for (w$iterator0 = new ArrayList$1(wires); w$iterator0.i < w$iterator0.this$01.array.length;) {
+    w = $next_4(w$iterator0);
+    inc_0(pointCount, key_0(w.x_0, w.y_0));
+    inc_0(pointCount, key_0(w.x2, w.y2));
+  }
+  for (ce$iterator = new ArrayList$1(elmList.arrayList); ce$iterator.i < ce$iterator.this$01.array.length;) {
+    ce = $next_4(ce$iterator);
+    if (instanceOf(ce, 125))
+      continue;
+    for (i = 0; i < ce.getPostCount_0(); i++) {
+      p = ce.getPost(i);
+      k = key_0(p.x_0, p.y_0);
+      if ($containsKey(pointCount, valueOf_0(k))) {
+        v0 = $get_1(pointCount, valueOf_0(k));
+        $put_0(pointCount, valueOf_0(k), valueOf(!v0 ? 1 : v0.value_0 + 1));
+        v = $get_1(pointCount, valueOf_0(k));
+        $put_0(pointCount, valueOf_0(k), valueOf(!v ? 1 : v.value_0 + 1));
+      }
+    }
+  }
+  pointToWires = new HashMap;
+  for (w$iterator1 = new ArrayList$1(wires); w$iterator1.i < w$iterator1.this$01.array.length;) {
+    w = $next_4(w$iterator1);
+    addToList(pointToWires, key_0(w.x_0, w.y_0), w);
+    addToList(pointToWires, key_0(w.x2, w.y2), w);
+  }
+  visited = new HashSet;
+  chains = new ArrayList;
+  for (w$iterator2 = new ArrayList$1(wires); w$iterator2.i < w$iterator2.this$01.array.length;) {
+    w = $next_4(w$iterator2);
+    if ($containsKey(visited.map_0, w))
+      continue;
+    chain = new ArrayList;
+    buildChain(w, chain, visited, pointCount, pointToWires);
+    chains.array[chains.array.length] = chain;
+  }
+  for (chain$iterator = new ArrayList$1(chains); chain$iterator.i < chain$iterator.this$01.array.length;) {
+    chain = $next_4(chain$iterator);
+    if (chain.array.length == 1) {
+      w = (checkCriticalElementIndex(0, chain.array.length), chain.array[0]);
+      pts = new ArrayList;
+      $add_8(pts, new Point_2(w.x_0, w.y_0));
+      $add_8(pts, new Point_2(w.x2, w.y2));
+      rw0 = new RoutedWireElm_1(pts);
+      $advanceToFind(elmList, w, true);
+      $add_8(elmList.arrayList, rw0);
+      continue;
+    }
+    orderedPoints = orderChain(chain, pointCount);
+    if (!orderedPoints || orderedPoints.array.length < 3)
+      continue;
+    rw = new RoutedWireElm_1(orderedPoints);
+    for (w$iterator = new ArrayList$1(chain); w$iterator.i < w$iterator.this$01.array.length;) {
+      w = $next_4(w$iterator);
+      $advanceToFind(elmList, w, true);
+    }
+    $add_8(elmList.arrayList, rw);
+  }
+}
+
+function inc_0(map_0, k) {
+  var v;
+  v = $get_1(map_0, valueOf_0(k));
+  $put_0(map_0, valueOf_0(k), valueOf(!v ? 1 : v.value_0 + 1));
+}
+
+function key_0(x_0, y_0) {
+  return or_0(createLongEmul(shl(isSmallLong0(x_0) ? toBigLong(x_0) : x_0, 32)), createLongEmul(and(isSmallLong0(y_0) ? toBigLong(y_0) : y_0, isSmallLong0($intern_128) ? toBigLong($intern_128) : $intern_128)));
+}
+
+function orderChain(chain, pointCount) {
+  var current, currentPt, k1, k2, local, neighbors, otherEnd, points, startKey, startWire, used, w, w$iterator, w$iterator0, w$iterator1;
+  local = new HashMap;
+  for (w$iterator0 = new ArrayList$1(chain); w$iterator0.i < w$iterator0.this$01.array.length;) {
+    w = $next_4(w$iterator0);
+    addToList(local, key_0(w.x_0, w.y_0), w);
+    addToList(local, key_0(w.x2, w.y2), w);
+  }
+  startWire = null;
+  startKey = 0;
+  for (w$iterator1 = new ArrayList$1(chain); w$iterator1.i < w$iterator1.this$01.array.length;) {
+    w = $next_4(w$iterator1);
+    k1 = key_0(w.x_0, w.y_0);
+    k2 = key_0(w.x2, w.y2);
+    if ($get_1(pointCount, valueOf_0(k1)).value_0 != 2) {
+      startWire = w;
+      startKey = k1;
+      break;
+    }
+    if ($get_1(pointCount, valueOf_0(k2)).value_0 != 2) {
+      startWire = w;
+      startKey = k2;
+      break;
+    }
+  }
+  if (!startWire)
+    return null;
+  points = new ArrayList;
+  $add_8(points, new Point_2(toInt_0(shr_0(startKey, 32)), toInt_0(startKey)));
+  used = new HashSet;
+  current = startWire;
+  currentPt = startKey;
+  while (current) {
+    $put_0(used.map_0, current, used);
+    k1 = key_0(current.x_0, current.y_0);
+    k2 = key_0(current.x2, current.y2);
+    otherEnd = compare_0(k1, currentPt) == 0 ? k2 : k1;
+    $add_8(points, new Point_2(toInt_0(shr_0(otherEnd, 32)), toInt_0(otherEnd)));
+    current = null;
+    if ($get_1(pointCount, valueOf_0(otherEnd)).value_0 == 2) {
+      neighbors = $get_1(local, valueOf_0(otherEnd));
+      if (neighbors) {
+        for (w$iterator = new ArrayList$1(neighbors); w$iterator.i < w$iterator.this$01.array.length;) {
+          w = $next_4(w$iterator);
+          if (!$containsKey(used.map_0, w)) {
+            current = w;
+            currentPt = otherEnd;
+            break;
+          }
+        }
+      }
+    }
+  }
+  return points;
+}
+
+function $addObstacle(this$static, px1, py1, px2, py2) {
+  var c, c1, c2, maxC, maxR, minC, minR, r, r1, r2;
+  px1 += this$static.gridSize / 2 | 0;
+  px2 += this$static.gridSize / 2 | 0;
+  py1 += this$static.gridSize / 2 | 0;
+  py2 += this$static.gridSize / 2 | 0;
+  r1 = (py1 - this$static.originY) / this$static.gridSize | 0;
+  c1 = (px1 - this$static.originX) / this$static.gridSize | 0;
+  r2 = (py2 - this$static.originY) / this$static.gridSize | 0;
+  c2 = (px2 - this$static.originX) / this$static.gridSize | 0;
+  minR = $wnd.Math.min(r1, r2);
+  maxR = $wnd.Math.max(r1, r2);
+  minC = $wnd.Math.min(c1, c2);
+  maxC = $wnd.Math.max(c1, c2);
+  for (c = minC; c <= maxC; c++)
+    for (r = minR; r <= maxR; r++)
+      r >= 0 && r < this$static.rows_0 && c >= 0 && c < this$static.cols_0 && (this$static.grid[r][c] |= 1);
+}
+
+function $addObstacle_0(this$static, pts) {
+  var i, maxX, maxY, minX, minY;
+  minX = pts[0].x_0;
+  minY = pts[0].y_0;
+  maxX = pts[0].x_0;
+  maxY = pts[0].y_0;
+  for (i = 1; i < pts.length; i++) {
+    pts[i].x_0 < minX && (minX = pts[i].x_0);
+    pts[i].y_0 < minY && (minY = pts[i].y_0);
+    pts[i].x_0 > maxX && (maxX = pts[i].x_0);
+    pts[i].y_0 > maxY && (maxY = pts[i].y_0);
+  }
+  $addObstacle(this$static, minX, minY, maxX, maxY);
+}
+
+function $addWire(this$static, px1, py1, px2, py2) {
+  var c, c1, c2, maxC, maxR, minC, minR, r, r1, r2;
+  r1 = (py1 - this$static.originY) / this$static.gridSize | 0;
+  c1 = (px1 - this$static.originX) / this$static.gridSize | 0;
+  r2 = (py2 - this$static.originY) / this$static.gridSize | 0;
+  c2 = (px2 - this$static.originX) / this$static.gridSize | 0;
+  minR = $wnd.Math.min(r1, r2);
+  maxR = $wnd.Math.max(r1, r2);
+  minC = $wnd.Math.min(c1, c2);
+  maxC = $wnd.Math.max(c1, c2);
+  if (r1 == r2) {
+    for (c = minC; c <= maxC; c++)
+      r1 >= 0 && r1 < this$static.rows_0 && c >= 0 && c < this$static.cols_0 && (this$static.grid[r1][c] |= 2);
+  }
+  else {
+    for (r = minR; r <= maxR; r++)
+      r >= 0 && r < this$static.rows_0 && c1 >= 0 && c1 < this$static.cols_0 && (this$static.grid[r][c1] |= 4);
+  }
+}
+
+function $canMoveTo(this$static, r, c, moveDir) {
+  var cell, flag;
+  if (!(r >= 0 && r < this$static.rows_0 && c >= 0 && c < this$static.cols_0))
+    return false;
+  cell = this$static.grid[r][c];
+  if ((cell & 1) != 0)
+    return false;
+  flag = moveDir == 3 || moveDir == 4 ? 2 : 4;
+  if ((cell & flag) != 0)
+    return false;
+  return true;
+}
+
+function $compressPath(fullPath) {
+  var a, b, c, collinear, dx1, dx2, dy1, dy2, i, last, minimal, prev;
+  if (fullPath.array.length <= 2)
+    return new ArrayList_1(fullPath);
+  minimal = new ArrayList;
+  $add_8(minimal, (checkCriticalElementIndex(0, fullPath.array.length), fullPath.array[0]));
+  for (i = 1; i < fullPath.array.length - 1; i++) {
+    a = (checkCriticalElementIndex(i - 1, fullPath.array.length), fullPath.array[i - 1]);
+    b = (checkCriticalElementIndex(i, fullPath.array.length), fullPath.array[i]);
+    c = (checkCriticalElementIndex(i + 1, fullPath.array.length), fullPath.array[i + 1]);
+    dx1 = b[1] - a[1];
+    dy1 = b[0] - a[0];
+    dx2 = c[1] - b[1];
+    dy2 = c[0] - b[0];
+    collinear = dx1 * dy2 - dy1 * dx2 == 0 && dx1 * dx2 + dy1 * dy2 > 0;
+    collinear || (minimal.array[minimal.array.length] = b, true);
+  }
+  last = $get_2(fullPath, fullPath.array.length - 1);
+  prev = $get_2(minimal, minimal.array.length - 1);
+  (prev[0] !== last[0] || prev[1] !== last[1]) && (minimal.array[minimal.array.length] = last, true);
+  return minimal;
+}
+
+function $dc(dir_0) {
+  switch (dir_0) {
+    case 2:
+    default: case 1:
+      return 0;
+    case 3:
+      return -1;
+    case 4:
+      return 1;
+  }
+}
+
+function $dr(dir_0) {
+  switch (dir_0) {
+    case 1:
+      return -1;
+    case 2:
+      return 1;
+    case 4:
+    default: case 3:
+      return 0;
+  }
+}
+
+function $evaluatePath(this$static, corners, initialDir, startPrefs) {
+  var c, cost, curr, dc, dr, i, moveDir, p, p$index, p$max, prev, prevDir, r, s, steps;
+  if (corners.array.length < 2)
+    return -1;
+  cost = 0;
+  prevDir = 0;
+  prev = (checkCriticalElementIndex(0, corners.array.length), corners.array[0]);
+  for (i = 1; i < corners.array.length; i++) {
+    curr = (checkCriticalElementIndex(i, corners.array.length), corners.array[i]);
+    dr = curr[0] - prev[0];
+    dc = curr[1] - prev[1];
+    steps = $wnd.Math.max($wnd.Math.abs(dr), $wnd.Math.abs(dc));
+    if (steps == 0)
+      continue;
+    if (dr == 0 && dc > 0)
+      moveDir = 4;
+    else if (dr == 0 && dc < 0)
+      moveDir = 3;
+    else if (dc == 0 && dr > 0)
+      moveDir = 2;
+    else if (dc == 0 && dr < 0)
+      moveDir = 1;
+    else
+      return -1;
+    r = prev[0];
+    c = prev[1];
+    for (s = 0; s < steps; s++) {
+      r += dr == 0 ? 0 : dr < 0 ? -1 : 1;
+      c += dc == 0 ? 0 : dc < 0 ? -1 : 1;
+      if (!(r >= 0 && r < this$static.rows_0 && c >= 0 && c < this$static.cols_0) || !$canMoveTo(this$static, r, c, moveDir))
+        return -1;
+    }
+    cost += steps;
+    prevDir != 0 && moveDir != prevDir && moveDir != $opposite(prevDir) && (cost += this$static.turnPenalty);
+    prevDir = moveDir;
+    prev = curr;
+  }
+  for (p$index = 0, p$max = startPrefs.length; p$index < p$max; ++p$index) {
+    p = startPrefs[p$index];
+    if (p == initialDir) {
+      cost += -0.4;
+      break;
+    }
+  }
+  return cost;
+}
+
+function $getPreferredEscapeDirections(this$static, r, c) {
+  var arr, i, prefs;
+  prefs = new ArrayList;
+  $canMoveTo(this$static, r - 1, c, 1) || $add_8(prefs, valueOf(2));
+  $canMoveTo(this$static, r + 1, c, 2) || $add_8(prefs, valueOf(1));
+  $canMoveTo(this$static, r, c - 1, 3) || $add_8(prefs, valueOf(4));
+  $canMoveTo(this$static, r, c + 1, 4) || $add_8(prefs, valueOf(3));
+  if (prefs.array.length == 0) {
+    return initUnidimensionalArray(I_classLit, $intern_25, 8, 0, 15, 1);
+  }
+  arr = initUnidimensionalArray(I_classLit, $intern_25, 8, prefs.array.length, 15, 1);
+  for (i = 0; i < prefs.array.length; i++)
+    arr[i] = (checkCriticalElementIndex(i, prefs.array.length), prefs.array[i]).value_0;
+  return arr;
+}
+
+function $initGrid(this$static, wire) {
+  var bounds, ce, ce$iterator, maxX, maxY, minX, minY;
+  this$static.gridSize = theApp.gridSize;
+  bounds = $getCircuitBounds(theUI);
+  minX = $wnd.Math.min(wire.x_0, wire.x2);
+  minY = $wnd.Math.min(wire.y_0, wire.y2);
+  maxX = $wnd.Math.max(wire.x_0, wire.x2);
+  maxY = $wnd.Math.max(wire.y_0, wire.y2);
+  if (bounds) {
+    minX = $wnd.Math.min(minX, bounds.x_0);
+    minY = $wnd.Math.min(minY, bounds.y_0);
+    maxX = $wnd.Math.max(maxX, bounds.x_0 + bounds.width_0);
+    maxY = $wnd.Math.max(maxY, bounds.y_0 + bounds.height_0);
+  }
+  this$static.originX = (minX / this$static.gridSize | 0) * this$static.gridSize - 2 * this$static.gridSize;
+  this$static.originY = (minY / this$static.gridSize | 0) * this$static.gridSize - 2 * this$static.gridSize;
+  this$static.rows_0 = ((maxY - this$static.originY) / this$static.gridSize | 0) + 1 + 4;
+  this$static.cols_0 = ((maxX - this$static.originX) / this$static.gridSize | 0) + 1 + 4;
+  this$static.grid = initMultidimensionalArray(I_classLit, [$intern_3, $intern_25], [18, 8], 15, [this$static.rows_0, this$static.cols_0], 2);
+  for (ce$iterator = new ArrayList$1(theUI.elmList.arrayList); ce$iterator.i < ce$iterator.this$01.array.length;) {
+    ce = $next_4(ce$iterator);
+    if (wire == ce)
+      continue;
+    ce.addRoutingObstacle(this$static);
+  }
+  this$static.grid[(wire.y_0 - this$static.originY) / this$static.gridSize | 0][(wire.x_0 - this$static.originX) / this$static.gridSize | 0] = 0;
+  this$static.grid[(wire.y2 - this$static.originY) / this$static.gridSize | 0][(wire.x2 - this$static.originX) / this$static.gridSize | 0] = 0;
+}
+
+function $neighbors(this$static, r, c) {
+  var list;
+  list = new ArrayList;
+  r > 0 && $add_8(list, stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [r - 1, c, 1]));
+  r < this$static.rows_0 - 1 && $add_8(list, stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [r + 1, c, 2]));
+  c > 0 && $add_8(list, stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [r, c - 1, 3]));
+  c < this$static.cols_0 - 1 && $add_8(list, stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [r, c + 1, 4]));
+  return list;
+}
+
+function $opposite(d) {
+  switch (d) {
+    case 1:
+      return 2;
+    case 2:
+      return 1;
+    case 3:
+      return 4;
+    case 4:
+      return 3;
+    default: return 0;
+  }
+}
+
+function $pixelsFromGridPoints(this$static, gridPoints) {
+  var g, g$iterator, px, py, result;
+  result = new ArrayList;
+  for (g$iterator = new ArrayList$1(gridPoints); g$iterator.i < g$iterator.this$01.array.length;) {
+    g = $next_4(g$iterator);
+    px = g[1] * this$static.gridSize + this$static.originX;
+    py = g[0] * this$static.gridSize + this$static.originY;
+    $add_8(result, new Point_2(px, py));
+  }
+  return result;
+}
+
+function $routeWire(this$static, px1, py1, px2, py2) {
+  var bestGoalNode, bestKnownG, cameFrom, compressed, currKey, current, currentKey, d, d$array, d$index, d$max, f, fullPath, gScore, goalC, goalR, h, initG, isPreferred, key, moveCost, moveDir, nKey, nc, neigh, neigh$iterator, nr, openSet, parts, patternPath, pos, pref, pref$index, pref$max, pt, pt$iterator, result, startC, startNode, startPrefs, startR, tentG, value_0;
+  startR = (py1 - this$static.originY) / this$static.gridSize | 0;
+  startC = (px1 - this$static.originX) / this$static.gridSize | 0;
+  goalR = (py2 - this$static.originY) / this$static.gridSize | 0;
+  goalC = (px2 - this$static.originX) / this$static.gridSize | 0;
+  if (!(startR >= 0 && startR < this$static.rows_0 && startC >= 0 && startC < this$static.cols_0) || !(goalR >= 0 && goalR < this$static.rows_0 && goalC >= 0 && goalC < this$static.cols_0)) {
+    return new ArrayList;
+  }
+  if (!$canMoveTo(this$static, goalR, goalC, 1) && !$canMoveTo(this$static, goalR, goalC, 2) && !$canMoveTo(this$static, goalR, goalC, 3) && !$canMoveTo(this$static, goalR, goalC, 4)) {
+    return new ArrayList;
+  }
+  patternPath = $tryPatternRouting(this$static, startR, startC, goalR, goalC);
+  if (patternPath.array.length != 0) {
+    console.log('pattern');
+    return patternPath;
+  }
+  console.log('A*');
+  openSet = new PriorityQueue((checkCriticalNotNull(new WireRouter$lambda$0$Type), new Comparator$lambda$2$Type));
+  gScore = new HashMap;
+  cameFrom = new HashMap;
+  startPrefs = $getPreferredEscapeDirections(this$static, startR, startC);
+  for (d$array = stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [1, 2, 3, 4]), d$index = 0, d$max = d$array.length; d$index < d$max; ++d$index) {
+    d = d$array[d$index];
+    if (!$canMoveTo(this$static, startR + $dr(d), startC + $dc(d), d))
+      continue;
+    key = startR + ',' + startC + ',' + d;
+    initG = 0;
+    isPreferred = false;
+    for (pref$index = 0, pref$max = startPrefs.length; pref$index < pref$max; ++pref$index) {
+      pref = startPrefs[pref$index];
+      if (pref == d) {
+        isPreferred = true;
+        break;
+      }
+    }
+    isPreferred && (initG += -0.4);
+    h = $wnd.Math.abs(startR - goalR) + $wnd.Math.abs(startC - goalC);
+    startNode = new WireRouter$Node(startR, startC, d, initG, initG + h);
+    $offer(openSet, startNode);
+    $putStringValue(gScore, key, initG);
+  }
+  bestGoalNode = null;
+  while (openSet.heap.array.length != 0) {
+    current = (value_0 = openSet.heap.array.length == 0 ? null : $get_2(openSet.heap, 0), value_0 != null && $removeAtIndex_0(openSet, 0), value_0);
+    currKey = current.r + ',' + current.c + ',' + current.dir_0;
+    if (current.gScore > $doubleValue($getOrDefault(gScore, currKey, $intern_26))) {
+      continue;
+    }
+    current.r == goalR && current.c == goalC && (!bestGoalNode || current.gScore < bestGoalNode.gScore) && (bestGoalNode = current);
+    for (neigh$iterator = new ArrayList$1($neighbors(this$static, current.r, current.c)); neigh$iterator.i < neigh$iterator.this$01.array.length;) {
+      neigh = $next_4(neigh$iterator);
+      nr = neigh[0];
+      nc = neigh[1];
+      moveDir = neigh[2];
+      if (!$canMoveTo(this$static, nr, nc, moveDir))
+        continue;
+      moveCost = 1;
+      current.dir_0 != 0 && moveDir != current.dir_0 && moveDir != $opposite(current.dir_0) && (moveCost += this$static.turnPenalty);
+      nKey = nr + ',' + nc + ',' + moveDir;
+      tentG = current.gScore + moveCost;
+      bestKnownG = $doubleValue($getOrDefault(gScore, nKey, $intern_26));
+      if (tentG < bestKnownG) {
+        $put_2(cameFrom.stringMap, nKey, currKey);
+        $putStringValue(gScore, nKey, tentG);
+        h = $wnd.Math.abs(nr - goalR) + $wnd.Math.abs(nc - goalC);
+        f = tentG + h;
+        $offer(openSet, new WireRouter$Node(nr, nc, moveDir, tentG, f));
+      }
+    }
+  }
+  if (!bestGoalNode) {
+    return new ArrayList;
+  }
+  fullPath = new ArrayList;
+  currentKey = bestGoalNode.r + ',' + bestGoalNode.c + ',' + bestGoalNode.dir_0;
+  while (currentKey != null) {
+    pos = (parts = $split_1(currentKey, ',', 0), stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [__parseAndValidateInt(parts[0], 10), __parseAndValidateInt(parts[1], 10), __parseAndValidateInt(parts[2], 10)]));
+    $add_7(fullPath, 0, stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [pos[0], pos[1]]));
+    currentKey = currentKey == null ? getEntryValueOrNull($getEntry(cameFrom.hashCodeMap, null)) : $get_3(cameFrom.stringMap, currentKey);
+  }
+  compressed = $compressPath(fullPath);
+  result = new ArrayList;
+  for (pt$iterator = new ArrayList$1(compressed); pt$iterator.i < pt$iterator.this$01.array.length;) {
+    pt = $next_4(pt$iterator);
+    $add_8(result, new Point_2(pt[1] * this$static.gridSize + this$static.originX, pt[0] * this$static.gridSize + this$static.originY));
+  }
+  return result;
+}
+
+function $tryPatternRouting(this$static, startR, startC, goalR, goalC) {
+  var bestCorners, bestCost, cost, cost1, cost2, detourCol, detourRow, dir_0, dir1, dir2, margin, path, path1, path2, result, side, side$array, side$index, side$max, startPrefs, z_0;
+  if (startR == goalR && startC == goalC) {
+    result = new ArrayList;
+    $add_8(result, new Point_2(startC * this$static.gridSize + this$static.originX, startR * this$static.gridSize + this$static.originY));
+    return result;
+  }
+  startPrefs = $getPreferredEscapeDirections(this$static, startR, startC);
+  bestCost = $intern_26;
+  bestCorners = null;
+  if (startR != goalR && startC != goalC) {
+    path1 = new ArrayList;
+    $add_8(path1, stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [startR, startC]));
+    $add_8(path1, stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [startR, goalC]));
+    $add_8(path1, stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [goalR, goalC]));
+    dir1 = goalC > startC ? 4 : 3;
+    cost1 = $evaluatePath(this$static, path1, dir1, startPrefs);
+    if (cost1 >= 0 && cost1 < $intern_26) {
+      bestCost = cost1;
+      bestCorners = path1;
+    }
+    path2 = new ArrayList;
+    $add_8(path2, stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [startR, startC]));
+    $add_8(path2, stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [goalR, startC]));
+    $add_8(path2, stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [goalR, goalC]));
+    dir2 = goalR > startR ? 2 : 1;
+    cost2 = $evaluatePath(this$static, path2, dir2, startPrefs);
+    if (cost2 >= 0 && cost2 < bestCost) {
+      bestCost = cost2;
+      bestCorners = path2;
+    }
+  }
+  else if (startR == goalR) {
+    path = new ArrayList;
+    $add_8(path, stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [startR, startC]));
+    $add_8(path, stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [goalR, goalC]));
+    dir_0 = goalC > startC ? 4 : 3;
+    cost = $evaluatePath(this$static, path, dir_0, startPrefs);
+    if (cost >= 0 && cost < $intern_26) {
+      bestCost = cost;
+      bestCorners = path;
+    }
+  }
+  else {
+    path = new ArrayList;
+    $add_8(path, stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [startR, startC]));
+    $add_8(path, stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [goalR, goalC]));
+    dir_0 = goalR > startR ? 2 : 1;
+    cost = $evaluatePath(this$static, path, dir_0, startPrefs);
+    if (cost >= 0 && cost < $intern_26) {
+      bestCost = cost;
+      bestCorners = path;
+    }
+  }
+  if (startR != goalR) {
+    for (margin = 1; margin <= 5; margin++) {
+      for (side$array = stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [-1, 1]), side$index = 0, side$max = side$array.length; side$index < side$max; ++side$index) {
+        side = side$array[side$index];
+        detourCol = startC + side * margin;
+        if (0 < this$static.rows_0 && detourCol >= 0 && detourCol < this$static.cols_0) {
+          z_0 = new ArrayList;
+          $add_8(z_0, stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [startR, startC]));
+          startC != detourCol && $add_8(z_0, stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [startR, detourCol]));
+          startR != goalR && $add_8(z_0, stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [goalR, detourCol]));
+          detourCol != goalC && $add_8(z_0, stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [goalR, goalC]));
+          if (z_0.array.length >= 2) {
+            dir_0 = detourCol > startC ? 4 : 3;
+            cost = $evaluatePath(this$static, z_0, dir_0, startPrefs);
+            if (cost >= 0 && cost < bestCost) {
+              bestCost = cost;
+              bestCorners = z_0;
+            }
+          }
+        }
+        detourCol = goalC + side * margin;
+        if (0 < this$static.rows_0 && detourCol >= 0 && detourCol < this$static.cols_0) {
+          z_0 = new ArrayList;
+          $add_8(z_0, stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [startR, startC]));
+          startC != detourCol && $add_8(z_0, stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [startR, detourCol]));
+          startR != goalR && $add_8(z_0, stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [goalR, detourCol]));
+          detourCol != goalC && $add_8(z_0, stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [goalR, goalC]));
+          if (z_0.array.length >= 2) {
+            dir_0 = detourCol > startC ? 4 : 3;
+            cost = $evaluatePath(this$static, z_0, dir_0, startPrefs);
+            if (cost >= 0 && cost < bestCost) {
+              bestCost = cost;
+              bestCorners = z_0;
+            }
+          }
+        }
+      }
+    }
+  }
+  if (startC != goalC) {
+    for (margin = 1; margin <= 5; margin++) {
+      for (side$array = stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [-1, 1]), side$index = 0, side$max = side$array.length; side$index < side$max; ++side$index) {
+        side = side$array[side$index];
+        detourRow = startR + side * margin;
+        if (detourRow >= 0 && detourRow < this$static.rows_0 && 0 < this$static.cols_0) {
+          z_0 = new ArrayList;
+          $add_8(z_0, stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [startR, startC]));
+          startR != detourRow && $add_8(z_0, stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [detourRow, startC]));
+          startC != goalC && $add_8(z_0, stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [detourRow, goalC]));
+          detourRow != goalR && $add_8(z_0, stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [goalR, goalC]));
+          if (z_0.array.length >= 2) {
+            dir_0 = detourRow > startR ? 2 : 1;
+            cost = $evaluatePath(this$static, z_0, dir_0, startPrefs);
+            if (cost >= 0 && cost < bestCost) {
+              bestCost = cost;
+              bestCorners = z_0;
+            }
+          }
+        }
+        detourRow = goalR + side * margin;
+        if (detourRow >= 0 && detourRow < this$static.rows_0 && 0 < this$static.cols_0) {
+          z_0 = new ArrayList;
+          $add_8(z_0, stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [startR, startC]));
+          startR != detourRow && $add_8(z_0, stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [detourRow, startC]));
+          startC != goalC && $add_8(z_0, stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [detourRow, goalC]));
+          detourRow != goalR && $add_8(z_0, stampJavaTypeInfo(getClassLiteralForArray(I_classLit, 1), $intern_25, 8, 15, [goalR, goalC]));
+          if (z_0.array.length >= 2) {
+            dir_0 = detourRow > startR ? 2 : 1;
+            cost = $evaluatePath(this$static, z_0, dir_0, startPrefs);
+            if (cost >= 0 && cost < bestCost) {
+              bestCost = cost;
+              bestCorners = z_0;
+            }
+          }
+        }
+      }
+    }
+  }
+  if (!bestCorners) {
+    return new ArrayList;
+  }
+  return $pixelsFromGridPoints(this$static, bestCorners);
+}
+
+function WireRouter() {
+}
+
+defineClass(341, 1, {}, WireRouter);
+_.cols_0 = 0;
+_.gridSize = 0;
+_.originX = 0;
+_.originY = 0;
+_.rows_0 = 0;
+_.turnPenalty = 4;
+var Lcom_lushprojects_circuitjs1_client_WireRouter_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'WireRouter', 341);
+function WireRouter$Node(r, c, dir_0, g, f) {
+  this.r = r;
+  this.c = c;
+  this.dir_0 = dir_0;
+  this.gScore = g;
+  this.fScore = f;
+}
+
+defineClass(285, 1, { 285: 1 }, WireRouter$Node);
+_.c = 0;
+_.dir_0 = 0;
+_.fScore = 0;
+_.gScore = 0;
+_.r = 0;
+var Lcom_lushprojects_circuitjs1_client_WireRouter$Node_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'WireRouter/Node', 285);
+function WireRouter$lambda$0$Type() {
+}
+
+defineClass(755, 1, {}, WireRouter$lambda$0$Type);
+var Lcom_lushprojects_circuitjs1_client_WireRouter$lambda$0$Type_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'WireRouter/lambda$0$Type', 755);
+function $getChildElements(this$static) {
+  var children, elements, i, node;
+  elements = new ArrayList;
+  children = new NodeListImpl(getChildNodes(this$static.currentXmlElement.jsObject));
+  for (i = 0; i < getLength_1(children.jsObject); i++) {
+    node = build(item_3(children.jsObject, i));
+    getNodeType(node.jsObject) == 1 && $add_8(elements, node);
+  }
+  return elements;
+}
+
+function $parseBooleanAttr(this$static, attr, def) {
+  var v;
+  v = $getAttribute(this$static.currentXmlElement, attr);
+  if (v == null)
+    return def;
+  return $clinit_Boolean(), $equalsIgnoreCase('true', v);
+}
+
+function $parseContents(this$static) {
+  try {
+    return getNodeValue($item(new NodeListImpl(getChildNodes(this$static.currentXmlElement.jsObject)), 0).jsObject);
+  }
+  catch ($e0) {
+    $e0 = toJava($e0);
+    if (instanceOf($e0, 15)) {
+      return null;
+    }
+    else
+      throw toJs($e0);
+  }
+}
+
+function $parseDoubleAttr(this$static, attr, def) {
+  var v;
+  v = $getAttribute(this$static.currentXmlElement, attr);
+  if (v == null)
+    return def;
+  return __parseAndValidateDouble(v);
+}
+
+function $parseIntAttr(this$static, attr, def) {
+  var v;
+  v = $getAttribute(this$static.currentXmlElement, attr);
+  if (v == null)
+    return def;
+  return __parseAndValidateInt(v, 10);
+}
+
+function $parseStringAttr(this$static, attr, def) {
+  var s;
+  s = $getAttribute(this$static.currentXmlElement, attr);
+  if (s == null)
+    return def;
+  s = $replace_0($replace_0($replace_0($replace_0($replace_0(s, '&quot;', '"'), '&apos;', "'"), '&lt;', '<'), '&gt;', '>'), '&amp;', '&');
+  return s;
+}
+
+function $readCircuit_2(this$static, doc) {
+  $clearCircuit(this$static.app.loader);
+  $readElements(this$static, build(getDocumentElement(doc.jsObject)));
+  $finishReadCircuit(this$static.app.loader, 0);
+}
+
+function $readCircuit_3(this$static, text_0, readFlags) {
+  var doc, flags, root, sim, sp, sp2, ui;
+  doc = ($clinit_XMLParser(), $parse_2(impl_4, text_0));
+  root = build(getDocumentElement(doc.jsObject));
+  (readFlags & 1) == 0 && $clearCircuit(this$static.app.loader);
+  this$static.currentXmlElement = root;
+  if ((readFlags & 1) == 0) {
+    flags = $parseIntAttr(this$static, 'f', 0);
+    $readCircuitFlags(this$static.app.loader, flags);
+    sim = this$static.app.sim;
+    sim.maxTimeStep = sim.timeStep = $parseDoubleAttr(this$static, 'ts', sim.maxTimeStep);
+    sp = $parseDoubleAttr(this$static, 'ic', $getIterCount(this$static.app));
+    sp2 = round_int($wnd.Math.log(10 * sp) * 24 + 61.5);
+    ui = this$static.app.ui;
+    $setValue_2(ui.speedBar, sp2);
+    $setValue_2(ui.currentBar, $parseIntAttr(this$static, 'cb', ui.currentBar.val_0));
+    voltageRange = $parseDoubleAttr(this$static, 'vr', voltageRange);
+    $setValue_2(ui.powerBar, $parseIntAttr(this$static, 'pb', ui.powerBar.val_0));
+    sim.minTimeStep = $parseDoubleAttr(this$static, 'mts', sim.minTimeStep);
+    $setGrid(this$static.app.ui);
+  }
+  $readElements(this$static, root);
+  $finishReadCircuit(this$static.app.loader, readFlags);
+}
+
+function $readElements(this$static, root) {
+  var children, className, elem, elm, i, node, sc, tagName, x_0, name_0, dm, name_1, tm, name_2, model;
+  children = new NodeListImpl(getChildNodes(root.jsObject));
+  for (i = 0; i < getLength_1(children.jsObject); i++) {
+    node = build(item_3(children.jsObject, i));
+    if (getNodeType(node.jsObject) != 1)
+      continue;
+    elem = node;
+    tagName = getTagName(elem.jsObject);
+    if ($equals_1(tagName, 'o')) {
+      sc = new Scope(this$static.app, this$static.app.sim);
+      this$static.currentXmlElement = elem;
+      $undumpXml_5(sc, this$static);
+      $addScope(this$static.app.scopeManager, sc);
+      continue;
+    }
+    if ($equals_1(tagName, 'dm')) {
+      this$static.currentXmlElement = elem;
+      name_0 = $parseStringAttr(this$static, 'nm', null);
+      dm = getModelWithName_1(name_0);
+      dm.flags = $parseIntAttr(this$static, 'f', dm.flags);
+      dm.saturationCurrent = $parseDoubleAttr(this$static, 'is', dm.saturationCurrent);
+      dm.seriesResistance = $parseDoubleAttr(this$static, 'rs', dm.seriesResistance);
+      dm.emissionCoefficient = $parseDoubleAttr(this$static, 'n', dm.emissionCoefficient);
+      dm.breakdownVoltage = $parseDoubleAttr(this$static, 'bv', dm.breakdownVoltage);
+      dm.forwardCurrent = $parseDoubleAttr(this$static, 'fi', dm.forwardCurrent);
+      $updateModel(dm);
+      continue;
+    }
+    if ($equals_1(tagName, 'tm')) {
+      this$static.currentXmlElement = elem;
+      name_1 = $parseStringAttr(this$static, 'nm', null);
+      tm = getModelWithName_2(name_1);
+      tm.flags = $parseIntAttr(this$static, 'f', tm.flags);
+      tm.satCur = $parseDoubleAttr(this$static, 'is', tm.satCur);
+      tm.invRollOffF = $parseDoubleAttr(this$static, 'ikf', tm.invRollOffF);
+      tm.BEleakCur = $parseDoubleAttr(this$static, 'ise', tm.BEleakCur);
+      tm.leakBEemissionCoeff = $parseDoubleAttr(this$static, 'ne', tm.leakBEemissionCoeff);
+      tm.invRollOffR = $parseDoubleAttr(this$static, 'ikr', tm.invRollOffR);
+      tm.BCleakCur = $parseDoubleAttr(this$static, 'isc', tm.BCleakCur);
+      tm.leakBCemissionCoeff = $parseDoubleAttr(this$static, 'nc', tm.leakBCemissionCoeff);
+      tm.emissionCoeffF = $parseDoubleAttr(this$static, 'nf', tm.emissionCoeffF);
+      tm.emissionCoeffR = $parseDoubleAttr(this$static, 'nr', tm.emissionCoeffR);
+      tm.invEarlyVoltF = $parseDoubleAttr(this$static, 'vaf', tm.invEarlyVoltF);
+      tm.invEarlyVoltR = $parseDoubleAttr(this$static, 'var', tm.invEarlyVoltR);
+      tm.betaR = $parseDoubleAttr(this$static, 'br', tm.betaR);
+      continue;
+    }
+    if ($equals_1(tagName, 'clm')) {
+      this$static.currentXmlElement = elem;
+      name_2 = $parseStringAttr(this$static, 'nm', null);
+      model = getModelWithName_0(name_2);
+      model.flags = $parseIntAttr(this$static, 'f', model.flags);
+      model.inputs = $split_1($parseStringAttr(this$static, 'in', null), ',', 0);
+      model.outputs = $split_1($parseStringAttr(this$static, 'o', null), ',', 0);
+      model.infoText = $parseStringAttr(this$static, 'if', null);
+      model.rules_0 = $trim($parseContents(this$static));
+      $parseRules(model);
+      continue;
+    }
+    if ($equals_1(tagName, 'ccm')) {
+      this$static.currentXmlElement = elem;
+      undumpModelXml(this$static);
+      continue;
+    }
+    if ($equals_1(tagName, 'h')) {
+      this$static.currentXmlElement = elem;
+      this$static.app.hintType = $parseIntAttr(this$static, 't', -1);
+      this$static.app.hintItem1 = $parseIntAttr(this$static, 'i1', 0);
+      this$static.app.hintItem2 = $parseIntAttr(this$static, 'i2', 0);
+      continue;
+    }
+    if ($equals_1(tagName, 'adj')) {
+      this$static.currentXmlElement = elem;
+      undumpXml_3(this$static, this$static.app);
+      continue;
+    }
+    x_0 = getAttribute(elem.jsObject, 'x');
+    if (x_0 == null)
+      continue;
+    className = $getStringValue(xmlDumpTypeMap, tagName);
+    if (className == null) {
+      console.log('unrecognized xml element: ' + tagName);
+      continue;
+    }
+    elm = constructElement(className, 0, 0);
+    this$static.currentXmlElement = elem;
+    elm.undumpXml(this$static);
+    $setPositionFromXml(elm, elem);
+    $add_11(this$static.app.elmList, elm);
+  }
+}
+
+function XMLDeserializer(app_) {
+  this.app = app_;
+}
+
+defineClass(209, 1, {}, XMLDeserializer);
+var Lcom_lushprojects_circuitjs1_client_XMLDeserializer_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'XMLDeserializer', 209);
+function $dumpCircuit_0(this$static) {
+  var ce, ce$iterator, doc, elem, f, h, i, i0, menus, root, sim, ui;
+  doc = ($clinit_XMLParser(), build($createDocumentImpl()));
+  root = $createElement_1(doc, 'cir');
+  $appendChild_0(doc, root);
+  menus = this$static.app.menus;
+  f = menus.dotsCheckItem.on ? 1 : 0;
+  f |= menus.smallGridCheckItem.on ? 2 : 0;
+  f |= menus.voltsCheckItem.on ? 0 : 4;
+  f |= menus.powerCheckItem.on ? 8 : 0;
+  f |= menus.showValuesCheckItem.on ? 0 : 16;
+  sim = this$static.app.sim;
+  f |= sim.adjustTimeStep ? 64 : 0;
+  checkAttr(root, 'f');
+  $setAttribute_0(root, 'f', '' + f);
+  dumpAttr(root, 'ts', sim.maxTimeStep);
+  dumpAttr(root, 'ic', $getIterCount(this$static.app));
+  ui = this$static.app.ui;
+  dumpAttr_0(root, 'cb', ui.currentBar.val_0);
+  dumpAttr_0(root, 'pb', ui.powerBar.val_0);
+  dumpAttr(root, 'vr', voltageRange);
+  dumpAttr(root, 'mts', sim.minTimeStep);
+  for (ce$iterator = new ArrayList$1(this$static.app.elmList.arrayList); ce$iterator.i < ce$iterator.this$01.array.length;) {
+    ce = $next_4(ce$iterator);
+    elem = $createElement_1(doc, ce.getXmlDumpType());
+    ce.dumpXml(doc, elem);
+    ce.dumpXmlState(doc, elem);
+    $appendChild_0(root, elem);
+  }
+  for (i0 = 0; i0 != this$static.app.scopeManager.scopeCount; i0++)
+    $dumpXml_8(this$static.app.scopeManager.scopes[i0], doc, root);
+  for (i = 0; i != this$static.app.adjustables.arrayList.array.length; i++)
+    $dumpXml_1($get_4(this$static.app.adjustables, i), doc, root, this$static.app);
+  if (this$static.app.hintType != -1) {
+    h = $createElement_1(doc, 'h');
+    dumpAttr_0(h, 't', this$static.app.hintType);
+    dumpAttr_0(h, 'i1', this$static.app.hintItem1);
+    dumpAttr_0(h, 'i2', this$static.app.hintItem2);
+    $appendChild_0(root, h);
+  }
+  return prettyPrint(build(getDocumentElement(doc.jsObject)), 0);
+}
+
+function XMLSerializer_0(app_) {
+  this.app = app_;
+}
+
+function checkAttr(elem, name_0) {
+  if (getAttribute(elem.jsObject, name_0) != null)
+    throw toJs(new RuntimeException_0('naming conflict: ' + name_0));
+}
+
+function dumpAttr(elem, name_0, value_0) {
+  checkAttr(elem, name_0);
+  $setAttribute_0(elem, name_0, '' + value_0);
+}
+
+function dumpAttr_0(elem, name_0, value_0) {
+  checkAttr(elem, name_0);
+  $setAttribute_0(elem, name_0, '' + value_0);
+}
+
+function dumpAttr_1(elem, name_0, value_0) {
+  checkAttr(elem, name_0);
+  value_0 = $replace_0($replace_0($replace_0($replace_0(value_0, '&', '&amp;'), '"', '&quot;'), "'", '&apos;'), '<', '&lt;');
+  $setAttribute_0(elem, name_0, value_0);
+}
+
+function dumpAttr_2(elem, name_0, value_0) {
+  checkAttr(elem, name_0);
+  $setAttribute_0(elem, name_0, '' + value_0);
+}
+
+function prettyPrint(node, indent) {
+  var attr, attributes, child, children, hasElementChildren, i, i0, i1, indentStr, sb, text_0;
+  sb = new StringBuilder;
+  indentStr = '';
+  for (i0 = 0; i0 != indent; i0++)
+    indentStr += '  ';
+  $append_4($append_4((sb.string += indentStr, sb), '<'), getNodeName(node.jsObject));
+  attributes = new NamedNodeMapImpl(getAttributes(node.jsObject));
+  for (i1 = 0; i1 < getLength_1(attributes.jsObject); i1++) {
+    attr = build(item_3(attributes.jsObject, i1));
+    $append_4($append_4($append_4($append_4((sb.string += ' ', sb), getNodeName(attr.jsObject)), '="'), getNodeValue(attr.jsObject)), '"');
+  }
+  children = new NodeListImpl(getChildNodes(node.jsObject));
+  if (getLength_1(children.jsObject) == 0) {
+    sb.string += '/>\n';
+  }
+  else {
+    sb.string += '>';
+    hasElementChildren = false;
+    for (i = 0; i < getLength_1(children.jsObject); i++) {
+      child = build(item_3(children.jsObject, i));
+      if (getNodeType(child.jsObject) == 1) {
+        hasElementChildren || (sb.string += '\n', sb);
+        hasElementChildren = true;
+        $append_4(sb, prettyPrint(child, indent + 1));
+      }
+      else if (getNodeType(child.jsObject) == 3) {
+        text_0 = $trim(getNodeValue(child.jsObject));
+        text_0.length == 0 || (sb.string += '' + text_0, sb);
+      }
+    }
+    hasElementChildren && (sb.string += indentStr, sb);
+    $append_4($append_4((sb.string += '<\/', sb), getNodeName(node.jsObject)), '>\n');
+  }
+  return sb.string;
+}
+
+defineClass(675, 1, {}, XMLSerializer_0);
+var Lcom_lushprojects_circuitjs1_client_XMLSerializer_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'XMLSerializer', 675);
+function XorGateElm(xx, yy) {
+  OrGateElm.call(this, xx, yy);
+}
+
+function XorGateElm_0(xa, ya, xb, yb, f, st) {
+  OrGateElm_0.call(this, xa, ya, xb, yb, f, st);
+}
+
+defineClass(184, 212, $intern_129, XorGateElm, XorGateElm_0);
+_.calcFunction = function calcFunction_1() {
+  var f, i;
+  f = false;
+  for (i = 0; i != this.inputCount; i++)
+    f = f ^ $getInput(this, i);
+  return f;
+}
+  ;
+_.getDumpType = function getDumpType_120() {
+  return 154;
+}
+  ;
+_.getEditInfo = function getEditInfo_79(n) {
+  if (n == 3)
+    return null;
+  return $getEditInfo(this, n);
+}
+  ;
+_.getGateName = function getGateName_3() {
+  return 'XOR gate';
+}
+  ;
+_.getGateText = function getGateText_2() {
+  return '=1';
+}
+  ;
+_.getShortcut = function getShortcut_46() {
+  return 52;
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_XorGateElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'XorGateElm', 184);
+function XnorGateElm(xx, yy) {
+  XorGateElm.call(this, xx, yy);
+}
+
+function XnorGateElm_0(xa, ya, xb, yb, f, st) {
+  XorGateElm_0.call(this, xa, ya, xb, yb, f, st);
+}
+
+defineClass(416, 184, $intern_129, XnorGateElm, XnorGateElm_0);
+_.getDumpType = function getDumpType_121() {
+  return 431;
+}
+  ;
+_.getGateName = function getGateName_4() {
+  return 'XNOR gate';
+}
+  ;
+_.getShortcut = function getShortcut_47() {
+  return 36;
+}
+  ;
+_.isInverting = function isInverting_2() {
+  return true;
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_XnorGateElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'XnorGateElm', 416);
+function ZenerElm(xx, yy) {
+  DiodeElm.call(this, xx, yy);
+  this.modelName = lastZenerModelName;
+  $setup_0(this);
+}
+
+function ZenerElm_0(xa, ya, xb, yb, f, st) {
+  var zvoltage;
+  DiodeElm_0.call(this, xa, ya, xb, yb, f, st);
+  if ((f & 2) == 0) {
+    zvoltage = $doubleValue(__parseAndValidateDouble($nextToken(st)));
+    this.model = getModelWithParameters(this.model.fwdrop, zvoltage);
+    this.modelName = this.model.name_0;
+    console_0('model name wparams = ' + this.modelName);
+  }
+  $setup_0(this);
+}
+
+defineClass(263, 152, { 7: 1, 152: 1, 10: 1, 263: 1 }, ZenerElm, ZenerElm_0);
+_.draw = function draw_87(g) {
+  var v1, v2;
+  $setBbox_0(this, this.point1, this.point2, 8);
+  v1 = this.volts[0];
+  v2 = this.volts[1];
+  $draw2Leads(this, g);
+  $setPowerColor_0(this, g);
+  $setColor_0(g, $getVoltageColor(this, v1));
+  $fillPolygon(g, this.poly);
+  $setColor_0(g, $getVoltageColor(this, v2));
+  drawThickLine_0(g, this.cathode[0], this.cathode[1]);
+  drawThickLine_0(g, this.wing[0], this.cathode[0]);
+  drawThickLine_0(g, this.wing[1], this.cathode[1]);
+  this.curcount_0 = $updateDotCount(this.current_0, this.curcount_0);
+  app_0.mouse.dragElm == this || $drawDots(g, this.point1, this.point2, this.curcount_0);
+  $drawPosts(this, g);
+}
+  ;
+_.getDumpType = function getDumpType_122() {
+  return 122;
+}
+  ;
+_.getElmType = function getElmType_25() {
+  return 'Zener diode';
+}
+  ;
+_.getInfo_0 = function getInfo_89(arr) {
+  $getInfo_3(this, arr);
+  arr[0] = 'Zener diode';
+  arr[5] = 'Vz = ' + getUnitText(this.model.breakdownVoltage, 'V', false);
+}
+  ;
+_.getShortcut = function getShortcut_48() {
+  return 122;
+}
+  ;
+_.setPoints = function setPoints_77() {
+  var pa;
+  $setPoints_10(this);
+  $calcLeads(this, 16);
+  this.cathode = $newPointArray(2);
+  this.wing = $newPointArray(2);
+  pa = $newPointArray(2);
+  $interpPoint2(this.lead1, this.lead2, pa[0], pa[1], 0, 8);
+  $interpPoint2(this.lead1, this.lead2, this.cathode[0], this.cathode[1], 1, 8);
+  $interpPoint_2(this.cathode[0], this.cathode[1], this.wing[0], -0.2, -8);
+  $interpPoint_2(this.cathode[1], this.cathode[0], this.wing[1], -0.2, -8);
+  this.poly = $createPolygon(pa[0], pa[1], this.lead2);
+}
+  ;
+var lastZenerModelName = 'default-zener';
+var Lcom_lushprojects_circuitjs1_client_ZenerElm_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'ZenerElm', 263);
+function $language() {
+  if (navigator.languages) {
+    if (navigator.languages.length > 0) {
+      return navigator.languages[0];
+    }
+    else {
+      return 'en-US';
+    }
+  }
+  else {
+    return navigator.language || navigator.userLanguage;
+  }
+}
+
+function $loadLocale() {
+  var lang_0, localizationMap, qp, requestBuilder, stor, url_0;
+  qp = new QueryParameters;
+  lang_0 = $getStringValue(qp.map_0, 'lang');
+  if (lang_0 == null) {
+    stor = (!localStorage_0 && ($clinit_Storage$StorageSupportDetector(), localStorageSupported) && (localStorage_0 = new Storage_0('localStorage')), localStorage_0);
+    !!stor && (lang_0 = $getItem_0(stor.storage, 'language'));
+    lang_0 == null && (lang_0 = $language());
+  }
+  $equalsIgnoreCase(lang_0, 'zh-tw') || $equalsIgnoreCase(lang_0, 'zh-cht') ? (lang_0 = 'zh-tw') : (lang_0 = $replaceFirst(lang_0, ''));
+  if ($equals_1(lang_0.substr(0, 2), 'en')) {
+    localizationMap = new HashMap;
+    $loadSimulator(localizationMap);
+    return;
+  }
+  url_0 = getModuleBaseURL() + 'locale_' + lang_0 + '.txt';
+  requestBuilder = new RequestBuilder(($clinit_RequestBuilder(), GET), url_0);
+  try {
+    $sendRequest(requestBuilder, new circuitjs1$1);
+  }
+  catch ($e0) {
+    $e0 = toJava($e0);
+    if (!instanceOf($e0, 153))
+      throw toJs($e0);
+  }
+}
+
+function $loadSimulator(localizationMap) {
+  localizationMap_0 = localizationMap;
+  theApp_0 = new CirSim;
+  $init_1(theApp_0);
+  addResizeHandler(new circuitjs1$2);
+  $updateCircuit(theApp_0.ui);
+}
+
+function $processLocale(data_0) {
+  var i, line, lines, localizationMap, q2, str1, str2;
+  localizationMap = new HashMap;
+  lines = $split_1(data_0, '\r?\n', 0);
+  for (i = 0; i != lines.length; i++) {
+    line = lines[i];
+    if (line.length == 0)
+      continue;
+    checkCriticalStringElementIndex(0, line.length);
+    if (line.charCodeAt(0) != 34) {
+      console.log('ignoring line in string catalog: ' + line);
+      continue;
+    }
+    line = convertUnicodeEscapes(line);
+    q2 = $indexOf_1(line, fromCodePoint(34), 1);
+    if (q2 < 0 || (checkCriticalStringElementIndex(q2 + 1, line.length), line.charCodeAt(q2 + 1) != 61) || (checkCriticalStringElementIndex(q2 + 2, line.length), line.charCodeAt(q2 + 2) != 34) || $charAt_0(line, line.length - 1) != 34) {
+      console.log('ignoring line in string catalog: ' + line);
+      continue;
+    }
+    str1 = line.substr(1, q2 - 1);
+    str2 = $substring_0(line, q2 + 3, line.length - 1);
+    str1 == null ? $put_1(localizationMap.hashCodeMap, null, str2) : $put_2(localizationMap.stringMap, str1, str2);
+  }
+  return localizationMap;
+}
+
+function convertUnicodeEscapes(input_0) {
+  var codePoint, hexCode, i, length_0, result;
+  if (input_0.indexOf('\\u') < 0)
+    return input_0;
+  result = new StringBuilder;
+  length_0 = input_0.length;
+  i = 0;
+  while (i < length_0) {
+    if (i + 5 < length_0 && (checkCriticalStringElementIndex(i, input_0.length), input_0.charCodeAt(i) == 92) && (checkCriticalStringElementIndex(i + 1, input_0.length), input_0.charCodeAt(i + 1) == 117)) {
+      hexCode = input_0.substr(i + 2, i + 6 - (i + 2));
+      try {
+        codePoint = __parseAndValidateInt(hexCode, 16);
+        $append_0(result, codePoint & $intern_22);
+        i += 6;
+      }
+      catch ($e0) {
+        $e0 = toJava($e0);
+        if (instanceOf($e0, 144)) {
+          $append_4((result.string += '\\u', result), hexCode);
+          i += 6;
+        }
+        else
+          throw toJs($e0);
+      }
+    }
+    else {
+      $append_0(result, (checkCriticalStringElementIndex(i, input_0.length), input_0.charCodeAt(i)));
+      ++i;
+    }
+  }
+  return result.string;
+}
+
+var theApp_0;
+function circuitjs1$1() {
+}
+
+defineClass(450, 1, {}, circuitjs1$1);
+_.onError = function onError_2(request, exception) {
+}
+  ;
+_.onResponseReceived = function onResponseReceived_2(request, response) {
+  var localizationMap, text_0;
+  if (response.xmlHttpRequest.status == 200) {
+    text_0 = response.xmlHttpRequest.responseText;
+    localizationMap = $processLocale(text_0);
+  }
+  else {
+    localizationMap = new HashMap;
+  }
+  $loadSimulator(localizationMap);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_circuitjs1$1_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'circuitjs1/1', 450);
+function circuitjs1$2() {
+}
+
+defineClass(452, 1, $intern_37, circuitjs1$2);
+_.onResize = function onResize_8(event_0) {
+  $setCanvasSize(theApp_0.ui);
+  $setiFrameHeight(theApp_0.ui);
+}
+  ;
+var Lcom_lushprojects_circuitjs1_client_circuitjs1$2_2_classLit = createForClass('com.lushprojects.circuitjs1.client', 'circuitjs1/2', 452);
+function LS(s) {
+  var ix, sm;
+  if (s == null)
+    return null;
+  if (s.length == 0) {
+    return s;
+  }
+  sm = $getStringValue(localizationMap_0, s);
+  if (sm != null)
+    return sm;
+  ix = $indexOf_0(s, fromCodePoint(126));
+  if (ix != s.length - 1)
+    return s;
+  s = s.substr(0, ix);
+  sm = $getStringValue(localizationMap_0, s);
+  if (sm != null)
+    return sm;
+  return s;
+}
+
+function weAreInGermany() {
+  try {
+    l = navigator.languages ? navigator.languages[0] : navigator.language || navigator.userLanguage;
+    return l.toUpperCase().startsWith('DE');
+  }
+  catch (e) {
+    return 0;
+  }
+}
+
+function weAreInUS(orCanada) {
+  try {
+    l = navigator.languages ? navigator.languages[0] : navigator.language || navigator.userLanguage;
+    if (l.length > 2) {
+      l = l.slice(-2).toUpperCase();
+      return l == 'US' || l == 'CA' && orCanada;
+    }
+    else {
+      return 0;
+    }
+  }
+  catch (e) {
+    return 0;
+  }
+}
+
+var localizationMap_0, muString = '\u03BC', ohmString = '\u03A9';
+function $startContext(this$static, name_0) {
+  var newEntry;
+  newEntry = $startNewEntry(this$static.ctx);
+  if (!this$static.ctx) {
+    this$static.ctx = newEntry;
+    if (!this$static.rootCtx) {
+      this$static.rootCtxName = name_0;
+      this$static.rootCtx = this$static.ctx;
+    }
+  }
+  else {
+    $AddChild(this$static.ctx, name_0, newEntry) && (this$static.ctx = newEntry);
+  }
+}
+
+function $startNewEntry(parent_0) {
+  var newEntry;
+  newEntry = new PerfMonitor$PerfEntry(parent_0);
+  newEntry.startTime = getTime_0();
+  return newEntry;
+}
+
+function $stopContext(this$static) {
+  if (this$static.ctx) {
+    this$static.ctx.endTime = getTime_0();
+    this$static.ctx.length_0 = this$static.ctx.endTime - this$static.ctx.startTime;
+    this$static.ctx = this$static.ctx.parent_0;
+  }
+}
+
+function PerfMonitor() {
+}
+
+function buildStringInternal(sb, name_0, entry0, depth) {
+  var child, entry, key, key$iterator, keys_0, outerIter, x_0;
+  for (x_0 = 0; x_0 < depth; x_0++) {
+    sb.string += '-';
+  }
+  sb.string += '' + name_0;
+  sb.string += ': ';
+  $append_1(sb, entry0.length_0);
+  sb.string += '\n';
+  keys_0 = new AbstractMap$1(entry0.children);
+  for (key$iterator = (outerIter = new AbstractHashMap$EntrySetIterator((new AbstractHashMap$EntrySet(keys_0.this$01)).this$01), new AbstractMap$1$1(outerIter)); key$iterator.val$outerIter2.hasNext;) {
+    key = (entry = $next_2(key$iterator.val$outerIter2), entry.getKey());
+    child = $getStringValue(entry0.children, key);
+    buildStringInternal(sb, key, child, depth + 1);
+  }
+}
+
+function getTime_0() {
+  if (window.performance.now) {
+    return window.performance.now();
+  }
+  else {
+    if (window.performance.webkitNow) {
+      return window.performance.webkitNow();
+    }
+    else {
+      return (new Date).getTime();
+    }
+  }
+}
+
+defineClass(671, 1, {}, PerfMonitor);
+var Lcom_lushprojects_circuitjs1_client_util_PerfMonitor_2_classLit = createForClass('com.lushprojects.circuitjs1.client.util', 'PerfMonitor', 671);
+function $AddChild(this$static, name_0, entry) {
+  if (!$hasStringValue(this$static.children, name_0)) {
+    $putStringValue(this$static.children, name_0, entry);
+    return true;
+  }
+  return false;
+}
+
+function PerfMonitor$PerfEntry(p) {
+  this.parent_0 = p;
+  this.children = new HashMap;
+}
+
+defineClass(329, 1, { 329: 1 }, PerfMonitor$PerfEntry);
+_.endTime = 0;
+_.length_0 = 0;
+_.startTime = 0;
+var Lcom_lushprojects_circuitjs1_client_util_PerfMonitor$PerfEntry_2_classLit = createForClass('com.lushprojects.circuitjs1.client.util', 'PerfMonitor/PerfEntry', 329);
+defineClass(904, 1, {});
+var Ljava_io_OutputStream_2_classLit = createForClass('java.io', 'OutputStream', 904);
+defineClass(905, 904, {});
+var Ljava_io_FilterOutputStream_2_classLit = createForClass('java.io', 'FilterOutputStream', 905);
+function PrintStream() {
+}
+
+defineClass(460, 905, {}, PrintStream);
+var Ljava_io_PrintStream_2_classLit = createForClass('java.io', 'PrintStream', 460);
+function $charAt(this$static, index_0) {
+  return $charAt_0(this$static.string, index_0);
+}
+
+function $replace0(this$static, start_0, end, toInsert) {
+  this$static.string = $substring_0(this$static.string, 0, start_0) + ('' + toInsert) + $substring(this$static.string, end);
+}
+
+function $setCharAt(this$static, index_0, x_0) {
+  $replace0(this$static, index_0, index_0 + 1, String.fromCharCode(x_0));
+}
+
+function AbstractStringBuilder(string) {
+  this.string = string;
+}
+
+defineClass(240, 1, { 304: 1 });
+_.toString_0 = function toString_22() {
+  return this.string;
+}
+  ;
+var Ljava_lang_AbstractStringBuilder_2_classLit = createForClass('java.lang', 'AbstractStringBuilder', 240);
+function ArithmeticException() {
+  RuntimeException_0.call(this, 'divide by zero');
+}
+
+defineClass(461, 79, $intern_7, ArithmeticException);
+var Ljava_lang_ArithmeticException_2_classLit = createForClass('java.lang', 'ArithmeticException', 461);
+function IndexOutOfBoundsException() {
+  RuntimeException.call(this);
+}
+
+function IndexOutOfBoundsException_0(message) {
+  RuntimeException_0.call(this, message);
+}
+
+defineClass(58, 79, $intern_7, IndexOutOfBoundsException, IndexOutOfBoundsException_0);
+var Ljava_lang_IndexOutOfBoundsException_2_classLit = createForClass('java.lang', 'IndexOutOfBoundsException', 58);
+function ArrayIndexOutOfBoundsException() {
+  IndexOutOfBoundsException.call(this);
+}
+
+function ArrayIndexOutOfBoundsException_0(msg) {
+  IndexOutOfBoundsException_0.call(this, msg);
+}
+
+defineClass(339, 58, $intern_7, ArrayIndexOutOfBoundsException, ArrayIndexOutOfBoundsException_0);
+var Ljava_lang_ArrayIndexOutOfBoundsException_2_classLit = createForClass('java.lang', 'ArrayIndexOutOfBoundsException', 339);
+function $clinit_Boolean() {
+  $clinit_Boolean = emptyMethod;
+  FALSE = false;
+}
+
+function $booleanValue(this$static) {
+  return checkCriticalNotNull(this$static), this$static;
+}
+
+function compare_7(x_0, y_0) {
+  $clinit_Boolean();
+  return x_0 == y_0 ? 0 : x_0 ? 1 : -1;
+}
+
+function compareTo_Ljava_lang_Object__I__devirtual$(this$static, other) {
+  $clinit_Boolean();
+  return instanceOfString(this$static) ? $compareTo(this$static, other) : instanceOfDouble(this$static) ? compare_8((checkCriticalNotNull(this$static), this$static), (checkCriticalNotNull(other), other)) : instanceOfBoolean(this$static) ? compare_7((checkCriticalNotNull(this$static), this$static), (checkCriticalNotNull(other), other)) : this$static.compareTo(other);
+}
+
+booleanCastMap = { 3: 1, 271: 1, 14: 1 };
+var FALSE;
+var Ljava_lang_Boolean_2_classLit = createForClass('java.lang', 'Boolean', 271);
+function codePointAt(cs, index_0, limit) {
+  var hiSurrogate, loSurrogate;
+  hiSurrogate = $charAt_0(cs, index_0++);
+  if (hiSurrogate >= 55296 && hiSurrogate <= 56319 && index_0 < limit && isLowSurrogate(loSurrogate = (checkCriticalStringElementIndex(index_0, cs.length), cs.charCodeAt(index_0)))) {
+    return $intern_41 + ((hiSurrogate & 1023) << 10) + (loSurrogate & 1023);
+  }
+  return hiSurrogate;
+}
+
+function digit_0(c, radix) {
+  if (radix < 2 || radix > 36) {
+    return -1;
+  }
+  if (c >= 48 && c < 48 + $wnd.Math.min(radix, 10)) {
+    return c - 48;
+  }
+  if (c >= 97 && c < radix + 97 - 10) {
+    return c - 97 + 10;
+  }
+  if (c >= 65 && c < radix + 65 - 10) {
+    return c - 65 + 10;
+  }
+  return -1;
+}
+
+function isLowSurrogate(ch_0) {
+  return ch_0 >= 56320 && ch_0 <= 57343;
+}
+
+function toChars(codePoint, dst, dstIndex) {
+  checkCriticalArgument(codePoint >= 0 && codePoint <= 1114111);
+  if (codePoint >= $intern_41) {
+    dst[dstIndex++] = 55296 + (codePoint - $intern_41 >> 10 & 1023) & $intern_22;
+    dst[dstIndex] = 56320 + (codePoint - $intern_41 & 1023) & $intern_22;
+    return 2;
+  }
+  else {
+    dst[dstIndex] = codePoint & $intern_22;
+    return 1;
+  }
+}
+
+function __parseAndValidateDouble(s) {
+  floatRegex == null && (floatRegex = new RegExp('^\\s*[+-]?(NaN|Infinity|((\\d+\\.?\\d*)|(\\.\\d+))([eE][+-]?\\d+)?[dDfF]?)\\s*$'));
+  if (!floatRegex.test(s)) {
+    throw toJs(new NumberFormatException('For input string: "' + s + '"'));
+  }
+  return parseFloat(s);
+}
+
+function __parseAndValidateInt(s, radix) {
+  var i, isTooLow, length_0, startIndex, toReturn;
+  if (s == null) {
+    throw toJs(new NumberFormatException('null'));
+  }
+  if (radix < 2 || radix > 36) {
+    throw toJs(new NumberFormatException('radix ' + radix + ' out of range'));
+  }
+  length_0 = s.length;
+  startIndex = length_0 > 0 && (checkCriticalStringElementIndex(0, s.length), s.charCodeAt(0) == 45 || (checkCriticalStringElementIndex(0, s.length), s.charCodeAt(0) == 43)) ? 1 : 0;
+  for (i = startIndex; i < length_0; i++) {
+    if (digit_0((checkCriticalStringElementIndex(i, s.length), s.charCodeAt(i)), radix) == -1) {
+      throw toJs(new NumberFormatException('For input string: "' + s + '"'));
+    }
+  }
+  toReturn = parseInt(s, radix);
+  isTooLow = toReturn < -2147483648;
+  if (isNaN(toReturn)) {
+    throw toJs(new NumberFormatException('For input string: "' + s + '"'));
+  }
+  else if (isTooLow || toReturn > $intern_0) {
+    throw toJs(new NumberFormatException('For input string: "' + s + '"'));
+  }
+  return toReturn;
+}
+
+defineClass(239, 1, { 3: 1, 239: 1 });
+var floatRegex;
+var Ljava_lang_Number_2_classLit = createForClass('java.lang', 'Number', 239);
+function $doubleValue(this$static) {
+  return checkCriticalNotNull(this$static), this$static;
+}
+
+function compare_8(x_0, y_0) {
+  if (x_0 < y_0) {
+    return -1;
+  }
+  if (x_0 > y_0) {
+    return 1;
+  }
+  if (x_0 == y_0) {
+    return 0;
+  }
+  return isNaN(x_0) ? isNaN(y_0) ? 0 : 1 : -1;
+}
+
+function isInfinite(x_0) {
+  return !isNaN(x_0) && !isFinite(x_0);
+}
+
+doubleCastMap = { 3: 1, 14: 1, 453: 1, 239: 1 };
+var Ljava_lang_Double_2_classLit = createForClass('java.lang', 'Double', 453);
+function IllegalArgumentException() {
+  RuntimeException.call(this);
+}
+
+function IllegalArgumentException_0(message) {
+  RuntimeException_0.call(this, message);
+}
+
+defineClass(57, 79, { 3: 1, 15: 1, 57: 1, 40: 1 }, IllegalArgumentException, IllegalArgumentException_0);
+var Ljava_lang_IllegalArgumentException_2_classLit = createForClass('java.lang', 'IllegalArgumentException', 57);
+function IllegalStateException() {
+  RuntimeException.call(this);
+}
+
+function IllegalStateException_0(s) {
+  RuntimeException_0.call(this, s);
+}
+
+defineClass(137, 79, $intern_7, IllegalStateException, IllegalStateException_0);
+var Ljava_lang_IllegalStateException_2_classLit = createForClass('java.lang', 'IllegalStateException', 137);
+function Integer(value_0) {
+  this.value_0 = value_0;
+}
+
+function Integer_0(s) {
+  this.value_0 = __parseAndValidateInt(s, 10);
+}
+
+function compare_9(x_0, y_0) {
+  return x_0 < y_0 ? -1 : x_0 > y_0 ? 1 : 0;
+}
+
+function highestOneBit(i) {
+  var rtn;
+  if (i < 0) {
+    return -2147483648;
+  }
+  else if (i == 0) {
+    return 0;
+  }
+  else {
+    for (rtn = 1073741824; (rtn & i) == 0; rtn >>= 1)
+      ;
+    return rtn;
+  }
+}
+
+function numberOfLeadingZeros_0(i) {
+  var m, n, y_0;
+  if (i < 0) {
+    return 0;
+  }
+  else if (i == 0) {
+    return 32;
+  }
+  else {
+    y_0 = -(i >> 16);
+    m = y_0 >> 16 & 16;
+    n = 16 - m;
+    i = i >> m;
+    y_0 = i - 256;
+    m = y_0 >> 16 & 8;
+    n += m;
+    i <<= m;
+    y_0 = i - $intern_38;
+    m = y_0 >> 16 & 4;
+    n += m;
+    i <<= m;
+    y_0 = i - $intern_40;
+    m = y_0 >> 16 & 2;
+    n += m;
+    i <<= m;
+    y_0 = i >> 14;
+    m = y_0 & ~(y_0 >> 1);
+    return n + 2 - m;
+  }
+}
+
+function numberOfTrailingZeros(i) {
+  var r, rtn;
+  if (i == 0) {
+    return 32;
+  }
+  else {
+    rtn = 0;
+    for (r = 1; (r & i) == 0; r <<= 1) {
+      ++rtn;
+    }
+    return rtn;
+  }
+}
+
+function signum(i) {
+  return i == 0 ? 0 : i < 0 ? -1 : 1;
+}
+
+function valueOf(i) {
+  var rebase, result;
+  if (i > -129 && i < 128) {
+    rebase = i + 128;
+    result = ($clinit_Integer$BoxedValues(), boxedValues)[rebase];
+    !result && (result = boxedValues[rebase] = new Integer(i));
+    return result;
+  }
+  return new Integer(i);
+}
+
+defineClass(52, 239, { 3: 1, 14: 1, 52: 1, 239: 1 }, Integer, Integer_0);
+_.compareTo = function compareTo_3(b) {
+  return compare_9(this.value_0, b.value_0);
+}
+  ;
+_.equals_0 = function equals_15(o) {
+  return instanceOf(o, 52) && o.value_0 == this.value_0;
+}
+  ;
+_.hashCode_0 = function hashCode_10() {
+  return this.value_0;
+}
+  ;
+_.toString_0 = function toString_24() {
+  return '' + this.value_0;
+}
+  ;
+_.value_0 = 0;
+var Ljava_lang_Integer_2_classLit = createForClass('java.lang', 'Integer', 52);
+function $clinit_Integer$BoxedValues() {
+  $clinit_Integer$BoxedValues = emptyMethod;
+  boxedValues = initUnidimensionalArray(Ljava_lang_Integer_2_classLit, $intern_3, 52, 256, 0, 1);
+}
+
+var boxedValues;
+function Long(value_0) {
+  this.value_0 = value_0;
+}
+
+function compare_10(x_0, y_0) {
+  return compare_0(x_0, y_0) < 0 ? -1 : compare_0(x_0, y_0) > 0 ? 1 : 0;
+}
+
+function valueOf_0(i) {
+  var rebase, result;
+  if (compare_0(i, -129) > 0 && compare_0(i, 128) < 0) {
+    rebase = toInt_0(i) + 128;
+    result = ($clinit_Long$BoxedValues(), boxedValues_0)[rebase];
+    !result && (result = boxedValues_0[rebase] = new Long(i));
+    return result;
+  }
+  return new Long(i);
+}
+
+defineClass(218, 239, { 3: 1, 14: 1, 218: 1, 239: 1 }, Long);
+_.compareTo = function compareTo_4(b) {
+  return compare_10(this.value_0, b.value_0);
+}
+  ;
+_.equals_0 = function equals_16(o) {
+  return instanceOf(o, 218) && eq(o.value_0, this.value_0);
+}
+  ;
+_.hashCode_0 = function hashCode_11() {
+  return toInt_0(this.value_0);
+}
+  ;
+_.toString_0 = function toString_25() {
+  return '' + toString_8(this.value_0);
+}
+  ;
+_.value_0 = 0;
+var Ljava_lang_Long_2_classLit = createForClass('java.lang', 'Long', 218);
+function $clinit_Long$BoxedValues() {
+  $clinit_Long$BoxedValues = emptyMethod;
+  boxedValues_0 = initUnidimensionalArray(Ljava_lang_Long_2_classLit, $intern_3, 218, 256, 0, 1);
+}
+
+var boxedValues_0;
+function cosh(x_0) {
+  return ($wnd.Math.exp(x_0) + $wnd.Math.exp(-x_0)) / 2;
+}
+
+function hypot(x_0, y_0) {
+  return !isNaN(x_0) && !isFinite(x_0) || !isNaN(y_0) && !isFinite(y_0) ? $intern_26 : $wnd.Math.sqrt(x_0 * x_0 + y_0 * y_0);
+}
+
+function max_4(x_0) {
+  return compare_0(x_0, 0) > 0 ? x_0 : 0;
+}
+
+function min_3(x_0, y_0) {
+  return compare_0(x_0, y_0) < 0 ? x_0 : y_0;
+}
+
+function sinh(x_0) {
+  return x_0 == 0 ? 0 : ($wnd.Math.exp(x_0) - $wnd.Math.exp(-x_0)) / 2;
+}
+
+function tanh(x_0) {
+  var e2x;
+  if (x_0 == 0) {
+    return x_0;
+  }
+  else if (!isNaN(x_0) && !isFinite(x_0)) {
+    return x_0 == 0 || isNaN(x_0) ? x_0 : x_0 < 0 ? -1 : 1;
+  }
+  else {
+    e2x = $wnd.Math.exp(2 * x_0);
+    return (e2x - 1) / (e2x + 1);
+  }
+}
+
+defineClass(975, 1, {});
+function NullPointerException() {
+  RuntimeException.call(this);
+}
+
+function NullPointerException_0(message) {
+  RuntimeException_0.call(this, message);
+}
+
+defineClass(154, 272, $intern_7, NullPointerException, NullPointerException_0);
+_.createError = function createError_0(msg) {
+  return new TypeError(msg);
+}
+  ;
+var Ljava_lang_NullPointerException_2_classLit = createForClass('java.lang', 'NullPointerException', 154);
+function NumberFormatException(message) {
+  IllegalArgumentException_0.call(this, message);
+}
+
+defineClass(144, 57, { 3: 1, 15: 1, 57: 1, 144: 1, 40: 1 }, NumberFormatException);
+var Ljava_lang_NumberFormatException_2_classLit = createForClass('java.lang', 'NumberFormatException', 144);
+function StackTraceElement(methodName, fileName, lineNumber) {
+  this.className_0 = 'Unknown';
+  this.methodName = methodName;
+  this.fileName = fileName;
+  this.lineNumber = lineNumber;
+}
+
+defineClass(177, 1, { 3: 1, 177: 1 }, StackTraceElement);
+_.equals_0 = function equals_17(other) {
+  var st;
+  if (instanceOf(other, 177)) {
+    st = other;
+    return this.lineNumber == st.lineNumber && this.methodName == st.methodName && this.className_0 == st.className_0 && this.fileName == st.fileName;
+  }
+  return false;
+}
+  ;
+_.hashCode_0 = function hashCode_12() {
+  return hashCode_19(stampJavaTypeInfo(getClassLiteralForArray(Ljava_lang_Object_2_classLit, 1), $intern_3, 1, 5, [valueOf(this.lineNumber), this.className_0, this.methodName, this.fileName]));
+}
+  ;
+_.toString_0 = function toString_26() {
+  return this.className_0 + '.' + this.methodName + '(' + (this.fileName != null ? this.fileName : 'Unknown Source') + (this.lineNumber >= 0 ? ':' + this.lineNumber : '') + ')';
+}
+  ;
+_.lineNumber = 0;
+var Ljava_lang_StackTraceElement_2_classLit = createForClass('java.lang', 'StackTraceElement', 177);
+function $charAt_0(this$static, index_0) {
+  checkCriticalStringElementIndex(index_0, this$static.length);
+  return this$static.charCodeAt(index_0);
+}
+
+function $compareTo(this$static, other) {
+  var a, b;
+  a = (checkCriticalNotNull(this$static), this$static);
+  b = (checkCriticalNotNull(other), other);
+  return a == b ? 0 : a < b ? -1 : 1;
+}
+
+function $compareToIgnoreCase(this$static, other) {
+  return $compareTo(this$static.toLowerCase(), other.toLowerCase());
+}
+
+function $endsWith(this$static, suffix) {
+  var suffixlength;
+  suffixlength = suffix.length;
+  return $equals_1(this$static.substr(this$static.length - suffixlength, suffixlength), suffix);
+}
+
+function $equals_1(this$static, other) {
+  return checkCriticalNotNull(this$static), this$static === other;
+}
+
+function $equalsIgnoreCase(this$static, other) {
+  checkCriticalNotNull(this$static);
+  if (other == null) {
+    return false;
+  }
+  if ($equals_1(this$static, other)) {
+    return true;
+  }
+  return this$static.length == other.length && $equals_1(this$static.toLowerCase(), other.toLowerCase());
+}
+
+function $indexOf_0(this$static, str) {
+  return this$static.indexOf(str);
+}
+
+function $indexOf_1(this$static, str, startIndex) {
+  return this$static.indexOf(str, startIndex);
+}
+
+function $lastIndexOf(this$static, str) {
+  return this$static.lastIndexOf(str);
+}
+
+function $lastIndexOf_0(this$static, str, start_0) {
+  return this$static.lastIndexOf(str, start_0);
+}
+
+function $replace_0(this$static, from, to) {
+  var regex, replacement;
+  regex = $replaceAll(from, '([/\\\\\\.\\*\\+\\?\\|\\(\\)\\[\\]\\{\\}$^])', '\\\\$1');
+  replacement = $replaceAll($replaceAll(to, '\\\\', '\\\\\\\\'), '\\$', '\\\\$');
+  return $replaceAll(this$static, regex, replacement);
+}
+
+function $replaceAll(this$static, regex, replace) {
+  replace = translateReplaceString(replace);
+  return this$static.replace(new RegExp(regex, 'g'), replace);
+}
+
+function $replaceFirst(this$static, replace) {
+  var jsRegEx;
+  replace = translateReplaceString(replace);
+  jsRegEx = new RegExp('-.*');
+  return this$static.replace(jsRegEx, replace);
+}
+
+function $split_1(this$static, regex, maxMatch) {
+  var compiled, count, lastNonEmpty, lastTrail, matchIndex, matchObj, out, trail;
+  compiled = new RegExp(regex, 'g');
+  out = initUnidimensionalArray(Ljava_lang_String_2_classLit, $intern_23, 2, 0, 6, 1);
+  count = 0;
+  trail = this$static;
+  lastTrail = null;
+  while (true) {
+    matchObj = compiled.exec(trail);
+    if (matchObj == null || trail == '' || count == maxMatch - 1 && maxMatch > 0) {
+      out[count] = trail;
+      break;
+    }
+    else {
+      matchIndex = matchObj.index;
+      out[count] = trail.substr(0, matchIndex);
+      trail = $substring_0(trail, matchIndex + matchObj[0].length, trail.length);
+      compiled.lastIndex = 0;
+      if (lastTrail == trail) {
+        out[count] = trail.substr(0, 1);
+        trail = trail.substr(1);
+      }
+      lastTrail = trail;
+      ++count;
+    }
+  }
+  if (maxMatch == 0 && this$static.length > 0) {
+    lastNonEmpty = out.length;
+    while (lastNonEmpty > 0 && out[lastNonEmpty - 1] == '') {
+      --lastNonEmpty;
+    }
+    lastNonEmpty < out.length && (out.length = lastNonEmpty);
+  }
+  return out;
+}
+
+function $startsWith(this$static, prefix) {
+  return $equals_1(this$static.substr(0, prefix.length), prefix);
+}
+
+function $startsWith_0(this$static, prefix, toffset) {
+  return toffset >= 0 && $equals_1(this$static.substr(toffset, prefix.length), prefix);
+}
+
+function $substring(this$static, beginIndex) {
+  return this$static.substr(beginIndex);
+}
+
+function $substring_0(this$static, beginIndex, endIndex) {
+  return this$static.substr(beginIndex, endIndex - beginIndex);
+}
+
+function $trim(this$static) {
+  var end, length_0, start_0;
+  length_0 = this$static.length;
+  start_0 = 0;
+  while (start_0 < length_0 && (checkCriticalStringElementIndex(start_0, this$static.length), this$static.charCodeAt(start_0) <= 32)) {
+    ++start_0;
+  }
+  end = length_0;
+  while (end > start_0 && (checkCriticalStringElementIndex(end - 1, this$static.length), this$static.charCodeAt(end - 1) <= 32)) {
+    --end;
+  }
+  return start_0 > 0 || end < length_0 ? this$static.substr(start_0, end - start_0) : this$static;
+}
+
+function fromCharCode(array) {
+  return String.fromCharCode.apply(null, array);
+}
+
+function fromCodePoint(codePoint) {
+  var hiSurrogate, loSurrogate;
+  if (codePoint >= $intern_41) {
+    hiSurrogate = 55296 + (codePoint - $intern_41 >> 10 & 1023) & $intern_22;
+    loSurrogate = 56320 + (codePoint - $intern_41 & 1023) & $intern_22;
+    return String.fromCharCode(hiSurrogate) + ('' + String.fromCharCode(loSurrogate));
+  }
+  else {
+    return String.fromCharCode(codePoint & $intern_22);
+  }
+}
+
+function translateReplaceString(replaceStr) {
+  var pos;
+  pos = 0;
+  while (0 <= (pos = replaceStr.indexOf('\\', pos))) {
+    checkCriticalStringElementIndex(pos + 1, replaceStr.length);
+    replaceStr.charCodeAt(pos + 1) == 36 ? (replaceStr = replaceStr.substr(0, pos) + '$' + $substring(replaceStr, ++pos)) : (replaceStr = replaceStr.substr(0, pos) + ('' + $substring(replaceStr, ++pos)));
+  }
+  return replaceStr;
+}
+
+function valueOf_1(x_0) {
+  return valueOf_2(x_0, x_0.length);
+}
+
+function valueOf_2(x_0, count) {
+  var batchEnd, batchStart, s;
+  checkCriticalStringBounds(count, x_0.length);
+  s = '';
+  for (batchStart = 0; batchStart < count;) {
+    batchEnd = $wnd.Math.min(batchStart + $intern_82, count);
+    s += fromCharCode(x_0.slice(batchStart, batchEnd));
+    batchStart = batchEnd;
+  }
+  return s;
+}
+
+stringCastMap = { 3: 1, 304: 1, 14: 1, 2: 1 };
+var Ljava_lang_String_2_classLit = createForClass('java.lang', 'String', 2);
+function StringBuffer(s) {
+  AbstractStringBuilder.call(this, (checkCriticalNotNull(s), s));
+}
+
+defineClass(455, 240, { 304: 1 }, StringBuffer);
+var Ljava_lang_StringBuffer_2_classLit = createForClass('java.lang', 'StringBuffer', 455);
+function $append_0(this$static, x_0) {
+  this$static.string += String.fromCharCode(x_0);
+  return this$static;
+}
+
+function $append_1(this$static, x_0) {
+  this$static.string += x_0;
+  return this$static;
+}
+
+function $append_2(this$static, x_0) {
+  this$static.string += x_0;
+  return this$static;
+}
+
+function $append_3(this$static, x_0) {
+  this$static.string += '' + x_0;
+  return this$static;
+}
+
+function $append_4(this$static, x_0) {
+  this$static.string += '' + x_0;
+  return this$static;
+}
+
+function $delete(this$static, start_0, end) {
+  this$static.string = $substring_0(this$static.string, 0, start_0) + '' + $substring(this$static.string, end);
+  return this$static;
+}
+
+function $insert_4(this$static, index_0, x_0) {
+  this$static.string = $substring_0(this$static.string, 0, index_0) + ('' + x_0) + $substring(this$static.string, index_0);
+  return this$static;
+}
+
+function StringBuilder() {
+  AbstractStringBuilder.call(this, '');
+}
+
+function StringBuilder_0() {
+  AbstractStringBuilder.call(this, '');
+}
+
+function StringBuilder_1(s) {
+  AbstractStringBuilder.call(this, (checkCriticalNotNull(s), s));
+}
+
+defineClass(74, 240, { 304: 1 }, StringBuilder, StringBuilder_0, StringBuilder_1);
+var Ljava_lang_StringBuilder_2_classLit = createForClass('java.lang', 'StringBuilder', 74);
+function StringIndexOutOfBoundsException(message) {
+  IndexOutOfBoundsException_0.call(this, message);
+}
+
+defineClass(309, 58, $intern_7, StringIndexOutOfBoundsException);
+var Ljava_lang_StringIndexOutOfBoundsException_2_classLit = createForClass('java.lang', 'StringIndexOutOfBoundsException', 309);
+function $clinit_System() {
+  $clinit_System = emptyMethod;
+  err_0 = new PrintStream;
+}
+
+defineClass(979, 1, {});
+var err_0;
+function UnsupportedOperationException() {
+  RuntimeException.call(this);
+}
+
+function UnsupportedOperationException_0(message) {
+  RuntimeException_0.call(this, message);
+}
+
+defineClass(203, 79, $intern_7, UnsupportedOperationException, UnsupportedOperationException_0);
+var Ljava_lang_UnsupportedOperationException_2_classLit = createForClass('java.lang', 'UnsupportedOperationException', 203);
+defineClass(204, 1, $intern_130);
+_.compareTo = function compareTo_5(that) {
+  return $compareToIgnoreCase(this.name_0, that.name_0);
+}
+  ;
+_.equals_0 = function equals_18(o) {
+  var that;
+  if (o === this) {
+    return true;
+  }
+  if (!instanceOf(o, 204)) {
+    return false;
+  }
+  that = o;
+  return $equals_1(this.name_0, that.name_0);
+}
+  ;
+_.hashCode_0 = function hashCode_13() {
+  return getHashCode_0(this.name_0);
+}
+  ;
+_.toString_0 = function toString_27() {
+  return this.name_0;
+}
+  ;
+var Ljava_nio_charset_Charset_2_classLit = createForClass('java.nio.charset', 'Charset', 204);
+function $addAll(this$static, c) {
+  var changed, e, e$iterator, old;
+  checkCriticalNotNull(c);
+  changed = false;
+  for (e$iterator = new ArrayList$1(c.arrayList); e$iterator.i < e$iterator.this$01.array.length;) {
+    e = $next_4(e$iterator);
+    changed = changed | (old = $put_0(this$static.map_0, e, this$static), old == null);
+  }
+  return changed;
+}
+
+function $advanceToFind(this$static, o, remove) {
+  var e, iter;
+  for (iter = this$static.iterator(); iter.hasNext_0();) {
+    e = iter.next_1();
+    if (maskUndefined(o) === maskUndefined(e) || o != null && equals_Ljava_lang_Object__Z__devirtual$(o, e)) {
+      remove && iter.remove_1();
+      return true;
+    }
+  }
+  return false;
+}
+
+function $containsAll(this$static, c) {
+  var e, e$iterator;
+  checkCriticalNotNull(c);
+  for (e$iterator = c.iterator(); e$iterator.hasNext_0();) {
+    e = e$iterator.next_1();
+    if (!this$static.contains_0(e)) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function $toString_0(this$static) {
+  var e, e$iterator, joiner;
+  joiner = new StringJoiner('[', ']');
+  for (e$iterator = this$static.iterator(); e$iterator.hasNext_0();) {
+    e = e$iterator.next_1();
+    $add_10(joiner, e === this$static ? '(this Collection)' : e == null ? 'null' : toString_9(e));
+  }
+  return !joiner.builder ? joiner.emptyValue : joiner.suffix.length == 0 ? joiner.builder.string : joiner.builder.string + ('' + joiner.suffix);
+}
+
+defineClass(145, 1, $intern_131);
+_.add_1 = function add_11(o) {
+  throw toJs(new UnsupportedOperationException_0('Add not supported on this collection'));
+}
+  ;
+_.contains_0 = function contains(o) {
+  return $advanceToFind(this, o, false);
+}
+  ;
+_.isEmpty = function isEmpty() {
+  return this.size_1() == 0;
+}
+  ;
+_.remove_2 = function remove_12(o) {
+  return $advanceToFind(this, o, true);
+}
+  ;
+_.toString_0 = function toString_28() {
+  return $toString_0(this);
+}
+  ;
+var Ljava_util_AbstractCollection_2_classLit = createForClass('java.util', 'AbstractCollection', 145);
+function $containsEntry(this$static, entry) {
+  var key, ourValue, value_0;
+  key = entry.getKey();
+  value_0 = entry.getValue();
+  ourValue = instanceOfString(key) ? $getStringValue(this$static, key) : getEntryValueOrNull($getEntry(this$static.hashCodeMap, key));
+  if (!(maskUndefined(value_0) === maskUndefined(ourValue) || value_0 != null && equals_Ljava_lang_Object__Z__devirtual$(value_0, ourValue))) {
+    return false;
+  }
+  if (ourValue == null && !(instanceOfString(key) ? $hasStringValue(this$static, key) : !!$getEntry(this$static.hashCodeMap, key))) {
+    return false;
+  }
+  return true;
+}
+
+function $getOrDefault(this$static, key, defaultValue) {
+  var currentValue;
+  return currentValue = $get_3(this$static.stringMap, key), currentValue == null && !$contains_4(this$static.stringMap, key) ? defaultValue : currentValue;
+}
+
+function $putAll(this$static, map_0) {
+  var e, e$iterator;
+  checkCriticalNotNull(map_0);
+  for (e$iterator = new AbstractHashMap$EntrySetIterator((new AbstractHashMap$EntrySet(map_0)).this$01); e$iterator.hasNext;) {
+    e = $next_2(e$iterator);
+    $put_0(this$static, e.getKey(), e.getValue());
+  }
+}
+
+function $toString_1(this$static, o) {
+  return o === this$static ? '(this Map)' : o == null ? 'null' : toString_9(o);
+}
+
+function getEntryValueOrNull(entry) {
+  return !entry ? null : entry.getValue();
+}
+
+defineClass(906, 1, { 889: 1 });
+_.equals_0 = function equals_19(obj) {
+  var entry, entry$iterator, otherMap;
+  if (obj === this) {
+    return true;
+  }
+  if (!instanceOf(obj, 44)) {
+    return false;
+  }
+  otherMap = obj;
+  if (this.hashCodeMap.size_0 + this.stringMap.size_0 != otherMap.hashCodeMap.size_0 + otherMap.stringMap.size_0) {
+    return false;
+  }
+  for (entry$iterator = new AbstractHashMap$EntrySetIterator((new AbstractHashMap$EntrySet(otherMap)).this$01); entry$iterator.hasNext;) {
+    entry = $next_2(entry$iterator);
+    if (!$containsEntry(this, entry)) {
+      return false;
+    }
+  }
+  return true;
+}
+  ;
+_.hashCode_0 = function hashCode_14() {
+  return hashCode_20(new AbstractHashMap$EntrySet(this));
+}
+  ;
+_.toString_0 = function toString_29() {
+  var entry, entry$iterator, joiner;
+  joiner = new StringJoiner('{', '}');
+  for (entry$iterator = new AbstractHashMap$EntrySetIterator((new AbstractHashMap$EntrySet(this)).this$01); entry$iterator.hasNext;) {
+    entry = $next_2(entry$iterator);
+    $add_10(joiner, $toString_1(this, entry.getKey()) + '=' + $toString_1(this, entry.getValue()));
+  }
+  return !joiner.builder ? joiner.emptyValue : joiner.suffix.length == 0 ? joiner.builder.string : joiner.builder.string + ('' + joiner.suffix);
+}
+  ;
+var Ljava_util_AbstractMap_2_classLit = createForClass('java.util', 'AbstractMap', 906);
+function $containsKey(this$static, key) {
+  return instanceOfString(key) ? $hasStringValue(this$static, key) : !!$getEntry(this$static.hashCodeMap, key);
+}
+
+function $get_1(this$static, key) {
+  return instanceOfString(key) ? $getStringValue(this$static, key) : getEntryValueOrNull($getEntry(this$static.hashCodeMap, key));
+}
+
+function $getStringValue(this$static, key) {
+  return key == null ? getEntryValueOrNull($getEntry(this$static.hashCodeMap, null)) : $get_3(this$static.stringMap, key);
+}
+
+function $hasStringValue(this$static, key) {
+  return key == null ? !!$getEntry(this$static.hashCodeMap, null) : $contains_4(this$static.stringMap, key);
+}
+
+function $put_0(this$static, key, value_0) {
+  return instanceOfString(key) ? $putStringValue(this$static, key, value_0) : $put_1(this$static.hashCodeMap, key, value_0);
+}
+
+function $putStringValue(this$static, key, value_0) {
+  return key == null ? $put_1(this$static.hashCodeMap, null, value_0) : $put_2(this$static.stringMap, key, value_0);
+}
+
+function $remove_8(this$static, key) {
+  return instanceOfString(key) ? $removeStringValue(this$static, key) : $remove_17(this$static.hashCodeMap, key);
+}
+
+function $removeStringValue(this$static, key) {
+  return key == null ? $remove_17(this$static.hashCodeMap, null) : $remove_18(this$static.stringMap, key);
+}
+
+function $reset_10(this$static) {
+  this$static.hashCodeMap = new InternalHashCodeMap(this$static);
+  this$static.stringMap = new InternalStringMap(this$static);
+  structureChanged(this$static);
+}
+
+function $size(this$static) {
+  return this$static.hashCodeMap.size_0 + this$static.stringMap.size_0;
+}
+
+defineClass(241, 906, { 889: 1 });
+var Ljava_util_AbstractHashMap_2_classLit = createForClass('java.util', 'AbstractHashMap', 241);
+defineClass(907, 145, $intern_132);
+_.equals_0 = function equals_20(o) {
+  var other;
+  if (o === this) {
+    return true;
+  }
+  if (!instanceOf(o, 300)) {
+    return false;
+  }
+  other = o;
+  if (other.size_1() != this.size_1()) {
+    return false;
+  }
+  return $containsAll(this, other);
+}
+  ;
+_.hashCode_0 = function hashCode_15() {
+  return hashCode_20(this);
+}
+  ;
+var Ljava_util_AbstractSet_2_classLit = createForClass('java.util', 'AbstractSet', 907);
+function $contains_1(this$static, o) {
+  if (instanceOf(o, 235)) {
+    return $containsEntry(this$static.this$01, o);
+  }
+  return false;
+}
+
+function AbstractHashMap$EntrySet(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(103, 907, $intern_132, AbstractHashMap$EntrySet);
+_.contains_0 = function contains_0(o) {
+  return $contains_1(this, o);
+}
+  ;
+_.iterator = function iterator_5() {
+  return new AbstractHashMap$EntrySetIterator(this.this$01);
+}
+  ;
+_.remove_2 = function remove_13(entry) {
+  var key;
+  if ($contains_1(this, entry)) {
+    key = entry.getKey();
+    $remove_8(this.this$01, key);
+    return true;
+  }
+  return false;
+}
+  ;
+_.size_1 = function size_1() {
+  return $size(this.this$01);
+}
+  ;
+var Ljava_util_AbstractHashMap$EntrySet_2_classLit = createForClass('java.util', 'AbstractHashMap/EntrySet', 103);
+function $computeHasNext(this$static) {
+  if (this$static.current.hasNext_0()) {
+    return true;
+  }
+  if (this$static.current != this$static.stringMapEntries) {
+    return false;
+  }
+  this$static.current = new InternalHashCodeMap$1(this$static.this$01.hashCodeMap);
+  return this$static.current.hasNext_0();
+}
+
+function $next_2(this$static) {
+  var rv;
+  checkStructuralChange(this$static.this$01, this$static);
+  checkCriticalElement(this$static.hasNext);
+  this$static.last = this$static.current;
+  rv = this$static.current.next_1();
+  this$static.hasNext = $computeHasNext(this$static);
+  return rv;
+}
+
+function $remove_9(this$static) {
+  checkCriticalState(!!this$static.last);
+  checkStructuralChange(this$static.this$01, this$static);
+  this$static.last.remove_1();
+  this$static.last = null;
+  this$static.hasNext = $computeHasNext(this$static);
+  recordLastKnownStructure(this$static.this$01, this$static);
+}
+
+function AbstractHashMap$EntrySetIterator(this$0) {
+  this.this$01 = this$0;
+  this.stringMapEntries = new InternalStringMap$1(this.this$01.stringMap);
+  this.current = this.stringMapEntries;
+  this.hasNext = $computeHasNext(this);
+  this.$modCount = this$0.$modCount;
+}
+
+defineClass(104, 1, {}, AbstractHashMap$EntrySetIterator);
+_.next_1 = function next_3() {
+  return $next_2(this);
+}
+  ;
+_.hasNext_0 = function hasNext_2() {
+  return this.hasNext;
+}
+  ;
+_.remove_1 = function remove_14() {
+  $remove_9(this);
+}
+  ;
+_.hasNext = false;
+var Ljava_util_AbstractHashMap$EntrySetIterator_2_classLit = createForClass('java.util', 'AbstractHashMap/EntrySetIterator', 104);
+function $equals_2(this$static, o) {
+  var elem, elem$iterator, elemOther, iterOther, other;
+  if (o === this$static) {
+    return true;
+  }
+  if (!instanceOf(o, 301)) {
+    return false;
+  }
+  other = o;
+  if (this$static.size_1() != other.size_1()) {
+    return false;
+  }
+  iterOther = other.iterator();
+  for (elem$iterator = this$static.iterator(); elem$iterator.hasNext_0();) {
+    elem = elem$iterator.next_1();
+    elemOther = iterOther.next_1();
+    if (!(maskUndefined(elem) === maskUndefined(elemOther) || elem != null && equals_Ljava_lang_Object__Z__devirtual$(elem, elemOther))) {
+      return false;
+    }
+  }
+  return true;
+}
+
+defineClass(243, 145, { 36: 1, 145: 1, 243: 1, 166: 1, 301: 1 });
+_.add_2 = function add_12(index_0, element) {
+  throw toJs(new UnsupportedOperationException_0('Add not supported on this list'));
+}
+  ;
+_.add_1 = function add_13(obj) {
+  this.add_2(this.size_1(), obj);
+  return true;
+}
+  ;
+_.equals_0 = function equals_21(o) {
+  return $equals_2(this, o);
+}
+  ;
+_.hashCode_0 = function hashCode_16() {
+  return hashCode_21(this);
+}
+  ;
+_.iterator = function iterator_6() {
+  return new AbstractList$IteratorImpl(this);
+}
+  ;
+_.listIterator = function listIterator() {
+  return new AbstractList$ListIteratorImpl(this, 0);
+}
+  ;
+_.listIterator_0 = function listIterator_0(from) {
+  return new AbstractList$ListIteratorImpl(this, from);
+}
+  ;
+_.remove_3 = function remove_15(index_0) {
+  throw toJs(new UnsupportedOperationException_0('Remove not supported on this list'));
+}
+  ;
+var Ljava_util_AbstractList_2_classLit = createForClass('java.util', 'AbstractList', 243);
+function $remove_10(this$static) {
+  checkCriticalState(this$static.last != -1);
+  this$static.this$01_0.remove_3(this$static.last);
+  this$static.i = this$static.last;
+  this$static.last = -1;
+}
+
+function AbstractList$IteratorImpl(this$0) {
+  this.this$01_0 = this$0;
+}
+
+defineClass(314, 1, {}, AbstractList$IteratorImpl);
+_.hasNext_0 = function hasNext_3() {
+  return this.i < this.this$01_0.size_1();
+}
+  ;
+_.next_1 = function next_4() {
+  checkCriticalElement(this.i < this.this$01_0.size_1());
+  return this.this$01_0.get_0(this.last = this.i++);
+}
+  ;
+_.remove_1 = function remove_16() {
+  $remove_10(this);
+}
+  ;
+_.i = 0;
+_.last = -1;
+var Ljava_util_AbstractList$IteratorImpl_2_classLit = createForClass('java.util', 'AbstractList/IteratorImpl', 314);
+function AbstractList$ListIteratorImpl(this$0, start_0) {
+  this.this$01 = this$0;
+  AbstractList$IteratorImpl.call(this, this$0);
+  checkCriticalPositionIndex(start_0, this$0.size_1());
+  this.i = start_0;
+}
+
+defineClass(315, 314, {}, AbstractList$ListIteratorImpl);
+_.remove_1 = function remove_17() {
+  $remove_10(this);
+}
+  ;
+_.hasPrevious = function hasPrevious() {
+  return this.i > 0;
+}
+  ;
+_.previous = function previous_0() {
+  return checkCriticalElement(this.i > 0), this.this$01.get_0(this.last = --this.i);
+}
+  ;
+var Ljava_util_AbstractList$ListIteratorImpl_2_classLit = createForClass('java.util', 'AbstractList/ListIteratorImpl', 315);
+function AbstractMap$1(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(310, 907, $intern_132, AbstractMap$1);
+_.contains_0 = function contains_1(key) {
+  return $containsKey(this.this$01, key);
+}
+  ;
+_.iterator = function iterator_7() {
+  var outerIter;
+  return outerIter = new AbstractHashMap$EntrySetIterator((new AbstractHashMap$EntrySet(this.this$01)).this$01), new AbstractMap$1$1(outerIter);
+}
+  ;
+_.remove_2 = function remove_18(key) {
+  if ($containsKey(this.this$01, key)) {
+    $remove_8(this.this$01, key);
+    return true;
+  }
+  return false;
+}
+  ;
+_.size_1 = function size_2() {
+  return $size(this.this$01);
+}
+  ;
+var Ljava_util_AbstractMap$1_2_classLit = createForClass('java.util', 'AbstractMap/1', 310);
+function AbstractMap$1$1(val$outerIter) {
+  this.val$outerIter2 = val$outerIter;
+}
+
+defineClass(273, 1, {}, AbstractMap$1$1);
+_.hasNext_0 = function hasNext_4() {
+  return this.val$outerIter2.hasNext;
+}
+  ;
+_.next_1 = function next_5() {
+  var entry;
+  return entry = $next_2(this.val$outerIter2), entry.getKey();
+}
+  ;
+_.remove_1 = function remove_19() {
+  $remove_9(this.val$outerIter2);
+}
+  ;
+var Ljava_util_AbstractMap$1$1_2_classLit = createForClass('java.util', 'AbstractMap/1/1', 273);
+defineClass(462, 1, $intern_133);
+_.equals_0 = function equals_22(other) {
+  var entry;
+  if (!instanceOf(other, 235)) {
+    return false;
+  }
+  entry = other;
+  return equals_27(this.key_0, entry.getKey()) && equals_27(this.value_0, entry.getValue());
+}
+  ;
+_.getKey = function getKey() {
+  return this.key_0;
+}
+  ;
+_.getValue = function getValue() {
+  return this.value_0;
+}
+  ;
+_.hashCode_0 = function hashCode_17() {
+  return hashCode_23(this.key_0) ^ hashCode_23(this.value_0);
+}
+  ;
+_.setValue = function setValue(value_0) {
+  var oldValue;
+  oldValue = this.value_0;
+  this.value_0 = value_0;
+  return oldValue;
+}
+  ;
+_.toString_0 = function toString_30() {
+  return this.key_0 + '=' + this.value_0;
+}
+  ;
+var Ljava_util_AbstractMap$AbstractEntry_2_classLit = createForClass('java.util', 'AbstractMap/AbstractEntry', 462);
+function AbstractMap$SimpleEntry(key, value_0) {
+  this.key_0 = key;
+  this.value_0 = value_0;
+}
+
+defineClass(463, 462, $intern_133, AbstractMap$SimpleEntry);
+var Ljava_util_AbstractMap$SimpleEntry_2_classLit = createForClass('java.util', 'AbstractMap/SimpleEntry', 463);
+defineClass(912, 1, $intern_133);
+_.equals_0 = function equals_23(other) {
+  var entry;
+  if (!instanceOf(other, 235)) {
+    return false;
+  }
+  entry = other;
+  return equals_27(this.val$entry2.value[0], entry.getKey()) && equals_27($getValue_0(this), entry.getValue());
+}
+  ;
+_.hashCode_0 = function hashCode_18() {
+  return hashCode_23(this.val$entry2.value[0]) ^ hashCode_23($getValue_0(this));
+}
+  ;
+_.toString_0 = function toString_31() {
+  return this.val$entry2.value[0] + '=' + $getValue_0(this);
+}
+  ;
+var Ljava_util_AbstractMapEntry_2_classLit = createForClass('java.util', 'AbstractMapEntry', 912);
+defineClass(932, 145, $intern_131);
+_.add_1 = function add_14(o) {
+  checkCriticalState_0($offer(this, o), 'Unable to add element to queue');
+  return true;
+}
+  ;
+var Ljava_util_AbstractQueue_2_classLit = createForClass('java.util', 'AbstractQueue', 932);
+function $addFirst(this$static, e) {
+  checkCriticalNotNull(e);
+  this$static.head_0 = this$static.head_0 - 1 & this$static.array.length - 1;
+  this$static.array[this$static.head_0] = e;
+  $ensureCapacity(this$static);
+}
+
+function $contains_2(it, o) {
+  if (o == null) {
+    return false;
+  }
+  while (it.currentIndex != it.fence) {
+    if (equals_Ljava_lang_Object__Z__devirtual$(o, $next_3(it))) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function $copyElements(this$static, dest, count) {
+  var dstIdx, i, mask;
+  mask = this$static.array.length - 1;
+  for (i = this$static.head_0, dstIdx = 0; dstIdx < count; i = i + 1 & mask, ++dstIdx) {
+    dest[dstIdx] = this$static.array[i];
+  }
+}
+
+function $ensureCapacity(this$static) {
+  var newArray, newLength, numElements;
+  if (this$static.head_0 != this$static.tail) {
+    return;
+  }
+  numElements = this$static.array.length;
+  newLength = highestOneBit($wnd.Math.max(8, numElements)) << 1;
+  if (this$static.head_0 != 0) {
+    newArray = createFrom(this$static.array, newLength);
+    $copyElements(this$static, newArray, numElements);
+    this$static.array = newArray;
+    this$static.head_0 = 0;
+  }
+  else {
+    setLength(this$static.array, newLength);
+  }
+  this$static.tail = numElements;
+}
+
+function $pollFirst(this$static) {
+  var e;
+  e = this$static.array[this$static.head_0];
+  if (e == null) {
+    return null;
+  }
+  this$static.array[this$static.head_0] = null;
+  this$static.head_0 = this$static.head_0 + 1 & this$static.array.length - 1;
+  return e;
+}
+
+function $remove_11(it, o) {
+  if ($contains_2(it, o)) {
+    $remove_12(it);
+    return true;
+  }
+  return false;
+}
+
+function $removeAtIndex(this$static, i) {
+  var headDistance, mask, size_0, tailDistance;
+  mask = this$static.array.length - 1;
+  headDistance = i - this$static.head_0 & mask;
+  tailDistance = this$static.tail - i & mask;
+  size_0 = this$static.tail - this$static.head_0 & mask;
+  checkConcurrentModification(headDistance < size_0);
+  if (headDistance >= tailDistance) {
+    $shiftLeftAtIndex(this$static, i);
+    return -1;
+  }
+  else {
+    $shiftRightAtIndex(this$static, i);
+    return 1;
+  }
+}
+
+function $shiftLeftAtIndex(this$static, i) {
+  var mask, nextOffset;
+  mask = this$static.array.length - 1;
+  this$static.tail = this$static.tail - 1 & mask;
+  while (i != this$static.tail) {
+    nextOffset = i + 1 & mask;
+    this$static.array[i] = this$static.array[nextOffset];
+    i = nextOffset;
+  }
+  this$static.array[this$static.tail] = null;
+}
+
+function $shiftRightAtIndex(this$static, i) {
+  var mask, prevOffset;
+  mask = this$static.array.length - 1;
+  while (i != this$static.head_0) {
+    prevOffset = i - 1 & mask;
+    this$static.array[i] = this$static.array[prevOffset];
+    i = prevOffset;
+  }
+  this$static.array[this$static.head_0] = null;
+  this$static.head_0 = this$static.head_0 + 1 & mask;
+}
+
+function ArrayDeque() {
+  this.array = initUnidimensionalArray(Ljava_lang_Object_2_classLit, $intern_3, 1, 8, 5, 1);
+}
+
+function checkConcurrentModification(expression) {
+  if (!expression) {
+    throw toJs(new ConcurrentModificationException);
+  }
+}
+
+defineClass(762, 145, { 4: 1, 36: 1, 145: 1, 166: 1 }, ArrayDeque);
+_.add_1 = function add_15(e) {
+  checkCriticalNotNull(e);
+  this.array[this.tail] = e;
+  this.tail = this.tail + 1 & this.array.length - 1;
+  $ensureCapacity(this);
+  return true;
+}
+  ;
+_.contains_0 = function contains_2(o) {
+  return $contains_2(new ArrayDeque$IteratorImpl(this), o);
+}
+  ;
+_.isEmpty = function isEmpty_0() {
+  return this.head_0 == this.tail;
+}
+  ;
+_.iterator = function iterator_8() {
+  return new ArrayDeque$IteratorImpl(this);
+}
+  ;
+_.remove_2 = function remove_20(o) {
+  return $remove_11(new ArrayDeque$IteratorImpl(this), o);
+}
+  ;
+_.size_1 = function size_3() {
+  return this.tail - this.head_0 & this.array.length - 1;
+}
+  ;
+_.head_0 = 0;
+_.tail = 0;
+var Ljava_util_ArrayDeque_2_classLit = createForClass('java.util', 'ArrayDeque', 762);
+function $next_3(this$static) {
+  var e;
+  checkCriticalElement(this$static.currentIndex != this$static.fence);
+  e = this$static.this$01.array[this$static.currentIndex];
+  checkConcurrentModification(this$static.fence == this$static.this$01.tail && e != null);
+  this$static.lastIndex = this$static.currentIndex;
+  this$static.currentIndex = this$static.currentIndex + 1 & this$static.this$01.array.length - 1;
+  return e;
+}
+
+function $remove_12(this$static) {
+  checkCriticalState(this$static.lastIndex >= 0);
+  if ($removeAtIndex(this$static.this$01, this$static.lastIndex) < 0) {
+    this$static.currentIndex = this$static.currentIndex - 1 & this$static.this$01.array.length - 1;
+    this$static.fence = this$static.this$01.tail;
+  }
+  this$static.lastIndex = -1;
+}
+
+function ArrayDeque$IteratorImpl(this$0) {
+  this.this$01 = this$0;
+  this.currentIndex = this.this$01.head_0;
+  this.fence = this.this$01.tail;
+}
+
+defineClass(287, 1, {}, ArrayDeque$IteratorImpl);
+_.hasNext_0 = function hasNext_5() {
+  return this.currentIndex != this.fence;
+}
+  ;
+_.next_1 = function next_6() {
+  return $next_3(this);
+}
+  ;
+_.remove_1 = function remove_21() {
+  $remove_12(this);
+}
+  ;
+_.currentIndex = 0;
+_.fence = 0;
+_.lastIndex = -1;
+var Ljava_util_ArrayDeque$IteratorImpl_2_classLit = createForClass('java.util', 'ArrayDeque/IteratorImpl', 287);
+function $$init_22(this$static) {
+  this$static.array = initUnidimensionalArray(Ljava_lang_Object_2_classLit, $intern_3, 1, 0, 5, 1);
+}
+
+function $add_7(this$static, index_0, o) {
+  checkCriticalPositionIndex(index_0, this$static.array.length);
+  insertTo(this$static.array, index_0, o);
+}
+
+function $add_8(this$static, o) {
+  this$static.array[this$static.array.length] = o;
+  return true;
+}
+
+function $addAll_0(this$static, c) {
+  var cArray, len;
+  cArray = $toArray(c.arrayList);
+  len = cArray.length;
+  if (len == 0) {
+    return false;
+  }
+  insertTo_0(this$static.array, this$static.array.length, cArray);
+  return true;
+}
+
+function $get_2(this$static, index_0) {
+  checkCriticalElementIndex(index_0, this$static.array.length);
+  return this$static.array[index_0];
+}
+
+function $indexOf_2(this$static, o, index_0) {
+  for (; index_0 < this$static.array.length; ++index_0) {
+    if (equals_27(o, this$static.array[index_0])) {
+      return index_0;
+    }
+  }
+  return -1;
+}
+
+function $remove_13(this$static, index_0) {
+  var previous;
+  previous = (checkCriticalElementIndex(index_0, this$static.array.length), this$static.array[index_0]);
+  removeFrom(this$static.array, index_0);
+  return previous;
+}
+
+function $remove_14(this$static, o) {
+  var i;
+  i = $indexOf_2(this$static, o, 0);
+  if (i == -1) {
+    return false;
+  }
+  checkCriticalElementIndex(i, this$static.array.length);
+  removeFrom(this$static.array, i);
+  return true;
+}
+
+function $removeIf(this$static, filter) {
+  var e, index_0, newArray, newIndex;
+  checkCriticalNotNull(filter);
+  newArray = null;
+  newIndex = 0;
+  for (index_0 = 0; index_0 < this$static.array.length; ++index_0) {
+    e = this$static.array[index_0];
+    if (e.builtin) {
+      if (newArray == null) {
+        newArray = clone(this$static.array, index_0);
+        newIndex = index_0;
+      }
+    }
+    else
+      newArray != null && (newArray[newIndex++] = e);
+  }
+  if (newArray == null) {
+    return false;
+  }
+  this$static.array = newArray;
+  return true;
+}
+
+function $set_1(this$static, index_0, o) {
+  var previous;
+  previous = (checkCriticalElementIndex(index_0, this$static.array.length), this$static.array[index_0]);
+  this$static.array[index_0] = o;
+  return previous;
+}
+
+function $sort(this$static, c) {
+  sort_0(this$static.array, this$static.array.length, c);
+}
+
+function $toArray(this$static) {
+  return clone(this$static.array, this$static.array.length);
+}
+
+function $toArray_0(this$static, out) {
+  var i, size_0;
+  size_0 = this$static.array.length;
+  out.length < size_0 && (out = stampJavaTypeInfo_1(new Array(size_0), out));
+  for (i = 0; i < size_0; ++i) {
+    out[i] = this$static.array[i];
+  }
+  out.length > size_0 && (out[size_0] = null);
+  return out;
+}
+
+function ArrayList() {
+  $$init_22(this);
+}
+
+function ArrayList_0() {
+  $$init_22(this);
+  checkCriticalArgument_0(true, 'Initial capacity must not be negative');
+}
+
+function ArrayList_1(c) {
+  $$init_22(this);
+  insertTo_0(this.array, 0, clone(c.array, c.array.length));
+}
+
+defineClass(39, 243, { 3: 1, 4: 1, 36: 1, 145: 1, 243: 1, 39: 1, 166: 1, 301: 1, 891: 1 }, ArrayList, ArrayList_0, ArrayList_1);
+_.add_2 = function add_16(index_0, o) {
+  $add_7(this, index_0, o);
+}
+  ;
+_.add_1 = function add_17(o) {
+  return $add_8(this, o);
+}
+  ;
+_.contains_0 = function contains_3(o) {
+  return $indexOf_2(this, o, 0) != -1;
+}
+  ;
+_.get_0 = function get_2(index_0) {
+  return $get_2(this, index_0);
+}
+  ;
+_.isEmpty = function isEmpty_1() {
+  return this.array.length == 0;
+}
+  ;
+_.iterator = function iterator_9() {
+  return new ArrayList$1(this);
+}
+  ;
+_.remove_3 = function remove_22(index_0) {
+  return $remove_13(this, index_0);
+}
+  ;
+_.remove_2 = function remove_23(o) {
+  return $remove_14(this, o);
+}
+  ;
+_.size_1 = function size_4() {
+  return this.array.length;
+}
+  ;
+var Ljava_util_ArrayList_2_classLit = createForClass('java.util', 'ArrayList', 39);
+function $next_4(this$static) {
+  checkCriticalElement(this$static.i < this$static.this$01.array.length);
+  this$static.last = this$static.i++;
+  return this$static.this$01.array[this$static.last];
+}
+
+function $remove_15(this$static) {
+  checkCriticalState(this$static.last != -1);
+  $remove_13(this$static.this$01, this$static.i = this$static.last);
+  this$static.last = -1;
+}
+
+function ArrayList$1(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(19, 1, {}, ArrayList$1);
+_.hasNext_0 = function hasNext_6() {
+  return this.i < this.this$01.array.length;
+}
+  ;
+_.next_1 = function next_7() {
+  return $next_4(this);
+}
+  ;
+_.remove_1 = function remove_24() {
+  $remove_15(this);
+}
+  ;
+_.i = 0;
+_.last = -1;
+var Ljava_util_ArrayList$1_2_classLit = createForClass('java.util', 'ArrayList/1', 19);
+function copyPrimitiveArray(original, copy) {
+  var copyLen, len;
+  len = original.length;
+  copyLen = $wnd.Math.min(6, len);
+  copy_0(original, 0, copy, 0, copyLen, true);
+  return copy;
+}
+
+function hashCode_19(a) {
+  var e, e$index, e$max, hashCode;
+  hashCode = 1;
+  for (e$index = 0, e$max = a.length; e$index < e$max; ++e$index) {
+    e = a[e$index];
+    hashCode = 31 * hashCode + (e != null ? hashCode__I__devirtual$(e) : 0);
+    hashCode = hashCode | 0;
+  }
+  return hashCode;
+}
+
+function insertionSort(array, low, high, comp) {
+  var i, j, t;
+  for (i = low + 1; i < high; ++i) {
+    for (j = i; j > low && comp.compare(array[j - 1], array[j]) > 0; --j) {
+      t = array[j];
+      array[j] = array[j - 1];
+      array[j - 1] = t;
+    }
+  }
+}
+
+function merge(src_0, srcLow, srcMid, srcHigh, dest, destLow, destHigh, comp) {
+  var topIdx;
+  topIdx = srcMid;
+  while (destLow < destHigh) {
+    topIdx >= srcHigh || srcLow < srcMid && comp.compare(src_0[srcLow], src_0[topIdx]) <= 0 ? (dest[destLow++] = src_0[srcLow++]) : (dest[destLow++] = src_0[topIdx++]);
+  }
+}
+
+function mergeSort(x_0, fromIndex, toIndex, comp) {
+  var temp;
+  comp = ($clinit_Comparators(), !comp ? INTERNAL_NATURAL_ORDER : comp);
+  temp = x_0.slice(fromIndex, toIndex);
+  mergeSort_0(temp, x_0, fromIndex, toIndex, -fromIndex, comp);
+}
+
+function mergeSort_0(temp, array, low, high, ofs, comp) {
+  var length_0, tempHigh, tempLow, tempMid;
+  length_0 = high - low;
+  if (length_0 < 7) {
+    insertionSort(array, low, high, comp);
+    return;
+  }
+  tempLow = low + ofs;
+  tempHigh = high + ofs;
+  tempMid = tempLow + (tempHigh - tempLow >> 1);
+  mergeSort_0(array, temp, tempLow, tempMid, -ofs, comp);
+  mergeSort_0(array, temp, tempMid, tempHigh, -ofs, comp);
+  if (comp.compare(temp[tempMid - 1], temp[tempMid]) <= 0) {
+    while (low < high) {
+      array[low++] = temp[tempLow++];
+    }
+    return;
+  }
+  merge(temp, tempLow, tempMid, tempHigh, array, low, high, comp);
+}
+
+function sort_0(x_0, toIndex, c) {
+  checkCriticalArrayBounds(toIndex, x_0.length);
+  mergeSort(x_0, 0, toIndex, c);
+}
+
+function $clinit_Collections() {
+  $clinit_Collections = emptyMethod;
+  EMPTY_LIST = new Collections$EmptyList;
+}
+
+function hashCode_20(collection) {
+  $clinit_Collections();
+  var e, e$iterator, hashCode;
+  hashCode = 0;
+  for (e$iterator = collection.iterator(); e$iterator.hasNext_0();) {
+    e = e$iterator.next_1();
+    hashCode = hashCode + (e != null ? hashCode__I__devirtual$(e) : 0);
+    hashCode = hashCode | 0;
+  }
+  return hashCode;
+}
+
+function hashCode_21(list) {
+  $clinit_Collections();
+  var e, e$iterator, hashCode;
+  hashCode = 1;
+  for (e$iterator = list.iterator(); e$iterator.hasNext_0();) {
+    e = e$iterator.next_1();
+    hashCode = 31 * hashCode + (e != null ? hashCode__I__devirtual$(e) : 0);
+    hashCode = hashCode | 0;
+  }
+  return hashCode;
+}
+
+var EMPTY_LIST;
+function Collections$EmptyList() {
+}
+
+defineClass(480, 243, { 3: 1, 36: 1, 145: 1, 243: 1, 166: 1, 301: 1, 891: 1 }, Collections$EmptyList);
+_.contains_0 = function contains_4(object) {
+  return false;
+}
+  ;
+_.get_0 = function get_3(location_0) {
+  checkCriticalElementIndex(location_0, 0);
+  return null;
+}
+  ;
+_.iterator = function iterator_10() {
+  return $clinit_Collections(), $clinit_Collections$EmptyListIterator(), INSTANCE_2;
+}
+  ;
+_.listIterator = function listIterator_1() {
+  return $clinit_Collections(), $clinit_Collections$EmptyListIterator(), INSTANCE_2;
+}
+  ;
+_.size_1 = function size_5() {
+  return 0;
+}
+  ;
+var Ljava_util_Collections$EmptyList_2_classLit = createForClass('java.util', 'Collections/EmptyList', 480);
+function $clinit_Collections$EmptyListIterator() {
+  $clinit_Collections$EmptyListIterator = emptyMethod;
+  INSTANCE_2 = new Collections$EmptyListIterator;
+}
+
+function Collections$EmptyListIterator() {
+}
+
+defineClass(481, 1, {}, Collections$EmptyListIterator);
+_.hasNext_0 = function hasNext_7() {
+  return false;
+}
+  ;
+_.hasPrevious = function hasPrevious_0() {
+  return false;
+}
+  ;
+_.next_1 = function next_8() {
+  throw toJs(new NoSuchElementException);
+}
+  ;
+_.previous = function previous_1() {
+  throw toJs(new NoSuchElementException);
+}
+  ;
+_.remove_1 = function remove_25() {
+  throw toJs(new IllegalStateException);
+}
+  ;
+var INSTANCE_2;
+var Ljava_util_Collections$EmptyListIterator_2_classLit = createForClass('java.util', 'Collections/EmptyListIterator', 481);
+function $compare(a, b) {
+  return compare_8(a.fScore, b.fScore);
+}
+
+function Comparator$lambda$2$Type() {
+}
+
+defineClass(449, 1, { 3: 1 }, Comparator$lambda$2$Type);
+_.equals_0 = function equals_24(other) {
+  return this === other;
+}
+  ;
+_.compare = function compare_11(a, b) {
+  return $compare(a, b);
+}
+  ;
+var Ljava_util_Comparator$lambda$2$Type_2_classLit = createForClass('java.util', 'Comparator/lambda$2$Type', 449);
+function $clinit_Comparators() {
+  $clinit_Comparators = emptyMethod;
+  INTERNAL_NATURAL_ORDER = new Comparators$NaturalOrderComparator;
+}
+
+var INTERNAL_NATURAL_ORDER;
+function Comparators$NaturalOrderComparator() {
+}
+
+defineClass(880, 1, { 3: 1 }, Comparators$NaturalOrderComparator);
+_.compare = function compare_12(a, b) {
+  return checkCriticalNotNull(a), compareTo_Ljava_lang_Object__I__devirtual$(a, (checkCriticalNotNull(b), b));
+}
+  ;
+_.equals_0 = function equals_25(other) {
+  return this === other;
+}
+  ;
+var Ljava_util_Comparators$NaturalOrderComparator_2_classLit = createForClass('java.util', 'Comparators/NaturalOrderComparator', 880);
+function checkStructuralChange(host, iterator) {
+  if (iterator.$modCount != host.$modCount) {
+    throw toJs(new ConcurrentModificationException);
+  }
+}
+
+function recordLastKnownStructure(host, iterator) {
+  iterator.$modCount = host.$modCount;
+}
+
+function structureChanged(host) {
+  var modCount, modCountable;
+  modCountable = host;
+  modCount = modCountable.$modCount | 0;
+  modCountable.$modCount = modCount + 1;
+}
+
+function ConcurrentModificationException() {
+  RuntimeException.call(this);
+}
+
+defineClass(438, 79, $intern_7, ConcurrentModificationException);
+var Ljava_util_ConcurrentModificationException_2_classLit = createForClass('java.util', 'ConcurrentModificationException', 438);
+function Date_0() {
+  this.jsdate = new $wnd.Date;
+}
+
+function Date_1(date) {
+  this.jsdate = new $wnd.Date(toDouble_0(date));
+}
+
+function padTwo(number) {
+  return number < 10 ? '0' + number : '' + number;
+}
+
+defineClass(171, 1, { 3: 1, 4: 1, 14: 1, 171: 1 }, Date_0, Date_1);
+_.compareTo = function compareTo_6(other) {
+  return compare_10(fromDouble_0(this.jsdate.getTime()), fromDouble_0(other.jsdate.getTime()));
+}
+  ;
+_.equals_0 = function equals_26(obj) {
+  return instanceOf(obj, 171) && eq(fromDouble_0(this.jsdate.getTime()), fromDouble_0(obj.jsdate.getTime()));
+}
+  ;
+_.hashCode_0 = function hashCode_22() {
+  var time;
+  time = fromDouble_0(this.jsdate.getTime());
+  return toInt_0(xor_0(time, createLongEmul(shru(isSmallLong0(time) ? toBigLong(time) : time, 32))));
+}
+  ;
+_.toString_0 = function toString_32() {
+  var hourOffset, minuteOffset, offset;
+  offset = -this.jsdate.getTimezoneOffset();
+  hourOffset = (offset >= 0 ? '+' : '') + (offset / 60 | 0);
+  minuteOffset = padTwo($wnd.Math.abs(offset) % 60);
+  return ($clinit_Date$StringData(), DAYS)[this.jsdate.getDay()] + ' ' + MONTHS[this.jsdate.getMonth()] + ' ' + padTwo(this.jsdate.getDate()) + ' ' + padTwo(this.jsdate.getHours()) + ':' + padTwo(this.jsdate.getMinutes()) + ':' + padTwo(this.jsdate.getSeconds()) + ' GMT' + hourOffset + minuteOffset + ' ' + this.jsdate.getFullYear();
+}
+  ;
+var Ljava_util_Date_2_classLit = createForClass('java.util', 'Date', 171);
+function $clinit_Date$StringData() {
+  $clinit_Date$StringData = emptyMethod;
+  DAYS = stampJavaTypeInfo(getClassLiteralForArray(Ljava_lang_String_2_classLit, 1), $intern_23, 2, 6, ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']);
+  MONTHS = stampJavaTypeInfo(getClassLiteralForArray(Ljava_lang_String_2_classLit, 1), $intern_23, 2, 6, ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']);
+}
+
+var DAYS, MONTHS;
+function $equals_3(value1, value2) {
+  return maskUndefined(value1) === maskUndefined(value2) || value1 != null && equals_Ljava_lang_Object__Z__devirtual$(value1, value2);
+}
+
+function HashMap() {
+  $reset_10(this);
+}
+
+function HashMap_0(ignored) {
+  checkCriticalArgument_0(ignored >= 0, 'Negative initial capacity');
+  checkCriticalArgument_0(true, 'Non-positive load factor');
+  $reset_10(this);
+}
+
+function HashMap_1(toBeCopied) {
+  $reset_10(this);
+  $putAll(this, toBeCopied);
+}
+
+defineClass(44, 241, { 3: 1, 4: 1, 44: 1, 889: 1 }, HashMap, HashMap_0, HashMap_1);
+var Ljava_util_HashMap_2_classLit = createForClass('java.util', 'HashMap', 44);
+function $add_9(this$static, o) {
+  var old;
+  old = $put_0(this$static.map_0, o, this$static);
+  return old == null;
+}
+
+function $contains_3(this$static, o) {
+  return $containsKey(this$static.map_0, o);
+}
+
+function $remove_16(this$static, o) {
+  return $remove_8(this$static.map_0, o) != null;
+}
+
+function HashSet() {
+  this.map_0 = new HashMap;
+}
+
+function HashSet_0(c) {
+  this.map_0 = new HashMap_0(c.arrayList.array.length);
+  $addAll(this, c);
+}
+
+defineClass(189, 907, { 3: 1, 4: 1, 36: 1, 145: 1, 166: 1, 300: 1 }, HashSet, HashSet_0);
+_.add_1 = function add_18(o) {
+  return $add_9(this, o);
+}
+  ;
+_.contains_0 = function contains_5(o) {
+  return $contains_3(this, o);
+}
+  ;
+_.isEmpty = function isEmpty_2() {
+  return $size(this.map_0) == 0;
+}
+  ;
+_.iterator = function iterator_11() {
+  var outerIter;
+  return outerIter = new AbstractHashMap$EntrySetIterator((new AbstractHashMap$EntrySet((new AbstractMap$1(this.map_0)).this$01)).this$01), new AbstractMap$1$1(outerIter);
+}
+  ;
+_.remove_2 = function remove_26(o) {
+  return $remove_16(this, o);
+}
+  ;
+_.size_1 = function size_6() {
+  return $size(this.map_0);
+}
+  ;
+var Ljava_util_HashSet_2_classLit = createForClass('java.util', 'HashSet', 189);
+function $findEntryInChain(key, chain) {
+  var entry, entry$index, entry$max;
+  for (entry$index = 0, entry$max = chain.length; entry$index < entry$max; ++entry$index) {
+    entry = chain[entry$index];
+    if ($equals_3(key, entry.getKey())) {
+      return entry;
+    }
+  }
+  return null;
+}
+
+function $getChainOrEmpty(this$static, hashCode) {
+  var chain;
+  chain = this$static.backingMap.get(hashCode);
+  return chain == null ? new Array : chain;
+}
+
+function $getEntry(this$static, key) {
+  var hashCode;
+  return $findEntryInChain(key, $getChainOrEmpty(this$static, key == null ? 0 : (hashCode = hashCode__I__devirtual$(key), hashCode | 0)));
+}
+
+function $put_1(this$static, key, value_0) {
+  var chain, chain0, entry, hashCode, hashCode0;
+  hashCode0 = key == null ? 0 : (hashCode = hashCode__I__devirtual$(key), hashCode | 0);
+  chain0 = (chain = this$static.backingMap.get(hashCode0), chain == null ? new Array : chain);
+  if (chain0.length == 0) {
+    this$static.backingMap.set(hashCode0, chain0);
+  }
+  else {
+    entry = $findEntryInChain(key, chain0);
+    if (entry) {
+      return entry.setValue(value_0);
+    }
+  }
+  chain0[chain0.length] = new AbstractMap$SimpleEntry(key, value_0);
+  ++this$static.size_0;
+  structureChanged(this$static.host);
+  return null;
+}
+
+function $remove_17(this$static, key) {
+  var chain, chain0, entry, hashCode, hashCode0, i;
+  hashCode0 = key == null ? 0 : (hashCode = hashCode__I__devirtual$(key), hashCode | 0);
+  chain0 = (chain = this$static.backingMap.get(hashCode0), chain == null ? new Array : chain);
+  for (i = 0; i < chain0.length; i++) {
+    entry = chain0[i];
+    if ($equals_3(key, entry.getKey())) {
+      if (chain0.length == 1) {
+        chain0.length = 0;
+        $delete_0(this$static.backingMap, hashCode0);
+      }
+      else {
+        chain0.splice(i, 1);
+      }
+      --this$static.size_0;
+      structureChanged(this$static.host);
+      return entry.getValue();
+    }
+  }
+  return null;
+}
+
+function InternalHashCodeMap(host) {
+  this.backingMap = newJsMap();
+  this.host = host;
+}
+
+defineClass(482, 1, { 36: 1 }, InternalHashCodeMap);
+_.iterator = function iterator_12() {
+  return new InternalHashCodeMap$1(this);
+}
+  ;
+_.size_0 = 0;
+var Ljava_util_InternalHashCodeMap_2_classLit = createForClass('java.util', 'InternalHashCodeMap', 482);
+function InternalHashCodeMap$1(this$0) {
+  this.this$01 = this$0;
+  this.chains = this.this$01.backingMap.entries();
+  this.chain = new Array;
+}
+
+defineClass(316, 1, {}, InternalHashCodeMap$1);
+_.next_1 = function next_9() {
+  return this.lastEntry = this.chain[this.itemIndex++], this.lastEntry;
+}
+  ;
+_.hasNext_0 = function hasNext_8() {
+  var current;
+  if (this.itemIndex < this.chain.length) {
+    return true;
+  }
+  current = this.chains.next();
+  if (!current.done) {
+    this.chain = current.value[1];
+    this.itemIndex = 0;
+    return true;
+  }
+  return false;
+}
+  ;
+_.remove_1 = function remove_27() {
+  $remove_17(this.this$01, this.lastEntry.getKey());
+  this.itemIndex != 0 && --this.itemIndex;
+}
+  ;
+_.itemIndex = 0;
+_.lastEntry = null;
+var Ljava_util_InternalHashCodeMap$1_2_classLit = createForClass('java.util', 'InternalHashCodeMap/1', 316);
+function $delete_0(this$static, key) {
+  var fn;
+  fn = this$static['delete'];
+  fn.call(this$static, key);
+}
+
+function $delete_1(this$static, key) {
+  var fn;
+  fn = this$static['delete'];
+  fn.call(this$static, key);
+}
+
+function $clinit_InternalJsMapFactory() {
+  $clinit_InternalJsMapFactory = emptyMethod;
+  jsMapCtor = getJsMapConstructor();
+}
+
+function canHandleObjectCreateAndProto() {
+  if (!Object.create || !Object.getOwnPropertyNames) {
+    return false;
+  }
+  var protoField = '__proto__';
+  var map_0 = Object.create(null);
+  if (map_0[protoField] !== undefined) {
+    return false;
+  }
+  var keys_0 = Object.getOwnPropertyNames(map_0);
+  if (keys_0.length != 0) {
+    return false;
+  }
+  map_0[protoField] = 42;
+  if (map_0[protoField] !== 42) {
+    return false;
+  }
+  if (Object.getOwnPropertyNames(map_0).length == 0) {
+    return false;
+  }
+  return true;
+}
+
+function getJsMapConstructor() {
+  function isCorrectIterationProtocol() {
+    try {
+      return (new Map).entries().next().done;
+    }
+    catch (e) {
+      return false;
+    }
+  }
+
+  if (typeof Map === 'function' && Map.prototype.entries && isCorrectIterationProtocol()) {
+    return Map;
+  }
+  else {
+    return getJsMapPolyFill();
+  }
+}
+
+function getJsMapPolyFill() {
+  function Stringmap() {
+    this.obj = this.createObject();
+  }
+
+  ;
+  Stringmap.prototype.createObject = function (key) {
+    return Object.create(null);
+  }
+    ;
+  Stringmap.prototype.get = function (key) {
+    return this.obj[key];
+  }
+    ;
+  Stringmap.prototype.set = function (key, value_0) {
+    this.obj[key] = value_0;
+  }
+    ;
+  Stringmap.prototype['delete'] = function (key) {
+    delete this.obj[key];
+  }
+    ;
+  Stringmap.prototype.keys = function () {
+    return Object.getOwnPropertyNames(this.obj);
+  }
+    ;
+  Stringmap.prototype.entries = function () {
+    var keys_0 = this.keys();
+    var map_0 = this;
+    var nextIndex = 0;
+    return {
+      next: function () {
+        if (nextIndex >= keys_0.length)
+          return { done: true };
+        var key = keys_0[nextIndex++];
+        return { value: [key, map_0.get(key)], done: false };
+      }
+    };
+  }
+    ;
+  if (!canHandleObjectCreateAndProto()) {
+    Stringmap.prototype.createObject = function () {
+      return {};
+    }
+      ;
+    Stringmap.prototype.get = function (key) {
+      return this.obj[':' + key];
+    }
+      ;
+    Stringmap.prototype.set = function (key, value_0) {
+      this.obj[':' + key] = value_0;
+    }
+      ;
+    Stringmap.prototype['delete'] = function (key) {
+      delete this.obj[':' + key];
+    }
+      ;
+    Stringmap.prototype.keys = function () {
+      var result = [];
+      for (var key in this.obj) {
+        key.charCodeAt(0) == 58 && result.push(key.substring(1));
+      }
+      return result;
+    }
+      ;
+  }
+  return Stringmap;
+}
+
+function newJsMap() {
+  $clinit_InternalJsMapFactory();
+  return new jsMapCtor;
+}
+
+var jsMapCtor;
+function $contains_4(this$static, key) {
+  return !(this$static.backingMap.get(key) === undefined);
+}
+
+function $get_3(this$static, key) {
+  return this$static.backingMap.get(key);
+}
+
+function $put_2(this$static, key, value_0) {
+  var oldValue;
+  oldValue = this$static.backingMap.get(key);
+  this$static.backingMap.set(key, value_0 === undefined ? null : value_0);
+  if (oldValue === undefined) {
+    ++this$static.size_0;
+    structureChanged(this$static.host);
+  }
+  else {
+    ++this$static.valueMod;
+  }
+  return oldValue;
+}
+
+function $remove_18(this$static, key) {
+  var value_0;
+  value_0 = this$static.backingMap.get(key);
+  if (value_0 === undefined) {
+    ++this$static.valueMod;
+  }
+  else {
+    $delete_1(this$static.backingMap, key);
+    --this$static.size_0;
+    structureChanged(this$static.host);
+  }
+  return value_0;
+}
+
+function InternalStringMap(host) {
+  this.backingMap = newJsMap();
+  this.host = host;
+}
+
+defineClass(478, 1, { 36: 1 }, InternalStringMap);
+_.iterator = function iterator_13() {
+  return new InternalStringMap$1(this);
+}
+  ;
+_.size_0 = 0;
+_.valueMod = 0;
+var Ljava_util_InternalStringMap_2_classLit = createForClass('java.util', 'InternalStringMap', 478);
+function InternalStringMap$1(this$0) {
+  this.this$01 = this$0;
+  this.entries_0 = this.this$01.backingMap.entries();
+  this.current = this.entries_0.next();
+}
+
+defineClass(313, 1, {}, InternalStringMap$1);
+_.next_1 = function next_10() {
+  return this.last = this.current, this.current = this.entries_0.next(), new InternalStringMap$2(this.this$01, this.last, this.this$01.valueMod);
+}
+  ;
+_.hasNext_0 = function hasNext_9() {
+  return !this.current.done;
+}
+  ;
+_.remove_1 = function remove_28() {
+  $remove_18(this.this$01, this.last.value[0]);
+}
+  ;
+var Ljava_util_InternalStringMap$1_2_classLit = createForClass('java.util', 'InternalStringMap/1', 313);
+function $getValue_0(this$static) {
+  if (this$static.this$01.valueMod != this$static.val$lastValueMod3) {
+    return $get_3(this$static.this$01, this$static.val$entry2.value[0]);
+  }
+  return this$static.val$entry2.value[1];
+}
+
+function InternalStringMap$2(this$0, val$entry, val$lastValueMod) {
+  this.this$01 = this$0;
+  this.val$entry2 = val$entry;
+  this.val$lastValueMod3 = val$lastValueMod;
+}
+
+defineClass(479, 912, $intern_133, InternalStringMap$2);
+_.getKey = function getKey_0() {
+  return this.val$entry2.value[0];
+}
+  ;
+_.getValue = function getValue_0() {
+  return $getValue_0(this);
+}
+  ;
+_.setValue = function setValue_0(object) {
+  return $put_2(this.this$01, this.val$entry2.value[0], object);
+}
+  ;
+_.val$lastValueMod3 = 0;
+var Ljava_util_InternalStringMap$2_2_classLit = createForClass('java.util', 'InternalStringMap/2', 479);
+function NoSuchElementException() {
+  RuntimeException.call(this);
+}
+
+defineClass(161, 79, { 3: 1, 15: 1, 40: 1, 161: 1 }, NoSuchElementException);
+var Ljava_util_NoSuchElementException_2_classLit = createForClass('java.util', 'NoSuchElementException', 161);
+function equals_27(a, b) {
+  return maskUndefined(a) === maskUndefined(b) || a != null && equals_Ljava_lang_Object__Z__devirtual$(a, b);
+}
+
+function hashCode_23(o) {
+  return o != null ? hashCode__I__devirtual$(o) : 0;
+}
+
+function $mergeHeaps(this$static, node) {
+  var heapSize, smallestChild, value_0, leftChild, rightChild, smallestChild_0;
+  heapSize = this$static.heap.array.length;
+  value_0 = $get_2(this$static.heap, node);
+  while (node * 2 + 1 < heapSize) {
+    smallestChild = (leftChild = 2 * node + 1, rightChild = leftChild + 1, smallestChild_0 = leftChild, rightChild < heapSize && $compare($get_2(this$static.heap, rightChild), $get_2(this$static.heap, leftChild)) < 0 && (smallestChild_0 = rightChild), smallestChild_0);
+    if ($compare(value_0, $get_2(this$static.heap, smallestChild)) < 0) {
+      break;
+    }
+    $set_1(this$static.heap, node, $get_2(this$static.heap, smallestChild));
+    node = smallestChild;
+  }
+  $set_1(this$static.heap, node, value_0);
+}
+
+function $offer(this$static, e) {
+  var childNode, node;
+  checkCriticalNotNull(e);
+  node = this$static.heap.array.length;
+  $add_8(this$static.heap, e);
+  while (node > 0) {
+    childNode = node;
+    node = (node - 1) / 2 | 0;
+    if ($compare($get_2(this$static.heap, node), e) <= 0) {
+      $set_1(this$static.heap, childNode, e);
+      return true;
+    }
+    $set_1(this$static.heap, childNode, $get_2(this$static.heap, node));
+  }
+  $set_1(this$static.heap, node, e);
+  return true;
+}
+
+function $removeAtIndex_0(this$static, index_0) {
+  var lastValue;
+  lastValue = $remove_13(this$static.heap, this$static.heap.array.length - 1);
+  if (index_0 < this$static.heap.array.length) {
+    $set_1(this$static.heap, index_0, lastValue);
+    $mergeHeaps(this$static, index_0);
+  }
+}
+
+function PriorityQueue(comparator) {
+  this.heap = new ArrayList_0;
+  this.cmp = ($clinit_Comparators(), comparator);
+}
+
+defineClass(440, 932, $intern_131, PriorityQueue);
+_.contains_0 = function contains_6(o) {
+  return (o == null ? -1 : $indexOf_2(this.heap, o, 0)) != -1;
+}
+  ;
+_.iterator = function iterator_14() {
+  return new PriorityQueue$1(this);
+}
+  ;
+_.remove_2 = function remove_29(o) {
+  var index_0;
+  index_0 = !o ? -1 : $indexOf_2(this.heap, o, 0);
+  if (index_0 < 0) {
+    return false;
+  }
+  $removeAtIndex_0(this, index_0);
+  return true;
+}
+  ;
+_.size_1 = function size_7() {
+  return this.heap.array.length;
+}
+  ;
+var Ljava_util_PriorityQueue_2_classLit = createForClass('java.util', 'PriorityQueue', 440);
+function PriorityQueue$1(this$0) {
+  this.this$01 = this$0;
+}
+
+defineClass(870, 1, {}, PriorityQueue$1);
+_.hasNext_0 = function hasNext_10() {
+  return this.i < this.this$01.heap.array.length;
+}
+  ;
+_.next_1 = function next_11() {
+  checkCriticalElement(this.i < this.this$01.heap.array.length);
+  this.last = this.i++;
+  return $get_2(this.this$01.heap, this.last);
+}
+  ;
+_.remove_1 = function remove_30() {
+  checkCriticalState(this.last != -1);
+  $removeAtIndex_0(this.this$01, this.i = this.last);
+  this.last = -1;
+}
+  ;
+_.i = 0;
+_.last = -1;
+var Ljava_util_PriorityQueue$1_2_classLit = createForClass('java.util', 'PriorityQueue/1', 870);
+function $clinit_Random() {
+  $clinit_Random = emptyMethod;
+  var i, i0, twoToTheXMinus24Tmp, twoToTheXMinus48Tmp;
+  twoToTheXMinus24 = initUnidimensionalArray(D_classLit, $intern_70, 8, 25, 15, 1);
+  twoToTheXMinus48 = initUnidimensionalArray(D_classLit, $intern_70, 8, 33, 15, 1);
+  twoToTheXMinus48Tmp = 1.52587890625E-5;
+  for (i0 = 32; i0 >= 0; i0--) {
+    twoToTheXMinus48[i0] = twoToTheXMinus48Tmp;
+    twoToTheXMinus48Tmp *= 0.5;
+  }
+  twoToTheXMinus24Tmp = 1;
+  for (i = 24; i >= 0; i--) {
+    twoToTheXMinus24[i] = twoToTheXMinus24Tmp;
+    twoToTheXMinus24Tmp *= 0.5;
+  }
+}
+
+function $nextDouble(this$static) {
+  return $nextInternal(this$static, 26) * 1.4901161193847656E-8 + $nextInternal(this$static, 27) * 1.1102230246251565E-16;
+}
+
+function $nextInternal(this$static, bits) {
+  var carry, dval, h, hi, l_0, lo;
+  hi = this$static.seedhi * $intern_134 + this$static.seedlo * 1502;
+  lo = this$static.seedlo * $intern_134 + 11;
+  carry = $wnd.Math.floor(lo * $intern_135);
+  hi += carry;
+  lo -= carry * $intern_46;
+  hi %= $intern_46;
+  this$static.seedhi = hi;
+  this$static.seedlo = lo;
+  if (bits <= 24) {
+    return $wnd.Math.floor(this$static.seedhi * twoToTheXMinus24[bits]);
+  }
+  else {
+    h = this$static.seedhi * (1 << bits - 24);
+    l_0 = $wnd.Math.floor(this$static.seedlo * twoToTheXMinus48[bits]);
+    dval = h + l_0;
+    dval >= 2147483648 && (dval -= 4294967296);
+    return dval;
+  }
+}
+
+function Random() {
+  $clinit_Random();
+  var hi, lo, seed;
+  seed = uniqueSeed++ + Date.now();
+  hi = round_int($wnd.Math.floor(seed * $intern_135)) & 16777215;
+  lo = round_int(seed - hi * $intern_46);
+  this.seedhi = hi ^ 1502;
+  this.seedlo = lo ^ $intern_134;
+}
+
+defineClass(520, 1, {}, Random);
+_.seedhi = 0;
+_.seedlo = 0;
+var twoToTheXMinus24, twoToTheXMinus48, uniqueSeed = 0;
+var Ljava_util_Random_2_classLit = createForClass('java.util', 'Random', 520);
+function $add_10(this$static, newElement) {
+  !this$static.builder ? (this$static.builder = new StringBuilder_1(this$static.prefix)) : $append_4(this$static.builder, this$static.delimiter);
+  $append_3(this$static.builder, newElement);
+  return this$static;
+}
+
+function StringJoiner(prefix, suffix) {
+  this.delimiter = ', ';
+  this.prefix = prefix;
+  this.suffix = suffix;
+  this.emptyValue = this.prefix + ('' + this.suffix);
+}
+
+defineClass(306, 1, {}, StringJoiner);
+_.toString_0 = function toString_33() {
+  return !this.builder ? this.emptyValue : this.suffix.length == 0 ? this.builder.string : this.builder.string + ('' + this.suffix);
+}
+  ;
+var Ljava_util_StringJoiner_2_classLit = createForClass('java.util', 'StringJoiner', 306);
+function $add_11(this$static, o) {
+  return $add_8(this$static.arrayList, o);
+}
+
+function $addAll_1(this$static, c) {
+  return $addAll_0(this$static.arrayList, c);
+}
+
+function $addElement(this$static, o) {
+  $add_8(this$static.arrayList, o);
+}
+
+function $contains_5(this$static, elem) {
+  return $indexOf_2(this$static.arrayList, elem, 0) != -1;
+}
+
+function $elementAt(this$static, index_0) {
+  return checkArrayElementIndex(index_0, this$static.arrayList.array.length), $get_2(this$static.arrayList, index_0);
+}
+
+function $firstElement(this$static) {
+  checkCriticalElement(this$static.arrayList.array.length != 0);
+  return checkArrayElementIndex(0, this$static.arrayList.array.length), $get_2(this$static.arrayList, 0);
+}
+
+function $get_4(this$static, index_0) {
+  checkArrayElementIndex(index_0, this$static.arrayList.array.length);
+  return $get_2(this$static.arrayList, index_0);
+}
+
+function $indexOf_3(this$static, elem) {
+  return $indexOf_2(this$static.arrayList, elem, 0);
+}
+
+function $lastElement(this$static) {
+  checkCriticalElement(this$static.arrayList.array.length != 0);
+  return $get_4(this$static, this$static.arrayList.array.length - 1);
+}
+
+function $remove_19(this$static, index_0) {
+  checkArrayElementIndex(index_0, this$static.arrayList.array.length);
+  return $remove_13(this$static.arrayList, index_0);
+}
+
+function $removeElementAt(this$static, index_0) {
+  checkArrayElementIndex(index_0, this$static.arrayList.array.length);
+  $remove_13(this$static.arrayList, index_0);
+}
+
+function $removeIf_0(this$static, filter) {
+  return $removeIf(this$static.arrayList, filter);
+}
+
+function $sort_0(this$static, c) {
+  $sort(this$static.arrayList, c);
+}
+
+function $toArray_1(this$static, a) {
+  return $toArray_0(this$static.arrayList, a);
+}
+
+function Vector() {
+  this.arrayList = new ArrayList;
+}
+
+function Vector_0(c) {
+  this.arrayList = new ArrayList;
+  $addAll_0(this.arrayList, c);
+}
+
+function checkArrayElementIndex(index_0, size_0) {
+  if (index_0 < 0 || index_0 >= size_0) {
+    throw toJs(new ArrayIndexOutOfBoundsException);
+  }
+}
+
+defineClass(25, 243, { 3: 1, 4: 1, 36: 1, 145: 1, 243: 1, 166: 1, 301: 1, 891: 1, 25: 1 }, Vector, Vector_0);
+_.add_2 = function add_19(index_0, o) {
+  checkArrayElementIndex(index_0, this.arrayList.array.length + 1);
+  $add_7(this.arrayList, index_0, o);
+}
+  ;
+_.add_1 = function add_20(o) {
+  return $add_11(this, o);
+}
+  ;
+_.contains_0 = function contains_7(elem) {
+  return $contains_5(this, elem);
+}
+  ;
+_.get_0 = function get_4(index_0) {
+  return $get_4(this, index_0);
+}
+  ;
+_.isEmpty = function isEmpty_3() {
+  return this.arrayList.array.length == 0;
+}
+  ;
+_.iterator = function iterator_15() {
+  return new ArrayList$1(this.arrayList);
+}
+  ;
+_.remove_3 = function remove_31(index_0) {
+  return $remove_19(this, index_0);
+}
+  ;
+_.size_1 = function size_8() {
+  return this.arrayList.array.length;
+}
+  ;
+_.toString_0 = function toString_34() {
+  return $toString_0(this.arrayList);
+}
+  ;
+var Ljava_util_Vector_2_classLit = createForClass('java.util', 'Vector', 25);
+function clone(array, toIndex) {
+  var result;
+  result = array.slice(0, toIndex);
+  return stampJavaTypeInfo_0(result, array);
+}
+
+function copy_0(src_0, srcOfs, dest, destOfs, len, overwrite) {
+  var batchEnd, batchStart, destArray, end, spliceArgs;
+  if (maskUndefined(src_0) === maskUndefined(dest)) {
+    src_0 = src_0.slice(srcOfs, srcOfs + len);
+    srcOfs = 0;
+  }
+  destArray = dest;
+  for (batchStart = srcOfs, end = srcOfs + len; batchStart < end;) {
+    batchEnd = $wnd.Math.min(batchStart + $intern_82, end);
+    len = batchEnd - batchStart;
+    spliceArgs = src_0.slice(batchStart, batchEnd);
+    spliceArgs.splice(0, 0, destOfs, overwrite ? len : 0);
+    Array.prototype.splice.apply(destArray, spliceArgs);
+    batchStart = batchEnd;
+    destOfs += len;
+  }
+}
+
+function createFrom(array, length_0) {
+  return stampJavaTypeInfo_1(new Array(length_0), array);
+}
+
+function insertTo(array, index_0, value_0) {
+  array.splice(index_0, 0, value_0);
+}
+
+function insertTo_0(array, index_0, values) {
+  copy_0(values, 0, array, index_0, values.length, false);
+}
+
+function removeFrom(array, index_0) {
+  array.splice(index_0, 1);
+}
+
+function setLength(array, length_0) {
+  array.length = length_0;
+}
+
+defineClass(977, 1, {});
+function stampJavaTypeInfo_1(array, referenceType) {
+  return stampJavaTypeInfo_0(array, referenceType);
+}
+
+function $clinit_EmulatedCharset() {
+  $clinit_EmulatedCharset = emptyMethod;
+  new EmulatedCharset$UtfCharset;
+  new EmulatedCharset$LatinCharset('ISO-LATIN-1');
+  new EmulatedCharset$LatinCharset('ISO-8859-1');
+}
+
+function EmulatedCharset(name_0) {
+  this.name_0 = name_0;
+}
+
+defineClass(307, 204, $intern_130);
+var Ljavaemul_internal_EmulatedCharset_2_classLit = createForClass('javaemul.internal', 'EmulatedCharset', 307);
+function EmulatedCharset$LatinCharset(name_0) {
+  EmulatedCharset.call(this, name_0);
+}
+
+defineClass(308, 307, $intern_130, EmulatedCharset$LatinCharset);
+var Ljavaemul_internal_EmulatedCharset$LatinCharset_2_classLit = createForClass('javaemul.internal', 'EmulatedCharset/LatinCharset', 308);
+function $decodeString(bytes, ofs, len) {
+  var b, ch_0, charCount, chars, count, i, i0, outIdx, number;
+  charCount = 0;
+  for (i0 = 0; i0 < len;) {
+    ++charCount;
+    ch_0 = bytes[ofs + i0];
+    if ((ch_0 & 192) == 128) {
+      throw toJs(new IllegalArgumentException_0('Invalid UTF8 sequence'));
+    }
+    else if ((ch_0 & 128) == 0) {
+      ++i0;
+    }
+    else if ((ch_0 & 224) == 192) {
+      i0 += 2;
+    }
+    else if ((ch_0 & 240) == 224) {
+      i0 += 3;
+    }
+    else if ((ch_0 & 248) == 240) {
+      i0 += 4;
+    }
+    else {
+      throw toJs(new IllegalArgumentException_0('Invalid UTF8 sequence'));
+    }
+    if (i0 > len) {
+      throw toJs(new IndexOutOfBoundsException_0('Invalid UTF8 sequence'));
+    }
+  }
+  chars = initUnidimensionalArray(C_classLit, $intern_20, 8, charCount, 15, 1);
+  outIdx = 0;
+  count = 0;
+  for (i = 0; i < len;) {
+    ch_0 = bytes[ofs + i++];
+    if ((ch_0 & 128) == 0) {
+      count = 1;
+      ch_0 &= 127;
+    }
+    else if ((ch_0 & 224) == 192) {
+      count = 2;
+      ch_0 &= 31;
+    }
+    else if ((ch_0 & 240) == 224) {
+      count = 3;
+      ch_0 &= 15;
+    }
+    else if ((ch_0 & 248) == 240) {
+      count = 4;
+      ch_0 &= 7;
+    }
+    else if ((ch_0 & 252) == 248) {
+      count = 5;
+      ch_0 &= 3;
+    }
+    while (--count > 0) {
+      b = bytes[ofs + i++];
+      if ((b & 192) != 128) {
+        throw toJs(new IllegalArgumentException_0('Invalid UTF8 sequence at ' + (ofs + i - 1) + ', byte=' + (number = b >>> 0, number.toString(16))));
+      }
+      ch_0 = ch_0 << 6 | b & 63;
+    }
+    outIdx += toChars(ch_0, chars, outIdx);
+  }
+  return chars;
+}
+
+function $encodeUtf8(bytes, ofs, codePoint) {
+  if (codePoint < 128) {
+    bytes[ofs] = (codePoint & 127) << 24 >> 24;
+    return 1;
+  }
+  else if (codePoint < $intern_39) {
+    bytes[ofs++] = (codePoint >> 6 & 31 | 192) << 24 >> 24;
+    bytes[ofs] = (codePoint & 63 | 128) << 24 >> 24;
+    return 2;
+  }
+  else if (codePoint < $intern_41) {
+    bytes[ofs++] = (codePoint >> 12 & 15 | 224) << 24 >> 24;
+    bytes[ofs++] = (codePoint >> 6 & 63 | 128) << 24 >> 24;
+    bytes[ofs] = (codePoint & 63 | 128) << 24 >> 24;
+    return 3;
+  }
+  else if (codePoint < $intern_45) {
+    bytes[ofs++] = (codePoint >> 18 & 7 | 240) << 24 >> 24;
+    bytes[ofs++] = (codePoint >> 12 & 63 | 128) << 24 >> 24;
+    bytes[ofs++] = (codePoint >> 6 & 63 | 128) << 24 >> 24;
+    bytes[ofs] = (codePoint & 63 | 128) << 24 >> 24;
+    return 4;
+  }
+  else if (codePoint < $intern_48) {
+    bytes[ofs++] = (codePoint >> 24 & 3 | 248) << 24 >> 24;
+    bytes[ofs++] = (codePoint >> 18 & 63 | 128) << 24 >> 24;
+    bytes[ofs++] = (codePoint >> 12 & 63 | 128) << 24 >> 24;
+    bytes[ofs++] = (codePoint >> 6 & 63 | 128) << 24 >> 24;
+    bytes[ofs] = (codePoint & 63 | 128) << 24 >> 24;
+    return 5;
+  }
+  throw toJs(new IllegalArgumentException_0('Character out of range: ' + codePoint));
+}
+
+function $getBytes(str) {
+  var byteCount, bytes, ch_0, i, i0, n, out;
+  n = str.length;
+  byteCount = 0;
+  for (i0 = 0; i0 < n;) {
+    ch_0 = codePointAt(str, i0, str.length);
+    i0 += ch_0 >= $intern_41 ? 2 : 1;
+    ch_0 < 128 ? ++byteCount : ch_0 < $intern_39 ? (byteCount += 2) : ch_0 < $intern_41 ? (byteCount += 3) : ch_0 < $intern_45 ? (byteCount += 4) : ch_0 < $intern_48 && (byteCount += 5);
+  }
+  bytes = initUnidimensionalArray(B_classLit, $intern_20, 8, byteCount, 15, 1);
+  out = 0;
+  for (i = 0; i < n;) {
+    ch_0 = codePointAt(str, i, str.length);
+    i += ch_0 >= $intern_41 ? 2 : 1;
+    out += $encodeUtf8(bytes, out, ch_0);
+  }
+  return bytes;
+}
+
+function EmulatedCharset$UtfCharset() {
+  EmulatedCharset.call(this, 'UTF-8');
+}
+
+defineClass(459, 307, $intern_130, EmulatedCharset$UtfCharset);
+var Ljavaemul_internal_EmulatedCharset$UtfCharset_2_classLit = createForClass('javaemul.internal', 'EmulatedCharset/UtfCharset', 459);
+function checkCriticalArgument(expression) {
+  if (!expression) {
+    throw toJs(new IllegalArgumentException);
+  }
+}
+
+function checkCriticalArgument_0(expression, errorMessage) {
+  if (!expression) {
+    throw toJs(new IllegalArgumentException_0(errorMessage));
+  }
+}
+
+function checkCriticalArrayBounds(end, length_0) {
+  if (0 > end) {
+    throw toJs(new IllegalArgumentException_0('fromIndex: 0 > toIndex: ' + end));
+  }
+  if (end > length_0) {
+    throw toJs(new ArrayIndexOutOfBoundsException_0('fromIndex: 0, toIndex: ' + end + ', length: ' + length_0));
+  }
+}
+
+function checkCriticalElement(expression) {
+  if (!expression) {
+    throw toJs(new NoSuchElementException);
+  }
+}
+
+function checkCriticalElementIndex(index_0, size_0) {
+  if (index_0 < 0 || index_0 >= size_0) {
+    throw toJs(new IndexOutOfBoundsException_0('Index: ' + index_0 + ', Size: ' + size_0));
+  }
+}
+
+function checkCriticalNotNull(reference) {
+  if (reference == null) {
+    throw toJs(new NullPointerException);
+  }
+  return reference;
+}
+
+function checkCriticalNotNull_0(reference) {
+  if (!reference) {
+    throw toJs(new NullPointerException_0('Cannot suppress a null exception.'));
+  }
+}
+
+function checkCriticalPositionIndex(index_0, size_0) {
+  if (index_0 < 0 || index_0 > size_0) {
+    throw toJs(new IndexOutOfBoundsException_0('Index: ' + index_0 + ', Size: ' + size_0));
+  }
+}
+
+function checkCriticalState(expression) {
+  if (!expression) {
+    throw toJs(new IllegalStateException);
+  }
+}
+
+function checkCriticalState_0(expression, errorMessage) {
+  if (!expression) {
+    throw toJs(new IllegalStateException_0(errorMessage));
+  }
+}
+
+function checkCriticalStringBounds(end, length_0) {
+  if (end > length_0 || end < 0) {
+    throw toJs(new StringIndexOutOfBoundsException('fromIndex: 0, toIndex: ' + end + ', length: ' + length_0));
+  }
+}
+
+function checkCriticalStringElementIndex(index_0, size_0) {
+  if (index_0 < 0 || index_0 >= size_0) {
+    throw toJs(new StringIndexOutOfBoundsException('Index: ' + index_0 + ', Size: ' + size_0));
+  }
+}
+
+function setPropertySafe(map_0, key, value_0) {
+  try {
+    map_0[key] = value_0;
+  }
+  catch (ignored) {
+  }
+}
+
+defineClass(974, 1, {});
+function getHashCode(o) {
+  return o.$H || (o.$H = ++nextHashId);
+}
+
+var nextHashId = 0;
+function $clinit_StringHashCache() {
+  $clinit_StringHashCache = emptyMethod;
+  back_0 = new Object_0;
+  front = new Object_0;
+}
+
+function compute(str) {
+  var hashCode, i, n, nBatch;
+  hashCode = 0;
+  n = str.length;
+  nBatch = n - 4;
+  i = 0;
+  while (i < nBatch) {
+    hashCode = (checkCriticalStringElementIndex(i + 3, str.length), str.charCodeAt(i + 3) + (checkCriticalStringElementIndex(i + 2, str.length), 31 * (str.charCodeAt(i + 2) + (checkCriticalStringElementIndex(i + 1, str.length), 31 * (str.charCodeAt(i + 1) + (checkCriticalStringElementIndex(i, str.length), 31 * (str.charCodeAt(i) + 31 * hashCode)))))));
+    hashCode = hashCode | 0;
+    i += 4;
+  }
+  while (i < n) {
+    hashCode = hashCode * 31 + $charAt_0(str, i++);
+  }
+  hashCode = hashCode | 0;
+  return hashCode;
+}
+
+function getHashCode_0(str) {
+  $clinit_StringHashCache();
+  var hashCode, key, result;
+  key = ':' + str;
+  result = front[key];
+  if (result != null) {
+    return round_int((checkCriticalNotNull(result), result));
+  }
+  result = back_0[key];
+  hashCode = result == null ? compute(str) : round_int((checkCriticalNotNull(result), result));
+  increment();
+  front[key] = hashCode;
+  return hashCode;
+}
+
+function increment() {
+  if (count_0 == 256) {
+    back_0 = front;
+    front = new Object_0;
+    count_0 = 0;
+  }
+  ++count_0;
+}
+
+var back_0, count_0 = 0, front;
+var C_classLit = createForPrimitive('char', 'C');
+var I_classLit = createForPrimitive('int', 'I');
+var Z_classLit = createForPrimitive('boolean', 'Z');
+var B_classLit = createForPrimitive('byte', 'B');
+var D_classLit = createForPrimitive('double', 'D');
+var $entry = ($clinit_Impl(), entry_0);
+var gwtOnLoad = gwtOnLoad = gwtOnLoad_0;
+addInitFunctions(init);
+setGwtProperty('permProps', [[['locale', 'default'], ['user.agent', 'safari']]]);
+$sendStats('moduleStartup', 'moduleEvalEnd');
+gwtOnLoad(__gwtModuleFunction.__errFn, __gwtModuleFunction.__moduleName, __gwtModuleFunction.__moduleBase, __gwtModuleFunction.__softPermutationId, __gwtModuleFunction.__computePropValue);
+$sendStats('moduleStartup', 'end');
+$gwt && $gwt.permProps && __gwtModuleFunction.__moduleStartupDone($gwt.permProps);
+//# sourceURL=circuitjs1-0.js
+
