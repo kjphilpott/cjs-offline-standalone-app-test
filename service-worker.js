@@ -9,7 +9,7 @@ const urlsToCache = [
     "./resources/customlogic.html",
     "./resources/customtransformer.html",
     "./resources/diodecalc.html",
-    "./icon.svg",
+    "./circuitjs1/assets/icon.svg",
     "./iframe.html",
     "./circuitjs1/libs/lz-string.min.js",
     "./resources/mosfet-beta.html",
