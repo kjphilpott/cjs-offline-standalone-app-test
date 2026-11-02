@@ -245,7 +245,7 @@ function circuitjs1(){
     function tryNocacheJsTag(){
       var scriptTags = $doc_0.getElementsByTagName('script');
       for (var i = 0; i < scriptTags.length; ++i) {
-        if (scriptTags[i].src.indexOf('circuitjs1.nocache.js') != -1) {
+        if (scriptTags[i].src.indexOf('boot.js') != -1) {
           return getDirectoryOfFile(scriptTags[i].src);
         }
       }
@@ -351,13 +351,10 @@ function circuitjs1(){
     circuitjs1.__computePropValue = computePropValue;
     $wnd_0.__gwt_activeModules['circuitjs1'].bindings = circuitjs1.__getPropMap;
     sendStats('bootstrap', 'selectingPermutation');
-    if (isHostedMode()) {
-      return computeUrlForResource('circuitjs1.devmode.js');
-    }
     var strongName;
     try {
-      unflattenKeylistIntoAnswers(['safari'], '36F1448B76FC86511C0BBCAC982CC49F');
-      unflattenKeylistIntoAnswers(['gecko1_8'], 'BF7FE971A936A4BA42E907B8A9853BD0');
+      unflattenKeylistIntoAnswers(['safari'], 'core-engine');
+      unflattenKeylistIntoAnswers(['gecko1_8'], 'core-engine');
       strongName = answers[computePropValue('user.agent')];
       var idx = strongName.indexOf(':');
       if (idx != -1) {
