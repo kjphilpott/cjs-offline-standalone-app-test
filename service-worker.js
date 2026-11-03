@@ -3,7 +3,6 @@ const urlsToCache = [
     "./about.html",
     "./circuitjs1/libs/canvas2svg.js",
     "./circuitjs.html",
-    "./circuitjs1/core-engine.cache.js",
     "./resources/crystal.html",
     "./resources/customfunction.html",
     "./resources/customlogic.html",
@@ -378,12 +377,10 @@ const urlsToCache = [
     "./circuitjs1/circuits/cs-varyresistor.txt",
     "./circuitjs1/circuits/relayand.txt",
     "./circuitjs1/circuits/3-cgor.txt",
-    "./circuitjs1/assets/clean.css",
     "./circuitjs1/setuplist.txt",
-    "./circuitjs1/x.txt",
-    "./circuitjs1/assets/images/subcircuits/subcircuit-pins1.png",
-    "./circuitjs1/assets/images/subcircuits/subcircuit-pins2.png",
-    "./circuitjs1/core-engine.cache.js",
+    "./circuitjs1/assets/img/subcircuit-pins1.png",
+    "./circuitjs1/assets/img/subcircuit-pins2.png",
+    "./circuitjs1/main.js",
     "./circuitjs1/style.css",
 ];
 

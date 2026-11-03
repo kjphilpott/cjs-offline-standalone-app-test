@@ -1,127 +1,775 @@
 @charset "UTF-8";
+:root {
+  --primary: #3a6aad;
+  --menu-blue: #e3e8f3;
+  --border: #bbb;
+  --font: Arial Unicode MS, Arial, sans-serif;
+}
+body,
+table td,
+select,
+button,
+.gwt-menubar .gwt-menuitem,
+.gwt-textbox,
+.gwt-passwordtextbox,
+.gwt-textarea,
+.gwt-suggestbox {
+  font-family: var(--font) !important;
+  font-size: small !important;
+}
+body {
+  color: #000 !important;
+  margin: 10px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  background: #fff !important;
+  direction: ltr !important;
+}
+pre {
+  font-family: "courier new", courier !important;
+  font-size: small !important;
+}
+a,
+a:visited {
+  color: #06c !important;
+  text-decoration: none !important;
+}
+a:hover {
+  text-decoration: underline !important;
+}
+select {
+  background: #fff !important;
+}
+.gwt-reference-clean {
+  height: 5px !important;
+  width: 5px !important;
+  zoom: 1 !important;
+}
+.gwt-button,
+.gwt-pushbutton-up,
+.gwt-pushbutton-up-hovering,
+.gwt-pushbutton-up-disabled,
+.gwt-pushbutton-down,
+.gwt-pushbutton-down-hovering,
+.gwt-pushbutton-down-disabled,
+.gwt-togglebutton-up,
+.gwt-togglebutton-up-hovering,
+.gwt-togglebutton-up-disabled,
+.gwt-togglebutton-down,
+.gwt-togglebutton-down-hovering,
+.gwt-togglebutton-down-disabled {
+  margin: 0 !important;
+  text-decoration: none !important;
+  background: linear-gradient(to bottom, #fff, #f1f5f9) !important;
+  border-radius: 2px !important;
+}
+.gwt-button,
+:is(.gwt-pushbutton, .gwt-togglebutton)-up,
+:is(.gwt-pushbutton, .gwt-togglebutton)-up-hovering,
+:is(.gwt-pushbutton, .gwt-togglebutton)-up-disabled {
+  padding: 3px 5px !important;
+}
+.gwt-button {
+  padding: 5px 7px !important;
+  border-radius: 4px !important;
+}
+.gwt-button,
+:is(.gwt-pushbutton, .gwt-togglebutton)-up {
+  border: 1px solid var(--border) !important;
+  border-bottom: 1px solid #a0a0a0 !important;
+  cursor: pointer !important;
+}
+:is(.gwt-button, .gwt-pushbutton-up, .gwt-togglebutton-up):hover {
+  border-color: #939393 !important;
+  background: linear-gradient(to bottom, #f8fafc, #e2e8f0) !important;
+}
+.gwt-button:active,
+:is(.gwt-pushbutton, .gwt-togglebutton)-down {
+  border: 1px inset #666 !important;
+  background: #e2e8f0 !important;
+}
+:is(.gwt-pushbutton, .gwt-togglebutton)-down-hovering {
+  border: 1px solid #939393 !important;
+}
+:is(.gwt-button, .gwt-pushbutton, .gwt-togglebutton)[disabled],
+:is(
+  .gwt-pushbutton,
+  .gwt-togglebutton,
+  .gwt-checkbox,
+  .gwt-radiobutton
+)-disabled {
+  cursor: default !important;
+  color: #888 !important;
+  opacity: 0.5 !important;
+}
+:is(
+  .gwt-textbox,
+  .gwt-passwordtextbox,
+  .gwt-textarea,
+  .gwt-suggestbox,
+  .gwt-datebox
+) {
+  padding: 5px 4px !important;
+  border: 1px solid var(--border) !important;
+  border-top: 1px solid #999 !important;
+  background: #fff !important;
+  outline: none !important;
+  transition: border-color 0.15s;
+}
+:is(
+  .gwt-textbox,
+  .gwt-passwordtextbox,
+  .gwt-textarea,
+  .gwt-suggestbox,
+  .gwt-datebox
+):focus {
+  border-color: var(--primary) !important;
+}
+:is(.gwt-textbox, .gwt-passwordtextbox, .gwt-textarea)-readonly {
+  color: #888 !important;
+  background: #fafafa !important;
+}
+.gwt-decoratorpanel :is(.topcenter, .bottomcenter) {
+  border-style: solid !important;
+  border-color: var(--border) !important;
+  line-height: 0 !important;
+}
+.gwt-decoratorpanel .topcenter {
+  border-width: 1px 0 0 !important;
+}
+.gwt-decoratorpanel .bottomcenter {
+  border-width: 0 0 1px !important;
+}
+.gwt-decoratorpanel :is(.middleleft, .middleright) {
+  border-style: solid !important;
+  border-color: var(--border) !important;
+}
+.gwt-decoratorpanel .middleleft {
+  border-width: 0 0 0 1px !important;
+}
+.gwt-decoratorpanel .middleright {
+  border-width: 0 1px 0 0 !important;
+}
+.gwt-decoratorpanel :is(.topleft, .topright, .bottomleft, .bottomright) {
+  background: none !important;
+  line-height: 0 !important;
+}
+.gwt-decoratorpanel :is(.topcenterinner, .bottomcenterinner) {
+  height: 1px !important;
+  font-size: 1px !important;
+  line-height: 0 !important;
+}
+.gwt-decoratorpanel :is(.middleleftinner, .middlerightinner) {
+  width: 1px !important;
+  line-height: 1px !important;
+}
+.gwt-decoratorpanel
+  :is(.topleftinner, .toprightinner, .bottomleftinner, .bottomrightinner) {
+  width: 5px !important;
+  height: 5px !important;
+  zoom: 1 !important;
+  font-size: 1px !important;
+  overflow: hidden !important;
+}
+.gwt-dialogbox .caption {
+  background: #f1f1f1 !important;
+  padding: 4px 8px 4px 4px !important;
+  cursor: default !important;
+  font-weight: 700 !important;
+  border-bottom: 1px solid var(--border) !important;
+  border-top: 1px solid #d2d2d2 !important;
+}
+.gwt-dialogbox .dialogmiddlecenter {
+  padding: 3px !important;
+  background: #fff !important;
+}
+.gwt-dialogbox
+  :is(
+    .dialogtopleft,
+    .dialogtopright,
+    .dialogbottomleft,
+    .dialogbottomright,
+    .dialogmiddleleft,
+    .dialogmiddleright,
+    .dialogbottomcenter
+  ) {
+  background: #f8fafc !important;
+  box-shadow: 0 4px 12px #00000014 !important;
+}
+.gwt-dialogbox :is(.dialogtopleftinner, .dialogbottomleftinner) {
+  width: 10px !important;
+}
+.gwt-dialogbox :is(.dialogtoprightinner, .dialogbottomrightinner) {
+  width: 12px !important;
+  zoom: 1 !important;
+}
+.gwt-dialogbox .dialogtopleftinner {
+  height: 8px !important;
+}
+.gwt-dialogbox :is(.dialogbottomleftinner, .dialogbottomrightinner) {
+  height: 12px !important;
+}
+.gwt-disclosurepanel .header,
+.gwt-disclosurepanel .header :is(a, td) {
+  text-decoration: none !important;
+  color: #000 !important;
+  cursor: pointer !important;
+}
+.gwt-disclosurepanel .content {
+  border-left: 3px solid #e7e7e7 !important;
+  padding: 4px 0 4px 8px !important;
+  margin-left: 6px !important;
+}
+.gwt-frame {
+  border-top: 2px solid #666 !important;
+  border-left: 2px solid #666 !important;
+  border-right: 2px solid var(--border) !important;
+  border-bottom: 2px solid var(--border) !important;
+}
+:is(.gwt-horizontalsplitpanel .hsplitter, .gwt-verticalsplitpanel .vsplitter) {
+  cursor: move !important;
+  border: 0 !important;
+  background: #e7e7e7 !important;
+  line-height: 0 !important;
+}
+.gwt-popuppanel {
+  border: 1px solid var(--border) !important;
+  box-shadow: 0 4px 12px #0000001a !important;
+  padding: 3px !important;
+  background: #fff !important;
+}
+.gwt-decoratedpopuppanel
+  :is(
+    .popuptopleft,
+    .popuptopright,
+    .popupbottomleft,
+    .popupbottomright,
+    .popupmiddleleft,
+    .popupmiddleright,
+    .popuptopcenter,
+    .popupbottomcenter,
+    .popupmiddlecenter
+  ) {
+  background: #f1f1f1 !important;
+}
+.gwt-decoratedpopuppanel .popupmiddlecenter {
+  padding: 3px !important;
+}
+.gwt-decoratedpopuppanel :is(.popuptopleftinner, .popuptoprightinner) {
+  width: 6px !important;
+  height: 5px !important;
+  zoom: 1 !important;
+}
+.gwt-decoratedpopuppanel :is(.popupbottomleftinner, .popupbottomrightinner) {
+  width: 6px !important;
+  height: 6px !important;
+  zoom: 1 !important;
+}
+.gwt-popuppanelglass {
+  background-color: #000 !important;
+  opacity: 0.25 !important;
+}
+.gwt-menubar {
+  cursor: default !important;
+  background: #fff !important;
+}
+.gwt-menubar .gwt-menuitem-selected,
+.gwt-menubar-vertical .submenuicon-selected {
+  background: var(--menu-blue) !important;
+}
+.gwt-menubar-horizontal {
+  background: var(--menu-blue) !important;
+  border: 1px solid #e0e0e0 !important;
+}
+.gwt-menubar-horizontal .gwt-menuitem {
+  padding: 5px 10px !important;
+  vertical-align: bottom !important;
+  color: #000 !important;
+  font-weight: 700 !important;
+}
+.gwt-menubar-horizontal .gwt-menuitemseparator,
+.gwt-menubar-horizontal .gwt-menuitemseparator .menuseparatorinner {
+  width: 1px !important;
+  background: #fff !important;
+}
+.gwt-menubar-horizontal .gwt-menuitemseparator {
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  border-left: 1px solid #ccc !important;
+}
+.gwt-menubar-horizontal .gwt-menuitemseparator .menuseparatorinner {
+  height: 1px !important;
+}
+.gwt-menubar-vertical table {
+  border-collapse: collapse !important;
+}
+.gwt-menubar-vertical .gwt-menuitem {
+  padding: 2px 40px 2px 1px !important;
+}
+.gwt-menubar-vertical .gwt-menuitemseparator {
+  padding: 2px 0 !important;
+}
+.gwt-menubar-vertical .menuseparatorinner {
+  height: 1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-top: 1px solid #ccc !important;
+  overflow: hidden !important;
+}
+.gwt-menubar-vertical .submenuicon {
+  padding-right: 4px !important;
+}
+.gwt-menubarpopup
+  :is(
+    .menupopuptopleft,
+    .menupopuptopright,
+    .menupopupbottomleft,
+    .menupopupbottomright,
+    .menupopupmiddleleft,
+    .menupopupmiddleright,
+    .menupopuptopcenter,
+    .menupopupbottomcenter
+  ) {
+  background: #fff !important;
+  box-shadow: 0 2px 8px #0000001a !important;
+}
+.gwt-menubarpopup :is(.menupopuptopleftinner, .menupopuptoprightinner) {
+  height: 5px !important;
+  zoom: 1 !important;
+}
+.gwt-menubarpopup .menupopuptopleftinner {
+  width: 5px !important;
+}
+.gwt-menubarpopup .menupopuptoprightinner {
+  width: 8px !important;
+}
+.gwt-menubarpopup :is(.menupopupbottomleftinner, .menupopupbottomrightinner) {
+  width: 8px !important;
+  height: 8px !important;
+  zoom: 1 !important;
+}
+.gwt-menubarpopup .menupopupbottomleftinner {
+  width: 5px !important;
+}
+.hasrichtexttoolbar {
+  border: 0 !important;
+}
+.gwt-richtexttoolbar {
+  background: var(--menu-blue) !important;
+  border-bottom: 1px solid var(--border) !important;
+  padding: 3px !important;
+  margin: 0 !important;
+}
+.gwt-richtexttoolbar :is(.gwt-pushbutton-up, .gwt-pushbutton-up-hovering) {
+  padding: 0 1px 0 0 !important;
+  margin-right: 4px !important;
+  margin-bottom: 4px !important;
+  border-width: 1px !important;
+}
+.gwt-richtexttoolbar :is(.gwt-pushbutton-down, .gwt-pushbutton-down-hovering) {
+  margin-right: 4px !important;
+  margin-bottom: 4px !important;
+  padding: 0 0 0 1px !important;
+  border-width: 1px !important;
+}
+.gwt-richtexttoolbar .gwt-togglebutton-up {
+  margin-right: 4px !important;
+  margin-bottom: 4px !important;
+  padding: 0 1px 0 0 !important;
+  border: 1px solid var(--border) !important;
+  border-bottom: 1px solid #a0a0a0 !important;
+}
+.gwt-richtexttoolbar
+  :is(
+    .gwt-togglebutton-up-hovering,
+    .gwt-togglebutton-down,
+    .gwt-togglebutton-down-hovering
+  ) {
+  margin-right: 4px !important;
+  margin-bottom: 4px !important;
+  border-width: 1px !important;
+}
+:is(.gwt-stackpanel, .gwt-decoratedstackpanel, .gwt-stacklayoutpanel) {
+  border-bottom: 1px solid var(--border) !important;
+}
+.gwt-stackpanel .gwt-stackpanelitem,
+.gwt-stacklayoutpanel .gwt-stacklayoutpanelheader {
+  font-weight: 700 !important;
+  font-size: 1.3em !important;
+  padding: 3px !important;
+  border: 1px solid var(--border) !important;
+  border-bottom: 0 !important;
+  background: linear-gradient(to bottom, #e0ebf9, #d3def6) !important;
+}
+:is(.gwt-stackpanel, .gwt-decoratedstackpanel) .gwt-stackpanelcontent,
+.gwt-stacklayoutpanel .gwt-stacklayoutpanelcontent {
+  border: 1px solid var(--border) !important;
+  border-bottom: 0 !important;
+  background: #fff !important;
+  padding: 2px 2px 10px 5px !important;
+}
+.gwt-stacklayoutpanel .gwt-stacklayoutpanelheader-hovering {
+  background: #d3def6 !important;
+}
+.gwt-decoratedstackpanel
+  :is(
+    .stackitemtopleft,
+    .stackitemtopright,
+    .stackitemmiddleleft,
+    .stackitemmiddleright,
+    .stackitemtopcenter,
+    .stackitemmiddlecenter
+  ) {
+  background: #d3def6 !important;
+}
+.gwt-decoratedstackpanel .stackitemmiddlecenter {
+  font-weight: 700 !important;
+  font-size: 1.3em !important;
+}
+.gwt-decoratedstackpanel .stackitemtopleft {
+  border-left: 1px solid var(--border) !important;
+}
+.gwt-decoratedstackpanel .stackitemtopright {
+  border-right: 1px solid var(--border) !important;
+}
+.gwt-decoratedstackpanel
+  :is(
+    .stackitemtopleftinner,
+    .stackitemtoprightinner,
+    .stackitemmiddleleftinner,
+    .stackitemmiddlerightinner
+  ) {
+  width: 1px !important;
+  height: 1px !important;
+}
+.gwt-decoratedstackpanel .stackitemmiddleleft {
+  border-left: 1px solid var(--border) !important;
+}
+.gwt-decoratedstackpanel .stackitemmiddleright {
+  border-right: 1px solid var(--border) !important;
+}
+.gwt-suggestboxpopup .item {
+  padding: 2px 6px !important;
+  color: #000 !important;
+  cursor: default !important;
+  font-size: 110% !important;
+}
+.gwt-suggestboxpopup .item-selected {
+  background: #d5e2ff;
+}
+.gwt-suggestboxpopup .suggestpopupcontent {
+  background: #fff !important;
+}
+.gwt-suggestboxpopup .suggestpopuptopcenter {
+  border-top: 1px solid var(--border) !important;
+}
+.gwt-suggestboxpopup .suggestpopupbottomcenter {
+  border-bottom: 1px solid var(--border) !important;
+}
+.gwt-suggestboxpopup .suggestpopupmiddleleft {
+  border-left: 1px solid var(--border) !important;
+}
+.gwt-suggestboxpopup .suggestpopupmiddleright {
+  border-right: 1px solid var(--border) !important;
+}
+.gwt-suggestboxpopup
+  :is(
+    .suggestpopuptopleft,
+    .suggestpopuptopright,
+    .suggestpopupbottomleft,
+    .suggestpopupbottomright
+  ) {
+  background: none !important;
+  width: 5px !important;
+  height: 5px !important;
+  border: 1px solid var(--border) !important;
+}
+:is(
+  .gwt-tabbar,
+  .gwt-decoratedtabbar,
+  .gwt-tablayoutpanel .gwt-tablayoutpaneltabs
+) {
+  background: #ccc !important;
+  padding-top: 6px !important;
+}
+.gwt-tablayoutpanel .gwt-tablayoutpaneltabs {
+  padding-left: 5px !important;
+}
+:is(.gwt-tabbar, .gwt-decoratedtabbar) .gwt-tabbarfirst {
+  width: 5px !important;
+}
+:is(.gwt-tabbar, .gwt-decoratedtabbar) .gwt-tabbaritem,
+.gwt-tablayoutpanel .gwt-tablayoutpaneltab,
+.gwt-decoratedtabbar .tabmiddlecenter {
+  margin-left: 4px !important;
+  padding: 4px 8px !important;
+  cursor: pointer !important;
+  color: #fff !important;
+  font-weight: 400 !important;
+  text-align: center !important;
+  background: #8e8e8e !important;
+  border-radius: 3px 3px 0 0 !important;
+}
+.gwt-tabbar .gwt-tabbaritem-selected,
+.gwt-tablayoutpanel .gwt-tablayoutpaneltab-selected,
+.gwt-decoratedtabbar .gwt-tabbaritem-selected .tabmiddlecenter {
+  cursor: default !important;
+  background: #fff !important;
+  color: #333 !important;
+  font-weight: 700 !important;
+}
+:is(
+  .gwt-tabbar .gwt-tabbaritem,
+  .gwt-tablayoutpanel .gwt-tablayoutpaneltab
+)-disabled {
+  cursor: default !important;
+  color: #999 !important;
+}
+.gwt-tabpanelbottom,
+.gwt-tablayoutpanel .gwt-tablayoutpanelcontentcontainer {
+  border-color: #ccc !important;
+  border-style: solid !important;
+  border-width: 0 1px 1px !important;
+  overflow: hidden !important;
+  padding: 6px !important;
+}
+.gwt-decoratedtabbar :is(.tabtopcenter, .tabmiddleleft, .tabmiddleright) {
+  background: #8e8e8e !important;
+}
+.gwt-decoratedtabbar
+  .gwt-tabbaritem-selected
+  :is(.tabtopcenter, .tabmiddleleft, .tabmiddleright) {
+  background: #fff !important;
+}
+.gwt-decoratedtabbar :is(.tabtopleft, .tabtopright) {
+  background: none !important;
+  padding: 0 !important;
+}
+.gwt-decoratedtabbar :is(.tabtopleftinner, .tabtoprightinner) {
+  width: 3px !important;
+  height: 3px !important;
+}
+.gwt-tree .gwt-treeitem {
+  padding: 1px 0 !important;
+  margin: 0 !important;
+  white-space: nowrap !important;
+  cursor: pointer !important;
+}
+.gwt-tree .gwt-treeitem-selected {
+  background: #ebeff9 !important;
+}
+.gwt-treeitem :is(.gwt-radiobutton, .gwt-checkbox) input {
+  margin-left: 0 !important;
+}
+.gwt-datepicker {
+  border: 1px solid var(--border) !important;
+  border-top: 1px solid #999 !important;
+  cursor: default !important;
+  background: #fff !important;
+}
+.datepickerdays {
+  width: 100% !important;
+  background: #fff !important;
+}
+.datepickerday,
+.datepickerweekdaylabel,
+.datepickerweekendlabel {
+  font-size: 85% !important;
+  text-align: center !important;
+  padding: 4px !important;
+  outline: none !important;
+  font-weight: 700 !important;
+  color: #333 !important;
+  border-right: 1px solid #ededed !important;
+  border-bottom: 1px solid #ededed !important;
+}
+.datepickerweekdaylabel,
+.datepickerweekendlabel {
+  background: #fff !important;
+  padding: 0 4px 2px !important;
+  color: #666 !important;
+  font-size: 70% !important;
+  font-weight: 400 !important;
+}
+.datepickerday {
+  padding: 4px 7px !important;
+  cursor: pointer !important;
+}
+.datepickerdayisweekend {
+  background: #f7f7f7 !important;
+}
+.datepickerdayisfiller {
+  color: #999 !important;
+  font-weight: 400 !important;
+}
+.datepickerdayisvalue,
+.datepickerdayisvalueandhighlighted {
+  background: #d7dfe8 !important;
+}
+.datepickerdayisdisabled {
+  color: #aaa !important;
+  font-style: italic !important;
+}
+.datepickerdayishighlighted {
+  background: #f0e68c !important;
+}
+.datepickerdayistoday {
+  padding: 3px !important;
+  color: #fff !important;
+  background: var(--primary) !important;
+}
+.datepickermonthselector {
+  width: 100% !important;
+  padding: 1px 0 5px !important;
+  background: #fff !important;
+}
+:is(td.datepickermonth, td.datepickeryear) {
+  text-align: center !important;
+  vertical-align: middle !important;
+  white-space: nowrap !important;
+  font-size: 100% !important;
+  font-weight: 700 !important;
+  color: #333 !important;
+}
+:is(
+  .datepickerpreviousbutton,
+  .datepickernextbutton,
+  .datepickerpreviousyearbutton,
+  .datepickernextyearbutton
+) {
+  font-size: 120% !important;
+  line-height: 1em !important;
+  color: var(--primary) !important;
+  cursor: pointer !important;
+  font-weight: 700 !important;
+  padding: 0 4px !important;
+}
+:is(.gwt-splitlayoutpanel-hdragger, .gwt-splitlayoutpanel-vdragger) {
+  background: #e7e7e7 !important;
+}
+.gwt-splitlayoutpanel-hdragger {
+  cursor: col-resize !important;
+}
+.gwt-splitlayoutpanel-vdragger {
+  cursor: row-resize !important;
+}
 
-/*Hide all mobile elements when in desktop usage*/
-.trigger, .toptrigger, .triggerLabel, toptriggerlabel {
-	display: none;
+
+
+.trigger,
+.toptrigger,
+.triggerlabel {
+  display: none;
 }
 
 @media only screen and (max-width: 600px) {
-	.triggerLabel {
-		display: initial;
-		border-radius: 10px 0px 0px 10px;
-		background: white;
-		width: 20px;
-		height: 50px;
-		position: absolute;
-		top: 50px;
-		right: 0;
-		z-index: 1;
-		transition: right 1s;
-	}
-	.triggerLabel:before {
-		content: "‖";
-		font-size: 32px;
-		padding-left: 3px;
-		position: absolute;
-		padding-top: 5px;
-	}
-	.toptriggerlabel {
-		z-index: 1;
-		top: 5px;
-		right: 5px;
-		width: 20px;
-		height: 20px;
-		position: absolute;
-	}
-	.toptriggerlabel:before {
-		content: "☰";
-		font-size: 16px;
-		padding-left: 2px;
-		pointer-events: none;
-	}
-
-	/*Trick to hide the menu when the user taps out of the menu*/
-	.toptrigger:checked {
-		display: block;
-		opacity: 0;
-		width: 100%;
-		height: 100%;
-		z-index: 2;
-		position: absolute;
-	}
-	.trigger:checked+.triggerLabel {
-		right: 128px;
-	}
-
-	/* selects the top panel */
-	.gwt-MenuBar-horizontal>table {
-		display: none;
-	}
-
-	/* shows the top menu when the user taps the menu icon */
-	.toptrigger:checked+label+div>div>table {
-		display: block !important;
-	}
-
-	/* selects the side panel */
-	.trigger+.triggerLabel+div {
-		width: 0 !important;
-		background: white;
-		z-index: 1;
-		transition: width 1s;
-	}
-	.trigger:checked+.triggerLabel+div {
-		width: 128px !important;
-	}
-
-	/* selects the top menu */
-	.gwt-MenuBar-horizontal>table {
-		height: auto;
-		position: fixed;
-		width: 100%;
-		text-align: center;
-		top: 30px;
-		background: white;
-		z-index: 2;
-	}
-	.gwt-MenuBar-horizontal * {
-		display: block;
-	}
-	.gwt-MenuBarPopup {
-		z-index: 2;
-		width: 100%;
-		left: 0 !important;
-	}
-	.gwt-MenuBarPopup>div {
-		overflow: scroll;
-		z-index: 2;
-		width: 100%;
-		height: 300px;
-		position: fixed;
-		top: 30px;
-		/* trick to prevent sub menus from opening in the same touch */
-		transition:all 0.1s;
-	}
-	.gwt-MenuBarPopup>div>table {
-		width: 100%;
-		height: 100%;
-	}
-	.menuPopupMiddleCenterInner>div>table {
-		width: 100%;
-		text-align: center;
-	}
-	.menuPopupTopLeft, .menuPopupTopCenter, .menuPopupTopRight,
-		.menuPopupMiddleLeft, .menuPopupMiddleRight, .menuPopupMiddleCenter,
-		.menuPopupBottomLeft, .menuPopupBottomCenter, .menuPopupBottomRight {
-		background: white !important;
-	}
-
-	/* selects the div containing the canvas */
-	.trigger+.triggerLabel+div+div {
-		width: 100% !important;
-	}
-	/* added extra div for toolbar */
-	.trigger+.triggerLabel+div+div+div {
-		width: 100% !important;
-	}
+  .triggerlabel {
+    display: initial;
+    border-radius: 10px 0 0 10px;
+    background: #fff;
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    z-index: 1;
+    transition: right 1s;
+  }
+  .triggerlabel:before {
+    content: "‖";
+    font-size: 32px;
+    padding-left: 3px;
+    position: absolute;
+    padding-top: 5px;
+  }
+  .toptriggerlabel {
+    z-index: 1;
+    top: 5px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+  }
+  .toptriggerlabel:before {
+    content: "☰";
+    font-size: 16px;
+    padding-left: 2px;
+    pointer-events: none;
+  }
+  .toptrigger:checked {
+    display: block;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    position: absolute;
+  }
+  .trigger:checked + .triggerlabel {
+    right: 128px;
+  }
+  .gwt-menubar-horizontal > table {
+    display: none;
+    height: auto;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    top: 30px;
+    background: #fff;
+    z-index: 2;
+  }
+  .toptrigger:checked + label + div > div > table {
+    display: block !important;
+  }
+  .trigger + .triggerlabel + div {
+    width: 0 !important;
+    background: #fff;
+    z-index: 1;
+    transition: width 1s;
+  }
+  .trigger:checked + .triggerlabel + div {
+    width: 128px !important;
+  }
+  .gwt-menubar-horizontal * {
+    display: block;
+  }
+  .gwt-menubarpopup {
+    z-index: 2;
+    width: 100%;
+    left: 0 !important;
+  }
+  .gwt-menubarpopup > div {
+    overflow: scroll;
+    z-index: 2;
+    width: 100%;
+    height: 300px;
+    position: fixed;
+    top: 30px;
+    transition: all 0.1s;
+  }
+  .gwt-menubarpopup > div > table {
+    width: 100%;
+    height: 100%;
+  }
+  .menupopupmiddlecenterinner > div > table {
+    width: 100%;
+    text-align: center;
+  }
+  .menupopuptopleft,
+  .menupopuptopcenter,
+  .menupopuptopright,
+  .menupopupmiddleleft,
+  .menupopupmiddleright,
+  .menupopupmiddlecenter,
+  .menupopupbottomleft,
+  .menupopupbottomcenter,
+  .menupopupbottomright {
+    background: #fff !important;
+  }
+  .trigger + .triggerlabel + div + div {
+    width: 100% !important;
+  }
+  .trigger + .triggerlabel + div + div + div {
+    width: 100% !important;
+  }
 }
