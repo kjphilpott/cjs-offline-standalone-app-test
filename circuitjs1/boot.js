@@ -351,5 +351,6 @@ function circuitjs1(){
   installScript('main.js');
   return true;
 }
-
+alert('boot1')
 circuitjs1.succeeded = circuitjs1();
+alert('boot2')
