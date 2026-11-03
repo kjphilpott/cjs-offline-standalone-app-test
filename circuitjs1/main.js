@@ -8,7 +8,7 @@ var $gwt = {};
 var $doc = $wnd.document;
 var $moduleName, $moduleBase;
 function __gwtStartLoadingFragment(frag) {
-  var fragFile = 'deferredjs/' + $strongName + '/' + frag + '.cache.js';
+  var fragFile = 'deferredjs/' + $strongName + '/' + frag + '.js';
   return __gwtModuleFunction.__startLoadingFragment(fragFile);
 }
 function __gwtInstallCode(code) { return __gwtModuleFunction.__installRunAsyncCode(code); }

@@ -289,6 +289,85 @@ function circuitjs1(){
     return circuitjs1.__moduleBase + resource;
   }
 
+  function getCompiledCodeFilename(){
+    var answers = [];
+    var softPermutationId = 0;
+    function unflattenKeylistIntoAnswers(propValArray, value_0){
+      var answer = answers;
+      for (var i = 0, n = propValArray.length - 1; i < n; ++i) {
+        answer = answer[propValArray[i]] || (answer[propValArray[i]] = []);
+      }
+      answer[propValArray[n]] = value_0;
+    }
+
+    var values = [];
+    var providers = [];
+    function computePropValue(propName){
+      var value_0 = providers[propName](), allowedValuesMap = values[propName];
+      if (value_0 in allowedValuesMap) {
+        return value_0;
+      }
+      var allowedValuesList = [];
+      for (var k in allowedValuesMap) {
+        allowedValuesList[allowedValuesMap[k]] = k;
+      }
+      if (__propertyErrorFunction) {
+        __propertyErrorFunction(propName, allowedValuesList, value_0);
+      }
+      throw null;
+    }
+
+    providers['user.agent'] = function(){
+      var ua = navigator.userAgent.toLowerCase();
+      var docMode = $doc_0.documentMode;
+      if (function(){
+        return ua.indexOf('webkit') != -1;
+      }
+      ())
+        return 'safari';
+      if (function(){
+        return ua.indexOf('gecko') != -1 || docMode >= 11;
+      }
+      ())
+        return 'gecko1_8';
+      return '';
+    }
+    ;
+    values['user.agent'] = {'gecko1_8':0, 'safari':4};
+    __gwt_isKnownPropertyValue = function(propName, propValue){
+      return propValue in values[propName];
+    }
+    ;
+    circuitjs1.__getPropMap = function(){
+      var result = {};
+      for (var key in values) {
+        if (values.hasOwnProperty(key)) {
+          result[key] = computePropValue(key);
+        }
+      }
+      return result;
+    }
+    
+    circuitjs1.__computePropValue = computePropValue;
+    $wnd_0.__gwt_activeModules['circuitjs1'].bindings = circuitjs1.__getPropMap;
+    sendStats('bootstrap', 'selectingPermutation');
+    var strongName;
+    try {
+      unflattenKeylistIntoAnswers(['safari'], 'core-engine');
+      unflattenKeylistIntoAnswers(['gecko1_8'], 'core-engine');
+      strongName = answers[computePropValue('user.agent')];
+      var idx = strongName.indexOf(':');
+      if (idx != -1) {
+        softPermutationId = parseInt(strongName.substring(idx + 1), 10);
+        strongName = strongName.substring(0, idx);
+      }
+    }
+     catch (e) {
+    }
+    circuitjs1.__softPermutationId = softPermutationId;
+    return computeUrlForResource(strongName + '.cache.js');
+  }
+
   function loadExternalStylesheets(){
     if (!$wnd_0.__gwt_stylesLoaded) {
       $wnd_0.__gwt_stylesLoaded = {};
@@ -311,6 +390,7 @@ function circuitjs1(){
   processMetas();
   circuitjs1.__moduleBase = computeScriptBase();
   activeModules['circuitjs1'].moduleBase = circuitjs1.__moduleBase;
+  var filename_0 = getCompiledCodeFilename();
   if ($wnd_0) {
     var devModePermitted = !!($wnd_0.location.protocol == 'http:' || $wnd_0.location.protocol == 'file:');
     $wnd_0.__gwt_activeModules['circuitjs1'].canRedirect = devModePermitted;
@@ -348,9 +428,8 @@ function circuitjs1(){
   }
   loadExternalStylesheets();
   sendStats('bootstrap', 'end');
-  installScript('main.js');
+  installScript(filename_0);
   return true;
 }
-alert('boot1')
+
 circuitjs1.succeeded = circuitjs1();
-alert('boot2')
