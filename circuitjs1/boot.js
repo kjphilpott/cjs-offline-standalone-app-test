@@ -353,8 +353,8 @@ function circuitjs1(){
     sendStats('bootstrap', 'selectingPermutation');
     var strongName;
     try {
-      unflattenKeylistIntoAnswers(['safari'], 'core-engine');
-      unflattenKeylistIntoAnswers(['gecko1_8'], 'core-engine');
+      unflattenKeylistIntoAnswers(['safari'], 'main');
+      unflattenKeylistIntoAnswers(['gecko1_8'], 'main');
       strongName = answers[computePropValue('user.agent')];
       var idx = strongName.indexOf(':');
       if (idx != -1) {
