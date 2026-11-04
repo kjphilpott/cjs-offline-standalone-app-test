@@ -460,4 +460,4 @@ ujtosc.txt Unijunction Oscillator
 3motor.txt 3-Phase Motor
 latchingrelay.txt Latching Relay
 -
-blank.txt Blank Circuito
+blank.txt Brank Circuit
