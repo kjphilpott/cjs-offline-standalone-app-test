@@ -365,7 +365,7 @@ function circuitjs1(){
      catch (e) {
     }
     circuitjs1.__softPermutationId = softPermutationId;
-    return computeUrlForResource(strongName + '.cache.js');
+    return computeUrlForResource(strongName + '.js');
   }
 
   function loadExternalStylesheets(){
